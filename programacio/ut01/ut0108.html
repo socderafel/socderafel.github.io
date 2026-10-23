@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>1.9 Herramientas útiles y E/S por consola — Programació (1r DAW)</title>
+  <title>1.8 Herramientas útiles (Math, Random y Scanner) — Programació (1r DAW)</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
@@ -472,11 +472,12 @@
 <li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
 <li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
 <li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
-<li><a href="../ut01/ut01wrappers.html">1.5 Clases Envoltorio (Wrappers), Character y String</a></li>
-<li><a href="../ut01/ut0105.html">1.6 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
-<li><a href="../ut01/ut0106.html">1.7 Conversiones de tipo (Casting)</a></li>
-<li><a href="../ut01/ut0107.html">1.8 Comentarios y documentación</a></li>
-<li><a href="../ut01/ut0108.html" class="active">1.9 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html" class="active">1.8 Herramientas útiles (Math, Random y Scanner)</a></li>
+<li><a href="../ut01/ut01wrappers.html">1.9 Clases Envoltorio (Wrappers), Character y String</a></li>
+<li><a href="../ut01/ut0109.html">1.10 Novedades de Java 25</a></li>
 <li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
 <li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
 <li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
@@ -597,10 +598,10 @@
 
     <main class="content">
       <span class="up-badge">1a Avaluació · RA1 (a-i) · Elements bàsics i Operadors</span>
-      <h1>1.9 Herramientas útiles</h1>
+      <h1>1.8 Herramientas útiles</h1>
 
 <h2 id="1-la-libreria-math">1. La librería Math</h2>
-<p>Java proporciona de forma nativa la clase <strong><code>Math</code></strong> (perteneciente al paquete <code>java.util</code>) para realizar operaciones matemáticas avanzadas, cálculo de potencias, raíces, redondeos y generación de números aleatorios.</p>
+<p>Java proporciona de forma nativa la clase <strong><code>Math</code></strong>  para realizar operaciones matemáticas avanzadas, cálculo de potencias, raíces, redondeos y generación de números aleatorios.</p>
 <hr />
 <h3 id="11-constantes-matematicas-mathpi-y-la-gravedad">1.1. Constantes matemáticas (<code>Math.PI</code> y la gravedad)</h3>
 <p>La clase <code>Math</code> incorpora constantes matemáticas fundamentales definidas con alta precisión (<code>double</code>):</p>
@@ -783,7 +784,7 @@
 </ul>
 <h4 id="formula-general-para-generar-un-entero-en-el-rango-min-max">Fórmula general para generar un entero en el rango <code>[min, max]</code></h4>
 <p>Para obtener un entero aleatorio entre cualquier mínimo y máximo (ambos incluidos):</p>
-<p><code>numero = (int) Math.random() * (max - min + 1) + min;</code></p>
+<p><code>numero = (int)(Math.random() * (max - min + 1)) + min;</code></p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -840,7 +841,254 @@ entero = (<span class="tok-key">int</span>)(<span class="tok-key">Math</span>.ra
 </div>
 <hr>
 
-<h2 id="2-la-clase-scanner">2. La clase Scanner</h2>
+<h2 id="2-la-clase-random">2. La clase Random</h2>
+<p>La clase <strong><code>Random</code></strong> (perteneciente al paquete <code>java.util</code>) es una herramienta especializada para la generación de números pseudoaleatorios de diversos tipos de datos (enteros, reales, booleanos...).</p>
+<p>A diferencia de <code>Math.random()</code>, que únicamente devuelve un valor <code>double</code> en el rango $[0.0, 1.0)$ y requiere operaciones de escalado y <em>casting</em>, la clase <code>Random</code> ofrece métodos directos y más cómodos, como <code>nextInt()</code>.</p>
+<hr />
+<h3 id="21-pasos-para-utilizar-random">2.1. Pasos para utilizar <code>Random</code></h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1º) <strong>Importar la clase</strong>:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Random;
+<span class="tok-comment">// o bien importar todo el paquete util:</span>
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.*;</code></pre>
+</div></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2º) <strong>Instanciar el objeto generador</strong> (habitualmente llamado <code>ran</code> o <code>rnd</code>):
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Random ran = <span class="tok-key">new</span> Random();</code></pre>
+</div></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3º) <strong>Llamar al método correspondiente según el tipo de dato que se desea obtener</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Método</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Ejemplo</th>
+<th style="text-align: left;">Rango resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>nextInt()</code></strong></td>
+<td style="text-align: left;">Genera un entero cualquiera (positivo o negativo).</td>
+<td style="text-align: left;"><code>ran.nextInt()</code></td>
+<td style="text-align: left;">Todo el rango de <code>int</code> ($-2^{31}$ a $2^{31}-1$)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>nextInt(n)</code></strong></td>
+<td style="text-align: left;">Genera un entero entre <code>0</code> (incluido) y <code>n</code> (excluido).</td>
+<td style="text-align: left;"><code>ran.nextInt(100)</code></td>
+<td style="text-align: left;"><code>0</code> a <code>99</code> ($[0, n-1]$)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>nextDouble()</code></strong></td>
+<td style="text-align: left;">Genera un decimal entre <code>0.0</code> (incluido) y <code>1.0</code> (excluido).</td>
+<td style="text-align: left;"><code>ran.nextDouble()</code></td>
+<td style="text-align: left;">$[0.0, 1.0)$ (igual que <code>Math.random()</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>nextBoolean()</code></strong></td>
+<td style="text-align: left;">Genera un valor booleano aleatorio (<code>true</code> o <code>false</code>).</td>
+<td style="text-align: left;"><code>ran.nextBoolean()</code></td>
+<td style="text-align: left;"><code>true</code> o <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-generacion-de-enteros-en-un-rango-personalizado-min-max">2.2. Generación de enteros en un rango personalizado <code>[min, max]</code></h3>
+<p>Para obtener un entero aleatorio comprendido entre un mínimo (<code>min</code>) y un máximo (<code>max</code>), ambos inclusive, se utiliza la fórmula:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> numero = ran.nextInt(max - min + <span class="tok-bool">1</span>) + min;</code></pre>
+</div>
+<p><strong>Ejemplos habituales:</strong></p>
+<ul>
+<li><strong>Tirada de un dado de 6 caras (<code>[1, 6]</code>):</strong>
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> dado = ran.nextInt(<span class="tok-bool">6</span>) + <span class="tok-bool">1</span>; <span class="tok-comment">// ran.nextInt(6) genera 0..5; al sumar 1 obtenemos 1..6</span></code></pre>
+</div></li>
+<li><strong>Número entero entre 1 y 100 (<code>[1, 100]</code>):</strong>
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> numero = ran.nextInt(<span class="tok-bool">100</span>) + <span class="tok-bool">1</span>; <span class="tok-comment">// 0..99 + 1 =&gt; 1..100</span></code></pre>
+</div></li>
+<li><strong>Rango con números negativos (por ejemplo, temperaturas entre <code>-10</code> y <code>40</code>):</strong>
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> temp = ran.nextInt(<span class="tok-bool">40</span> - (-<span class="tok-bool">10</span>) + <span class="tok-bool">1</span>) + (-<span class="tok-bool">10</span>); <span class="tok-comment">// ran.nextInt(51) - 10 =&gt; -10 a 40</span></code></pre>
+</div></li>
+</ul>
+<hr />
+<h3 id="23-comparativa-mathrandom-vs-random">2.3. Comparativa: <code>Math.random()</code> vs <code>Random</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;"><code>Math.random()</code></th>
+<th style="text-align: left;">Clase <code>Random</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Paquete</strong></td>
+<td style="text-align: left;"><code>java.lang</code> (no requiere <code>import</code>)</td>
+<td style="text-align: left;"><code>java.util</code> (requiere <code>import java.util.Random;</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instanciación</strong></td>
+<td style="text-align: left;">No (método estático directo)</td>
+<td style="text-align: left;">Sí (requiere crear un objeto con <code>new Random()</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tipos generados</strong></td>
+<td style="text-align: left;">Siempre <code>double</code> en $[0.0, 1.0)$</td>
+<td style="text-align: left;">Múltiples tipos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Comodidad para enteros</strong></td>
+<td style="text-align: left;">Requiere escalado y <em>cast</em>: <code>(int)(Math.random() * N)</code></td>
+<td style="text-align: left;">Método directo: <code>ran.nextInt(N)</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition java">
+<p class="admonition-title">Ejemplo demostrativo con <code>Random</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label><label for="__tabbed_2_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Random;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploRandom {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// 1. Instanciar el objeto Random</span>
+        Random ran = <span class="tok-key">new</span> Random();
+
+        <span class="tok-comment">// 2. Número entero entre 0 y 99:</span>
+        <span class="tok-key">int</span> aleatorio0a99 = ran.nextInt(<span class="tok-bool">100</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Número entre 0 y 99: &quot;</span> + aleatorio0a99);
+
+        <span class="tok-comment">// 3. Simulación de un dado (1 a 6):</span>
+        <span class="tok-key">int</span> dado = ran.nextInt(<span class="tok-bool">6</span>) + <span class="tok-bool">1</span>;
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Tirada de dado (1 a 6): &quot;</span> + dado);
+
+        <span class="tok-comment">// 4. Decimal aleatorio entre 0.0 y 1.0:</span>
+        <span class="tok-key">double</span> decimal = ran.nextDouble();
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Decimal aleatorio: &quot;</span> + decimal);
+
+        <span class="tok-comment">// 5. Booleano (simulación de cara o cruz):</span>
+        <span class="tok-key">boolean</span> moneda = ran.nextBoolean();
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Lanzamiento de moneda: &quot;</span> + (moneda ? <span class="tok-string">&quot;Cara&quot;</span> : <span class="tok-string">&quot;Cruz&quot;</span>));
+    }
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Número entre <span class="tok-bool">0</span> y <span class="tok-bool">99</span>: <span class="tok-bool">47</span>
+Tirada de dado (<span class="tok-bool">1</span> a <span class="tok-bool">6</span>): <span class="tok-bool">5</span>
+Decimal aleatorio: <span class="tok-bool">0</span>.<span class="tok-bool">8319402517820145</span>
+Lanzamiento de moneda: Cara</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+
+<h2 id="3-la-clase-scanner">3. La clase Scanner</h2>
 <p>La clase <code>Scanner</code> permite leer datos introducidos por el usuario desde el teclado.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;1º) Para ello deberemos, primero, importar la librería <code>util</code>:
     <div class="terminal-box">
@@ -925,7 +1173,7 @@ cadena = sc.nextLine(); <span class="tok-comment">// Ahora sí esperará a que e
 </div>
 <div class="admonition java">
 <p class="admonition-title">En el siguiente ejemplo podemos observar mejor lo expuesto:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label><label for="__tabbed_2_2">Resultado</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Java</label><label for="__tabbed_3_2">Resultado</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="terminal-box">
@@ -983,8 +1231,8 @@ cadena = sc.nextLine(); <span class="tok-comment">// Ahora sí esperará a que e
 </div>
 </div>
       <div class="page-nav-footer">
-<a class="page-nav-btn" href="../ut01/ut0107.html">⬅️ 1.8 Comentarios y documentación</a>
-<a class="page-nav-btn" href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1 ➡️</a>
+<a class="page-nav-btn" href="../ut01/ut0107.html">⬅️ 1.7 Comentarios y documentación</a>
+<a class="page-nav-btn" href="../ut01/ut01wrappers.html">1.9 Clases Envoltorio (Wrappers), Character y String ➡️</a>
 </div>
     </main>
   </div>

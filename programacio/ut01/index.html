@@ -472,11 +472,12 @@
 <li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
 <li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
 <li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
-<li><a href="../ut01/ut01wrappers.html">1.5 Clases Envoltorio (Wrappers), Character y String</a></li>
-<li><a href="../ut01/ut0105.html">1.6 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
-<li><a href="../ut01/ut0106.html">1.7 Conversiones de tipo (Casting)</a></li>
-<li><a href="../ut01/ut0107.html">1.8 Comentarios y documentación</a></li>
-<li><a href="../ut01/ut0108.html">1.9 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles (Math, Random y Scanner)</a></li>
+<li><a href="../ut01/ut01wrappers.html">1.9 Clases Envoltorio (Wrappers), Character y String</a></li>
+<li><a href="../ut01/ut0109.html">1.10 Novedades de Java 25</a></li>
 <li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
 <li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
 <li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
@@ -608,11 +609,12 @@
 <li><a href="#ut0102"><strong>1.2 El lenguaje Java</strong></a> — <a href="./ut0102.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0103"><strong>1.3 Variables, identificadores y convenciones (Clean Code)</strong></a> — <a href="./ut0103.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0104"><strong>1.4 Tipos de datos primitivos</strong></a> — <a href="./ut0104.html"><em>(Obrir apartat individual)</em></a></li>
-<li><a href="#ut01wrappers"><strong>1.5 Clases Envoltorio (Wrappers), Character y String</strong></a> — <a href="./ut01wrappers.html"><em>(Obrir apartat individual)</em></a></li>
-<li><a href="#ut0105"><strong>1.6 Operadores y expresiones (incl. Operador Ternario ? :)</strong></a> — <a href="./ut0105.html"><em>(Obrir apartat individual)</em></a></li>
-<li><a href="#ut0106"><strong>1.7 Conversiones de tipo (Casting)</strong></a> — <a href="./ut0106.html"><em>(Obrir apartat individual)</em></a></li>
-<li><a href="#ut0107"><strong>1.8 Comentarios y documentación</strong></a> — <a href="./ut0107.html"><em>(Obrir apartat individual)</em></a></li>
-<li><a href="#ut0108"><strong>1.9 Herramientas útiles y E/S por consola</strong></a> — <a href="./ut0108.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0105"><strong>1.5 Operadores y expresiones (incl. Operador Ternario ? :)</strong></a> — <a href="./ut0105.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0106"><strong>1.6 Conversiones de tipo (Casting)</strong></a> — <a href="./ut0106.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0107"><strong>1.7 Comentarios y documentación</strong></a> — <a href="./ut0107.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0108"><strong>1.8 Herramientas útiles (Math, Random y Scanner)</strong></a> — <a href="./ut0108.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut01wrappers"><strong>1.9 Clases Envoltorio (Wrappers), Character y String</strong></a> — <a href="./ut01wrappers.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0109"><strong>1.10 Novedades de Java 25</strong></a> — <a href="./ut0109.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01ejemplos"><strong>Ejemplos guiados UT1</strong></a> — <a href="./ut01ejemplos.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01actividades"><strong>Actividades prácticas UT1</strong></a> — <a href="./ut01actividades.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01retos"><strong>Retos de programación UT1</strong></a> — <a href="./ut01retos.html"><em>(Obrir apartat individual)</em></a></li>
@@ -1781,554 +1783,12 @@ Object obj     = <span class="tok-bool">null</span>;        <span class="tok-com
 <div class="admonition tip">
 <p class="admonition-title">💡 ¿Y si necesitamos saber si un char es un número o una letra?</p>
 <p>Los tipos primitivos como <code>int</code> o <code>char</code> no tienen métodos propios. Para inspeccionarlos (por ejemplo <code>Character.isDigit()</code> o <code>Character.isLetter()</code>) o convertir texto a número (<code>Integer.parseInt()</code>), Java proporciona las <strong>Clases Envoltorio (*Wrappers*)</strong> y la clase <code>String</code>.</p>
-<p>👉 Continúa en el siguiente apartado: <a href="./ut01wrappers.html"><strong>1.5 Clases Envoltorio (Wrappers), Character y String ➡️</strong></a></p>
+<p>👉 Consulta el tema específico: <a href="./ut01wrappers.html"><strong>1.9 Clases Envoltorio (Wrappers), Character y String ➡️</strong></a></p>
 </div>
-
-</section><hr>
-<section id="ut01wrappers">
-<h1>1.5 Clases Envoltorio (<em>Wrappers</em>), Character y String</h1>
-
-<div class="admonition note">
-<p class="admonition-title">📌 Información Curricular y Resultados de Aprendizaje</p>
-<p><strong>Resultados de Aprendizaje:</strong> <code>RA1</code> (Reconoce la estructura de un programa informático, identificando los tipos de datos del lenguaje) y <code>RA3</code> (Escribe y depura código con estructuras de control).</p>
-<p><strong>Criterios de Evaluación:</strong> CEb (Identificación de tipos de datos básicos y objetos), CEd (Operadores y conversiones), CEf (Librerías de clases estándar de Java) y CEg (Sintaxis y convenciones <em>Clean Code</em>).</p>
-</div>
-
-<h2 id="1-de-tipos-primitivos-a-clases-wrappers">1. Introducción: De Tipos Primitivos a Clases (<em>Wrappers</em>)</h2>
-<p>En Java existen <strong>dos grandes categorías</strong> de tipos de datos:</p>
-<ol>
-  <li><strong>Tipos primitivos (<code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code>...):</strong> Almacenan directamente el valor puro en la memoria rápida (<em>pila</em> o <em>stack</em>). Son muy ligeros y rápidos, pero <strong>no son objetos</strong>: carecen de atributos y métodos. No es posible escribir <code>numero.algo()</code>.</li>
-  <li><strong>Tipos referenciados u Objetos (Clases):</strong> Almacenan una referencia (puntero) a un objeto ubicado en la memoria dinámica (<em>heap</em>). Disponen de <strong>métodos de utilidad</strong> incorporados para operar, consultar y transformar la información.</li>
-</ol>
-
-<p>Para salvar esta limitación, Java incluye en su paquete fundamental <code>java.lang</code> (disponible automáticamente sin necesidad de <code>import</code>) una <strong>Clase Envoltorio</strong> (<em>Wrapper class</em>) para cada uno de los 8 tipos primitivos:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Tipo Primitivo</th>
-      <th>Clase Envoltorio (<em>Wrapper</em>)</th>
-      <th>Tamaño en memoria</th>
-      <th>Ejemplo de método estático útil</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><code>byte</code></td><td><strong><code>Byte</code></strong></td><td>8 bits</td><td><code>Byte.parseByte("10")</code></td></tr>
-    <tr><td><code>short</code></td><td><strong><code>Short</code></strong></td><td>16 bits</td><td><code>Short.MAX_VALUE</code></td></tr>
-    <tr><td><code>int</code></td><td><strong><code>Integer</code></strong></td><td>32 bits</td><td><code>Integer.parseInt("42")</code></td></tr>
-    <tr><td><code>long</code></td><td><strong><code>Long</code></strong></td><td>64 bits</td><td><code>Long.parseLong("10000000000")</code></td></tr>
-    <tr><td><code>float</code></td><td><strong><code>Float</code></strong></td><td>32 bits</td><td><code>Float.parseFloat("3.14F")</code></td></tr>
-    <tr><td><code>double</code></td><td><strong><code>Double</code></strong></td><td>64 bits</td><td><code>Double.parseDouble("19.99")</code></td></tr>
-    <tr><td><code>char</code></td><td><strong><code>Character</code></strong></td><td>16 bits</td><td><code>Character.isDigit('7')</code></td></tr>
-    <tr><td><code>boolean</code></td><td><strong><code>Boolean</code></strong></td><td>1 bit</td><td><code>Boolean.parseBoolean("true")</code></td></tr>
-  </tbody>
-</table>
-
-<div class="admonition tip">
-<p class="admonition-title">⚡ Autoboxing y Unboxing automático</p>
-<p>Java convierte automáticamente entre el primitivo y su clase envoltorio sin necesidad de instanciar manualmente:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">Integer</span> numObjeto = <span class="tok-bool">10</span>;        <span class="tok-comment">// Autoboxing: de int primitivo a objeto Integer</span>
-<span class="tok-key">int</span> numPrimitivo = numObjeto;  <span class="tok-comment">// Unboxing: de objeto Integer a int primitivo</span></code></pre>
-</div>
-<p><em>Nota: Desde Java 9, el uso de constructores explícitos como <code>new Integer(10)</code> está oficialmente obsoleto y desaconsejado.</em></p>
-</div>
-
-<hr>
-
-<h2 id="2-la-clase-character">2. La Clase <code>Character</code>: Inspección y Validación de Caracteres</h2>
-<p>El tipo primitivo <code>char</code> almacena un único carácter Unicode entre comillas simples (<code>'a'</code>, <code>'5'</code>, <code>'#'</code>). Al ser primitivo, no tiene métodos propios.</p>
-<p>Para saber si un carácter introducido por el usuario es una letra, un número, un espacio o un signo de puntuación, recurrimos a los <strong>métodos estáticos de la clase <code>Character</code></strong>.</p>
-
-<h3 id="21-metodos-de-comprobacion-booleana">2.1. Métodos de comprobación booleana (<code>is...</code>)</h3>
-<p>Se invocan directamente como <code>Character.metodo(variableChar)</code> y devuelven <code>true</code> o <code>false</code>:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Método</th>
-      <th>Devuelve</th>
-      <th>Descripción</th>
-      <th>Ejemplo (<code>char c = '9';</code>)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><strong><code>Character.isDigit(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es un dígito numérico (<code>'0'</code> al <code>'9'</code>).</td><td><code>Character.isDigit('9')</code> &rarr; <code>true</code></td></tr>
-    <tr><td><strong><code>Character.isLetter(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es una letra alfabética (incluye tildes, <code>'ñ'</code> y Unicode).</td><td><code>Character.isLetter('9')</code> &rarr; <code>false</code></td></tr>
-    <tr><td><strong><code>Character.isLetterOrDigit(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es alfanumérico (letra o dígito).</td><td><code>Character.isLetterOrDigit('@')</code> &rarr; <code>false</code></td></tr>
-    <tr><td><strong><code>Character.isWhitespace(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es espacio en blanco, tabulador (<code>\t</code>) o salto de línea (<code>\n</code>).</td><td><code>Character.isWhitespace(' ')</code> &rarr; <code>true</code></td></tr>
-    <tr><td><strong><code>Character.isUpperCase(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si la letra está en mayúscula.</td><td><code>Character.isUpperCase('A')</code> &rarr; <code>true</code></td></tr>
-    <tr><td><strong><code>Character.isLowerCase(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si la letra está en minúscula.</td><td><code>Character.isLowerCase('a')</code> &rarr; <code>true</code></td></tr>
-  </tbody>
-</table>
-
-<h3 id="22-metodos-de-transformacion">2.2. Métodos de transformación (<code>to...</code>)</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Método</th>
-      <th>Devuelve</th>
-      <th>Descripción</th>
-      <th>Ejemplo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><strong><code>Character.toUpperCase(c)</code></strong></td><td><code>char</code></td><td>Convierte el carácter a mayúscula (si no es letra, lo mantiene igual).</td><td><code>Character.toUpperCase('b')</code> &rarr; <code>'B'</code></td></tr>
-    <tr><td><strong><code>Character.toLowerCase(c)</code></strong></td><td><code>char</code></td><td>Convierte el carácter a minúscula.</td><td><code>Character.toLowerCase('G')</code> &rarr; <code>'g'</code></td></tr>
-  </tbody>
-</table>
-
-<h3 id="23-ejemplo-completo-clasificadorcaracter">2.3. Ejemplo práctico: Clasificar la pulsación del usuario</h3>
-<p>El siguiente programa pide un carácter y muestra su clasificación exacta combinando <code>Character</code> con el operador condicional:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">package</span> ut1.caracteres;
-
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> ClasificadorCaracter {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
-
-        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce un solo carácter por teclado: &quot;</span>);
-        <span class="tok-key">char</span> entrada = sc.next().charAt(<span class="tok-bool">0</span>);
-
-        <span class="tok-key">if</span> (Character.isDigit(entrada)) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es un DÍGITO NUMÉRICO (0-9).&quot;</span>);
-        } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isLetter(entrada)) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es una LETRA ALFABÉTICA.&quot;</span>);
-            <span class="tok-key">if</span> (Character.isUpperCase(entrada)) {
-                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Está en MAYÚSCULAS.&quot;</span>);
-            } <span class="tok-key">else</span> {
-                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Está en MINÚSCULAS.&quot;</span>);
-            }
-            <span class="tok-comment">// Uso de operador ternario para alternar mayúscula/minúscula</span>
-            <span class="tok-key">char</span> opuesto = Character.isUpperCase(entrada) ? Character.toLowerCase(entrada)
-                                                          : Character.toUpperCase(entrada);
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Su opuesto es: &quot;</span> + opuesto);
-        } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isWhitespace(entrada)) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es un espacio en blanco o tabulador.&quot;</span>);
-        } <span class="tok-key">else</span> {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es un SÍMBOLO o SIGNO DE PUNTUACIÓN.&quot;</span>);
-        }
-
-        sc.close();
-    }
-}</code></pre>
-</div>
-
-<hr>
-
-<h2 id="3-clases-numericas-conversion-y-constantes">3. Clases Numéricas (<code>Integer</code>, <code>Double</code>): Conversión y Constantes</h2>
-<p>En aplicaciones reales (y formularios web), los datos leídos del teclado o de una petición web llegan siempre en formato de texto (<code>String</code>). Las clases numéricas aportan las funciones esenciales de conversión (<em>parsing</em>).</p>
-
-<h3 id="31-conversion-de-texto-a-numero-parseint-parsedouble">3.1. Conversión de texto (<code>String</code>) a número primitivo (<code>parseInt</code>, <code>parseDouble</code>)</h3>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-comment">// Conversión de String a números primitivos</span>
-<span class="tok-key">String</span> textoEdad = <span class="tok-string">&quot;19&quot;</span>;
-<span class="tok-key">int</span> edad = <span class="tok-key">Integer</span>.parseInt(textoEdad); <span class="tok-comment">// Devuelve int primitivo 19</span>
-
-<span class="tok-key">String</span> textoPrecio = <span class="tok-string">&quot;49.95&quot;</span>;
-<span class="tok-key">double</span> precio = <span class="tok-key">Double</span>.parseDouble(textoPrecio); <span class="tok-comment">// Devuelve double primitivo 49.95</span></code></pre>
-</div>
-
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Error común: <code>NumberFormatException</code></p>
-<p>Si la cadena no contiene un formato numérico válido (por ejemplo <code>Integer.parseInt("hola")</code> o <code>Integer.parseInt("12.5")</code> al intentar meter decimales en un entero), Java lanzará una excepción <code>NumberFormatException</code> y detendrá el programa. Más adelante en la UT2 aprenderemos a capturarlo con <code>try-catch</code>.</p>
-</div>
-
-<h3 id="32-conversion-de-numero-a-texto">3.2. Conversión de número a texto (<code>String</code>)</h3>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">int</span> codigo = <span class="tok-bool">404</span>;
-
-<span class="tok-comment">// Opción 1: Método estático de la clase envoltorio</span>
-<span class="tok-key">String</span> textoCodigo1 = <span class="tok-key">Integer</span>.toString(codigo);
-
-<span class="tok-comment">// Opción 2 (Recomendada y universal para cualquier tipo):</span>
-<span class="tok-key">String</span> textoCodigo2 = <span class="tok-key">String</span>.valueOf(codigo);</code></pre>
-</div>
-
-<h3 id="33-constantes-limite-del-sistema">3.3. Constantes límite del sistema</h3>
-<p>Las clases envoltorio permiten consultar los límites numéricos de la máquina:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Entero máximo: &quot;</span> + <span class="tok-key">Integer</span>.MAX_VALUE); <span class="tok-comment">//  2.147.483.647</span>
-<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Entero mínimo: &quot;</span> + <span class="tok-key">Integer</span>.MIN_VALUE); <span class="tok-comment">// -2.147.483.648</span>
-
-<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Decimal máximo: &quot;</span> + <span class="tok-key">Double</span>.MAX_VALUE); <span class="tok-comment">// 1.7976931348623157E308</span></code></pre>
-</div>
-
-<hr>
-
-<h2 id="4-la-clase-string">4. La Clase <code>String</code>: Métodos Esenciales de Inspección y Manipulación</h2>
-<p>La clase <code>String</code> representa secuencias alfanuméricas inmutables. Cuenta con métodos nativos para examinar y manipular cadenas.</p>
-
-<h3 id="41-metodos-fundamentales-de-consulta">4.1. Métodos fundamentales de consulta</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Método</th>
-      <th>Devuelve</th>
-      <th>Descripción</th>
-      <th>Ejemplo (<code>String s = "DAW 1º";</code>)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><strong><code>s.length()</code></strong></td><td><code>int</code></td><td>Número total de caracteres de la cadena.</td><td><code>s.length()</code> &rarr; <code>6</code></td></tr>
-    <tr><td><strong><code>s.charAt(i)</code></strong></td><td><code>char</code></td><td>Carácter situado en el índice <code>i</code> (base 0).</td><td><code>s.charAt(0)</code> &rarr; <code>'D'</code></td></tr>
-    <tr><td><strong><code>s.isEmpty()</code></strong></td><td><code>boolean</code></td><td><code>true</code> si la longitud es 0 (<code>""</code>).</td><td><code>"".isEmpty()</code> &rarr; <code>true</code></td></tr>
-    <tr><td><strong><code>s.isBlank()</code></strong></td><td><code>boolean</code></td><td><code>true</code> si está vacía o contiene sólo espacios en blanco.</td><td><code>"   ".isBlank()</code> &rarr; <code>true</code></td></tr>
-  </tbody>
-</table>
-
-<div class="admonition note">
-<p class="admonition-title">🔗 El puente entre <code>String</code> y <code>Character</code></p>
-<p>Gracias a <code>s.charAt(i)</code>, podemos extraer cualquier carácter de una cadena de texto para examinarlo inmediatamente con los métodos de <code>Character</code>:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">String</span> matricula = <span class="tok-string">&quot;4589LKT&quot;</span>;
-<span class="tok-key">char</span> primerCaracter = matricula.charAt(<span class="tok-bool">0</span>); <span class="tok-comment">// &#x27;4&#x27;</span>
-<span class="tok-key">boolean</span> esNumero = Character.isDigit(primerCaracter); <span class="tok-comment">// true</span></code></pre>
-</div>
-</div>
-
-<h3 id="42-metodos-de-comparacion">4.2. Métodos de comparación (¡Regla de oro: NUNCA usar <code>==</code>!)</h3>
-<p>Los objetos en Java no se comparan con el operador <code>==</code> (porque compararía sus direcciones de memoria en el <em>heap</em>, no el contenido de sus caracteres). Siempre debemos usar los métodos de comparación:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Método</th>
-      <th>Devuelve</th>
-      <th>Descripción</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><strong><code>s1.equals(s2)</code></strong></td><td><code>boolean</code></td><td><code>true</code> si ambas cadenas son exactamente idénticas respetando mayúsculas/minúsculas.</td></tr>
-    <tr><td><strong><code>s1.equalsIgnoreCase(s2)</code></strong></td><td><code>boolean</code></td><td><code>true</code> si coinciden ignorando diferencias entre mayúsculas y minúsculas.</td></tr>
-    <tr><td><strong><code>s1.compareTo(s2)</code></strong></td><td><code>int</code></td><td>Comparación lexicográfica (alfabética). Devuelve <code>0</code> si son iguales, <code>&lt; 0</code> si <code>s1</code> va antes, <code>&gt; 0</code> si va después.</td></tr>
-  </tbody>
-</table>
-
-<h3 id="43-busqueda-y-subcadenas">4.3. Búsqueda y Subcadenas</h3>
-<table>
-  <thead>
-    <tr>
-      <th>Método</th>
-      <th>Devuelve</th>
-      <th>Descripción</th>
-      <th>Ejemplo (<code>String s = "IES Catadau";</code>)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td><strong><code>s.contains(texto)</code></strong></td><td><code>boolean</code></td><td>Comprueba si la subcadena está contenida en el texto.</td><td><code>s.contains("Cata")</code> &rarr; <code>true</code></td></tr>
-    <tr><td><strong><code>s.startsWith(prefijo)</code></strong></td><td><code>boolean</code></td><td>Comprueba si empieza por dicho prefijo.</td><td><code>s.startsWith("IES")</code> &rarr; <code>true</code></td></tr>
-    <tr><td><strong><code>s.endsWith(sufijo)</code></strong></td><td><code>boolean</code></td><td>Comprueba si termina por dicho sufijo.</td><td><code>s.endsWith(".java")</code> &rarr; <code>false</code></td></tr>
-    <tr><td><strong><code>s.indexOf(texto)</code></strong></td><td><code>int</code></td><td>Posición de la primera coincidencia (o <code>-1</code> si no existe).</td><td><code>s.indexOf("Catadau")</code> &rarr; <code>4</code></td></tr>
-    <tr><td><strong><code>s.substring(inicio)</code></strong></td><td><code>String</code></td><td>Extrae el texto desde el índice <code>inicio</code> hasta el final.</td><td><code>s.substring(4)</code> &rarr; <code>"Catadau"</code></td></tr>
-    <tr><td><strong><code>s.substring(inicio, fin)</code></strong></td><td><code>String</code></td><td>Extrae desde <code>inicio</code> (incluido) hasta <code>fin</code> (excluido).</td><td><code>s.substring(0, 3)</code> &rarr; <code>"IES"</code></td></tr>
-  </tbody>
-</table>
-
-<hr>
-
-<h2 id="5-casos-practicos-completos">5. Casos Prácticos Completos</h2>
-
-<h3 id="caso-1-validador-de-formato-de-dni">Caso Práctico 1: Validador de Formato de DNI / NIF</h3>
-<p>Comprobar que una cadena introducida cumple con el formato estándar español (8 números seguidos de 1 letra mayúscula):</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">package</span> ut1.practicas;
-
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> ValidadorDniSimple {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
-
-        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu DNI/NIF completo (ej. 12345678Z): &quot;</span>);
-        <span class="tok-key">String</span> dni = sc.nextLine().trim().toUpperCase();
-
-        <span class="tok-comment">// 1. Validar longitud exacta de 9 caracteres</span>
-        <span class="tok-key">if</span> (dni.length() != <span class="tok-bool">9</span>) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Error: El DNI debe tener exactamente 9 caracteres.&quot;</span>);
-        } <span class="tok-key">else</span> {
-            <span class="tok-comment">// 2. Extraer la parte numérica y la letra final</span>
-            <span class="tok-key">String</span> parteNumerica = dni.substring(<span class="tok-bool">0</span>, <span class="tok-bool">8</span>);
-            <span class="tok-key">char</span> letraFinal = dni.charAt(<span class="tok-bool">8</span>);
-
-            <span class="tok-comment">// 3. Validar con Character que el último sea una letra</span>
-            <span class="tok-key">if</span> (!Character.isLetter(letraFinal)) {
-                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Error: El último carácter debe ser una letra.&quot;</span>);
-            } <span class="tok-key">else</span> {
-                <span class="tok-comment">// 4. Convertir los primeros 8 caracteres a entero con Integer.parseInt</span>
-                <span class="tok-key">int</span> numeroDni = <span class="tok-key">Integer</span>.parseInt(parteNumerica);
-                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Formato válido. Número: &quot;</span> + numeroDni + <span class="tok-string">&quot; | Letra: &quot;</span> + letraFinal);
-            }
-        }
-
-        sc.close();
-    }
-}</code></pre>
-</div>
-
-<h3 id="caso-2-validador-de-seguridad-de-contrasena">Caso Práctico 2: Validador de Seguridad de Contraseña</h3>
-<p>Verificar si una contraseña cumple los requisitos mínimos de seguridad:</p>
-<ul>
-  <li>Longitud mínima de 8 caracteres.</li>
-  <li>Al menos un dígito numérico (<code>Character.isDigit</code>).</li>
-  <li>Al menos una letra mayúscula (<code>Character.isUpperCase</code>).</li>
-  <li>Al menos una letra minúscula (<code>Character.isLowerCase</code>).</li>
-</ul>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">package</span> ut1.practicas;
-
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> ValidadorPassword {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
-
-        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu nueva contraseña: &quot;</span>);
-        <span class="tok-key">String</span> password = sc.nextLine();
-
-        <span class="tok-key">if</span> (password.length() &lt; <span class="tok-bool">8</span>) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Contraseña demasiado corta (mínimo 8 caracteres).&quot;</span>);
-        } <span class="tok-key">else</span> {
-            <span class="tok-key">boolean</span> tieneNumero = <span class="tok-bool">false</span>;
-            <span class="tok-key">boolean</span> tieneMayuscula = <span class="tok-bool">false</span>;
-            <span class="tok-key">boolean</span> tieneMinuscula = <span class="tok-bool">false</span>;
-
-            <span class="tok-comment">// Recorremos la cadena carácter a carácter con charAt(i)</span>
-            <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; password.length(); i++) {
-                <span class="tok-key">char</span> actual = password.charAt(i);
-
-                <span class="tok-key">if</span> (Character.isDigit(actual)) {
-                    tieneNumero = <span class="tok-bool">true</span>;
-                } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isUpperCase(actual)) {
-                    tieneMayuscula = <span class="tok-bool">true</span>;
-                } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isLowerCase(actual)) {
-                    tieneMinuscula = <span class="tok-bool">true</span>;
-                }
-            }
-
-            <span class="tok-comment">// Comprobación final</span>
-            <span class="tok-key">if</span> (tieneNumero &amp;&amp; tieneMayuscula &amp;&amp; tieneMinuscula) {
-                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Contraseña FUERTE y válida.&quot;</span>);
-            } <span class="tok-key">else</span> {
-                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Contraseña DÉBIL. Debe incluir al menos:&quot;</span>);
-                <span class="tok-key">if</span> (!tieneNumero)    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   - Un número&quot;</span>);
-                <span class="tok-key">if</span> (!tieneMayuscula) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   - Una letra mayúscula&quot;</span>);
-                <span class="tok-key">if</span> (!tieneMinuscula) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   - Una letra minúscula&quot;</span>);
-            }
-        }
-
-        sc.close();
-    }
-}</code></pre>
-</div>
-
-<hr>
-
-<h2 id="6-actividades-propuestas-para-aules">6. Actividades Propuestas para el Alumnado (Subida a Aules)</h2>
-
-<div class="admonition exercise">
-<p class="admonition-title">✍️ Actividad 1: <code>DetectorMatricula.java</code> (Lliurament en Aules)</p>
-<p>Escribe un programa en Java que solicite al usuario una matrícula de vehículo en formato estándar español (4 números seguidos de 3 letras, por ejemplo <code>4821KLP</code>):</p>
-<ol>
-  <li>Limpia los espacios en blanco laterales y convierte toda la cadena a mayúsculas con métodos de <code>String</code>.</li>
-  <li>Comprueba que la longitud total sea exactamente de 7 caracteres (<code>.length() == 7</code>).</li>
-  <li>Comprueba que los 4 primeros caracteres sean dígitos numéricos utilizando un bucle o comprobaciones individuales con <code>Character.isDigit</code>.</li>
-  <li>Comprueba que los 3 últimos caracteres sean letras alfabéticas con <code>Character.isLetter</code>.</li>
-  <li>Si la matrícula es válida, extrae con <code>.substring(0, 4)</code> la parte numérica, conviértela a número con <code>Integer.parseInt</code> y muestra por pantalla el número y las letras por separado.</li>
-</ol>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Salida por Consola</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">TEXT</span>
-    </div>
-  </div>
-  <pre><code>Introduce tu matrícula (ej. 4821KLP): 4821klp
-✅ Matrícula VÁLIDA:
-   - Serie numérica: <span class="tok-bool">4821</span> (procesada como entero)
-   - Serie alfabética: KLP</code></pre>
-</div>
-<p><strong>📥 Entrega:</strong> Sube el fichero <code>DetectorMatricula.java</code> a la tarea habilitada en <strong>Aules</strong>.</p>
-</div>
-
-<div class="admonition exercise">
-<p class="admonition-title">✍️ Actividad 2: <code>ContadorVocalesConsonantes.java</code> (Lliurament en Aules)</p>
-<p>Diseña un programa en Java que pida al usuario una frase por teclado y, recorriéndola carácter a carácter con un bucle y <code>.charAt(i)</code>:</p>
-<ol>
-  <li>Cuente cuántas vocales contiene (tanto mayúsculas como minúsculas).</li>
-  <li>Cuente cuántas consonantes contiene.</li>
-  <li>Cuente cuántos dígitos numéricos incluye (utilizando <code>Character.isDigit</code>).</li>
-  <li>Muestre un resumen estadístico tabulado con <code>System.out.printf</code>.</li>
-</ol>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Salida por Consola</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">TEXT</span>
-    </div>
-  </div>
-  <pre><code>Introduce una frase: Java <span class="tok-bool">2026</span> en Catadau!
-📊 Análisis de la frase:
-   - Vocales:     <span class="tok-bool">8</span>
-   - Consonantes: <span class="tok-bool">9</span>
-   - Dígitos:     <span class="tok-bool">4</span>
-   - Otros:       <span class="tok-bool">4</span>
-   - Total car.:  <span class="tok-bool">25</span></code></pre>
-</div>
-<p><strong>📥 Entrega:</strong> Sube el fichero <code>ContadorVocalesConsonantes.java</code> a <strong>Aules</strong>.</p>
-</div>
-
-<hr>
-
-<h2 id="7-rubrica-de-evaluacion">7. Rúbrica de Evaluación para Aules</h2>
-<table>
-  <thead>
-    <tr>
-      <th>Criterio</th>
-      <th>Excelente (4 pts)</th>
-      <th>Bueno (2.5 pts)</th>
-      <th>Mejorable (1 pt)</th>
-      <th>No superado (0 pts)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Uso de <code>Character</code> y <code>String</code></strong></td>
-      <td>Aplica correctamente <code>isDigit</code>, <code>isLetter</code>, <code>charAt</code> y <code>.length</code> para validar cadenas.</td>
-      <td>Aplica los métodos pero con redundancias lógicas o falta de algún caso.</td>
-      <td>Mezcla tipos primitivos y comparaciones erróneas (<code>==</code> en vez de <code>.equals</code>).</td>
-      <td>No utiliza los métodos de inspección de clases.</td>
-    </tr>
-    <tr>
-      <td><strong>Manejo de Tipos y Conversión</strong></td>
-      <td>Utiliza <code>Integer.parseInt</code> de forma limpia tras validar el texto.</td>
-      <td>Convierte valores pero sin validación previa.</td>
-      <td>Intenta hacer casting explícito directo <code>(int) "123"</code>.</td>
-      <td>Error de compilación en tipos.</td>
-    </tr>
-    <tr>
-      <td><strong>Convenciones y <em>Clean Code</em></strong></td>
-      <td>Nombres significativos (<code>camelCase</code>), indentación impecable y comentarios clave.</td>
-      <td>Cumple la mayoría de convenciones pero con variables genéricas (<code>x</code>, <code>aux</code>).</td>
-      <td>Código desordenado, sin indentación estándar de Java.</td>
-      <td>No compila o entrega formato no válido.</td>
-    </tr>
-  </tbody>
-</table>
 
 </section><hr>
 <section id="ut0105">
-<h1>1.6 Operadores y expresiones</h1>
+<h1>1.5 Operadores y expresiones</h1>
 
 <h2 id="1-operadores-aritmeticos">1. Operadores Aritméticos</h2>
 <p>Los <strong>Operadores Aritméticos</strong> permiten realizar operaciones matemáticas:</p>
@@ -2990,7 +2450,7 @@ x = (y1 + y2) * y3; <span class="tok-comment">// 64</span></code></pre>
 </div>
 </section><hr>
 <section id="ut0106">
-<h1>1.7 Conversiones de tipo</h1>
+<h1>1.6 Conversiones de tipo</h1>
 
 <p>Existen dos tipos de conversiones: Implícitas y Explicitas. Debemos evitar las conversiones de tipos ya que pueden suponer perdidas de información.</p>
 <h2 id="1-conversiones-implicitas">1. Conversiones Implícitas</h2>
@@ -3065,7 +2525,7 @@ division=(<span class="tok-key">double</span>)numero1 / (<span class="tok-key">d
 </div>
 </section><hr>
 <section id="ut0107">
-<h1>1.8 Comentarios</h1>
+<h1>1.7 Comentarios</h1>
 
 <p>Los comentarios son muy importantes a la hora de describir qué hace un determinado programa. A lo largo de la unidad los hemos utilizado para documentar los ejemplos y mejorar la comprensión del código. Para lograr ese objetivo, es normal que cada programa comience con unas líneas de comentario que indiquen, al menos, una breve descripción del programa, el autor del mismo y la última fecha en que se ha modificado.</p>
 <p>Todos los lenguajes de programación disponen de alguna forma de introducir comentarios en el código. En el caso de Java, nos podemos encontrar los siguientes tipos de comentarios:</p>
@@ -3129,10 +2589,10 @@ division=(<span class="tok-key">double</span>)numero1 / (<span class="tok-key">d
 </div>
 </section><hr>
 <section id="ut0108">
-<h1>1.9 Herramientas útiles</h1>
+<h1>1.8 Herramientas útiles</h1>
 
 <h2 id="1-la-libreria-math">1. La librería Math</h2>
-<p>Java proporciona de forma nativa la clase <strong><code>Math</code></strong> (perteneciente al paquete <code>java.util</code>) para realizar operaciones matemáticas avanzadas, cálculo de potencias, raíces, redondeos y generación de números aleatorios.</p>
+<p>Java proporciona de forma nativa la clase <strong><code>Math</code></strong>  para realizar operaciones matemáticas avanzadas, cálculo de potencias, raíces, redondeos y generación de números aleatorios.</p>
 <hr />
 <h3 id="11-constantes-matematicas-mathpi-y-la-gravedad">1.1. Constantes matemáticas (<code>Math.PI</code> y la gravedad)</h3>
 <p>La clase <code>Math</code> incorpora constantes matemáticas fundamentales definidas con alta precisión (<code>double</code>):</p>
@@ -3315,7 +2775,7 @@ division=(<span class="tok-key">double</span>)numero1 / (<span class="tok-key">d
 </ul>
 <h4 id="formula-general-para-generar-un-entero-en-el-rango-min-max">Fórmula general para generar un entero en el rango <code>[min, max]</code></h4>
 <p>Para obtener un entero aleatorio entre cualquier mínimo y máximo (ambos incluidos):</p>
-<p><code>numero = (int) Math.random() * (max - min + 1) + min;</code></p>
+<p><code>numero = (int)(Math.random() * (max - min + 1)) + min;</code></p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -3372,7 +2832,254 @@ entero = (<span class="tok-key">int</span>)(<span class="tok-key">Math</span>.ra
 </div>
 <hr>
 
-<h2 id="2-la-clase-scanner">2. La clase Scanner</h2>
+<h2 id="2-la-clase-random">2. La clase Random</h2>
+<p>La clase <strong><code>Random</code></strong> (perteneciente al paquete <code>java.util</code>) es una herramienta especializada para la generación de números pseudoaleatorios de diversos tipos de datos (enteros, reales, booleanos...).</p>
+<p>A diferencia de <code>Math.random()</code>, que únicamente devuelve un valor <code>double</code> en el rango $[0.0, 1.0)$ y requiere operaciones de escalado y <em>casting</em>, la clase <code>Random</code> ofrece métodos directos y más cómodos, como <code>nextInt()</code>.</p>
+<hr />
+<h3 id="21-pasos-para-utilizar-random">2.1. Pasos para utilizar <code>Random</code></h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1º) <strong>Importar la clase</strong>:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Random;
+<span class="tok-comment">// o bien importar todo el paquete util:</span>
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.*;</code></pre>
+</div></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2º) <strong>Instanciar el objeto generador</strong> (habitualmente llamado <code>ran</code> o <code>rnd</code>):
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Random ran = <span class="tok-key">new</span> Random();</code></pre>
+</div></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;3º) <strong>Llamar al método correspondiente según el tipo de dato que se desea obtener</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Método</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Ejemplo</th>
+<th style="text-align: left;">Rango resultante</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>nextInt()</code></strong></td>
+<td style="text-align: left;">Genera un entero cualquiera (positivo o negativo).</td>
+<td style="text-align: left;"><code>ran.nextInt()</code></td>
+<td style="text-align: left;">Todo el rango de <code>int</code> ($-2^{31}$ a $2^{31}-1$)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>nextInt(n)</code></strong></td>
+<td style="text-align: left;">Genera un entero entre <code>0</code> (incluido) y <code>n</code> (excluido).</td>
+<td style="text-align: left;"><code>ran.nextInt(100)</code></td>
+<td style="text-align: left;"><code>0</code> a <code>99</code> ($[0, n-1]$)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>nextDouble()</code></strong></td>
+<td style="text-align: left;">Genera un decimal entre <code>0.0</code> (incluido) y <code>1.0</code> (excluido).</td>
+<td style="text-align: left;"><code>ran.nextDouble()</code></td>
+<td style="text-align: left;">$[0.0, 1.0)$ (igual que <code>Math.random()</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>nextBoolean()</code></strong></td>
+<td style="text-align: left;">Genera un valor booleano aleatorio (<code>true</code> o <code>false</code>).</td>
+<td style="text-align: left;"><code>ran.nextBoolean()</code></td>
+<td style="text-align: left;"><code>true</code> o <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-generacion-de-enteros-en-un-rango-personalizado-min-max">2.2. Generación de enteros en un rango personalizado <code>[min, max]</code></h3>
+<p>Para obtener un entero aleatorio comprendido entre un mínimo (<code>min</code>) y un máximo (<code>max</code>), ambos inclusive, se utiliza la fórmula:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> numero = ran.nextInt(max - min + <span class="tok-bool">1</span>) + min;</code></pre>
+</div>
+<p><strong>Ejemplos habituales:</strong></p>
+<ul>
+<li><strong>Tirada de un dado de 6 caras (<code>[1, 6]</code>):</strong>
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> dado = ran.nextInt(<span class="tok-bool">6</span>) + <span class="tok-bool">1</span>; <span class="tok-comment">// ran.nextInt(6) genera 0..5; al sumar 1 obtenemos 1..6</span></code></pre>
+</div></li>
+<li><strong>Número entero entre 1 y 100 (<code>[1, 100]</code>):</strong>
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> numero = ran.nextInt(<span class="tok-bool">100</span>) + <span class="tok-bool">1</span>; <span class="tok-comment">// 0..99 + 1 =&gt; 1..100</span></code></pre>
+</div></li>
+<li><strong>Rango con números negativos (por ejemplo, temperaturas entre <code>-10</code> y <code>40</code>):</strong>
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> temp = ran.nextInt(<span class="tok-bool">40</span> - (-<span class="tok-bool">10</span>) + <span class="tok-bool">1</span>) + (-<span class="tok-bool">10</span>); <span class="tok-comment">// ran.nextInt(51) - 10 =&gt; -10 a 40</span></code></pre>
+</div></li>
+</ul>
+<hr />
+<h3 id="23-comparativa-mathrandom-vs-random">2.3. Comparativa: <code>Math.random()</code> vs <code>Random</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica</th>
+<th style="text-align: left;"><code>Math.random()</code></th>
+<th style="text-align: left;">Clase <code>Random</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Paquete</strong></td>
+<td style="text-align: left;"><code>java.lang</code> (no requiere <code>import</code>)</td>
+<td style="text-align: left;"><code>java.util</code> (requiere <code>import java.util.Random;</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instanciación</strong></td>
+<td style="text-align: left;">No (método estático directo)</td>
+<td style="text-align: left;">Sí (requiere crear un objeto con <code>new Random()</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tipos generados</strong></td>
+<td style="text-align: left;">Siempre <code>double</code> en $[0.0, 1.0)$</td>
+<td style="text-align: left;">Múltiples tipos (<code>int</code>, <code>double</code>, <code>boolean</code>, etc.)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Comodidad para enteros</strong></td>
+<td style="text-align: left;">Requiere escalado y <em>cast</em>: <code>(int)(Math.random() * N)</code></td>
+<td style="text-align: left;">Método directo: <code>ran.nextInt(N)</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition java">
+<p class="admonition-title">Ejemplo demostrativo con <code>Random</code>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label><label for="__tabbed_2_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Random;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploRandom {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// 1. Instanciar el objeto Random</span>
+        Random ran = <span class="tok-key">new</span> Random();
+
+        <span class="tok-comment">// 2. Número entero entre 0 y 99:</span>
+        <span class="tok-key">int</span> aleatorio0a99 = ran.nextInt(<span class="tok-bool">100</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Número entre 0 y 99: &quot;</span> + aleatorio0a99);
+
+        <span class="tok-comment">// 3. Simulación de un dado (1 a 6):</span>
+        <span class="tok-key">int</span> dado = ran.nextInt(<span class="tok-bool">6</span>) + <span class="tok-bool">1</span>;
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Tirada de dado (1 a 6): &quot;</span> + dado);
+
+        <span class="tok-comment">// 4. Decimal aleatorio entre 0.0 y 1.0:</span>
+        <span class="tok-key">double</span> decimal = ran.nextDouble();
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Decimal aleatorio: &quot;</span> + decimal);
+
+        <span class="tok-comment">// 5. Booleano (simulación de cara o cruz):</span>
+        <span class="tok-key">boolean</span> moneda = ran.nextBoolean();
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Lanzamiento de moneda: &quot;</span> + (moneda ? <span class="tok-string">&quot;Cara&quot;</span> : <span class="tok-string">&quot;Cruz&quot;</span>));
+    }
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Número entre <span class="tok-bool">0</span> y <span class="tok-bool">99</span>: <span class="tok-bool">47</span>
+Tirada de dado (<span class="tok-bool">1</span> a <span class="tok-bool">6</span>): <span class="tok-bool">5</span>
+Decimal aleatorio: <span class="tok-bool">0</span>.<span class="tok-bool">8319402517820145</span>
+Lanzamiento de moneda: Cara</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+
+<h2 id="3-la-clase-scanner">3. La clase Scanner</h2>
 <p>La clase <code>Scanner</code> permite leer datos introducidos por el usuario desde el teclado.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;1º) Para ello deberemos, primero, importar la librería <code>util</code>:
     <div class="terminal-box">
@@ -3457,7 +3164,7 @@ cadena = sc.nextLine(); <span class="tok-comment">// Ahora sí esperará a que e
 </div>
 <div class="admonition java">
 <p class="admonition-title">En el siguiente ejemplo podemos observar mejor lo expuesto:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label><label for="__tabbed_2_2">Resultado</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Java</label><label for="__tabbed_3_2">Resultado</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="terminal-box">
@@ -3514,6 +3221,974 @@ cadena = sc.nextLine(); <span class="tok-comment">// Ahora sí esperará a que e
 </div>
 </div>
 </div>
+</section><hr>
+<section id="ut01wrappers">
+<h1>1.9 Clases Envoltorio (<em>Wrappers</em>), Character y String</h1>
+
+<div class="admonition note">
+<p class="admonition-title">📌 Información Curricular y Resultados de Aprendizaje</p>
+<p><strong>Resultados de Aprendizaje:</strong> <code>RA1</code> (Reconoce la estructura de un programa informático, identificando los tipos de datos del lenguaje) y <code>RA3</code> (Escribe y depura código con estructuras de control).</p>
+<p><strong>Criterios de Evaluación:</strong> CEb (Identificación de tipos de datos básicos y objetos), CEd (Operadores y conversiones), CEf (Librerías de clases estándar de Java) y CEg (Sintaxis y convenciones <em>Clean Code</em>).</p>
+</div>
+
+<h2 id="1-de-tipos-primitivos-a-clases-wrappers">1. Introducción: De Tipos Primitivos a Clases (<em>Wrappers</em>)</h2>
+<p>En Java existen <strong>dos grandes categorías</strong> de tipos de datos:</p>
+<ol>
+  <li><strong>Tipos primitivos (<code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code>...):</strong> Almacenan directamente el valor puro en la memoria rápida (<em>pila</em> o <em>stack</em>). Son muy ligeros y rápidos, pero <strong>no son objetos</strong>: carecen de atributos y métodos. No es posible escribir <code>numero.algo()</code>.</li>
+  <li><strong>Tipos referenciados u Objetos (Clases):</strong> Almacenan una referencia (puntero) a un objeto ubicado en la memoria dinámica (<em>heap</em>). Disponen de <strong>métodos de utilidad</strong> incorporados para operar, consultar y transformar la información.</li>
+</ol>
+
+<p>Para salvar esta limitación, Java incluye en su paquete fundamental <code>java.lang</code> (disponible automáticamente sin necesidad de <code>import</code>) una <strong>Clase Envoltorio</strong> (<em>Wrapper class</em>) para cada uno de los 8 tipos primitivos:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo Primitivo</th>
+      <th>Clase Envoltorio (<em>Wrapper</em>)</th>
+      <th>Tamaño en memoria</th>
+      <th>Ejemplo de método estático útil</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>byte</code></td><td><strong><code>Byte</code></strong></td><td>8 bits</td><td><code>Byte.parseByte("10")</code></td></tr>
+    <tr><td><code>short</code></td><td><strong><code>Short</code></strong></td><td>16 bits</td><td><code>Short.MAX_VALUE</code></td></tr>
+    <tr><td><code>int</code></td><td><strong><code>Integer</code></strong></td><td>32 bits</td><td><code>Integer.parseInt("42")</code></td></tr>
+    <tr><td><code>long</code></td><td><strong><code>Long</code></strong></td><td>64 bits</td><td><code>Long.parseLong("10000000000")</code></td></tr>
+    <tr><td><code>float</code></td><td><strong><code>Float</code></strong></td><td>32 bits</td><td><code>Float.parseFloat("3.14F")</code></td></tr>
+    <tr><td><code>double</code></td><td><strong><code>Double</code></strong></td><td>64 bits</td><td><code>Double.parseDouble("19.99")</code></td></tr>
+    <tr><td><code>char</code></td><td><strong><code>Character</code></strong></td><td>16 bits</td><td><code>Character.isDigit('7')</code></td></tr>
+    <tr><td><code>boolean</code></td><td><strong><code>Boolean</code></strong></td><td>1 bit</td><td><code>Boolean.parseBoolean("true")</code></td></tr>
+  </tbody>
+</table>
+
+<div class="admonition tip">
+<p class="admonition-title">⚡ Autoboxing y Unboxing automático</p>
+<p>Java convierte automáticamente entre el primitivo y su clase envoltorio sin necesidad de instanciar manualmente:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">Integer</span> numObjeto = <span class="tok-bool">10</span>;        <span class="tok-comment">// Autoboxing: de int primitivo a objeto Integer</span>
+<span class="tok-key">int</span> numPrimitivo = numObjeto;  <span class="tok-comment">// Unboxing: de objeto Integer a int primitivo</span></code></pre>
+</div>
+<p><em>Nota: Desde Java 9, el uso de constructores explícitos como <code>new Integer(10)</code> está oficialmente obsoleto y desaconsejado.</em></p>
+</div>
+
+<hr>
+
+<h2 id="2-la-clase-character">2. La Clase <code>Character</code>: Inspección y Validación de Caracteres</h2>
+<p>El tipo primitivo <code>char</code> almacena un único carácter Unicode entre comillas simples (<code>'a'</code>, <code>'5'</code>, <code>'#'</code>). Al ser primitivo, no tiene métodos propios.</p>
+<p>Para saber si un carácter introducido por el usuario es una letra, un número, un espacio o un signo de puntuación, recurrimos a los <strong>métodos estáticos de la clase <code>Character</code></strong>.</p>
+
+<h3 id="21-metodos-de-comprobacion-booleana">2.1. Métodos de comprobación booleana (<code>is...</code>)</h3>
+<p>Se invocan directamente como <code>Character.metodo(variableChar)</code> y devuelven <code>true</code> o <code>false</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Método</th>
+      <th>Devuelve</th>
+      <th>Descripción</th>
+      <th>Ejemplo (<code>char c = '9';</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong><code>Character.isDigit(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es un dígito numérico (<code>'0'</code> al <code>'9'</code>).</td><td><code>Character.isDigit('9')</code> &rarr; <code>true</code></td></tr>
+    <tr><td><strong><code>Character.isLetter(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es una letra alfabética (incluye tildes, <code>'ñ'</code> y Unicode).</td><td><code>Character.isLetter('9')</code> &rarr; <code>false</code></td></tr>
+    <tr><td><strong><code>Character.isLetterOrDigit(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es alfanumérico (letra o dígito).</td><td><code>Character.isLetterOrDigit('@')</code> &rarr; <code>false</code></td></tr>
+    <tr><td><strong><code>Character.isWhitespace(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si es espacio en blanco, tabulador (<code>\t</code>) o salto de línea (<code>\n</code>).</td><td><code>Character.isWhitespace(' ')</code> &rarr; <code>true</code></td></tr>
+    <tr><td><strong><code>Character.isUpperCase(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si la letra está en mayúscula.</td><td><code>Character.isUpperCase('A')</code> &rarr; <code>true</code></td></tr>
+    <tr><td><strong><code>Character.isLowerCase(c)</code></strong></td><td><code>boolean</code></td><td>Comprueba si la letra está en minúscula.</td><td><code>Character.isLowerCase('a')</code> &rarr; <code>true</code></td></tr>
+  </tbody>
+</table>
+
+<h3 id="22-metodos-de-transformacion">2.2. Métodos de transformación (<code>to...</code>)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Método</th>
+      <th>Devuelve</th>
+      <th>Descripción</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong><code>Character.toUpperCase(c)</code></strong></td><td><code>char</code></td><td>Convierte el carácter a mayúscula (si no es letra, lo mantiene igual).</td><td><code>Character.toUpperCase('b')</code> &rarr; <code>'B'</code></td></tr>
+    <tr><td><strong><code>Character.toLowerCase(c)</code></strong></td><td><code>char</code></td><td>Convierte el carácter a minúscula.</td><td><code>Character.toLowerCase('G')</code> &rarr; <code>'g'</code></td></tr>
+  </tbody>
+</table>
+
+<h3 id="23-ejemplo-completo-clasificadorcaracter">2.3. Ejemplo práctico: Clasificar la pulsación del usuario</h3>
+<p>El siguiente programa pide un carácter y muestra su clasificación exacta combinando <code>Character</code> con el operador condicional:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut1.caracteres;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> ClasificadorCaracter {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+
+        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce un solo carácter por teclado: &quot;</span>);
+        <span class="tok-key">char</span> entrada = sc.next().charAt(<span class="tok-bool">0</span>);
+
+        <span class="tok-key">if</span> (Character.isDigit(entrada)) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es un DÍGITO NUMÉRICO (0-9).&quot;</span>);
+        } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isLetter(entrada)) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es una LETRA ALFABÉTICA.&quot;</span>);
+            <span class="tok-key">if</span> (Character.isUpperCase(entrada)) {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Está en MAYÚSCULAS.&quot;</span>);
+            } <span class="tok-key">else</span> {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Está en MINÚSCULAS.&quot;</span>);
+            }
+            <span class="tok-comment">// Uso de operador ternario para alternar mayúscula/minúscula</span>
+            <span class="tok-key">char</span> opuesto = Character.isUpperCase(entrada) ? Character.toLowerCase(entrada)
+                                                          : Character.toUpperCase(entrada);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Su opuesto es: &quot;</span> + opuesto);
+        } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isWhitespace(entrada)) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es un espacio en blanco o tabulador.&quot;</span>);
+        } <span class="tok-key">else</span> {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Es un SÍMBOLO o SIGNO DE PUNTUACIÓN.&quot;</span>);
+        }
+
+        sc.close();
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="3-clases-numericas-conversion-y-constantes">3. Clases Numéricas (<code>Integer</code>, <code>Double</code>): Conversión y Constantes</h2>
+<p>En aplicaciones reales (y formularios web), los datos leídos del teclado o de una petición web llegan siempre en formato de texto (<code>String</code>). Las clases numéricas aportan las funciones esenciales de conversión (<em>parsing</em>).</p>
+
+<h3 id="31-conversion-de-texto-a-numero-parseint-parsedouble">3.1. Conversión de texto (<code>String</code>) a número primitivo (<code>parseInt</code>, <code>parseDouble</code>)</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Conversión de String a números primitivos</span>
+<span class="tok-key">String</span> textoEdad = <span class="tok-string">&quot;19&quot;</span>;
+<span class="tok-key">int</span> edad = <span class="tok-key">Integer</span>.parseInt(textoEdad); <span class="tok-comment">// Devuelve int primitivo 19</span>
+
+<span class="tok-key">String</span> textoPrecio = <span class="tok-string">&quot;49.95&quot;</span>;
+<span class="tok-key">double</span> precio = <span class="tok-key">Double</span>.parseDouble(textoPrecio); <span class="tok-comment">// Devuelve double primitivo 49.95</span></code></pre>
+</div>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Error común: <code>NumberFormatException</code></p>
+<p>Si la cadena no contiene un formato numérico válido (por ejemplo <code>Integer.parseInt("hola")</code> o <code>Integer.parseInt("12.5")</code> al intentar meter decimales en un entero), Java lanzará una excepción <code>NumberFormatException</code> y detendrá el programa. Más adelante en la UT2 aprenderemos a capturarlo con <code>try-catch</code>.</p>
+</div>
+
+<h3 id="32-conversion-de-numero-a-texto">3.2. Conversión de número a texto (<code>String</code>)</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> codigo = <span class="tok-bool">404</span>;
+
+<span class="tok-comment">// Opción 1: Método estático de la clase envoltorio</span>
+<span class="tok-key">String</span> textoCodigo1 = <span class="tok-key">Integer</span>.toString(codigo);
+
+<span class="tok-comment">// Opción 2 (Recomendada y universal para cualquier tipo):</span>
+<span class="tok-key">String</span> textoCodigo2 = <span class="tok-key">String</span>.valueOf(codigo);</code></pre>
+</div>
+
+<h3 id="33-constantes-limite-del-sistema">3.3. Constantes límite del sistema</h3>
+<p>Las clases envoltorio permiten consultar los límites numéricos de la máquina:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Entero máximo: &quot;</span> + <span class="tok-key">Integer</span>.MAX_VALUE); <span class="tok-comment">//  2.147.483.647</span>
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Entero mínimo: &quot;</span> + <span class="tok-key">Integer</span>.MIN_VALUE); <span class="tok-comment">// -2.147.483.648</span>
+
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Decimal máximo: &quot;</span> + <span class="tok-key">Double</span>.MAX_VALUE); <span class="tok-comment">// 1.7976931348623157E308</span></code></pre>
+</div>
+
+<hr>
+
+<h2 id="4-la-clase-string">4. La Clase <code>String</code>: Métodos Esenciales de Inspección y Manipulación</h2>
+<p>La clase <code>String</code> representa secuencias alfanuméricas inmutables. Cuenta con métodos nativos para examinar y manipular cadenas.</p>
+
+<h3 id="41-metodos-fundamentales-de-consulta">4.1. Métodos fundamentales de consulta</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Método</th>
+      <th>Devuelve</th>
+      <th>Descripción</th>
+      <th>Ejemplo (<code>String s = "DAW 1º";</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong><code>s.length()</code></strong></td><td><code>int</code></td><td>Número total de caracteres de la cadena.</td><td><code>s.length()</code> &rarr; <code>6</code></td></tr>
+    <tr><td><strong><code>s.charAt(i)</code></strong></td><td><code>char</code></td><td>Carácter situado en el índice <code>i</code> (base 0).</td><td><code>s.charAt(0)</code> &rarr; <code>'D'</code></td></tr>
+    <tr><td><strong><code>s.isEmpty()</code></strong></td><td><code>boolean</code></td><td><code>true</code> si la longitud es 0 (<code>""</code>).</td><td><code>"".isEmpty()</code> &rarr; <code>true</code></td></tr>
+    <tr><td><strong><code>s.isBlank()</code></strong></td><td><code>boolean</code></td><td><code>true</code> si está vacía o contiene sólo espacios en blanco.</td><td><code>"   ".isBlank()</code> &rarr; <code>true</code></td></tr>
+  </tbody>
+</table>
+
+<div class="admonition note">
+<p class="admonition-title">🔗 El puente entre <code>String</code> y <code>Character</code></p>
+<p>Gracias a <code>s.charAt(i)</code>, podemos extraer cualquier carácter de una cadena de texto para examinarlo inmediatamente con los métodos de <code>Character</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">String</span> matricula = <span class="tok-string">&quot;4589LKT&quot;</span>;
+<span class="tok-key">char</span> primerCaracter = matricula.charAt(<span class="tok-bool">0</span>); <span class="tok-comment">// &#x27;4&#x27;</span>
+<span class="tok-key">boolean</span> esNumero = Character.isDigit(primerCaracter); <span class="tok-comment">// true</span></code></pre>
+</div>
+</div>
+
+<h3 id="42-metodos-de-comparacion">4.2. Métodos de comparación (¡Regla de oro: NUNCA usar <code>==</code>!)</h3>
+<p>Los objetos en Java no se comparan con el operador <code>==</code> (porque compararía sus direcciones de memoria en el <em>heap</em>, no el contenido de sus caracteres). Siempre debemos usar los métodos de comparación:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Método</th>
+      <th>Devuelve</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong><code>s1.equals(s2)</code></strong></td><td><code>boolean</code></td><td><code>true</code> si ambas cadenas son exactamente idénticas respetando mayúsculas/minúsculas.</td></tr>
+    <tr><td><strong><code>s1.equalsIgnoreCase(s2)</code></strong></td><td><code>boolean</code></td><td><code>true</code> si coinciden ignorando diferencias entre mayúsculas y minúsculas.</td></tr>
+    <tr><td><strong><code>s1.compareTo(s2)</code></strong></td><td><code>int</code></td><td>Comparación lexicográfica (alfabética). Devuelve <code>0</code> si son iguales, <code>&lt; 0</code> si <code>s1</code> va antes, <code>&gt; 0</code> si va después.</td></tr>
+  </tbody>
+</table>
+
+<h3 id="43-busqueda-y-subcadenas">4.3. Búsqueda y Subcadenas</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Método</th>
+      <th>Devuelve</th>
+      <th>Descripción</th>
+      <th>Ejemplo (<code>String s = "IES Catadau";</code>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong><code>s.contains(texto)</code></strong></td><td><code>boolean</code></td><td>Comprueba si la subcadena está contenida en el texto.</td><td><code>s.contains("Cata")</code> &rarr; <code>true</code></td></tr>
+    <tr><td><strong><code>s.startsWith(prefijo)</code></strong></td><td><code>boolean</code></td><td>Comprueba si empieza por dicho prefijo.</td><td><code>s.startsWith("IES")</code> &rarr; <code>true</code></td></tr>
+    <tr><td><strong><code>s.endsWith(sufijo)</code></strong></td><td><code>boolean</code></td><td>Comprueba si termina por dicho sufijo.</td><td><code>s.endsWith(".java")</code> &rarr; <code>false</code></td></tr>
+    <tr><td><strong><code>s.indexOf(texto)</code></strong></td><td><code>int</code></td><td>Posición de la primera coincidencia (o <code>-1</code> si no existe).</td><td><code>s.indexOf("Catadau")</code> &rarr; <code>4</code></td></tr>
+    <tr><td><strong><code>s.substring(inicio)</code></strong></td><td><code>String</code></td><td>Extrae el texto desde el índice <code>inicio</code> hasta el final.</td><td><code>s.substring(4)</code> &rarr; <code>"Catadau"</code></td></tr>
+    <tr><td><strong><code>s.substring(inicio, fin)</code></strong></td><td><code>String</code></td><td>Extrae desde <code>inicio</code> (incluido) hasta <code>fin</code> (excluido).</td><td><code>s.substring(0, 3)</code> &rarr; <code>"IES"</code></td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="5-casos-practicos-completos">5. Casos Prácticos Completos</h2>
+
+<h3 id="caso-1-validador-de-formato-de-dni">Caso Práctico 1: Validador de Formato de DNI / NIF</h3>
+<p>Comprobar que una cadena introducida cumple con el formato estándar español (8 números seguidos de 1 letra mayúscula):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut1.practicas;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> ValidadorDniSimple {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+
+        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu DNI/NIF completo (ej. 12345678Z): &quot;</span>);
+        <span class="tok-key">String</span> dni = sc.nextLine().trim().toUpperCase();
+
+        <span class="tok-comment">// 1. Validar longitud exacta de 9 caracteres</span>
+        <span class="tok-key">if</span> (dni.length() != <span class="tok-bool">9</span>) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Error: El DNI debe tener exactamente 9 caracteres.&quot;</span>);
+        } <span class="tok-key">else</span> {
+            <span class="tok-comment">// 2. Extraer la parte numérica y la letra final</span>
+            <span class="tok-key">String</span> parteNumerica = dni.substring(<span class="tok-bool">0</span>, <span class="tok-bool">8</span>);
+            <span class="tok-key">char</span> letraFinal = dni.charAt(<span class="tok-bool">8</span>);
+
+            <span class="tok-comment">// 3. Validar con Character que el último sea una letra</span>
+            <span class="tok-key">if</span> (!Character.isLetter(letraFinal)) {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Error: El último carácter debe ser una letra.&quot;</span>);
+            } <span class="tok-key">else</span> {
+                <span class="tok-comment">// 4. Convertir los primeros 8 caracteres a entero con Integer.parseInt</span>
+                <span class="tok-key">int</span> numeroDni = <span class="tok-key">Integer</span>.parseInt(parteNumerica);
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Formato válido. Número: &quot;</span> + numeroDni + <span class="tok-string">&quot; | Letra: &quot;</span> + letraFinal);
+            }
+        }
+
+        sc.close();
+    }
+}</code></pre>
+</div>
+
+<h3 id="caso-2-validador-de-seguridad-de-contrasena">Caso Práctico 2: Validador de Seguridad de Contraseña</h3>
+<p>Verificar si una contraseña cumple los requisitos mínimos de seguridad:</p>
+<ul>
+  <li>Longitud mínima de 8 caracteres.</li>
+  <li>Al menos un dígito numérico (<code>Character.isDigit</code>).</li>
+  <li>Al menos una letra mayúscula (<code>Character.isUpperCase</code>).</li>
+  <li>Al menos una letra minúscula (<code>Character.isLowerCase</code>).</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut1.practicas;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> ValidadorPassword {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+
+        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu nueva contraseña: &quot;</span>);
+        <span class="tok-key">String</span> password = sc.nextLine();
+
+        <span class="tok-key">if</span> (password.length() &lt; <span class="tok-bool">8</span>) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Contraseña demasiado corta (mínimo 8 caracteres).&quot;</span>);
+        } <span class="tok-key">else</span> {
+            <span class="tok-key">boolean</span> tieneNumero = <span class="tok-bool">false</span>;
+            <span class="tok-key">boolean</span> tieneMayuscula = <span class="tok-bool">false</span>;
+            <span class="tok-key">boolean</span> tieneMinuscula = <span class="tok-bool">false</span>;
+
+            <span class="tok-comment">// Recorremos la cadena carácter a carácter con charAt(i)</span>
+            <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; password.length(); i++) {
+                <span class="tok-key">char</span> actual = password.charAt(i);
+
+                <span class="tok-key">if</span> (Character.isDigit(actual)) {
+                    tieneNumero = <span class="tok-bool">true</span>;
+                } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isUpperCase(actual)) {
+                    tieneMayuscula = <span class="tok-bool">true</span>;
+                } <span class="tok-key">else</span> <span class="tok-key">if</span> (Character.isLowerCase(actual)) {
+                    tieneMinuscula = <span class="tok-bool">true</span>;
+                }
+            }
+
+            <span class="tok-comment">// Comprobación final</span>
+            <span class="tok-key">if</span> (tieneNumero &amp;&amp; tieneMayuscula &amp;&amp; tieneMinuscula) {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Contraseña FUERTE y válida.&quot;</span>);
+            } <span class="tok-key">else</span> {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Contraseña DÉBIL. Debe incluir al menos:&quot;</span>);
+                <span class="tok-key">if</span> (!tieneNumero)    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   - Un número&quot;</span>);
+                <span class="tok-key">if</span> (!tieneMayuscula) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   - Una letra mayúscula&quot;</span>);
+                <span class="tok-key">if</span> (!tieneMinuscula) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   - Una letra minúscula&quot;</span>);
+            }
+        }
+
+        sc.close();
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="6-actividades-propuestas-para-aules">6. Actividades Propuestas para el Alumnado (Subida a Aules)</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">✍️ Actividad 1: <code>DetectorMatricula.java</code> (Lliurament en Aules)</p>
+<p>Escribe un programa en Java que solicite al usuario una matrícula de vehículo en formato estándar español (4 números seguidos de 3 letras, por ejemplo <code>4821KLP</code>):</p>
+<ol>
+  <li>Limpia los espacios en blanco laterales y convierte toda la cadena a mayúsculas con métodos de <code>String</code>.</li>
+  <li>Comprueba que la longitud total sea exactamente de 7 caracteres (<code>.length() == 7</code>).</li>
+  <li>Comprueba que los 4 primeros caracteres sean dígitos numéricos utilizando un bucle o comprobaciones individuales con <code>Character.isDigit</code>.</li>
+  <li>Comprueba que los 3 últimos caracteres sean letras alfabéticas con <code>Character.isLetter</code>.</li>
+  <li>Si la matrícula es válida, extrae con <code>.substring(0, 4)</code> la parte numérica, conviértela a número con <code>Integer.parseInt</code> y muestra por pantalla el número y las letras por separado.</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Salida por Consola</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">TEXT</span>
+    </div>
+  </div>
+  <pre><code>Introduce tu matrícula (ej. 4821KLP): 4821klp
+✅ Matrícula VÁLIDA:
+   - Serie numérica: <span class="tok-bool">4821</span> (procesada como entero)
+   - Serie alfabética: KLP</code></pre>
+</div>
+<p><strong>📥 Entrega:</strong> Sube el fichero <code>DetectorMatricula.java</code> a la tarea habilitada en <strong>Aules</strong>.</p>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">✍️ Actividad 2: <code>ContadorVocalesConsonantes.java</code> (Lliurament en Aules)</p>
+<p>Diseña un programa en Java que pida al usuario una frase por teclado y, recorriéndola carácter a carácter con un bucle y <code>.charAt(i)</code>:</p>
+<ol>
+  <li>Cuente cuántas vocales contiene (tanto mayúsculas como minúsculas).</li>
+  <li>Cuente cuántas consonantes contiene.</li>
+  <li>Cuente cuántos dígitos numéricos incluye (utilizando <code>Character.isDigit</code>).</li>
+  <li>Muestre un resumen estadístico tabulado con <code>System.out.printf</code>.</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Salida por Consola</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">TEXT</span>
+    </div>
+  </div>
+  <pre><code>Introduce una frase: Java <span class="tok-bool">2026</span> en Catadau!
+📊 Análisis de la frase:
+   - Vocales:     <span class="tok-bool">8</span>
+   - Consonantes: <span class="tok-bool">9</span>
+   - Dígitos:     <span class="tok-bool">4</span>
+   - Otros:       <span class="tok-bool">4</span>
+   - Total car.:  <span class="tok-bool">25</span></code></pre>
+</div>
+<p><strong>📥 Entrega:</strong> Sube el fichero <code>ContadorVocalesConsonantes.java</code> a <strong>Aules</strong>.</p>
+</div>
+
+<hr>
+
+<h2 id="7-rubrica-de-evaluacion">7. Rúbrica de Evaluación para Aules</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Criterio</th>
+      <th>Excelente (4 pts)</th>
+      <th>Bueno (2.5 pts)</th>
+      <th>Mejorable (1 pt)</th>
+      <th>No superado (0 pts)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Uso de <code>Character</code> y <code>String</code></strong></td>
+      <td>Aplica correctamente <code>isDigit</code>, <code>isLetter</code>, <code>charAt</code> y <code>.length</code> para validar cadenas.</td>
+      <td>Aplica los métodos pero con redundancias lógicas o falta de algún caso.</td>
+      <td>Mezcla tipos primitivos y comparaciones erróneas (<code>==</code> en vez de <code>.equals</code>).</td>
+      <td>No utiliza los métodos de inspección de clases.</td>
+    </tr>
+    <tr>
+      <td><strong>Manejo de Tipos y Conversión</strong></td>
+      <td>Utiliza <code>Integer.parseInt</code> de forma limpia tras validar el texto.</td>
+      <td>Convierte valores pero sin validación previa.</td>
+      <td>Intenta hacer casting explícito directo <code>(int) "123"</code>.</td>
+      <td>Error de compilación en tipos.</td>
+    </tr>
+    <tr>
+      <td><strong>Convenciones y <em>Clean Code</em></strong></td>
+      <td>Nombres significativos (<code>camelCase</code>), indentación impecable y comentarios clave.</td>
+      <td>Cumple la mayoría de convenciones pero con variables genéricas (<code>x</code>, <code>aux</code>).</td>
+      <td>Código desordenado, sin indentación estándar de Java.</td>
+      <td>No compila o entrega formato no válido.</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><hr>
+<section id="ut0109">
+<h1>1.10 Novedades de Java 25</h1>
+
+<h2 id="1-novedades-y-modernizacion-en-java-25">1. Novedades y Modernización en Java 25</h2>
+<p>A lo largo de sus más de 30 años de historia, <strong>Java</strong> ha sido conocido por su robustez, estabilidad y gran adopción empresarial. No obstante, una de las críticas más habituales por parte de quienes se inician en la programación ha sido su <strong>excesiva verbosidad</strong>: para escribir el clásico programa de bienvenida (<em>Hola Mundo</em>), era obligatorio explicar conceptos avanzados como clases, modificadores de acceso (<code>public</code>), métodos de clase (<code>static</code>), paso de argumentos por consola (<code>String[] args</code>) y flujos del sistema (<code>System.out.println</code>).</p>
+<p>A través del proyecto <strong>Amber</strong> de OpenJDK, Java ha evolucionado de forma espectacular con las versiones modernas y culminando en <strong>Java 25 (LTS)</strong>. Esta versión consolida una serie de características pensadas para reducir drásticamente la curva de aprendizaje inicial (lo que se conoce en la comunidad como <em>"paving the on-ramp"</em>), permitiendo escribir código directo, limpio y legible desde el primer día, sin perder la potencia orientada a objetos en proyectos complejos.</p>
+<details class="admonition tip">
+<summary>¿Cómo puedes saber la versión de Java instalada en tu ordenador?</summary>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Escribe en la terminal o símbolo del sistema:
+<span class="tok-cmd">java</span> --version</code></pre>
+</div>
+</details>
+<hr>
+
+<h2 id="2-clases-declaradas-implicitamente-implicitly-declared-classes">2. Clases Declaradas Implícitamente (<em>Implicitly Declared Classes</em>)</h2>
+<p>Hasta hace poco, en Java era una regla inmutable que <strong>todo el código debía estar obligatoriamente dentro de una clase declarada explícitamente</strong>, y el nombre de dicha clase pública debía coincidir de manera exacta con el nombre del fichero <code>.java</code>.</p>
+<p>En Java 25 ya <strong>no es necesario escribir la declaración de la clase</strong> (<code>class MiClase { ... }</code>) si estamos creando un programa de nivel de entrada o un script de un solo archivo.</p>
+<h3 id="21-como-funciona">2.1. ¿Cómo funciona?</h3>
+<p>Podemos crear un archivo fuente (por ejemplo, <code>Calculadora.java</code>) y escribir variables y métodos directamente en el cuerpo del archivo:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Archivo: Calculadora.java (¡Sin public class Calculadora!)</span>
+
+<span class="tok-key">double</span> impuesto = <span class="tok-bool">0</span>.<span class="tok-bool">21</span>;
+
+<span class="tok-key">double</span> calcularTotal(<span class="tok-key">double</span> base) {
+    <span class="tok-key">return</span> base * (<span class="tok-bool">1</span> + impuesto);
+}
+
+<span class="tok-key">void</span> main() {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Precio final: &quot;</span> + calcularTotal(<span class="tok-bool">100</span>));
+}</code></pre>
+</div>
+<ul>
+<li><strong>¿Qué hace el compilador?</strong> El compilador de Java genera automáticamente una clase en <em>bytecode</em> (utilizando el nombre del fichero) para contener todos los métodos y campos definidos a nivel superior.</li>
+<li><strong>¿Se pueden seguir definiendo métodos auxiliares?</strong> Sí. Cualquier método o variable fuera del <code>main</code> pasa a ser miembro de esa clase generada implícitamente.</li>
+<li><strong>Compatibilidad:</strong> No se rompe el código tradicional. Si defines una clase explícita <code>public class MiPrograma</code>, funciona exactamente igual que antes. La clase implícita es una facilidad para arrancar rápidamente y eliminar ruido visual.</li>
+</ul>
+<hr>
+
+<h2 id="3-cabecera-simplificada-del-metodo-main-instance-main-methods">3. Cabecera Simplificada del Método <code>main</code> (<em>Instance Main Methods</em>)</h2>
+<p>Junto con la eliminación de la declaración forzosa de la clase, Java 25 flexibiliza por completo el punto de entrada de las aplicaciones: el método <code>main</code>.</p>
+<h3 id="31-comparativa-el-clasico-main-vs-el-nuevo-main">3.1. Comparativa: El clásico <code>main</code> vs El nuevo <code>main</code></h3>
+<p>Tradicionalmente se requería una firma larga e intimidatoria:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Java tradicional</span>
+<span class="tok-key">public</span> <span class="tok-key">class</span> HolaMundo {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Hola Mundo&quot;</span>);
+    }
+}</code></pre>
+</div>
+<p>En Java 25 podemos escribir simplemente:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Java 25</span>
+<span class="tok-key">void</span> main() {
+    IO.println(<span class="tok-string">&quot;Hola Mundo&quot;</span>);
+}</code></pre>
+</div>
+<h3 id="32-que-simplificaciones-se-han-aplicado">3.2. ¿Qué simplificaciones se han aplicado?</h3>
+<ol>
+<li><strong>Sin <code>public</code>:</strong> Ya no es obligatorio que el método sea público; puede tener visibilidad de paquete (<em>package-private</em> por defecto).</li>
+<li><strong>Sin <code>static</code> (Métodos de instancia):</strong> El método ya no necesita ser estático. La máquina virtual (JVM) puede instanciar la clase de forma automática y ejecutar el método <code>main</code> como un método de instancia.</li>
+<li><strong>Sin <code>String[] args</code>:</strong> Si nuestro programa no va a recibir argumentos por la línea de comandos, no hace falta declarar el array de parámetros.</li>
+</ol>
+<h3 id="33-orden-de-resolucion-de-la-jvm">3.3. Orden de resolución de la JVM</h3>
+<p>Para garantizar total compatibilidad hacia atrás, si en un archivo conviven distintas firmas de arranque, la JVM selecciona el método según el siguiente orden de prioridad:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Prioridad</th>
+<th style="text-align: left;">Firma del método <code>main</code></th>
+<th style="text-align: left;">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1º</strong></td>
+<td style="text-align: left;"><code>static void main(String[] args)</code></td>
+<td style="text-align: left;">Firma clásica estándar de Java.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2º</strong></td>
+<td style="text-align: left;"><code>static void main()</code></td>
+<td style="text-align: left;">Estático, sin necesidad de argumentos de línea de comandos.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3º</strong></td>
+<td style="text-align: left;"><code>void main(String[] args)</code></td>
+<td style="text-align: left;">Método de instancia con argumentos.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4º</strong></td>
+<td style="text-align: left;"><code>void main()</code></td>
+<td style="text-align: left;">Método de instancia mínimo y simplificado.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h2 id="4-entrada-y-salida-simplificada-la-clase-io">4. Entrada y Salida Simplificada: La Clase <code>IO</code></h2>
+<p>Uno de los mayores dolores de cabeza para los alumnos que se inician en Java era la entrada y salida de datos por consola:</p>
+<ul>
+<li>Tener que memorizar <code>System.out.println(...)</code> para imprimir texto.</li>
+<li>Tener que importar <code>java.util.Scanner</code>, crear una instancia vinculada a <code>System.in</code> (<code>Scanner sc = new Scanner(System.in);</code>) y gestionar los habituales <strong>problemas de desbordamiento de búfer</strong> (cuando tras <code>nextInt()</code> quedaba un salto de línea residual que arruinaba la llamada a <code>nextLine()</code>).</li>
+</ul>
+<p>Java 25 resuelve esto mediante la incorporación de la clase <strong><code>java.io.IO</code></strong>, cuyos métodos estáticos están disponibles de forma directa en las clases implícitas.</p>
+<hr />
+<h3 id="41-salida-por-consola-print-y-println">4.1. Salida por consola: <code>print()</code> y <code>println()</code></h3>
+<p>Ya no es necesario escribir <code>System.out.println()</code>. Podemos invocar directamente a <code>println()</code> y <code>print()</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">void</span> main() {
+    IO.print(<span class="tok-string">&quot;Calculando...&quot;</span>);
+    IO.println(<span class="tok-string">&quot; ¡Listo!&quot;</span>);
+    IO.println(<span class="tok-bool">42</span>);
+}</code></pre>
+</div>
+<hr />
+<h3 id="42-lectura-de-teclado-readln">4.2. Lectura de teclado: <code>readln()</code></h3>
+<p>Para capturar datos del usuario desde el teclado, la clase <code>IO</code> proporciona el método <strong><code>readln()</code></strong>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">void</span> main() {
+    <span class="tok-comment">// Puede recibir un mensaje que se muestra al usuario antes de la lectura:</span>
+    <span class="tok-key">String</span> nombre = IO.readln(<span class="tok-string">&quot;Introduce tu nombre: &quot;</span>);
+
+    IO.println(<span class="tok-string">&quot;¡Bienvenido/a, &quot;</span> + nombre + <span class="tok-string">&quot;!&quot;</span>);
+}</code></pre>
+</div>
+<h4 id="ventajas-frente-a-scanner">Ventajas frente a <code>Scanner</code>:</h4>
+<ul>
+<li><strong>Sin objetos ni inicialización:</strong> No requiere crear ningún objeto (<code>new Scanner(...)</code>).</li>
+<li><strong>Mensaje integrado (<em>prompt</em>):</strong> Se le puede pasar la pregunta directamente como argumento sin necesidad de hacer un <code>print()</code> previo.</li>
+<li><strong>Sin problemas de búfer:</strong> <code>readln()</code> lee una línea completa cada vez, evitando los errores clásicos de saltos de línea residuales al alternar números y texto.</li>
+</ul>
+<hr />
+<h3 id="43-lectura-y-conversion-de-numeros">4.3. Lectura y Conversión de Números</h3>
+<p><code>readln()</code> siempre devuelve un objeto de tipo <code>String</code>. Cuando deseamos leer un entero (<code>int</code>) o un decimal (<code>double</code>), combinamos <code>readln()</code> con los métodos de conversión estándar vistos en el tema de tipos de datos (<code>Integer.parseInt</code> y <code>Double.parseDouble</code>):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">void</span> main() {
+    <span class="tok-comment">// Lectura de un número entero</span>
+    <span class="tok-key">int</span> edad = <span class="tok-key">Integer</span>.parseInt(IO.readln(<span class="tok-string">&quot;¿Cuántos años tienes? &quot;</span>));
+
+    <span class="tok-comment">// Lectura de un número decimal</span>
+    <span class="tok-key">double</span> altura = <span class="tok-key">Double</span>.parseDouble(IO.readln(<span class="tok-string">&quot;¿Cuánto mides en metros (ej. 1.75)? &quot;</span>));
+
+    IO.println(<span class="tok-string">&quot;Edad en meses: &quot;</span> + (edad * <span class="tok-bool">12</span>));
+    IO.println(<span class="tok-string">&quot;Estatura: &quot;</span> + altura + <span class="tok-string">&quot; m&quot;</span>);
+}</code></pre>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">¿Y si quiero usar la clase <code>IO</code> dentro de una clase tradicional?</p>
+<p>En una clase tradicional con <code>public class Ejemplo</code>, puedes importar sus métodos estáticos o llamarla explícitamente:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-key">static</span> <span class="tok-cmd">java</span>.io.IO.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> Ejemplo {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">String</span> ciudad = IO.readln(<span class="tok-string">&quot;¿De qué ciudad eres? &quot;</span>);
+        IO.println(<span class="tok-string">&quot;Vives en: &quot;</span> + ciudad);
+    }
+}</code></pre>
+</div></p>
+</div>
+<hr>
+
+<h2 id="5-otras-novedades-destacadas">5. Otras Novedades Destacadas</h2>
+<p>Además de las clases implícitas y la entrada/salida simplificada, Java ha incorporado en sus últimas versiones varias características que hacen que el código sea mucho más limpio, expresivo y seguro:</p>
+<hr />
+<h3 id="51-importacion-automatica-de-modulos-import-module-javabase">5.1. Importación Automática de Módulos (<code>import module java.base</code>)</h3>
+<p>En las clases implícitas de Java 25, <strong>todo el módulo <code>java.base</code> se importa automáticamente</strong>. Esto significa que tienes acceso directo sin escribir ningún <code>import</code> a:</p>
+<ul>
+<li>Colecciones: <code>List</code>, <code>ArrayList</code>, <code>Map</code>, <code>Set</code>.</li>
+<li>Entrada/Salida: <code>IO</code>, <code>Path</code>, <code>Files</code>.</li>
+<li>Utilidades: <code>Random</code>, <code>Math</code>, <code>Objects</code>.</li>
+</ul>
+<p>En clases explícitas, puedes importar todas las librerías estándar en una sola línea gracias a la sintaxis de importación modular:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> module <span class="tok-cmd">java</span>.base;</code></pre>
+</div></p>
+<hr />
+<h3 id="52-bloques-de-texto-multilinea-text-blocks">5.2. Bloques de Texto Multilínea (<em>Text Blocks</em>)</h3>
+<p>Permiten escribir cadenas de caracteres que ocupan varias líneas sin tener que concatenar con <code>+</code> ni usar secuencias <code>\n</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">void</span> main() {
+    <span class="tok-key">String</span> menu = <span class="tok-string">&quot;&quot;</span>&quot;
+        ========================
+           MENÚ DE LA APLICACIÓN
+        ========================
+        <span class="tok-bool">1</span>. Iniciar partida
+        <span class="tok-bool">2</span>. Cargar puntuaciones
+        <span class="tok-bool">3</span>. Configuración
+        <span class="tok-bool">4</span>. Salir
+        <span class="tok-string">&quot;&quot;</span>&quot;;
+    IO.println(menu);
+}</code></pre>
+</div>
+<hr />
+<h3 id="53-expresiones-switch-modernas">5.3. Expresiones <code>switch</code> Modernas</h3>
+<p>El tradicional <code>switch</code> con sentencias <code>case</code>, <code>break</code> y riesgo de fallthrough se transforma en una expresión concisa que devuelve valores directamente mediante el operador flecha (<code>-&gt;</code>):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">void</span> main() {
+    <span class="tok-key">int</span> dia = <span class="tok-bool">3</span>;
+    <span class="tok-key">String</span> nombreDia = <span class="tok-key">switch</span> (dia) {
+        <span class="tok-key">case</span> <span class="tok-bool">1</span> -&gt; <span class="tok-string">&quot;Lunes&quot;</span>;
+        <span class="tok-key">case</span> <span class="tok-bool">2</span> -&gt; <span class="tok-string">&quot;Martes&quot;</span>;
+        <span class="tok-key">case</span> <span class="tok-bool">3</span> -&gt; <span class="tok-string">&quot;Miércoles&quot;</span>;
+        <span class="tok-key">case</span> <span class="tok-bool">4</span> -&gt; <span class="tok-string">&quot;Jueves&quot;</span>;
+        <span class="tok-key">case</span> <span class="tok-bool">5</span> -&gt; <span class="tok-string">&quot;Viernes&quot;</span>;
+        <span class="tok-key">case</span> <span class="tok-bool">6</span>, <span class="tok-bool">7</span> -&gt; <span class="tok-string">&quot;Fin de semana&quot;</span>;
+        <span class="tok-key">default</span> -&gt; <span class="tok-string">&quot;Día no válido&quot;</span>;
+    };
+    IO.println(<span class="tok-string">&quot;Hoy es: &quot;</span> + nombreDia);
+}</code></pre>
+</div>
+<h2 id="6-ejemplo-completo-programa-interactivo-en-java-25">6. Ejemplo Completo: Programa Interactivo en Java 25</h2>
+<p>Veamos un ejemplo completo que pone en práctica todas estas novedades en un único archivo limpio y sin artificios:</p>
+<div class="admonition java">
+<p class="admonition-title">Ejemplo: Ficha de Registro de Usuario</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Java (Java 25)</label><label for="__tabbed_1_2">Resultado por Consola</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Archivo: Registro.java</span>
+<span class="tok-comment">// Sin declaración de clase ni imports innecesarios</span>
+
+<span class="tok-comment">// Campo a nivel de archivo (miembro de la clase implícita)</span>
+<span class="tok-key">String</span> academia = <span class="tok-string">&quot;IES Informática&quot;</span>;
+
+<span class="tok-comment">// Función auxiliar</span>
+<span class="tok-key">boolean</span> esMayorDeEdad(<span class="tok-key">int</span> edad) {
+    <span class="tok-key">return</span> edad &gt;= <span class="tok-bool">18</span>;
+}
+
+<span class="tok-comment">// Punto de entrada simple</span>
+<span class="tok-key">void</span> main() {
+    println(<span class="tok-string">&quot;=== REGISTRO EN &quot;</span> + academia + <span class="tok-string">&quot; ===&quot;</span>);
+
+    <span class="tok-key">String</span> nombre = readln(<span class="tok-string">&quot;Introduce tu nombre: &quot;</span>);
+    <span class="tok-key">int</span> edad = <span class="tok-key">Integer</span>.parseInt(readln(<span class="tok-string">&quot;Introduce tu edad: &quot;</span>));
+    <span class="tok-key">double</span> notaMedia = <span class="tok-key">Double</span>.parseDouble(readln(<span class="tok-string">&quot;Introduce tu nota previa: &quot;</span>));
+
+    println(<span class="tok-string">&quot;\n--- Resumen del Alumno ---&quot;</span>);
+    println(<span class="tok-string">&quot;Nombre: &quot;</span> + nombre);
+    println(<span class="tok-string">&quot;Edad: &quot;</span> + edad + (esMayorDeEdad(edad) ? <span class="tok-string">&quot; (Mayor de edad)&quot;</span> : <span class="tok-string">&quot; (Menor de edad)&quot;</span>));
+    println(<span class="tok-string">&quot;Nota de acceso: &quot;</span> + notaMedia);
+
+    println(<span class="tok-string">&quot;\n¡Registro completado con éxito!&quot;</span>);
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>=== REGISTRO EN IES Informática ===
+Introduce tu nombre: Lucía
+Introduce tu edad: <span class="tok-bool">19</span>
+Introduce tu nota previa: <span class="tok-bool">8</span>.<span class="tok-bool">75</span>
+
+--- Resumen del Alumno ---
+Nombre: Lucía
+Edad: <span class="tok-bool">19</span> (Mayor de edad)
+Nota de acceso: <span class="tok-bool">8</span>.<span class="tok-bool">75</span>
+
+¡Registro completado con éxito!</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
 </section><hr>
 <section id="ut01ejemplos">
 <h1>Ejemplos</h1>
