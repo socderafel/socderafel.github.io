@@ -475,10 +475,22 @@ Al operar infraestructuras en entornos de nube pública (**AWS Academy / AWS Lea
 |---|---|
 | **Name (Nombre)** | `Servidor_FTPSSH` |
 | **Application and OS Images (AMI)** | `Microsoft Windows Server 2022 Base` (64 bits x86) |
-| **Instance type (Tipo de instancia)** | `t2.medium` o `t3.medium` (2 vCPU, 4 GiB RAM — recomendado para fluidez gráfica en Windows Server) |
+| **Instance type (Tipo de instancia)** | `t2.medium` o `t3.medium` (2 vCPU, 4 GiB RAM — ver aviso importante sobre capa gratuita abajo) |
 | **Key pair (login)** | `vockey` (par de claves RSA `.pem` proporcionado por AWS Academy) |
 | **Network settings** | Asignar IP pública automáticamente (**Auto-assign public IP: Enable**) |
 | **Configure storage** | `30 GiB` gp3 (SSD de uso general) |
+
+> ⚠️ **Aviso importante sobre el mensaje «No apto para la capa gratuita» y el saldo en AWS Academy**
+>
+> Al seleccionar el tipo de instancia `t2.medium` (o `t3.medium`), la consola de AWS mostrará una advertencia indicando que **no forma parte de la capa gratuita (*Free Tier*)**. ¡No os preocupéis ni cambiéis el tipo de instancia a `t2.micro`!
+>
+> * **¿Por qué Windows Server requiere t2.medium o t3.medium?** Windows Server 2022 con interfaz gráfica necesita al menos 2 vCPU y 4 GiB de memoria RAM para funcionar con normalidad. Si intentáis forzar una máquina `t2.micro` (que solo dispone de 1 GiB de RAM), la instancia tardará más de 15 minutos en arrancar, el panel Server Manager colapsará por falta de memoria RAM y la sesión de Escritorio Remoto (RDP) se congelará continuamente.
+> * **¿Nos cobrarán dinero de nuestra tarjeta? ¡NO!** En los cursos de **AWS Academy Learner Lab**, no hay ninguna tarjeta de crédito introducida. La cuenta dispone de una bolsa de crédito educativo promocional (habitualmente **$50 o $100 dólares**) que cubre con creces todo el curso.
+> * **¿Cuánto saldo consume?** Una máquina `t2.medium` cuesta unos **$0,046 por hora**. Si hacéis una sesión de clase de 2 horas seguidas, apenas consumirá **$0,09** (unos 9 céntimos de dólar de los 50$ disponibles).
+> * **Buenas prácticas:** Lo único crucial es recordar poner la instancia en estado **Stop instance** (**Detener instancia**) al finalizar la clase o cuando no estéis trabajando, para que no consuma saldo mientras el ordenador esté apagado.
+>
+> *(En cambio, para la máquina virtual de **Ubuntu Server** del Apartado 12 sí utilizaremos `t2.micro` con la etiqueta verde de capa gratuita, ya que Linux por terminal consume menos de 200 MB de RAM).*
+>
 
 3. **Descarga de la clave privada (`.pem`) desde AWS Academy Learner Lab:**
    * En la parte superior de la ventana del laboratorio de AWS Academy (la barra superior de Vocareum donde figuran los botones *Start Lab*, *End Lab* y el saldo), haz clic en el botón **AWS Details**.
@@ -1510,10 +1522,15 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 |---|---|
 | **Name (Nombre)** | `Ubuntu_FTPSSH` |
 | **Application and OS Images (AMI)** | `Ubuntu Server 24.04 LTS (HVM), SSD Volume Type` (64 bits x86) |
-| **Instance type (Tipo de instancia)** | `t2.micro` o `t3.micro` (1 vCPU, 1 GiB RAM) |
+| **Instance type (Tipo de instancia)** | `t2.micro` o `t3.micro` (1 vCPU, 1 GiB RAM — Apto para la capa gratuita) |
 | **Key pair (login)** | `vockey` (o par de claves del laboratorio) |
 | **Network settings (Security group)** | Seleccionar **Select existing security group** y elegir **`grup-servidors-ftp-ssh`** (creado en el apartado 6.1) |
 | **Configure storage** | `8 GiB` o `10 GiB` gp3 (SSD) |
+
+> 💡 **En Ubuntu Server sí utilizamos la capa gratuita (t2.micro / t3.micro)**
+>
+> A diferencia de Windows Server, la máquina `Ubuntu_FTPSSH` funciona exclusivamente en modo terminal consola (CLI sin entorno de escritorio) y el demonio `vsftpd` es extremadamente ligero (consume menos de 150 MiB de RAM). Por tanto, aquí sí seleccionaremos el tipo **`t2.micro`** (o `t3.micro`), que cuenta con la etiqueta verde **Apto para la capa gratuita** (*Free tier eligible*), optimizando al máximo los créditos del laboratorio.
+>
 
 2. Esperar a que la instancia pase a estado `Running` y anotar su **Dirección IPv4 pública**:
 
