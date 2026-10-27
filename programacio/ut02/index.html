@@ -495,7 +495,7 @@
 <li><a href="../ut02/ut0203.html">2.3 Estructuras de selección (if-else, switch)</a></li>
 <li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
 <li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
-<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Validación de datos y gestión básica de errores (Scanner y try-catch)</a></li>
 <li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
 <li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
 <li><a href="../ut02/ut02retos.html">Retos de programación UT2</a></li>
@@ -551,6 +551,7 @@
 <li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
 <li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
 <li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut0507.html">5.7 Gestión avanzada de excepciones y excepciones personalizadas</a></li>
 <li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
 <li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
 <li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
@@ -611,7 +612,7 @@
 <li><a href="#ut0203"><strong>2.3 Estructuras de selección (if-else, switch)</strong></a> — <a href="./ut0203.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0204"><strong>2.4 Estructuras de repetición (while, do-while, for)</strong></a> — <a href="./ut0204.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0205"><strong>2.5 Sentencias de salto (break, continue, return)</strong></a> — <a href="./ut0205.html"><em>(Obrir apartat individual)</em></a></li>
-<li><a href="#ut0206"><strong>2.6 Control y manejo de excepciones (try-catch)</strong></a> — <a href="./ut0206.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0206"><strong>2.6 Validación de datos y gestión básica de errores (Scanner y try-catch)</strong></a> — <a href="./ut0206.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0207"><strong>Ejemplos guiados UT2</strong></a> — <a href="./ut0207.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut02actividades"><strong>Actividades prácticas UT2</strong></a> — <a href="./ut02actividades.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut02retos"><strong>Retos de programación UT2</strong></a> — <a href="./ut02retos.html"><em>(Obrir apartat individual)</em></a></li>
@@ -2408,38 +2409,53 @@ Presta atención a los comentarios y fíjate en las conversiones a entero de la 
 </details>
 </section><hr>
 <section id="ut0206">
-<h1>2.6 Control de excepciones</h1>
+<h1>2.6 Validación de Datos y Gestión Básica de Errores</h1>
 
-<h2 id="1-que-es-una-excepcion">1. ¿Qué es una Excepción?</h2>
-<p>A lo largo de nuestro aprendizaje de Java, hemos lidiado con errores de sintaxis, como la falta de un <em>punto y coma</em> o un <em>nombre de variable incorrecto</em>. Estos errores son detectados y señalados por el compilador, y podemos corregirlos para lograr que el programa compile correctamente.</p>
-<p>Pero, ¿existen otros tipos de errores? ¿<em>Podrían existir errores no sintácticos en nuestros programas</em>? Sí, un programa puede estar libre de errores de sintaxis y aun así <strong>fallar en tiempo de ejecución</strong>. Estos errores, que suelen aparecer cuando algo inesperado sucede mientras se ejecuta el programa, se conocen como <strong>excepciones</strong>.</p>
-<p>Java cuenta con un sistema de manejo de excepciones robusto que permite detectar, capturar y gestionar estos errores de manera específica.</p>
-<h3 id="11-tipos-de-excepciones">1.1. Tipos de excepciones</h3>
-<p>Los errores de tiempo de ejecución pueden ser de dos tipos principales:</p>
+<div class="admonition note">
+<p class="admonition-title">📋 Información Curricular y Resultados de Aprendizaje</p>
+<p><strong>Módulo:</strong> Programación (PRG — Código 0485) | 1º DAW | IES Mestre Ramón Esteve</p>
+<p><strong>Resultado de Aprendizaje:</strong> <code>RA3</code> <em>(Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje)</em>.</p>
+<p><strong>Criterios de Evaluación asociados:</strong></p>
 <ul>
-<li><strong>Errores</strong>: en este caso hablamos de errores <em>fatales</em> que ocurren durante la ejecución de un programa, como errores de hardware, errores de memoria… Estos errores no se pueden gestionar desde dentro de una aplicación <em>Java</em>.</li>
-<li><strong>Excepciones</strong>: son errores no críticos que se pueden gestionar (archivos no encontrados, errores de análisis…). Dentro de este tipo de errores podemos hablar de:<br/>
-    _ <strong>Excepciones en tiempo de ejecución</strong> : no es necesario detectarlas y, en general, son difíciles de predecir. Por ejemplo, asignar un valor nulo a una variable o sobrepasar los límites de una matriz.<br/>
-    _ <strong>Excepciones comprobadas</strong> : estas excepciones deben detectarse o declararse para que se generen. En otras palabras, si usamos una función que puede generar este tipo de excepciones, el compilador se quejará si no detectamos la excepción o la generamos nuevamente. Por ejemplo, siempre que llamamos a la instrucción <code>Thread.sleep</code>, debemos capturar o generar una excepción <code>InterruptedException</code>.</li>
+  <li><code>CEd</code>: Depuración y verificación de programas mediante trazas y control de ejecución.</li>
+  <li><code>CEh</code>: Tratamiento básico de situaciones anómalas en la entrada de datos.</li>
+  <li><code>CEi</code>: Aplicación de buenas prácticas de programación (<em>Clean Code</em>) y robustez de código.</li>
 </ul>
-<div style="text-align:center;">
-    <img src="../img/ut02/throwable.png" alt="throwable" style="max-width:100%;" />
 </div>
 
-<p>Sin embargo, cada tipo de excepción es una subclase del tipo principal <code>Exception</code>.  Esta clase almacena el mensaje de error producido por la excepción. Existen otras subclases que almacenan información más específica. Por ejemplo, <code>ParseException</code> es una subclase de <code>Exception</code> que se genera cuando los datos no se pueden analizar correctamente. Almacena el mensaje de error junto con la posición en la que se encontró el error.</p>
-<h3 id="12-tipos-de-gestion-de-excepciones">1.2. Tipos de gestión de excepciones</h3>
-<p>Siempre que se produce una excepción en un programa, podemos decidir cómo tratarla. Básicamente, tenemos dos opciones en nuestro código:</p>
-<p>​   a) <strong>Capturar la excepción</strong>. Esto significa que la excepción se “destruye” y podemos mostrar en su lugar un mensaje de error personalizado y controlado.</p>
-<p>​   b) <strong>Lanzar la excepción</strong>. En este caso, no queremos preocuparnos por la excepción y delegamos en otro fragmento de código para que la trate.</p>
-<p>En las siguientes secciones de este documento aprenderemos cómo gestionar estas dos opciones.</p>
-<h2 id="2-capturar-excepciones-try-catch-finally">2. Capturar excepciones: <code>try-catch-finally</code></h2>
-<p>Para capturar excepciones, <em>Java</em> utiliza la estructura <code>try-catch-finally</code>, donde:</p>
+<hr>
+
+<h2 id="1-errores-de-compilacion-vs-tiempo-de-ejecucion">1. Errores de Compilación vs Tiempo de Ejecución (<em>Runtime Exceptions</em>)</h2>
+<p>A la hora de programar en Java, nos enfrentamos a dos naturalezas de errores radicalmente distintas:</p>
+
+<ol>
+  <li><strong>Errores de compilación (sintaxis):</strong> Son detectados por el compilador (<code>javac</code>) antes de que el programa llegue a ejecutarse (ej: falta un punto y coma <code>;</code>, una variable no declarada o un error tipográfico en una palabra clave). Visual Studio Code los subraya en rojo inmediatamente.</li>
+  <li><strong>Errores en tiempo de ejecución (Excepciones o <em>Runtime Exceptions</em>):</strong> El programa compila a la perfección sin ningún error sintáctico, pero <strong>durante la ejecución real</strong> ocurre un evento imprevisto (ej: el usuario escribe <code>"hola"</code> cuando <code>Scanner</code> esperaba un número, o intentamos dividir entre cero <code>10 / 0</code>). Si no se controlan, la Máquina Virtual de Java (JVM) aborta el programa bruscamente y muestra una traza de error en la consola.</li>
+</ol>
+
+<hr>
+
+<h2 id="2-la-via-recomendada-en-bucles-validacion-preventiva">2. La Vía Recomendada en Bucles: Validación Preventiva con <code>Scanner</code> (<em>Clean Code</em>)</h2>
+
+<p>En el diseño profesional de software existe una regla de oro fundamental:</p>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Regla de Oro de la Industria: <em>«Exceptions should be exceptional»</em></p>
+<p><strong>Nunca utilices excepciones para controlar el flujo normal y habitual de un programa.</strong> Que un usuario se equivoque al teclear en la consola no es una catástrofe de software excepcional; es una situación perfectamente previsible.</p>
+<p>Por eso, en este bloque de <strong>Estructuras de Control y Bucles</strong>, la forma más limpia, eficiente y elegante de validar datos es la <strong>validación preventiva</strong> mediante los métodos de inspección de la clase <code>Scanner</code> y bucles <code>while</code>.</p>
+</div>
+
+<h3 id="21-metodos-preventivos-de-scanner">2.1. Métodos de inspección de <code>Scanner</code></h3>
+<p>La clase <code>Scanner</code> ofrece métodos que devuelven <code>true</code> o <code>false</code> para consultar si el dato que está en espera coincide con el tipo deseado <strong>sin llegar a consumirlo ni provocar fallos</strong>:</p>
+
 <ul>
-<li><code>try</code> contiene el código que puede generar una excepción.</li>
-<li><code>catch</code> captura y maneja la excepción lanzada.</li>
-<li><code>finally</code> (opcional) ejecuta código que debe correr siempre, haya o no una excepción.</li>
+  <li><code>sc.hasNextInt()</code>: Devuelve <code>true</code> si el usuario ha introducido un número entero válido.</li>
+  <li><code>sc.hasNextDouble()</code>: Devuelve <code>true</code> si ha introducido un número decimal válido.</li>
+  <li><code>sc.hasNextBoolean()</code>: Devuelve <code>true</code> si ha introducido <code>"true"</code> o <code>"false"</code>.</li>
 </ul>
-<h3 id="sintaxis">Sintaxis</h3>
+
+<h3 id="22-el-patron-estandar-de-validacion-con-bucle">2.2. El patrón estándar de validación con bucle <code>while</code></h3>
+<p>Observa cómo aseguramos una lectura 100% robusta utilizando exclusivamente bucles y condiciones, sin necesidad de recurrir a bloques complejos:</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -2453,338 +2469,187 @@ Presta atención a los comentarios y fíjate en las conversiones a entero de la 
       <span class="terminal-lang">JAVA</span>
     </div>
   </div>
-  <pre><code><span class="tok-key">try</span> {
-    <span class="tok-comment">// Código que puede lanzar una excepción</span>
+  <pre><code><span class="tok-key">package</span> ut2.validacion;
 
-} <span class="tok-key">catch</span> (Tipo_excepcion_1 objeto_excepcion) {
-    <span class="tok-comment">// Manejo de Tipo_excepcion_1</span>
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
 
-} <span class="tok-key">catch</span> (Tipo_excepcion_2 objeto_excepcion) {
-    <span class="tok-comment">// Manejo de Tipo_excepcion_2</span>
-
-} <span class="tok-key">finally</span> {
-    <span class="tok-comment">// Código que se ejecuta siempre</span>
-
-}</code></pre>
-</div>
-<p>Podemos agregar tantas cláusulas  <code>catch</code> como necesitemos, y cada una puede representar un tipo de excepción específico. Sin embargo, debemos  ordenar estas cláusulas <code>catch</code>, de forma que las más genéricas se coloquen al final; pues el programa entrará en la primera cláusula <code>catch</code> que coincida con la excepción producida. Es decir, si ponemos la cláusula <code>catch(Exception)</code> al principio, el resto de cláusulas no tendrán efecto, ya que cualquiera de ellas es subtipo de <code>Exception</code> y, por tanto, serán capturadas por la primera cláusula.</p>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo básico</p>
-<p>Este programa captura dos tipos de excepciones, <code>IOException</code> y <code>NumberFormatException</code>, y asegura que las instrucciones de <code>finally</code> se ejecuten siempre:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.io.*;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploExcepciones {
-  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-    BufferedReader tec = <span class="tok-key">new</span> BufferedReader(<span class="tok-key">new</span> InputStreamReader(<span class="tok-key">System</span>.in));
-    <span class="tok-key">int</span> numero = -<span class="tok-bool">1</span>;
-
-    <span class="tok-key">try</span> {
-      <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce un número: &quot;</span>);
-      <span class="tok-key">String</span> entrada = tec.readLine();
-      numero = <span class="tok-key">Integer</span>.parseInt(entrada);
-      <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Número introducido: &quot;</span> + numero);
-
-    } <span class="tok-key">catch</span> (<span class="tok-key">IOException</span> e) {
-        <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;Error al leer entrada: &quot;</span> + e.getMessage());
-
-    } <span class="tok-key">catch</span> (NumberFormatException e) {
-      <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;Error: se esperaba num entero: &quot;</span> + e.getMessage() );
-
-    } <span class="tok-key">finally</span> {
-      <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;Programa finalizado.&quot;</span>);
-    }
-  }
-}</code></pre>
-</div>
-<p>El método <code>getMessage</code> obtiene el mensaje de error producido por la excepción. Observa que estamos usando <code>System.err</code> en lugar de <code>System.out</code> porque estamos imprimiendo un error y, en ese caso, deberíamos usar la salida de error predeterminada en lugar de la salida <em>normal</em> predeterminada.</p>
-<p>También podemos usar el método <code>printStackTrace</code> para imprimir un seguimiento completo de la pila del error; de modo que podamos ver la pila de llamadas que produjeron el error (es decir, los métodos que se llamaron hasta que se produjo el error).</p>
-</div>
-<h2 id="3-lanzar-excepciones-delegacion-de-excepciones-con-throws">3. Lanzar excepciones. Delegación de excepciones con <code>throws</code></h2>
-<p>Cuando un método puede lanzar una excepción, pero no la captura, podemos delegar la gestión al método que llama, usando <code>throws</code>.</p>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo:</p>
-<p><div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> DelegacionExcepciones {
-
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> dividir(<span class="tok-key">int</span> a, <span class="tok-key">int</span> b) <span class="tok-key">throws</span> ArithmeticException {
-        <span class="tok-key">if</span> (b == <span class="tok-bool">0</span>) {
-            <span class="tok-key">throw</span> <span class="tok-key">new</span> ArithmeticException(<span class="tok-string">&quot;No se puede dividir entre cero&quot;</span>);
-        }
-        <span class="tok-key">return</span> a / b;
-    }
-
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">try</span> {
-            <span class="tok-key">int</span> resultado = dividir(<span class="tok-bool">10</span>, <span class="tok-bool">0</span>);
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Resultado: &quot;</span> + resultado);
-
-        } <span class="tok-key">catch</span> (ArithmeticException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Error de división: &quot;</span> + e.getMessage());
-        }
-    }
-}</code></pre>
-</div>
-Puede observarse en la linea 4 que se verifica si b es igual a cero. Si lo es, se lanza manualmente una excepción <code>ArithmeticException</code> con el mensaje "<em>No se puede dividir entre cero</em>". Esto detendrá la ejecución del método <code>dividir</code> y transferirá el control al bloque <code>catch</code> que pueda estar manejando esta excepción.</p>
-</div>
-<details class="admonition java">
-<summary>Ejercicio 1: Captura de excepciones</summary>
-<p>Crea un programa llamado <strong><code>CalculateDensity</code></strong> que pida al usuario que escriba un <em>peso</em> (en <em>gramos</em>) y un <em>volumen</em> (en <em>litros</em>). Luego, el programa debe generar la <em>densidad</em>, que se calcula dividiendo el <em>peso</em> entre el <em>volumen</em>.<br /><br />
-El programa debe capturar todos los tipos de excepciones posibles: <strong><code>NumberFormatException</code></strong> y <strong><code>ArithmeticException</code></strong> siempre que se puedan generar.<br /><br />
-<strong>Solución:</strong></p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> CalculateDensity {
+<span class="tok-key">public</span> <span class="tok-key">class</span> ValidacionPreventiva {
     <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
         <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
-        <span class="tok-key">double</span> peso = <span class="tok-bool">0</span>;
-        <span class="tok-key">double</span> volumen = <span class="tok-bool">0</span>;
-        <span class="tok-key">double</span> densidad = <span class="tok-bool">0</span>;
+        <span class="tok-key">int</span> edad = <span class="tok-bool">0</span>;
+
+        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu edad (número entero positivo): &quot;</span>);
+
+        <span class="tok-comment">// 1. Mientras lo que haya en el buffer NO sea un entero, avisamos y descartamos:</span>
+        <span class="tok-key">while</span> (!sc.hasNextInt()) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Error: Debes escribir un número entero, no texto ni símbolos.&quot;</span>);
+            sc.next(); <span class="tok-comment">// ⚠️ Crucial: descartar la entrada incorrecta para vaciar el buffer</span>
+            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Prueba otra vez: &quot;</span>);
+        }
+
+        <span class="tok-comment">// 2. Cuando llegamos aquí, la entrada es un entero válido 100% garantizado:</span>
+        edad = sc.nextInt();
+
+        <span class="tok-comment">// 3. Validación de rango lógico con condicionales normales:</span>
+        <span class="tok-key">if</span> (edad &gt;= <span class="tok-bool">18</span> &amp;&amp; edad &lt;= <span class="tok-bool">120</span>) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Acceso concedido. Tienes &quot;</span> + edad + <span class="tok-string">&quot; años.&quot;</span>);
+        } <span class="tok-key">else</span> <span class="tok-key">if</span> (edad &lt; <span class="tok-bool">18</span> &amp;&amp; edad &gt;= <span class="tok-bool">0</span>) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;🚫 Acceso denegado: Eres menor de edad (&quot;</span> + edad + <span class="tok-string">&quot; años).&quot;</span>);
+        } <span class="tok-key">else</span> {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;❌ Error: La edad introducida no es biológicamente válida.&quot;</span>);
+        }
+
+        sc.close();
+    }
+}</code></pre>
+</div>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ ¡Cuidado con el vaciado del buffer de Scanner!</p>
+<p>Dentro del cuerpo del <code>while (!sc.hasNextInt())</code> es <strong>estrictamente obligatorio</strong> incluir <code>sc.next();</code> o <code>sc.nextLine();</code>. Si lo olvidas, el dato incorrecto se queda atascado en el buffer del teclado y el bucle se convertirá en un <strong>bucle infinito</strong>.</p>
+</div>
+
+<hr>
+
+<h2 id="3-introduccion-defensiva-a-try-catch">3. Introducción Defensiva a <code>try-catch</code></h2>
+
+<p>A pesar de la validación preventiva, existen situaciones donde ciertas operaciones no pueden verificarse previamente con un simple <code>if</code>, o donde una conversión de texto a número puede fallar. Para estos casos, Java proporciona la estructura <strong><code>try-catch</code></strong>:</p>
+
+<h3 id="31-sintaxis-basica">3.1. Sintaxis básica</h3>
+<pre><code class="language-java">try {
+    // Bloque protegido: código que podría provocar un fallo imprevisto
+} catch (TipoDeExcepcion e) {
+    // Bloque de rescate: código que se ejecuta solo si ocurre ese error específico
+} finally {
+    // Bloque opcional: se ejecuta SIEMPRE (haya o no haya habido error)
+}</code></pre>
+
+<h3 id="32-caso-1-division-entre-cero">3.2. Caso 1: División entera por cero (<code>ArithmeticException</code>)</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut2.excepciones;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> DivisionSegura {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">int</span> dividendo = <span class="tok-bool">50</span>;
+        <span class="tok-key">int</span> divisor = <span class="tok-bool">0</span>;
 
         <span class="tok-key">try</span> {
-            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el peso en gramos: &quot;</span>);
-            peso = <span class="tok-key">Double</span>.parseDouble(sc.nextLine());
-
-            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el volumen en litros: &quot;</span>);
-            volumen = <span class="tok-key">Double</span>.parseDouble(sc.nextLine());
-
-            densidad = peso / volumen;
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;La densidad es: &quot;</span> + densidad + <span class="tok-string">&quot; g/L&quot;</span>);
-        } <span class="tok-key">catch</span> (NumberFormatException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Error: Entrada no válida. Asegúrate de introducir un número.&quot;</span>);
+            <span class="tok-comment">// Operación crítica que puede desencadenar un error en runtime:</span>
+            <span class="tok-key">int</span> cociente = dividendo / divisor;
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El resultado de la división es: &quot;</span> + cociente);
         } <span class="tok-key">catch</span> (ArithmeticException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Error: No se puede dividir por cero. Introduce un volumen válido.&quot;</span>);
+            <span class="tok-comment">// Se ejecuta solo si se produce una división por cero:</span>
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Aviso: División matemática indeterminada (no es posible dividir entre 0).&quot;</span>);
+        }
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; El programa continúa su ejecución normal sin cerrarse abruptamente.&quot;</span>);
+    }
+}</code></pre>
+</div>
+
+<h3 id="33-caso-2-conversion-de-texto-a-numero">3.3. Caso 2: Conversión de texto a número (<code>NumberFormatException</code>)</h3>
+<p>Cuando trabajamos con conversiones de cadenas mediante <code>Integer.parseInt()</code> o <code>Double.parseDouble()</code>, el bloque <code>try-catch</code> es la forma estándar de proteger la conversión:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">String</span> textoPrecio = <span class="tok-string">&quot;19.95eur&quot;</span>; <span class="tok-comment">// Contiene caracteres no numéricos</span>
+
+<span class="tok-key">try</span> {
+    <span class="tok-key">double</span> precio = <span class="tok-key">Double</span>.parseDouble(textoPrecio);
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Precio cargado: &quot;</span> + precio + <span class="tok-string">&quot; €&quot;</span>);
+} <span class="tok-key">catch</span> (NumberFormatException e) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Formato incorrecto: La cadena &#x27;&quot;</span> + textoPrecio + <span class="tok-string">&quot;&#x27; no es un decimal válido.&quot;</span>);
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Se aplicará el precio por defecto: 0.0 €&quot;</span>);
+}</code></pre>
+</div>
+
+<h3 id="34-caso-3-captura-defensiva-en-scanner">3.4. Caso 3: Captura defensiva en <code>Scanner</code> (<code>InputMismatchException</code>)</h3>
+<p>Si prefieres capturar el error en lugar de usar <code>hasNextInt()</code>, puedes rodear la lectura con <code>try-catch</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut2.excepciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.InputMismatchException;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> CapturaDefensivaScanner {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+
+        <span class="tok-key">try</span> {
+            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu año de nacimiento: &quot;</span>);
+            <span class="tok-key">int</span> anio = sc.nextInt();
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Año registrado con éxito: &quot;</span> + anio);
+        } <span class="tok-key">catch</span> (InputMismatchException e) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Error en tiempo de ejecución: Se esperaba un valor numérico entero.&quot;</span>);
         } <span class="tok-key">finally</span> {
             sc.close();
         }
     }
 }</code></pre>
 </div>
-</details>
-<details class="admonition java">
-<summary>Ejercicio 2: Lanzar excepciones</summary>
-<p>Crea un programa llamado <strong><code>WaitApp</code></strong> con un método llamado <strong><code>waitSeconds</code></strong> que recibirá una cantidad de <em>segundos</em> (entero) como parámetro. Internamente, este método llamará al método <strong><code>Thread.sleep</code></strong> para pausar el programa la cantidad de segundos dada (esta función trabaja con milisegundos, por lo que debes convertir segundos a milisegundos al llamarla). Como el método <strong><code>sleep</code></strong> puede lanzar un elemento <strong><code>InterruptedException</code></strong> (tendrás que lidiar con él).<br /><br />
-En este caso, se te pide que lances la excepción desde el método <strong><code>waitSeconds</code></strong> y la captures en el método <strong><code>main</code></strong> , que llamará a <strong><code>waitSeconds</code></strong> con la cantidad de segundos especificada como parámetro <strong><code>main</code></strong> (dentro del parámetro <strong><code>String[] args</code></strong>).<br /><br />
-Después de esperar la cantidad de segundos especificada, el programa mostrará un mensaje de "<em>Finalizar</em>" antes de salir.<br /><br />
-<strong>Solución:</strong>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> WaitApp {
 
-    <span class="tok-comment">// Método que pausa el programa por una cantidad de segundos especificada</span>
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> waitSeconds(<span class="tok-key">int</span> seconds) <span class="tok-key">throws</span> InterruptedException {
-        <span class="tok-comment">// Convierte segundos a milisegundos y utiliza Thread.sleep</span>
-        Thread.sleep(seconds * <span class="tok-bool">1000</span>);
-    }
+<hr>
 
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-comment">// Verifica que se haya pasado un argumento para la cantidad de segundos</span>
-        <span class="tok-key">if</span> (args.length != <span class="tok-bool">1</span>) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Uso: java WaitApp &lt;segundos&gt;&quot;</span>);
-            <span class="tok-key">return</span>;
-        }
+<h2 id="4-aviso-pedagogico-para-las-actividades-de-la-ut2">4. 🚨 Aviso Pedagógico: ¿Debo poner <code>try-catch</code> en todos los ejercicios de bucles?</h2>
 
-        <span class="tok-key">try</span> {
-            <span class="tok-comment">// Convierte el argumento a un entero</span>
-            <span class="tok-key">int</span> seconds = <span class="tok-key">Integer</span>.parseInt(args[<span class="tok-bool">0</span>]);
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Esperando &quot;</span> + seconds + <span class="tok-string">&quot; segundos...&quot;</span>);
-
-            <span class="tok-comment">// Llama al método que pausa el programa</span>
-            waitSeconds(seconds);
-
-            <span class="tok-comment">// Muestra el mensaje de finalización después de la espera</span>
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Finalizar&quot;</span>);
-        } <span class="tok-key">catch</span> (NumberFormatException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Por favor, proporciona un número válido de segundos.&quot;</span>);
-        } <span class="tok-key">catch</span> (InterruptedException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;La espera fue interrumpida.&quot;</span>);
-        }
-    }
-}</code></pre>
-</div></p>
-</details>
-<h2 id="4-excepciones-comunes-en-java">4. Excepciones Comunes en Java</h2>
-<table>
-<thead>
-<tr>
-<th><strong>Nombre</strong></th>
-<th><strong>Descripción</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>FileNotFoundException</code></td>
-<td>Se lanza cuando el archivo especificado no se encuentra.</td>
-</tr>
-<tr>
-<td><code>ClassNotFoundException</code></td>
-<td>Se lanza cuando la clase especificada no está disponible.</td>
-</tr>
-<tr>
-<td><code>EOFException</code></td>
-<td>Se lanza cuando se llega al final de un archivo inesperadamente.</td>
-</tr>
-<tr>
-<td><code>ArrayIndexOutOfBoundsException</code></td>
-<td>Se lanza cuando se accede a un índice de matriz no válido.</td>
-</tr>
-<tr>
-<td><code>StringIndexOutOfBoundsException</code></td>
-<td>Se lanza cuando se accede a una posición de un string que está fuera de su rango válido.</td>
-</tr>
-<tr>
-<td><code>NumberFormatException</code></td>
-<td>Se lanza al intentar convertir un dato alfanumérico a numérico.</td>
-</tr>
-<tr>
-<td><code>NullPointerException</code></td>
-<td>Se lanza cuando se accede a un objeto que no ha sido inicializado.</td>
-</tr>
-<tr>
-<td><code>IOException</code></td>
-<td>Generaliza las excepciones de entrada/salida.</td>
-</tr>
-<tr>
-<td><code>ArithmeticException</code></td>
-<td>Se lanza al intentar dividir un número entre cero.</td>
-</tr>
-<tr>
-<td><code>InputMismatchException</code></td>
-<td>Permite manejar errores de entrada y guiar al usuario para que proporcione el tipo de dato correcto</td>
-</tr>
-</tbody>
-</table>
-<p>Cada excepción es capturada según su tipo específico, y las más generales se colocan al final.</p>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo de Múltiples Excepciones:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.io.*;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploMultiplesExcepciones {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">try</span> {
-            BufferedReader br = <span class="tok-key">new</span> BufferedReader(<span class="tok-key">new</span> FileReader(<span class="tok-string">&quot;archivo.txt&quot;</span>));
-            <span class="tok-key">String</span> linea = br.readLine();
-            <span class="tok-key">int</span> numero = <span class="tok-key">Integer</span>.parseInt(linea);
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Número leído: &quot;</span> + numero);
-        } <span class="tok-key">catch</span> (FileNotFoundException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Archivo no encontrado.&quot;</span>);
-        } <span class="tok-key">catch</span> (<span class="tok-key">IOException</span> e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Error de entrada/salida.&quot;</span>);
-        } <span class="tok-key">catch</span> (NumberFormatException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Formato incorrecto, se esperaba un número.&quot;</span>);
-        }
-    }
-}</code></pre>
+<div class="admonition danger">
+<p class="admonition-title">🛑 ¡NO! No satures tus ejercicios de bucles con bloques try-catch</p>
+<p>En las actividades y retos de la UT2 (algoritmos matemáticos, números primos, tablas de multiplicar, menús de consola, series de Fibonacci, etc.):</p>
+<ul>
+  <li><strong>La prioridad absoluta es dominar la lógica algorítmica:</strong> contadores, acumuladores, condiciones compuestas (<code>&&</code>, <code>||</code>), centinelas y bucles <code>for</code> / <code>while</code>.</li>
+  <li><strong>La validación recomendada es la preventiva:</strong> usa <code>while (!sc.hasNextInt())</code> o condicionales <code>if (numero &lt;= 0)</code>.</li>
+  <li><strong>No es obligatorio envolver cada lectura en <code>try-catch</code></strong>, a menos que el enunciado del ejercicio lo exija de forma explícita. Evita ensuciar tu código con capturas innecesarias.</li>
+</ul>
 </div>
-<p>En este ejemplo, el programa intenta abrir un archivo y leer un número. Los errores posibles son <code>FileNotFoundException</code> si el archivo no existe, <code>IOException</code> si ocurre un problema de lectura, y <code>NumberFormatException</code> si el contenido no es un número válido.</p>
-</div>
-<h2 id="5-excepciones-personalizadas">5. Excepciones Personalizadas</h2>
-<p>Para crear y lanzar excepciones personalizadas en <em>Java</em>, puedes seguir un patrón bastante común que consiste en extender (heredar de) la clase <code>Exception</code> o <code>RuntimeException</code>. </p>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo de Excepción Personalizada:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> PruebaExcepcionPersonalizada {
 
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> verificarEdad(<span class="tok-key">int</span> edad) <span class="tok-key">throws</span> FueraDeRangoException {
-        <span class="tok-key">if</span> (edad &lt; <span class="tok-bool">0</span> || edad &gt; <span class="tok-bool">120</span>) {
-            <span class="tok-key">throw</span> <span class="tok-key">new</span> FueraDeRangoException(<span class="tok-string">&quot;Edad fuera del rango permitido (0-120)&quot;</span>);
-        }
-        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Edad válida: &quot;</span> + edad);
-    }
+<hr>
 
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">try</span> {
-            <span class="tok-key">int</span> edad = <span class="tok-bool">150</span>;
-            verificarEdad(edad);
+<h2 id="5-hoja-de-ruta-donde-se-aprende-el-tratamiento-profesional-de-excepciones">5. 🗺️ Hoja de Ruta: ¿Dónde se aprende el tratamiento profesional de excepciones?</h2>
 
-        } <span class="tok-key">catch</span> (FueraDeRangoException e) {
-            <span class="tok-key">System</span>.out.println(e.getMessage());
+<p>Muchos os preguntaréis: <em>«¿Cómo se crean excepciones propias de nuestro programa? ¿Qué significa la palabra <code>throws</code>? ¿Cómo se organiza una jerarquía de errores empresariales?»</em></p>
 
-        }
-    }
-}
+<p>Para crear y lanzar <strong>excepciones personalizadas</strong> (como <code>SaldoInsuficienteException</code> o <code>UsuarioBloqueadoException</code>) se requiere saber:</p>
+<ul>
+  <li>Qué es una <strong>Clase</strong> y cómo se definen atributos y métodos (se aprende en la <strong>UT4 — Clases y Objetos</strong>).</li>
+  <li>Qué es la <strong>Herencia</strong> (<code>extends</code>), cómo llamar al constructor de la superclase (<code>super</code>) y el <strong>Polimorfismo</strong> (se aprende en la <strong>UT5 — Características Avanzadas de POO</strong>).</li>
+</ul>
 
-<span class="tok-comment">// clase excepción FueraDeRangoException</span>
-<span class="tok-key">class</span> FueraDeRangoException <span class="tok-key">extends</span> <span class="tok-key">Exception</span> {
-    <span class="tok-key">public</span> FueraDeRangoException(<span class="tok-key">String</span> mensaje) {
-        <span class="tok-key">super</span>(mensaje);
-    }
-}</code></pre>
-</div>
-</div>
+<p>Por esa razón pedagógica, el <strong>estudio integral y avanzado de excepciones</strong> (jerarquía <code>Throwable</code>, excepciones comprobadas vs no comprobadas, propagación con <code>throw/throws</code>, excepciones personalizadas y <code>try-with-resources</code>) lo abordaremos en el <strong>apartado 5.7 de la UT5</strong>, donde dispondréis de todas las herramientas conceptuales de la Programación Orientada a Objetos.</p>
+
 </section><hr>
 <section id="ut0207">
 <h1>Ejemplos</h1>
