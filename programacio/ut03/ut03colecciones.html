@@ -1,0 +1,1492 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>3.5 Estructuras dinámicas de datos: List, Set, Queue, Deque y Map (JCF) — Programació (1r DAW)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>☕ Programació — 1r DAW (IES Mestre Ramón Esteve)</span>
+      <a href="../index.html">📚 Índex Programació</a>
+      <a href="../../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació (Java)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Prerrequisitos y Configuración</summary>
+<ul>
+<li><a href="../ut00/index.html" class="unit-full-link">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducción</a></li>
+<li><a href="../ut00/ut0002.html">0.2 GitHub</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Git</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Visual Studio Code</a></li>
+<li><a href="../ut00/ut0005.html">0.5 GitHub Desktop</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Estructura de programas informáticos</summary>
+<ul>
+<li><a href="../ut01/index.html" class="unit-full-link">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01ras.html">1.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Piensa como un programador y diseña algoritmos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles (Math, Random y Scanner)</a></li>
+<li><a href="../ut01/ut01wrappers.html">1.9 Clases Envoltorio (Wrappers), Character y String</a></li>
+<li><a href="../ut01/ut0109.html">1.10 Novedades de Java 25</a></li>
+<li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
+<li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
+<li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
+<li><a href="../ut01/ut01trazas.html">Trazas de ejecución UT1</a></li>
+<li><a href="../ut01/ut01pi.html">Vídeos de refuerzo UT1 (Píldoras Informáticas)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Estructuras de control</summary>
+<ul>
+<li><a href="../ut02/index.html" class="unit-full-link">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02ras.html">2.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Introducción a las estructuras de control</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Sentencias y bloques</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Estructuras de selección (if-else, switch)</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
+<li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
+<li><a href="../ut02/ut02retos.html">Retos de programación UT2</a></li>
+<li><a href="../ut02/ut02trazas.html">Trazas de ejecución UT2</a></li>
+<li><a href="../ut02/ut02pi.html">Vídeos de refuerzo UT2 (Píldoras Informáticas)</a></li>
+</ul>
+</details>
+<details class="nav-unit" open>
+<summary>UT3 — Tipos avanzados de datos</summary>
+<ul>
+<li><a href="../ut03/index.html" class="unit-full-link">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03ras.html">3.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut03/ut0306.html">3.1 Introducción a las estructuras de datos</a></li>
+<li><a href="../ut03/ut0301.html">3.2.1 Uso de arrays unidimensionales</a></li>
+<li><a href="../ut03/ut0303.html">3.2.2 Recorrido, búsqueda y ordenación en arrays</a></li>
+<li><a href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices)</a></li>
+<li><a href="../ut03/ut0302.html">3.2.4 La clase java.util.Arrays</a></li>
+<li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
+<li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
+<li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03colecciones.html" class="active">3.5 Estructuras dinámicas de datos: List, Set, Queue, Deque y Map (JCF)</a></li>
+<li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
+<li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Programación Orientada a Objetos (POO)</summary>
+<ul>
+<li><a href="../ut04/index.html" class="unit-full-link">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut04ras.html">4.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Introducción al paradigma orientado a objetos</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Principios fundamentales de la POO</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Objetos y clases</a></li>
+<li><a href="../ut04/ut0404.html">4.4.1 Estructura y miembros de una clase</a></li>
+<li><a href="../ut04/ut0405.html">4.4.2 Atributos y constantes</a></li>
+<li><a href="../ut04/ut0406.html">4.4.3 Métodos, parámetros y sobrecarga</a></li>
+<li><a href="../ut04/ut0407.html">4.4.4 Constructores y palabra clave this</a></li>
+<li><a href="../ut04/ut0408.html">4.4.5 Encapsulación y modificadores de visibilidad</a></li>
+<li><a href="../ut04/ut0409.html">4.5 Instanciación y ciclo de vida de los objetos</a></li>
+<li><a href="../ut04/ut0410.html">4.6 Empaquetado de clases y librerías (packages)</a></li>
+<li><a href="../ut04/ut04actividades.html">Actividades prácticas UT4</a></li>
+<li><a href="../ut04/ut04retos.html">Retos de programación UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Composición, Herencia y Polimorfismo</summary>
+<ul>
+<li><a href="../ut05/index.html" class="unit-full-link">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Relaciones entre clases (Asociación, Agregación, Herencia)</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Composición de clases</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Herencia y jerarquías de clases (extends, super)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
+<li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
+<li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
+<li><a href="../ut05/ut05pi.html">Vídeos de refuerzo UT5 (Píldoras Informáticas)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Lectura y escritura de información</summary>
+<ul>
+<li><a href="../ut06/index.html" class="unit-full-link">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut06ras.html">6.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Streams (Flujos de entrada y salida)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Lectura y escritura de ficheros</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Serialización de objetos</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Comunicación por red: Sockets</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a></li>
+<li><a href="../ut06/ut06actividades.html">Actividades prácticas UT6</a></li>
+<li><a href="../ut06/ut06retos.html">Retos de programación UT6</a></li>
+<li><a href="../ut06/ut06pi.html">Vídeos de refuerzo UT6 (Píldoras Informáticas)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Acceso a bases de datos</summary>
+<ul>
+<li><a href="../ut07/index.html" class="unit-full-link">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut07ras.html">7.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducción a la persistencia en bases de datos</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Arquitectura y conectores JDBC</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Conexión a bases de datos desde Java</a></li>
+<li><a href="../ut07/ut0704.html">7.4 ResultSet: Navegabilidad y concurrencia</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Consultas de selección (SELECT / executeQuery)</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Modificación de registros (UPDATE)</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Inserción de registros (INSERT)</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Borrado de registros (DELETE)</a></li>
+<li><a href="../ut07/ut0709.html">7.9 Sentencias precompiladas (PreparedStatement)</a></li>
+<li><a href="../ut07/ut0710.html">7.10 Trabajar con SQLite en Java</a></li>
+<li><a href="../ut07/ut0711.html">7.11 Patrón de diseño DAO (Data Access Object)</a></li>
+<li><a href="../ut07/ut0712.html">7.12 Repaso global de acceso a datos</a></li>
+<li><a href="../ut07/ut07actividades.html">Actividades prácticas UT7</a></li>
+<li><a href="../ut07/ut07retos.html">Retos de programación UT7</a></li>
+<li><a href="../ut07/ut07pi.html">Vídeos de refuerzo UT7 (Píldoras Informáticas)</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📚 Fuentes de información</a></li></ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">1a / 2a Avaluació · RA6 · Arrays, ArrayList, HashMap i Recursivitat</span>
+      <h1>3.5 Estructuras Dinámicas de Datos: Colecciones, Listas, Pilas, Colas, Sets y Mapas</h1>
+
+<div class="admonition note">
+<p class="admonition-title">📋 Información Curricular y Resultados de Aprendizaje</p>
+<p><strong>Módulo:</strong> Programación (PRG — Código 0485) | 1º DAW | IES Mestre Ramón Esteve</p>
+<p><strong>Resultado de Aprendizaje:</strong> <code>RA6</code> <em>(Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos)</em>.</p>
+<p><strong>Criterios de Evaluación asociados:</strong></p>
+<ul>
+  <li><code>CEb</code>: Identificación de las ventajas de las estructuras dinámicas frente a estáticas.</li>
+  <li><code>CEc</code>: Selección y uso de colecciones adecuadas según los requerimientos del software.</li>
+  <li><code>CEd</code>: Operaciones de inserción, consulta, modificación y borrado de elementos.</li>
+  <li><code>CEe</code>: Uso de iteradores y prevención de errores de modificación concurrente.</li>
+  <li><code>CEf</code>: Implementación y gestión de estructuras de tipo Pila (LIFO) y Cola (FIFO).</li>
+  <li><code>CEg</code>: Utilización de diccionarios / mapas asociativos (clave-valor).</li>
+</ul>
+</div>
+
+<hr>
+
+<h2 id="1-de-arrays-estaticos-a-estructuras-dinamicas">1. De Arrays Estáticos a Estructuras Dinámicas</h2>
+<p>Hasta ahora, para almacenar secuencias de elementos hemos utilizado <strong>arrays tradicionales</strong> (ej. <code>int[] numeros = new int[5];</code>). Aunque son ultrarrápidos y eficientes en memoria, presentan tres limitaciones críticas en aplicaciones reales:</p>
+
+<ol>
+  <li><strong>Tamaño fijo e inmutable:</strong> La capacidad se fija al instanciar y no puede alterarse. Si se llena, hay que reservar un array nuevo más grande y copiar los elementos a mano uno a uno.</li>
+  <li><strong>Sin operaciones de alto nivel incorporadas:</strong> Insertar en una posición intermedia, eliminar compactando el hueco o buscar sin un bucle manual exige escribir algoritmos auxiliares.</li>
+  <li><strong>Desperdicio o escasez de memoria:</strong> Sobredimensionar ("por si acaso") malgasta memoria; quedarse corto provoca errores de desbordamiento de índice (<code>ArrayIndexOutOfBoundsException</code>).</li>
+</ol>
+
+<p>Para solucionar esto, Java incorpora en su paquete estándar <code>java.util</code> el <strong>Java Collections Framework (JCF)</strong>: un ecosistema unificado de interfaces, clases e implementaciones de <strong>estructuras dinámicas de datos</strong> que redimensionan automáticamente su espacio en la memoria din&aacute;mica (<em>Heap</em>) según las necesidades del programa.</p>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Colecciones y Tipos Primitivos: ¡Uso obligatorio de Wrappers!</p>
+<p>Las colecciones de Java <strong>solo pueden almacenar objetos</strong>, nunca tipos primitivos directos. Gracias al <em>Autoboxing</em>, utilizamos sus clases envoltorio (<em>Wrappers</em>):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// ❌ Error de compilación: los genéricos no admiten primitivos</span>
+<span class="tok-comment">// List&lt;int&gt; lista = new ArrayList&lt;int&gt;();</span>
+
+<span class="tok-comment">// ✅ Correcto (usando clase envoltorio Integer):</span>
+<span class="tok-key">List</span>&lt;<span class="tok-key">Integer</span>&gt; lista = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();
+lista.add(<span class="tok-bool">10</span>); <span class="tok-comment">// Autoboxing automático: de int a Integer</span></code></pre>
+</div>
+</div>
+
+<hr>
+
+<h2 id="2-jerarquia-del-java-collections-framework">2. Jerarquía del Java Collections Framework (JCF)</h2>
+<p>El framework de colecciones está organizado en una arquitectura jerárquica limpia basada en interfaces e implementaciones:</p>
+
+<pre class="mermaid">
+classDiagram
+    direction TB
+    class Iterable~E~ { &lt;&lt;interface&gt;&gt; }
+    class Collection~E~ { &lt;&lt;interface&gt;&gt; }
+    class List~E~ { &lt;&lt;interface&gt;&gt; }
+    class Set~E~ { &lt;&lt;interface&gt;&gt; }
+    class Queue~E~ { &lt;&lt;interface&gt;&gt; }
+    class Deque~E~ { &lt;&lt;interface&gt;&gt; }
+    class Map~K,V~ { &lt;&lt;interface&gt;&gt; }
+
+    Iterable &lt;|-- Collection
+    Collection &lt;|-- List
+    Collection &lt;|-- Set
+    Collection &lt;|-- Queue
+    Queue &lt;|-- Deque
+
+    class ArrayList~E~
+    class LinkedList~E~
+    class HashSet~E~
+    class TreeSet~E~
+    class ArrayDeque~E~
+    class HashMap~K,V~
+    class TreeMap~K,V~
+
+    List &lt;|.. ArrayList
+    List &lt;|.. LinkedList
+    Queue &lt;|.. LinkedList
+    Queue &lt;|.. ArrayDeque
+    Deque &lt;|.. ArrayDeque
+    Deque &lt;|.. LinkedList
+    Set &lt;|.. HashSet
+    Set &lt;|.. TreeSet
+    Map &lt;|.. HashMap
+    Map &lt;|.. TreeMap
+</pre>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Regla de oro de arquitectura: Polimorfismo de Interfaces</p>
+<p>Declara siempre las variables con el tipo de la <strong>interfaz más general</strong> (<code>List</code>, <code>Set</code>, <code>Map</code>) e instancia con la <strong>clase concreta</strong> (<code>ArrayList</code>, <code>HashSet</code>, <code>HashMap</code>). De este modo tu código desacopla el diseño de la implementación interna:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// ✅ Práctica recomendada por Clean Code (Polimorfismo de Interfaces):</span>
+<span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; alumnos = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();
+<span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; codigos = <span class="tok-key">new</span> HashSet&lt;&gt;();
+<span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Double</span>&gt; notas = <span class="tok-key">new</span> <span class="tok-key">HashMap</span>&lt;&gt;();
+
+<span class="tok-comment">// ⚠️ Desaconsejado (acoplamiento rígido a la clase concreta):</span>
+<span class="tok-key">ArrayList</span>&lt;<span class="tok-key">String</span>&gt; alumnosMal = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();</code></pre>
+</div>
+</div>
+
+<hr>
+
+<h2 id="3-listas-list">3. Listas (<code>List</code>): Elementos Ordenados y Duplicados</h2>
+<p>Una <strong>Lista</strong> (<code>List&lt;E&gt;</code>) representa una secuencia indexada de elementos:</p>
+<ul>
+  <li><strong>Características:</strong> Permite elementos repetidos (duplicados), mantiene el <strong>orden de inserción</strong> y permite acceso por índice numérico posicional base <code>0</code>.</li>
+</ul>
+
+<h3 id="31-arraylist-vs-linkedlist">3.1. Comparativa técnica: <code>ArrayList</code> vs <code>LinkedList</code></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Característica</th>
+      <th><code>ArrayList</code></th>
+      <th><code>LinkedList</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Estructura interna</strong></td>
+      <td>Array dinámico redimensionable internamente.</td>
+      <td>Nodos doblemente enlazados en memoria.</td>
+    </tr>
+    <tr>
+      <td><strong>Acceso aleatorio (<code>get(i)</code>)</strong></td>
+      <td>⚡ Ultrarrápido <code>O(1)</code> por puntero directo.</td>
+      <td>🐢 Lento <code>O(n)</code>, recorre nodo a nodo.</td>
+    </tr>
+    <tr>
+      <td><strong>Inserción/Borrado al final</strong></td>
+      <td>⚡ Rápido <code>O(1)</code> amortizado.</td>
+      <td>⚡ Rápido <code>O(1)</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Inserción/Borrado al inicio/medio</strong></td>
+      <td>🐢 Lento <code>O(n)</code> (desplaza todos los elementos).</td>
+      <td>⚡ Rápido <code>O(1)</code> (reconecta enlaces de nodos).</td>
+    </tr>
+    <tr>
+      <td><strong>Recomendación estándar</strong></td>
+      <td><strong>Uso por defecto en el 95% de aplicaciones.</strong></td>
+      <td>Ideal para colas, pilas o inserciones masivas continuas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="32-metodos-fundamentales-de-list">3.2. Métodos fundamentales de <code>List</code> en acción</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">ArrayList</span>;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">List</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploListas {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; lenguajes = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();
+
+        <span class="tok-comment">// 1. Inserción (al final o en posición específica)</span>
+        lenguajes.add(<span class="tok-string">&quot;Java&quot;</span>);
+        lenguajes.add(<span class="tok-string">&quot;Python&quot;</span>);
+        lenguajes.add(<span class="tok-string">&quot;JavaScript&quot;</span>);
+        lenguajes.add(<span class="tok-bool">1</span>, <span class="tok-string">&quot;TypeScript&quot;</span>); <span class="tok-comment">// Inserta en posición 1 desplazando el resto</span>
+
+        <span class="tok-comment">// 2. Consulta y tamaño</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Total elementos: &quot;</span> + lenguajes.size()); <span class="tok-comment">// 4</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Elemento en índice 0: &quot;</span> + lenguajes.get(<span class="tok-bool">0</span>)); <span class="tok-comment">// Java</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Contiene Python?: &quot;</span> + lenguajes.contains(<span class="tok-string">&quot;Python&quot;</span>)); <span class="tok-comment">// true</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Posición de Java: &quot;</span> + lenguajes.indexOf(<span class="tok-string">&quot;Java&quot;</span>)); <span class="tok-comment">// 0</span>
+
+        <span class="tok-comment">// 3. Modificación</span>
+        lenguajes.set(<span class="tok-bool">2</span>, <span class="tok-string">&quot;Kotlin&quot;</span>); <span class="tok-comment">// Sustituye el valor del índice 2</span>
+
+        <span class="tok-comment">// 4. Eliminación (por índice o por objeto exacto)</span>
+        lenguajes.remove(<span class="tok-bool">0</span>); <span class="tok-comment">// Elimina por índice</span>
+        lenguajes.remove(<span class="tok-string">&quot;Python&quot;</span>); <span class="tok-comment">// Elimina por coincidencia de objeto</span>
+
+        <span class="tok-comment">// 5. Estado y vaciado</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Lista vacía?: &quot;</span> + lenguajes.isEmpty());
+        lenguajes.clear(); <span class="tok-comment">// Elimina todos los elementos</span>
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="4-pilas-y-colas">4. Pilas (<em>Stacks</em> - LIFO) y Colas (<em>Queues</em> - FIFO)</h2>
+<p>Son estructuras restringidas diseñadas para modelar flujos de trabajo secuenciales en la lógica de negocio:</p>
+
+<table style="width:100%; border:none;">
+  <tr>
+    <td style="width:50%; vertical-align:top; border:none;">
+      <strong>PILA (LIFO: <em>Last In, First Out</em>)</strong>
+      <pre>
+   |             |
+   |   Dato 3    |  &lt;-- Cima (push / pop)
+   |   Dato 2    |
+   |   Dato 1    |
+   +-------------+
+(El último en entrar sale primero: Deshacer / Undo)
+      </pre>
+    </td>
+    <td style="width:50%; vertical-align:top; border:none;">
+      <strong>COLA (FIFO: <em>First In, First Out</em>)</strong>
+      <pre>
+Entrada --&gt; [ C | B | A ] --&gt; Salida
+                          
+(El primero en entrar es el primero en ser atendido:
+turnos de clientes, cola de impresión, buffers)
+      </pre>
+    </td>
+  </tr>
+</table>
+
+<h3 id="41-pilas-lifo">4.1. Pilas: LIFO (<em>Last In, First Out</em>)</h3>
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Aviso sobre la clase obsoleta <code>java.util.Stack</code></p>
+<p>Aunque Java incluye históricamente la clase <code>Stack</code>, es una clase <em>legacy</em> desaconsejada. La propia documentación oficial de Oracle recomienda utilizar la interfaz moderna <strong><code>Deque</code></strong> implementada mediante <strong><code>ArrayDeque</code></strong>:</p>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.ArrayDeque;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Deque;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploPila {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Uso recomendado oficial de Oracle: Deque implementado por ArrayDeque</span>
+        Deque&lt;<span class="tok-key">String</span>&gt; pilaNavegacion = <span class="tok-key">new</span> ArrayDeque&lt;&gt;();
+
+        <span class="tok-comment">// Apilar elementos en la cima (push)</span>
+        pilaNavegacion.push(&quot;https:<span class="tok-comment">//iesramonesteve.es&quot;);</span>
+        pilaNavegacion.push(&quot;https:<span class="tok-comment">//aules.edu.gva.es&quot;);</span>
+        pilaNavegacion.push(&quot;https:<span class="tok-comment">//github.com&quot;);</span>
+
+        <span class="tok-comment">// Consultar cima sin extraer (peek)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Página actual: &quot;</span> + pilaNavegacion.peek()); <span class="tok-comment">// github.com</span>
+
+        <span class="tok-comment">// Desapilar al pulsar botón &#x27;Atrás&#x27; (pop)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Cerrando: &quot;</span> + pilaNavegacion.pop()); <span class="tok-comment">// Extrae github.com</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Regresando a: &quot;</span> + pilaNavegacion.peek()); <span class="tok-comment">// aules.edu.gva.es</span>
+    }
+}</code></pre>
+</div>
+
+<h3 id="42-colas-fifo">4.2. Colas: FIFO (<em>First In, First Out</em>)</h3>
+<p>En Java se utiliza la interfaz <strong><code>Queue</code></strong> implementada habitualmente con <code>LinkedList</code> o <code>ArrayDeque</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.LinkedList;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Queue;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploCola {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        Queue&lt;<span class="tok-key">String</span>&gt; colaAtencion = <span class="tok-key">new</span> LinkedList&lt;&gt;();
+
+        <span class="tok-comment">// 1. Encolar clientes al final (offer)</span>
+        colaAtencion.offer(<span class="tok-string">&quot;Cliente 1: Ana Asins&quot;</span>);
+        colaAtencion.offer(<span class="tok-string">&quot;Cliente 2: Bernat Gómez&quot;</span>);
+        colaAtencion.offer(<span class="tok-string">&quot;Cliente 3: Carla Navarro&quot;</span>);
+
+        <span class="tok-comment">// 2. Consultar el siguiente sin retirarlo</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Siguiente en turno: &quot;</span> + colaAtencion.peek());
+
+        <span class="tok-comment">// 3. Desencolar por orden estricto de llegada (poll)</span>
+        <span class="tok-key">while</span> (!colaAtencion.isEmpty()) {
+            <span class="tok-key">String</span> atendido = colaAtencion.poll();
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Atendiendo en ventanilla a: &quot;</span> + atendido);
+        }
+    }
+}</code></pre>
+</div>
+
+<h3 id="43-tabla-resumen-pila-cola">4.3. Comparativa de métodos: Pila vs Cola</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Operación</th>
+      <th>Método en Pila (<code>Deque</code>)</th>
+      <th>Método en Cola (<code>Queue</code>)</th>
+      <th>Comportamiento si está vacía</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Insertar</strong></td>
+      <td><code>push(e)</code></td>
+      <td><code>offer(e)</code></td>
+      <td>Añade el elemento a la estructura.</td>
+    </tr>
+    <tr>
+      <td><strong>Extraer</strong></td>
+      <td><code>pop()</code></td>
+      <td><code>poll()</code></td>
+      <td><code>pop()</code> lanza excepción; <code>poll()</code> devuelve <code>null</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Consultar</strong></td>
+      <td><code>peek()</code></td>
+      <td><code>peek()</code></td>
+      <td>Devuelve el elemento cima/frontal sin retirarlo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="5-conjuntos-set">5. Conjuntos (<code>Set</code>): Elementos Únicos sin Duplicados</h2>
+<p>Un <strong>Conjunto</strong> (<code>Set&lt;E&gt;</code>) es una colección que <strong>garantiza matemáticamente la no repetición de elementos</strong>. Si intentas insertar un elemento duplicado con <code>.add()</code>, Java devolverá <code>false</code> y no modificará el conjunto.</p>
+
+<h3 id="51-implementaciones-de-set">5.1. Implementaciones principales de <code>Set</code></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Implementación</th>
+      <th>Ordenación de los elementos</th>
+      <th>Rendimiento</th>
+      <th>Caso de uso típico</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>HashSet</code></strong></td>
+      <td><strong>Sin orden garantizado</strong> (usa tabla Hash interna).</td>
+      <td>⚡ <code>O(1)</code> Ultrarrápido</td>
+      <td>Eliminar duplicados donde el orden no importe.</td>
+    </tr>
+    <tr>
+      <td><strong><code>LinkedHashSet</code></strong></td>
+      <td>Mantiene el <strong>orden de inserción</strong> exacto.</td>
+      <td>⚡ <code>O(1)</code> Rápido</td>
+      <td>Eliminar duplicados respetando el orden en que llegaron.</td>
+    </tr>
+    <tr>
+      <td><strong><code>TreeSet</code></strong></td>
+      <td><strong>Ordenados automáticamente</strong> (alfabético/numérico) o por <code>Comparator</code>.</td>
+      <td>⚖️ <code>O(log n)</code> Equilibrado</td>
+      <td>Listas de valores únicos siempre ordenados automáticamente.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="52-ejemplo-comparativo-sets">5.2. Eliminación de duplicados y ordenación alfabética</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploSets {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; ciudadesConDuplicados = <span class="tok-key">List</span>.of(
+            <span class="tok-string">&quot;Valencia&quot;</span>, <span class="tok-string">&quot;Alicante&quot;</span>, <span class="tok-string">&quot;Castellón&quot;</span>, <span class="tok-string">&quot;Valencia&quot;</span>, <span class="tok-string">&quot;Alicante&quot;</span>
+        );
+
+        <span class="tok-comment">// 1. Eliminar duplicados instantáneamente con HashSet (sin orden fijo):</span>
+        <span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; unicas = <span class="tok-key">new</span> HashSet&lt;&gt;(ciudadesConDuplicados);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;HashSet (sin duplicados): &quot;</span> + unicas);
+
+        <span class="tok-comment">// 2. TreeSet: sin duplicados y ordenados alfabéticamente de forma automática:</span>
+        <span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; ordenadas = <span class="tok-key">new</span> TreeSet&lt;&gt;(ciudadesConDuplicados);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;TreeSet (alfabético): &quot;</span> + ordenadas);
+        <span class="tok-comment">// Salida: [Alicante, Castellón, Valencia]</span>
+    }
+}</code></pre>
+</div>
+
+<h3 id="53-operaciones-matematicas-conjuntos">5.3. Operaciones matemáticas de conjuntos (Álgebra de conjuntos)</h3>
+<p>Los métodos de <code>Set</code> permiten resolver operaciones complejas de conjuntos en una sola instrucción:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; conjuntoA = <span class="tok-key">new</span> HashSet&lt;&gt;(<span class="tok-key">Set</span>.of(<span class="tok-bool">1</span>, <span class="tok-bool">2</span>, <span class="tok-bool">3</span>, <span class="tok-bool">4</span>));
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; conjuntoB = <span class="tok-key">new</span> HashSet&lt;&gt;(<span class="tok-key">Set</span>.of(<span class="tok-bool">3</span>, <span class="tok-bool">4</span>, <span class="tok-bool">5</span>, <span class="tok-bool">6</span>));
+
+<span class="tok-comment">// 1. UNIÓN (A ∪ B)</span>
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; union = <span class="tok-key">new</span> HashSet&lt;&gt;(conjuntoA);
+union.addAll(conjuntoB); <span class="tok-comment">// [1, 2, 3, 4, 5, 6]</span>
+
+<span class="tok-comment">// 2. INTERSECCIÓN (A ∩ B)</span>
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; interseccion = <span class="tok-key">new</span> HashSet&lt;&gt;(conjuntoA);
+interseccion.retainAll(conjuntoB); <span class="tok-comment">// [3, 4]</span>
+
+<span class="tok-comment">// 3. DIFERENCIA (A - B)</span>
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; diferencia = <span class="tok-key">new</span> HashSet&lt;&gt;(conjuntoA);
+diferencia.removeAll(conjuntoB); <span class="tok-comment">// [1, 2]</span></code></pre>
+</div>
+
+<hr>
+
+<h2 id="6-mapas-diccionarios-map">6. Mapas / Diccionarios (<code>Map</code>): Estructura Clave-Valor</h2>
+<p>Un <strong>Mapa</strong> (<code>Map&lt;K, V&gt;</code>) asocia parejas de datos formadas por una <strong>clave única (<code>Key</code>)</strong> y un <strong>valor asociado (<code>Value</code>)</strong>:</p>
+<ul>
+  <li>Las <strong>claves no pueden duplicarse</strong>. Si insertas una clave ya existente mediante <code>put()</code>, se sobrescribe su valor anterior.</li>
+  <li>Los <strong>valores sí pueden repetirse</strong>.</li>
+</ul>
+
+<h3 id="61-implementaciones-de-map">6.1. Implementaciones de <code>Map</code></h3>
+<ul>
+  <li><strong><code>HashMap</code>:</strong> La opción estándar de máxima velocidad (tiempo constante <code>O(1)</code>). No garantiza ningún orden en las claves.</li>
+  <li><strong><code>LinkedHashMap</code>:</strong> Recuerda el orden de inserción de las parejas.</li>
+  <li><strong><code>TreeMap</code>:</strong> Mantiene las claves permanentemente ordenadas por su orden natural o <code>Comparator</code> (tiempo <code>O(log n)</code>).</li>
+</ul>
+
+<h3 id="62-metodos-fundamentales-map">6.2. Métodos esenciales de <code>Map</code></h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">HashMap</span>;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Map</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploMap {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Clave: DNI (String) -&gt; Valor: Nombre de alumno (String)</span>
+        <span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">String</span>&gt; usuarios = <span class="tok-key">new</span> <span class="tok-key">HashMap</span>&lt;&gt;();
+
+        <span class="tok-comment">// 1. Insertar o actualizar (put)</span>
+        usuarios.put(<span class="tok-string">&quot;12345678A&quot;</span>, <span class="tok-string">&quot;Laura Martínez&quot;</span>);
+        usuarios.put(<span class="tok-string">&quot;87654321B&quot;</span>, <span class="tok-string">&quot;Marc Esteve&quot;</span>);
+        usuarios.put(<span class="tok-string">&quot;11223344C&quot;</span>, <span class="tok-string">&quot;Nuria Soler&quot;</span>);
+
+        <span class="tok-comment">// Si repetimos la clave, se actualiza el valor asociado:</span>
+        usuarios.put(<span class="tok-string">&quot;12345678A&quot;</span>, <span class="tok-string">&quot;Laura Martínez Gómez&quot;</span>);
+
+        <span class="tok-comment">// 2. Obtener un valor por clave (get)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Usuario con DNI 87654321B: &quot;</span> + usuarios.get(<span class="tok-string">&quot;87654321B&quot;</span>));
+
+        <span class="tok-comment">// 3. Obtener con valor por defecto si no existe (getOrDefault)</span>
+        <span class="tok-key">String</span> resultado = usuarios.getOrDefault(<span class="tok-string">&quot;99999999Z&quot;</span>, <span class="tok-string">&quot;Usuario no registrado&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Búsqueda DNI 99999999Z: &quot;</span> + resultado);
+
+        <span class="tok-comment">// 4. Comprobaciones de existencia rápidas O(1)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Existe el DNI 11223344C?: &quot;</span> + usuarios.containsKey(<span class="tok-string">&quot;11223344C&quot;</span>)); <span class="tok-comment">// true</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Existe el nombre Marc?: &quot;</span> + usuarios.containsValue(<span class="tok-string">&quot;Marc Esteve&quot;</span>)); <span class="tok-comment">// true</span>
+
+        <span class="tok-comment">// 5. Eliminar por clave</span>
+        usuarios.remove(<span class="tok-string">&quot;11223344C&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Total usuarios activos: &quot;</span> + usuarios.size());
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="7-recorrido-e-iteracion">7. Formas Profesionales de Recorrer Colecciones (Iteración)</h2>
+
+<h3 id="71-bucle-for-each">7.1. Bucle <code>for-each</code> (Recomendado para solo lectura)</h3>
+<p>Sintaxis limpia y directa cuando solo queremos consultar elementos sin alterar la colección:</p>
+<pre><code class="language-java">List&lt;String&gt; frutas = List.of("Manzana", "Plátano", "Naranja");
+for (String fruta : frutas) {
+    System.out.println("Fruta: " + fruta);
+}</code></pre>
+
+<h3 id="72-el-peligro-de-concurrentmodificationexception">7.2. El peligro del <code>for-each</code>: <code>ConcurrentModificationException</code></h3>
+<div class="admonition danger">
+<p class="admonition-title">💥 ¡Regla de oro: NUNCA elimines elementos de una lista dentro de su propio bucle for-each!</p>
+<p>El siguiente código compila perfectamente, pero <strong>fallará críticamente en ejecución</strong>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; frutas = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;(<span class="tok-key">List</span>.of(<span class="tok-string">&quot;Manzana&quot;</span>, <span class="tok-string">&quot;Plátano&quot;</span>, <span class="tok-string">&quot;Naranja&quot;</span>));
+
+<span class="tok-comment">// ❌ ERROR CRÍTICO EN EJECUCIÓN: Lanza ConcurrentModificationException</span>
+<span class="tok-key">for</span> (<span class="tok-key">String</span> fruta : frutas) {
+    <span class="tok-key">if</span> (fruta.equals(<span class="tok-string">&quot;Plátano&quot;</span>)) {
+        frutas.remove(fruta); <span class="tok-comment">// ¡FALLO! Modificar la lista durante su propia iteración</span>
+    }
+}</code></pre>
+</div>
+</div>
+
+<h3 id="73-la-solucion-segura-iterator-removeif">7.3. La solución segura: <code>Iterator</code> o <code>removeIf()</code></h3>
+<p>Para eliminar elementos de manera segura durante el recorrido disponemos de dos vías estándar:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// ✅ Opción 1: Con Iterator (Clásica y universal en todas las versiones de Java)</span>
+Iterator&lt;<span class="tok-key">String</span>&gt; it = frutas.iterator();
+<span class="tok-key">while</span> (it.hasNext()) {
+    <span class="tok-key">String</span> fruta = it.next();
+    <span class="tok-key">if</span> (fruta.equals(<span class="tok-string">&quot;Plátano&quot;</span>)) {
+        it.remove(); <span class="tok-comment">// Seguro: el iterador actualiza su puntero interno</span>
+    }
+}
+
+<span class="tok-comment">// ✅ Opción 2: Con removeIf y expresión Lambda (Moderna y recomendada desde Java 8)</span>
+frutas.removeIf(fruta -&gt; fruta.equals(<span class="tok-string">&quot;Plátano&quot;</span>));</code></pre>
+</div>
+
+<h3 id="74-como-recorrer-un-map">7.4. Cómo recorrer un <code>Map</code> (Claves, Valores y Parejas)</h3>
+<p>Un <code>Map</code> no implementa <code>Iterable</code> de forma directa, por lo que se itera a través de sus vistas de colección:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Double</span>&gt; precios = <span class="tok-key">Map</span>.of(<span class="tok-string">&quot;Pan&quot;</span>, <span class="tok-bool">1</span>.<span class="tok-bool">20</span>, <span class="tok-string">&quot;Leche&quot;</span>, <span class="tok-bool">0</span>.<span class="tok-bool">95</span>, <span class="tok-string">&quot;Café&quot;</span>, <span class="tok-bool">2</span>.<span class="tok-bool">50</span>);
+
+<span class="tok-comment">// Forma 1 (La más eficiente): Recorrer parejas Clave - Valor con entrySet()</span>
+<span class="tok-key">for</span> (<span class="tok-key">Map</span>.Entry&lt;<span class="tok-key">String</span>, <span class="tok-key">Double</span>&gt; entrada : precios.entrySet()) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Producto: &quot;</span> + entrada.getKey() + <span class="tok-string">&quot; -&gt; &quot;</span> + entrada.getValue() + <span class="tok-string">&quot; €&quot;</span>);
+}
+
+<span class="tok-comment">// Forma 2: Con forEach y expresión Lambda concisa</span>
+precios.forEach((producto, precio) -&gt; {
+    <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%-10s : %5.2f €%n&quot;</span>, producto, precio);
+});</code></pre>
+</div>
+
+<hr>
+
+<h2 id="8-tabla-de-decision-cheat-sheet">8. Tabla de Decisión: ¿Qué Estructura Elegir? (<em>Cheat Sheet</em>)</h2>
+<p>Utiliza este diagrama de flujo mental para responder siempre a la pregunta del examen o del proyecto:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Terminal / Consola</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">BASH</span>
+    </div>
+  </div>
+  <pre><code>¿Necesitas pares Clave - Valor?
+  ├── SÍ ──► MAP
+  │           ├── ¿Importa el orden alfabético de clave? ──► TreeMap
+  │           ├── ¿Importa el orden de inserción? ────────► LinkedHashMap
+  │           └── ¿Solo máxima velocidad O(<span class="tok-bool">1</span>)? ───────────► <span class="tok-key">HashMap</span>
+  │
+  └── NO ──► ¿Importa que NO haya elementos duplicados?
+              ├── SÍ ──► SET
+              │           ├── ¿Orden natural/alfabético? ─► TreeSet
+              │           ├── ¿Orden de inserción? ───────► LinkedHashSet
+              │           └── ¿Solo eliminar duplicados? ─► HashSet
+              │
+              └── NO ──► ¿Flujo estricto de entrada/salida?
+                          ├── ¿Último en entrar sale primero? (LIFO) ─► Deque / ArrayDeque (Pila)
+                          ├── ¿Primero en entrar sale primero? (FIFO) ─► Queue / LinkedList (Cola)
+                          └── ¿Acceso aleatorio por índice numérico? ─► <span class="tok-key">List</span> / <span class="tok-key">ArrayList</span></code></pre>
+</div>
+
+<hr>
+
+<h2 id="9-casos-practicos-resueltos">9. Casos Prácticos Completos y Resueltos</h2>
+
+<h3 id="caso-1-tickets-soporte-y-deshacer">Caso Práctico 1: Simulación de Cola de Soporte (FIFO) y Pila de Deshacer (LIFO)</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.practicas;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.ArrayDeque;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Deque;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.LinkedList;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Queue;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> GestionSoporteTecnico {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// COLA (FIFO): Los tickets se atienden en riguroso orden de llegada</span>
+        Queue&lt;<span class="tok-key">String</span>&gt; colaTickets = <span class="tok-key">new</span> LinkedList&lt;&gt;();
+        colaTickets.offer(<span class="tok-string">&quot;Ticket #101: Fallo al iniciar sesión&quot;</span>);
+        colaTickets.offer(<span class="tok-string">&quot;Ticket #102: Error 404 en el checkout&quot;</span>);
+        colaTickets.offer(<span class="tok-string">&quot;Ticket #103: Olvido de contraseña&quot;</span>);
+
+        <span class="tok-comment">// PILA (LIFO): Historial de acciones realizadas para permitir &#x27;Deshacer&#x27;</span>
+        Deque&lt;<span class="tok-key">String</span>&gt; historialAcciones = <span class="tok-key">new</span> ArrayDeque&lt;&gt;();
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;=== ATENDIENDO TICKETS (COLA FIFO) ===&quot;</span>);
+        <span class="tok-key">while</span> (!colaTickets.isEmpty()) {
+            <span class="tok-key">String</span> ticketActual = colaTickets.poll();
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Procesando: &quot;</span> + ticketActual);
+            historialAcciones.push(<span class="tok-string">&quot;Atendido &quot;</span> + ticketActual);
+        }
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\n=== HISTORIAL DE ACCIONES PARA DESHACER (PILA LIFO) ===&quot;</span>);
+        <span class="tok-key">while</span> (!historialAcciones.isEmpty()) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;&lt;- Deshaciendo última acción: &quot;</span> + historialAcciones.pop());
+        }
+    }
+}</code></pre>
+</div>
+
+<h3 id="caso-2-contador-frecuencias-map-set">Caso Práctico 2: Contador de Frecuencia de Palabras con <code>Map</code> y <code>Set</code></h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.practicas;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> AnalizadorTextoWeb {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">String</span> texto = <span class="tok-string">&quot;java es genial y aprender java es divertido con programacion en java&quot;</span>;
+
+        <span class="tok-comment">// 1. Separamos palabras con expresión regular (espacios en blanco)</span>
+        <span class="tok-key">String</span>[] palabras = texto.toLowerCase().split(<span class="tok-string">&quot;\\s+&quot;</span>);
+
+        <span class="tok-comment">// 2. Usamos un Map para contabilizar frecuencias</span>
+        <span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Integer</span>&gt; frecuencias = <span class="tok-key">new</span> <span class="tok-key">HashMap</span>&lt;&gt;();
+        <span class="tok-key">for</span> (<span class="tok-key">String</span> p : palabras) {
+            frecuencias.put(p, frecuencias.getOrDefault(p, <span class="tok-bool">0</span>) + <span class="tok-bool">1</span>);
+        }
+
+        <span class="tok-comment">// 3. Mostramos palabras ordenadas alfabéticamente usando un TreeMap</span>
+        <span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Integer</span>&gt; frecuenciasOrdenadas = <span class="tok-key">new</span> TreeMap&lt;&gt;(frecuencias);
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;=== FRECUENCIA DE PALABRAS ===&quot;</span>);
+        <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%-15s : %s%n&quot;</span>, <span class="tok-string">&quot;PALABRA&quot;</span>, <span class="tok-string">&quot;APARICIONES&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;---------------------------------&quot;</span>);
+        <span class="tok-key">for</span> (<span class="tok-key">Map</span>.Entry&lt;<span class="tok-key">String</span>, <span class="tok-key">Integer</span>&gt; entry : frecuenciasOrdenadas.entrySet()) {
+            <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%-15s : %d veces%n&quot;</span>, entry.getKey(), entry.getValue());
+        }
+
+        <span class="tok-comment">// 4. Mostrar vocabulario único sin duplicados usando un Set</span>
+        <span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; palabrasUnicas = <span class="tok-key">new</span> TreeSet&lt;&gt;(Arrays.asList(palabras));
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\nTotal de palabras únicas: &quot;</span> + palabrasUnicas.size());
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Vocabulario: &quot;</span> + palabrasUnicas);
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="10-actividades-propuestas-aules">10. Actividades Propuestas para el Alumnado (Subida a Aules)</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">✍️ Actividad 1: <code>GestorListaCompra.java</code> (List y Set)</p>
+<p>Diseña un programa por consola para gestionar la lista de la compra del supermercado:</p>
+<ol>
+  <li>Permite al usuario añadir productos por teclado. Si el producto ya figuraba en la lista, muestra una advertencia de duplicidad y consulta si desea añadirlo igualmente o descartarlo.</li>
+  <li>Proporciona una opción para <strong>eliminar un producto</strong> por su nombre utilizando <code>Iterator.remove()</code> o <code>removeIf()</code> (asegurando no lanzar <code>ConcurrentModificationException</code>).</li>
+  <li>Muestra el listado completo numerado con formato limpio.</li>
+  <li>Incorpora la opción especial: <em>"Extraer inventario de artículos únicos"</em>, que vuelque la lista en un <code>TreeSet</code> para mostrarlos automáticamente ordenados alfabéticamente sin ningún repetido.</li>
+</ol>
+<p><strong>📦 Entrega:</strong> Sube el archivo <code>GestorListaCompra.java</code> a la tarea en <strong>Aules</strong>.</p>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">✍️ Actividad 2: <code>DiccionarioSinonimos.java</code> (Map con List/Set)</p>
+<p>Crea un diccionario interactivo de sinónimos donde a cada término (clave) le corresponda un conjunto o lista de sinónimos (<code>Map&lt;String, List&lt;String&gt;&gt;</code>):</p>
+<ol>
+  <li>Inicializa el mapa con al menos 4 palabras y sus listas de sinónimos (ej: <code>"rápido"</code> &rarr; <code>["veloz", "ágil", "ligero"]</code>).</li>
+  <li>Solicita una palabra al usuario y muestra todos sus sinónimos por pantalla.</li>
+  <li>Si la palabra no existe en el diccionario, pide al usuario 2 sinónimos y regístrala dinámicamente en el mapa.</li>
+  <li>Imprime el diccionario completo ordenado alfabéticamente por clave con formato tabulado mediante <code>System.out.printf</code>.</li>
+</ol>
+<p><strong>📦 Entrega:</strong> Sube el archivo <code>DiccionarioSinonimos.java</code> a la tarea en <strong>Aules</strong>.</p>
+</div>
+
+<hr>
+
+<h2 id="11-rubrica-de-evaluacion-aules">11. Rúbrica de Evaluación para Aules</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Criterio de Evaluación</th>
+      <th>Excelente (4 pts)</th>
+      <th>Bueno (2.5 pts)</th>
+      <th>Mejorable (1 pt)</th>
+      <th>No superado (0 pts)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elección de Estructura de Datos (<code>RA6.c</code>, <code>RA6.f</code>)</strong></td>
+      <td>Selecciona con rigor la interfaz e implementación óptima (<code>ArrayList</code>, <code>HashSet</code>, <code>HashMap</code>, <code>Deque</code>) según el problema.</td>
+      <td>Elige estructuras funcionales pero no óptimas (ej. usar <code>ArrayList</code> para búsquedas de unicidad continuas).</td>
+      <td>Utiliza arrays estáticos cuando el problema exigía estructuras dinámicas.</td>
+      <td>Error de compilación o tipo de dato totalmente erróneo.</td>
+    </tr>
+    <tr>
+      <td><strong>Manipulación y Métodos (<code>RA6.d</code>)</strong></td>
+      <td>Emplea con soltura métodos avanzados (<code>getOrDefault</code>, <code>put</code>, <code>removeIf</code>, <code>offer</code>, <code>poll</code>).</td>
+      <td>Aplica métodos básicos con redundancias (ej. llamadas a <code>contains</code> antes de <code>put</code> innecesarias).</td>
+      <td>Errores de modificación concurrente al eliminar elementos en bucles.</td>
+      <td>No sabe insertar o recuperar datos de la colección.</td>
+    </tr>
+    <tr>
+      <td><strong>Recorrido e Iteración (<code>RA6.e</code>)</strong></td>
+      <td>Recorre eficientemente (<code>entrySet</code>, iteradores, lambdas) formateando la salida con <code>printf</code>.</td>
+      <td>Recorre solo con <code>for-each</code> básico o mediante accesos lentos en mapas (<code>keySet</code> + <code>get</code> continuo).</td>
+      <td>Bucle infinito o desbordamientos <code>IndexOutOfBoundsException</code>.</td>
+      <td>No muestra la información solicitada.</td>
+    </tr>
+    <tr>
+      <td><strong>Convenciones y Clean Code</strong></td>
+      <td>Declaración mediante interfaces (<code>List&lt;T&gt; = new ArrayList&lt;&gt;()</code>), genéricos tipados y comentarios explicativos.</td>
+      <td>Utiliza genéricos pero declara con clases concretas (<code>ArrayList&lt;T&gt; = ...</code>).</td>
+      <td>Uso de tipos crudos (<em>raw types</em>) sin genéricos (<code>ArrayList lista = ...</code>).</td>
+      <td>Código desordenado, sin indentación o no compila.</td>
+    </tr>
+  </tbody>
+</table>
+
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut03/ut0305.html">⬅️ 3.4 Algoritmos recursivos (Recursividad)</a>
+<a class="page-nav-btn" href="../ut03/ut03actividades.html">Actividades prácticas UT3 ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</body>
+</html>

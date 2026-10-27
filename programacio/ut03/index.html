@@ -516,6 +516,7 @@
 <li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
 <li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
 <li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03colecciones.html">3.5 Estructuras dinámicas de datos: List, Set, Queue, Deque y Map (JCF)</a></li>
 <li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
 <li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
 </ul>
@@ -613,6 +614,7 @@
 <li><a href="#ut0307"><strong>3.2.5 Colecciones dinámicas: ArrayList</strong></a> — <a href="./ut0307.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0308"><strong>3.3 Diccionarios y Mapas (HashMap)</strong></a> — <a href="./ut0308.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0305"><strong>3.4 Algoritmos recursivos (Recursividad)</strong></a> — <a href="./ut0305.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut03colecciones"><strong>3.5 Estructuras dinámicas de datos: List, Set, Queue, Deque y Map (JCF)</strong></a> — <a href="./ut03colecciones.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut03actividades"><strong>Actividades prácticas UT3</strong></a> — <a href="./ut03actividades.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut03retos"><strong>Retos de programación UT3</strong></a> — <a href="./ut03retos.html"><em>(Obrir apartat individual)</em></a></li>
 </ul></div><hr>
@@ -4746,6 +4748,845 @@ Es imprescindible que los casos recursivos siempre garanticen que sucesivas llam
 <p><a href="../../others/code/ut04/Recursividad.java" target="_blank">Enlace a ejercicio completo de recursividad</a>.</p>
 </div>
 </section><hr>
+<section id="ut03colecciones">
+<h1>3.5 Estructuras Dinámicas de Datos: Colecciones, Listas, Pilas, Colas, Sets y Mapas</h1>
+
+<div class="admonition note">
+<p class="admonition-title">📋 Información Curricular y Resultados de Aprendizaje</p>
+<p><strong>Módulo:</strong> Programación (PRG — Código 0485) | 1º DAW | IES Mestre Ramón Esteve</p>
+<p><strong>Resultado de Aprendizaje:</strong> <code>RA6</code> <em>(Escribe programas que manipulen información seleccionando y utilizando tipos avanzados de datos)</em>.</p>
+<p><strong>Criterios de Evaluación asociados:</strong></p>
+<ul>
+  <li><code>CEb</code>: Identificación de las ventajas de las estructuras dinámicas frente a estáticas.</li>
+  <li><code>CEc</code>: Selección y uso de colecciones adecuadas según los requerimientos del software.</li>
+  <li><code>CEd</code>: Operaciones de inserción, consulta, modificación y borrado de elementos.</li>
+  <li><code>CEe</code>: Uso de iteradores y prevención de errores de modificación concurrente.</li>
+  <li><code>CEf</code>: Implementación y gestión de estructuras de tipo Pila (LIFO) y Cola (FIFO).</li>
+  <li><code>CEg</code>: Utilización de diccionarios / mapas asociativos (clave-valor).</li>
+</ul>
+</div>
+
+<hr>
+
+<h2 id="1-de-arrays-estaticos-a-estructuras-dinamicas">1. De Arrays Estáticos a Estructuras Dinámicas</h2>
+<p>Hasta ahora, para almacenar secuencias de elementos hemos utilizado <strong>arrays tradicionales</strong> (ej. <code>int[] numeros = new int[5];</code>). Aunque son ultrarrápidos y eficientes en memoria, presentan tres limitaciones críticas en aplicaciones reales:</p>
+
+<ol>
+  <li><strong>Tamaño fijo e inmutable:</strong> La capacidad se fija al instanciar y no puede alterarse. Si se llena, hay que reservar un array nuevo más grande y copiar los elementos a mano uno a uno.</li>
+  <li><strong>Sin operaciones de alto nivel incorporadas:</strong> Insertar en una posición intermedia, eliminar compactando el hueco o buscar sin un bucle manual exige escribir algoritmos auxiliares.</li>
+  <li><strong>Desperdicio o escasez de memoria:</strong> Sobredimensionar ("por si acaso") malgasta memoria; quedarse corto provoca errores de desbordamiento de índice (<code>ArrayIndexOutOfBoundsException</code>).</li>
+</ol>
+
+<p>Para solucionar esto, Java incorpora en su paquete estándar <code>java.util</code> el <strong>Java Collections Framework (JCF)</strong>: un ecosistema unificado de interfaces, clases e implementaciones de <strong>estructuras dinámicas de datos</strong> que redimensionan automáticamente su espacio en la memoria din&aacute;mica (<em>Heap</em>) según las necesidades del programa.</p>
+
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Colecciones y Tipos Primitivos: ¡Uso obligatorio de Wrappers!</p>
+<p>Las colecciones de Java <strong>solo pueden almacenar objetos</strong>, nunca tipos primitivos directos. Gracias al <em>Autoboxing</em>, utilizamos sus clases envoltorio (<em>Wrappers</em>):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// ❌ Error de compilación: los genéricos no admiten primitivos</span>
+<span class="tok-comment">// List&lt;int&gt; lista = new ArrayList&lt;int&gt;();</span>
+
+<span class="tok-comment">// ✅ Correcto (usando clase envoltorio Integer):</span>
+<span class="tok-key">List</span>&lt;<span class="tok-key">Integer</span>&gt; lista = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();
+lista.add(<span class="tok-bool">10</span>); <span class="tok-comment">// Autoboxing automático: de int a Integer</span></code></pre>
+</div>
+</div>
+
+<hr>
+
+<h2 id="2-jerarquia-del-java-collections-framework">2. Jerarquía del Java Collections Framework (JCF)</h2>
+<p>El framework de colecciones está organizado en una arquitectura jerárquica limpia basada en interfaces e implementaciones:</p>
+
+<pre class="mermaid">
+classDiagram
+    direction TB
+    class Iterable~E~ { &lt;&lt;interface&gt;&gt; }
+    class Collection~E~ { &lt;&lt;interface&gt;&gt; }
+    class List~E~ { &lt;&lt;interface&gt;&gt; }
+    class Set~E~ { &lt;&lt;interface&gt;&gt; }
+    class Queue~E~ { &lt;&lt;interface&gt;&gt; }
+    class Deque~E~ { &lt;&lt;interface&gt;&gt; }
+    class Map~K,V~ { &lt;&lt;interface&gt;&gt; }
+
+    Iterable &lt;|-- Collection
+    Collection &lt;|-- List
+    Collection &lt;|-- Set
+    Collection &lt;|-- Queue
+    Queue &lt;|-- Deque
+
+    class ArrayList~E~
+    class LinkedList~E~
+    class HashSet~E~
+    class TreeSet~E~
+    class ArrayDeque~E~
+    class HashMap~K,V~
+    class TreeMap~K,V~
+
+    List &lt;|.. ArrayList
+    List &lt;|.. LinkedList
+    Queue &lt;|.. LinkedList
+    Queue &lt;|.. ArrayDeque
+    Deque &lt;|.. ArrayDeque
+    Deque &lt;|.. LinkedList
+    Set &lt;|.. HashSet
+    Set &lt;|.. TreeSet
+    Map &lt;|.. HashMap
+    Map &lt;|.. TreeMap
+</pre>
+
+<div class="admonition tip">
+<p class="admonition-title">💡 Regla de oro de arquitectura: Polimorfismo de Interfaces</p>
+<p>Declara siempre las variables con el tipo de la <strong>interfaz más general</strong> (<code>List</code>, <code>Set</code>, <code>Map</code>) e instancia con la <strong>clase concreta</strong> (<code>ArrayList</code>, <code>HashSet</code>, <code>HashMap</code>). De este modo tu código desacopla el diseño de la implementación interna:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// ✅ Práctica recomendada por Clean Code (Polimorfismo de Interfaces):</span>
+<span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; alumnos = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();
+<span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; codigos = <span class="tok-key">new</span> HashSet&lt;&gt;();
+<span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Double</span>&gt; notas = <span class="tok-key">new</span> <span class="tok-key">HashMap</span>&lt;&gt;();
+
+<span class="tok-comment">// ⚠️ Desaconsejado (acoplamiento rígido a la clase concreta):</span>
+<span class="tok-key">ArrayList</span>&lt;<span class="tok-key">String</span>&gt; alumnosMal = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();</code></pre>
+</div>
+</div>
+
+<hr>
+
+<h2 id="3-listas-list">3. Listas (<code>List</code>): Elementos Ordenados y Duplicados</h2>
+<p>Una <strong>Lista</strong> (<code>List&lt;E&gt;</code>) representa una secuencia indexada de elementos:</p>
+<ul>
+  <li><strong>Características:</strong> Permite elementos repetidos (duplicados), mantiene el <strong>orden de inserción</strong> y permite acceso por índice numérico posicional base <code>0</code>.</li>
+</ul>
+
+<h3 id="31-arraylist-vs-linkedlist">3.1. Comparativa técnica: <code>ArrayList</code> vs <code>LinkedList</code></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Característica</th>
+      <th><code>ArrayList</code></th>
+      <th><code>LinkedList</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Estructura interna</strong></td>
+      <td>Array dinámico redimensionable internamente.</td>
+      <td>Nodos doblemente enlazados en memoria.</td>
+    </tr>
+    <tr>
+      <td><strong>Acceso aleatorio (<code>get(i)</code>)</strong></td>
+      <td>⚡ Ultrarrápido <code>O(1)</code> por puntero directo.</td>
+      <td>🐢 Lento <code>O(n)</code>, recorre nodo a nodo.</td>
+    </tr>
+    <tr>
+      <td><strong>Inserción/Borrado al final</strong></td>
+      <td>⚡ Rápido <code>O(1)</code> amortizado.</td>
+      <td>⚡ Rápido <code>O(1)</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Inserción/Borrado al inicio/medio</strong></td>
+      <td>🐢 Lento <code>O(n)</code> (desplaza todos los elementos).</td>
+      <td>⚡ Rápido <code>O(1)</code> (reconecta enlaces de nodos).</td>
+    </tr>
+    <tr>
+      <td><strong>Recomendación estándar</strong></td>
+      <td><strong>Uso por defecto en el 95% de aplicaciones.</strong></td>
+      <td>Ideal para colas, pilas o inserciones masivas continuas.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="32-metodos-fundamentales-de-list">3.2. Métodos fundamentales de <code>List</code> en acción</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">ArrayList</span>;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">List</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploListas {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; lenguajes = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;();
+
+        <span class="tok-comment">// 1. Inserción (al final o en posición específica)</span>
+        lenguajes.add(<span class="tok-string">&quot;Java&quot;</span>);
+        lenguajes.add(<span class="tok-string">&quot;Python&quot;</span>);
+        lenguajes.add(<span class="tok-string">&quot;JavaScript&quot;</span>);
+        lenguajes.add(<span class="tok-bool">1</span>, <span class="tok-string">&quot;TypeScript&quot;</span>); <span class="tok-comment">// Inserta en posición 1 desplazando el resto</span>
+
+        <span class="tok-comment">// 2. Consulta y tamaño</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Total elementos: &quot;</span> + lenguajes.size()); <span class="tok-comment">// 4</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Elemento en índice 0: &quot;</span> + lenguajes.get(<span class="tok-bool">0</span>)); <span class="tok-comment">// Java</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Contiene Python?: &quot;</span> + lenguajes.contains(<span class="tok-string">&quot;Python&quot;</span>)); <span class="tok-comment">// true</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Posición de Java: &quot;</span> + lenguajes.indexOf(<span class="tok-string">&quot;Java&quot;</span>)); <span class="tok-comment">// 0</span>
+
+        <span class="tok-comment">// 3. Modificación</span>
+        lenguajes.set(<span class="tok-bool">2</span>, <span class="tok-string">&quot;Kotlin&quot;</span>); <span class="tok-comment">// Sustituye el valor del índice 2</span>
+
+        <span class="tok-comment">// 4. Eliminación (por índice o por objeto exacto)</span>
+        lenguajes.remove(<span class="tok-bool">0</span>); <span class="tok-comment">// Elimina por índice</span>
+        lenguajes.remove(<span class="tok-string">&quot;Python&quot;</span>); <span class="tok-comment">// Elimina por coincidencia de objeto</span>
+
+        <span class="tok-comment">// 5. Estado y vaciado</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Lista vacía?: &quot;</span> + lenguajes.isEmpty());
+        lenguajes.clear(); <span class="tok-comment">// Elimina todos los elementos</span>
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="4-pilas-y-colas">4. Pilas (<em>Stacks</em> - LIFO) y Colas (<em>Queues</em> - FIFO)</h2>
+<p>Son estructuras restringidas diseñadas para modelar flujos de trabajo secuenciales en la lógica de negocio:</p>
+
+<table style="width:100%; border:none;">
+  <tr>
+    <td style="width:50%; vertical-align:top; border:none;">
+      <strong>PILA (LIFO: <em>Last In, First Out</em>)</strong>
+      <pre>
+   |             |
+   |   Dato 3    |  &lt;-- Cima (push / pop)
+   |   Dato 2    |
+   |   Dato 1    |
+   +-------------+
+(El último en entrar sale primero: Deshacer / Undo)
+      </pre>
+    </td>
+    <td style="width:50%; vertical-align:top; border:none;">
+      <strong>COLA (FIFO: <em>First In, First Out</em>)</strong>
+      <pre>
+Entrada --&gt; [ C | B | A ] --&gt; Salida
+                          
+(El primero en entrar es el primero en ser atendido:
+turnos de clientes, cola de impresión, buffers)
+      </pre>
+    </td>
+  </tr>
+</table>
+
+<h3 id="41-pilas-lifo">4.1. Pilas: LIFO (<em>Last In, First Out</em>)</h3>
+<div class="admonition warning">
+<p class="admonition-title">⚠️ Aviso sobre la clase obsoleta <code>java.util.Stack</code></p>
+<p>Aunque Java incluye históricamente la clase <code>Stack</code>, es una clase <em>legacy</em> desaconsejada. La propia documentación oficial de Oracle recomienda utilizar la interfaz moderna <strong><code>Deque</code></strong> implementada mediante <strong><code>ArrayDeque</code></strong>:</p>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.ArrayDeque;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Deque;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploPila {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Uso recomendado oficial de Oracle: Deque implementado por ArrayDeque</span>
+        Deque&lt;<span class="tok-key">String</span>&gt; pilaNavegacion = <span class="tok-key">new</span> ArrayDeque&lt;&gt;();
+
+        <span class="tok-comment">// Apilar elementos en la cima (push)</span>
+        pilaNavegacion.push(&quot;https:<span class="tok-comment">//iesramonesteve.es&quot;);</span>
+        pilaNavegacion.push(&quot;https:<span class="tok-comment">//aules.edu.gva.es&quot;);</span>
+        pilaNavegacion.push(&quot;https:<span class="tok-comment">//github.com&quot;);</span>
+
+        <span class="tok-comment">// Consultar cima sin extraer (peek)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Página actual: &quot;</span> + pilaNavegacion.peek()); <span class="tok-comment">// github.com</span>
+
+        <span class="tok-comment">// Desapilar al pulsar botón &#x27;Atrás&#x27; (pop)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Cerrando: &quot;</span> + pilaNavegacion.pop()); <span class="tok-comment">// Extrae github.com</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Regresando a: &quot;</span> + pilaNavegacion.peek()); <span class="tok-comment">// aules.edu.gva.es</span>
+    }
+}</code></pre>
+</div>
+
+<h3 id="42-colas-fifo">4.2. Colas: FIFO (<em>First In, First Out</em>)</h3>
+<p>En Java se utiliza la interfaz <strong><code>Queue</code></strong> implementada habitualmente con <code>LinkedList</code> o <code>ArrayDeque</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.LinkedList;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Queue;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploCola {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        Queue&lt;<span class="tok-key">String</span>&gt; colaAtencion = <span class="tok-key">new</span> LinkedList&lt;&gt;();
+
+        <span class="tok-comment">// 1. Encolar clientes al final (offer)</span>
+        colaAtencion.offer(<span class="tok-string">&quot;Cliente 1: Ana Asins&quot;</span>);
+        colaAtencion.offer(<span class="tok-string">&quot;Cliente 2: Bernat Gómez&quot;</span>);
+        colaAtencion.offer(<span class="tok-string">&quot;Cliente 3: Carla Navarro&quot;</span>);
+
+        <span class="tok-comment">// 2. Consultar el siguiente sin retirarlo</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Siguiente en turno: &quot;</span> + colaAtencion.peek());
+
+        <span class="tok-comment">// 3. Desencolar por orden estricto de llegada (poll)</span>
+        <span class="tok-key">while</span> (!colaAtencion.isEmpty()) {
+            <span class="tok-key">String</span> atendido = colaAtencion.poll();
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Atendiendo en ventanilla a: &quot;</span> + atendido);
+        }
+    }
+}</code></pre>
+</div>
+
+<h3 id="43-tabla-resumen-pila-cola">4.3. Comparativa de métodos: Pila vs Cola</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Operación</th>
+      <th>Método en Pila (<code>Deque</code>)</th>
+      <th>Método en Cola (<code>Queue</code>)</th>
+      <th>Comportamiento si está vacía</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Insertar</strong></td>
+      <td><code>push(e)</code></td>
+      <td><code>offer(e)</code></td>
+      <td>Añade el elemento a la estructura.</td>
+    </tr>
+    <tr>
+      <td><strong>Extraer</strong></td>
+      <td><code>pop()</code></td>
+      <td><code>poll()</code></td>
+      <td><code>pop()</code> lanza excepción; <code>poll()</code> devuelve <code>null</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Consultar</strong></td>
+      <td><code>peek()</code></td>
+      <td><code>peek()</code></td>
+      <td>Devuelve el elemento cima/frontal sin retirarlo.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2 id="5-conjuntos-set">5. Conjuntos (<code>Set</code>): Elementos Únicos sin Duplicados</h2>
+<p>Un <strong>Conjunto</strong> (<code>Set&lt;E&gt;</code>) es una colección que <strong>garantiza matemáticamente la no repetición de elementos</strong>. Si intentas insertar un elemento duplicado con <code>.add()</code>, Java devolverá <code>false</code> y no modificará el conjunto.</p>
+
+<h3 id="51-implementaciones-de-set">5.1. Implementaciones principales de <code>Set</code></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Implementación</th>
+      <th>Ordenación de los elementos</th>
+      <th>Rendimiento</th>
+      <th>Caso de uso típico</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><code>HashSet</code></strong></td>
+      <td><strong>Sin orden garantizado</strong> (usa tabla Hash interna).</td>
+      <td>⚡ <code>O(1)</code> Ultrarrápido</td>
+      <td>Eliminar duplicados donde el orden no importe.</td>
+    </tr>
+    <tr>
+      <td><strong><code>LinkedHashSet</code></strong></td>
+      <td>Mantiene el <strong>orden de inserción</strong> exacto.</td>
+      <td>⚡ <code>O(1)</code> Rápido</td>
+      <td>Eliminar duplicados respetando el orden en que llegaron.</td>
+    </tr>
+    <tr>
+      <td><strong><code>TreeSet</code></strong></td>
+      <td><strong>Ordenados automáticamente</strong> (alfabético/numérico) o por <code>Comparator</code>.</td>
+      <td>⚖️ <code>O(log n)</code> Equilibrado</td>
+      <td>Listas de valores únicos siempre ordenados automáticamente.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="52-ejemplo-comparativo-sets">5.2. Eliminación de duplicados y ordenación alfabética</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploSets {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; ciudadesConDuplicados = <span class="tok-key">List</span>.of(
+            <span class="tok-string">&quot;Valencia&quot;</span>, <span class="tok-string">&quot;Alicante&quot;</span>, <span class="tok-string">&quot;Castellón&quot;</span>, <span class="tok-string">&quot;Valencia&quot;</span>, <span class="tok-string">&quot;Alicante&quot;</span>
+        );
+
+        <span class="tok-comment">// 1. Eliminar duplicados instantáneamente con HashSet (sin orden fijo):</span>
+        <span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; unicas = <span class="tok-key">new</span> HashSet&lt;&gt;(ciudadesConDuplicados);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;HashSet (sin duplicados): &quot;</span> + unicas);
+
+        <span class="tok-comment">// 2. TreeSet: sin duplicados y ordenados alfabéticamente de forma automática:</span>
+        <span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; ordenadas = <span class="tok-key">new</span> TreeSet&lt;&gt;(ciudadesConDuplicados);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;TreeSet (alfabético): &quot;</span> + ordenadas);
+        <span class="tok-comment">// Salida: [Alicante, Castellón, Valencia]</span>
+    }
+}</code></pre>
+</div>
+
+<h3 id="53-operaciones-matematicas-conjuntos">5.3. Operaciones matemáticas de conjuntos (Álgebra de conjuntos)</h3>
+<p>Los métodos de <code>Set</code> permiten resolver operaciones complejas de conjuntos en una sola instrucción:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; conjuntoA = <span class="tok-key">new</span> HashSet&lt;&gt;(<span class="tok-key">Set</span>.of(<span class="tok-bool">1</span>, <span class="tok-bool">2</span>, <span class="tok-bool">3</span>, <span class="tok-bool">4</span>));
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; conjuntoB = <span class="tok-key">new</span> HashSet&lt;&gt;(<span class="tok-key">Set</span>.of(<span class="tok-bool">3</span>, <span class="tok-bool">4</span>, <span class="tok-bool">5</span>, <span class="tok-bool">6</span>));
+
+<span class="tok-comment">// 1. UNIÓN (A ∪ B)</span>
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; union = <span class="tok-key">new</span> HashSet&lt;&gt;(conjuntoA);
+union.addAll(conjuntoB); <span class="tok-comment">// [1, 2, 3, 4, 5, 6]</span>
+
+<span class="tok-comment">// 2. INTERSECCIÓN (A ∩ B)</span>
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; interseccion = <span class="tok-key">new</span> HashSet&lt;&gt;(conjuntoA);
+interseccion.retainAll(conjuntoB); <span class="tok-comment">// [3, 4]</span>
+
+<span class="tok-comment">// 3. DIFERENCIA (A - B)</span>
+<span class="tok-key">Set</span>&lt;<span class="tok-key">Integer</span>&gt; diferencia = <span class="tok-key">new</span> HashSet&lt;&gt;(conjuntoA);
+diferencia.removeAll(conjuntoB); <span class="tok-comment">// [1, 2]</span></code></pre>
+</div>
+
+<hr>
+
+<h2 id="6-mapas-diccionarios-map">6. Mapas / Diccionarios (<code>Map</code>): Estructura Clave-Valor</h2>
+<p>Un <strong>Mapa</strong> (<code>Map&lt;K, V&gt;</code>) asocia parejas de datos formadas por una <strong>clave única (<code>Key</code>)</strong> y un <strong>valor asociado (<code>Value</code>)</strong>:</p>
+<ul>
+  <li>Las <strong>claves no pueden duplicarse</strong>. Si insertas una clave ya existente mediante <code>put()</code>, se sobrescribe su valor anterior.</li>
+  <li>Los <strong>valores sí pueden repetirse</strong>.</li>
+</ul>
+
+<h3 id="61-implementaciones-de-map">6.1. Implementaciones de <code>Map</code></h3>
+<ul>
+  <li><strong><code>HashMap</code>:</strong> La opción estándar de máxima velocidad (tiempo constante <code>O(1)</code>). No garantiza ningún orden en las claves.</li>
+  <li><strong><code>LinkedHashMap</code>:</strong> Recuerda el orden de inserción de las parejas.</li>
+  <li><strong><code>TreeMap</code>:</strong> Mantiene las claves permanentemente ordenadas por su orden natural o <code>Comparator</code> (tiempo <code>O(log n)</code>).</li>
+</ul>
+
+<h3 id="62-metodos-fundamentales-map">6.2. Métodos esenciales de <code>Map</code></h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.colecciones;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">HashMap</span>;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Map</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> EjemploMap {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Clave: DNI (String) -&gt; Valor: Nombre de alumno (String)</span>
+        <span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">String</span>&gt; usuarios = <span class="tok-key">new</span> <span class="tok-key">HashMap</span>&lt;&gt;();
+
+        <span class="tok-comment">// 1. Insertar o actualizar (put)</span>
+        usuarios.put(<span class="tok-string">&quot;12345678A&quot;</span>, <span class="tok-string">&quot;Laura Martínez&quot;</span>);
+        usuarios.put(<span class="tok-string">&quot;87654321B&quot;</span>, <span class="tok-string">&quot;Marc Esteve&quot;</span>);
+        usuarios.put(<span class="tok-string">&quot;11223344C&quot;</span>, <span class="tok-string">&quot;Nuria Soler&quot;</span>);
+
+        <span class="tok-comment">// Si repetimos la clave, se actualiza el valor asociado:</span>
+        usuarios.put(<span class="tok-string">&quot;12345678A&quot;</span>, <span class="tok-string">&quot;Laura Martínez Gómez&quot;</span>);
+
+        <span class="tok-comment">// 2. Obtener un valor por clave (get)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Usuario con DNI 87654321B: &quot;</span> + usuarios.get(<span class="tok-string">&quot;87654321B&quot;</span>));
+
+        <span class="tok-comment">// 3. Obtener con valor por defecto si no existe (getOrDefault)</span>
+        <span class="tok-key">String</span> resultado = usuarios.getOrDefault(<span class="tok-string">&quot;99999999Z&quot;</span>, <span class="tok-string">&quot;Usuario no registrado&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Búsqueda DNI 99999999Z: &quot;</span> + resultado);
+
+        <span class="tok-comment">// 4. Comprobaciones de existencia rápidas O(1)</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Existe el DNI 11223344C?: &quot;</span> + usuarios.containsKey(<span class="tok-string">&quot;11223344C&quot;</span>)); <span class="tok-comment">// true</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;¿Existe el nombre Marc?: &quot;</span> + usuarios.containsValue(<span class="tok-string">&quot;Marc Esteve&quot;</span>)); <span class="tok-comment">// true</span>
+
+        <span class="tok-comment">// 5. Eliminar por clave</span>
+        usuarios.remove(<span class="tok-string">&quot;11223344C&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Total usuarios activos: &quot;</span> + usuarios.size());
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="7-recorrido-e-iteracion">7. Formas Profesionales de Recorrer Colecciones (Iteración)</h2>
+
+<h3 id="71-bucle-for-each">7.1. Bucle <code>for-each</code> (Recomendado para solo lectura)</h3>
+<p>Sintaxis limpia y directa cuando solo queremos consultar elementos sin alterar la colección:</p>
+<pre><code class="language-java">List&lt;String&gt; frutas = List.of("Manzana", "Plátano", "Naranja");
+for (String fruta : frutas) {
+    System.out.println("Fruta: " + fruta);
+}</code></pre>
+
+<h3 id="72-el-peligro-de-concurrentmodificationexception">7.2. El peligro del <code>for-each</code>: <code>ConcurrentModificationException</code></h3>
+<div class="admonition danger">
+<p class="admonition-title">💥 ¡Regla de oro: NUNCA elimines elementos de una lista dentro de su propio bucle for-each!</p>
+<p>El siguiente código compila perfectamente, pero <strong>fallará críticamente en ejecución</strong>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">List</span>&lt;<span class="tok-key">String</span>&gt; frutas = <span class="tok-key">new</span> <span class="tok-key">ArrayList</span>&lt;&gt;(<span class="tok-key">List</span>.of(<span class="tok-string">&quot;Manzana&quot;</span>, <span class="tok-string">&quot;Plátano&quot;</span>, <span class="tok-string">&quot;Naranja&quot;</span>));
+
+<span class="tok-comment">// ❌ ERROR CRÍTICO EN EJECUCIÓN: Lanza ConcurrentModificationException</span>
+<span class="tok-key">for</span> (<span class="tok-key">String</span> fruta : frutas) {
+    <span class="tok-key">if</span> (fruta.equals(<span class="tok-string">&quot;Plátano&quot;</span>)) {
+        frutas.remove(fruta); <span class="tok-comment">// ¡FALLO! Modificar la lista durante su propia iteración</span>
+    }
+}</code></pre>
+</div>
+</div>
+
+<h3 id="73-la-solucion-segura-iterator-removeif">7.3. La solución segura: <code>Iterator</code> o <code>removeIf()</code></h3>
+<p>Para eliminar elementos de manera segura durante el recorrido disponemos de dos vías estándar:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// ✅ Opción 1: Con Iterator (Clásica y universal en todas las versiones de Java)</span>
+Iterator&lt;<span class="tok-key">String</span>&gt; it = frutas.iterator();
+<span class="tok-key">while</span> (it.hasNext()) {
+    <span class="tok-key">String</span> fruta = it.next();
+    <span class="tok-key">if</span> (fruta.equals(<span class="tok-string">&quot;Plátano&quot;</span>)) {
+        it.remove(); <span class="tok-comment">// Seguro: el iterador actualiza su puntero interno</span>
+    }
+}
+
+<span class="tok-comment">// ✅ Opción 2: Con removeIf y expresión Lambda (Moderna y recomendada desde Java 8)</span>
+frutas.removeIf(fruta -&gt; fruta.equals(<span class="tok-string">&quot;Plátano&quot;</span>));</code></pre>
+</div>
+
+<h3 id="74-como-recorrer-un-map">7.4. Cómo recorrer un <code>Map</code> (Claves, Valores y Parejas)</h3>
+<p>Un <code>Map</code> no implementa <code>Iterable</code> de forma directa, por lo que se itera a través de sus vistas de colección:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Double</span>&gt; precios = <span class="tok-key">Map</span>.of(<span class="tok-string">&quot;Pan&quot;</span>, <span class="tok-bool">1</span>.<span class="tok-bool">20</span>, <span class="tok-string">&quot;Leche&quot;</span>, <span class="tok-bool">0</span>.<span class="tok-bool">95</span>, <span class="tok-string">&quot;Café&quot;</span>, <span class="tok-bool">2</span>.<span class="tok-bool">50</span>);
+
+<span class="tok-comment">// Forma 1 (La más eficiente): Recorrer parejas Clave - Valor con entrySet()</span>
+<span class="tok-key">for</span> (<span class="tok-key">Map</span>.Entry&lt;<span class="tok-key">String</span>, <span class="tok-key">Double</span>&gt; entrada : precios.entrySet()) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Producto: &quot;</span> + entrada.getKey() + <span class="tok-string">&quot; -&gt; &quot;</span> + entrada.getValue() + <span class="tok-string">&quot; €&quot;</span>);
+}
+
+<span class="tok-comment">// Forma 2: Con forEach y expresión Lambda concisa</span>
+precios.forEach((producto, precio) -&gt; {
+    <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%-10s : %5.2f €%n&quot;</span>, producto, precio);
+});</code></pre>
+</div>
+
+<hr>
+
+<h2 id="8-tabla-de-decision-cheat-sheet">8. Tabla de Decisión: ¿Qué Estructura Elegir? (<em>Cheat Sheet</em>)</h2>
+<p>Utiliza este diagrama de flujo mental para responder siempre a la pregunta del examen o del proyecto:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Terminal / Consola</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">BASH</span>
+    </div>
+  </div>
+  <pre><code>¿Necesitas pares Clave - Valor?
+  ├── SÍ ──► MAP
+  │           ├── ¿Importa el orden alfabético de clave? ──► TreeMap
+  │           ├── ¿Importa el orden de inserción? ────────► LinkedHashMap
+  │           └── ¿Solo máxima velocidad O(<span class="tok-bool">1</span>)? ───────────► <span class="tok-key">HashMap</span>
+  │
+  └── NO ──► ¿Importa que NO haya elementos duplicados?
+              ├── SÍ ──► SET
+              │           ├── ¿Orden natural/alfabético? ─► TreeSet
+              │           ├── ¿Orden de inserción? ───────► LinkedHashSet
+              │           └── ¿Solo eliminar duplicados? ─► HashSet
+              │
+              └── NO ──► ¿Flujo estricto de entrada/salida?
+                          ├── ¿Último en entrar sale primero? (LIFO) ─► Deque / ArrayDeque (Pila)
+                          ├── ¿Primero en entrar sale primero? (FIFO) ─► Queue / LinkedList (Cola)
+                          └── ¿Acceso aleatorio por índice numérico? ─► <span class="tok-key">List</span> / <span class="tok-key">ArrayList</span></code></pre>
+</div>
+
+<hr>
+
+<h2 id="9-casos-practicos-resueltos">9. Casos Prácticos Completos y Resueltos</h2>
+
+<h3 id="caso-1-tickets-soporte-y-deshacer">Caso Práctico 1: Simulación de Cola de Soporte (FIFO) y Pila de Deshacer (LIFO)</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.practicas;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.ArrayDeque;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Deque;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.LinkedList;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.Queue;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> GestionSoporteTecnico {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// COLA (FIFO): Los tickets se atienden en riguroso orden de llegada</span>
+        Queue&lt;<span class="tok-key">String</span>&gt; colaTickets = <span class="tok-key">new</span> LinkedList&lt;&gt;();
+        colaTickets.offer(<span class="tok-string">&quot;Ticket #101: Fallo al iniciar sesión&quot;</span>);
+        colaTickets.offer(<span class="tok-string">&quot;Ticket #102: Error 404 en el checkout&quot;</span>);
+        colaTickets.offer(<span class="tok-string">&quot;Ticket #103: Olvido de contraseña&quot;</span>);
+
+        <span class="tok-comment">// PILA (LIFO): Historial de acciones realizadas para permitir &#x27;Deshacer&#x27;</span>
+        Deque&lt;<span class="tok-key">String</span>&gt; historialAcciones = <span class="tok-key">new</span> ArrayDeque&lt;&gt;();
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;=== ATENDIENDO TICKETS (COLA FIFO) ===&quot;</span>);
+        <span class="tok-key">while</span> (!colaTickets.isEmpty()) {
+            <span class="tok-key">String</span> ticketActual = colaTickets.poll();
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; Procesando: &quot;</span> + ticketActual);
+            historialAcciones.push(<span class="tok-string">&quot;Atendido &quot;</span> + ticketActual);
+        }
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\n=== HISTORIAL DE ACCIONES PARA DESHACER (PILA LIFO) ===&quot;</span>);
+        <span class="tok-key">while</span> (!historialAcciones.isEmpty()) {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;&lt;- Deshaciendo última acción: &quot;</span> + historialAcciones.pop());
+        }
+    }
+}</code></pre>
+</div>
+
+<h3 id="caso-2-contador-frecuencias-map-set">Caso Práctico 2: Contador de Frecuencia de Palabras con <code>Map</code> y <code>Set</code></h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut3.practicas;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> AnalizadorTextoWeb {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">String</span> texto = <span class="tok-string">&quot;java es genial y aprender java es divertido con programacion en java&quot;</span>;
+
+        <span class="tok-comment">// 1. Separamos palabras con expresión regular (espacios en blanco)</span>
+        <span class="tok-key">String</span>[] palabras = texto.toLowerCase().split(<span class="tok-string">&quot;\\s+&quot;</span>);
+
+        <span class="tok-comment">// 2. Usamos un Map para contabilizar frecuencias</span>
+        <span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Integer</span>&gt; frecuencias = <span class="tok-key">new</span> <span class="tok-key">HashMap</span>&lt;&gt;();
+        <span class="tok-key">for</span> (<span class="tok-key">String</span> p : palabras) {
+            frecuencias.put(p, frecuencias.getOrDefault(p, <span class="tok-bool">0</span>) + <span class="tok-bool">1</span>);
+        }
+
+        <span class="tok-comment">// 3. Mostramos palabras ordenadas alfabéticamente usando un TreeMap</span>
+        <span class="tok-key">Map</span>&lt;<span class="tok-key">String</span>, <span class="tok-key">Integer</span>&gt; frecuenciasOrdenadas = <span class="tok-key">new</span> TreeMap&lt;&gt;(frecuencias);
+
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;=== FRECUENCIA DE PALABRAS ===&quot;</span>);
+        <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%-15s : %s%n&quot;</span>, <span class="tok-string">&quot;PALABRA&quot;</span>, <span class="tok-string">&quot;APARICIONES&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;---------------------------------&quot;</span>);
+        <span class="tok-key">for</span> (<span class="tok-key">Map</span>.Entry&lt;<span class="tok-key">String</span>, <span class="tok-key">Integer</span>&gt; entry : frecuenciasOrdenadas.entrySet()) {
+            <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%-15s : %d veces%n&quot;</span>, entry.getKey(), entry.getValue());
+        }
+
+        <span class="tok-comment">// 4. Mostrar vocabulario único sin duplicados usando un Set</span>
+        <span class="tok-key">Set</span>&lt;<span class="tok-key">String</span>&gt; palabrasUnicas = <span class="tok-key">new</span> TreeSet&lt;&gt;(Arrays.asList(palabras));
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\nTotal de palabras únicas: &quot;</span> + palabrasUnicas.size());
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Vocabulario: &quot;</span> + palabrasUnicas);
+    }
+}</code></pre>
+</div>
+
+<hr>
+
+<h2 id="10-actividades-propuestas-aules">10. Actividades Propuestas para el Alumnado (Subida a Aules)</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">✍️ Actividad 1: <code>GestorListaCompra.java</code> (List y Set)</p>
+<p>Diseña un programa por consola para gestionar la lista de la compra del supermercado:</p>
+<ol>
+  <li>Permite al usuario añadir productos por teclado. Si el producto ya figuraba en la lista, muestra una advertencia de duplicidad y consulta si desea añadirlo igualmente o descartarlo.</li>
+  <li>Proporciona una opción para <strong>eliminar un producto</strong> por su nombre utilizando <code>Iterator.remove()</code> o <code>removeIf()</code> (asegurando no lanzar <code>ConcurrentModificationException</code>).</li>
+  <li>Muestra el listado completo numerado con formato limpio.</li>
+  <li>Incorpora la opción especial: <em>"Extraer inventario de artículos únicos"</em>, que vuelque la lista en un <code>TreeSet</code> para mostrarlos automáticamente ordenados alfabéticamente sin ningún repetido.</li>
+</ol>
+<p><strong>📦 Entrega:</strong> Sube el archivo <code>GestorListaCompra.java</code> a la tarea en <strong>Aules</strong>.</p>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">✍️ Actividad 2: <code>DiccionarioSinonimos.java</code> (Map con List/Set)</p>
+<p>Crea un diccionario interactivo de sinónimos donde a cada término (clave) le corresponda un conjunto o lista de sinónimos (<code>Map&lt;String, List&lt;String&gt;&gt;</code>):</p>
+<ol>
+  <li>Inicializa el mapa con al menos 4 palabras y sus listas de sinónimos (ej: <code>"rápido"</code> &rarr; <code>["veloz", "ágil", "ligero"]</code>).</li>
+  <li>Solicita una palabra al usuario y muestra todos sus sinónimos por pantalla.</li>
+  <li>Si la palabra no existe en el diccionario, pide al usuario 2 sinónimos y regístrala dinámicamente en el mapa.</li>
+  <li>Imprime el diccionario completo ordenado alfabéticamente por clave con formato tabulado mediante <code>System.out.printf</code>.</li>
+</ol>
+<p><strong>📦 Entrega:</strong> Sube el archivo <code>DiccionarioSinonimos.java</code> a la tarea en <strong>Aules</strong>.</p>
+</div>
+
+<hr>
+
+<h2 id="11-rubrica-de-evaluacion-aules">11. Rúbrica de Evaluación para Aules</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Criterio de Evaluación</th>
+      <th>Excelente (4 pts)</th>
+      <th>Bueno (2.5 pts)</th>
+      <th>Mejorable (1 pt)</th>
+      <th>No superado (0 pts)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Elección de Estructura de Datos (<code>RA6.c</code>, <code>RA6.f</code>)</strong></td>
+      <td>Selecciona con rigor la interfaz e implementación óptima (<code>ArrayList</code>, <code>HashSet</code>, <code>HashMap</code>, <code>Deque</code>) según el problema.</td>
+      <td>Elige estructuras funcionales pero no óptimas (ej. usar <code>ArrayList</code> para búsquedas de unicidad continuas).</td>
+      <td>Utiliza arrays estáticos cuando el problema exigía estructuras dinámicas.</td>
+      <td>Error de compilación o tipo de dato totalmente erróneo.</td>
+    </tr>
+    <tr>
+      <td><strong>Manipulación y Métodos (<code>RA6.d</code>)</strong></td>
+      <td>Emplea con soltura métodos avanzados (<code>getOrDefault</code>, <code>put</code>, <code>removeIf</code>, <code>offer</code>, <code>poll</code>).</td>
+      <td>Aplica métodos básicos con redundancias (ej. llamadas a <code>contains</code> antes de <code>put</code> innecesarias).</td>
+      <td>Errores de modificación concurrente al eliminar elementos en bucles.</td>
+      <td>No sabe insertar o recuperar datos de la colección.</td>
+    </tr>
+    <tr>
+      <td><strong>Recorrido e Iteración (<code>RA6.e</code>)</strong></td>
+      <td>Recorre eficientemente (<code>entrySet</code>, iteradores, lambdas) formateando la salida con <code>printf</code>.</td>
+      <td>Recorre solo con <code>for-each</code> básico o mediante accesos lentos en mapas (<code>keySet</code> + <code>get</code> continuo).</td>
+      <td>Bucle infinito o desbordamientos <code>IndexOutOfBoundsException</code>.</td>
+      <td>No muestra la información solicitada.</td>
+    </tr>
+    <tr>
+      <td><strong>Convenciones y Clean Code</strong></td>
+      <td>Declaración mediante interfaces (<code>List&lt;T&gt; = new ArrayList&lt;&gt;()</code>), genéricos tipados y comentarios explicativos.</td>
+      <td>Utiliza genéricos pero declara con clases concretas (<code>ArrayList&lt;T&gt; = ...</code>).</td>
+      <td>Uso de tipos crudos (<em>raw types</em>) sin genéricos (<code>ArrayList lista = ...</code>).</td>
+      <td>Código desordenado, sin indentación o no compila.</td>
+    </tr>
+  </tbody>
+</table>
+
+</section><hr>
 <section id="ut03actividades">
 <h1 id="actividades-ut03">Actividades UT03</h1>
 <div class="admonition vscode">
@@ -6996,5 +7837,9 @@ Palíndromo: <span class="tok-bool">true</span></code></pre>
     }
   </script>
 
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
 </body>
 </html>
