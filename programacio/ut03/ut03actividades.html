@@ -2427,6 +2427,33 @@ En el método main, crea un menú para que el usuario pueda realizar las distint
 </ol>
 </div>
 
+<hr>
+<h2 id="bloque-35-colecciones-dinamicas">Bloque 3.5 - Estructuras Dinámicas de Datos (Colecciones)</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad: Gestor de Lista de la Compra (<code>GestorListaCompra.java</code>) — List y Set</p>
+<p>Diseña un programa por consola para gestionar la lista de la compra del supermercado:</p>
+<ol>
+  <li>Permite al usuario añadir productos por teclado. Si el producto ya figuraba en la lista, muestra una advertencia de duplicidad y consulta si desea añadirlo igualmente o descartarlo.</li>
+  <li>Proporciona una opción para <strong>eliminar un producto</strong> por su nombre utilizando <code>Iterator.remove()</code> o <code>removeIf()</code> (asegurando no lanzar <code>ConcurrentModificationException</code>).</li>
+  <li>Muestra el listado completo numerado con formato limpio.</li>
+  <li>Incorpora la opción especial: <em>"Extraer inventario de artículos únicos"</em>, que vuelque la lista en un <code>TreeSet</code> para mostrarlos automáticamente ordenados alfabéticamente sin ningún repetido.</li>
+</ol>
+<p><strong>📦 Entrega:</strong> Sube el archivo <code>GestorListaCompra.java</code> a la tarea correspondiente en <strong>Aules</strong>.</p>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad: Diccionario de Sinónimos (<code>DiccionarioSinonimos.java</code>) — Map con List</p>
+<p>Crea un diccionario interactivo de sinónimos donde a cada término (clave) le corresponda un conjunto o lista de sinónimos (<code>Map&lt;String, List&lt;String&gt;&gt;</code>):</p>
+<ol>
+  <li>Inicializa el mapa con al menos 4 palabras y sus listas de sinónimos asociadas.</li>
+  <li>Ofrece una opción de consulta: el usuario introduce una palabra y el sistema muestra todos sus sinónimos disponibles.</li>
+  <li>Si la palabra buscada no existe en el diccionario, solicita al usuario 2 sinónimos y añádela dinámicamente al mapa.</li>
+  <li>Imprime el diccionario completo ordenado alfabéticamente por palabra clave, con formato tabulado (<code>printf</code>).</li>
+</ol>
+<p><strong>📦 Entrega:</strong> Sube el archivo <code>DiccionarioSinonimos.java</code> a la tarea correspondiente en <strong>Aules</strong>.</p>
+</div>
+
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut03/ut03colecciones.html">⬅️ 3.5 Estructuras dinámicas de datos: List, Set, Queue, Deque y Map (JCF)</a>
 <a class="page-nav-btn" href="../ut03/ut03retos.html">Retos de programación UT3 ➡️</a>
