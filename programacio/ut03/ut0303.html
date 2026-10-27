@@ -601,18 +601,25 @@
 
     <main class="content">
       <span class="up-badge">1a / 2a Avaluació · RA6 · Arrays, ArrayList, HashMap i Recursivitat</span>
-      <h1>3.2.2 Problemas de recorrido, búsqueda y ordenación</h1>
+      <h1>3.2.2 Problemas de recorrido, búsqueda y ordenación en arrays</h1>
 
-<p>Muchos de los problemas que se plantean cuando se utilizan arrays pueden clasificarse en tres grandes grupos de problemas genéricos: </p>
-<p>&nbsp;&nbsp; a) los que conllevan el recorrido de un array, </p>
-<p>&nbsp;&nbsp; b) los que suponen la búsqueda de un elemento que cumpla cierta característica dentro del array, y </p>
-<p>&nbsp;&nbsp; c) los que implican la ordenación de los elementos del array.</p>
-<p>La importancia de este tipo de problemas proviene de que surgen, no sólo en el ámbito de los arrays, sino también en muchas otras organizaciones de datos de uso frecuente (como las listas, los ficheros, etc.). Las estrategias básicas de resolución que se verán a continuación son también extrapolables a esos otros ámbitos.</p>
-<h2 id="a-problemas-de-recorrido">a) Problemas de recorrido</h2>
-<p>Se clasifican como problemas de recorrido aquellos que para su resolución exigen algún <strong>tratamiento de todos elementos del array</strong>. El orden para el tratamiento de estos elementos puede organizarse de muchas maneras: ascendentemente, descendentemente, ascendente y descendente de forma simultánea, etc.</p>
+<p>Muchos de los algoritmos fundamentales en programación estructurada sobre arrays se clasifican en tres grandes categorías:</p>
+<ul>
+  <li><strong>a) Problemas de recorrido:</strong> Exigen procesar o examinar todos los elementos del array (sumas, medias, transformaciones, conteos).</li>
+  <li><strong>b) Problemas de búsqueda:</strong> Determinan si existe algún elemento que cumpla una condición dada, deteniéndose en cuanto se halla.</li>
+  <li><strong>c) Problemas de ordenación:</strong> Reorganizan los elementos según un criterio de orden (ascendente o descendente).</li>
+</ul>
+
+<hr>
+
+<h2 id="a-problemas-de-recorrido">a) Problemas de recorrido de un array</h2>
+<p>Se consideran problemas de recorrido aquellos que, para su resolución, exigen el <strong>tratamiento sistemático de todos los elementos del array</strong>. El recorrido puede organizarse de forma ascendente (de izquierda a derecha), descendente (de derecha a izquierda) o con pasos específicos.</p>
+
+<h3 id="recorrido-con-for-clasico">1. Recorrido clásico con índice (bucle <code>for</code> tradicional)</h3>
+<p>Utiliza una variable entera <code>i</code> que actúa como subíndice (<code>0, 1, ..., array.length - 1</code>):</p>
+
 <div class="admonition java">
-<p class="admonition-title">Ejemplo de recorrido</p>
-<p>A partir de un array que contiene la pluviosidad de cada uno de los días de un mes, realizar un método que calcule la pluviosidad media de dicho mes. Para ello se recorren ascendente los componentes del array para ir sumándolos:</p>
+<p class="admonition-title">Ejemplo: Pluviosidad Media Ascendente</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -626,52 +633,21 @@
       <span class="terminal-lang">JAVA</span>
     </div>
   </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMediaAscendente(<span class="tok-key">double</span> lluvia[]){
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMediaAscendente(<span class="tok-key">double</span> lluvia[]) {
     <span class="tok-key">double</span> suma = <span class="tok-bool">0</span>;
 
-    <span class="tok-comment">//Recorremos el array</span>
-    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i&lt;lluvia.length; i++) {
+    <span class="tok-comment">// Recorremos el array de forma ascendente con índice i (0 .. length-1)</span>
+    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; lluvia.length; i++) {
         suma += lluvia[i];
     }
-    <span class="tok-key">double</span> media = suma / lluvia.length;
-
-    <span class="tok-key">return</span> media;
-}</code></pre>
-</div>
-<p>La forma de recorrer el array ascendentemente es, como vemos, utilizar una variable entera (<code>i</code> en nuestro caso) que actúa como subíndice del array. Éste subíndice va tomando los valores <code>0</code>, <code>1</code>, ..., <code>lluvia.length-1</code> en el seno de un bucle, de manera que se accede a todos los componentes del array para sumarlos.</p>
-</div>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo de recorrido descendente</p>
-<p>El mismo problema resuelto con un recorrido descendente sería como sigue:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMediaDescendente(<span class="tok-key">double</span> lluvia[]){
-    <span class="tok-key">double</span> suma = <span class="tok-bool">0</span>;
-
-    <span class="tok-comment">//Recorremos el array</span>
-    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = lluvia.length-<span class="tok-bool">1</span>; i&gt;=<span class="tok-bool">0</span>; i--) {
-        suma += lluvia[i];
-    }
-    <span class="tok-key">double</span> media = suma / lluvia.length;
-
-    <span class="tok-key">return</span> media;
+    <span class="tok-key">return</span> suma / lluvia.length;
 }</code></pre>
 </div>
 </div>
+
 <div class="admonition java">
-<p class="admonition-title">Ejemplo 2 de recorrido</p>
-<p>También realizamos un recorrido para obtener la pluviosidad máxima del mes (la cantidad de lluvia más grande caída en un día), es decir, el elemento más grande del array:</p>
+<p class="admonition-title">Ejemplo: Recorrido Descendente y Cálculo de Máximo</p>
+<p>Para recorrer de final a principio comenzamos en <code>lluvia.length - 1</code> y decrementamos hasta <code>0</code>:</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -685,202 +661,367 @@
       <span class="terminal-lang">JAVA</span>
     </div>
   </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMaxima(<span class="tok-key">double</span>[] lluvia){
-    <span class="tok-comment">// Suponemos el la pluviosidad máxima se produjo el primer día</span>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMediaDescendente(<span class="tok-key">double</span> lluvia[]) {
+    <span class="tok-key">double</span> suma = <span class="tok-bool">0</span>;
+
+    <span class="tok-comment">// Recorremos el array de forma descendente (length-1 .. 0)</span>
+    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = lluvia.length - <span class="tok-bool">1</span>; i &gt;= <span class="tok-bool">0</span>; i--) {
+        suma += lluvia[i];
+    }
+    <span class="tok-key">return</span> suma / lluvia.length;
+}</code></pre>
+</div>
+<p>Y para hallar el valor máximo, inicializamos con la primera posición y comparamos a partir del índice 1:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMaxima(<span class="tok-key">double</span>[] lluvia) {
+    <span class="tok-comment">// Suponemos que el máximo se produjo el primer día</span>
     <span class="tok-key">double</span> max = lluvia[<span class="tok-bool">0</span>];
 
-    <span class="tok-comment">//Recorremos el array desde la posición 1, comprobando si hay una pluviosidad mayor</span>
-    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">1</span>; i&lt;lluvia.length; i++) {
-        <span class="tok-key">if</span>(lluvia[i] &gt; max) max = lluvia[i];
+    <span class="tok-comment">// Recorremos desde la posición 1 comparando</span>
+    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">1</span>; i &lt; lluvia.length; i++) {
+        <span class="tok-key">if</span> (lluvia[i] &gt; max) {
+            max = lluvia[i];
+        }
     }
-
     <span class="tok-key">return</span> max;
 }</code></pre>
 </div>
 </div>
-<h2 id="b-problemas-de-busqueda">b) Problemas de búsqueda</h2>
-<p>Se denominan problemas de búsqueda a aquellos que, de alguna manera, implican determinar <strong>si existe algún elemento del array que cumpla una propiedad dada</strong>. Con respecto a los problemas de recorrido presentan la diferencia de que <strong>no es siempre necesario tratar todos los elementos del array</strong>: el elemento buscado puede encontrarse inmediatamente, encontrarse tras haber recorrido todo el array, o incluso no encontrarse.</p>
-<h3 id="busqueda-ascendente">Búsqueda ascendente</h3>
-<p>En este tipo de búsqueda se inicia esta en el elemento cero y vamos ascendiendo hasta la última posición del array.</p>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo de búsqueda ascendente</p>
-<p>Problema de encontrar cual fue el primer día del mes en que no llovió nada, es decir, el primer elemento del array con valor cero:
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-comment">// Devolveremos el subíndice del primer componente del array cuyo valor es cero.</span>
-<span class="tok-comment">// Si no hay ningún día sin lluvias devolveremos -1</span>
-<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> primerDiaSinLluvia1(<span class="tok-key">double</span> lluvia[]){
-    <span class="tok-key">int</span> i=<span class="tok-bool">0</span> ;
-    <span class="tok-key">boolean</span> encontrado = <span class="tok-bool">false</span> ;
 
-    <span class="tok-key">while</span> (i&lt;lluvia.length &amp;&amp; !encontrado){
-        <span class="tok-key">if</span> (lluvia[i] == <span class="tok-bool">0</span>) {
-            encontrado = <span class="tok-bool">true</span> ;
-        } <span class="tok-key">else</span> {
-            i++ ;
-        }
-    }
-    <span class="tok-key">if</span> (encontrado) {
-        <span class="tok-key">return</span> i ;
-    } <span class="tok-key">else</span> {
-        <span class="tok-key">return</span> -<span class="tok-bool">1</span> ;
-    }
-}</code></pre>
-</div>
-Hemos utilizado el esquema de búsqueda: Definimos una variable <code>boolean</code> que indica si hemos encontrado o no lo que buscamos. El bucle se repite mientras no lleguemos al final del array y no hayamos encontrado un día sin lluvias.</p>
-</div>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo de búsqueda</p>
-<p>También es posible una solución sin utilizar la variable <code>boolean</code>:
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> primerDiaSinLluvia2(<span class="tok-key">double</span> lluvia[]){
-    <span class="tok-key">int</span> i=<span class="tok-bool">0</span> ;
+<hr>
 
-    <span class="tok-key">while</span> (i&lt;lluvia.length &amp;&amp; lluvia[i] != <span class="tok-bool">0</span>){
-        i++;
-    }
-    <span class="tok-key">if</span> (i == lluvia.length) {
-        <span class="tok-key">return</span> -<span class="tok-bool">1</span> ;
-    } <span class="tok-key">else</span> {
-        <span class="tok-key">return</span> i;
-    }
-}</code></pre>
-</div>
-En este caso el subíndice <code>i</code> se incrementa mientras estemos dentro de los límites del array y no encontremos un día con lluvia <code>0</code>.
-Al finalizar el bucle hay que comprobar por cuál de las dos razones finalizó: ¿<em>Se encontró un día sin lluvias o se recorrió todo el array sin encontrar ninguno</em>? En esta comprobación es importante no acceder al array si existe la posibilidad de que el subíndice esté fuera de los límites del array.<br /></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><img src="../img/check_no.png" alt="Error" width="25" height="25" style="margin-right: 10px;"></label><label for="__tabbed_1_2"><img src="../img/check_yes.png" alt="Ok" width="25" height="25" style="margin-right: 10px;"></label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>La siguiente comprobación sería incorrecta ya que, si se ha finalizado el bucle sin encontrar ningún día sin lluvia, <code>i</code> valdrá <code>lluvia.length</code>, que no es una posición válida del array, y al acceder a <code>lluvia[i]</code> se producirá la excepción <code>ArrayIndexOutOfBoundsException</code> (índice del array fuera de los límites). 
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">if</span> (lluvia[i] == <span class="tok-bool">0</span>) {
-    <span class="tok-key">return</span> i;
-} <span class="tok-key">else</span> {
-    <span class="tok-key">return</span> -<span class="tok-bool">1</span>;
-}</code></pre>
-</div></p>
-</div>
-<div class="tabbed-block">
-<p>Por otra parte, el mismo problema se puede resolver utilizando la sentencia <code>for</code>, como hemos hecho otras veces. Sin embargo la solución parece menos intuitiva porque el cuerpo del <code>for</code> quedaría vacío:
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> primerDiaSinLluvia3(<span class="tok-key">double</span> lluvia[]){
-    <span class="tok-key">int</span> i;
+<h3 id="el-bucle-for-each">2. El bucle <code>for-each</code> (Enhanced for loop)</h3>
+<p>A partir de Java 5, se introdujo una estructura de control especializada denominada <strong>bucle for-each</strong> o <em>bucle for mejorado</em>. Su propósito fundamental es <strong>hacer el código más limpio, legible y seguro</strong> cuando necesitamos recorrer una estructura de datos de principio a fin.</p>
 
-    <span class="tok-key">for</span> (i=<span class="tok-bool">0</span>; i&lt;lluvia.length &amp;&amp; lluvia[i] != <span class="tok-bool">0</span>; i++);  /*Nada*/
-
-    <span class="tok-key">if</span> (i == lluvia.length) {
-        <span class="tok-key">return</span> -<span class="tok-bool">1</span> ;
-    } <span class="tok-key">else</span> {
-        <span class="tok-key">return</span> i;
-    }
-}</code></pre>
-</div></p>
-</div>
-</div>
-</div>
-</div>
-<h3 id="busqueda-descendente">Búsqueda descendente</h3>
-<p>Si queremos encontrar el último día del mes en que no llovió podemos realizar una búsqueda descendente, es decir, partiendo del último componente del array y decrementando progresivamente el subíndice hasta llegar a la posición cero o hasta encontrar lo buscado:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> ultimoDiaSinLluvia(<span class="tok-key">double</span> lluvia[]){
-    <span class="tok-key">int</span> i=lluvia.length-<span class="tok-bool">1</span>;
-    <span class="tok-key">boolean</span> encontrado = <span class="tok-bool">false</span> ;
-
-    <span class="tok-key">while</span> (i&gt;=<span class="tok-bool">0</span> &amp;&amp; !encontrado){
-        <span class="tok-key">if</span> (lluvia[i] == <span class="tok-bool">0</span>) {
-            encontrado = <span class="tok-bool">true</span> ;
-        } <span class="tok-key">else</span> {
-            i-- ;
-        }
-    }
-
-    <span class="tok-key">if</span> (encontrado) {
-        <span class="tok-key">return</span> i ;
-    } <span class="tok-key">else</span> {
-        <span class="tok-key">return</span> -<span class="tok-bool">1</span> ;
-    }
-}</code></pre>
-</div>
-<h3 id="busqueda-en-un-array-ordenado-busqueda-binaria">Búsqueda en un array ordenado: búsqueda binaria</h3>
-<div class="admonition java">
-<p class="admonition-title">Supuesto</p>
-<p>Vamos a suponer, por ejemplo, que una amiga apunta un número entre el 0 y el 99 en una hoja de papel y vosotros debéis adivinarlo. Cada vez que conteste, le dirá si el valor que ha dicho es mayor o menor que el que debemos de adivinar. ¿<em>Qué estrategia seguirías para lograrlo</em>? Hay que pensar un algoritmo a seguir para resolver este problema.</p>
-<p>Una aproximación muy ingenua podría ser ir diciendo todos los valores uno por uno, empezando por 0. Está claro que cuando llegue al 99 lo habréis adivinado. En el mejor caso, si había escrito el 0, acertará en la primera, mientras que en el peor caso, si había escrito el 99, necesitaréis 100 intentos. Si estaba por medio, tal vez con 40-70 basta. Este sería un algoritmo eficaz (<em>hace lo que tiene que hacer</em>), pero no muy eficiente (<em>lo hace de la mejor manera posible</em>). Ir probando valores al azar en lugar de hacer esto tampoco mejora gran cosa el proceso, y viene a ser lo mismo.</p>
-<p>Si alguna vez habéis jugado a este juego, lo que habréis hecho es ser un poco más astutos y empezar por algún valor del medio. En este caso, por ejemplo, podría ser el 50. Entonces, en caso de fallar, una vez estás seguro de si el valor secreto es mayor o menor que tu respuesta, en el intento siguiente probar un valor más alto o más bajo , e ir haciendo esto repetidas veces.</p>
-</div>
-<p>Generalmente, la mejor estrategia para adivinar un número secreto entre 0 y N sería primer probar N/2. Si no se ha acertado, entonces si el número secreto es más alto se intenta adivinar entre (N/2 + 1) y N. Si era más bajo, se intenta adivinar el valor entre 0 y N-1. Para cada caso, se vuelve a probar el valor que hay en el medio del nuevo intervalo. Y así sucesivamente, haciendo cada vez más pequeño el intervalo de búsqueda, hasta adivinarlo. En el caso de 100 valores, esto garantiza que, en el peor de los casos, en 7 intentos seguro que se adivina. Esto es una mejora muy grande respecto al primer algoritmo, donde hacían falta 100 intentos, y por tanto, este sería un algoritmo más eficiente. Concretamente, siempre se adivinará en <em>log<sub>2</sub> (N)</em> intentos como máximo.</p>
-<p>Si os fijáis, el supuesto que se acaba de explicar, en realidad, no es más que un esquema de búsqueda en una secuencia de valores, como puede ser dentro de un array, partiendo de la condición que todos los elementos estén ordenados de menor a mayor. De hecho, hasta ahora, para hacer una búsqueda de un valor dentro de un array se ha usado el sistema "ingenuo", mirando una por una todas las posiciones. Pero si los elementos están ordenados previamente, se podría usar el sistema "astuto" para diseñar un algoritmo mucho más eficiente, y hasta cierto punto, más "inteligente".</p>
-<p>El algoritmo basado en esta estrategia se conoce como <strong>búsqueda binaria o dicotómica</strong>.</p>
-<p>Para ello iniciaremos la búsqueda en la posición central del array.</p>
+<div class="admonition tip">
+<p class="admonition-title">💡 ¿Por qué usar <code>for-each</code>?</p>
 <ul>
-<li>Si el elemento central es el buscado habremos finalizado la búsqueda.</li>
-<li>Si el elemento central es mayor que el buscado, tendremos que continuar la búsqueda en la mitad izquierda del array ya que, al estar éste ordenado todos los elementos de la mitad derecha serán también mayores que el buscado.</li>
-<li>Si el elemento central es menor que el buscado, tendremos que continuar la búsqueda en la mitad derecha del array ya que, al estar éste ordenado todos los elementos de la mitad izquierda serán también menores que el buscado.</li>
+  <li><strong>Adiós a los índices manuales:</strong> No necesitas declarar <code>int i = 0; i &lt; array.length; i++</code>.</li>
+  <li><strong>Inmune a desbordamientos:</strong> Es imposible cometer el típico error de novato <code>ArrayIndexOutOfBoundsException</code> (por ejemplo, escribir accidentalmente <code>&lt;= length</code>).</li>
+  <li><strong>Legibilidad directa:</strong> Se lee en lenguaje natural: <em>"Para cada elemento del array, haz..."</em>.</li>
 </ul>
-<p>En un solo paso hemos descartado la mitad de los elementos del array. Para buscar en la mitad izquierda o en la mitad derecha utilizaremos el mismo criterio, es decir, iniciaremos la búsqueda en el elemento central de dicha mitad, y así sucesivamente hasta encontrar lo buscado o hasta que descubramos que no está.</p>
+</div>
+
+<h4>Sintaxis general del <code>for-each</code></h4>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Sintaxis general del bucle for-each</span>
+<span class="tok-key">for</span> (TipoElemento variableTemporal : arrayOEstructura) {
+    <span class="tok-comment">// Código a ejecutar para cada elemento</span>
+    <span class="tok-comment">// &quot;variableTemporal&quot; toma automáticamente el valor de cada celda</span>
+}</code></pre>
+</div>
+
+<h4>Ejemplo comparativo: Calcular la media con <code>for-each</code></h4>
+<p>Observa cómo la función de pluviosidad media se reduce a su mínima expresión:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> pluviosidadMediaForEach(<span class="tok-key">double</span>[] lluvia) {
+    <span class="tok-key">double</span> suma = <span class="tok-bool">0</span>;
+
+    <span class="tok-comment">// &quot;Para cada valor &#x27;dia&#x27; de tipo double que haya dentro del array &#x27;lluvia&#x27;&quot;</span>
+    <span class="tok-key">for</span> (<span class="tok-key">double</span> dia : lluvia) {
+        suma += dia;
+    }
+    <span class="tok-key">return</span> suma / lluvia.length;
+}</code></pre>
+</div>
+
+<h4>Recorrido de arrays de objetos y cadenas (<code>String[]</code>)</h4>
+<p>El bucle <code>for-each</code> brilla especialmente con arrays de referencias a objetos, como listas de nombres:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Array de Strings (Objetos)</span>
+<span class="tok-key">String</span>[] alumnos = {<span class="tok-string">&quot;Marc&quot;</span>, <span class="tok-string">&quot;Laia&quot;</span>, <span class="tok-string">&quot;Pau&quot;</span>, <span class="tok-string">&quot;Elena&quot;</span>, <span class="tok-string">&quot;Vicent&quot;</span>};
+
+<span class="tok-comment">// Recorrido limpio sin necesidad de índices</span>
+<span class="tok-key">for</span> (<span class="tok-key">String</span> alumno : alumnos) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Alumno matriculado: &quot;</span> + alumno.toUpperCase());
+}</code></pre>
+</div>
+
+<hr>
+
+<h3 id="como-recorrer-un-string-con-for-each">3. ¿Cómo recorrer un <code>String</code> con <code>for-each</code>?</h3>
+<div class="admonition info">
+<p class="admonition-title">🔍 Pregunta frecuente en clase: <em>"¿Puedo usar for-each directamente sobre un String?"</em></p>
+<p>En Java, <code>String</code> es un objeto de texto inmutable y <strong>no implementa directamente la interfaz Iterable</strong>. Por lo tanto, escribir <code>for (char c : "Hola")</code> provoca un error de compilación inmediato.</p>
+<p>Sin embargo, ahora que dominas los arrays, dispones de dos soluciones inmediatas muy potentes:</p>
+</div>
+
+<h4>Opción A: Recorrer carácter a carácter con <code>.toCharArray()</code></h4>
+<p>El método <code>toCharArray()</code> de la clase <code>String</code> genera un array estático <code>char[]</code> que sí podemos recorrer limpiamente con <code>for-each</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">String</span> texto = <span class="tok-string">&quot;IES Mestre Ramon Esteve&quot;</span>;
+<span class="tok-key">int</span> vocales = <span class="tok-bool">0</span>;
+
+<span class="tok-comment">// ❌ for (char c : texto) -&gt; ¡ERROR DE COMPILACIÓN! String no es directamente un array</span>
+
+<span class="tok-comment">// ✅ Convertimos el String a un array de caracteres char[] con .toCharArray()</span>
+<span class="tok-key">for</span> (<span class="tok-key">char</span> c : texto.toLowerCase().toCharArray()) {
+    <span class="tok-key">if</span> (<span class="tok-string">&quot;aeiouáàéèíóòú&quot;</span>.indexOf(c) != -<span class="tok-bool">1</span>) {
+        vocales++;
+    }
+}
+
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Total de vocales: &quot;</span> + vocales);</code></pre>
+</div>
+
+<h4>Opción B: Recorrer palabra a palabra con <code>.split()</code></h4>
+<p>Si lo que deseamos es procesar cada palabra de una frase, <code>split(" ")</code> trocea el texto devolviendo un <code>String[]</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">String</span> frase = <span class="tok-string">&quot;Programar en Java mola molt&quot;</span>;
+
+<span class="tok-comment">// .split(&quot; &quot;) divide el texto por espacios y devuelve un String[]</span>
+<span class="tok-key">for</span> (<span class="tok-key">String</span> palabra : frase.split(<span class="tok-string">&quot; &quot;</span>)) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Palabra: &quot;</span> + palabra + <span class="tok-string">&quot; (&quot;</span> + palabra.length() + <span class="tok-string">&quot; letras)&quot;</span>);
+}</code></pre>
+</div>
+
+<hr>
+
+<h3 id="la-trampa-del-for-each-solo-lectura">4. ⚠️ ¡CUIDADO! La trampa de examen: El <code>for-each</code> es de SOLO LECTURA</h3>
+<div class="admonition danger">
+<p class="admonition-title">💥 Error clásico de principiante: Intentar modificar el array dentro de un <code>for-each</code></p>
+<p>En cada iteración del bucle <code>for-each</code>, la variable del bucle recibe una <strong>COPIA</strong> del valor contenido en la celda del array. <strong>Modificar la variable local no modifica el array original</strong>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span>[] notas = {<span class="tok-bool">4</span>, <span class="tok-bool">5</span>, <span class="tok-bool">3</span>};
+
+<span class="tok-comment">// ❌ INTENTO FALLIDO: Intentar modificar el array con for-each</span>
+<span class="tok-key">for</span> (<span class="tok-key">int</span> n : notas) {
+    n = n + <span class="tok-bool">1</span>; <span class="tok-comment">// ¡Solo modifica la variable local &#x27;n&#x27;! NO altera el array.</span>
+}
+<span class="tok-comment">// El array &#x27;notas&#x27; sigue siendo {4, 5, 3}</span>
+
+<span class="tok-comment">// ✅ FORMA CORRECTA: Si necesitas modificar celdas, usa el &#x27;for&#x27; con índice:</span>
+<span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; notas.length; i++) {
+    notas[i] = notas[i] + <span class="tok-bool">1</span>; <span class="tok-comment">// Acceso directo a la celda de memoria</span>
+}
+<span class="tok-comment">// Ahora el array &#x27;notas&#x27; sí es {5, 6, 4}</span></code></pre>
+</div>
+</div>
+
+<hr>
+
+<h3 id="tabla-de-decision-for-vs-for-each">5. Tabla de Decisión: ¿Cuándo usar <code>for</code> clásico y cuándo <code>for-each</code>?</h3>
+<p>Utiliza esta guía rápida para saber exactamente qué bucle escoger en cada situación:</p>
+
+<table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+  <thead>
+    <tr style="background:var(--card-bg, #f8fafc); border-bottom:2px solid var(--border-color, #e2e8f0); text-align:left;">
+      <th style="padding:10px;">Situación de programación</th>
+      <th style="padding:10px; width:140px;">Bucle ideal</th>
+      <th style="padding:10px;">Justificación técnica</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border-bottom:1px solid var(--border-color, #e2e8f0);">
+      <td style="padding:10px;"><strong>Solo lectura / Recorrido total</strong><br><small>Calcular sumas, medias, mostrar datos, buscar el valor máximo</small></td>
+      <td style="padding:10px;"><span style="color:#059669; font-weight:bold;">✅ for-each</span></td>
+      <td style="padding:10px;">Código mucho más limpio y conciso. Imposible sufrir <code>ArrayIndexOutOfBoundsException</code>.</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border-color, #e2e8f0);">
+      <td style="padding:10px;"><strong>Modificar las celdas del array</strong><br><small>Asignar nuevos valores: <code>array[i] = valor;</code></small></td>
+      <td style="padding:10px;"><span style="color:#dc2626; font-weight:bold;">⚙️ for clásico</span></td>
+      <td style="padding:10px;">El <code>for-each</code> solo tiene una copia local del valor. Para escribir en memoria hace falta el índice <code>[i]</code>.</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border-color, #e2e8f0);">
+      <td style="padding:10px;"><strong>Necesitas saber la posición exacta</strong><br><small>Ej: "El cliente moroso se encuentra en la posición 4"</small></td>
+      <td style="padding:10px;"><span style="color:#dc2626; font-weight:bold;">⚙️ for clásico</span></td>
+      <td style="padding:10px;">El <code>for-each</code> no expone el índice de la iteración actual.</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border-color, #e2e8f0);">
+      <td style="padding:10px;"><strong>Recorrido inverso o con saltos</strong><br><small>Del final al principio (<code>i--</code>) o de dos en dos (<code>i += 2</code>)</small></td>
+      <td style="padding:10px;"><span style="color:#dc2626; font-weight:bold;">⚙️ for clásico</span></td>
+      <td style="padding:10px;">El <code>for-each</code> recorre estrictamente de izquierda a derecha de uno en uno.</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border-color, #e2e8f0);">
+      <td style="padding:10px;"><strong>Recorrer 2 arrays en paralelo</strong><br><small>Ej: <code>nombres[i]</code> y <code>calificaciones[i]</code></small></td>
+      <td style="padding:10px;"><span style="color:#dc2626; font-weight:bold;">⚙️ for clásico</span></td>
+      <td style="padding:10px;">Se necesita el mismo índice <code>i</code> para coordinar ambas estructuras de datos.</td>
+    </tr>
+    <tr style="border-bottom:1px solid var(--border-color, #e2e8f0);">
+      <td style="padding:10px;"><strong>Estructuras Dinámicas (Tema 3.5: List, Set...)</strong><br><small>Recorrer colecciones dinámicas de Java (JCF)</small></td>
+      <td style="padding:10px;"><span style="color:#2563eb; font-weight:bold;">🌟 for-each</span></td>
+      <td style="padding:10px;">Es el estándar universal de Java para recorrer cualquier estructura que implemente <code>Iterable</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="admonition note">
+<p class="admonition-title">🔗 Conexión pedagógica con las Estructuras Dinámicas (Tema 3.5)</p>
+<p>El bucle <code>for-each</code> cobra todavía mayor relevancia cuando se estudian las colecciones dinámicas (como <code>ArrayList</code>, <code>HashSet</code> o <code>LinkedList</code> en el <a href="ut03colecciones.html">Tema 3.5</a>). La misma sintaxis que acabamos de ver para arrays estáticos funciona de idéntica manera para cualquier colección de Java gracias a la interfaz <code>Iterable</code>.</p>
+</div>
+
+<hr>
+
+<h2 id="b-problemas-de-busqueda">b) Problemas de búsqueda en arrays</h2>
+<p>Se denominan problemas de búsqueda a aquellos que determinan <strong>si existe algún elemento que cumpla cierta propiedad</strong> dentro del array. A diferencia del recorrido completo, en la búsqueda <strong>no siempre es necesario examinar todo el array</strong>: el elemento puede hallarse en la primera posición, en medio, o no existir.</p>
+
+<h3 id="busqueda-ascendente">1. Búsqueda ascendente (Búsqueda secuencial)</h3>
+<p>Iniciamos en el índice 0 y avanzamos hasta encontrar la coincidencia o agotar el array:</p>
 <div class="admonition java">
-<p class="admonition-title">Ejemplo búsqueda</p>
-<p>Supongamos por ejemplo que, dado un array que contiene edades de personas, ordenadas de menor a mayor queremos averiguar si hay alguna persona de 36 años o no.</p>
-<p>El siguiente método soluciona este problema realizando una búsqueda binaria:</p>
+<p class="admonition-title">Ejemplo: Primer día sin lluvia</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Devolvemos el subíndice del primer componente cuyo valor sea cero</span>
+<span class="tok-comment">// Si ningún día fue cero, devolvemos -1</span>
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> primerDiaSinLluvia(<span class="tok-key">double</span> lluvia[]) {
+    <span class="tok-key">int</span> i = <span class="tok-bool">0</span>;
+    <span class="tok-key">boolean</span> encontrado = <span class="tok-bool">false</span>;
+
+    <span class="tok-key">while</span> (i &lt; lluvia.length &amp;&amp; !encontrado) {
+        <span class="tok-key">if</span> (lluvia[i] == <span class="tok-bool">0</span>) {
+            encontrado = <span class="tok-bool">true</span>;
+        } <span class="tok-key">else</span> {
+            i++;
+        }
+    }
+
+    <span class="tok-key">if</span> (encontrado) {
+        <span class="tok-key">return</span> i;
+    } <span class="tok-key">else</span> {
+        <span class="tok-key">return</span> -<span class="tok-bool">1</span>;
+    }
+}</code></pre>
+</div>
+</div>
+
+<h3 id="busqueda-descendente">2. Búsqueda descendente</h3>
+<p>Partimos de la última posición (<code>array.length - 1</code>) y retrocedemos hacia la posición 0:</p>
+<div class="admonition java">
+<p class="admonition-title">Ejemplo: Último día sin lluvia</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> ultimoDiaSinLluvia(<span class="tok-key">double</span> lluvia[]) {
+    <span class="tok-key">int</span> i = lluvia.length - <span class="tok-bool">1</span>;
+    <span class="tok-key">boolean</span> encontrado = <span class="tok-bool">false</span>;
+
+    <span class="tok-key">while</span> (i &gt;= <span class="tok-bool">0</span> &amp;&amp; !encontrado) {
+        <span class="tok-key">if</span> (lluvia[i] == <span class="tok-bool">0</span>) {
+            encontrado = <span class="tok-bool">true</span>;
+        } <span class="tok-key">else</span> {
+            i--;
+        }
+    }
+
+    <span class="tok-key">if</span> (encontrado) {
+        <span class="tok-key">return</span> i;
+    } <span class="tok-key">else</span> {
+        <span class="tok-key">return</span> -<span class="tok-bool">1</span>;
+    }
+}</code></pre>
+</div>
+</div>
+
+<h3 id="busqueda-en-un-array-ordenado-busqueda-binaria">3. Búsqueda binaria o dicotómica (Arrays Ordenados)</h3>
+<p>Si el array ya se encuentra <strong>previamente ordenado</strong>, la búsqueda secuencial elemento a elemento resulta ineficiente. La <strong>búsqueda binaria</strong> divide el espacio de búsqueda a la mitad en cada paso, logrando una eficiencia de <strong>O(log₂ N)</strong> (en un array de 1.000.000 de elementos, requiere un máximo de 20 comparaciones en lugar de un millón).</p>
+
+<div class="admonition java">
+<p class="admonition-title">Ejemplo: Búsqueda binaria de edades</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -895,48 +1036,34 @@ Al finalizar el bucle hay que comprobar por cuál de las dos razones finalizó: 
     </div>
   </div>
   <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">boolean</span> hayAlguienDe36(<span class="tok-key">int</span> edad[]) {
-    <span class="tok-comment">// Las variables izq y der marcarán el fragmento del array en el que</span>
-    <span class="tok-comment">// realizamos la búsqueda. Inicialmente buscamos en todo el array.</span>
+    <span class="tok-comment">// &#x27;izq&#x27; y &#x27;der&#x27; acotan el subintervalo de búsqueda</span>
     <span class="tok-key">int</span> izq = <span class="tok-bool">0</span>;
     <span class="tok-key">int</span> der = edad.length - <span class="tok-bool">1</span>;
     <span class="tok-key">boolean</span> encontrado = <span class="tok-bool">false</span>;
 
     <span class="tok-key">while</span> (izq &lt;= der &amp;&amp; !encontrado) {
-        <span class="tok-comment">// Calculamos posición central del fragmento en el que buscamos</span>
-        <span class="tok-key">int</span> m = (izq + der) / <span class="tok-bool">2</span>;
-        <span class="tok-key">if</span> (edad[m] == <span class="tok-bool">36</span>) {   
-            <span class="tok-comment">// Hemos encontrado una persona de 36</span>
-            encontrado = <span class="tok-bool">true</span>;
+        <span class="tok-key">int</span> m = (izq + der) / <span class="tok-bool">2</span>; <span class="tok-comment">// Posición central</span>
+        <span class="tok-key">if</span> (edad[m] == <span class="tok-bool">36</span>) {
+            encontrado = <span class="tok-bool">true</span>; <span class="tok-comment">// ¡Encontrado!</span>
         } <span class="tok-key">else</span> <span class="tok-key">if</span> (edad[m] &gt; <span class="tok-bool">36</span>) {
-            <span class="tok-comment">// El elemento central tiene más de 36.</span>
-            <span class="tok-comment">// Continuamos la búsqueda en la mitad izquierda. Es decir,</span>
-            <span class="tok-comment">// entre las posiciónes izq y m-1</span>
-            der = m - <span class="tok-bool">1</span>;
+            der = m - <span class="tok-bool">1</span>;       <span class="tok-comment">// Buscar en la mitad izquierda</span>
         } <span class="tok-key">else</span> {
-            <span class="tok-comment">// El elemento central tiene menos de 36.</span>
-            <span class="tok-comment">// Continuamos la búsqueda en la mitad derecha. Es decir,</span>
-            <span class="tok-comment">// entre las posiciones m+1 y der</span>
-            izq = m + <span class="tok-bool">1</span>;
-        } <span class="tok-comment">// fin del if</span>
-    } <span class="tok-comment">// fin del while</span>
+            izq = m + <span class="tok-bool">1</span>;       <span class="tok-comment">// Buscar en la mitad derecha</span>
+        }
+    }
 
-    <span class="tok-key">return</span> encontrado; <span class="tok-comment">// if (encontrado) return true; else return false;</span>
+    <span class="tok-key">return</span> encontrado;
 }</code></pre>
 </div>
-<p>La búsqueda finaliza cuando encontramos una persona con 36 años (<code>encontrado==true</code>) o cuando ya no es posible encontrarla, circunstancia que se produce cuando <code>izq</code> y <code>der</code> se cruzan (izq&gt;der).</p>
 </div>
-<h2 id="c-problemas-de-ordenacion">c) Problemas de ordenación</h2>
-<p>Con frecuencia necesitamos que los elementos de un array estén ordenados.</p>
-<p>Existen multitud de algoritmos que permiten ordenar los elementos de un array, entre los que hay soluciones <strong>iterativas</strong> y soluciones <strong>recursivas</strong>.</p>
-<ul>
-<li>
-<p>Entre los algoritmos <strong>iterativos</strong> tenemos, por ejemplo, el <strong>método de la burbuja</strong>, el <strong>método de selección directa</strong> y el <strong>método de inserción directa</strong>.</p>
-</li>
-<li>
-<p>Entre los <strong>recursivos</strong>, son conocidos el algoritmo <strong>mergeSort</strong> y el <strong>quickSort</strong>, que realizan la ordenación más rápidamente que los algoritmos iterativos que hemos nombrado.</p>
-</li>
-</ul>
-<p>Como ejemplo vamos a ver cómo se realiza la ordenación de un array de enteros utilizando el <mark><strong>método de</strong> <strong>selección directa</strong></mark>:</p>
+
+<hr>
+
+<h2 id="c-problemas-de-ordenacion">c) Problemas de ordenación en arrays</h2>
+<p>Permiten reorganizar los datos de menor a mayor o viceversa. Se dividen en algoritmos iterativos (burbuja, selección directa, inserción) y algoritmos recursivos divide y vencerás (mergeSort, quickSort).</p>
+
+<h3 id="metodo-de-seleccion-directa">Método de Selección Directa (Selection Sort)</h3>
+<p>En cada iteración <code>i</code>, busca el elemento menor que queda a la derecha e intercambia posiciones:</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -951,122 +1078,27 @@ Al finalizar el bucle hay que comprobar por cuál de las dos razones finalizó: 
     </div>
   </div>
   <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> seleccionDirecta(<span class="tok-key">int</span> v[]) {
-
-    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; v.length-<span class="tok-bool">1</span>; i++) {
-        <span class="tok-comment">// Localizamos elemento que tiene que ir en la posición i</span>
+    <span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; v.length - <span class="tok-bool">1</span>; i++) {
+        <span class="tok-comment">// Localizamos el elemento mínimo que debe ocupar la posición i</span>
         <span class="tok-key">int</span> posMin = i;
-        <span class="tok-comment">// Buscar el menor a la derecha</span>
         <span class="tok-key">for</span> (<span class="tok-key">int</span> j = i + <span class="tok-bool">1</span>; j &lt; v.length; j++) {
             <span class="tok-key">if</span> (v[j] &lt; v[posMin]) {
                 posMin = j;
             }
         }
-        <span class="tok-comment">// Al llegar aquí posMin tendrá la posición del elemento menor</span>
-        <span class="tok-comment">// Intercambiamos los elementos de las posiciones i y posMin</span>
-        <span class="tok-comment">// v[i]&lt;=&gt;v[posMin];</span>
+        <span class="tok-comment">// Intercambio de valores (swap)</span>
         <span class="tok-key">int</span> aux = v[posMin];
         v[posMin] = v[i];
         v[i] = aux;
     }
 }</code></pre>
 </div>
-<p>El método consiste en recorrer el array ascendentemente a partir de la posición cero.</p>
-<p>En cada posición (<code>i</code>) localizamos el elemento que tiene que ocupar dicha posición cuando el array esté ordenado, es decir, el menor de los elementos que quedan a su derecha.</p>
-<p>Cuando se ha determinado el menor se coloca en su posición realizando un intercambio con el elemento de la posición <code>i</code>. Con ello, el array queda ordenado hasta la posición <code>i</code>.</p>
+
 <div class="admonition note">
-<p class="admonition-title">Ejemplos visuales de ordenación</p>
-<p>Ejemplos visuales de distintos métodos de ordenación, con distintos tipos de entradas: <a href="https://www.toptal.com/developers/sorting-algorithms" target="_blank">https://www.toptal.com/developers/sorting-algorithms</a>.</p>
+<p class="admonition-title">Visualizadores interactivos de ordenación</p>
+<p>Puedes experimentar visualmente con distintos métodos y tamaños de entrada en: <a href="https://www.toptal.com/developers/sorting-algorithms" target="_blank">Sorting Algorithms Animations</a>.</p>
 </div>
-<h3 id="bucle-for-each-for-loop">Bucle for each (for-loop)</h3>
-<p>En el tema anterior vimos algún tipo de bucles que explicaríamos cuando los pudiésemos utilizar, en este grupo están los bucles for each o for-loops. Aquí tenemos un ejemplo de recorrido de un array con la sintaxis que ya conocemos:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">for</label><label for="__tabbed_2_2">for each</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Un ejemplo para recorrer un array mediante un <code>for</code>:
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">int</span> array[] = { <span class="tok-bool">1</span>, <span class="tok-bool">2</span>, <span class="tok-bool">3</span>, <span class="tok-bool">4</span>, <span class="tok-bool">5</span>, <span class="tok-bool">6</span>, <span class="tok-bool">7</span>, <span class="tok-bool">8</span> };
-<span class="tok-key">for</span> (<span class="tok-key">int</span> i = <span class="tok-bool">0</span>; i &lt; array.length; i++) {
-    <span class="tok-key">System</span>.out.print(array[i] + <span class="tok-string">&quot; &quot;</span>);
-}</code></pre>
-</div></p>
-<p>El anterior fragmento genera la siguiente salida:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-bool">1</span> <span class="tok-bool">2</span> <span class="tok-bool">3</span> <span class="tok-bool">4</span> <span class="tok-bool">5</span> <span class="tok-bool">6</span> <span class="tok-bool">7</span> <span class="tok-bool">8</span></code></pre>
-</div>
-</div>
-<div class="tabbed-block">
-<p>Este mismo código se puede escribir mediante un <code>for each</code> de la siguiente manera:</p>
-<p><div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">int</span> array[] = { <span class="tok-bool">1</span>, <span class="tok-bool">2</span>, <span class="tok-bool">3</span>, <span class="tok-bool">4</span>, <span class="tok-bool">5</span>, <span class="tok-bool">6</span>, <span class="tok-bool">7</span>, <span class="tok-bool">8</span> };
-<span class="tok-key">for</span> (<span class="tok-key">int</span> i : array) { 
-    <span class="tok-comment">// mentalmente podemos traducir por:</span>
-    <span class="tok-comment">// &quot;para cada entero &quot;i&quot; que encontremos en el array&quot;</span>
-    <span class="tok-key">System</span>.out.print(i + <span class="tok-string">&quot; &quot;</span>);
-}</code></pre>
-</div>
-La salida seguirá siendo la misma:
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-bool">1</span> <span class="tok-bool">2</span> <span class="tok-bool">3</span> <span class="tok-bool">4</span> <span class="tok-bool">5</span> <span class="tok-bool">6</span> <span class="tok-bool">7</span> <span class="tok-bool">8</span></code></pre>
-</div></p>
-</div>
-</div>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Cuidado con el segundo método</p>
-<p>Con el segundo método no tenemos acceso a la posición o índice del array, este método no serviría para métodos en los que necesitamos conocer la posición o utilizarla de alguna manera.</p>
-</div>
-<div class="admonition java">
-<p class="admonition-title">Ejemplo completo de método de búsqueda binaria</p>
-<p><a href="../../others/code/ut04/ArrayBusquedaBinaria.txt" target="_blank">Enlace a ejercicio completo del método de búsqueda binaria</a>.</p>
-</div>
+
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut03/ut0301.html">⬅️ 3.2.1 Uso de arrays unidimensionales</a>
 <a class="page-nav-btn" href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices) ➡️</a>
