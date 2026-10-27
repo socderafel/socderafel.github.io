@@ -670,6 +670,24 @@
 <blockquote>
 <p>Una posible solución sería crear una lista de objetos, insertar los planetas y satélites (directamente mediante código o solicitándolos por pantalla) y luego mostrar un pequeño menú que permita al usuario imprimir la información del astro que elija.</p>
 </blockquote>
+<hr>
+<h3 id="reto-04-hub-valencia">Reto 04 - Hub Logístico DistribueixValència (Triaje Automatizado y Seguridad)</h3>
+
+<div class="admonition tip">
+<p class="admonition-title">Reto de Programación Avanzada: Control de Excepciones en Triaje Logístico</p>
+<p>El centro logístico automatizado de la Comunitat Valenciana necesita un software de control de paquetería:</p>
+<ol>
+  <li>Crea la clase <code>Paquete</code> con <code>codigo</code>, <code>pesoKg</code>, <code>destino</code> y <code>descripcionContenido</code>.</li>
+  <li>Implementa dos excepciones personalizadas:
+    <ul>
+      <li><code>PesoExcedidoException</code>: Se dispara si el paquete supera los 50.0 kg (límite mecánico de la cinta transportadora).</li>
+      <li><code>ContrabandoException</code>: Se dispara si la descripción contiene términos prohibidos (ej: <code>"explosivo"</code>, <code>"químico"</code>, <code>"armas"</code>).</li>
+    </ul>
+  </li>
+  <li>El método <code>triarPaquete(Paquete p) throws PesoExcedidoException, ContrabandoException</code> analiza el paquete. Si pasa los controles, se añade a la cola de reparto; si falla, se detiene la cinta y se registra la incidencia en el informe de seguridad.</li>
+</ol>
+</div>
+
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut05/ut05actividades.html">⬅️ Actividades prácticas UT5</a>
 <a class="page-nav-btn" href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5 ➡️</a>

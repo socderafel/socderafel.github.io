@@ -2411,6 +2411,21 @@ En el método main, crea un menú para que el usuario pueda realizar las distint
 }</code></pre>
 </div>
 -->
+<hr>
+<h2 id="bloque-3-arrays-sedes">Bloque 3.2 - Arrays y Control de Límites</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad: Localizador de Sedes Corporativas (<code>LocalizadorSedes.java</code>)</p>
+<p>Una empresa internacional dispone de varias sedes repartidas por distintas ciudades. Desarrolla una aplicación para consultarlas:</p>
+<ol>
+  <li>Almacena en un array de cadenas al menos 5 ciudades: <code>String[] sedes = {"València", "Madrid", "Berlín", "Tokio", "Nueva York"};</code>.</li>
+  <li>Muestra al usuario todas las sedes disponibles numeradas y solicita un índice por teclado.</li>
+  <li>Muestra la ciudad correspondiente al índice seleccionado.</li>
+  <li>Gestiona la excepción <code>ArrayIndexOutOfBoundsException</code> si el usuario introduce una posición que no existe en el array, mostrando un mensaje claro con el rango válido permitido (de <code>0</code> a <code>sedes.length - 1</code>).</li>
+  <li>Independientemente de si la consulta tiene éxito o produce error, un bloque <code>finally</code> debe mostrar siempre: <code>"📋 Auditoría: Consulta de sedes finalizada."</code></li>
+</ol>
+</div>
+
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut03/ut03colecciones.html">⬅️ 3.5 Estructuras dinámicas de datos: List, Set, Queue, Deque y Map (JCF)</a>
 <a class="page-nav-btn" href="../ut03/ut03retos.html">Retos de programación UT3 ➡️</a>

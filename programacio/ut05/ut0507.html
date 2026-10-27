@@ -722,8 +722,6 @@ classDiagram
 
 <h2 id="3-lanzamiento-y-propagacion-throw-vs-throws">3. Lanzamiento y Propagación: <code>throw</code> vs <code>throws</code></h2>
 
-<p>Es muy frecuente confundir estas dos palabras clave en los exámenes. Observa su diferencia fundamental de rol y gramática:</p>
-
 <table>
   <thead>
     <tr>
@@ -794,7 +792,7 @@ classDiagram
 
 <h2 id="4-creacion-de-excepciones-personalizadas-custom-exceptions">4. Creación de Excepciones Personalizadas (<em>Custom Exceptions</em>)</h2>
 
-<p>Aunque Java cuenta con centenares de excepciones estándar, en aplicaciones profesionales necesitamos modelar <strong>errores propios del dominio de nuestro negocio</strong> (ej: <code>SaldoInsuficienteException</code>, <code>StockAgotadoException</code>, <code>VehiculoNoDisponibleException</code>).</p>
+<p>Aunque Java cuenta con centenares de excepciones estándar, en aplicaciones profesionales necesitamos modelar <strong>errores propios del dominio de nuestro negocio</strong> (ej: <code>SaldoInsuficienteException</code>, <code>VehiculoNoDisponibleException</code>, <code>ContrabandoException</code>).</p>
 
 <h3 id="41-como-disenar-una-excepcion-personalizada">4.1. ¿Cómo diseñar una excepción personalizada?</h3>
 <ol>
@@ -953,118 +951,16 @@ classDiagram
 
 <hr>
 
-<h2 id="6-dossier-completo-de-ejercicios-graduados">6. 📚 Dossier de Ejercicios Prácticos Graduados (Profesor: Pepe Cuenca)</h2>
-<p>A continuación se detallan los 6 ejercicios prácticos de desarrollo obligatorio organizados por niveles de complejidad creciente:</p>
-
-<h3 id="nivel-1-basico">Nivel 1: Básico — Sintaxis y Captura de Excepciones Nativas</h3>
+<h2 id="6-actividades-practicas-de-poo-y-excepciones">6. ✍️ Actividades Prácticas de la Unidad (UT5)</h2>
 
 <div class="admonition exercise">
-<p class="admonition-title">Ejercicio 1: Calculadora de Divisiones Segura (<code>CalculadoraDivisionSegura.java</code>)</p>
-<p>Desarrolla una aplicación de consola que funcione como una calculadora especializada en divisiones enteras:</p>
+<p class="admonition-title">Actividad 1: Gestión de Alquiler de Flota de Vehículos (<code>FlotaVehiculos.java</code>)</p>
+<p>Una empresa de alquiler necesita controlar la disponibilidad de su flota mediante Programación Orientada a Objetos y Herencia:</p>
 <ol>
-  <li>El programa debe solicitar al usuario dos números enteros por teclado: el <strong>dividendo</strong> y el <strong>divisor</strong>.</li>
-  <li>Realiza la operación matemática mediante un método independiente: <code>public static int dividir(int a, int b) throws ArithmeticException</code>.</li>
-  <li>Gestiona correctamente los siguientes errores de forma separada:
-    <ul>
-      <li>Intentos de división entre cero (<code>ArithmeticException</code>).</li>
-      <li>Introducción de letras o símbolos en lugar de números (<code>InputMismatchException</code>).</li>
-    </ul>
-  </li>
-  <li>Limpia correctamente el flujo del <code>Scanner</code> cuando se produzca un error de entrada.</li>
-  <li>Utiliza obligatoriamente un bloque <code>finally</code> que informe de que la operación ha concluido y cierre el recurso.</li>
-</ol>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">package</span> ut5.ejercicios.nivel1;
-
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.InputMismatchException;
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> CalculadoraDivisionSegura {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> dividir(<span class="tok-key">int</span> dividendo, <span class="tok-key">int</span> divisor) <span class="tok-key">throws</span> ArithmeticException {
-        <span class="tok-key">return</span> dividendo / divisor;
-    }
-
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
-        <span class="tok-key">try</span> {
-            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el dividendo: &quot;</span>);
-            <span class="tok-key">int</span> dividendo = sc.nextInt();
-            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el divisor: &quot;</span>);
-            <span class="tok-key">int</span> divisor = sc.nextInt();
-
-            <span class="tok-key">int</span> resultado = dividir(dividendo, divisor);
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Resultado exacto: &quot;</span> + resultado);
-        } <span class="tok-key">catch</span> (ArithmeticException e) {
-            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;⚠️ Error matemático: No es posible dividir un número entre cero.&quot;</span>);
-        } <span class="tok-key">catch</span> (InputMismatchException e) {
-            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;⚠️ Error de entrada: Solo se permiten números enteros válidos.&quot;</span>);
-        } <span class="tok-key">finally</span> {
-            sc.close();
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;🔒 Operación finalizada.&quot;</span>);
-        }
-    }
-}</code></pre>
-</div>
-</div>
-
-<div class="admonition exercise">
-<p class="admonition-title">Ejercicio 2: Localizador de Sedes Corporativas (<code>LocalizadorSedes.java</code>)</p>
-<p>Una empresa multinacional dispone de varias sedes operativas en distintas ciudades. Desarrolla una aplicación que gestione su consulta:</p>
-<ol>
-  <li>Crea una clase con un array de cadenas que almacene al menos 5 ciudades: <code>["València", "Madrid", "Berlín", "Tokio", "Nueva York"]</code>.</li>
-  <li>Muestra al usuario todas las sedes disponibles numeradas y solicita un índice por teclado.</li>
-  <li>Controla la excepción <code>ArrayIndexOutOfBoundsException</code> si el usuario introduce una posición fuera del rango válido, mostrando el intervalo admitido.</li>
-  <li>Independientemente de si la consulta tiene éxito o falla, un bloque <code>finally</code> debe mostrar siempre: <code>"Auditoría: Consulta de sede registrada en el sistema."</code></li>
-</ol>
-</div>
-
-<h3 id="nivel-2-intermedio">Nivel 2: Intermedio — Propagación y Excepciones Propias</h3>
-
-<div class="admonition exercise">
-<p class="admonition-title">Ejercicio 3: Validación de Registro de Usuarios (<code>RegistroUsuario.java</code>)</p>
-<p>Desarrolla un sistema de alta de usuarios para una plataforma digital:</p>
-<ol>
-  <li>Crea una excepción personalizada comprobada: <code>EdadInvalidaException extends Exception</code>.</li>
-  <li>Crea la clase <code>Usuario</code> con atributos privados <code>nombre</code> y <code>edad</code>.</li>
-  <li>Valida la edad en el constructor o setter mediante el lanzamiento de <code>throw new EdadInvalidaException(...)</code> si la edad es menor de 18 o mayor de 100 años.</li>
-  <li>El programa principal en consola <strong>no debe finalizar tras un error</strong>: debe mantener un bucle <code>while</code> solicitando la edad hasta que el usuario introduzca un valor admitido.</li>
-  <li>Una vez completado con éxito, muestra los datos del usuario mediante el método <code>toString()</code>.</li>
-</ol>
-</div>
-
-<div class="admonition exercise">
-<p class="admonition-title">Ejercicio 4: Conversor de Precios con Auditoría de Seguridad (<code>ConversorPrecios.java</code>)</p>
-<p>Desarrolla un sistema capaz de procesar precios introducidos como texto:</p>
-<ol>
-  <li>El usuario introduce el precio de un producto en formato texto (ej: <code>"49.95"</code>).</li>
-  <li>La aplicación intenta convertirlo a un valor numérico real mediante <code>Double.parseDouble()</code>.</li>
-  <li>Detecta entradas incorrectas mediante la captura de <code>NumberFormatException</code>, asignando en tal caso el último precio válido procesado.</li>
-  <li>Utiliza obligatoriamente un bloque <code>finally</code> para registrar la transacción de auditoría con la hora y estado.</li>
-</ol>
-</div>
-
-<h3 id="nivel-3-avanzado">Nivel 3: Avanzado — POO, Herencia y Polimorfismo</h3>
-
-<div class="admonition exercise">
-<p class="admonition-title">Ejercicio 5: Gestión de Alquiler de Flota de Vehículos (<code>FlotaVehiculos.java</code>)</p>
-<p>Una empresa de alquiler necesita controlar la disponibilidad de su flota de vehículos:</p>
-<ol>
-  <li>Crea la excepción personalizada <code>VehiculoNoDisponibleException extends Exception</code> que guarde en un atributo la matrícula afectada.</li>
-  <li>Crea una clase abstracta <code>Vehiculo</code> con atributos <code>matricula</code>, <code>marca</code>, <code>alquilado</code> y el método abstracto <code>alquilar() throws VehiculoNoDisponibleException</code>.</li>
+  <li>Crea la excepción personalizada comprobada <code>VehiculoNoDisponibleException extends Exception</code> que guarde en un atributo la matrícula afectada.</li>
+  <li>Crea una clase abstracta <code>Vehiculo</code> con atributos protegidos <code>matricula</code>, <code>marca</code>, <code>alquilado</code> y el método abstracto <code>public abstract void alquilar() throws VehiculoNoDisponibleException</code>.</li>
   <li>Implementa las subclases <code>Coche</code>, <code>Moto</code> y <code>Furgoneta</code>.</li>
-  <li>Si un cliente intenta alquilar un vehículo cuyo estado ya es <code>alquilado == true</code>, dispara la excepción personalizada informando de la matrícula.</li>
+  <li>Si un cliente intenta alquilar un vehículo cuyo estado ya es <code>alquilado == true</code>, dispara la excepción personalizada informando de la matrícula en el mensaje.</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1079,9 +975,9 @@ classDiagram
       <span class="terminal-lang">JAVA</span>
     </div>
   </div>
-  <pre><code><span class="tok-key">package</span> ut5.ejercicios.nivel3;
+  <pre><code><span class="tok-key">package</span> ut5.actividades.vehiculos;
 
-<span class="tok-comment">// 1. Excepción personalizada</span>
+<span class="tok-comment">// 1. Excepción personalizada con matrícula de contexto</span>
 <span class="tok-key">class</span> VehiculoNoDisponibleException <span class="tok-key">extends</span> <span class="tok-key">Exception</span> {
     <span class="tok-key">private</span> <span class="tok-key">final</span> <span class="tok-key">String</span> matricula;
     <span class="tok-key">public</span> VehiculoNoDisponibleException(<span class="tok-key">String</span> matricula, <span class="tok-key">String</span> mensaje) {
@@ -1091,7 +987,7 @@ classDiagram
     <span class="tok-key">public</span> <span class="tok-key">String</span> getMatricula() { <span class="tok-key">return</span> matricula; }
 }
 
-<span class="tok-comment">// 2. Clase abstracta Vehiculo</span>
+<span class="tok-comment">// 2. Clase abstracta Vehiculo con método polimórfico</span>
 <span class="tok-key">abstract</span> <span class="tok-key">class</span> Vehiculo {
     <span class="tok-key">protected</span> <span class="tok-key">String</span> matricula;
     <span class="tok-key">protected</span> <span class="tok-key">String</span> marca;
@@ -1109,23 +1005,23 @@ classDiagram
     }
 }
 
-<span class="tok-comment">// 3. Subclase concreta</span>
+<span class="tok-comment">// 3. Subclase concreta Coche</span>
 <span class="tok-key">class</span> Coche <span class="tok-key">extends</span> Vehiculo {
     <span class="tok-key">public</span> Coche(<span class="tok-key">String</span> matricula, <span class="tok-key">String</span> marca) { <span class="tok-key">super</span>(matricula, marca); }
     @<span class="tok-key">Override</span>
     <span class="tok-key">public</span> <span class="tok-key">void</span> alquilar() <span class="tok-key">throws</span> VehiculoNoDisponibleException {
         <span class="tok-key">if</span> (alquilado) {
-            <span class="tok-key">throw</span> <span class="tok-key">new</span> VehiculoNoDisponibleException(matricula, <span class="tok-string">&quot;El coche ya está alquilado actualmente.&quot;</span>);
+            <span class="tok-key">throw</span> <span class="tok-key">new</span> VehiculoNoDisponibleException(matricula, <span class="tok-string">&quot;El vehículo ya se encuentra reservado actualmente.&quot;</span>);
         }
         alquilado = <span class="tok-bool">true</span>;
-        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;🚗 Coche &quot;</span> + marca + <span class="tok-string">&quot; (&quot;</span> + matricula + <span class="tok-string">&quot;) alquilado con éxito.&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;🚗 Coche &quot;</span> + marca + <span class="tok-string">&quot; (&quot;</span> + matricula + <span class="tok-string">&quot;) alquilado correctamente.&quot;</span>);
     }
 }</code></pre>
 </div>
 </div>
 
 <div class="admonition exercise">
-<p class="admonition-title">Ejercicio 6: Simulador de Pasarela de Pagos Multicliente (<code>PasarelaPagos.java</code>)</p>
+<p class="admonition-title">Actividad 2: Simulador de Pasarela de Pagos Multicliente (<code>PasarelaPagos.java</code>)</p>
 <p>Diseña un sistema financiero polimórfico capaz de trabajar con múltiples pasarelas de pago:</p>
 <ol>
   <li>Crea dos excepciones personalizadas independientes:
@@ -1152,7 +1048,9 @@ classDiagram
       <span class="terminal-lang">JAVA</span>
     </div>
   </div>
-  <pre><code><span class="tok-key">package</span> ut5.ejercicios.nivel3;
+  <pre><code><span class="tok-key">package</span> ut5.actividades.pasarela;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">List</span>;
 
 <span class="tok-key">class</span> ImporteInvalidoException <span class="tok-key">extends</span> <span class="tok-key">Exception</span> {
     <span class="tok-key">public</span> ImporteInvalidoException(<span class="tok-key">String</span> msg) { <span class="tok-key">super</span>(msg); }
@@ -1161,12 +1059,20 @@ classDiagram
 <span class="tok-key">abstract</span> <span class="tok-key">class</span> MetodoPago {
     <span class="tok-key">protected</span> <span class="tok-key">String</span> titular;
     <span class="tok-key">protected</span> <span class="tok-key">double</span> saldoDisponible;
-    <span class="tok-key">public</span> MetodoPago(<span class="tok-key">String</span> titular, <span class="tok-key">double</span> saldo) { <span class="tok-key">this</span>.titular = titular; <span class="tok-key">this</span>.saldoDisponible = saldo; }
+    <span class="tok-key">public</span> MetodoPago(<span class="tok-key">String</span> titular, <span class="tok-key">double</span> saldo) {
+        <span class="tok-key">this</span>.titular = titular;
+        <span class="tok-key">this</span>.saldoDisponible = saldo;
+    }
     <span class="tok-key">public</span> <span class="tok-key">void</span> pagar(<span class="tok-key">double</span> importe) <span class="tok-key">throws</span> ImporteInvalidoException, SaldoInsuficienteException {
-        <span class="tok-key">if</span> (importe &lt;= <span class="tok-bool">0</span>) <span class="tok-key">throw</span> <span class="tok-key">new</span> ImporteInvalidoException(<span class="tok-string">&quot;El importe debe ser superior a 0 €.&quot;</span>);
-        <span class="tok-key">if</span> (importe &gt; saldoDisponible) <span class="tok-key">throw</span> <span class="tok-key">new</span> SaldoInsuficienteException(<span class="tok-string">&quot;Saldo insuficiente&quot;</span>, saldoDisponible, importe);
+        <span class="tok-key">if</span> (importe &lt;= <span class="tok-bool">0</span>) {
+            <span class="tok-key">throw</span> <span class="tok-key">new</span> ImporteInvalidoException(<span class="tok-string">&quot;El importe a pagar debe ser mayor que cero.&quot;</span>);
+        }
+        <span class="tok-key">if</span> (importe &gt; saldoDisponible) {
+            <span class="tok-key">throw</span> <span class="tok-key">new</span> SaldoInsuficienteException(<span class="tok-string">&quot;Fondos insuficientes&quot;</span>, saldoDisponible, importe);
+        }
         saldoDisponible -= importe;
-        <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;💳 Pago de %.2f € procesado. Saldo restante: %.2f €%n&quot;</span>, importe, saldoDisponible);
+        <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;💳 Cargo de %.2f € realizado con éxito en %s (%s). Restante: %.2f €%n&quot;</span>,
+                          importe, getClass().getSimpleName(), titular, saldoDisponible);
     }
 }</code></pre>
 </div>
@@ -1174,14 +1080,14 @@ classDiagram
 
 <hr>
 
-<h2 id="7-reto-extraordinario-hub-valencia">7. 🏆 Reto Extraordinario: Hub Logístico DistribueixValència</h2>
+<h2 id="7-reto-extraordinario-hub-valencia">7. 🏆 Reto de la Unidad: Hub Logístico DistribueixValència</h2>
 
 <div class="admonition tip">
-<p class="admonition-title">Reto de Examen: Triaje Automatizado con Excepciones de Seguridad</p>
+<p class="admonition-title">Reto de Programación: Triaje Automatizado con Excepciones de Seguridad</p>
 <p>El centro logístico automatizado de la Comunitat Valenciana necesita un software de control de paquetería:</p>
 <ol>
   <li>Crea la clase <code>Paquete</code> con <code>codigo</code>, <code>pesoKg</code>, <code>destino</code> y <code>descripcionContenido</code>.</li>
-  <li>Implementa las dos excepciones personalizadas críticas:
+  <li>Implementa dos excepciones personalizadas:
     <ul>
       <li><code>PesoExcedidoException</code>: Se dispara si el paquete supera los 50.0 kg (límite mecánico de la cinta).</li>
       <li><code>ContrabandoException</code>: Se dispara si la descripción contiene términos prohibidos (ej: <code>"explosivo"</code>, <code>"químico"</code>, <code>"armas"</code>).</li>
@@ -1204,11 +1110,11 @@ classDiagram
   </div>
   <pre><code><span class="tok-key">package</span> ut5.retos.hubvalencia;
 
-<span class="tok-comment">// Excepciones de Seguridad del Hub Logístico</span>
+<span class="tok-comment">// 1. Excepciones de Seguridad del Hub Logístico</span>
 <span class="tok-key">class</span> ContrabandoException <span class="tok-key">extends</span> <span class="tok-key">Exception</span> {
     <span class="tok-key">private</span> <span class="tok-key">final</span> <span class="tok-key">String</span> mercanciaProhibida;
     <span class="tok-key">public</span> ContrabandoException(<span class="tok-key">String</span> codigo, <span class="tok-key">String</span> mercancia) {
-        <span class="tok-key">super</span>(<span class="tok-string">&quot;ALERTA SEGURIDAD en paquete &quot;</span> + codigo + <span class="tok-string">&quot;: Contiene material no permitido: &quot;</span> + mercancia);
+        <span class="tok-key">super</span>(<span class="tok-string">&quot;ALERTA SEGURIDAD en paquete &quot;</span> + codigo + <span class="tok-string">&quot;: Mercancía prohibida: &quot;</span> + mercancia);
         <span class="tok-key">this</span>.mercanciaProhibida = mercancia;
     }
     <span class="tok-key">public</span> <span class="tok-key">String</span> getMercancia() { <span class="tok-key">return</span> mercanciaProhibida; }

@@ -1109,6 +1109,37 @@ Tu nota de Programación es <span class="tok-bool">1</span></code></pre>
 </div>
 <h3 id="actividad-48-sumasiguientes">Actividad 48 <code>SumaSiguientes</code></h3>
 <p>Realiza un programa que sume los 100 números siguientes a un número entero y positivo introducido por teclado. Se debe comprobar que el dato introducido es correcto (que es un número positivo) y sacar la excepción correspondiente en caso contrario.</p>
+<hr>
+<h2 id="bloque-26-validacion-y-errores">Bloque 2.6 - Validación de Datos y Gestión Básica de Errores</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad 2.6.1: Calculadora de Divisiones Segura (<code>CalculadoraDivisionSegura.java</code>)</p>
+<p>Desarrolla una aplicación de consola especializada en divisiones enteras:</p>
+<ol>
+  <li>Solicita al usuario dos números enteros: el <strong>dividendo</strong> y el <strong>divisor</strong>.</li>
+  <li>Realiza la operación en un método independiente: <code>public static int dividir(int a, int b) throws ArithmeticException</code>.</li>
+  <li>Gestiona de forma diferenciada:
+    <ul>
+      <li>La división entre cero (<code>ArithmeticException</code>).</li>
+      <li>La introducción de letras o símbolos (<code>InputMismatchException</code>).</li>
+    </ul>
+  </li>
+  <li>Limpia correctamente el flujo del <code>Scanner</code> cuando se produzca un error de entrada.</li>
+  <li>Utiliza obligatoriamente un bloque <code>finally</code> que informe de que la operación ha concluido y cierre el recurso.</li>
+</ol>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad 2.6.2: Conversor de Precios con Auditoría de Seguridad (<code>ConversorPreciosSeguro.java</code>)</p>
+<p>Desarrolla un sistema capaz de convertir precios introducidos como texto:</p>
+<ol>
+  <li>El usuario introduce el precio de un producto en formato texto (ej: <code>"24.95"</code>).</li>
+  <li>Intenta convertirlo a número decimal con <code>Double.parseDouble()</code>.</li>
+  <li>Captura la excepción <code>NumberFormatException</code> si el usuario introduce comas <code>,</code> o letras, manteniendo en tal caso el último precio válido registrado.</li>
+  <li>Utiliza obligatoriamente un bloque <code>finally</code> para emitir el mensaje de registro de auditoría.</li>
+</ol>
+</div>
+
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut02/ut0207.html">⬅️ Ejemplos guiados UT2</a>
 <a class="page-nav-btn" href="../ut02/ut02retos.html">Retos de programación UT2 ➡️</a>

@@ -1446,6 +1446,37 @@ Esta recibirá como parámetros en el constructor la cantidad de vehículos máx
 <p>Implementa las demás clases necesarias para usar la clase <code>Inventario</code>.</p>
 <p>El diagrama UML sería:</p>
 <div style="text-align:center;"><img src="../img/ut05/ut05_act22.png" alt="ut05_act22" style="zoom: 65%;" /></div>
+<hr>
+<h2 id="bloque-57-poo-excepciones">Bloque 5.7 - POO Avanzada, Herencia y Excepciones Personalizadas</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad 5.7.1: Gestión de Alquiler de Flota de Vehículos (<code>FlotaVehiculos.java</code>)</p>
+<p>Una empresa de alquiler necesita controlar la disponibilidad de su flota aplicando Herencia y Excepciones propias:</p>
+<ol>
+  <li>Crea la excepción personalizada comprobada <code>VehiculoNoDisponibleException extends Exception</code> que guarde en un atributo la matrícula afectada.</li>
+  <li>Crea una clase abstracta <code>Vehiculo</code> con atributos protegidos <code>matricula</code>, <code>marca</code>, <code>alquilado</code> y el método abstracto <code>public abstract void alquilar() throws VehiculoNoDisponibleException</code>.</li>
+  <li>Implementa las subclases <code>Coche</code>, <code>Moto</code> y <code>Furgoneta</code>.</li>
+  <li>Si un cliente intenta alquilar un vehículo cuyo estado ya es <code>alquilado == true</code>, dispara la excepción personalizada informando de la matrícula en el mensaje de error.</li>
+</ol>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad 5.7.2: Pasarela de Pagos Multicliente Polimórfica (<code>PasarelaPagos.java</code>)</p>
+<p>Diseña un sistema financiero polimórfico capaz de trabajar con múltiples métodos de pago:</p>
+<ol>
+  <li>Crea dos excepciones personalizadas independientes:
+    <ul>
+      <li><code>ImporteInvalidoException</code>: Si el importe es menor o igual a 0 €.</li>
+      <li><code>SaldoInsuficienteException</code>: Si el importe supera el saldo disponible.</li>
+    </ul>
+  </li>
+  <li>Crea la clase abstracta <code>MetodoPago</code> con método <code>pagar(double importe)</code> y subclases <code>TarjetaCredito</code>, <code>PayPal</code> y <code>Bizum</code>.</li>
+  <li>Almacena varias formas de pago en una colección polimórfica <code>List&lt;MetodoPago&gt;</code>.</li>
+  <li>Recorre la lista intentando aplicar el mismo cargo a todos ellos.</li>
+  <li><strong>Regla estricta:</strong> Captura cada excepción en bloques <code>catch</code> independientes; está prohibido usar un único <code>catch(Exception e)</code> genérico.</li>
+</ol>
+</div>
+
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut05/ut0507.html">⬅️ 5.7 Gestión avanzada de excepciones y excepciones personalizadas</a>
 <a class="page-nav-btn" href="../ut05/ut05retos.html">Retos de programación UT5 ➡️</a>

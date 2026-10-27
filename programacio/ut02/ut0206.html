@@ -628,8 +628,6 @@
 
 <h2 id="2-la-via-recomendada-en-bucles-validacion-preventiva">2. La Vía Recomendada en Bucles: Validación Preventiva con <code>Scanner</code> (<em>Clean Code</em>)</h2>
 
-<p>En el diseño profesional de software existe una regla de oro fundamental:</p>
-
 <div class="admonition tip">
 <p class="admonition-title">💡 Regla de Oro de la Industria: <em>«Exceptions should be exceptional»</em></p>
 <p><strong>Nunca utilices excepciones para controlar el flujo normal y habitual de un programa.</strong> Que un usuario se equivoque al teclear en la consola no es una catástrofe de software excepcional; es una situación perfectamente previsible.</p>
@@ -637,8 +635,6 @@
 </div>
 
 <h3 id="21-metodos-preventivos-de-scanner">2.1. Métodos de inspección de <code>Scanner</code></h3>
-<p>La clase <code>Scanner</code> ofrece métodos que devuelven <code>true</code> o <code>false</code> para consultar si el dato que está en espera coincide con el tipo deseado <strong>sin llegar a consumirlo ni provocar fallos</strong>:</p>
-
 <ul>
   <li><code>sc.hasNextInt()</code>: Devuelve <code>true</code> si el usuario ha introducido un número entero válido.</li>
   <li><code>sc.hasNextDouble()</code>: Devuelve <code>true</code> si ha introducido un número decimal válido.</li>
@@ -646,7 +642,6 @@
 </ul>
 
 <h3 id="22-el-patron-estandar-de-validacion-con-bucle">2.2. El patrón estándar de validación con bucle <code>while</code></h3>
-<p>Observa cómo aseguramos una lectura 100% robusta utilizando exclusivamente bucles y condiciones, sin necesidad de recurrir a bloques complejos:</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -702,11 +697,10 @@
 
 <hr>
 
-<h2 id="3-introduccion-defensiva-a-try-catch">3. Introducción Defensiva a <code>try-catch</code></h2>
+<h2 id="3-introduccion-defensiva-a-try-catch">3. Introducción Defensiva a <code>try-catch-finally</code></h2>
 
-<p>A pesar de la validación preventiva, existen situaciones donde ciertas operaciones no pueden verificarse previamente con un simple <code>if</code>, o donde una conversión de texto a número puede fallar. Para estos casos, Java proporciona la estructura <strong><code>try-catch</code></strong>:</p>
+<p>A pesar de la validación preventiva, existen situaciones donde ciertas operaciones no pueden verificarse previamente con un simple <code>if</code>, o donde una conversión de texto a número puede fallar. Para estos casos, Java proporciona la estructura <strong><code>try-catch-finally</code></strong>:</p>
 
-<h3 id="31-sintaxis-basica">3.1. Sintaxis básica</h3>
 <pre><code class="language-java">try {
     // Bloque protegido: código que podría provocar un fallo imprevisto
 } catch (TipoDeExcepcion e) {
@@ -714,104 +708,6 @@
 } finally {
     // Bloque opcional: se ejecuta SIEMPRE (haya o no haya habido error)
 }</code></pre>
-
-<h3 id="32-caso-1-division-entre-cero">3.2. Caso 1: División entera por cero (<code>ArithmeticException</code>)</h3>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">package</span> ut2.excepciones;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> DivisionSegura {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">int</span> dividendo = <span class="tok-bool">50</span>;
-        <span class="tok-key">int</span> divisor = <span class="tok-bool">0</span>;
-
-        <span class="tok-key">try</span> {
-            <span class="tok-comment">// Operación crítica que puede desencadenar un error en runtime:</span>
-            <span class="tok-key">int</span> cociente = dividendo / divisor;
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El resultado de la división es: &quot;</span> + cociente);
-        } <span class="tok-key">catch</span> (ArithmeticException e) {
-            <span class="tok-comment">// Se ejecuta solo si se produce una división por cero:</span>
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Aviso: División matemática indeterminada (no es posible dividir entre 0).&quot;</span>);
-        }
-
-        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;-&gt; El programa continúa su ejecución normal sin cerrarse abruptamente.&quot;</span>);
-    }
-}</code></pre>
-</div>
-
-<h3 id="33-caso-2-conversion-de-texto-a-numero">3.3. Caso 2: Conversión de texto a número (<code>NumberFormatException</code>)</h3>
-<p>Cuando trabajamos con conversiones de cadenas mediante <code>Integer.parseInt()</code> o <code>Double.parseDouble()</code>, el bloque <code>try-catch</code> es la forma estándar de proteger la conversión:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">String</span> textoPrecio = <span class="tok-string">&quot;19.95eur&quot;</span>; <span class="tok-comment">// Contiene caracteres no numéricos</span>
-
-<span class="tok-key">try</span> {
-    <span class="tok-key">double</span> precio = <span class="tok-key">Double</span>.parseDouble(textoPrecio);
-    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Precio cargado: &quot;</span> + precio + <span class="tok-string">&quot; €&quot;</span>);
-} <span class="tok-key">catch</span> (NumberFormatException e) {
-    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Formato incorrecto: La cadena &#x27;&quot;</span> + textoPrecio + <span class="tok-string">&quot;&#x27; no es un decimal válido.&quot;</span>);
-    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Se aplicará el precio por defecto: 0.0 €&quot;</span>);
-}</code></pre>
-</div>
-
-<h3 id="34-caso-3-captura-defensiva-en-scanner">3.4. Caso 3: Captura defensiva en <code>Scanner</code> (<code>InputMismatchException</code>)</h3>
-<p>Si prefieres capturar el error en lugar de usar <code>hasNextInt()</code>, puedes rodear la lectura con <code>try-catch</code>:</p>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">Código Java</div>
-    <div class="terminal-actions">
-      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
-      <span class="terminal-lang">JAVA</span>
-    </div>
-  </div>
-  <pre><code><span class="tok-key">package</span> ut2.excepciones;
-
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.InputMismatchException;
-<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
-
-<span class="tok-key">public</span> <span class="tok-key">class</span> CapturaDefensivaScanner {
-    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
-        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
-
-        <span class="tok-key">try</span> {
-            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce tu año de nacimiento: &quot;</span>);
-            <span class="tok-key">int</span> anio = sc.nextInt();
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Año registrado con éxito: &quot;</span> + anio);
-        } <span class="tok-key">catch</span> (InputMismatchException e) {
-            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Error en tiempo de ejecución: Se esperaba un valor numérico entero.&quot;</span>);
-        } <span class="tok-key">finally</span> {
-            sc.close();
-        }
-    }
-}</code></pre>
-</div>
 
 <hr>
 
@@ -823,23 +719,134 @@
 <ul>
   <li><strong>La prioridad absoluta es dominar la lógica algorítmica:</strong> contadores, acumuladores, condiciones compuestas (<code>&&</code>, <code>||</code>), centinelas y bucles <code>for</code> / <code>while</code>.</li>
   <li><strong>La validación recomendada es la preventiva:</strong> usa <code>while (!sc.hasNextInt())</code> o condicionales <code>if (numero &lt;= 0)</code>.</li>
-  <li><strong>No es obligatorio envolver cada lectura en <code>try-catch</code></strong>, a menos que el enunciado del ejercicio lo exija de forma explícita. Evita ensuciar tu código con capturas innecesarias.</li>
+  <li><strong>No es obligatorio envolver cada lectura en <code>try-catch</code></strong>, a menos que el enunciado del ejercicio lo exija de forma explícita.</li>
 </ul>
 </div>
 
 <hr>
 
-<h2 id="5-hoja-de-ruta-donde-se-aprende-el-tratamiento-profesional-de-excepciones">5. 🗺️ Hoja de Ruta: ¿Dónde se aprende el tratamiento profesional de excepciones?</h2>
+<h2 id="5-ejercicios-practicos-de-la-ut2">5. ✍️ Ejercicios Prácticos de la Unidad (UT2)</h2>
 
-<p>Muchos os preguntaréis: <em>«¿Cómo se crean excepciones propias de nuestro programa? ¿Qué significa la palabra <code>throws</code>? ¿Cómo se organiza una jerarquía de errores empresariales?»</em></p>
+<div class="admonition exercise">
+<p class="admonition-title">Ejercicio 1: Calculadora de Divisiones Segura (<code>CalculadoraDivisionSegura.java</code>)</p>
+<p>Desarrolla una aplicación de consola especializada en divisiones enteras:</p>
+<ol>
+  <li>Solicita al usuario por teclado dos números enteros: el <strong>dividendo</strong> y el <strong>divisor</strong>.</li>
+  <li>Implementa la división en un método independiente: <code>public static int dividir(int a, int b) throws ArithmeticException</code>.</li>
+  <li>Gestiona de forma diferenciada:
+    <ul>
+      <li>La división por cero (<code>ArithmeticException</code>).</li>
+      <li>La introducción de letras o símbolos (<code>InputMismatchException</code>).</li>
+    </ul>
+  </li>
+  <li>Utiliza un bloque <code>finally</code> para asegurar el cierre del <code>Scanner</code> y emitir un mensaje de cierre de operación.</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut2.actividades;
 
-<p>Para crear y lanzar <strong>excepciones personalizadas</strong> (como <code>SaldoInsuficienteException</code> o <code>UsuarioBloqueadoException</code>) se requiere saber:</p>
-<ul>
-  <li>Qué es una <strong>Clase</strong> y cómo se definen atributos y métodos (se aprende en la <strong>UT4 — Clases y Objetos</strong>).</li>
-  <li>Qué es la <strong>Herencia</strong> (<code>extends</code>), cómo llamar al constructor de la superclase (<code>super</code>) y el <strong>Polimorfismo</strong> (se aprende en la <strong>UT5 — Características Avanzadas de POO</strong>).</li>
-</ul>
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.InputMismatchException;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
 
-<p>Por esa razón pedagógica, el <strong>estudio integral y avanzado de excepciones</strong> (jerarquía <code>Throwable</code>, excepciones comprobadas vs no comprobadas, propagación con <code>throw/throws</code>, excepciones personalizadas y <code>try-with-resources</code>) lo abordaremos en el <strong>apartado 5.7 de la UT5</strong>, donde dispondréis de todas las herramientas conceptuales de la Programación Orientada a Objetos.</p>
+<span class="tok-key">public</span> <span class="tok-key">class</span> CalculadoraDivisionSegura {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> dividir(<span class="tok-key">int</span> dividendo, <span class="tok-key">int</span> divisor) <span class="tok-key">throws</span> ArithmeticException {
+        <span class="tok-key">return</span> dividendo / divisor;
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+
+        <span class="tok-key">try</span> {
+            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el dividendo (entero): &quot;</span>);
+            <span class="tok-key">int</span> dividendo = sc.nextInt();
+
+            <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el divisor (entero): &quot;</span>);
+            <span class="tok-key">int</span> divisor = sc.nextInt();
+
+            <span class="tok-key">int</span> cociente = dividir(dividendo, divisor);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;✅ Resultado de la división entera: &quot;</span> + cociente);
+        } <span class="tok-key">catch</span> (ArithmeticException e) {
+            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;⚠️ Error aritmético: Indeterminación matemática (no se puede dividir por 0).&quot;</span>);
+        } <span class="tok-key">catch</span> (InputMismatchException e) {
+            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;⚠️ Error de formato: Has introducido letras o símbolos en lugar de números.&quot;</span>);
+        } <span class="tok-key">finally</span> {
+            sc.close();
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;🔒 Operación finalizada.&quot;</span>);
+        }
+    }
+}</code></pre>
+</div>
+</div>
+
+<div class="admonition exercise">
+<p class="admonition-title">Ejercicio 2: Conversor de Precios con Auditoría de Seguridad (<code>ConversorPreciosSeguro.java</code>)</p>
+<p>Desarrolla un sistema capaz de convertir precios introducidos como texto:</p>
+<ol>
+  <li>El usuario introduce el precio de un producto en formato texto (ej: <code>"24.95"</code>).</li>
+  <li>Intenta convertirlo a número decimal con <code>Double.parseDouble()</code>.</li>
+  <li>Captura la excepción <code>NumberFormatException</code> si el usuario introduce comas <code>,</code> o letras, manteniendo en tal caso el último precio válido registrado.</li>
+  <li>Utiliza obligatoriamente un bloque <code>finally</code> para emitir el mensaje de registro de auditoría.</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">package</span> ut2.actividades;
+
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> ConversorPreciosSeguro {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+        <span class="tok-key">double</span> ultimoPrecioValido = <span class="tok-bool">0</span>.<span class="tok-bool">0</span>;
+
+        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Introduce el precio del producto (ej. 24.95): &quot;</span>);
+        <span class="tok-key">String</span> texto = sc.nextLine();
+
+        <span class="tok-key">try</span> {
+            <span class="tok-key">double</span> precio = <span class="tok-key">Double</span>.parseDouble(texto);
+            <span class="tok-key">if</span> (precio &lt;= <span class="tok-bool">0</span>) {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;⚠️ Aviso: El precio debería ser mayor que cero.&quot;</span>);
+            } <span class="tok-key">else</span> {
+                ultimoPrecioValido = precio;
+                <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;✅ Precio registrado correctamente: %.2f €%n&quot;</span>, ultimoPrecioValido);
+            }
+        } <span class="tok-key">catch</span> (NumberFormatException e) {
+            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;⚠️ Error: &#x27;&quot;</span> + texto + <span class="tok-string">&quot;&#x27; no tiene formato decimal válido (usa el punto &#x27;.&#x27; para decimales).&quot;</span>);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   Se mantendrá el último precio válido: &quot;</span> + ultimoPrecioValido + <span class="tok-string">&quot; €&quot;</span>);
+        } <span class="tok-key">finally</span> {
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;📋 Auditoría: Registro de conversión de precio completado.&quot;</span>);
+            sc.close();
+        }
+    }
+}</code></pre>
+</div>
+</div>
+
+<hr>
+
+<h2 id="6-hoja-de-ruta">6. 🗺️ Hoja de Ruta hacia la POO</h2>
+<p>Las <strong>excepciones personalizadas</strong> (como <code>SaldoInsuficienteException</code>) y la arquitectura orientada a objetos (<code>extends Exception</code>, <code>super()</code>, polimorfismo y <code>try-with-resources</code>) se estudian en profundidad en la <strong>UT5 (apartado 5.7)</strong>, una vez dominados los conceptos de clases y herencia.</p>
 
       <div class="page-nav-footer">
 <a class="page-nav-btn" href="../ut02/ut0205.html">⬅️ 2.5 Sentencias de salto (break, continue, return)</a>

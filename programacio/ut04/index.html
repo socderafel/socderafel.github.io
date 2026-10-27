@@ -2983,6 +2983,21 @@ Posición: <span class="tok-bool">1</span>
 <li>Pedido: El usuario introduce un código de libro y el programa muestra el nº de reservas que se han hecho del libro. Esta opción de menú le resultará útil al usuario para poder hacer el pedido de un libro determinado.</li>
 <li>Recepción: Cuando el usuario recibe un libro quiere llamar por teléfono a los clientes que lo reservaron. Solicitar al usuario un código de libro y mostrar los datos (nombre y teléfono) de los clientes que lo tienen reservado.</li>
 </ul>
+<hr>
+<h2 id="bloque-4-validacion-objetos">Bloque 4.4 - Encapsulación y Validación Robusta en Clases</h2>
+
+<div class="admonition exercise">
+<p class="admonition-title">Actividad: Validación de Registro de Usuario (<code>RegistroUsuario.java</code>)</p>
+<p>Diseña una clase robusta aplicando encapsulación estricta y validación de datos en constructores y setters:</p>
+<ol>
+  <li>Crea la clase <code>Usuario</code> con atributos privados <code>nombre</code> y <code>edad</code>.</li>
+  <li>Define un constructor completo y métodos <em>getter</em> y <em>setter</em>.</li>
+  <li>Valida que la <strong>edad</strong> esté comprendida estrictamente entre 18 y 100 años. Si el valor está fuera de rango, no lo aceptes (lanza un aviso o <code>IllegalArgumentException</code>).</li>
+  <li>En el programa principal, solicita la edad por teclado dentro de un bucle <code>while</code> que no termine hasta que el usuario introduzca una edad admisible.</li>
+  <li>Sobrescribe el método <code>toString()</code> para imprimir los datos del usuario con formato limpio y profesional.</li>
+</ol>
+</div>
+
 </section><hr>
 <section id="ut04retos">
 <h1 id="retos">Retos</h1>
