@@ -478,6 +478,7 @@
 <li><a href="../ut01/ut0108.html">1.8 Herramientas útiles (Math, Random y Scanner)</a></li>
 <li><a href="../ut01/ut01wrappers.html">1.9 Clases Envoltorio (Wrappers), Character y String</a></li>
 <li><a href="../ut01/ut0109.html">1.10 Novedades de Java 25</a></li>
+<li><a href="../ut01/ut0110_metodos.html">1.11 Creación y uso de métodos</a></li>
 <li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
 <li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
 <li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
@@ -617,6 +618,7 @@
 <li><a href="#ut0108"><strong>1.8 Herramientas útiles (Math, Random y Scanner)</strong></a> — <a href="./ut0108.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01wrappers"><strong>1.9 Clases Envoltorio (Wrappers), Character y String</strong></a> — <a href="./ut01wrappers.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut0109"><strong>1.10 Novedades de Java 25</strong></a> — <a href="./ut0109.html"><em>(Obrir apartat individual)</em></a></li>
+<li><a href="#ut0110_metodos"><strong>1.11 Creación y uso de métodos</strong></a> — <a href="./ut0110_metodos.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01ejemplos"><strong>Ejemplos guiados UT1</strong></a> — <a href="./ut01ejemplos.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01actividades"><strong>Actividades prácticas UT1</strong></a> — <a href="./ut01actividades.html"><em>(Obrir apartat individual)</em></a></li>
 <li><a href="#ut01retos"><strong>Retos de programación UT1</strong></a> — <a href="./ut01retos.html"><em>(Obrir apartat individual)</em></a></li>
@@ -4191,6 +4193,547 @@ Nota de acceso: <span class="tok-bool">8</span>.<span class="tok-bool">75</span>
 </div>
 </div>
 <hr>
+</section><hr>
+<section id="ut0110_metodos">
+<h1>1.11 Creación y uso de métodos</h1>
+
+<h2 id="1-que-es-una-clase-en-java">1. ¿Qué es una clase en Java?</h2>
+<p>Hasta ahora hemos escrito pequeños programas en Java donde todo el código se colocaba dentro de un bloque con la palabra reservada <code>class</code>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> MiPrimerPrograma {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Hola!&quot;</span>);
+    }
+}</code></pre>
+</div>
+<p>En Java, <strong>todo el código debe residir obligatoriamente dentro de una clase</strong>. </p>
+<p>Para entenderlo de forma sencilla en esta primera unidad:</p>
+<ul>
+<li>Una <strong>clase</strong> es el "contenedor" principal de nuestro programa. Actúa como una caja organizada que agrupa tanto datos (variables) como acciones o funciones (métodos).</li>
+<li>El archivo en disco debe llamarse exactamente igual que la clase pública y terminar en <code>.java</code> (por ejemplo, <code>MiPrimerPrograma.java</code>).</li>
+<li>Más adelante, en la <strong>UT 4</strong>, profundizaremos en la Programación Orientada a Objetos (POO) y veremos que las clases también sirven de molde o plantilla para fabricar "objetos". Pero de momento, nos basta con ver la clase como la unidad organizativa donde guardamos nuestro programa y sus funciones.</li>
+</ul>
+<hr />
+<h2 id="2-el-punto-de-entrada-que-es-el-metodo-main">2. El punto de entrada: ¿Qué es el método <code>main</code>?</h2>
+<p>Cuando le pedimos a la máquina virtual de Java (JVM) que ejecute un programa, ¿por dónde empieza a leer las instrucciones?</p>
+<p>Java no ejecuta el archivo de arriba abajo sin más; busca una "puerta de entrada" especial y obligatoria: el método <strong><code>main</code></strong>.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-comment">// Aquí empieza a ejecutarse nuestro programa</span>
+}</code></pre>
+</div>
+<ul>
+<li><strong><code>public</code></strong>: Es un modificador de acceso. Indica que este método puede ser llamado desde fuera de la clase (en este caso, por la propia máquina virtual de Java).</li>
+<li><strong><code>static</code></strong>: Significa que el método pertenece a la clase y puede ejecutarse directamente sin necesidad de crear un objeto previo en memoria.</li>
+<li><strong><code>void</code></strong>: Indica el tipo de dato devuelto. <code>void</code> significa "vacío" o "nada"; es decir, este método realiza tareas pero no devuelve ningún resultado a quien lo llamó.</li>
+<li><strong><code>main</code></strong>: Es el identificador o nombre reservado por convenio que Java reconoce como inicio de la aplicación.</li>
+<li><strong><code>String[] args</code></strong>: Es un array de cadenas de texto que permite recibir parámetros desde la consola o terminal al iniciar el programa (por ahora no nos preocuparemos por él).</li>
+</ul>
+<hr />
+<h2 id="3-por-que-crear-otros-metodos-dentro-de-la-clase">3. ¿Por qué crear otros métodos dentro de la clase?</h2>
+<p>A medida que nuestros programas crecen, escribir todo el código de forma continua dentro de <code>main</code> se convierte en una mala práctica: el código se vuelve difícil de leer, largo y casi imposible de mantener o depurar.</p>
+<p>Un <strong>método</strong> es un bloque de instrucciones con un nombre asociado que realiza una tarea concreta y que puede ser ejecutado tantas veces como sea necesario desde cualquier punto del programa.</p>
+<p>Las principales ventajas de dividir el código en métodos son:</p>
+<ol>
+<li><strong>Modularidad ("Divide y vencerás")</strong>: Descomponemos un problema grande y complejo en subtareas pequeñas, comprensibles e independientes.</li>
+<li><strong>Reutilización (Principio DRY - <em>Don't Repeat Yourself</em>)</strong>: Escribimos la lógica una sola vez y la llamamos cuantas veces haga falta en vez de duplicar líneas de código.</li>
+<li><strong>Claridad y legibilidad</strong>: Un método <code>main</code> bien diseñado se lee casi como un índice de un libro, delegando los detalles en métodos auxiliares con nombres autoexplicativos.</li>
+</ol>
+<hr />
+<h2 id="4-que-significa-static-en-un-metodo">4. ¿Qué significa <code>static</code> en un método?</h2>
+<p>En la declaración de los métodos que crearemos en esta unidad verás siempre la palabra clave <strong><code>static</code></strong>:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> saludar() { ... }
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> sumar(<span class="tok-key">int</span> a, <span class="tok-key">int</span> b) { ... }</code></pre>
+</div>
+<h3 id="41-metodo-de-clase-vs-metodo-de-objeto">4.1. Método de clase vs. Método de objeto</h3>
+<p>En Java existen dos tipos de métodos:</p>
+<ol>
+<li><strong>Métodos de objeto (o de instancia)</strong>: Requieren crear previamente un objeto en la memoria con el operador <code>new</code> para poder ser utilizados (los estudiaremos a fondo en la <strong>UT 4</strong>).</li>
+<li><strong>Métodos de clase (<code>static</code>)</strong>: Pertenecen a la propia clase y <strong>no necesitan crear ningún objeto</strong> para poder ser ejecutados.</li>
+</ol>
+<h3 id="42-la-regla-de-oro-en-la-ut-1">4.2. La regla de oro en la UT 1</h3>
+<p>El método <code>main</code> es estático (<code>static</code>). En Java existe una regla estricta:</p>
+<blockquote>
+<p>[!IMPORTANT] Regla del contexto estático
+Un método <code>static</code> solo puede llamar directamente a <strong>otros métodos que también sean <code>static</code></strong> dentro de la misma clase.</p>
+</blockquote>
+<p>Si intentas llamar a un método normal (no estático) desde <code>main</code> sin haber creado un objeto, el compilador mostrará el clásico error:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>non-<span class="tok-key">static</span> method noSePuedeLlamar() cannot be referenced from a <span class="tok-key">static</span> context</code></pre>
+</div>
+<p>Por esta razón, durante la UT 1 y la UT 2, <strong>todos los métodos auxiliares que declaremos en nuestra clase llevarán la palabra reservada <code>static</code></strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Métodos estáticos que ya conoces</p>
+<p>Ya has utilizado métodos estáticos de la biblioteca estándar de Java sin darte cuenta:</p>
+<ul>
+<li><code>Math.sqrt(25)</code> o <code>Math.pow(2, 3)</code>: Invocados directamente usando el nombre de la clase <code>Math</code>.</li>
+<li><code>Integer.parseInt("123")</code>: Invocado directamente sobre la clase <code>Integer</code>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="5-anatomia-y-sintaxis-de-un-metodo">5. Anatomía y sintaxis de un método</h2>
+<p>Un método en Java se compone de dos partes fundamentales: la <strong>cabecera</strong> (o firma) y el <strong>cuerpo</strong>.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>[modificadores]  &lt;tipoDevuelto&gt;  &lt;nombreMétodo&gt; ( [&lt;parámetros&gt;] ) {
+    <span class="tok-comment">// Cuerpo del método: instrucciones ejecutables</span>
+    [<span class="tok-key">return</span> &lt;valor&gt;;]
+}</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// Ejemplo de método completo:</span>
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> calcularDoble(<span class="tok-key">int</span> numero) {
+    <span class="tok-key">int</span> resultado = numero * <span class="tok-bool">2</span>;
+    <span class="tok-key">return</span> resultado;
+}</code></pre>
+</div>
+<p>Desglosemos cada elemento:</p>
+<h3 id="51-modificadores">5.1. Modificadores</h3>
+<p>Indican la visibilidad y características del método.
+* En nuestros métodos de la UT 1 usaremos habitualmente <code>public static</code> o simplemente <code>static</code>.</p>
+<h3 id="52-tipo-de-dato-devuelto-return-type">5.2. Tipo de dato devuelto (<em>return type</em>)</h3>
+<p>Indica qué tipo de información va a devolver el método una vez termine su ejecución:
+* Si devuelve un dato, se especifica su tipo: primitivos (<code>int</code>, <code>double</code>, <code>boolean</code>, <code>char</code>...) o de referencia (<code>String</code>).
+* Si el método realiza una acción pero <strong>no devuelve ningún valor</strong>, se utiliza obligatoriamente la palabra clave <strong><code>void</code></strong>.</p>
+<h3 id="53-nombre-del-metodo">5.3. Nombre del método</h3>
+<p>Sigue la convención <strong>camelCase</strong>:
+* Debe comenzar con una <strong>letra minúscula</strong>.
+* Por convenio, se recomienda que sea un <strong>verbo</strong> que describa la acción que realiza: <code>calcularTotal</code>, <code>mostrarMenu</code>, <code>esPar</code>, <code>obtenerMayor</code>.</p>
+<h3 id="54-lista-de-parametros">5.4. Lista de parámetros</h3>
+<p>Son los datos que el método necesita recibir del exterior para trabajar.
+* Van entre paréntesis <code>( )</code> separados por comas.
+* Cada parámetro debe indicar obligatoriamente su <strong>tipo</strong> y su <strong>nombre</strong>: <code>(int base, int altura)</code>.
+* Si el método no necesita recibir información, los paréntesis se dejan vacíos: <code>( )</code>.</p>
+<h3 id="55-cuerpo-del-metodo">5.5. Cuerpo del método</h3>
+<p>Es el bloque encerrado entre llaves <code>{ }</code>. Contiene las sentencias Java, declaraciones de variables locales y estructuras de control necesarias para cumplir su tarea.</p>
+<h3 id="56-la-sentencia-return">5.6. La sentencia <code>return</code></h3>
+<p>Permite devolver el resultado final al punto del programa donde se llamó al método:
+* Si el método define un tipo de retorno distinto de <code>void</code>, es <strong>obligatorio</strong> que termine con un <code>return</code> seguido de un valor o expresión del tipo prometido.
+* En cuanto se ejecuta una sentencia <code>return</code>, el método <strong>finaliza de inmediato</strong>, devolviendo el control al código llamante.
+* Si el método es <code>void</code>, no hace falta poner <code>return</code> (aunque se puede usar <code>return;</code> en solitario para salir antes del método si se cumple alguna condición).</p>
+<div class="admonition warning">
+<p class="admonition-title">Diferencia crucial: imprimir (<code>println</code>) no es devolver (<code>return</code>)</p>
+<p>Uno de los errores más frecuentes al iniciarse en la programación es confundir mostrar por pantalla con devolver un valor:</p>
+<ul>
+<li><code>System.out.println(...)</code>: Muestra texto en la consola para que el usuario humano lo lea, pero el programa no puede "guardar" esa salida para hacer otros cálculos.</li>
+<li><code>return valor</code>: Pasa el dato internamente a quien invocó el método para que pueda guardarlo en una variable, compararlo o usarlo en otra operación matemática.</li>
+</ul>
+</div>
+<hr />
+<h2 id="6-parametros-y-paso-de-informacion">6. Parámetros y paso de información</h2>
+<p>Es importante distinguir entre dos conceptos:</p>
+<ol>
+<li><strong>Parámetro formal</strong>: Es la variable que se declara en la cabecera del método al definirlo. Funciona como una variable local dentro del método.</li>
+<li><strong>Argumento (o parámetro real)</strong>: Es el valor concreto que se le envía al método en el momento exacto de llamarlo (<em>invocación</em>).</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">// &#x27;numero&#x27; es el PARÁMETRO FORMAL</span>
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> elevarAlCuadrado(<span class="tok-key">int</span> numero) {
+    <span class="tok-key">return</span> numero * numero;
+}
+
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-key">int</span> x = <span class="tok-bool">5</span>;
+    <span class="tok-comment">// &#x27;x&#x27; (o el valor 5) es el ARGUMENTO real</span>
+    <span class="tok-key">int</span> resultado = elevarAlCuadrado(x);
+}</code></pre>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Paso de parámetros por valor</p>
+<p>En Java, los tipos primitivos se pasan <strong>siempre por valor</strong>. Esto significa que el método recibe una <strong>copia</strong> del dato. Si el método modifica el valor de su parámetro local, la variable original en <code>main</code> <strong>no se ve afectada</strong>.</p>
+</div>
+<hr />
+<h2 id="7-los-cuatro-tipos-de-metodos-segun-parametros-y-retorno">7. Los cuatro tipos de métodos según parámetros y retorno</h2>
+<p>Dependiendo de si necesitan datos de entrada y de si devuelven un resultado, podemos clasificar los métodos en cuatro categorías:</p>
+<h3 id="caso-1-sin-parametros-y-sin-retorno-void">Caso 1: Sin parámetros y sin retorno (<code>void</code>)</h3>
+<p>Son métodos que realizan una acción fija, como mostrar información o un menú:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> mostrarSeparador() {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;----------------------------------------&quot;</span>);
+}</code></pre>
+</div>
+<p><strong>Llamada desde <code>main</code>:</strong>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>mostrarSeparador();</code></pre>
+</div></p>
+<hr />
+<h3 id="caso-2-con-parametros-y-sin-retorno-void">Caso 2: Con parámetros y sin retorno (<code>void</code>)</h3>
+<p>Reciben datos del exterior pero no devuelven nada; suelen procesar esos datos para mostrarlos en pantalla:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> saludarUsuario(<span class="tok-key">String</span> nombre, <span class="tok-key">int</span> edad) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Hola &quot;</span> + nombre + <span class="tok-string">&quot;, tienes &quot;</span> + edad + <span class="tok-string">&quot; años.&quot;</span>);
+}</code></pre>
+</div>
+<p><strong>Llamada desde <code>main</code>:</strong>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>saludarUsuario(<span class="tok-string">&quot;Carlos&quot;</span>, <span class="tok-bool">20</span>);</code></pre>
+</div></p>
+<hr />
+<h3 id="caso-3-sin-parametros-y-con-retorno">Caso 3: Sin parámetros y con retorno</h3>
+<p>No necesitan datos de entrada, pero calculan o generan un valor que devuelven al programa principal:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> obtenerNumeroPi() {
+    <span class="tok-key">return</span> <span class="tok-bool">3</span>.<span class="tok-bool">14159265</span>;
+}</code></pre>
+</div>
+<p><strong>Llamada desde <code>main</code>:</strong>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">double</span> pi = obtenerNumeroPi();
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El valor de PI es: &quot;</span> + pi);</code></pre>
+</div></p>
+<hr />
+<h3 id="caso-4-con-parametros-y-con-retorno">Caso 4: Con parámetros y con retorno</h3>
+<p>Son los métodos más habituales y potentes: reciben datos, los procesan y devuelven el resultado final:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> calcularMayor(<span class="tok-key">int</span> a, <span class="tok-key">int</span> b) {
+    <span class="tok-key">if</span> (a &gt; b) {
+        <span class="tok-key">return</span> a;
+    } <span class="tok-key">else</span> {
+        <span class="tok-key">return</span> b;
+    }
+}
+
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">boolean</span> esPar(<span class="tok-key">int</span> numero) {
+    <span class="tok-key">return</span> numero % <span class="tok-bool">2</span> == <span class="tok-bool">0</span>;
+}</code></pre>
+</div>
+<p><strong>Llamada desde <code>main</code>:</strong>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> mayor = calcularMayor(<span class="tok-bool">15</span>, <span class="tok-bool">27</span>);
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El mayor es: &quot;</span> + mayor); <span class="tok-comment">// Imprime 27</span>
+
+<span class="tok-key">if</span> (esPar(mayor)) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Además es par.&quot;</span>);
+}</code></pre>
+</div></p>
+<hr />
+<h2 id="8-como-y-donde-se-colocan-los-metodos-dentro-del-codigo">8. ¿Cómo y dónde se colocan los métodos dentro del código?</h2>
+<p>Un programa Java básico con métodos sigue esta estructura:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> NombreClase {
+
+    <span class="tok-comment">// 1. Método principal (main)</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Invocación a otros métodos</span>
+    }
+
+    <span class="tok-comment">// 2. Otros métodos estáticos auxiliares (al mismo nivel)</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> metodoA() {
+        ...
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> metodoB(<span class="tok-key">int</span> x) {
+        ...
+    }
+}</code></pre>
+</div>
+<blockquote>
+<p>[!CAUTION] ¡Nunca anides métodos!
+En Java <strong>no se puede declarar un método dentro de otro método</strong>. Los métodos se declaran unos detrás de otros, dentro del cuerpo de la clase <code>{ ... }</code>, pero nunca dentro del cuerpo de <code>main</code> ni de ningún otro método.</p>
+</blockquote>
+<hr />
+<h2 id="9-ejemplo-integrador-completo">9. Ejemplo integrador completo</h2>
+<p>Veamos un programa completo donde aplicamos todo lo aprendido: una pequeña aplicación que calcula estadísticas de dos números:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> CalculadoraEstadistica {
+
+    <span class="tok-comment">// Método principal: orquesta la ejecución</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">int</span> num1 = <span class="tok-bool">12</span>;
+        <span class="tok-key">int</span> num2 = <span class="tok-bool">8</span>;
+
+        imprimirCabecera();
+
+        <span class="tok-comment">// Llamamos a los métodos y recogemos sus resultados</span>
+        <span class="tok-key">int</span> suma = sumar(num1, num2);
+        <span class="tok-key">double</span> media = calcularMedia(num1, num2);
+        <span class="tok-key">int</span> mayor = obtenerMaximo(num1, num2);
+
+        <span class="tok-comment">// Mostramos los resultados</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Números evaluados: &quot;</span> + num1 + <span class="tok-string">&quot; y &quot;</span> + num2);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Suma: &quot;</span> + suma);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Media: &quot;</span> + media);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El mayor de los dos es: &quot;</span> + mayor);
+
+        <span class="tok-key">if</span> (esPositivo(num1)) {
+            <span class="tok-key">System</span>.out.println(num1 + <span class="tok-string">&quot; es positivo.&quot;</span>);
+        }
+    }
+
+    <span class="tok-comment">// 1. Sin parámetros y sin retorno</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> imprimirCabecera() {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;========================================&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;   ESTADÍSTICAS BÁSICAS DE NÚMEROS      &quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;========================================&quot;</span>);
+    }
+
+    <span class="tok-comment">// 2. Con parámetros y con retorno (int)</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> sumar(<span class="tok-key">int</span> a, <span class="tok-key">int</span> b) {
+        <span class="tok-key">return</span> a + b;
+    }
+
+    <span class="tok-comment">// 3. Con parámetros y con retorno (double)</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> calcularMedia(<span class="tok-key">int</span> a, <span class="tok-key">int</span> b) {
+        <span class="tok-key">return</span> (a + b) / <span class="tok-bool">2</span>.<span class="tok-bool">0</span>; <span class="tok-comment">// Usamos 2.0 para evitar la división entera</span>
+    }
+
+    <span class="tok-comment">// 4. Con parámetros y lógica condicional</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">int</span> obtenerMaximo(<span class="tok-key">int</span> a, <span class="tok-key">int</span> b) {
+        <span class="tok-key">if</span> (a &gt;= b) {
+            <span class="tok-key">return</span> a;
+        } <span class="tok-key">else</span> {
+            <span class="tok-key">return</span> b;
+        }
+    }
+
+    <span class="tok-comment">// 5. Con parámetros y retorno booleano</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">boolean</span> esPositivo(<span class="tok-key">int</span> n) {
+        <span class="tok-key">return</span> n &gt; <span class="tok-bool">0</span>;
+    }
+}</code></pre>
+</div>
+<hr />
+<h2 id="10-resumen-de-errores-frecuentes-y-como-evitarlos">10. Resumen de errores frecuentes y cómo evitarlos</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Error habitual</th>
+<th style="text-align: left;">Causa</th>
+<th style="text-align: left;">Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Olvidar la palabra <code>static</code></strong></td>
+<td style="text-align: left;">Llamar a un método no estático desde <code>main</code>.</td>
+<td style="text-align: left;">Añadir el modificador <code>static</code> en la cabecera del método.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Definir un método dentro de <code>main</code></strong></td>
+<td style="text-align: left;">Intentar crear funciones locales dentro de las llaves de <code>main</code>.</td>
+<td style="text-align: left;">Mover la definición del método fuera de <code>main</code>, como miembro de la clase.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Falta de sentencia <code>return</code></strong></td>
+<td style="text-align: left;">Declarar que el método devuelve un tipo (<code>int</code>, <code>String</code>...) pero no incluir <code>return</code>.</td>
+<td style="text-align: left;">Asegurarse de que todos los caminos del código devuelven un valor del tipo adecuado.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Código inalcanzable (<em>Unreachable code</em>)</strong></td>
+<td style="text-align: left;">Colocar sentencias después de una instrucción <code>return</code>.</td>
+<td style="text-align: left;">Todo código después de <code>return</code> nunca se ejecutará. Colocarlo antes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Confundir orden o tipos de argumentos</strong></td>
+<td style="text-align: left;">Llamar a <code>metodo(String, int)</code> pasando <code>metodo(int, String)</code>.</td>
+<td style="text-align: left;">Respetar rigurosamente el número, tipo y orden de los parámetros definidos.</td>
+</tr>
+</tbody>
+</table>
 </section><hr>
 <section id="ut01ejemplos">
 <h1>Ejemplos</h1>
