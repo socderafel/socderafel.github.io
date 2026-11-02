@@ -620,6 +620,287 @@
       border-color: #ef4444;
     }
 
+    /* Components Interactius: Quizzes, Calculadores de Laboratori i Lliurament Aules */
+    .interactive-quiz {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--primary);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 1.4rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+    }
+
+    .interactive-quiz.is-solved {
+      border-left-color: #10b981;
+      background: rgba(16, 185, 129, 0.04);
+    }
+
+    .quiz-question {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .quiz-controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .quiz-input {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-family: var(--md-code-font);
+      font-size: 0.95rem;
+      width: 220px;
+      max-width: 100%;
+      transition: border-color 0.2s;
+    }
+
+    .quiz-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .btn-quiz-check {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-quiz-check:hover {
+      background: var(--primary-dark);
+    }
+
+    .quiz-feedback {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      display: none;
+      line-height: 1.4;
+    }
+
+    .quiz-feedback.correct {
+      display: block;
+      color: #10b981;
+    }
+
+    .quiz-feedback.incorrect {
+      display: block;
+      color: #ef4444;
+    }
+
+    /* Simuladors i Calculadores Científiques de Laboratori */
+    .lab-widget {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 22px;
+      margin: 1.8rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .lab-widget-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 0;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .lab-form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .lab-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .lab-field label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .lab-field input, .lab-field select {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-size: 0.92rem;
+      font-family: inherit;
+    }
+
+    .lab-field input:focus, .lab-field select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .btn-lab-action {
+      background: #7c3aed;
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s;
+    }
+
+    .btn-lab-action:hover {
+      background: #6d28d9;
+    }
+
+    .lab-result-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    /* Targeta de Lliurament per a Aules */
+    .aules-delivery-card {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.08) 100%);
+      border: 2px solid #8b5cf6;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin: 2.5rem 0 2rem 0;
+      box-shadow: 0 4px 16px rgba(139, 92, 246, 0.08);
+    }
+
+    .aules-delivery-card h3 {
+      margin-top: 0;
+      color: #7c3aed;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .aules-delivery-card p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .aules-student-field {
+      margin: 14px 0;
+    }
+
+    .aules-student-field label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.88rem;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .aules-student-field input {
+      width: 100%;
+      max-width: 420px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .aules-score-badge {
+      display: inline-block;
+      background: #ede9fe;
+      color: #6d28d9;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin: 8px 0 14px 0;
+    }
+
+    [data-theme="dark"] .aules-score-badge {
+      background: #3b0764;
+      color: #d8b4fe;
+    }
+
+    .aules-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn-aules-copy, .btn-aules-dl {
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-aules-copy {
+      background: #7c3aed;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-aules-copy:hover {
+      background: #6d28d9;
+      transform: translateY(-1px);
+    }
+
+    .btn-aules-dl {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-aules-dl:hover {
+      background: var(--border);
+    }
+
+    .aules-toast {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 16px;
+      background: #10b981;
+      color: #ffffff;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
     /* Tarjetas de Módulos para el Landing Page */
     .module-grid {
       display: grid;
@@ -1232,6 +1513,409 @@
 
         updateProgress();
       });
+
+      // 3.6. Manejador de Quizzes Interactius, Calculadores de Laboratori i Lliurament Aules
+      (function initInteractiveLearning() {
+        const updateAulesSummary = () => {
+          const totalQuizzes = document.querySelectorAll('.interactive-quiz').length;
+          const solvedQuizzes = document.querySelectorAll('.interactive-quiz.is-solved').length;
+          const totalChecks = document.querySelectorAll('li.task-list-item').length;
+          const solvedChecks = document.querySelectorAll('li.task-list-item.is-checked').length;
+
+          const countEl = document.querySelector('.aules-score-count');
+          if (countEl) {
+            const pct = totalQuizzes > 0 ? Math.round((solvedQuizzes / totalQuizzes) * 100) : 100;
+            countEl.textContent = `${solvedQuizzes}/${totalQuizzes} reptes completats (${pct}%) · ${solvedChecks}/${totalChecks} criteris d'autoavaluació`;
+          }
+        };
+
+        // Inicialitzar tots els quizzes
+        document.querySelectorAll('.interactive-quiz').forEach((quiz, qIdx) => {
+          const input = quiz.querySelector('.quiz-input');
+          const checkBtn = quiz.querySelector('.btn-quiz-check');
+          const feedback = quiz.querySelector('.quiz-feedback');
+          const rawExpected = (quiz.getAttribute('data-answer') || '').trim();
+          const hint = quiz.getAttribute('data-hint') || 'Revisa els càlculs i torna-ho a intentar.';
+          const quizId = quiz.getAttribute('data-quiz-id') || ('quiz_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + qIdx);
+
+          // Carregar estat previ de localStorage
+          try {
+            const saved = localStorage.getItem(quizId);
+            if (saved) {
+              const parsed = JSON.parse(saved);
+              if (input && parsed.val) input.value = parsed.val;
+              if (parsed.correct) {
+                quiz.classList.add('is-solved');
+                if (feedback) {
+                  feedback.className = 'quiz-feedback correct';
+                  feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit.';
+                }
+              }
+            }
+          } catch(e) {}
+
+          const checkAnswer = () => {
+            if (!input || !feedback) return;
+            const userVal = input.value.trim().toLowerCase().replace(/\s+/g, '').replace(',', '.');
+            const validOptions = rawExpected.toLowerCase().split('|').map(s => s.trim().replace(/\s+/g, '').replace(',', '.'));
+            const isCorrect = validOptions.some(opt => opt === userVal);
+
+            if (isCorrect) {
+              feedback.className = 'quiz-feedback correct';
+              feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+1 encert).';
+              quiz.classList.add('is-solved');
+              try {
+                localStorage.setItem(quizId, JSON.stringify({ val: input.value.trim(), correct: true }));
+              } catch(e) {}
+            } else {
+              feedback.className = 'quiz-feedback incorrect';
+              feedback.innerHTML = '❌ <strong>Encara no és correcte.</strong> 💡 ' + hint;
+              quiz.classList.remove('is-solved');
+              try {
+                localStorage.setItem(quizId, JSON.stringify({ val: input.value.trim(), correct: false }));
+              } catch(e) {}
+            }
+            updateAulesSummary();
+          };
+
+          if (checkBtn) checkBtn.addEventListener('click', checkAnswer);
+          if (input) {
+            input.addEventListener('keydown', (e) => {
+              if (e.key === 'Enter') checkAnswer();
+            });
+          }
+        });
+
+        // Manejador del Lliurament per a Aules
+        const nameInput = document.querySelector('#aules-student-name');
+        const copyBtn = document.querySelector('.btn-aules-copy');
+        const dlBtn = document.querySelector('.btn-aules-dl');
+        const toast = document.querySelector('.aules-toast');
+
+        if (nameInput) {
+          try {
+            const savedName = localStorage.getItem('aules_student_name');
+            if (savedName) nameInput.value = savedName;
+            nameInput.addEventListener('input', () => {
+              localStorage.setItem('aules_student_name', nameInput.value);
+            });
+          } catch(e) {}
+        }
+
+        const buildReport = () => {
+          const studentName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : 'Alumne/a de 1r FPB';
+          const pageTitle = document.title.split('—')[0].trim();
+          const dateStr = new Date().toLocaleString('ca-ES', { dateStyle: 'long', timeStyle: 'short' });
+
+          const quizzes = document.querySelectorAll('.interactive-quiz');
+          let solvedCount = 0;
+          let quizDetails = [];
+          quizzes.forEach((q, idx) => {
+            const qTitle = q.querySelector('.quiz-question') ? q.querySelector('.quiz-question').innerText.trim() : `Repte ${idx + 1}`;
+            const inp = q.querySelector('.quiz-input');
+            const val = inp ? inp.value.trim() : '(buit)';
+            const isSolved = q.classList.contains('is-solved');
+            if (isSolved) solvedCount++;
+            quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta introduïda: ${val}  -->  [${isSolved ? 'CORRECTE ✅' : 'PENDENT ❌'}]`);
+          });
+
+          const checks = document.querySelectorAll('li.task-list-item');
+          let checkedCount = 0;
+          checks.forEach(c => {
+            if (c.classList.contains('is-checked')) checkedCount++;
+          });
+
+          return [
+            `============================================================`,
+            `📑 COMPROVANT DE TREBALL I ACTIVITATS PRÀCTIQUES (AULES)`,
+            `============================================================`,
+            `👤 Alumne/a: ${studentName}`,
+            `📚 Mòdul: Ciències Aplicades 1 (1r FPB · Grau Bàsic)`,
+            `📖 Unitat: ${pageTitle}`,
+            `🗓️ Data i hora: ${dateStr}`,
+            `🎯 Reptes Numèrics Resolts: ${solvedCount}/${quizzes.length} correctes (${quizzes.length > 0 ? Math.round((solvedCount/quizzes.length)*100) : 100}%)`,
+            `📋 Autoavaluació / Llista de comprovació: ${checkedCount}/${checks.length} criteris assolits`,
+            `------------------------------------------------------------`,
+            `DETALL DELS REPTES INTERACTIUS:`,
+            quizDetails.length ? quizDetails.join('\n\n') : '  (Sense reptes numèrics addicionals registrats en aquesta pàgina)',
+            `------------------------------------------------------------`,
+            `Estat: Validat amb el motor d'autocorreció interactiu de classe.`,
+            `============================================================`
+          ].join('\n');
+        };
+
+        if (copyBtn) {
+          copyBtn.addEventListener('click', () => {
+            const report = buildReport();
+            navigator.clipboard.writeText(report).then(() => {
+              if (toast) {
+                toast.style.display = 'block';
+                toast.textContent = '✅ Resum copiat al porta-retalls! Ja pots anar a Aules i enganxar-lo (Ctrl+V) al lliurament de la teua tasca.';
+                setTimeout(() => { toast.style.display = 'none'; }, 5000);
+              }
+            });
+          });
+        }
+
+        if (dlBtn) {
+          dlBtn.addEventListener('click', () => {
+            const report = buildReport();
+            const rawName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim().replace(/\s+/g, '_') : 'Alumne';
+            const filename = `Comprovant_Aules_${rawName}_CA1.txt`;
+            const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          });
+        }
+
+        updateAulesSummary();
+      })();
+
+      // Funcions auxiliars globals per als simuladors de ciències
+      window.runDescomposicio = function() {
+        const input = document.getElementById('desc-num');
+        const res = document.getElementById('desc-res');
+        if (!input || !res) return;
+        const val = parseInt(input.value, 10);
+        if (isNaN(val) || val < 0) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Introdueix un nombre enter positiu vàlid.</span>';
+          return;
+        }
+        const s = val.toString();
+        const len = s.length;
+        const names = ['Unitats (U)', 'Desenes (D)', 'Centenes (C)', 'Unitats de Millar (UM)', 'Desenes de Millar (DM)', 'Centenes de Millar (CM)'];
+        let parts = [];
+        let poly = [];
+        for (let i = 0; i < len; i++) {
+          const digit = parseInt(s[i], 10);
+          const power = len - 1 - i;
+          const posName = names[power] || (`10^${power}`);
+          if (digit > 0 || len === 1) {
+            parts.push(`<li><strong>${digit}</strong> en el lloc de les <em>${posName}</em> = ${(digit * Math.pow(10, power)).toLocaleString('ca-ES')}</li>`);
+            poly.push(`(${digit} × 10<sup>${power}</sup>)`);
+          }
+        }
+        res.innerHTML = `
+          <p style="margin:0 0 8px 0;font-weight:700;color:var(--primary);">Descomposició de ${val.toLocaleString('ca-ES')}:</p>
+          <ul style="margin:0 0 10px 0;padding-left:20px;font-size:0.9rem;">${parts.join('')}</ul>
+          <p style="margin:0;font-weight:600;">Descomposició polinòmica: <code>${poly.join(' + ')}</code></p>
+        `;
+      };
+
+      window.runCalcTMB = function() {
+        const sexe = document.getElementById('tmb-sexe').value;
+        const pes = parseFloat(document.getElementById('tmb-pes').value);
+        const alc = parseFloat(document.getElementById('tmb-alcada').value);
+        const edat = parseFloat(document.getElementById('tmb-edat').value);
+        const act = parseFloat(document.getElementById('tmb-activitat').value);
+        const res = document.getElementById('tmb-res');
+        if (!res) return;
+        if (isNaN(pes) || isNaN(alc) || isNaN(edat) || pes <= 0 || alc <= 0 || edat <= 0) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Revisa que el pes, l\'alçada i l\'edat siguen nombres vàlids superiors a zero.</span>';
+          return;
+        }
+        let tmb = (10 * pes) + (6.25 * alc) - (5 * edat);
+        tmb += (sexe === 'home' ? 5 : -161);
+        const get = Math.round(tmb * act);
+        const tmbRound = Math.round(tmb);
+
+        const alcMetres = alc / 100;
+        const imc = (pes / (alcMetres * alcMetres)).toFixed(1);
+        let imcLabel = 'Normopès (pes saludable)';
+        let imcColor = '#10b981';
+        if (imc < 18.5) { imcLabel = 'Baix pes'; imcColor = '#f59e0b'; }
+        else if (imc >= 25 && imc < 30) { imcLabel = 'Sobrepès'; imcColor = '#f59e0b'; }
+        else if (imc >= 30) { imcLabel = 'Obesitat'; imcColor = '#ef4444'; }
+
+        res.innerHTML = `
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:12px;text-align:center;">
+            <div style="background:var(--code-bg);padding:12px;border-radius:8px;">
+              <span style="font-size:0.8rem;color:var(--text-muted);display:block;">Taxa Metabòlica Basal</span>
+              <strong style="font-size:1.3rem;color:var(--primary);">${tmbRound} kcal/dia</strong>
+            </div>
+            <div style="background:var(--code-bg);padding:12px;border-radius:8px;">
+              <span style="font-size:0.8rem;color:var(--text-muted);display:block;">Despesa Total Diària (GET)</span>
+              <strong style="font-size:1.3rem;color:#7c3aed;">${get} kcal/dia</strong>
+            </div>
+            <div style="background:var(--code-bg);padding:12px;border-radius:8px;">
+              <span style="font-size:0.8rem;color:var(--text-muted);display:block;">Índex de Massa Corporal (IMC)</span>
+              <strong style="font-size:1.3rem;color:${imcColor};">${imc} kg/m²</strong>
+              <small style="display:block;font-size:0.75rem;color:${imcColor};">${imcLabel}</small>
+            </div>
+          </div>
+          <p style="margin:12px 0 0 0;font-size:0.84rem;color:var(--text-muted);">ℹ️ <em>La TMB indica les calories mínimes necessàries per a mantenir les funcions vitals bàsiques en repòs absolut. El GET incorpora el desgast de la teua activitat física.</em></p>
+        `;
+      };
+
+      window.runCalcBalanc = function() {
+        const ini = parseFloat(document.getElementById('bal-inicial').value) || 0;
+        const ing = parseFloat(document.getElementById('bal-ingressos').value) || 0;
+        const desp = parseFloat(document.getElementById('bal-despeses').value) || 0;
+        const res = document.getElementById('bal-res');
+        if (!res) return;
+        const saldoFinal = ini + ing - desp;
+        const isPos = saldoFinal >= 0;
+        res.innerHTML = `
+          <p style="margin:0 0 6px 0;font-weight:600;">Estat de Tresoreria:</p>
+          <div style="font-size:1.25rem;font-weight:700;color:${isPos ? '#10b981' : '#ef4444'};">
+            ${isPos ? '📈 Superàvit / Saldo Positiu: +' : '📉 Dèficit / Saldo Negatiu: '}${saldoFinal.toLocaleString('ca-ES', { minimumFractionDigits: 2 })} €
+          </div>
+          <p style="margin:6px 0 0 0;font-size:0.85rem;color:var(--text-muted);">
+            Operació: ${ini} € (inicial) + ${ing} € (ingressos) - ${desp} € (despeses) = <strong>${saldoFinal} €</strong>
+          </p>
+        `;
+      };
+
+      window.runCalcMCD = function() {
+        const a = parseInt(document.getElementById('mcd-n1').value, 10);
+        const b = parseInt(document.getElementById('mcd-n2').value, 10);
+        const res = document.getElementById('mcd-res');
+        if (!res) return;
+        if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Introdueix dos nombres enters majors que zero.</span>';
+          return;
+        }
+        function gcd(x, y) { return y === 0 ? x : gcd(y, x % y); }
+        const mcdVal = gcd(a, b);
+        const mcmVal = (a * b) / mcdVal;
+        res.innerHTML = `
+          <div style="display:flex;gap:16px;flex-wrap:wrap;">
+            <div style="background:var(--code-bg);padding:10px 16px;border-radius:6px;flex:1;">
+              <span style="font-size:0.8rem;color:var(--text-muted);display:block;">Màxim Comú Divisor</span>
+              <strong style="font-size:1.2rem;color:var(--primary);">MCD(${a}, ${b}) = ${mcdVal}</strong>
+            </div>
+            <div style="background:var(--code-bg);padding:10px 16px;border-radius:6px;flex:1;">
+              <span style="font-size:0.8rem;color:var(--text-muted);display:block;">Mínim Comú Múltiple</span>
+              <strong style="font-size:1.2rem;color:#7c3aed;">MCM(${a}, ${b}) = ${mcmVal}</strong>
+            </div>
+          </div>
+        `;
+      };
+
+      window.runCalcFraccions = function() {
+        const num = parseInt(document.getElementById('frac-num').value, 10);
+        const den = parseInt(document.getElementById('frac-den').value, 10);
+        const res = document.getElementById('frac-res');
+        if (!res) return;
+        if (isNaN(num) || isNaN(den) || den === 0) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Introdueix un numerador vàlid i un denominador diferent de zero.</span>';
+          return;
+        }
+        function gcd(x, y) { return y === 0 ? x : gcd(y, x % y); }
+        const d = gcd(Math.abs(num), Math.abs(den));
+        const simNum = num / d;
+        const simDen = den / d;
+        const decimal = (num / den).toFixed(3);
+        const pct = ((num / den) * 100).toFixed(1);
+        res.innerHTML = `
+          <p style="margin:0 0 6px 0;font-weight:700;color:var(--primary);">Fracció Simplificada Irreductible:</p>
+          <div style="font-size:1.2rem;font-weight:700;">
+            ${simNum} / ${simDen} &nbsp;=&nbsp; <span style="color:#10b981;">${decimal}</span> &nbsp;(${pct}%)
+          </div>
+        `;
+      };
+
+      window.runCalcAstronomia = function() {
+        const km = parseFloat(document.getElementById('astro-km').value);
+        const res = document.getElementById('astro-res');
+        if (!res) return;
+        if (isNaN(km) || km <= 0) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Introdueix una distància en milions de km positiva.</span>';
+          return;
+        }
+        const totalKm = km * 1000000;
+        const au = (totalKm / 149597870).toFixed(2);
+        const c = 300000;
+        const totalSec = totalKm / c;
+        const mins = (totalSec / 60).toFixed(1);
+        const hours = (totalSec / 3600).toFixed(2);
+        res.innerHTML = `
+          <p style="margin:0 0 6px 0;font-weight:700;color:var(--primary);">${km} milions de km equivalen a:</p>
+          <ul style="margin:0;padding-left:20px;font-size:0.92rem;line-height:1.7;">
+            <li><strong>${au} UA</strong> (Unitats Astronòmiques, on 1 UA = distància Terra-Sol)</li>
+            <li>Temps que triga la llum: <strong>${mins} minuts</strong> (${hours} hores)</li>
+          </ul>
+        `;
+      };
+
+      window.runCalcSismes = function() {
+        const mag = parseFloat(document.getElementById('sis-mag').value);
+        const res = document.getElementById('sis-res');
+        if (!res) return;
+        if (isNaN(mag) || mag < 1 || mag > 10) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Tria una magnitud entre 1.0 i 10.0.</span>';
+          return;
+        }
+        const baseTNT = 30;
+        const tntKg = (baseTNT * Math.pow(31.62, mag - 1)).toExponential(2);
+        let desc = 'Microterratrèmol: no és perceptible per les persones.';
+        if (mag >= 3 && mag < 5) desc = 'Terratrèmol menor o lleuger: es nota en pisos alts, objectes penjants es balancegen.';
+        else if (mag >= 5 && mag < 7) desc = 'Terratrèmol moderat a fort: danys en edificis mal construïts, cauen mobles.';
+        else if (mag >= 7) desc = 'Terratrèmol major o devastador: destrucció d\'estructures, esquerdes al terreny.';
+
+        res.innerHTML = `
+          <p style="margin:0 0 6px 0;font-weight:700;color:var(--primary);">Magnitud Richter ${mag}:</p>
+          <p style="margin:0 0 8px 0;font-size:0.92rem;">Energia aproximada alliberada: <strong>~${tntKg} kg de TNT</strong></p>
+          <p style="margin:0;font-size:0.85rem;color:var(--text-muted);">${desc}</p>
+        `;
+      };
+
+      window.runCalcAtmosfera = function() {
+        const h = parseFloat(document.getElementById('atm-altitud').value);
+        const res = document.getElementById('atm-res');
+        if (!res) return;
+        if (isNaN(h) || h < 0) {
+          res.innerHTML = '<span style="color:#ef4444;">❌ Introdueix una altitud en metres vàlida.</span>';
+          return;
+        }
+        const p = (1013.25 * Math.pow(1 - (2.25577e-5 * h), 5.25588)).toFixed(1);
+        const pctO2 = Math.max(0, ((p / 1013.25) * 21)).toFixed(1);
+        const tempC = (15 - (0.0065 * h)).toFixed(1);
+        res.innerHTML = `
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));gap:12px;text-align:center;">
+            <div style="background:var(--code-bg);padding:10px;border-radius:6px;">
+              <span style="font-size:0.78rem;color:var(--text-muted);display:block;">Pressió Atmosfèrica</span>
+              <strong style="font-size:1.15rem;color:var(--primary);">${p} hPa</strong>
+            </div>
+            <div style="background:var(--code-bg);padding:10px;border-radius:6px;">
+              <span style="font-size:0.78rem;color:var(--text-muted);display:block;">Oxigen Efectiu</span>
+              <strong style="font-size:1.15rem;color:#10b981;">${pctO2}%</strong>
+            </div>
+            <div style="background:var(--code-bg);padding:10px;border-radius:6px;">
+              <span style="font-size:0.78rem;color:var(--text-muted);display:block;">Temp. Estimada</span>
+              <strong style="font-size:1.15rem;color:#7c3aed;">${tempC} °C</strong>
+            </div>
+          </div>
+        `;
+      };
+
+      window.runCalcAigua = function() {
+        const dutxa = parseFloat(document.getElementById('aigua-dutxa').value) || 0;
+        const wc = parseFloat(document.getElementById('aigua-wc').value) || 0;
+        const rent = parseFloat(document.getElementById('aigua-rent').value) || 0;
+        const res = document.getElementById('aigua-res');
+        if (!res) return;
+        const litresDutxa = dutxa * 12 * 7;
+        const litresWC = wc * 8 * 7;
+        const litresRent = rent * 50;
+        const total = Math.round(litresDutxa + litresWC + litresRent);
+        const estalvi = Math.round(total * 0.35);
+        res.innerHTML = `
+          <div style="background:var(--code-bg);padding:12px;border-radius:8px;margin-bottom:8px;">
+            <span style="font-size:0.82rem;color:var(--text-muted);display:block;">Consum Setmanal Estimat</span>
+            <strong style="font-size:1.3rem;color:var(--primary);">${total.toLocaleString('ca-ES')} Litres / setmana</strong>
+          </div>
+          <p style="margin:0;font-size:0.86rem;color:#10b981;font-weight:600;">
+            💡 Amb airejadors a les aixetes i cisterna de doble polsador podries estalviar fins a <strong>${estalvi.toLocaleString('ca-ES')} L/setmana</strong> (un 35%).
+          </p>
+        `;
+      };
 
       // 4. Carregar sidebar.json si la pàgina forma part d'un curs
       const sidebar = document.getElementById('course-sidebar');

@@ -521,6 +521,29 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
+<div class="lab-widget">
+  <div class="lab-widget-title">🔬 Calculadora i Simplificador de Fraccions Irreductibles</div>
+  <p style="margin: 0 0 12px 0; font-size: 0.88rem; color: var(--text-muted);">
+    Introdueix el numerador i el denominador per obtenir la fracció irreductible més simplificada, el seu valor decimal i el percentatge equivalent:
+  </p>
+  <div class="lab-form-grid">
+    <div class="lab-field">
+      <label for="frac-num">Numerador:</label>
+      <input type="number" id="frac-num" value="12">
+    </div>
+    <div class="lab-field">
+      <label for="frac-den">Denominador (≠ 0):</label>
+      <input type="number" id="frac-den" value="18">
+    </div>
+  </div>
+  <button type="button" class="btn-lab-action" onclick="runCalcFraccions()">⚡ Simplificar Fracció</button>
+  <div class="lab-result-box" id="frac-res">
+    <em>Introdueix numerador i denominador per calcular la fracció irreductible.</em>
+  </div>
+</div>
+
+---
+
 ##### Repte 1: Formulació de dissolució desengreixant d'alcohol isopropílic (IPA)
 - **Objectiu:** Utilitzar la fracció com a operador per calcular quantitats exactes de líquids en un laboratori tècnic.
 - **Situació de taller:** Per netejar restes de pasta tèrmica ressecada i flux de soldadura en plaques base, un tècnic ha de preparar un flascó aplicador d'exactament $500\text{ ml}$ d'una mescla de neteja d'alta puresa:
@@ -565,6 +588,48 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 
 ---
 
+#### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
+
+Introdueix els teus resultats numèrics i comprova immediatament si la teua resposta és correcta:
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud5_q1" data-answer="2" data-hint="Divideix numerador i denominador entre el seu MCD (6): 12:6 = 2.">
+  <div class="quiz-question">✍️ Repte interactiu: Si simplifiques la fracció 12/18 fins a obtenir la fracció irreductible (2/3), quin és el numerador?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud5_q2" data-answer="3/4|0.75|0,75" data-hint="Com que tenen el mateix denominador 4, sumem numeradors: 1 + 2 = 3 -> 3/4 (o 0,75).">
+  <div class="quiz-question">✍️ Repte interactiu: Quant val la suma de fraccions amb mateix denominador: 1/4 + 2/4 (escriu '3/4' o '0.75')?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud5_q3" data-answer="40" data-hint="Calcula (100 / 5) · 2 = 20 · 2 = 40 GB.">
+  <div class="quiz-question">✍️ Repte interactiu: Si un disc sòlid de 100 GB té ocupats 2/5 de la seua capacitat total, quants GB estan utilitzats?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud5_q4" data-answer="4" data-hint="La totalitat és 7/7. Si en portes 3/7, en falten: 7 - 3 = 4.">
+  <div class="quiz-question">✍️ Repte interactiu: Si s'ha descarregat 3/7 d'un fitxer d'instal·lació, quin és el numerador de la fracció que queda per descarregar (x/7)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+---
+
 #### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 ##### Llista de comprovació per a l'alumnat
@@ -585,6 +650,25 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 | **Multiplicació i divisió de racionals** | Multiplica en línia i divideix en creu amb soltesa, simplificant factors comuns abans d'operar per evitar xifres gegants. | Aplica correctament les regles de multiplicació en línia i divisió creuada simplificant al final. | Confon la multiplicació en línia amb la divisió creuada en situacions d'examen. | Multiplica en creu per a la multiplicació i en línia per a la divisió. |
 | **Operacions combinades i jerarquia** | Resol expressions amb claudàtors, multiplicacions i sumes respectant estrictament la jerarquia sense saltar-se passos. | Resol operacions combinades amb bona jerarquia i errades menors de càlcul en l'ajust de denominadors. | Resol primer el parèntesi però s'equivoca en prioritzar la multiplicació sobre la suma posterior. | No respecta la jerarquia d'operacions calculant d'esquerra a dreta. |
 | **Resolució de problemes aplicats (taller/química)** | Modela problemes de dissolucions, particions de disc i despeses del que queda amb plantejament matemàtic exemplar. | Planteja i resol problemes de fracció d'una quantitat i de volum de forma clara. | Resol problemes directes de fracció d'un total però s'encalla en "fracció del que queda". | No sap traduir els enunciats a operacions amb fraccions ni interpretar el resultat en context real. |
+
+---
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>En acabar els reptes interactius i la llista de comprovació, genera el teu informe oficial per adjuntar-lo o enganxar-lo al lliurament de la tasca d'Aules:</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
+    <input type="text" id="aules-student-name" placeholder="Ex: Pere Martí Soler">
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Informe (.txt)</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>

@@ -741,9 +741,11 @@ Aquest quadern recull les activitats aplicades de càlcul biomètric, nutrició 
 
 ---
 
-### 🔬 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
-#### Exercici 1: Càlcul de la taxa metabòlica basal (TMB) i balanç calòric
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Càlcul de la taxa metabòlica basal (TMB) i balanç calòric
 La nutrició cel·lular requereix energia per mantindre les funcions vitals (respiració, batecs del cor, filtració renal). La fórmula simplificada de l'Organització Mundial de la Salut (OMS) per estimar la **Taxa Metabòlica Basal (TMB)** en joves de 10 a 18 anys és:
 $$\text{TMB (Nois)} = (17{,}5 \cdot m) + 651 \quad (\text{kcal/dia})$$
 $$\text{TMB (Noies)} = (12{,}2 \cdot m) + 746 \quad (\text{kcal/dia})$$
@@ -759,7 +761,7 @@ $$\text{TMB (Noies)} = (12{,}2 \cdot m) + 746 \quad (\text{kcal/dia})$$
 
 ---
 
-#### Exercici 2: Hemodinàmica cardíaca i volum de sang bombat
+##### Exercici 2: Hemodinàmica cardíaca i volum de sang bombat
 El cor humà funciona com una bomba impel·lent doble. En cada batec sistòlic, el ventricle esquerre impulsa un volum mitjà de sang conegut com a **volum sistòlic** ($V_s \approx 70\text{ mL} = 0{,}07\text{ L}$).
 El **Cabal Cardíac ($Q_c$)** és el volum total de sang expulsat per minut:
 $$Q_c = V_s \cdot FC \quad (\text{en L/min})$$
@@ -771,7 +773,7 @@ $$Q_c = V_s \cdot FC \quad (\text{en L/min})$$
 
 ---
 
-#### Exercici 3: Balanç hídric i filtració glomerular de la nefrona
+##### Exercici 3: Balanç hídric i filtració glomerular de la nefrona
 Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sanguini que surt del cor.
 - Els glomèruls de les nefrones filtren un volum de plasma de $180\text{ litres al dia}$.
 - Els túbuls renals duen a terme una **reabsorció tubular del $99\%$** d'aquesta aigua filtrada cap al torrent sanguini per evitar la deshidratació immediata.
@@ -784,9 +786,52 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 ---
 
-### 🧪 Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Mesura i monitoratge de la freqüència cardíaca i tensió arterial
+<div class="lab-widget">
+  <div class="lab-widget-title">🔬 Calculadora de Laboratori: Taxa Metabòlica Basal (TMB), GET i IMC</div>
+  <p style="margin: 0 0 12px 0; font-size: 0.88rem; color: var(--text-muted);">
+    Introdueix les dades biomètriques per determinar la despesa energètica diària (fórmula de Mifflin-St Jeor) i l'Índex de Massa Corporal:
+  </p>
+  <div class="lab-form-grid">
+    <div class="lab-field">
+      <label for="tmb-sexe">Sexe biològic:</label>
+      <select id="tmb-sexe">
+        <option value="home">Home / Xic</option>
+        <option value="dona">Dona / Xica</option>
+      </select>
+    </div>
+    <div class="lab-field">
+      <label for="tmb-pes">Pes corporal (kg):</label>
+      <input type="number" id="tmb-pes" value="65" min="20" max="250" step="0.5">
+    </div>
+    <div class="lab-field">
+      <label for="tmb-alcada">Alçada (cm):</label>
+      <input type="number" id="tmb-alcada" value="170" min="100" max="240">
+    </div>
+    <div class="lab-field">
+      <label for="tmb-edat">Edat (anys):</label>
+      <input type="number" id="tmb-edat" value="16" min="10" max="100">
+    </div>
+    <div class="lab-field">
+      <label for="tmb-activitat">Nivell d'activitat física:</label>
+      <select id="tmb-activitat">
+        <option value="1.2">Sedentari (poc o gens d'exercici)</option>
+        <option value="1.375" selected>Lleuger (esport 1-3 dies/setmana)</option>
+        <option value="1.55">Moderat (esport 3-5 dies/setmana)</option>
+        <option value="1.725">Molt actiu (entrenament intens 6-7 dies)</option>
+      </select>
+    </div>
+  </div>
+  <button type="button" class="btn-lab-action" onclick="runCalcTMB()">⚡ Calcular Balanç Energètic i IMC</button>
+  <div class="lab-result-box" id="tmb-res">
+    <em>Ompli les dades i prem el botó per calcular la teua TMB, despesa diària i estat d'IMC.</em>
+  </div>
+</div>
+
+---
+
+##### Repte 1: Mesura i monitoratge de la freqüència cardíaca i tensió arterial
 - **Objectiu:** Registrar les constants vitals cardiovasculars en repòs i avaluar la resposta fisiològica a l'esforç físic.
 - **Materials:** Cronòmetre i tensiòmetre digital de braç (o polsador d'oximetria).
 - **Procediment experimental:**
@@ -799,7 +844,7 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 ---
 
-#### Repte 2: Auditoria nutricional d'etiquetes i control de sucres ocults
+##### Repte 2: Auditoria nutricional d'etiquetes i control de sucres ocults
 - **Objectiu:** Desxifrar la informació nutricional d'aliments industrials ultraprocessats i contrastar-la amb els límits saludables de l'OMS.
 - **Materials:** 2 envasos reals de productes comercials (per exemple, una llauna de refresc de cola de $330\text{ mL}$ i un paquet de galetes o brioixeria) i bàscula de precisió o terrons de sucre.
 - **Protocol d'anàlisi:**
@@ -812,7 +857,7 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 ---
 
-#### Repte 3: Determinació de compatibilitat sanguínia en el sistema AB0 i Rh
+##### Repte 3: Determinació de compatibilitat sanguínia en el sistema AB0 i Rh
 - **Objectiu:** Resoldre situacions clíniques d'urgència transfusional aplicant les regles d'aglutinació d'antígens i anticossos.
 - **Taula de referència:**
   - Grup **A:** Antígen A als glòbuls vermells | Anticossos anti-B al plasma.
@@ -827,9 +872,51 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 ---
 
-### 📊 Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
 
-#### Llista de comprovació per a l'alumnat
+Introdueix els teus resultats numèrics i comprova immediatament si la teua resposta és correcta:
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud2_q1" data-answer="180" data-hint="Recorda la conversió: 1 gram de glúcids aporta 4 kcal. Multiplica 45 × 4.">
+  <div class="quiz-question">✍️ Repte interactiu: Quantes quilocalories (kcal) aporten 45 grams de carbohidrats/glúcids en un menú de dinar?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud2_q2" data-answer="4" data-hint="El cor humà es divideix en 2 aurícules (superiors) i 2 ventricles (inferiors).">
+  <div class="quiz-question">✍️ Repte interactiu: Quantes cambres musculars internes té el cor humà en total (aurícules i ventricles)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud2_q3" data-answer="2100" data-hint="Multiplica 60 kg × 35 ml/kg = 2.100 ml (2,1 litres).">
+  <div class="quiz-question">✍️ Repte interactiu: Quants mil·lilitres (ml) d'aigua diària ha de consumir un jove de 60 kg segons la pauta de 35 ml/kg?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud2_q4" data-answer="1" data-hint="Cada ronyó humà conté aproximadament 1 milió de nefrones funcionals.">
+  <div class="quiz-question">✍️ Repte interactiu: Aproximadament quants milions de nefrones de filtració conté cadascun dels dos ronyons humans?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+---
+
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+##### Llista de comprovació per a l'alumnat
 - [ ] He calculat la despesa energètica basal (TMB) i el repartiment calòric de macronutrients.
 - [ ] He calculat el cabal cardíac en repòs i en exercici comprenent el paper de l'hemodinàmica.
 - [ ] He entès com funciona la nefrona diferenciant entre filtració glomerular i reabsorció tubular.
@@ -837,7 +924,7 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 - [ ] He auditat etiquetes d'aliments comparant la quantitat de sucre amb el límit recomanat per l'OMS.
 - [ ] He resolt casos de compatibilitat transfusional en el sistema AB0 i Rh prevenint reaccions adverses.
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -846,6 +933,25 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 | **Fisiologia renal i nefrona** | Explica detalladament la filtració i el 99% de reabsorció tubular a la nefrona i calcula volums d'orina. | Comprèn la funció depuradora del ronyó i calcula el volum d'orina normal. | Reconeix que el ronyó filtra la sang però confon excreció amb defecació. | Desconeix la unitat funcional de la nefrona i el procés d'eliminació de toxines. |
 | **Mesura de constants i hàbits saludables** | Mesura el pols radial i tensió amb precisió, analitza etiquetes de sucres i proposa hàbits preventius. | Registra la freqüència cardíaca i analitza etiquetes d'aliments de forma correcta. | Pren el pols amb dificultat i identifica els sucres d'una etiqueta sense calcular la ració. | Incapaç de localitzar el pols arterial o interpretar una etiqueta nutricional bàsica. |
 | **Compatibilitat de grups sanguinis (AB0/Rh)** | Justifica amb claredat la relació antigen-anticòs en transfusions i resol els casos clínics d'urgència sense error. | Identifica correctament el donant universal $0^-$ i receptor universal $AB^+$ en els casos pràctics. | Reconeix els quatre grups sanguinis bàsics però dubta en la compatibilitat del factor Rh. | Confon grups sanguinis o recomana transfusions incompatibles amb risc per a la vida. |
+
+---
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>En acabar els reptes interactius i la llista de comprovació, genera el teu informe oficial per adjuntar-lo o enganxar-lo al lliurament de la tasca d'Aules:</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
+    <input type="text" id="aules-student-name" placeholder="Ex: Pere Martí Soler">
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Informe (.txt)</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>

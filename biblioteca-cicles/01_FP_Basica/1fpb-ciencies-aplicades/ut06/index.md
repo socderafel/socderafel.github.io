@@ -462,6 +462,25 @@ Analitza les dades de la següent taula i respon a les preguntes:
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
+<div class="lab-widget">
+  <div class="lab-widget-title">🔬 Convertidor Còsmic: Distàncies en l'Univers, UA i Temps-Llum</div>
+  <p style="margin: 0 0 12px 0; font-size: 0.88rem; color: var(--text-muted);">
+    Calcula l'equivalència en Unitats Astronòmiques (UA) i el temps que triga la llum (c = 300.000 km/s) a recórrer grans distàncies interplanetàries:
+  </p>
+  <div class="lab-form-grid">
+    <div class="lab-field">
+      <label for="astro-km">Distància en milions de quilòmetres:</label>
+      <input type="number" id="astro-km" value="150" min="0.1" step="1" placeholder="Ex: 150">
+    </div>
+  </div>
+  <button type="button" class="btn-lab-action" onclick="runCalcAstronomia()">⚡ Convertir Distància Còsmica</button>
+  <div class="lab-result-box" id="astro-res">
+    <em>Introdueix els milions de km per calcular les UA i el retard llum.</em>
+  </div>
+</div>
+
+---
+
 ##### Repte 1: Dimensionament de latència i enllaços per a satèl·lits LEO vs. GEO
 - **Objectiu:** Comparar el temps d'anada i tornada (*Round Trip Time* - RTT) en xarxes informàtiques satel·litàries.
 - **Situació de telecomunicacions:** Una empresa vol dotar d'internet un refugi aïllat de muntanya i avalua dues tecnologies:
@@ -500,6 +519,48 @@ Analitza les dades de la següent taula i respon a les preguntes:
 
 ---
 
+#### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
+
+Introdueix els teus resultats numèrics i comprova immediatament si la teua resposta és correcta:
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud6_q1" data-answer="8" data-hint="Són 8: Mercuri, Venus, Terra, Mart, Júpiter, Saturn, Urà i Neptú.">
+  <div class="quiz-question">✍️ Repte interactiu: Quants planetes principals formen oficialment el nostre Sistema Solar?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud6_q2" data-answer="150|149.6|149,6" data-hint="Aproximadament 150 milions de km (1 Unitat Astronòmica).">
+  <div class="quiz-question">✍️ Repte interactiu: A quina distància mitjana aproximada (en milions de quilòmetres) està la Terra del Sol?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud6_q3" data-answer="300" data-hint="La constant c és de 300.000 km/s (300 milers).">
+  <div class="quiz-question">✍️ Repte interactiu: A quina velocitat es propaga la llum en el buit (expressat en milers de km/s, és a dir, escriu '300')?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud6_q4" data-answer="8|8.3|8,3" data-hint="150.000.000 km / 300.000 km/s = 500 segons ≈ 8,3 minuts.">
+  <div class="quiz-question">✍️ Repte interactiu: Aproximadament quants minuts triga la llum emesa pel Sol a arribar fins a la superfície de la Terra?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+---
+
 #### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 ##### Llista de comprovació per a l'alumnat
@@ -519,6 +580,25 @@ Analitza les dades de la següent taula i respon a les preguntes:
 | **Planetologia comparada (Rocosos/Jovians)** | Contrasta densitats, atmosferes, diàmetres i anells dels 8 planetes del Sistema Solar de forma exhaustiva. | Agrupa correctament els planetes en rocosos i gasosos explicant les diferències clau. | Recorda l'ordre dels planetes respecte al Sol però confon la seua composició interna. | No sap distingir els planetes interiors dels exteriors o inclou la Lluna com a planeta. |
 | **Velocitat de la llum i telecomunicacions** | Calcula retards de propagació i latències RTT en òrbites LEO/GEO i missions a Mart amb càlcul impecable. | Aplica la fórmula $t = d/c$ de forma correcta i raona el retard en transmissions de ràdio. | Calcula el temps bàsic Terra-Lluna però té dificultats per convertir segons a minuts. | No comprèn que les ones electromagnètiques tenen una velocitat finita i creu que la comunicació és instantània. |
 | **Òrbites satel·litàries i tecnologia aplicada** | Justifica la tria d'òrbites LEO o GEO segons requeriments de latència i orientació d'antenes parabòliques. | Explica la utilitat de l'òrbita geoestacionària per a satèl·lits de televisió i clima. | Descriu què és un satèl·lit artificial però confon altituds orbitals. | Incapaç de relacionar l'òrbita d'un satèl·lit amb el funcionament del GPS o la televisió domèstica. |
+
+---
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>En acabar els reptes interactius i la llista de comprovació, genera el teu informe oficial per adjuntar-lo o enganxar-lo al lliurament de la tasca d'Aules:</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
+    <input type="text" id="aules-student-name" placeholder="Ex: Pere Martí Soler">
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Informe (.txt)</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>

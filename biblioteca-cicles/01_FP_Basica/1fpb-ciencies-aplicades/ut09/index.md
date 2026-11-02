@@ -436,6 +436,33 @@ Un circuit de refrigeració líquida de taller utilitza un cabal d'aigua desioni
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
+<div class="lab-widget">
+  <div class="lab-widget-title">🔬 Calculador de Petjada Hídrica Domèstica i Estalvi Sostenible</div>
+  <p style="margin: 0 0 12px 0; font-size: 0.88rem; color: var(--text-muted);">
+    Calcula el consum setmanal d'aigua dolça a la teua llar i comprova quants litres podries estalviar instal·lant dispositius d'eficiència ecològica:
+  </p>
+  <div class="lab-form-grid">
+    <div class="lab-field">
+      <label for="aigua-dutxa">Minuts de dutxa al dia:</label>
+      <input type="number" id="aigua-dutxa" value="8" min="1" max="60">
+    </div>
+    <div class="lab-field">
+      <label for="aigua-wc">Descàrregues de cisterna de WC al dia:</label>
+      <input type="number" id="aigua-wc" value="5" min="1" max="30">
+    </div>
+    <div class="lab-field">
+      <label for="aigua-rent">Rentades de roba a la setmana:</label>
+      <input type="number" id="aigua-rent" value="3" min="0" max="20">
+    </div>
+  </div>
+  <button type="button" class="btn-lab-action" onclick="runCalcAigua()">⚡ Calcular Petjada Hídrica</button>
+  <div class="lab-result-box" id="aigua-res">
+    <em>Ompli els teus hàbits diaris per calcular el consum setmanal i l'estalvi d'aigua.</em>
+  </div>
+</div>
+
+---
+
 ##### Repte 1: Manteniment preventiu d'un sistema de refrigeració líquida AIO
 - **Objectiu:** Executar el protocol de purgat, neteja i ompliment d'un circuit de refrigeració líquida d'un ordinador de disseny.
 - **Situació de taller:** Un equip de màxim rendiment amb refrigeració líquida personalitzada pateix sobreescalfament tèrmic (la CPU arriba a $95\text{ °C}$ en repòs). En desmuntar el circuit, s'observa el fluid tèrbol i amb sediments verds blavosos:
@@ -467,6 +494,48 @@ Un circuit de refrigeració líquida de taller utilitza un cabal d'aigua desioni
 
 ---
 
+#### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
+
+Introdueix els teus resultats numèrics i comprova immediatament si la teua resposta és correcta:
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud9_q1" data-answer="70|71" data-hint="Aproximadament el 70-71% de la superfície terrestre està coberta d'aigua.">
+  <div class="quiz-question">✍️ Repte interactiu: Quin percentatge (%) aproximat de la superfície del planeta Terra està cobert per aigua?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud9_q2" data-answer="3|2.5|2,5" data-hint="Únicament el 2,5% - 3% de l'aigua terrestre és dolça (i la majoria en glaceres).">
+  <div class="quiz-question">✍️ Repte interactiu: Quin percentatge (%) aproximat de tota l'aigua del planeta és aigua dolça disponible?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud9_q3" data-answer="100" data-hint="El punt d'ebullició de l'aigua a 1 atmosfera de pressió és de 100 °C.">
+  <div class="quiz-question">✍️ Repte interactiu: A quina temperatura en graus Celsius (°C) bull l'aigua dolça a nivell del mar?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud9_q4" data-answer="120" data-hint="Multiplica el temps pel cabal: 10 minuts × 12 L/min = 120 litres.">
+  <div class="quiz-question">✍️ Repte interactiu: Quants litres d'aigua es consumeixen en una dutxa de 10 minuts amb una aixeta estàndard que raja a 12 L/min?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+---
+
 #### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 ##### Llista de comprovació per a l'alumnat
@@ -487,6 +556,25 @@ Un circuit de refrigeració líquida de taller utilitza un cabal d'aigua desioni
 | **Cicle hidrològic i dinàmica fluvial** | Descriu totes les etapes del cicle de l'aigua i els tres trams d'un riu (alt, mitjà, baix) amb el seu modelat geològic. | Explica el cicle hidrològic de forma completa i diferencia erosió, transport i sedimentació. | Recorda l'evaporació i la pluja però s'oblida de la infiltració i els aqüífers. | No comprèn el cicle continu de l'aigua o creu que l'aigua de pluja es crea de nou a l'atmosfera. |
 | **Termodinàmica i càlculs de calorimetria** | Aplica l'equació $Q = m \cdot c_e \cdot \Delta T$ per resoldre problemes de dissipació tèrmica en refrigeració líquida sense errors. | Calcula la quantitat de calor i l'augment de temperatura correctament amb petites vacil·lacions d'unitats. | Recorda la fórmula però té dificultats per aïllar la variació de temperatura $\Delta T$. | No sap aplicar la calor específica ni relacionar energia en Joules amb potència en Watts. |
 | **Refrigeració de taller i cicle urbà** | Argumenta l'ús d'aigua desionitzada, evita la corrosió galvànica i distingeix clarament les funcions d'ETAP i EDAR. | Explica la neteja de circuits líquids de PC i la diferència entre potabilitzar i depurar aigua. | Sap què és l'aigua destil·lada però desconeix què és la corrosió galvànica entre coure i alumini. | Creu que l'aigua d'aixeta és adequada per a refrigeració de PCs o confon ETAP amb EDAR. |
+
+---
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>En acabar els reptes interactius i la llista de comprovació, genera el teu informe oficial per adjuntar-lo o enganxar-lo al lliurament de la tasca d'Aules:</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
+    <input type="text" id="aules-student-name" placeholder="Ex: Pere Martí Soler">
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Informe (.txt)</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>

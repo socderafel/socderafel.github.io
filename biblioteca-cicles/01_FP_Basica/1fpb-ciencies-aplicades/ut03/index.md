@@ -629,6 +629,33 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
+<div class="lab-widget">
+  <div class="lab-widget-title">🔬 Simulador de Taller: Balanç Econòmic i Tresoreria amb Enters (±)</div>
+  <p style="margin: 0 0 12px 0; font-size: 0.88rem; color: var(--text-muted);">
+    Calcula en directe el saldo net d'una empresa de reparació informàtica gestionant ingressos (+) i despeses de recanvis (-):
+  </p>
+  <div class="lab-form-grid">
+    <div class="lab-field">
+      <label for="bal-inicial">Saldo inicial de caixa (€):</label>
+      <input type="number" id="bal-inicial" value="120" step="10">
+    </div>
+    <div class="lab-field">
+      <label for="bal-ingressos">Total ingressos de reparacions (€):</label>
+      <input type="number" id="bal-ingressos" value="450" min="0" step="10">
+    </div>
+    <div class="lab-field">
+      <label for="bal-despeses">Total despeses en components (€):</label>
+      <input type="number" id="bal-despeses" value="380" min="0" step="10">
+    </div>
+  </div>
+  <button type="button" class="btn-lab-action" onclick="runCalcBalanc()">⚡ Calcular Balanç de Caixa</button>
+  <div class="lab-result-box" id="bal-res">
+    <em>Prem el botó per analitzar l'estat econòmic del taller.</em>
+  </div>
+</div>
+
+---
+
 ##### Repte 1: Balanç financer de tresoreria i control de caixes en taller de reparacions
 - **Objectiu:** Utilitzar la suma i resta de nombres enters per gestionar la comptabilitat diària d'un negoci tècnic.
 - **Situació de taller:** El departament tècnic d'un servei de reparació d'ordinadors comença el mes amb un fons inicial de caixa de $+450\text{ €}$. Durant la primera setmana es produeixen els següents moviments:
@@ -675,6 +702,48 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 
 ---
 
+#### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
+
+Introdueix els teus resultats numèrics i comprova immediatament si la teua resposta és correcta:
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud3_q1" data-answer="22" data-hint="La variació és temperatura final menys inicial: 18 - (-4) = 18 + 4 = 22 °C.">
+  <div class="quiz-question">✍️ Repte interactiu: Quina és la variació tèrmica (en °C) si la temperatura d'una sala passa de -4 °C a la matinada a +18 °C al migdia?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud3_q2" data-answer="7" data-hint="Regla de signes: (-3) · (-5) = +15. Després suma: 15 + (-8) = 7.">
+  <div class="quiz-question">✍️ Repte interactiu: Calcula el resultat exacte de l'operació amb enters: (-3) · (-5) + (-8)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud3_q3" data-answer="16" data-hint="Com que l'exponent és parell, el resultat és positiu: (-2) · (-2) · (-2) · (-2) = +16.">
+  <div class="quiz-question">✍️ Repte interactiu: Quin és el resultat numèric exacte de la potència de base negativa (-2)⁴?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-quiz" data-quiz-id="ca1_ud3_q4" data-answer="970" data-hint="Desnivell = |850 - (-120)| = 850 + 120 = 970 metres.">
+  <div class="quiz-question">✍️ Repte interactiu: Quin és el desnivell vertical total en metres entre una antena a +850 m i un túnel de fibra a -120 m?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+---
+
 #### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 ##### Llista de comprovació per a l'alumnat
@@ -694,6 +763,25 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 | **Producte, quocient i jerarquia combinada** | Aplica la jerarquia oficial i la regla de signes en expressions complexes amb claudàtors niats de manera impecable. | Resol expressions combinades amb bona aplicació de la jerarquia i xicotets errors en càlculs finals. | Recorda la prioritat de multiplicacions sobre sumes però s'encalla en desfer claudàtors interiors. | Incompleix la jerarquia d'operacions calculant d'esquerra a dreta sense respectar els operadors. |
 | **Potències i arrels en $\mathbb{Z}$** | Distingeix amb claredat $(-a)^n$ de $-a^n$, aplica propietats d'exponents i justifica la inexistència d'arrels negatives en $\mathbb{Z}$. | Calcula potències de base negativa amb exponent parell/imparell i simplifica expressions de la mateixa base. | Calcula potències bàsiques però comet errors en el signe de bases negatives sense parèntesis. | Multiplica la base per l'exponent o afirma erròniament que $\sqrt{-16} = -4$. |
 | **Resolució de problemes aplicats (taller/clima)** | Tradueix enunciats tècnics de tresoreria, ascensors i cicles tèrmics a polinomis aritmètics enters i n'interpreta el resultat. | Planteja i resol problemes de la vida quotidiana i de taller interpretant el sentit físic del resultat. | Resol problemes senzills amb ajuda en la formulació de les operacions o en el conveni de signes. | Incapaç de traduir un enunciat verbal a nombres positius i negatius o d'interpretar el resultat final. |
+
+---
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>En acabar els reptes interactius i la llista de comprovació, genera el teu informe oficial per adjuntar-lo o enganxar-lo al lliurament de la tasca d'Aules:</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
+    <input type="text" id="aules-student-name" placeholder="Ex: Pere Martí Soler">
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Informe (.txt)</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
