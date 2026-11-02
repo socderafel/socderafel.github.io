@@ -99,115 +99,322 @@ next_label: "UD8 L'Atmosfera Terrestre ➡️"
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**7.1 La Terra: Característiques d'un Planeta Únic per a la Vida**](#71-la-terra-característiques-dun-planeta-únic-per-a-la-vida)
-2. [**7.2 Els Moviments de la Terra: Rotació, Translació i les Estacions**](#72-els-moviments-de-la-terra-rotació-translació-i-les-estacions)
-3. [**7.3 La Lluna, les Fases Lunars, els Eclipsis i les Marees**](#73-la-lluna-les-fases-lunars-els-eclipsis-i-les-marees)
-4. [**7.4 L'Estructura Interna de la Terra (La Geosfera) i Dinàmica Tectònica**](#74-lestructura-interna-de-la-terra-la-geosfera-i-dinàmica-tectònica)
-5. [**7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#75-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
-
----
-
-## 📌 7.1 La Terra: Característiques d'un Planeta Únic per a la Vida
-
-La Terra és l'únic cos celeste conegut que allotja vida biològica complexa. Aquesta singularitat es deu a la conjunció de quatre factors fisicoquímics fonamentals:
-
-1. **Ubicació en la Zona d'Habitabilitat Circumestel·lar:**
-   - La Terra orbita a $1\text{ UA}$ del Sol ($150.000.000\text{ km}$), rebent una irradiància solar òptima que permet una temperatura mitjana superficial de **$+15\text{ °C}$**, compatible amb la persistència d'**aigua líquida**.
-2. **Hidrosfera Abundant:**
-   - Més del **$71\%$ de la superfície** terrestre està coberta per oceans, mars, rius i glaceres, regulant el clima global gràcies a l'elevat calor específic de l'aigua.
-3. **Atmosfera Protectora i Respirable:**
-   - Composició: $78\%$ de nitrogen ($\text{N}_2$), $21\%$ d'oxigen ($\text{O}_2$), $0{,}9\%$ d'argó i $0{,}04\%$ de diòxid de carboni ($\text{CO}_2$).
-   - Conté la **capa d'ozó ($\text{O}_3$)** a l'estratosfera, que absorbeix la radiació ultraviolada d'alta energia ($\text{UV-C}$ i $\text{UV-B}$), letal per a les cèl·lules.
-4. **Magnetosfera Terrestre (Escut Magnètic):**
-   - El gir del ferro i níquel líquids al nucli extern genera un potent camp magnètic dipolar que desvia les partícules ionitzades del vent solar, evitant que erosionen l'atmosfera com va ocórrer a Mart.
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec7-1"><strong>7.1 La Terra: Característiques d'un Planeta Únic per a la Vida</strong></a></li>
+    <li><a href="#sec7-2"><strong>7.2 Els Moviments de la Terra: Rotació, Translació i les Estacions</strong></a></li>
+    <li><a href="#sec7-3"><strong>7.3 La Lluna, les Fases Lunars, els Eclipsis i les Marees</strong></a></li>
+    <li><a href="#sec7-4"><strong>7.4 L'Estructura Interna de la Terra (La Geosfera) i Activitats</strong></a></li>
+    <li><a href="#sec7-5"><strong>7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 7.2 Els Moviments de la Terra: Rotació, Translació i les Estacions
+## 📌 7.1 La Terra: Característiques d'un Planeta Únic per a la Vida {#sec7-1}
 
-### 1. El Moviment de Rotació
-- **Definició:** Gir de la Terra sobre el seu propi eix polar imaginari en sentit oest-est (contrari a les agulles del rellotge vist des del pol Nord).
-- **Durada:** $24\text{ hores}$ exactes ($1\text{ dia solar}$).
-- **Efectes:**
-  - Alternança del dia i la nit, permetent cicles tèrmics regulars d'escalfament i refredament.
-  - Divisió del planeta en **24 fusos horaris** de $15^\circ$ de longitud cadascun ($360^\circ : 24\text{ h} = 15^\circ/\text{h}$).
-
-### 2. El Moviment de Translació
-- **Definició:** Moviment orbital al voltant del Sol descrivint una trajectòria el·líptica de baixa excentricitat.
-- **Durada:** $365\text{ dies}$, $5\text{ hores}$, $48\text{ minuts}$ i $46\text{ segons}$ ($365{,}25\text{ dies}$).
-- **Ajust cronològic:** Les $\approx 6\text{ hores}$ sobrants s'acumulen durant 4 anys ($6\text{ h} \times 4 = 24\text{ h}$), motiu pel qual cada quatre anys s'afegeix un dia al mes de febrer (**any de traspàs de 366 dies**).
-
-### 3. Les Estacions de l'Any i la Inclinació de l'Eix
-> [!IMPORTANT]
-> Les estacions de l'any **NO** es produeixen perquè la Terra estiga més a prop o més lluny del Sol (de fet, a l'hivern boreal la Terra es troba al periheli, el seu punt més proper al Sol). La causa real és la **inclinació constant de l'eix de rotació de $23{,}5^\circ$** respecte al pla de l'eclíptica.
-
-- **Solsticis (Estiu i Hivern):** Moment de màxima diferència en la durada del dia i la nit.
-  - *Solstici d'estiu (21 de juny a l'hemisferi nord):* El pol Nord apunta cap al Sol; els raigs incideixen perpendicularment sobre el Tròpic de Càncer; és el dia més llarg de l'any.
-  - *Solstici d'hivern (21 de desembre):* El pol Sud s'inclina cap al Sol; els raigs incideixen oblics al nord; és la nit més llarga de l'any.
-- **Equinoccis (Primavera i Tardor):** Els raigs solars incideixen perpendicularment sobre l'equador (20 de març i 22-23 de setembre). El dia i la nit duren exactament $12\text{ hores}$ a qualsevol punt del planeta.
+La **Terra** és el tercer planeta des del Sol i, fins on sabem avui dia, l'únic racó de l'Univers que acull vida. És un planeta geològicament actiu i dinàmic, les condicions físico-químiques del qual han permés el desenvolupament i la continuïtat de la biosfera al llarg de més de 3.500 milions d'anys.
 
 ---
 
-## 📌 7.3 La Lluna, les Fases Lunars, els Eclipsis i les Marees
+### 1. Per Què la Terra és un Planeta Habitable?
 
-La Lluna és l'únic satèl·lit natural de la Terra, amb un diàmetre de $3.474\text{ km}$ (aproximadament $\frac{1}{4}$ del terrestre).
+L'existència de vida a la Terra és el resultat de la combinació de cinc factors astronòmics i geològics excepcionals:
 
-### Rotació Sincrònica i Fases Lunars:
-La Lluna tarda exactament el mateix temps a girar sobre el seu propi eix que a completar una òrbita al voltant de la Terra (**$27{,}3\text{ dies}$**, període orbital sincrònic). Per aquest motiu, **sempre mostra la mateixa cara visible cap a la Terra**.
+#### 1. La Distància al Sol (Zona d'Habitabilitat)
+La Terra orbita a una distància mitjana d'uns $150.000.000\text{ km}$ ($1\text{ UA}$) del Sol. Si estiguérem tan a prop com Venus, l'aigua s'evaporaria completament; si estiguérem tan lluny com Mart, l'aigua romandria permanentment congelada.
 
-| Fase Lunar | Posició Relativa Sol-Terra-Lluna | Aparença des de la Terra |
+#### 2. Una Temperatura Mitjana Suau ($15\text{ }^\circ\text{C}$)
+Gràcies a la distància al Sol i a l'efecte d'hivernacle natural provocat pels gasos de l'atmosfera (com el vapor d'aigua i el diòxid de carboni), la Terra manté una temperatura mitjana global d'uns **$15\text{ }^\circ\text{C}$**, ideal perquè l'aigua puga coexistir en els seus tres estats físics: líquid, sòlid i gasós.
+
+#### 3. Presència d'Abundant Aigua Líquida
+L'aigua és el dissolvent universal en el qual tenen lloc totes les reaccions químiques de la vida cel·lular. Més del **$70\%$ de la superfície terrestre** està coberta per aigua líquida en oceans, mars, rius i llacs, formant el motor del cicle hidrològic.
+
+#### 4. Una Atmosfera Rica en Oxigen
+La nostra atmosfera conté un **$21\%$ d'oxigen molecular ($\text{O}_2$)**, gas indispensable per a la respiració cel·lular dels éssers vius aeròbics. A més, a l'estratosfera compta amb una **capa d'ozó ($\text{O}_3$)** que filtra les letals radiacions solars ultraviolades (UV).
+
+#### 5. Un Camp Magnètic Protector (La Magnetosfera)
+El moviment de convecció del ferro líquid que gira al nucli extern de la Terra genera un potent **camp magnètic**. Aquest camp actua com un escut invisible (la *magnetosfera*) que desvia el perillós vent solar de partícules carregades procedents del Sol, evitant que s'escombre l'atmosfera cap a l'espai.
+
+---
+
+### 2. Les Grans Capes de la Terra
+
+Per a comprendre com funciona la Terra com un sistema interconnectat, distingim quatre grans subsistemes terrestres:
+
+```
+                  ┌── ATMOSFERA (capa de gasos que envolta la Terra)
+                  │
+PLANETA TERRA ────┼── HIDROSFERA (tota l'aigua en estat sòlid, líquid o gas)
+                  │
+                  ├── GEOSFERA   (la massa rocosa mineral sòlida)
+                  │
+                  └── BIOSFERA   (el conjunt de tots els éssers vius)
+```
+
+Tots quatre components interactuen íntimament: per exemple, la geosfera allibera gasos pels volcans a l'atmosfera, l'atmosfera condensa l'aigua de la hidrosfera en forma de pluja, i l'aigua i els nutrients del sòl permeten créixer a les plantes de la biosfera.
+
+---
+
+### 💡 Resum de Conceptes Clau
+
+- La Terra és l'únic planeta conegut amb vida gràcies a la seua **distància al Sol**, temperatura mitjana de **$15\text{ }^\circ\text{C}$**, **aigua líquida**, **atmosfera amb oxigen** i **camp magnètic protector**.
+- El camp magnètic es genera al nucli terrestre i ens protegeix del vent solar.
+- Els quatre subsistemes de la Terra són l'**Atmosfera**, la **Hidrosfera**, la **Geosfera** i la **Biosfera**.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 7.2 Els Moviments de la Terra: Rotació, Translació i les Estacions {#sec7-2}
+
+La Terra no roman immòbil a l'espai, sinó que es troba en continu moviment sota la influència de la gravetat del Sol. Els seus dos moviments principals són la **rotació** i la **translació**.
+
+---
+
+### 1. El Moviment de Rotació: El Dia i la Nit
+
+La **rotació** és el gir que fa la Terra sobre el seu propi eix imaginari:
+- **Sentit del gir:** Gira d'**oest cap a est** (en sentit antihorari vist des del Pol Nord). Per això veiem eixir el Sol per l'est i pondre's per l'oest.
+- **Durada:** Tarda exactament **24 hores** (un dia solar sencer).
+- **Inclinació de l'eix:** L'eix de rotació no és vertical respecte al pla orbital, sinó que està inclinat un angle de **$23{,}5^\circ$**.
+- **Conseqüència fonamental:** La successió alternada del **dia i la nit**. La meitat que queda encarada al Sol rep llum i calor (dia), mentre que la meitat oposada roman a les fosques (nit). Això evita temperatures extremes com les de Mercuri.
+
+---
+
+### 2. El Moviment de Translació: L'Any i els Anys de Traspàs
+
+La **translació** és el desplaçament que fa la Terra al voltant del Sol descrivint una òrbita el·líptica a una velocitat mitjana d'uns $107.000\text{ km/h}$:
+- **Durada:** Tarda **365 dies, 5 hores i 48 minuts** (aproximadament 365 dies i 6 hores).
+- **L'Any de Traspàs:** Com que el calendari oficial compta 365 dies exactes, cada any sobren vora 6 hores. En quatre anys, aquestes hores sumen un dia sencer ($6\text{ h} \times 4 = 24\text{ h} = 1\text{ dia}$). Per compensar aquest desfasament, cada quatre anys s'afegeix un dia al mes de febrer (el 29 de febrer), donant lloc a un **any de traspàs de 366 dies**.
+
+---
+
+### 3. L'Origen de les Estacions de l'Any
+
+> [!WARNING]
+> ### Error Freqüent a Desterrar
+> Les estacions de l'any **NO es deuen a la distància de la Terra al Sol**. De fet, la Terra està en el seu punt més proper al Sol (periheli) a principis de gener, en ple hivern a l'hemisferi nord!
+
+La veritable causa de les quatre estacions és la **inclinació de $23{,}5^\circ$ de l'eix de rotació terrestre**:
+
+1. Durant una part de l'any, l'**hemisferi nord està inclinat cap al Sol**: els raigs solars arriben de manera molt perpendicular i concentrada, i els dies són més llargs que les nits $\rightarrow$ és **estiu a l'hemisferi nord** i **hivern a l'hemisferi sud**.
+2. Sis mesos després, la Terra es troba a l'altre costat de l'òrbita i és l'**hemisferi sud el que queda inclinat cap al Sol**: els raigs arriben molt inclinats al nord, dispersant la calor, i les nits són més llargues que els dies $\rightarrow$ és **hivern a l'hemisferi nord** i **estiu a l'hemisferi sud**.
+
+```
+    Solstici d'Estiu (Nord)                                Solstici d'Hivern (Nord)
+         (21 de juny)                                           (21 de desembre)
+    Pol Nord inclinat cap al Sol                           Pol Nord inclinat lluny del Sol
+            \                                                       \
+             O ───────────────>    [ SOL ]    <─────────────── O
+```
+
+#### Solsticis i Equinoccis (Hemisferi Nord)
+- **Solstici d'Estiu (20-21 de juny):** El dia més llarg i la nit més curta de l'any. Comença l'estiu.
+- **Equinocci de Tardor (22-23 de setembre):** Els raigs solars incideixen perpendicularment a l'Equador. El dia i la nit tenen exactament la mateixa durada ($12\text{ hores}$). Comença la tardor.
+- **Solstici d'Hivern (21-22 de desembre):** La nit més llarga i el dia més curt de l'any. Comença l'hivern.
+- **Equinocci de Primavera (20-21 de març):** El dia i la nit tornen a durar 12 hores iguals. Comença la primavera.
+
+---
+
+### 💡 Resum de Conceptes Clau
+
+- La **rotació** dura 24 hores i causa el dia i la nit.
+- La **translació** dura 365 dies i 6 hores; cada 4 anys hi ha un **any de traspàs** (366 dies).
+- Les **estacions de l'any** són degudes a la **inclinació de $23{,}5^\circ$ de l'eix de gir** de la Terra, no a la distància al Sol.
+- En els **equinoccis** el dia i la nit duren igual (12 h); en els **solsticis** es produeix la màxima diferència entre hores de llum i foscor.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 7.3 La Lluna, les Fases Lunars, els Eclipsis i les Marees {#sec7-3}
+
+La **Lluna** és l'únic satèl·lit natural de la Terra. Situada a una distància mitjana de $384.400\text{ km}$, no té llum pròpia, no té atmosfera ni aigua líquida, i té un paper determinant en la regulació dels cicles biològics i les marees dels nostres oceans.
+
+---
+
+### 1. La Lluna i la Cara Oculta
+
+- **Dimensions:** Té un diàmetre de $3.474\text{ km}$ (aproximadament una quarta part del diàmetre de la Terra).
+- **Rotació Sincrònica:** La Lluna tarda exactament el mateix temps en girar sobre el seu propi eix (rotació) que en donar una volta completa al voltant de la Terra (translació): **28 dies** (un mes lunar).
+- **Conseqüència:** Des de la superfície de la Terra **sempre veiem exactament la mateixa cara de la Lluna**. L'altra meitat (la cara oculta) no va poder ser observada ni fotografiada per la humanitat fins a l'any 1959 per la sonda espacial soviètica *Luna 3*.
+
+---
+
+### 2. Les Fases Lunars
+
+A mesura que la Lluna es desplaça al voltant de la Terra, la porció de la seua cara visible il·luminada pel Sol va variant contínuament, donant lloc a les **quatre fases lunars**:
+
+```
+        [ Lluna Nova ]  (Entre el Sol i la Terra; no es veu)
+              │
+              ▼
+      [ Quart Creixent ] (Forma de "D"; creix la llum)
+              │
+              ▼
+        [ Lluna Plena ]  (Terra entre el Sol i la Lluna; 100% visible)
+              │
+              ▼
+      [ Quart Minvant ]  (Forma de "C"; minva la llum)
+```
+
+1. **Lluna Nova:** La Lluna se situa entre la Terra i el Sol. La seua cara il·luminada mira cap a l'espai, de manera que des de la Terra queda a les fosques i no es veu.
+2. **Quart Creixent:** La cara visible es va il·luminant progressivament d'est a oest, adoptant la forma d'una lletra **"D"**.
+3. **Lluna Plena:** La Terra se situa entre el Sol i la Lluna. La cara visible rep directament la llum solar i es veu com un cercle complet brillant.
+4. **Quart Minvant:** La zona il·luminada comença a decréixer progressivament, adoptant la forma d'una lletra **"C"**.
+
+> [!TIP]
+> ### Regla Mnemotècnica
+> La Lluna és "mentidera": quan té forma de **"C"** no creix sinó que **minva** (decreix), i quan té forma de **"D"** no decreix sinó que **creix**!
+
+---
+
+### 3. Els Eclipsis: Ombra i Penombra
+
+Un **eclipsi** es produeix quan un cos celeste s'interposa en la línia de visió entre altres dos astres, projectant la seua ombra:
+
+#### A) Eclipsi de Sol
+- **Posició dels astres:** El Sol, la **Lluna** i la Terra s'alineen en aquest ordre ($\text{Sol} \rightarrow \text{Lluna} \rightarrow \text{Terra}$).
+- **Com ocorre:** La Lluna s'interposa davant del Sol tapant-ne la llum i projectant un con d'ombra sobre una franja estreta de la superfície terrestre.
+- Només pot ocórrer durant la fase de **Lluna Nova**. Pot ser **total** (el dia es fa de nit durant uns minuts), **anular** (es veu un anell de foc) o **parcial**.
+
+#### B) Eclipsi de Lluna
+- **Posició dels astres:** El Sol, la **Terra** i la Lluna s'alineen en aquest ordre ($\text{Sol} \rightarrow \text{Terra} \rightarrow \text{Lluna}$).
+- **Com ocorre:** La Terra s'interposa entre el Sol i la Lluna, projectant la seua gegantina ombra sobre el nostre satèl·lit.
+- Només pot ocórrer durant la fase de **Lluna Plena**. La Lluna no desapareix del tot, sinó que adquireix un to vermellós ataronjat molt característic (l'anomenada "Lluna de sang"), ja que l'atmosfera de la Terra desvia els tons rogencs de la llum solar cap a l'ombra.
+
+---
+
+### 4. Les Marees: La Força de la Gravetat als Oceans
+
+Les **marees** són moviments periòdics d'ascens i descens del nivell de les aigües del mar causats per l'**atracció gravitatòria que la Lluna (i en menor mesura el Sol) exerceix sobre la Terra**:
+
+- **Pleamar (Marea Alta):** El nivell de l'aigua assoleix la seua alçada màxima a les zones de la Terra que queden alineades amb la Lluna.
+- **Baixamar (Marea Baixa):** El nivell de l'aigua baixa fins al seu punt mínim a les zones perpendiculars.
+- En cada punt costaner es produeixen aproximadament **dues marees altes i dues marees baixes cada 24 hores i 50 minuts**.
+
+#### Marees Vives vs Marees Mortes
+- **Marees Vives:** Es produeixen quan el Sol, la Lluna i la Terra estan en línia recta (durant la **Lluna Plena** i la **Lluna Nova**). Les atraccions gravitatòries del Sol i de la Lluna se sumen, provocant marees molt altes i baixes extremades.
+- **Marees Mortes:** Es produeixen quan la Lluna està en **Quart Creixent** o **Quart Minvant** (formant un angle recte de $90^\circ$ amb la línia Terra-Sol). Les forces gravitatòries es contraresten parcialment i les marees tenen poca oscil·lació.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 7.4 L'Estructura Interna de la Terra (La Geosfera) i Activitats {#sec7-4}
+
+La **geosfera** és la part sòlida i rocosa del nostre planeta. S'estén des de la superfície dels continents i els fons dels oceans fins al centre mateix de la Terra, a uns **$6.371\text{ km}$ de profunditat**.
+
+---
+
+### 1. Com Coneixem l'Interior de la Terra?
+
+Com que el pou més profund mai excavat per la humanitat (el pou de Kola a Rússia) només va arribar a $12{,}2\text{ km}$, els científics han hagut d'utilitzar **mètodes indirectes** per conèixer l'interior terrestre:
+- **L'estudi de les ones sísmiques:** Els terratrèmols generen ones de xoc que travessen l'interior del planeta. Com que la velocitat i la direcció de les ones canvien sobtadament quan xoquen amb materials de diferent densitat o estat (sòlid o líquid), han permés dibuixar les diferents capes internes de la Terra amb gran precisió.
+
+---
+
+### 2. Les Capes de la Geosfera (Model Geoquímic)
+
+Segons la composició dels materials, la geosfera es divideix en tres capes concèntriques:
+
+```
+  [ ESCORÇA ]  ➔ 5 a 70 km (Continental: granit / Oceànica: basalt)
+       │
+  [ MANTELL ]  ➔ 2.900 km  (Superior i Inferior: peridotites i magma fluid)
+       │
+   [ NUCLI ]   ➔ 6.371 km  (Extern: líquid / Intern: sòlid; Ferro i Níquel)
+```
+
+| Capa | Gruix / Profunditat | Composició i Característiques |
 | :--- | :--- | :--- |
-| **Lluna Nova** | La Lluna se situa entre la Terra i el Sol | Cara il·luminada oposada a la Terra; invisible a simple vista |
-| **Quart Creixent** | Formant un angle de $90^\circ$ respecte a la línia Terra-Sol | Té forma de lletra **"D"**; la meitat dreta apareix il·luminada |
-| **Lluna Plena** | La Terra se situa entre el Sol i la Lluna | Tota la cara visible reflecteix la llum solar; disc complet |
-| **Quart Minvant** | Angle de $90^\circ$ en sentit descendent | Té forma de lletra **"C"**; només la meitat esquerra s'il·lumina |
+| **Escorça** | Superfície fins a $5-70\text{ km}$ | Capa més prima, externa i freda. Es divideix en:<br>• **Escorça Continental:** Fa entre $30$ i $70\text{ km}$ de gruix sota les grans muntanyes. Formada per roques com el granit.<br>• **Escorça Oceànica:** Molt més prima ($5-10\text{ km}$). Forma el fons marí amb roques volcàniques com el basalt. |
+| **Mantell** | De $70$ a $2.900\text{ km}$ | És la capa més voluminosa (ocupa el $84\%$ de la Terra). Formada per peridotita (roca molt densa rica en ferro i magnesi). A causa de les altes temperatures, les roques presenten un comportament viscós plàstic amb **corrents de convecció** de magma que mouen les plaques superficials. |
+| **Nucli** | De $2.900$ a $6.371\text{ km}$ | Esfera central d'aliatge metàl·lic de **ferro ($90\%$) i níquel**:<br>• **Nucli Extern:** En estat líquid fluorescent a gran temperatura ($4.000\text{ }^\circ\text{C}$). El seu moviment continu genera el **camp magnètic terrestre**.<br>• **Nucli Intern:** En estat sòlid a causa de les brutals pressions, amb temperatures superiors a **$5.500\text{ }^\circ\text{C}$** (similar a la superfície del Sol). |
 
-### Eclipsis:
-- **Eclipsi de Sol:** La Lluna s'interposa directament entre el Sol i la Terra, projectant el seu con d'ombra sobre la superfície terrestre. Només pot ocórrer en fase de **Lluna Nova**.
-- **Eclipsi de Lluna:** La Terra s'interposa entre el Sol i la Lluna, projectant la seua ombra sobre la Lluna. Només pot ocórrer en fase de **Lluna Plena**.
-
-### Dinàmica de les Marees:
-Són oscil·lacions periòdiques del nivell del mar provocades per la força d'atracció gravitatòria combinada de la Lluna i el Sol:
-- **Pleamar (Marea alta):** Nivell màxim de les aigües oceàniques (dues vegades al dia).
-- **Baixamar (Marea baixa):** Nivell mínim de les aigües.
-- **Marees Vives:** Quan el Sol, la Terra i la Lluna s'alineen (Lluna Nova i Lluna Plena), les forces d'atracció se sumen creant les marees més extremes.
-- **Marees Mortes:** Quan la Lluna forma un angle recte de $90^\circ$ (Quart Creixent i Minvant), les forces gravitatòries es contraresten donant marees molt suaus.
+![Estructura interna i capes de la Terra](../img/capes_de_la_terra.jpg)
+*Figura 7.1: Estructura interna de la Terra en capes: **(1)** Escorça terrestre (sòlida i rocosa), **(2)** Mantell (silicats i magma amb corrents de convecció), **(3)** Nucli extern (ferro i níquel fos en estat líquid), **(4)** Nucli intern (esfera metàl·lica sòlida incandescent).*
 
 ---
 
-## 📌 7.4 L'Estructura Interna de la Terra (La Geosfera) i Dinàmica Tectònica
+### 3. La Litosfera i la Tectònica de Plaques
 
-La geosfera és la part sòlida i rocosa del planeta. Com que no podem perforar més enllà de $12\text{ km}$ (pou de Kola a Rússia), la seua estructura interna s'estudia de manera indirecta analitzant la velocitat i refracció de les **ones sísmiques ($P$ i $S$)** generades pels terratrèmols.
+La part més superficial i rígida del planeta s'anomena **litosfera** (formada per l'escorça i la part superior del mantell). La litosfera no és una closca contínua, sinó que està trencada com un trencaclosques gegant en grans fragments anomenats **plaques tectòniques** (com la placa Euroasiàtica, la placa Africana o la placa del Pacífic).
 
-### Capes Composicionals de la Geosfera:
-
-| Capa | Gruix / Profunditat | Estat Físic | Composició Química Principal |
-| :--- | :--- | :--- | :--- |
-| **Escorça Continental** | $30\text{ a }70\text{ km}$ | Sòlid rígid | Roques granítiques riques en silici i alumini (Si-Al) |
-| **Escorça Oceànica** | $5\text{ a }10\text{ km}$ | Sòlid dens | Roques basàltiques riques en silici i magnesi (Si-Mg) |
-| **Mantell Superior** | Fins a $670\text{ km}$ | Sòlid plàstic (Astenosfera) | Peridotita (roca rica en olivina) |
-| **Mantell Inferior** | Fins a $2.900\text{ km}$ | Sòlid d'alta pressió | Silicats densos de magnesi i ferro |
-| **Nucli Extern** | $2.900\text{ a }5.150\text{ km}$ | **Líquid fluid** ($4.000\text{ °C}$) | Aliatge de Ferro ($85\%$) i Níquel ($10\%$) + sofre |
-| **Nucli Intern** | $5.150\text{ a }6.371\text{ km}$ | **Sòlid cristal·lí** ($>5.500\text{ °C}$) | Ferro pur sotmès a pressions de $>3{,}5\text{ milions d'atm}$ |
-
-### Tectònica de Plaques i Riscos Geològics:
-La **litosfera** (formada per l'escorça i la part superior rígida del mantell) està fracturada en grans fragments anomenats **plaques tectòniques** (placa Euroasiàtica, Africana, Pacífica, etc.) que suren sobre el mantell superior.
-- **Corrents de Convecció:** La calor interna fa ascendir magma calent des del fons del mantell; en refredar-se sota la litosfera, descendeix de nou creant un corrent circular que arrossega les plaques.
-- **Límits Divergents (Dorsals):** Les plaques se separen; ascendeix magma creant nova escorça oceànica (ex. Dorsal Atlàntica).
-- **Límits Convergents (Subducció):** Una placa xoca i s'enfonsa sota una altra; formen serralades (Himàlaia), fosses marines i volcans explosius.
-- **Límits Transformants:** Les plaques llisquen lateralment fregant-se (ex. Falla de San Andrés), alliberant energia sobtada en forma de **terratrèmols**.
-  - **Hipocentre (Focus):** Punt subterrani on es trenca la roca i s'inicia el sisme.
-  - **Epicentre:** Punt de la superfície situat a la vertical exacta de l'hipocentre, on la intensitat destructiva és màxima.
+Aquestes plaques es desplacen lentament (uns quants centímetres cada any) impulsades per la calor del mantell, donant lloc a fenòmens geològics violents a les seues vores:
+- **Terratrèmols (Sismes):** Alliberament brusc d'energia acumulat pel fregament entre dues plaques al llarg d'una falla geològica. El punt subterrani d'origen és l'**hipocentre**, i el punt de la superfície verticalment superior és l'**epicentre**.
+- **Volcans:** Obertures a l'escorça per on el magma fos de l'interior puja i és expulsat a l'exterior en forma de lava, cendres i gasos ardents.
+- **Formació de Serralades:** Quan dues plaques continentals xoquen frontalment, els sediments s'arruguen i s'eleven formant serralades de muntanyes (com els Pirineus o l'Himàlaia).
 
 ---
 
-## 📌 7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+### 📝 Butlletí d'Activitats d'Avaluació
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+#### Preguntes de Comprensió i Relació
 
-#### Exercici 1: Fusos horaris, longitud geogràfica i sincronització de servidors
+1. **Quina diferència hi ha entre l'escorça continental i l'escorça oceànica?**
+
+2. **Per què el nucli intern de la Terra és sòlid si està a més de $5.000\text{ }^\circ\text{C}$?**
+
+3. **Indica si les següents afirmacions són Vertaderes (V) o Falses (F):**
+   - a) L'eclipsi de Sol es produeix quan la Terra es posa entre el Sol i la Lluna.
+   - b) El moviment del nucli extern líquid de ferro genera el camp magnètic de la Terra.
+   - c) Les marees vives ocorren en Quart Creixent.
+
+---
+
+#### Qüestionari Tipus Test
+
+**1. Quina és la capa més voluminosa de la Terra?**
+- A) L'escorça
+- B) El mantell
+- C) El nucli intern
+- D) La hidrosfera
+
+**2. Què anomenem epicentre d'un terratrèmol?**
+- A) El punt profund subterrani on es trenca la roca
+- B) L'aparell que mesura les ones sísmiques
+- C) El punt de la superfície terrestre situat directament sobre l'origen del sisme
+- D) L'escala numèrica de danys
+
+**3. Què és la litosfera?**
+- A) La capa d'aigua dolça
+- B) La capa rígida formada per l'escorça i el mantell superior dividida en plaques tectòniques
+- C) El gas de l'atmosfera
+- D) El centre de ferro fos de la Terra
+
+---
+
+> [!TIP]
+> **Següent pas:** Continua amb el [**7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0705.html) per resoldre els càlculs de fusos horaris i servidors NTP, distància a l'epicentre d'un sisme mitjançant ones P i S, i minerals crítics de la geosfera per al maquinari informàtic.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec7-5}
+
+Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, reptes de sismologia i protecció de centres de dades, així com la rúbrica d'avaluació competencial per a la **Unitat 7: El Planeta Terra: Geosfera i Moviments**.
+
+---
+
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Fusos horaris, longitud geogràfica i sincronització de servidors
 La circumferència terrestre té $360^\circ$ geomètrics i la Terra completa un gir de rotació en $24\text{ hores}$:
 $$\omega = \frac{360^\circ}{24\text{ h}} = 15^\circ \text{ per cada hora de temps solar}$$
 1. Quants graus de longitud geogràfica corresponen a una diferència horària de $1\text{ minut}$ de temps?
@@ -216,7 +423,7 @@ $$\omega = \frac{360^\circ}{24\text{ h}} = 15^\circ \text{ per cada hora de temp
    - Si a València són les $15:00\text{ h}$, quina hora solar és a la seu de Califòrnia?
 3. Un servidor registra un incident de ciberseguretat a les `2026-10-13T14:30:00Z` en temps universal coordinat (UTC). Quina hora local marcava el rellotge a Tòquio (Japó, fus horari $\text{UTC}+9$)?
 
-#### Exercici 2: Propagació d'ones sísmiques i distància a l'epicentre
+##### Exercici 2: Propagació d'ones sísmiques i distància a l'epicentre
 Quan es produeix un sisme, es generen dos tipus principals d'ones internes:
 - **Ones primàries ($P$):** Són longitudinals (de compressió), les més ràpides, amb velocitat $v_P = 8\text{ km/s}$.
 - **Ones secundàries ($S$):** Són transversals (de cisallament), més lentes, amb velocitat $v_S = 4{,}5\text{ km/s}$.
@@ -226,7 +433,7 @@ Quan es produeix un sisme, es generen dos tipus principals d'ones internes:
    Calcula la distància física exacta $d$ en quilòmetres des de l'estació sismològica fins a l'epicentre.
 3. Quantes estacions sismològiques independents calen com a mínim per determinar mitjançant triangulació la ubicació exacta d'un epicentre sobre un mapa? Justifica-ho geomètricament.
 
-#### Exercici 3: Pressió litostàtica en l'escorça i el mantell
+##### Exercici 3: Pressió litostàtica en l'escorça i el mantell
 La pressió hidroestàtica o litostàtica que suporten les roques a una profunditat $h$ ve donada per l'equació fonamental:
 $$P = \rho \cdot g \cdot h$$
 On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
@@ -236,9 +443,9 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Sincronització de servidors NTP, anys de traspàs i l'època POSIX
+##### Repte 1: Sincronització de servidors NTP, anys de traspàs i l'època POSIX
 - **Objectiu:** Comprendre l'impacte dels moviments astronòmics de la Terra en els sistemes operatius informàtics.
 - **Situació:** En un clúster de servidors de taller, els registres de seguretat s'han de coordinar amb precisió absoluta de mil·lisegons:
   1. La Terra tarda $365\text{ dies}$, $5\text{ hores}$, $48\text{ minuts}$ i $46\text{ segons}$ en la seua translació solar. Calcula quants segons exactes es desvia un any calendari convencional de $365\text{ dies}$ respecte a l'any tròpic real:
@@ -247,7 +454,7 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
   3. Què és el protocol NTP (*Network Time Protocol*) i per què utilitza servidors d'estrat 1 connectats a rellotges atòmics i receptors GPS en lloc de confiar en el cristall de quars intern de la placa base?
   4. Què és el temps Unix / temps POSIX (segons transcorreguts des de l'1 de gener de 1970 a les 00:00:00 UTC) i per què existirà el problema de l'any 2038 en sistemes de 32 bits?
 
-#### Repte 2: Minerals crítics de la geosfera per a la indústria de xips i electrònica
+##### Repte 2: Minerals crítics de la geosfera per a la indústria de xips i electrònica
 - **Objectiu:** Identificar la procedència geològica dels materials essencials per al maquinari tecnològic.
 - **Situació:** Els components d'un equip informàtic depenen directament de jaciments minerals de l'escorça terrestre.
 - **Comanda d'investigació tècnica:**
@@ -264,7 +471,7 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
   2. Què és el mineral conegut comercialment com a **coltan** (columbita-tantalita) i quins greus conflictes geopolítics i mediambientals genera la seua extracció a l'Àfrica Central?
   3. Per què el reciclatge de RAEE (residus d'aparells elèctrics i electrònics) al taller redueix la necessitat de mineria destructiva a gran escala?
 
-#### Repte 3: Avaluació de risc sísmic i protecció física d'armaris rack
+##### Repte 3: Avaluació de risc sísmic i protecció física d'armaris rack
 - **Objectiu:** Aplicar coneixements de dinàmica tectònica al condicionament físic d'instal·lacions informàtiques.
 - **Situació:** El País Valencià presenta una sismicitat moderada associada a la convergència entre la placa Africana i la placa Euroasiàtica (falles de la comarca de la Vega Baixa, recordant el devastador terratrèmol de Torrevella de 1829):
   1. Explica com es transmet l'energia des de la falla tectònica fins als fonaments d'un edifici on s'ubica una sala de servidors.
@@ -274,9 +481,9 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He explicat els 4 factors que permeten la vida a la Terra (zona habitable, aigua, atmosfera amb oxigen/ozó i magnetosfera).
 - [ ] He diferenciat el moviment de rotació (24 h, dia/nit, fusos horaris) del de translació (365,25 dies, any de traspàs).
 - [ ] He justificat que les estacions es deuen a la inclinació de l'eix de rotació de $23{,}5^\circ$ i no a la distància al Sol.
@@ -285,7 +492,7 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 - [ ] He descrit les capes de la geosfera (escorça, mantell i nucli extern fluid/intern sòlid) i la dinàmica de plaques.
 - [ ] He associat components electrònics reals (CPU, circuits, bateries) amb els seus minerals d'origen geològic.
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -294,3 +501,9 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 | **La Lluna: Fases, eclipsis i marees** | Distingeix fases creixents/minvants, la geometria dels eclipsis i la influència gravitatòria en les marees vives/mortes. | Identifica les fases lunars i la diferència entre eclipsi solar i lunar sense dificultat. | Reconeix la lluna plena i nova però confon la forma de quart creixent ("D") i minvant ("C"). | Afirma que les fases de la Lluna són eclipsis provocats per l'ombra de la Terra. |
 | **Estructura de la geosfera i sismes** | Descriu l'estat físic i composició de cada capa interna i calcula la distància a l'epicentre mitjançant ones $P$ i $S$. | Coneix les capes de la geosfera i el paper del nucli fluid en la generació del camp magnètic. | Enumera escorça, mantell i nucli però confon els seus estats sòlids i líquids. | No sap quines són les capes internes de la Terra ni com es produeix un terratrèmol. |
 | **Aplicació pràctica de taller i minerals** | Relaciona minerals crítics de la geosfera amb el maquinari informàtic i analitza mesures antisísmiques en CPD. | Identifica el silici, coure i liti com a minerals de taller i comprèn la necessitat de fixació de racks. | Reconeix alguns materials dels ordinadors però no els vincula amb l'extracció minera de la geosfera. | Desconeix per complet d'on s'obtenen els materials per fabricar components electrònics. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

@@ -94,24 +94,32 @@ Benvingut/da a la **Unitat Didàctica 1** del bloc de Matemàtiques de Ciències
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**1.1 El Sistema de Numeració Decimal i Valor Posicional**](#11-el-sistema-de-numeració-decimal-i-valor-posicional)
-2. [**1.2 Els Nombres Naturals i les Operacions Bàsiques**](#12-els-nombres-naturals-i-les-operacions-bàsiques)
-3. [**1.3 Propietats de les Operacions i Jerarquia**](#13-propietats-de-les-operacions-i-jerarquia)
-4. [**1.4 Potències de Nombres Naturals i Propietats**](#14-potències-de-nombres-naturals-i-propietats)
-5. [**1.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#15-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec1-1"><strong>1.1 El Sistema de Numeració Decimal i Valor Posicional</strong></a></li>
+    <li><a href="#sec1-2"><strong>1.2 Els Nombres Naturals i les Operacions Bàsiques</strong></a></li>
+    <li><a href="#sec1-3"><strong>1.3 Propietats de les Operacions i Jerarquia</strong></a></li>
+    <li><a href="#sec1-4"><strong>1.4 Potències de Nombres Naturals i Propietats</strong></a></li>
+    <li><a href="#sec1-5"><strong>1.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 1.1 El Sistema de Numeració Decimal i Valor Posicional
+## 📌 1.1 El Sistema de Numeració Decimal i Valor Posicional {#sec1-1}
 
-El sistema de numeració que utilitzem cada dia és el **sistema decimal**. Els éssers humans vam començar a comptar utilitzant els dits de les mans, ideant un sistema basat en **10 símbols bàsics**:
+El sistema de numeració que utilitzem cada dia és el **sistema decimal**. Probablement, els éssers humans vam començar a comptar utilitzant els dits de les mans, i per aquesta mateixa raó vam idear un sistema basat en **10 símbols bàsics** (anomenats dígits o xifres):
 
 $$\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$$
 
-### Ordres d'Unitats: De la Unitat al Millar
-En el sistema decimal, agrupem les quantitats de **10 en 10**:
+---
+
+### 1. Ordres d'Unitats: De la Unitat al Millar
+
+En el sistema decimal, agrupem les quantitats de **10 en 10**: cada deu unitats d'un ordre formen una unitat de l'ordre immediatament superior:
 
 | Ordre d'Unitat | Abreviatura | Equivalència en Unitats |
 | :--- | :---: | :---: |
@@ -122,113 +130,431 @@ En el sistema decimal, agrupem les quantitats de **10 en 10**:
 | **Desena de Millar** | **DM** | $1 \text{ DM} = 10 \text{ UM} = 10.000 \text{ U}$ |
 | **Centena de Millar**| **CM** | $1 \text{ CM} = 10 \text{ DM} = 100.000 \text{ U}$ |
 
-### El Valor Posicional de les Xifres
-El sistema decimal és un **sistema posicional**: el valor real d'una xifra depèn directament de la **posició** que ocupa dins del nombre.
-
-Vegem per exemple el nombre **$523$**:
-- Centenes: $5 \times 100 = 500$
-- Desenes: $2 \times 10 = 20$
-- Unitats: $3 \times 1 = 3$
-$$523 = 500 + 20 + 3 = 5\text{C} + 2\text{D} + 3\text{U}$$
-
-### Descomposició Polinòmica amb Potències de Base 10
-Expressar un nombre com a suma de productes de les seues xifres per potències de $10$:
-$$523 = (5 \times 10^2) + (2 \times 10^1) + 3$$
-$$4.708 = (4 \times 10^3) + (7 \times 10^2) + 8$$
+> [!NOTE]
+> **Per què agrupem?**
+> Si volguérem representar el nombre $1.200$ dibuixant elements solts d'un en un, seria lent i fàcil equivocar-se. Agrupant en desenes ($10$), centenes ($100$) i milers ($1.000$) podem escriure qualsevol quantitat enorme amb només unes poques xifres.
 
 ---
 
-## 📌 1.2 Els Nombres Naturals i les Operacions Bàsiques
+### 2. El Valor Posicional de les Xifres
 
-Els **nombres naturals** ($\mathbb{N}$) són aquells que serveixen per a comptar elements sencers:
+El sistema decimal és un **sistema posicional**: el valor real d'una xifra depèn directament de la **posició** que ocupa dins del nombre.
 
-$$\mathbb{N} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \dots\}$$
+Vegem per exemple el nombre **$523$**:
 
-- Estan ordenats sobre la recta numèrica: a l'esquerra els menors, a la dreta els majors ($<$ i $>$).
+```text
+Centenes (C)   Desenes (D)   Unitats (U)
+     5              2             3
+```
 
-### 1) Suma (Addició)
-Col·loquem els sumands alineant les unitats. Si en sumar una columna obtenim $10$ o més, afegim la desena a la columna següent (**portada**):
+- La xifra **$3$** ocupa el lloc de les unitats $\rightarrow 3 \times 1 = 3$
+- La xifra **$2$** ocupa el lloc de les desenes $\rightarrow 2 \times 10 = 20$
+- La xifra **$5$** ocupa el lloc de les centenes $\rightarrow 5 \times 100 = 500$
+
+Per tant:
+$$523 = 500 + 20 + 3 = 5\text{C} + 2\text{D} + 3\text{U}$$
+
+---
+
+### 3. Descomposició Polinòmica amb Potències de Base 10
+
+Les potències de $10$ ens permeten expressar de manera abreujada els diferents ordres d'unitats:
+
+- $10^0 = 1$ (Unitats)
+- $10^1 = 10$ (Desenes)
+- $10^2 = 100$ (Centenes)
+- $10^3 = 1.000$ (Unitats de millar)
+- $10^4 = 10.000$ (Desenes de millar)
+
+La **descomposició polinòmica** d'un nombre consisteix a expressar-lo com una suma de productes de cada xifra per la potència de $10$ corresponent a la seua posició:
+
+$$523 = (5 \times 10^2) + (2 \times 10^1) + (3 \times 10^0)$$
+
+Com que $10^0 = 1$, podem simplificar l'últim terme directament com a $3$:
+$$523 = (5 \times 10^2) + (2 \times 10^1) + 3$$
+
+#### Exemple Resolts Pas a Pas:
+Descompon el nombre **$4.708$**:
+- Té $4$ milers, $7$ centenes, $0$ desenes i $8$ unitats.
+- Descomposició aditiva: $4.000 + 700 + 8$
+- Descomposició polinòmica:
+  $$4.708 = (4 \times 10^3) + (7 \times 10^2) + 8$$
+
+---
+
+### ✍️ Activitats d'Aprenentatge
+
+1. **Identifica el valor de la xifra subratllada:**
+   - a) $3.\underline{4}52 \rightarrow$
+   - b) $\underline{7}.120 \rightarrow$
+   - c) $98\underline{6} \rightarrow$
+   - d) $\underline{5}4.300 \rightarrow$
+
+2. **Realitza la descomposició polinòmica dels següents nombres:**
+   - a) $645$
+   - b) $1.820$
+   - c) $35.409$
+   - d) $702.150$
+
+3. **Escriu el nombre que correspon a cada descomposició:**
+   - a) $(8 \times 10^3) + (3 \times 10^2) + (5 \times 10^1) + 4$
+   - b) $(6 \times 10^4) + (2 \times 10^2) + 9$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 1.2 Els Nombres Naturals i les Operacions Bàsiques {#sec1-2}
+
+### 1. El Conjunt dels Nombres Naturals ($\mathbb{N}$)
+
+Els **nombres naturals** van sorgir de la necessitat humana de comptar i ordenar objectes (animals, fruites, eines). Es representen amb la lletra $\mathbb{N}$:
+
+$$\mathbb{N} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, \dots\}$$
+
+- **Infinitud:** No hi ha un nombre natural que siga més gran que tots els altres. Sempre podem afegir $+1$ i trobar-ne un de major.
+- **Ordre i Recta Numèrica:** Els nombres naturals estan ordenats. Podem representar-los en una recta numèrica:
+
+```text
+  0     1     2     3     4     5     6     7     8     9    ...
+──┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼────►
+```
+
+Sempre és **menor** aquell nombre que està més a l'esquerra:
+- Utilitzem el símbol **$<$** per a expressar "menor que": $4 < 7$
+- Utilitzem el símbol **$>$** per a expressar "major que": $9 > 3$
+
+---
+
+### 2. Suma (Addició)
+
+Per a sumar dos o més nombres:
+1. Col·loquem els sumands en vertical alineant les unitats davall de les unitats, les desenes davall de les desenes, etc.
+2. Sumem columna a columna començant per les unitats.
+3. Si el resultat d'una columna és $10$ o superior, apuntem la unitat i afegim la desena a la columna següent (**"en portem una"**).
+
+#### Exemple amb Portada:
+Volem calcular **$46 + 27$**:
 
 ```text
     ¹
-    4 6
-  + 2 7
+    4 6   (Sumem unitats: 6 + 7 = 13 → Escrivim 3, en portem 1)
+  + 2 7   (Sumem desenes: 1 + 4 + 2 = 7)
   ─────
     7 3
 ```
 
-### 2) Resta (Subtracció)
-Col·loquem el minuend a dalt i el subtrahend a baix. Si una xifra del minuend és menor que la del subtrahend, **demanem prestat** a la columna següent:
+---
+
+### 3. Resta (Subtracció)
+
+Col·loquem el **minuend** (la quantitat inicial) a dalt i el **subtrahend** (la quantitat que llevem) a baix, alineant per unitats:
+
+$$\text{Minuend} - \text{Subtrahend} = \text{Diferència}$$
+
+Quan una xifra del minuend és menor que la del subtrahend, hem de **demanar prestat** a la columna immediatament superior (una desena es converteix en $10$ unitats).
+
+#### Exemple amb Préstec:
+Volem calcular **$32 - 17$**:
 
 ```text
     ²  ¹²
-    3   2   (12 - 7 = 5)
-  - 1   7   (2 - 1 = 1)
+    3   2   (Com que 2 < 7, demanem 1 desena prestada: 12 - 7 = 5)
+  - 1   7   (Les desenes es queden en 2: 2 - 1 = 1)
   ───────
     1   5
 ```
 
-### 3) Multiplicació (Producte)
-La multiplicació és una **suma repetida**:
-$$6 \text{ sobres} \times 5 \text{ cromos} = 30 \text{ cromos}$$
+---
 
-### 4) Divisió i la Prova
-Repartiment d'un dividend ($D$) en parts iguals entre un divisor ($d$), donant un quocient ($c$) i un residu ($r$):
+### 4. Multiplicació (Producte)
+
+Multiplicar no és més que una **manera ràpida de fer una suma repetida**.
+- Si Andrés compra $6$ sobres de cromos i cadascun porta $5$ cromos, en lloc de fer $5 + 5 + 5 + 5 + 5 + 5$, fem:
+  $$6 \times 5 = 30 \text{ cromos}$$
+
+Els nombres que es multipliquen s'anomenen **factors**, i el resultat és el **producte**.
+
+```text
+     5 8
+   ×   2
+   ─────
+   1 1 6   (2 × 8 = 16 → posem 6 i portem 1;  2 × 5 = 10 + 1 = 11)
+```
+
+---
+
+### 5. Divisió (Repartiment)
+
+La divisió consisteix a **repartir una quantitat en parts iguals**. Els seus components són:
+
+- **Dividend ($D$):** La quantitat total que volem repartir.
+- **Divisor ($d$):** En quantes parts iguals repartim.
+- **Quocient ($c$):** El resultat del repartiment (el que li toca a cadascú).
+- **Residu ($r$):** El que sobra (sempre ha de ser menor que el divisor, $r < d$).
+
+#### La Prova de la Divisió
+Per comprovar si una divisió està ben resolta, s'ha de complir sempre la igualtat fonamental:
 
 $$\text{Dividend} = (\text{Divisor} \times \text{Quocient}) + \text{Residu} \quad \longrightarrow \quad D = d \times c + r$$
 
+> [!TIP]
+> - Si el residu és **$0$**, la divisió és **exacta**: $D = d \times c$.
+> - Si el residu és **diferent de $0$**, la divisió és **entera**.
+
+#### Exemple Resolts:
+Volem dividir **$754 : 32$**:
+
+```text
+  7 5 4  │ 32
+- 6 4    ├─────
+  ─────  │ 23   ← Quocient
+  1 1 4
+-   9 6
+  ─────
+    1 8         ← Residu
+```
+
+**Comprovació amb la Prova:**
+$$32 \times 23 + 18 = 736 + 18 = 754 \quad \text{(Correcte!)}$$
+
 ---
 
-## 📌 1.3 Propietats de les Operacions i Jerarquia
+### ✍️ Activitats d'Aprenentatge
 
-### Propietats de la Multiplicació
-1. **Commutativa:** $a \cdot b = b \cdot a \quad (3 \cdot 10 = 10 \cdot 3 = 30)$
-2. **Associativa:** $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
-3. **Distributiva:** $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$
-   - $2 \cdot (3 + 5) = 2 \cdot 8 = 16$
-   - $(2 \cdot 3) + (2 \cdot 5) = 6 + 10 = 16$
+1. **Calcula les següents sumes i restes:**
+   - a) $348 + 925$
+   - b) $1.405 - 867$
+   - c) $12.340 - 5.789$
+
+2. **Realitza les multiplicacions:**
+   - a) $234 \times 15$
+   - b) $1.042 \times 36$
+
+3. **Resol les divisions i aplica la prova per verificar el resultat:**
+   - a) $840 : 6$
+   - b) $957 : 24$
+   - c) $1.520 : 35$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 1.3 Propietats de les Operacions i Jerarquia {#sec1-3}
+
+### 1. Propietats Fonamentals de la Multiplicació
+
+La multiplicació compleix tres propietats matemàtiques clau:
+
+#### 1) Propietat Commutativa
+> *"L'ordre dels factors no altera el producte."*
+
+$$a \cdot b = b \cdot a$$
+
+- **Exemple:** $10 \cdot 3 = 30$ i $3 \cdot 10 = 30$. El resultat és exactament el mateix.
+
+#### 2) Propietat Associativa
+> *"La forma d'agrupar els factors no varia el resultat."*
+
+$$(a \cdot b) \cdot c = a \cdot (b \cdot c)$$
+
+- **Exemple:** $(3 \cdot 2) \cdot 5 = 6 \cdot 5 = 30$
+- Agrupant d'una altra manera: $3 \cdot (2 \cdot 5) = 3 \cdot 10 = 30$.
+
+#### 3) Propietat Distributiva (respecte a la suma i la resta)
+> *"La multiplicació d'un nombre per una suma és igual a la suma dels productes d'aquest nombre per cadascun dels sumands."*
+
+$$a \cdot (b + c) = (a \cdot b) + (a \cdot c)$$
+
+- **Exemple:** $2 \cdot (3 + 5)$
+  - *Mètode A (resolent el parèntesi primer):* $2 \cdot 8 = 16$
+  - *Mètode B (aplicant propietat distributiva):* $(2 \cdot 3) + (2 \cdot 5) = 6 + 10 = 16$
 
 > [!WARNING]
-> La divisió **NO** és commutativa ni associativa ($20 : 5 \neq 5 : 20$).
-
-### La Jerarquia Oficial d'Operacions
-Ordre obligatori de càlcul:
-1. **Parèntesis i claudàtors** $( \ )$ $[ \ ]$ (de dins cap a fora).
-2. **Potències i arrels** $a^n, \sqrt{\quad}$.
-3. **Multiplicacions i divisions** $\cdot , :$ (d'esquerra a dreta).
-4. **Sumes i restes** $+ , -$ (d'esquerra a dreta).
-
-**Exemple:**
-$$10 \cdot [(6 - 5) + (9 - 4)] = 10 \cdot [1 + 5] = 10 \cdot 6 = 60$$
+> **I la Divisió?**
+> La divisió **NO** té les propietats commutativa ni associativa:
+> - $20 : 5 = 4$, però $5 : 20 \neq 4$. L'ordre sí que importa!
+> - Per això, en expressions amb divisions, els parèntesis són obligatoris per a definir quina operació va primer.
 
 ---
 
-## 📌 1.4 Potències de Nombres Naturals i Propietats
+### 2. La Jerarquia d'Operacions
 
-Una potència és un **producte de factors iguals**:
+Quan tenim diverses operacions barrejades en una mateixa expressió (operacions combinades), cal seguir sempre aquest **ordre oficial estricte**:
+
+```text
+PAS 1:  ( )  [ ]  Parèntesis i claudàtors (de dins cap a fora).
+PAS 2:   aⁿ  √    Potències i arrels.
+PAS 3:   ·   :    Multiplicacions i divisions (d'esquerra a dreta).
+PAS 4:   +   -    Sumes i restes (d'esquerra a dreta).
+```
+
+#### Exemples Resolts Pas a Pas:
+
+##### Exemple A: Sense Parèntesis
+Calcular: $6 : 2 + 5 - 12 : 4$
+
+1. Primer fem les divisions (d'esquerra a dreta):
+   - $6 : 2 = 3$
+   - $12 : 4 = 3$
+   - L'expressió queda: $3 + 5 - 3$
+2. Ara fem les sumes i restes:
+   - $3 + 5 = 8$
+   - $8 - 3 = 5$
+   - **Resultat final: $5$**
+
+##### Exemple B: Amb Parèntesis
+Calcular: $40 : 8 - (30 : 6 + 2)$
+
+1. Resolem primer l'interior del parèntesi:
+   - Dins del parèntesi hi ha divisió i suma $\rightarrow$ primer la divisió: $30 : 6 = 5$
+   - Ara sumem: $5 + 2 = 7$
+2. Substituïm el parèntesi: $40 : 8 - 7$
+3. Fem la divisió: $40 : 8 = 5$
+4. Fem la resta: $5 - 7$ *(en nombres naturals no podem restar si el minuend és menor, per la qual cosa en $\mathbb{N}$ caldrà que el resultat siga positiu; en aquest cas $40:8$ dóna 5)*.
+
+##### Exemple C: Amb Claudàtors i Parèntesis
+Calcular: $10 \cdot [(6 - 5) + (9 - 4)]$
+
+1. Resolem primer els parèntesis interiors:
+   - $(6 - 5) = 1$
+   - $(9 - 4) = 5$
+2. Ara l'interior del claudàtor: $[1 + 5] = 6$
+3. Finalment, multipliquem: $10 \cdot 6 = 60$
+   - **Resultat final: $60$**
+
+---
+
+### ✍️ Activitats d'Aprenentatge
+
+1. **Aplica la propietat distributiva i resol:**
+   - a) $5 \cdot (6 + 3)$
+   - b) $4 \cdot (10 - 2)$
+   - c) $3 \cdot (8 + 12)$
+
+2. **Calcula respectant la jerarquia d'operacions:**
+   - a) $5 \cdot 4 + 2 \cdot 3$
+   - b) $20 : 5 - 8 : 2$
+   - c) $27 : (12 - 9) - 4$
+   - d) $19 + 3 \cdot [5 + (10 - 8)]$
+   - e) $25 - 2 \cdot [(9 - 7) \cdot 3] + (16 - 8)$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 1.4 Potències de Nombres Naturals i Propietats {#sec1-4}
+
+### 1. Concepte de Potència
+
+Una **potència** és una forma abreujada d'expressar una multiplicació de factors iguals (una multiplicació repetida):
+
 $$a^n = \underbrace{a \cdot a \cdot a \dots a}_{n \text{ vegades}}$$
-- **Base ($a$):** nombre que es multiplica.
-- **Exponent ($n$):** nombre de vegades que es multiplica la base.
 
-### Quadre de Propietats Fonamentals:
+Una potència està formada per dos elements:
 
-| Propietat | Regla | Exemple |
-| :--- | :---: | :---: |
-| **Producte mateixa base** | $a^n \cdot a^m = a^{n + m}$ | $4^2 \cdot 4^3 = 4^{2+3} = 4^5 = 1.024$ |
-| **Quocient mateixa base** | $a^n : a^m = \dfrac{a^n}{a^m} = a^{n - m}$ | $3^5 : 3^2 = 3^3 = 27$ |
-| **Potència d'un producte** | $(a \cdot b)^n = a^n \cdot b^n$ | $(3 \cdot 4)^2 = 3^2 \cdot 4^2 = 144$ |
-| **Potència d'un quocient** | $\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$ | $(8 : 4)^2 = 8^2 : 4^2 = 4$ |
-| **Potència d'una potència** | $(a^n)^m = a^{n \cdot m}$ | $(2^2)^3 = 2^6 = 64$ |
-| **Exponent 0** | $a^0 = 1 \quad (a \neq 0)$ | $15^0 = 1$ |
-| **Exponent 1** | $a^1 = a$ | $9^1 = 9$ |
+- **Base ($a$):** El nombre que es multiplica per si mateix.
+- **Exponent ($n$):** El nombre de vegades que es repeteix la base.
+
+```text
+       Exponent (quantes vegades es multiplica)
+          ▼
+        2³ = 2 · 2 · 2 = 8
+        ▲
+      Base (el nombre que es repeteix)
+```
+
+#### Exemples Didàctics:
+- $3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 81$
+- $5^2 = 5 \cdot 5 = 25$ *(es llig "cinc al quadrat")*
+- $2^3 = 2 \cdot 2 \cdot 2 = 8$ *(es llig "dos al cub")*
+- $10^3 = 10 \cdot 10 \cdot 10 = 1.000$
+
+> [!IMPORTANT]
+> **Alerta amb un error molt típic:**
+> **$(3 + 2)^3$ NO és el mateix que $3^3 + 2^3$**:
+> - $(3 + 2)^3 = 5^3 = 5 \cdot 5 \cdot 5 = 125$
+> - $3^3 + 2^3 = 27 + 8 = 35$
+> Com pots comprovar, $125 \neq 35$. La potència d'una suma mai és la suma de les potències!
 
 ---
 
-## 📌 1.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+### 2. Quadre Resum de les Propietats de les Potències
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+Les potències tenen regles algebraiques que ens permeten simplificar càlculs complexos en un instant:
 
-#### Exercici 1: Valor posicional i descomposició polinòmica en entorns tecnològics
+| Propietat | Regla Matemàtica | Exemple Pràctic |
+| :--- | :---: | :---: |
+| **Producte de potències de la mateixa base** | $a^n \cdot a^m = a^{n + m}$ | $4^2 \cdot 4^3 = 4^{2+3} = 4^5 = 1.024$ |
+| **Quocient de potències de la mateixa base** | $a^n : a^m = \dfrac{a^n}{a^m} = a^{n - m}$ | $3^5 : 3^2 = 3^{5-2} = 3^3 = 27$ |
+| **Potència d'un producte** | $(a \cdot b)^n = a^n \cdot b^n$ | $(3 \cdot 4)^2 = 3^2 \cdot 4^2 = 9 \cdot 16 = 144$ |
+| **Potència d'un quocient (fracció)** | $(a : b)^n = \left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}$ | $(8 : 4)^2 = 8^2 : 4^2 = 64 : 16 = 4$ |
+| **Potència d'una potència** | $(a^n)^m = a^{n \cdot m}$ | $(2^2)^3 = 2^{2 \cdot 3} = 2^6 = 64$ |
+| **Potència d'exponent $0$** | $a^0 = 1 \quad (a \neq 0)$ | $7^0 = 1 \quad ; \quad 125^0 = 1$ |
+| **Potència d'exponent $1$** | $a^1 = a$ | $9^1 = 9 \quad ; \quad 42^1 = 42$ |
+
+> [!TIP]
+> **Divisions i Fraccions:**
+> Recorda que una divisió $a : b$ és exactament el mateix que una fracció $\dfrac{a}{b}$. Ambdues representen la mateixa operació de quocient.
+
+---
+
+### 3. Potències de Base 10
+
+Les potències de $10$ són immediates de calcular en el nostre sistema decimal:
+Només cal escriure l'$1$ seguit de tants zeros com indique l'exponent:
+
+- $10^1 = 10$ ($1$ zero)
+- $10^2 = 100$ ($2$ zeros)
+- $10^3 = 1.000$ ($3$ zeros)
+- $10^4 = 10.000$ ($4$ zeros)
+- $10^6 = 1.000.000$ ($6$ zeros $\rightarrow$ un milió)
+
+---
+
+### ✍️ Activitats d'Aprenentatge
+
+1. **Calcula el valor de les següents potències:**
+   - a) $2^4$
+   - b) $5^3$
+   - c) $10^4$
+   - d) $3^3$
+   - e) $7^0$
+
+2. **Redueix a una sola potència aplicant les propietats:**
+   - a) $5^2 \cdot 5^4 =$
+   - b) $3^8 : 3^5 =$
+   - c) $(2^3)^2 =$
+   - d) $4^2 \cdot 5^2 =$
+   - e) $18^3 : 6^3 =$
+
+3. **Resol aquest problema amb potències:**
+   - En una papereria hi ha $4$ prestatgeries. Cada prestatgeria té $4$ lleixes, i en cada lleixa hi ha $4$ caixes amb $4$ retoladors cadascuna.
+   - Expressa en forma d'una sola potència el nombre total de retoladors i calcula el resultat.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 1.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec1-5}
+
+Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, reptes de taller tecnològic i la rúbrica d'avaluació competencial per a la **Unitat 1: Els Nombres Naturals**.
+
+---
+
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Valor posicional i descomposició polinòmica en entorns tecnològics
 En el magatzem central de manteniment informàtic es rep una gran comanda de cargols M3 i femelles de subjecció per a plaques base. El comptador electrònic marca un total de $14.856\text{ peces}$.
 1. Desglossa el nombre $14.856$ segons el seu valor posicional decimal, indicant desenes de millar (DM), unitats de millar (UM), centenes (C), desenes (D) i unitats (U):
    $$14.856 = \underline{\hspace{1cm}}\text{DM} + \underline{\hspace{1cm}}\text{UM} + \underline{\hspace{1cm}}\text{C} + \underline{\hspace{1cm}}\text{D} + \underline{\hspace{1cm}}\text{U}$$
@@ -236,7 +562,7 @@ En el magatzem central de manteniment informàtic es rep una gran comanda de car
    $$14.856 = (1 \cdot 10^4) + (4 \cdot 10^3) + (8 \cdot 10^2) + (5 \cdot 10^1) + (6 \cdot 10^0)$$
 3. Si un operari canvia per error la xifra de les centenes ($8$) per la xifra de les unitats ($6$), quin nou nombre s'obté? Quina és la diferència econòmica si cada cargol té un cost de $0{,}05\text{ €}$?
 
-#### Exercici 2: Jerarquia d'operacions combinades amb signes d'agrupació
+##### Exercici 2: Jerarquia d'operacions combinades amb signes d'agrupació
 Resol cadascuna de les següents operacions combinades mostrant tots els passos intermedis segons la jerarquia oficial d'operacions (1r parèntesis/claudàtors, 2n potències, 3r multiplicacions/divisions, 4t sumes/restes):
 1. **Expressió A:**
    $$A = 48 - 6 \cdot [14 - (3^2 - 1)] + 18 : 3$$
@@ -245,7 +571,7 @@ Resol cadascuna de les següents operacions combinades mostrant tots els passos 
 3. **Expressió C:**
    $$C = 120 : [2 \cdot (18 - 3) - 20] + 7 \cdot 3^2$$
 
-#### Exercici 3: Lleis dels exponents i simplificació a potència única
+##### Exercici 3: Lleis dels exponents i simplificació a potència única
 Aplica les propietats de les potències de nombres naturals per reduir cadascuna de les expressions a una sola potència de base irreductible (no calcules el valor final enorme, només simplifica la base i l'exponent):
 1. **Producte i divisió de la mateixa base:**
    $$P_1 = \frac{3^4 \cdot 3^7 \cdot 3^2}{3^5 \cdot 3^3}$$
@@ -257,9 +583,9 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Gestió logística i inventari d'un magatzem d'equips
+##### Repte 1: Gestió logística i inventari d'un magatzem d'equips
 - **Objectiu:** Utilitzar la multiplicació associativa per calcular de forma ràpida l'estoc de components sense comptar peça per peça.
 - **Situació de taller:** El magatzem d'FP Bàsica rep un enviament de discs sòlids SSD per renovar les aules d'informàtica:
   - Arriben $4\text{ palets}$ de fusta.
@@ -272,7 +598,7 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
   2. Resol agrupant factors de dues maneres diferents per verificar que el resultat és idèntic: $(4 \cdot 6) \cdot (8 \cdot 10)$ i $(4 \cdot 10) \cdot (6 \cdot 8)$.
   3. Si cada SSD té una capacitat de $512\text{ GB}$, quants terabytes totals ($\text{TB}$) d'emmagatzematge han arribat en total (prenent $1\text{ TB} \approx 1000\text{ GB}$ per a càlcul comercial)?
 
-#### Repte 2: Repartiment proporcional de material i prova de la divisió
+##### Repte 2: Repartiment proporcional de material i prova de la divisió
 - **Objectiu:** Aplicar la divisió entera i la prova $D = d \cdot c + r$ per a l'assignació de recursos de pràctiques.
 - **Situació:** En el taller de xarxes s'obre una bobina que conté exactament $345\text{ metres}$ de cable de parell trenat UTP per repartir a parts iguals entre els $16\text{ estudiants}$ del grup de taller:
   1. Realitza la divisió pas a pas sense calculadora per determinar quants metres exactes sencers corresponen a cada lloc de treball.
@@ -281,7 +607,7 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
      $$345 = (16 \cdot c) + r \quad \text{i comprova que} \quad r < 16$$
   4. Si cada estudiant ha de construir latiguillos de $2\text{ metres}$, quants cables complets podrà fabricar cadascú amb els seus metres assignats?
 
-#### Repte 3: Auditoria energètica i càlcul de consum en kWh
+##### Repte 3: Auditoria energètica i càlcul de consum en kWh
 - **Objectiu:** Utilitzar el producte de nombres naturals per calcular el consum elèctric i el cost econòmic d'una instal·lació informàtica.
 - **Situació:** L'aula de grau bàsic disposa de:
   - $15\text{ ordinadors d'alumnat}$ amb un consum mitjà de $120\text{ W}$ cadascun.
@@ -297,9 +623,9 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He descompost correctament nombres decimals en unitats i potències de base 10.
 - [ ] He respectat la jerarquia oficial d'operacions resolent primer claudàtors, després potències, multiplicacions i sumes.
 - [ ] He aplicat les propietats dels exponents simplificant bases iguals sense calcular potències gegants a mà.
@@ -307,7 +633,7 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
 - [ ] He utilitzat la propietat associativa i distributiva en problemes de logística i magatzem.
 - [ ] He calculat consums elèctrics reals de taller convertint correctament entre Watts i kWh.
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -316,3 +642,9 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
 | **Lleis de potències i exponents** | Simplifica fraccions de potències aplicant les lleis d'exponents ($a^n \cdot a^m$, $(a^n)^m$, $a^0=1$) amb destresa. | Aplica la suma i resta d'exponents en bases iguals de forma correcta. | Resol potències bàsiques però s'equivoca en simplificar expressions algebraiques. | Multiplica la base per l'exponent ($2^3 = 6$) en lloc de multiplicar la base per si mateixa. |
 | **Divisió entera i repartiments ($D=d\cdot c+r$)** | Resol divisions llargues sense calculadora, obté quocient i residu i verifica sempre la prova formal. | Realitza la divisió i calcula el residu de forma correcta comprovant la prova. | Fa la divisió bàsica però té dificultats per interpretar el residu en un problema real. | Incapaç de dividir nombres de dues xifres o no sap verificar la prova de la divisió. |
 | **Aplicació pràctica a consum i magatzem** | Modela problemes reals de taller (logística, magatzem, kWh) traduint el text a expressions matemàtiques clares. | Resol els problemes pràctics amb bona interpretació de les dades del taller. | Resol els problemes amb suport en el plantejament o conversió d'unitats. | No sap plantejar els problemes pràctics ni interpretar enunciats tècnics. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

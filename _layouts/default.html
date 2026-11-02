@@ -111,6 +111,15 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      scroll-margin-top: 80px;
+    }
+
     html, body {
       overflow-x: hidden;
       max-width: 100vw;
@@ -494,6 +503,107 @@
     [data-theme="dark"] .up-badge {
       background: #1e3a8a;
       color: #bfdbfe;
+    }
+
+    /* Llistes de tasques / cotejo interactives */
+    ul.task-list {
+      list-style: none !important;
+      padding-left: 0 !important;
+      margin: 1.2rem 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    li.task-list-item {
+      display: flex !important;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    li.task-list-item:hover {
+      border-color: var(--primary);
+      background: rgba(37, 99, 235, 0.04);
+      transform: translateX(2px);
+    }
+
+    li.task-list-item.is-checked {
+      background: rgba(16, 185, 129, 0.08) !important;
+      border-color: #10b981 !important;
+    }
+
+    li.task-list-item.is-checked .task-text {
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    input.task-list-item-checkbox {
+      margin-top: 3px !important;
+      width: 18px !important;
+      height: 18px !important;
+      cursor: pointer !important;
+      accent-color: #10b981;
+      flex-shrink: 0;
+    }
+
+    .checklist-progress-box {
+      margin: 1.2rem 0 0.6rem 0;
+      padding: 10px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+
+    .checklist-progress-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .checklist-progress-track {
+      background: var(--border);
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .checklist-progress-fill {
+      background: linear-gradient(90deg, #10b981, #059669);
+      height: 100%;
+      border-radius: 4px;
+      width: 0%;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-reset-checklist {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      padding: 3px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-reset-checklist:hover {
+      background: #ef4444;
+      color: #ffffff;
+      border-color: #ef4444;
     }
 
     /* Tarjetas de Módulos para el Landing Page */
@@ -1005,6 +1115,106 @@
         bq.parentNode.replaceChild(adm, bq);
       });
 
+      // 3.5. Fer interactives les llistes de tasques / cotejo (- [ ])
+      document.querySelectorAll('ul.task-list').forEach((taskList, listIdx) => {
+        const items = taskList.querySelectorAll('li.task-list-item');
+        if (!items.length) return;
+
+        // Crear caixa de progrés per a la llista
+        const progressBox = document.createElement('div');
+        progressBox.className = 'checklist-progress-box';
+        progressBox.innerHTML =
+          '<div class="checklist-progress-header">' +
+            '<span>📋 Progrés d\'autoavaluació: <strong class="checklist-count">0/' + items.length + '</strong> (<span class="checklist-pct">0%</span>)</span>' +
+            '<button type="button" class="btn-reset-checklist" title="Reiniciar les caselles marcades">🔄 Reiniciar</button>' +
+          '</div>' +
+          '<div class="checklist-progress-track">' +
+            '<div class="checklist-progress-fill" style="width:0%;"></div>' +
+          '</div>';
+        taskList.parentNode.insertBefore(progressBox, taskList);
+
+        const updateProgress = () => {
+          let checkedCount = 0;
+          items.forEach(li => {
+            const cb = li.querySelector('input.task-list-item-checkbox');
+            if (cb && cb.checked) checkedCount++;
+          });
+          const pct = Math.round((checkedCount / items.length) * 100);
+          const countEl = progressBox.querySelector('.checklist-count');
+          const pctEl = progressBox.querySelector('.checklist-pct');
+          const fillEl = progressBox.querySelector('.checklist-progress-fill');
+          if (countEl) countEl.textContent = checkedCount + '/' + items.length;
+          if (pctEl) pctEl.textContent = pct + '%';
+          if (fillEl) fillEl.style.width = pct + '%';
+        };
+
+        items.forEach((li, itemIdx) => {
+          const cb = li.querySelector('input.task-list-item-checkbox');
+          if (!cb) return;
+
+          cb.removeAttribute('disabled');
+          cb.disabled = false;
+
+          // Embolcallar text en un span amb classe .task-text
+          const textSpan = document.createElement('span');
+          textSpan.className = 'task-text';
+          while (cb.nextSibling) {
+            textSpan.appendChild(cb.nextSibling);
+          }
+          li.appendChild(textSpan);
+
+          // Clau de persistència en localStorage basada en pathname i índex
+          const pageKey = window.location.pathname.replace(/\/$/, '') || 'home';
+          const storageKey = 'checklist_' + pageKey + '_' + listIdx + '_' + itemIdx;
+
+          try {
+            if (localStorage.getItem(storageKey) === 'true') {
+              cb.checked = true;
+              li.classList.add('is-checked');
+            }
+          } catch (e) {}
+
+          const onToggle = () => {
+            if (cb.checked) {
+              li.classList.add('is-checked');
+            } else {
+              li.classList.remove('is-checked');
+            }
+            try {
+              localStorage.setItem(storageKey, cb.checked ? 'true' : 'false');
+            } catch (e) {}
+            updateProgress();
+          };
+
+          cb.addEventListener('change', onToggle);
+          li.addEventListener('click', (e) => {
+            if (e.target !== cb && e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
+              cb.checked = !cb.checked;
+              onToggle();
+            }
+          });
+        });
+
+        const resetBtn = progressBox.querySelector('.btn-reset-checklist');
+        if (resetBtn) {
+          resetBtn.addEventListener('click', () => {
+            const pageKey = window.location.pathname.replace(/\/$/, '') || 'home';
+            items.forEach((li, itemIdx) => {
+              const cb = li.querySelector('input.task-list-item-checkbox');
+              if (cb) {
+                cb.checked = false;
+                li.classList.remove('is-checked');
+                const storageKey = 'checklist_' + pageKey + '_' + listIdx + '_' + itemIdx;
+                try { localStorage.removeItem(storageKey); } catch (e) {}
+              }
+            });
+            updateProgress();
+          });
+        }
+
+        updateProgress();
+      });
+
       // 4. Carregar sidebar.json si la pàgina forma part d'un curs
       const sidebar = document.getElementById('course-sidebar');
       if (sidebar) {
@@ -1037,8 +1247,8 @@
               let unitActive = false;
               let itemsHtml = '';
               (unit.items || []).forEach(item => {
-                const itemHref = toHtmlHref(prefix + item.href);
                 const cleanHref = toHtmlHref(item.href.replace(/^\.\//, ''));
+                const itemHref = toHtmlHref(prefix + cleanHref);
                 const isItemActive = currentPath.endsWith('/' + cleanHref) ||
                   (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, '')));
                 if (isItemActive) unitActive = true;
@@ -1051,8 +1261,8 @@
             if (data.footer && data.footer.length) {
               html += '<ul>';
               data.footer.forEach(f => {
-                const fHref = toHtmlHref(prefix + f.href);
                 const cleanFHref = toHtmlHref(f.href.replace(/^\.\//, ''));
+                const fHref = toHtmlHref(prefix + cleanFHref);
                 const isFActive = currentPath.endsWith('/' + cleanFHref);
                 html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + f.label + '</a></li>';
               });

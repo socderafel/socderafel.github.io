@@ -99,106 +99,334 @@ next_label: "UD7 El Planeta Terra ➡️"
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**6.1 L'Origen de l'Univers i els Components Còsmics**](#61-lorigen-de-lunivers-i-els-components-còsmics)
-2. [**6.2 Els Astres i les Distàncies a l'Univers**](#62-els-astres-i-les-distàncies-a-lunivers)
-3. [**6.3 El Sistema Solar: El Sol i els Planetes**](#63-el-sistema-solar-el-sol-i-els-planetes)
-4. [**6.4 L'Exploració Espacial i Satèl·lits de Comunicacions**](#64-lexploració-espacial-i-satèllits-de-comunicacions)
-5. [**6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#65-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
-
----
-
-## 📌 6.1 L'Origen de l'Univers i els Components Còsmics
-
-L'origen i l'evolució del cosmos s'expliquen científicament mitjançant el **model del Big Bang**:
-- Fa aproximadament **$13.800\text{ milions d'anys}$**, tota la matèria i l'energia de l'univers estaven concentrades en un punt de densitat i temperatura infinites (singularitat inicial).
-- En eixe instant, es va produir una sobtada expansió de l'espai mateix que va començar a refredar-se, permetent la formació de partícules subatòmiques (quarks, electrons, protons i neutrons) i dels primers àtoms d'hidrogen i heli.
-- **Expansió de l'Univers:** Les observacions d'Edwin Hubble van demostrar que les galàxies s'allunyen les unes de les altres (desplaçament cap al roig espectral), prova fonamental que l'univers continua creixent.
-
-### Components Principals de l'Univers:
-1. **Galàxies:** Immenses agrupacions de milers de milions d'estels, planetes, núvols de gas i pols unides per la força de la gravetat. Es classifiquen segons la seua morfologia en:
-   - **Espirals:** Tenen un nucli central dens i braços corbats (ex. la nostra Via Làctia i la galàxia d'Andròmeda).
-   - **El·líptiques:** Tenen forma ovalada o esfèrica, formades principalment per estels vells i amb poc gas interestel·lar.
-   - **Irregulars:** No presenten una estructura definida (ex. els Núvols de Magalhães).
-2. **La Via Làctia:** És una galàxia espiral barrada amb un diàmetre estimat de $100.000\text{ anys llum}$. El nostre Sistema Solar està situat a la perifèria, al braç espiral d'**Orió**, a uns $26.000\text{ anys llum}$ del forat negre supermassiu central (Sagitari A*).
-3. **Nebuloses:** Núvols gegants de pols i gas hidrogen on, per col·lapse gravitatori, naixen nous estels (nebulo-vivers estel·lars, com la Nebulosa d'Orió).
-4. **Estels:** Cossos esfèrics de plasma que emeten llum i calor propis gràcies a les reaccions de **fusió nuclear** que tenen lloc al seu nucli ($4 \text{ } ^1\text{H} \rightarrow \text{ } ^4\text{He} + \text{energia}$).
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec6-1"><strong>6.1 L'Origen de l'Univers i els Components Còsmics</strong></a></li>
+    <li><a href="#sec6-2"><strong>6.2 Els Astres i les Distàncies a l'Univers</strong></a></li>
+    <li><a href="#sec6-3"><strong>6.3 El Sistema Solar: El Sol i els Planetes</strong></a></li>
+    <li><a href="#sec6-4"><strong>6.4 Exploració Espacial i Activitats d'Aprenentatge</strong></a></li>
+    <li><a href="#sec6-5"><strong>6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 6.2 Els Astres i les Distàncies a l'Univers
+## 📌 6.1 L'Origen de l'Univers i els Components Còsmics {#sec6-1}
 
-### Classificació dels Cossos Celestes:
-- **Estels:** Emeten llum pròpia per fusió nuclear continuada (ex. el Sol, Sírius, Vega).
-- **Planetes:** Cossos celestes opacs que orbiten al voltant d'un estel, tenen massa suficient per assolir equilibri hidrostàtic (forma esfèrica) i han netejat el veïnatge de la seua òrbita.
-- **Satèl·lits naturals:** Cossos que orbiten al voltant d'un planeta (ex. la Lluna al voltant de la Terra, Europa i Ganimedes al voltant de Júpiter).
-- **Planetes nans:** Cossos esfèrics que orbiten el Sol però no han netejat la seua òrbita d'altres fragments (ex. Plutó, Ceres, Eris).
-- **Cometes:** Cossos menuts formats per gel, pols i roques que procedeixen dels confins del Sistema Solar. En apropar-se al Sol, el gel es sublima i forma una cua de gas i pols oposada al vent solar.
-- **Asteroides i Meteors:** Cossos rocosos o metàl·lics irregulars. Quan un fragment espacial (meteoroide) entra en contacte amb l'atmosfera terrestre a gran velocitat, la fricció l'encén produint un **meteor** (estel fugaç). Si arriba a xocar amb la superfície sense desintegrar-se del tot, s'anomena **meteorit**.
-
-### Escales i Unitats de Mesura Astronòmiques:
-Atesa la immensitat del buit espacial, el quilòmetre resulta una unitat inadequada:
-1. **Unitat Astronòmica ($\text{UA}$):** És la distància mitjana entre la Terra i el Sol:
-   $$1\text{ UA} \approx 149.600.000\text{ km} \approx 1{,}5 \times 10^8\text{ km}$$
-   *(S'utilitza exclusivament per a mesurar distàncies dins del nostre Sistema Solar).*
-2. **Any Llum ($\text{a.ll.}$):** És la distància física que recorre un feix de llum en el buit durant un any sencer terrestre (a una velocitat $c = 300.000\text{ km/s}$):
-   $$1\text{ a.ll.} = c \cdot t = 300.000\text{ km/s} \times (365{,}25 \times 24 \times 3.600\text{ s}) \approx 9{,}46 \times 10^{12}\text{ km}$$
-   *(S'utilitza per a distàncies interestel·lars i intergalàctiques).*
+L'**Univers** és el conjunt de tot l'espai, el temps, la matèria i l'energia que existeixen, des de les partícules subatòmiques més menudes fins als cúmuls gegantins de galàxies, incloent-hi el nostre propi planeta i a nosaltres mateixos.
 
 ---
 
-## 📌 6.3 El Sistema Solar: El Sol i els Planetes
+### 1. L'Origen de l'Univers: La Teoria del Big Bang
 
-El Sistema Solar està format per una estrella central, el **Sol** (que concentra el $99{,}86\%$ de tota la massa del sistema), envoltat per $8\text{ planetes principals}$, desenes de planetes nans i milions d'asteroides i cometes.
+La teoria científica més acceptada sobre l'origen de l'Univers és la **teoria del Big Bang** (el Gran Esclat):
 
-### Taula Comparativa: Planetes Interiors vs. Planetes Exteriors
-
-| Paràmetre | Planetes Interiors (Tel·lúrics / Rocosos) | Planetes Exteriors (Jovians / Gasosos) |
-| :--- | :--- | :--- |
-| **Membres** | **Mercuri, Venus, Terra i Mart** | **Júpiter, Saturn, Urà i Neptú** |
-| **Ubicació** | Entre el Sol i el Cinturó d'Asteroides ($< 1{,}6\text{ UA}$) | Més enllà del Cinturó d'Asteroides ($> 5\text{ UA}$) |
-| **Composició** | Superfície sòlida rocosa (silicats) i nucli metàl·lic (ferro/níquel) | Atmosferes d'hidrogen i heli, mantells de gasos liquats i gels d'aigua/metà |
-| **Densitat mitjana** | **Elevada** ($3{,}9 \text{ a } 5{,}5\text{ g/cm}^3$) | **Baixa** ($0{,}7 \text{ a } 1{,}6\text{ g/cm}^3$, Saturn flotaria en aigua) |
-| **Grandària i Massa** | Diàmetres xicotets ($4.879\text{ km}$ a $12.756\text{ km}$) | Diàmetres gegants ($49.000\text{ km}$ a $142.984\text{ km}$) |
-| **Anells planetaris** | Cap anell | Tots quatre tenen sistemes d'anells (Saturn els més visibles) |
-| **Satèl·lits naturals** | Molt pocs (Terra: 1, Mart: 2, Mercuri/Venus: 0) | Nombrosos sistemes de satèl·lits (més de 90 cadascun a Júpiter i Saturn) |
-
-### Estructures Exteriors del Sistema Solar:
-- **Cinturó d'Asteroides:** Anell de fragments rocosos situat entre les òrbites de Mart i Júpiter.
-- **Cinturó de Kuiper:** Disc circumestel·lar de cossos menuts i gelats situat més enllà de Neptú ($30\text{ a } 55\text{ UA}$), on resideix el planeta nan Plutó.
-- **Núvol d'Oort:** Immensa closca esfèrica de restes de gel situada als límits extrems de la influència gravitacional del Sol (fins a $100.000\text{ UA}$), origen dels cometes de llarg període.
+- **El moment inicial:** Fa aproximadament **13.800 milions d'anys**, tota la matèria i l'energia de l'univers estaven concentrades en un punt infinitament dens i calent anomenat *singularitat*.
+- **La gran expansió:** Aquest punt va patir una sobtada i violenta expansió inflacionària. L'espai es va començar a estendre ràpidament i, en refredar-se, l'energia es va transformar en les primeres partícules de matèria (hidrogen i heli).
+- **Formació d'estels i galàxies:** Amb el pas de centenars de milions d'anys, la força de la gravetat va agrupar aquests gasos primigenis donant lloc a les primeres estrelles i galàxies.
+- **Un univers en expansió contínua:** L'astrònom Edwin Hubble va descobrir en el segle XX que les galàxies s'estan allunyant les unes de les altres a gran velocitat: l'Univers no és estàtic, continua creixent contínuament.
 
 ---
 
-## 📌 6.4 L'Exploració Espacial i Satèl·lits de Comunicacions
+### 2. Les Galàxies: Illes d'Estrelles
 
-L'era espacial va començar a mitjan segle XX impulsant tecnologies que avui sostenen la infraestructura digital mundial:
-- **1957:** Llançament del **Spútnik 1** per l'URSS, primer satèl·lit artificial en òrbita terrestre.
-- **1961:** Yuri Gagarin es converteix en el primer ésser humà a viatjar a l'espai.
-- **1969:** La missió **Apollo 11** de la NASA aterra a la Lluna; Neil Armstrong i Buzz Aldrin xafen el sòl lunar el 20 de juliol de 1969.
-- **Telescopis en òrbita:** El Hubble (òrbita baixa) i el **James Webb Space Telescope (JWST)**, situat al punt de Lagrange L2 a $1{,}5\text{ milions de km}$ de la Terra observant el cosmos en infraroig.
+Una **galàxia** és una gegantina agrupació de milers de milions d'estrelles, pols còsmica, gas i matèria fosca, units entre si per la força gravitatòria. S'estima que en l'univers observable hi ha més de dos bilions de galàxies.
 
-### Tipus d'Òrbites i Serveis de Telecomunicació:
-1. **Òrbita Baixa Terrestre (LEO - *Low Earth Orbit*):**
-   - Altitud: $160\text{ a } 2.000\text{ km}$.
-   - Aplicacions: Estació Espacial Internacional (ISS), constel·lacions de banda ampla d'internet (Starlink, OneWeb) i satèl·lits d'observació terrestre.
-   - Avantatge clau: **Latència molt baixa** en transmissions ($< 30\text{ ms}$).
-2. **Òrbita Mitjana Terrestre (MEO - *Medium Earth Orbit*):**
-   - Altitud: $\approx 20.000\text{ km}$.
-   - Aplicacions: Sistemes globals de navegació per satèl·lit (GPS dels EUA, Galileo d'Europa).
-3. **Òrbita Geoestacionària (GEO - *Geostationary Orbit*):**
-   - Altitud exacta: **$35.786\text{ km}$** sobre l'equador terrestre.
-   - Característica: El període orbital del satèl·lit és de $24\text{ hores}$, idèntic a la rotació de la Terra; per tant, el satèl·lit sembla immòbil des del terra.
-   - Aplicacions: Televisió per satèl·lit (Astra, Hispasat) i meteorologia (Meteosat). Les antenes parabòliques domèstiques poden romandre fixes apuntant al mateix punt del cel.
+Segons la seua forma geomètrica, les galàxies es classifiquen en:
+- **Espirals:** Tenen un nucli dens central i diversos braços enrotllats que giren al seu voltant (com la nostra Via Làctia o la galàxia d'Andròmeda).
+- **El·líptiques:** Tenen forma ovalada o esfèrica, sense braços, i solen estar formades per estels vells.
+- **Irregulars:** No tenen una forma definida; solen ser galàxies xicotetes o deformades per col·lisions gravitatòries amb altres galàxies.
+
+```
+Tipus de galàxies:
+  [ Espirals ]       [ El·líptiques ]      [ Irregulars ]
+  Braços corbats        Forma oval        Sense simetria
+```
 
 ---
 
-## 📌 6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+### 3. La Nostra Galàxia: La Via Làctia
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+La **Via Làctia** és la galàxia a la qual pertany el nostre Sistema Solar:
+- És una **galàxia espiral barrada** d'uns $100.000\text{ anys llum}$ de diàmetre.
+- Conté més de $200.000\text{ milions}$ d'estrelles.
+- El nostre Sistema Solar està situat a la perifèria, en un braç espiral anomenat el **Braç d'Orió**, a uns $26.000\text{ anys llum}$ del centre galàctic (on hi ha un forat negre supermassiu anomenat Sagitari A*).
+- Des de la Terra, en una nit fosca i serena sense contaminació lumínica, es pot observar creuant el cel com una franja blanquinosa i nebulosa semblant a un camí de llet (d'on prové el seu nom clàssic).
 
-#### Exercici 1: Velocitat de propagació de la llum i retard de senyal còsmic
+---
+
+### 4. Les Nebuloses i les Constel·lacions
+
+#### A) Les Nebuloses
+Són immensos núvols de gas (principalment hidrogen i heli) i pols interestel·lar. Són els veritables **bressols de les estrelles**: quan la gravetat fa condensar i col·lapsar la matèria d'una nebulosa, s'encenen nous estels. També poden formar-se nebuloses en morir estels gegants en explosions de supernova.
+
+#### B) Les Constel·lacions
+Una **constel·lació** és una agrupació aparent d'estrelles que la mirada humana uneix mitjançant línies imaginàries en el firmament per formar figures d'animals, déus o herois mitològics:
+- Les estrelles d'una constel·lació només semblen juntes des de la nostra perspectiva a la Terra; en realitat estan a distàncies immenses les unes de les altres.
+- Exemples cèlebres: L'**Óssa Major** (molt útil a l'hemisferi nord per trobar l'Estel del Nord o Polar), l'Óssa Menor, Orió el caçador o les constel·lacions del Zodíac.
+
+---
+
+### 💡 Resum de Conceptes Clau
+
+- L'Univers es va originar fa uns **13.800 milions d'anys** en el **Big Bang** i està en expansió contínua.
+- Les **galàxies** són col·leccions immenses d'estrelles; poden ser espirals, el·líptiques o irregulars.
+- Vivim a la **Via Làctia**, una galàxia espiral; el nostre Sol es troba al **Braç d'Orió**.
+- Les **nebuloses** són núvols de gas on neixen noves estrelles.
+- Les **constel·lacions** són dibuixos imaginaris d'estrelles al cel nocturn usats històricament per a orientar-se.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 6.2 Els Astres i les Distàncies a l'Univers {#sec6-2}
+
+Dins de les galàxies hi trobem una gran diversitat de cossos celestes o **astres**, cadascun amb propietats i dimensions sorprenents.
+
+---
+
+### 1. Els Diferents Astres de l'Univers
+
+| Tipus d'Astre | Llum pròpia? | Característiques Principals | Exemple |
+| :--- | :---: | :--- | :--- |
+| **Estrelles** | **SÍ** | Esferes gegants de gas molt calent (hidrogen i heli). Generen energia i llum mitjançant **reaccions nuclears de fusió**. El seu color indica la temperatura: les **blaves** són les més calentes, les **grogues** són intermèdies i les **roges** són més fredes. | El Sol, Sirius, Polaris, Betelgeuse |
+| **Planetes** | NO | Cossos rocosos o gasosos que orbiten al voltant d'una estrella. Tenen prou massa perquè la gravetat els done forma esfèrica i han escombrat la seua òrbita. | La Terra, Mart, Júpiter |
+| **Satèl·lits** | NO | Cossos celestes menors que orbiten al voltant d'un planeta. Reflecteixen la llum de l'estrella. | La Lluna (Terra), Fobos (Mart), Tità (Saturn) |
+| **Cometes** | NO | Cossos menuts formats per gel, pols i roques ("boles de neu bruta"). Tenen òrbites molt allargades. Quan s'acosten al Sol, el gel es sublima i el vent solar forma una cua o cabellera brillant de milions de quilòmetres dirigida en sentit contrari al Sol. | Cometa Halley |
+| **Asteroides** | NO | Fragments rocosos o metàl·lics irregulars de diferents mides que orbiten al voltant del Sol, principalment en cinturons. | Ceres, Vesta, Eros |
+
+---
+
+### 2. Diferència Clau: Meteoroide, Meteor i Meteorit
+
+Molt sovint es confonen aquests tres conceptes:
+
+```
+A l'espai exterior:          Entrant a l'atmosfera:            A la superfície terrestre:
+┌─────────────────┐          ┌───────────────────────┐         ┌────────────────────────┐
+│   METEOROIDE    │  ─────>  │  METEOR / ESTEL FUGAÇ │ ─────>  │       METEORIT         │
+│ (roca orbitant) │          │(s'encén per fricció)  │         │ (resta que impacta)    │
+└─────────────────┘          └───────────────────────┘         └────────────────────────┘
+```
+
+1. **Meteoroide:** Xicotet fragment de roca o pols que vaga per l'espai interplanetari.
+2. **Meteor (o Estel Fugaç):** Quan un meteoroide xoca contra l'atmosfera terrestre a gran velocitat ($10-70\text{ km/s}$), la fricció amb l'aire l'escalfa fins a vaporitzar-lo a la mesosfera, deixant un traç de llum fugaç en el cel nocturn. Les pluges d'estels més famoses són els Perseids (Les llàgrimes de Sant Llorenç a l'agost).
+3. **Meteorit:** Si el fragment és prou gran per no desintegrar-se del tot en l'atmosfera i arriba a colpejar la superfície de la Terra, rep el nom de **meteorit** (formant de vegades cràters d'impacte).
+
+---
+
+### 3. Com Mesurem les Distàncies a l'Univers?
+
+A l'Univers les distàncies són tan immensament grans que utilitzar el quilòmetre ($\text{km}$) no és pràctic, ja que ens obligaria a escriure números amb desenes de zeros. Els astrònoms utilitzen unitats especials:
+
+#### A) La Unitat Astronòmica ($\text{UA}$)
+S'utilitza per mesurar distàncies **dins del nostre Sistema Solar**. És la distància mitjana que separa la Terra del Sol:
+
+$$1 \text{ UA} \approx 150.000.000\text{ km} \quad (1{,}5 \times 10^8\text{ km})$$
+
+- Mart està a aproximadament $1{,}5\text{ UA}$ del Sol.
+- Júpiter està a unes $5{,}2\text{ UA}$ del Sol.
+- Neptú està a unes $30\text{ UA}$ del Sol.
+
+---
+
+#### B) L'Any Llum
+S'utilitza per mesurar distàncies **entre diferents estrelles i galàxies**. És la **distància física** que recorre un raig de llum en el buit durant **un any complet**:
+
+Com que la llum viatja a la velocitat màxima del cosmos ($c \approx 300.000\text{ km/s}$):
+$$\text{Segons en un any} = 365 \cdot 24 \cdot 60 \cdot 60 = 31.536.000\text{ segons}$$
+$$1 \text{ Any Llum} = 300.000\text{ km/s} \times 31.536.000\text{ s} \approx \mathbf{9{,}46 \times 10^{12}\text{ km}}$$
+És a dir, quasi **$9{,}5\text{ bilions de quilòmetres}$**!
+
+> [!NOTE]
+> ### Viatjar en el Temps Mirant el Cel
+> Quan mirem l'univers, estem mirant el passat:
+> - La llum del Sol tarda **$8\text{ minuts i 20 segons}$** a arribar als nostres ulls. Si el Sol s'apagara de sobte, no ens n'adonaríem fins passats 8 minuts!
+> - L'estrella més pròxima al Sistema Solar, **Pròxima Centauri**, està a **$4{,}2\text{ anys llum}$**: la veiem tal com era fa més de quatre anys.
+> - La galàxia d'Andròmeda està a **$2{,}5\text{ milions d'anys llum}$**.
+
+---
+
+### ✏️ Exercicis de Comprensió
+
+1. **Quina diferència fonamental hi ha entre un planeta i una estrella?**
+
+2. **Per què els estels fugaços no són realment estrelles que cauen?**
+
+3. **Si una sonda espacial viatja a un planeta situat a $4\text{ UA}$, quants quilòmetres aproximadament haurà de recórrer?**
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 6.3 El Sistema Solar: El Sol i els Planetes {#sec6-3}
+
+El nostre **Sistema Solar** es va formar fa uns **4.600 milions d'anys** a partir d'un núvol gegant de pols i gas interestel·lar. Està format pel **Sol**, que conté el $99{,}8\%$ de tota la massa, i tots els astres que orbiten atrapats pel seu camp gravitatori.
+
+```
+[ SOL ] ➔ Mercuri ➔ Venus ➔ Terra ➔ Mart ➔ [CINTURÓ D'ASTEROIDES] ➔ Júpiter ➔ Saturn ➔ Urà ➔ Neptú ➔ [CINTURÓ DE KUIPER]
+```
+
+---
+
+### 1. El Sol: El Cor del Sistema Solar
+
+El **Sol** és una estrella de tipus espectral nana groga. És la font d'energia primària que fa possible la vida a la Terra i manté en moviment l'atmosfera i el cicle de l'aigua:
+- **Nucli:** Zona central on tenen lloc les reaccions de fusió nuclear que transformen l'hidrogen en heli a una temperatura de més de **$15.000.000\text{ }^\circ\text{C}$**.
+- **Fotosfera:** La superfície visible del Sol, amb una temperatura d'uns **$5.500\text{ }^\circ\text{C}$**. En ella s'observen les **taques solars** (zones més fredes i amb intens camp magnètic).
+- **Cromosfera i Corona:** L'atmosfera exterior del Sol, només visible a simple vista durant els eclipsis totals de Sol.
+
+---
+
+### 2. Els Planetes Interiors o Terrestres (Rocosos)
+
+Són els quatre planetes més propers al Sol. Es caracteritzen per ser **relativament petits**, de **superfície sòlida i rocosa**, densos, i amb pocs o cap satèl·lit natural:
+
+1. **Mercuri:**
+   - És el planeta més menut i el més proper al Sol.
+   - Manca d'atmosfera, per la qual cosa està ple de cràters d'impacte i pateix oscil·lacions tèrmiques extremes: des de $-180\text{ }^\circ\text{C}$ de nit fins a $+430\text{ }^\circ\text{C}$ de dia.
+2. **Venus:**
+   - De grandària molt semblant a la Terra.
+   - Posseeix una atmosfera asfixiant molt densa de diòxid de carboni ($\text{CO}_2$) amb núvols d'àcid sulfúric, creant un **efecte d'hivernacle extrem**. És el planeta més calent del Sistema Solar (temperatura constant d'uns **$465\text{ }^\circ\text{C}$**).
+   - Gira sobre si mateix en sentit retrògrad (a l'inrevés que la majoria).
+3. **La Terra:**
+   - El nostre llar: l'únic planeta conegut que alberga vida.
+   - Distància ideal al Sol, atmosfera amb un $21\%$ d'oxigen, camp magnètic protector i abundant **aigua líquida** a la superfície. Té un satèl·lit: la Lluna.
+4. **Mart:**
+   - Conegut com el "planeta roig" pel color dels minerals d'òxid de ferro que cobreixen el seu sòl.
+   - Té una atmosfera molt tènue de $\text{CO}_2$, aigua congelada als casquets polars i sota terra, i acull el volcà més gegantí del Sistema Solar: el **Mont Olimp** ($22\text{ km}$ d'alçada). Té dos xicotets satèl·lits rocosos: Fobos i Deimos.
+
+---
+
+### 3. El Cinturó Principal d'Asteroides
+
+Situat entre les òrbites de Mart i Júpiter, és una franja d'espai poblada per milions de fragments rocosos que no van arribar a unir-se per formar un planeta degut a la forta influència gravitatòria de Júpiter. En ell es troba el planeta nan **Ceres**.
+
+---
+
+### 4. Els Planetes Exteriors o Gegants Gasosos
+
+Situats més enllà del cinturó d'asteroides, són planetes **enormes**, sense una superfície sòlida definida, compostos principalment per hidrogen, heli, metà i aigua congelada, amb anells i nombrosos satèl·lits:
+
+5. **Júpiter:**
+   - El rei dels planetes: és més massiu que tots els altres planetes junts (hi cabrien més de $1.300$ planetes Terra).
+   - Famosa per la seua **Gran Taca Roja**, una tempesta anticiclònica gegantina de gas que porta activa més de 300 anys. Té més de 90 satèl·lits (destaquen Io, Europa, Ganimedes i Cal·listo).
+6. **Saturn:**
+   - Cèlebre pel seu espectacular i brillant **sistema d'anells**, formats per milions de fragments de gel d'aigua i pols.
+   - És el segon més gran i és tan poc dens que suraria en una banyera prou gran d'aigua. El seu satèl·lit més famós és Tità.
+7. **Urà:**
+   - Un gegant de gel amb un característic to blau verdós degut al metà de la seua atmosfera.
+   - El seu eix de rotació està quasi tombat ($98^\circ$ d'inclinació), per la qual cosa orbita "rodant de costat".
+8. **Neptú:**
+   - El planeta més allunyat del Sistema Solar (a unes $30\text{ UA}$).
+   - Té un intens color blau marí i posseeix els **vents més violents i ràpids** de tot el Sistema Solar, superant els $2.000\text{ km/h}$.
+
+---
+
+### 5. Els Cossos Transneptunians: Plutó i el Núvol d'Oort
+
+- **Plutó i els Planetes Nans:** Des de 1930 fins a 2006, Plutó va ser considerat el nové planeta. En 2006, la Unió Astronòmica Internacional el va reclassificar com a **planeta nan** perquè comparteix la seua òrbita amb milers de cossos semblants al Cinturó de Kuiper (com Eris o Makemake).
+- **El Cinturó de Kuiper:** Disc de cossos gelats més enllà de l'òrbita de Neptú.
+- **El Núvol d'Oort:** Immensa closca esfèrica de cometes situada als confins del Sistema Solar (vora 1 any llum del Sol), d'on provenen els cometes de període llarg.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 6.4 Exploració Espacial i Activitats d'Aprenentatge {#sec6-4}
+
+Des de l'antiguitat, la humanitat ha mirat al cel amb curiositat. En les darreres dècades, la ciència i la tecnologia han permés que l'ésser humà viatge més enllà de la Terra i explore els confins del Sistema Solar.
+
+---
+
+### 🚀 Grans Fites de l'Exploració Espacial
+
+- **1957:** Llançament de l'**Spútnik 1** per la Unió Soviètica, el primer satèl·lit artificial que va orbitar la Terra.
+- **1961:** El cosmonauta soviètic **Iuri Gagarin** es converteix en el primer ésser humà a viatjar a l'espai a bord de la nau *Vostok 1*.
+- **20 de juliol de 1969:** La missió nord-americana **Apollo 11** aterra a la Lluna. Els astronautes **Neil Armstrong** i **Buzz Aldrin** es converteixen en els primers humans a caminar sobre la superfície d'un altre món.
+  > *«Aquest és un xicotet pas per a un home, però un gran salt per a la humanitat.»* — Neil Armstrong.
+- **Les Sondes Voyager (1977 - Actualitat):** Les sondes *Voyager 1* i *Voyager 2* van visitar els gegants gasosos i actualment són els objectes fabricats per l'ésser humà que viatgen més lluny, havent creuat la frontera del Sistema Solar cap a l'espai interestel·lar.
+- **Telescopis Espacials Hubble i James Webb:** Situats fora de l'atmosfera per captar imatges nítides de les galàxies més llunyanes i estudiar l'atmosfera d'exoplanetes.
+- **Ròvers a Mart:** Vehicles robotitzats com *Curiosity* i *Perseverance* exploren la superfície marciana analitzant roques a la recerca de senyals de vida microscòpica passada.
+- **L'Estació Espacial Internacional (ISS):** Laboratori de recerca orbital permanent habitat de manera ininterrompuda des de l'any 2000 per astronautes de diferents països.
+
+---
+
+### 📝 Butlletí d'Activitats d'Avaluació
+
+#### Activitats de Relació i Comprensió
+
+1. **Ordena els 8 planetes del Sistema Solar des del més proper al Sol fins al més allunyat:**
+
+2. **Indica a quin planeta correspon cadascuna de les següents afirmacions:**
+   - a) Té l'atmosfera més calenta per un efecte hivernacle descontrolat $\rightarrow$
+   - b) Posseeix el volcà més alt anomenat Mont Olimp $\rightarrow$
+   - c) És el més gran de tots i té la Gran Taca Roja $\rightarrow$
+   - d) Posseeix un sistema espectacular d'anells brillants $\rightarrow$
+   - e) Gira pràcticament tombat sobre el seu eix de rotació $\rightarrow$
+
+3. **Càlcul d'escales espacials:**
+   - Si la nau *Voyager 1* es troba a unes $160\text{ UA}$ de la Terra, a quants milions de quilòmetres equival aquesta distància?
+
+---
+
+#### Qüestionari d'Autoavaluació Tipus Test
+
+**1. Quants milions d'anys té aproximadament l'Univers segons la teoria del Big Bang?**
+- A) 4.600 milions d'anys
+- B) 13.800 milions d'anys
+- C) 2.000 milions d'anys
+- D) 100 milions d'anys
+
+**2. Com es diu la nostra galàxia i quin tipus de forma té?**
+- A) Andròmeda, el·líptica
+- B) Via Làctia, espiral barrada
+- C) Braç d'Orió, irregular
+- D) Sombrero, lenticular
+
+**3. Què és un estel fugaç o meteor?**
+- A) Una estrella que es trenca i cau de l'espai
+- B) Un fragment de roca (meteoroide) que s'incinera per fricció a l'atmosfera terrestre
+- C) Un cometa que passa a prop del Sol
+- D) Un satèl·lit artificial que s'ha quedat sense bateria
+
+**4. Quin grup de planetes són coneguts com a planetes interiors o rocosos?**
+- A) Júpiter, Saturn, Urà i Neptú
+- B) Mercuri, Venus, Terra i Mart
+- C) La Terra, la Lluna i el Sol
+- D) Mart, Ceres i Plutó
+
+---
+
+> [!TIP]
+> **Següent pas:** Continua amb el [**6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0605.html) per resoldre els càlculs de retard de la velocitat de la llum a Mart, enllaços per a satèl·lits LEO/GEO i la maqueta a escala del Sistema Solar.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec6-5}
+
+Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, reptes de telecomunicacions espacials i la rúbrica d'avaluació competencial per a la **Unitat 6: La Terra i l'Univers**.
+
+---
+
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Velocitat de propagació de la llum i retard de senyal còsmic
 Les ones de ràdio emprades en comunicacions espacials viatgen a la velocitat de la llum en el buit:
 $$c = 300.000\text{ km/s} = 3 \times 10^5\text{ km/s}$$
 Aplica la fórmula fonamental del moviment rectilini uniforme $t = \dfrac{d}{c}$ per calcular el temps exacte de retard (en segons o minuts) que tarda a arribar un senyal enviat des de la Terra als següents objectius:
@@ -209,13 +437,13 @@ Aplica la fórmula fonamental del moviment rectilini uniforme $t = \dfrac{d}{c}$
    - En el moment d'oposició més llunyana (amb el Sol entremig): $d_{\text{màx}} = 400.000.000\text{ km}$.
 4. Explica per què un operador humà no pot conduir el ròver de Mart amb un comandament a distància en temps real i cal dotar el robot de navegació autònoma per IA.
 
-#### Exercici 2: Conversió d'unitats astronòmiques i notació científica
+##### Exercici 2: Conversió d'unitats astronòmiques i notació científica
 1. L'estel més proper al Sistema Solar és **Pròxima Centauri**, situat a una distància de $4{,}24\text{ anys llum}$. Converteix aquesta distància física a quilòmetres reals expressant el resultat en notació científica:
    $$d = 4{,}24 \times (9{,}46 \times 10^{12}\text{ km})$$
 2. Júpiter orbita a una distància mitjana del Sol de $5{,}2\text{ UA}$. Converteix aquesta mesura a quilòmetres ($1\text{ UA} = 1{,}5 \times 10^8\text{ km}$).
 3. La sonda espacial Voyager 1 es troba aproximadament a $162\text{ UA}$ de la Terra navegant per l'espai interestel·lar. Quantes hores tarda un paquet de dades de telemetria emès per la Voyager 1 a arribar a les antenes de la Xarxa d'Espai Profund (DSN) de la NASA?
 
-#### Exercici 3: Densitat i classificació de planetes del Sistema Solar
+##### Exercici 3: Densitat i classificació de planetes del Sistema Solar
 La densitat mitjana d'un cos celeste es calcula dividint la seua massa pel seu volum: $\rho = \dfrac{M}{V}$.
 Analitza les dades de la següent taula i respon a les preguntes:
 
@@ -232,9 +460,9 @@ Analitza les dades de la següent taula i respon a les preguntes:
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Dimensionament de latència i enllaços per a satèl·lits LEO vs. GEO
+##### Repte 1: Dimensionament de latència i enllaços per a satèl·lits LEO vs. GEO
 - **Objectiu:** Comparar el temps d'anada i tornada (*Round Trip Time* - RTT) en xarxes informàtiques satel·litàries.
 - **Situació de telecomunicacions:** Una empresa vol dotar d'internet un refugi aïllat de muntanya i avalua dues tecnologies:
   - **Opció A (Satèl·lit GEO):** Satèl·lit geoestacionari a $h_{\text{GEO}} = 36.000\text{ km}$ d'altitud.
@@ -246,7 +474,7 @@ Analitza les dades de la següent taula i respon a les preguntes:
   3. Repeteix el càlcul d'anada i tornada per a la connexió LEO a $600\text{ km}$.
   4. Redacta una recomanació tècnica argumentant quina connexió és apta per a videotrucades i jocs en xarxa interactius i per què.
 
-#### Repte 2: Orientació d'antena parabòlica domèstica a satèl·lit geoestacionari
+##### Repte 2: Orientació d'antena parabòlica domèstica a satèl·lit geoestacionari
 - **Objectiu:** Identificar els paràmetres d'instal·lació d'una antena receptora de televisió per satèl·lit.
 - **Situació:** En el taller d'instal·lacions de telecomunicacions es munta una antena parabòlica orientada al satèl·lit **Astra 19.2°E** per rebre canals internacionals:
   1. Per què l'antena parabòlica ha d'apuntar necessàriament en direcció Sud i amb un angle d'elevació precís sobre l'horitzó?
@@ -254,7 +482,7 @@ Analitza les dades de la següent taula i respon a les preguntes:
   3. Què és el fenomen d'esvaïment per tempesta (*Rain Fade*) i com afecta les freqüències de la banda Ku ($12\text{ GHz}$) en dies de pluja torrencial?
   4. Explica què és l'apagada solar (*Solar Outage*) que ocorre dues vegades a l'any (durant els equinoccis de primavera i tardor) quan el Sol se situa exactament darrere del satèl·lit respecte a la paràbola.
 
-#### Repte 3: Construcció d'un model a escala del Sistema Solar
+##### Repte 3: Construcció d'un model a escala del Sistema Solar
 - **Objectiu:** Representar proporcionalment les dimensions astronòmiques en un espai tangible de centre educatiu.
 - **Situació:** L'alumnat de grau bàsic dissenya una maqueta lineal a escala del Sistema Solar al passadís de l'institut ($60\text{ metres}$ de longitud total disponible):
   - Establim que la distància Sol-Neptú ($30\text{ UA} = 4.500.000.000\text{ km}$) equivaldrà exactament a $60\text{ metres}$ a la maqueta.
@@ -272,9 +500,9 @@ Analitza les dades de la següent taula i respon a les preguntes:
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He explicat la teoria del Big Bang i la formació d'àtoms d'hidrogen i heli en els primers minuts del cosmos.
 - [ ] He diferenciat estels, planetes, satèl·lits naturals, asteroides i cometes per la seua composició i òrbita.
 - [ ] He convertit distàncies espacials entre quilòmetres, Unitats Astronòmiques (UA) i Anys Llum (a.ll.).
@@ -282,7 +510,7 @@ Analitza les dades de la següent taula i respon a les preguntes:
 - [ ] He comparat les característiques físiques (densitat, mida i atmosfera) dels planetes rocosos i gasosos.
 - [ ] He distingit les aplicacions de les òrbites baixes LEO (baixa latència) i de les òrbites geoestacionàries GEO (antenes fixes).
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -291,3 +519,9 @@ Analitza les dades de la següent taula i respon a les preguntes:
 | **Planetologia comparada (Rocosos/Jovians)** | Contrasta densitats, atmosferes, diàmetres i anells dels 8 planetes del Sistema Solar de forma exhaustiva. | Agrupa correctament els planetes en rocosos i gasosos explicant les diferències clau. | Recorda l'ordre dels planetes respecte al Sol però confon la seua composició interna. | No sap distingir els planetes interiors dels exteriors o inclou la Lluna com a planeta. |
 | **Velocitat de la llum i telecomunicacions** | Calcula retards de propagació i latències RTT en òrbites LEO/GEO i missions a Mart amb càlcul impecable. | Aplica la fórmula $t = d/c$ de forma correcta i raona el retard en transmissions de ràdio. | Calcula el temps bàsic Terra-Lluna però té dificultats per convertir segons a minuts. | No comprèn que les ones electromagnètiques tenen una velocitat finita i creu que la comunicació és instantània. |
 | **Òrbites satel·litàries i tecnologia aplicada** | Justifica la tria d'òrbites LEO o GEO segons requeriments de latència i orientació d'antenes parabòliques. | Explica la utilitat de l'òrbita geoestacionària per a satèl·lits de televisió i clima. | Descriu què és un satèl·lit artificial però confon altituds orbitals. | Incapaç de relacionar l'òrbita d'un satèl·lit amb el funcionament del GPS o la televisió domèstica. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

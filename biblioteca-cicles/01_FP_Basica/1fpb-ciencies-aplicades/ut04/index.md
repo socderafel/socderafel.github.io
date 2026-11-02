@@ -99,119 +99,448 @@ next_label: "UD5 Les Fraccions ➡️"
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**4.1 Múltiples, Divisors i Criteris de Divisibilitat**](#41-múltiples-divisors-i-criteris-de-divisibilitat)
-2. [**4.2 Nombres Primers i Descomposició en Factors Primers**](#42-nombres-primers-i-descomposició-en-factors-primers)
-3. [**4.3 Màxim Comú Divisor (MCD) i Mínim Comú Múltiple (MCM)**](#43-màxim-comú-divisor-mcd-i-mínim-comú-múltiple-mcm)
-4. [**4.4 Problemes Reals d'MCD i MCM i Butlletí d'Exercicis**](#44-problemes-reals-dmcd-i-mcm-i-butlletí-dexercicis)
-5. [**4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#45-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
-
----
-
-## 📌 4.1 Múltiples, Divisors i Criteris de Divisibilitat
-
-La relació de **divisibilitat** s'estableix formalment entre dos nombres enters quan la divisió del primer entre el segon és exacta, és a dir, quan el residu és estrictament zero:
-
-$$a : b = c \quad (r = 0) \iff a = b \cdot c$$
-
-En aquesta situació diem de forma equivalent que:
-- $a$ és **múltiple** de $b$.
-- $b$ és **divisor** de $a$.
-- $a$ és **divisible** per $b$.
-
-### Taula Comparativa: Múltiples vs. Divisors
-
-| Característica | Múltiples d'un Nombre ($M(a)$) | Divisors d'un Nombre ($D(a)$) |
-| :--- | :--- | :--- |
-| **Definició** | Nombres que contenen a $a$ una quantitat exacta de vegades | Nombres que estan continguts en $a$ de manera exacta |
-| **Com s'obtenen?** | Multiplicant $a$ pels nombres naturals ($0, 1, 2, 3, \dots$) | Fent divisions i seleccionant aquelles amb residu zero |
-| **Quantitat** | **Infinits** | **Finits** (sempre majors o iguals a 1 i menors o iguals a $a$) |
-| **Extrems** | El més menut no nul és ell mateix ($a \cdot 1 = a$) | L'$1$ és divisor universal; el major és ell mateix ($a$) |
-| **Exemple amb 12** | $M(12) = \{0, 12, 24, 36, 48, 60, \dots\}$ | $D(12) = \{1, 2, 3, 4, 6, 12\}$ |
-
-### Criteris de Divisibilitat Ràpids
-Permeten determinar si un nombre és divisible per un altre sense necessitat d'executar l'algorisme de divisió:
-
-| Nombre | Regla Pràctica de Comprovació | Exemple Positiu | Exemple Negatiu |
-| :---: | :--- | :--- | :--- |
-| **2** | L'última xifra és $0$ o un dígit parell ($2, 4, 6, 8$). | $1.478$ (acaba en $8$) | $3.591$ (acaba en $1$) |
-| **3** | La suma de totes les seues xifres és un múltiple de $3$. | $516 \rightarrow 5+1+6=12$ ($12 \in M(3)$) | $713 \rightarrow 7+1+3=11$ |
-| **4** | Les dues últimes xifres formen un múltiple de $4$ o són $00$. | $3.524$ ($24 = 4 \cdot 6$) | $9.118$ ($18$ no és divisible per $4$) |
-| **5** | L'última xifra és $0$ o $5$. | $4.895$ (acaba en $5$) | $6.234$ (acaba en $4$) |
-| **9** | La suma de les seues xifres és un múltiple de $9$. | $2.853 \rightarrow 2+8+5+3=18$ | $4.512 \rightarrow 4+5+1+2=12$ |
-| **10** | L'última xifra és exactament $0$. | $19.450$ | $19.455$ |
-| **11** | La diferència entre la suma de les xifres de posició parell i la de posició imparell és $0$ o múltiple d'11. | $8.294 \rightarrow (8+9) - (2+4) = 17 - 6 = 11$ | $5.182 \rightarrow (5+8) - (1+2) = 10$ |
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec4-1"><strong>4.1 Múltiples, Divisors i Criteris de Divisibilitat</strong></a></li>
+    <li><a href="#sec4-2"><strong>4.2 Nombres Primers i Descomposició en Factors Primers</strong></a></li>
+    <li><a href="#sec4-3"><strong>4.3 Màxim Comú Divisor (MCD) i Mínim Comú Múltiple (MCM)</strong></a></li>
+    <li><a href="#sec4-4"><strong>4.4 Problemes Reals d'MCD i MCM i Butlletí d'Exercicis</strong></a></li>
+    <li><a href="#sec4-5"><strong>4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 4.2 Nombres Primers i Descomposició en Factors Primers
+## 📌 4.1 Múltiples, Divisors i Criteris de Divisibilitat {#sec4-1}
 
-- **Nombre Primer:** Nombre natural major que 1 que només té exactament dos divisors: l'1 i ell mateix:
-  $$\mathbb{P} = \{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, \dots\}$$
-  *(El nombre $2$ és l'únic nombre primer parell).*
-- **Nombre Compost:** Nombre que té més de dos divisors (excepte el 0 i l'1, que per conveni no són ni primers ni compostos).
+La **divisibilitat** és la branca de l'aritmètica que estudia les condicions perquè un nombre sencer puga dividir-se exactament entre un altre sense deixar residu.
 
-### Teorema Fonamental de l'Aritmètica
-Tot nombre compost es pot expressar de forma **única** (tret de l'ordre dels factors) com un producte de factors primers:
+---
 
-$$N = p_1^{a_1} \cdot p_2^{a_2} \cdot p_3^{a_3} \dots$$
+### 1. La Relació de Divisibilitat: Múltiples i Divisors
 
-**Mètode de descomposició per divisions successives verticals:**
-```text
-  120 | 2           180 | 2
-   60 | 2            90 | 2
-   30 | 2            45 | 3
-   15 | 3            15 | 3
-    5 | 5             5 | 5
-    1 |               1 |
-120 = 2³ · 3 · 5    180 = 2² · 3² · 5
+Diem que dos nombres naturals estan emparentats per la **relació de divisibilitat** quan la divisió del primer entre el segon és **exacta** (el residu és $0$):
+
+$$\text{Si } a : b = c \quad (\text{residu } 0) \iff a = b \cdot c$$
+
+En aquest cas, podem expressar aquesta mateixa relació de tres formes equivalents:
+1. **$a$ és múltiple de $b$:** Perquè s'obté multiplicant $b$ per un altre nombre natural $c$.
+2. **$b$ és divisor de $a$:** Perquè divideix exactament a $a$.
+3. **$a$ és divisible per $b$:** Perquè la divisió $a : b$ és exacta.
+
+> **Exemple clar:** $24 : 6 = 4$ (residu $0$).
+> - $24$ és múltiple de $6$.
+> - $6$ és divisor de $24$.
+> - $24$ és divisible per $6$.
+
+---
+
+### 2. Com Calcular Múltiples d'un Nombre
+
+Els **múltiples** d'un nombre s'obtenen multiplicant aquest nombre per qualsevol nombre natural ($0, 1, 2, 3, 4, \dots$):
+
+$$\dot{a} \text{ o } \text{Múlt}(a) = \{a \cdot 0, a \cdot 1, a \cdot 2, a \cdot 3, \dots\}$$
+
+- **Propietats dels múltiples:**
+  - Tot nombre té **infinits múltiples**.
+  - El **$0$ és múltiple de tots els nombres**: $a \cdot 0 = 0$.
+  - Tot nombre és múltiple de si mateix: $a \cdot 1 = a$.
+
+> **Exemple:** Múltiples de $7$:  
+> $\text{Múlt}(7) = \{0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, \dots\}$
+
+---
+
+### 3. Com Trobar Tots els Divisors d'un Nombre
+
+Un nombre $b$ és **divisor** de $a$ si la divisió $a : b$ no té residu.
+
+- **Propietats dels divisors:**
+  - El conjunt de divisors d'un nombre és **finit** (té un nombre limitat d'elements).
+  - L'**$1$ és divisor de qualsevol nombre**.
+  - Tot nombre és divisor de si mateix: $a : a = 1$.
+
+#### Mètode de les Parelles per a Trobar els Divisors
+Dividim el nombre successivament entre $1, 2, 3, 4, \dots$ fins que el quocient siga menor o igual que el divisor:
+
+> **Exemple:** Calculem tots els divisors de $36$:
+> - $36 : 1 = 36 \longrightarrow$ divisors: **$1$ i $36$**
+> - $36 : 2 = 18 \longrightarrow$ divisors: **$2$ i $18$**
+> - $36 : 3 = 12 \longrightarrow$ divisors: **$3$ i $12$**
+> - $36 : 4 = 9 \longrightarrow$ divisors: **$4$ i $9$**
+> - $36 : 5$ no és exacta (residu $1$).
+> - $36 : 6 = 6 \longrightarrow$ divisor: **$6$**
+> 
+> $\text{Div}(36) = \{1, 2, 3, 4, 6, 9, 12, 18, 36\}$
+
+---
+
+### 4. Els Criteris de Divisibilitat
+
+Els **criteris de divisibilitat** són regles ràpides que ens permeten saber si un nombre és divisible per un altre sense necessitat de fer la divisió:
+
+| Criteri | Regla Pràctica | Exemples |
+| :---: | :--- | :--- |
+| **Divisible per $2$** | Acaba en **$0$ o xifra parell** ($2, 4, 6, 8$). | $12\mathbf{4}$, $58\mathbf{0}$, $1.39\mathbf{6}$ |
+| **Divisible per $3$** | La **suma de les seues xifres** és múltiple de $3$. | $216 \rightarrow 2 + 1 + 6 = 9$ (és múltiple de 3 $\rightarrow$ Sí) |
+| **Divisible per $5$** | Acaba en **$0$ o en $5$**. | $42\mathbf{5}$, $1.89\mathbf{0}$ |
+| **Divisible per $9$** | La **suma de les seues xifres** és múltiple de $9$. | $729 \rightarrow 7 + 2 + 9 = 18$ (múltiple de 9 $\rightarrow$ Sí) |
+| **Divisible per $10$** | Acaba en **$0$**. | $8\mathbf{0}$, $35\mathbf{0}$, $4.00\mathbf{0}$ |
+| **Divisible per $11$** | La diferència entre la suma de les xifres de posició parell i la suma de les de posició imparell és **$0$ o múltiple d'11**. | $8.195 \rightarrow (8+9) - (1+5) = 17 - 6 = 11$ $\rightarrow$ Sí |
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Escriu els cinc primers múltiples de:**
+   - a) $6 \rightarrow$
+   - b) $12 \rightarrow$
+   - c) $25 \rightarrow$
+
+2. **Troba tots els divisors de:**
+   - a) $24 \rightarrow$
+   - b) $40 \rightarrow$
+
+3. **Indica per quins nombres ($2, 3, 5, 9, 10, 11$) són divisibles els següents números:**
+   - a) $180 \rightarrow$
+   - b) $275 \rightarrow$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 4.2 Nombres Primers i Descomposició en Factors Primers {#sec4-2}
+
+Els nombres primers són els "blocs de construcció" o els àtoms de l'aritmètica: qualsevol nombre sencer es pot construir multiplicant nombres primers.
+
+---
+
+### 1. Nombres Primers i Nombres Compostos
+
+Segons la quantitat de divisors que té un nombre natural major que 1, podem classificar-lo en:
+
+- **Nombre Primer:** És aquell que **només té dos divisors positius**: l'**1** i **ell mateix**.
+  $$\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, \dots\}$$
+  - El **$2$ és l'únic nombre primer parell** (tots els altres parells es poden dividir entre 2).
+  - El nombre **$1$ no és ni primer ni compost**, ja que només té un únic divisor (ell mateix).
+- **Nombre Compost:** És aquell que té **més de dos divisors** (es pot expressar com a producte d'altres nombres menors que ell).
+  $$\{4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, \dots\}$$
+
+---
+
+### 2. El Garbell d'Eratòstenes
+
+El **garbell d'Eratòstenes** és un mètode clàssic ideat en l'antiga Grècia per trobar tots els nombres primers menors que un cert nombre (per exemple, fins a $50$):
+
+1. Escrivim tots els nombres del $2$ al $50$.
+2. Deixem el **$2$** (que és primer) i tatxem tots els seus múltiples ($4, 6, 8, 10, \dots$).
+3. El següent nombre sense tatxar és el **$3$** (primer); tatxem tots els seus múltiples ($6, 9, 12, 15, \dots$).
+4. El següent és el **$5$** (primer); tatxem tots els seus múltiples ($10, 15, 20, 25, \dots$).
+5. El següent és el **$7$** (primer); tatxem els seus múltiples ($14, 21, 28, 35, 49$).
+6. Tots els nombres que queden sense tatxar són els **nombres primers**:
+
+```
+2,  3,  5,  7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
 ```
 
 ---
 
-## 📌 4.3 Màxim Comú Divisor (MCD) i Mínim Comú Múltiple (MCM)
+### 3. Descomposició en Factors Primers (Factorització)
 
-### Màxim Comú Divisor ($\text{MCD}$)
-És el major nombre enter que divideix exactament a dos o més nombres alhora.
-- **Regla algorítmica:** Es descomponen els nombres en factors primers i es prenen **ÚNICAMENT els factors comuns elevats al MENOR exponent**.
-- **Propietat:** Si dos nombres no comparteixen cap factor primer comú, el seu $\text{MCD}$ és $1$, i s'anomenen **primers entre si** (coprimers).
+> [!IMPORTANT]
+> ### Teorema Fonamental de l'Aritmètica
+> Qualsevol nombre compost es pot expressar de manera **única** com a producte de nombres primers elevats a determinades potències.
 
-### Mínim Comú Múltiple ($\text{MCM}$)
-És el nombre positiu més menut que és múltiple simultani de dos o més nombres.
-- **Regla algorítmica:** Es descomponen els nombres en factors primers i es prenen **TOTS els factors (comuns i no comuns) elevats al MAJOR exponent**.
+#### Com Descompondre en Factors Primers Pas a Pas:
+Trassem una ratlla vertical. A l'esquerra escrivim el nombre i a la dreta anem provant successivament amb els nombres primers en ordre creixent ($2, 3, 5, 7, 11, \dots$):
 
-### Propietat Fonamental per a Dos Nombres
-Per a qualsevol parell de nombres enters positius $a$ i $b$, es compleix sempre la igualtat:
+##### Exemple 1: Descomposició de $60$
+$$\begin{array}{r|l}
+60 & 2 \\
+30 & 2 \\
+15 & 3 \\
+5 & 5 \\
+1 & 
+\end{array}$$
+
+El nombre $60$ factoritzat s'escriu:
+$$60 = 2 \cdot 2 \cdot 3 \cdot 5 = \mathbf{2^2 \cdot 3 \cdot 5}$$
+
+---
+
+##### Exemple 2: Descomposició de $180$
+$$\begin{array}{r|l}
+180 & 2 \\
+90 & 2 \\
+45 & 3 \\
+15 & 3 \\
+5 & 5 \\
+1 & 
+\end{array}$$
+
+$$180 = \mathbf{2^2 \cdot 3^2 \cdot 5}$$
+
+---
+
+##### Exemple 3: Descomposició de $504$
+$$\begin{array}{r|l}
+504 & 2 \\
+252 & 2 \\
+126 & 2 \\
+63 & 3 \\
+21 & 3 \\
+7 & 7 \\
+1 & 
+\end{array}$$
+
+$$504 = \mathbf{2^3 \cdot 3^2 \cdot 7}$$
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Classifica en primers o compostos:**
+   - a) $17 \rightarrow$
+   - b) $21 \rightarrow$
+   - c) $29 \rightarrow$
+   - d) $51 \rightarrow$
+
+2. **Descompon en factors primers els següents nombres:**
+   - a) $72$
+   - b) $120$
+   - c) $300$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 4.3 Màxim Comú Divisor (MCD) i Mínim Comú Múltiple (MCM) {#sec4-3}
+
+El càlcul del Màxim Comú Divisor i del Mínim Comú Múltiple és una eina clau per resoldre problemes de repartiment equitatiu i coincidències temporals.
+
+---
+
+### 1. El Màxim Comú Divisor (MCD)
+
+El **Màxim Comú Divisor** de dos o més nombres és el **més gran dels divisors que tenen en comú**.
+
+#### A) Mètode per Llistat de Divisors
+Vegem els divisors de $12$ i $18$:
+- $\text{Div}(12) = \{1, 2, 3, 4, \mathbf{6}, 12\}$
+- $\text{Div}(18) = \{1, 2, 3, \mathbf{6}, 9, 18\}$
+- Divisors comuns: $\{1, 2, 3, \mathbf{6}\}$
+- El més gran de tots és el **$6$**:
+  $$\text{MCD}(12, 18) = \mathbf{6}$$
+
+#### B) Mètode Òptim per Descomposició en Factors Primers
+
+> [!IMPORTANT]
+> ### Regla per calcular l'MCD
+> 1. Es descomponen els nombres en factors primers.
+> 2. Es trien únicament els **factors comuns elevats al MENOR exponent**.
+> 3. Es multipliquen aquests factors.
+
+##### Exemple: Calcula $\text{MCD}(72, 108)$
+1. Descomposem:
+   - $72 = 2^3 \cdot 3^2$
+   - $108 = 2^2 \cdot 3^3$
+2. Factors comuns: El $2$ i el $3$.
+3. Menors exponents: $2^2$ i $3^2$.
+$$\text{MCD}(72, 108) = 2^2 \cdot 3^2 = 4 \cdot 9 = \mathbf{36}$$
+
+> [!NOTE]
+> ### Nombres Primers Entre Si
+> Dos nombres són **primers entre si** si el seu únic divisor comú és l'**$1$** ($\text{MCD} = 1$).  
+> Per exemple, el $8$ ($2^3$) i el $15$ ($3 \cdot 5$) no comparteixen cap factor primer, per tant $\text{MCD}(8, 15) = 1$.
+
+---
+
+### 2. El Mínim Comú Múltiple (MCM)
+
+El **Mínim Comú Múltiple** de dos o més nombres és el **més petit dels seus múltiples comuns positius** (sense comptar el zero).
+
+#### A) Mètode per Llistat de Múltiples
+Vegem els múltiples positius de $4$ i $6$:
+- $\text{Múlt}(4) = \{4, 8, \mathbf{12}, 16, 20, \mathbf{24}, 28, 32, \mathbf{36}, \dots\}$
+- $\text{Múlt}(6) = \{6, \mathbf{12}, 18, \mathbf{24}, 30, \mathbf{36}, \dots\}$
+- Múltiples comuns: $\{12, 24, 36, \dots\}$
+- El més petit és el **$12$**:
+  $$\text{MCM}(4, 6) = \mathbf{12}$$
+
+#### B) Mètode Òptim per Descomposició en Factors Primers
+
+> [!IMPORTANT]
+> ### Regla per calcular l'MCM
+> 1. Es descomponen els nombres en factors primers.
+> 2. Es trien els **factors comuns i no comuns elevats al MAJOR exponent**.
+> 3. Es multipliquen tots aquests factors.
+
+##### Exemple: Calcula $\text{MCM}(72, 108)$
+1. Descomposem:
+   - $72 = 2^3 \cdot 3^2$
+   - $108 = 2^2 \cdot 3^3$
+2. Factors comuns i no comuns: $2$ i $3$.
+3. Majors exponents: $2^3$ i $3^3$.
+$$\text{MCM}(72, 108) = 2^3 \cdot 3^3 = 8 \cdot 27 = \mathbf{216}$$
+
+---
+
+### 3. Taula Comparativa i Regla Mnemotècnica
+
+| Concepte | Què significa? | Quins factors agafem? | Exponents |
+| :--- | :--- | :--- | :---: |
+| **MCD** (Màxim Comú Divisor) | El divisor més gran possible | **Només els COMUNS** | Al **MENOR** exponent |
+| **MCM** (Mínim Comú Múltiple) | El múltiple més menut possible | **COMUNS i NO COMUNS** | Al **MAJOR** exponent |
+
+#### Propietat Fonamental per a Dos Nombres
+Per a qualsevol parella de nombres naturals $a$ i $b$, el producte del seu MCD pel seu MCM és exactament igual al producte dels dos nombres:
 
 $$\text{MCD}(a, b) \cdot \text{MCM}(a, b) = a \cdot b$$
 
-**Exemple de càlcul complet per a $a = 120$ i $b = 180$:**
-- Descomposició: $120 = 2^3 \cdot 3 \cdot 5$ i $180 = 2^2 \cdot 3^2 \cdot 5$
-- $\text{MCD}(120, 180) = 2^2 \cdot 3^1 \cdot 5^1 = 4 \cdot 3 \cdot 5 = 60$
-- $\text{MCM}(120, 180) = 2^3 \cdot 3^2 \cdot 5^1 = 8 \cdot 9 \cdot 5 = 360$
-- Comprovació: $60 \cdot 360 = 21.600 \quad \longleftrightarrow \quad 120 \cdot 180 = 21.600$ ✅
+Comprovació amb $72$ i $108$:
+$$36 \cdot 216 = 7.776 \qquad \text{i} \qquad 72 \cdot 108 = 7.776 \quad \checkmark$$
 
 ---
 
-## 📌 4.4 Problemes Reals d'MCD i MCM i Butlletí d'Exercicis
+### ✏️ Exercicis Pràctics
 
-Com saber quin concepte aplicar en un problema de la vida quotidiana o del taller tècnic?
+1. **Calcula l'MCD i l'MCM de les següents parelles de nombres:**
+   - a) $24$ i $36$
+   - b) $45$ i $60$
+   - c) $20, 28$ i $35$
 
-| Criteri d'Identificació | Aplicació d'MCD | Aplicació d'MCM |
-| :--- | :--- | :--- |
-| **Objectiu principal** | **Dividir, tallar, envasar o repartir** | **Repetir, sincronitzar o coincidir** |
-| **Paraules clau del text** | "La màxima mida possible", "el màxim nombre de paquets", "sense que sobre res", "trossos iguals". | "Quan tornaran a coincidir?", "el primer moment que...", "menor quantitat comuna", "recorregut mínim". |
-| **Magnitud del resultat** | El resultat serà **menor o igual** que el nombre més xicotet de les dades. | El resultat serà **major o igual** que el nombre més gran de les dades. |
-| **Exemple típic de taller** | Tallar perfils d'alumini de $180\text{ cm}$ i $240\text{ cm}$ en barres iguals de màxima longitud. | Sincronitzar les còpies de seguretat de dos servidors programades cada $6\text{ h}$ i cada $8\text{ h}$. |
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
 
 ---
 
-## 📌 4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 4.4 Problemes Reals d'MCD i MCM i Butlletí d'Exercicis {#sec4-4}
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divisor (MCD)** o el **Mínim Comú Múltiple (MCM)** és la competència clau d'aquesta unitat.
 
-#### Exercici 1: Classificació ràpida mitjançant criteris de divisibilitat
+---
+
+### 🧭 Com Saber si Hem d'Utilitzar MCD o MCM?
+
+| Si el problema et demana... | Has d'utilitzar: | Pistes i Paraules Clau |
+| :--- | :---: | :--- |
+| **Dividir, tallar, envasar o repartir** en trossos o grups iguals de la **majors mida possible**, sense que sobre res. | **MCD** | *"El màxim possible"*, *"la major longitud"*, *"repartir en paquets iguals"*, *"sense que sobre res"*. |
+| **Coincidir en el temps o en l'espai**, esdeveniments que es repeteixen periòdicament i volem saber **quan tornaran a passar alhora**. | **MCM** | *"Quan tornaran a coincidir?"*, *"cada quants dies/hores?"*, *"quan tornen a eixir junts?"*, *"el menor temps"*. |
+
+---
+
+### 📌 Problemes Models Resolts Pas a Pas
+
+#### Problema 1 (Model MCD): Tallar Cordes a la Màxima Longitud
+> **Enunciat:** Maria té dues cordes que mesuren $12\text{ metres}$ i $18\text{ metres}$ respectivament. Vol tallar-les en trossos de la mateixa mida, de manera que els trossos siguen el més llargs possible i no sobre cap tros de corda.
+> - a) Quant mesurarà cada tros de corda?
+> - b) Quants trossos obtindrà en total?
+
+**Resolució:**
+1. Ens demanen **tallar/dividir** en trossos iguals de la **màxima mida possible** sense que sobre res $\rightarrow$ Calculem l'**MCD**:
+   - $12 = 2^2 \cdot 3$
+   - $18 = 2 \cdot 3^2$
+   - $\text{MCD}(12, 18) = 2 \cdot 3 = \mathbf{6\text{ metres}}$
+   *Resposta a:* Cada tros de corda mesurarà **$6\text{ metres}$**.
+2. Nombre de trossos obtinguts:
+   - De la corda de 12 m: $12 : 6 = 2\text{ trossos}$.
+   - De la corda de 18 m: $18 : 6 = 3\text{ trossos}$.
+   - Total de trossos: $2 + 3 = \mathbf{5\text{ trossos}}$.
+
+---
+
+#### Problema 2 (Model MCM): Coincidència Temporal
+> **Enunciat:** Uxía i Raúl s'apunten a classes de ball en una acadèmia. Uxía assisteix a classe cada $4\text{ dies}$ i Raúl hi va cada $6\text{ dies}$. Si hui han coincidit a la pista de ball:
+> - D'ací a quants dies tornaran a coincidir per primera vegada?
+> - Quantes classes haurà fet cadascun fins a eixe moment?
+
+**Resolució:**
+1. Ens demanen quan tornaran a **coincidir** dos processos que es repeteixen periòdicament $\rightarrow$ Calculem l'**MCM**:
+   - $4 = 2^2$
+   - $6 = 2 \cdot 3$
+   - $\text{MCM}(4, 6) = 2^2 \cdot 3 = 4 \cdot 3 = \mathbf{12\text{ dies}}$
+   *Resposta 1:* Tornaran a coincidir exactament d'ací a **$12\text{ dies}$**.
+2. Classes d'Uxía i Raúl:
+   - Uxía haurà fet: $12 : 4 = \mathbf{3\text{ classes}}$.
+   - Raúl haurà fet: $12 : 6 = \mathbf{2\text{ classes}}$.
+
+---
+
+#### Problema 3 (Model MCD): Envasar Líquids en Garrafes
+> **Enunciat:** Una cooperativa agrària té dos dipòsits d'oli: un amb $240\text{ litres}$ d'oli verge extra i un altre amb $360\text{ litres}$ d'oli d'oliva suau. Volen envasar tot l'oli en garrafes de la mateixa capacitat màxima possible, sense barrejar olis i sense que en sobre ni una gota.
+> - Quina deu ser la capacitat màxima de cada garrafa?
+> - Quantes garrafes faran falta en total?
+
+**Resolució:**
+1. Calculem l'**MCD** de $240$ i $360$:
+   - $240 = 2^4 \cdot 3 \cdot 5$
+   - $360 = 2^3 \cdot 3^2 \cdot 5$
+   - $\text{MCD}(240, 360) = 2^3 \cdot 3 \cdot 5 = 8 \cdot 3 \cdot 5 = \mathbf{120\text{ litres}}$
+   *Resposta:* Cada garrafa tindrà una capacitat de **$120\text{ litres}$**.
+2. Garrafes necessàries:
+   - De verge extra: $240 : 120 = 2\text{ garrafes}$.
+   - De suau: $360 : 120 = 3\text{ garrafes}$.
+   - Total: $2 + 3 = \mathbf{5\text{ garrafes}}$.
+
+---
+
+#### Problema 4 (Model MCM): Parpelleig de Llums
+> **Enunciat:** En un rètol lluminós hi ha tres circuits de neó: el primer s'encén cada $8\text{ segons}$, el segon cada $12\text{ segons}$ i el tercer cada $18\text{ segons}$. A les $20:00\text{ h}$ s'han encés tots tres simultàniament. Cada quants segons s'encendran alhora?
+
+**Resolució:**
+1. Calculem l'**MCM** de $8, 12$ i $18$:
+   - $8 = 2^3$
+   - $12 = 2^2 \cdot 3$
+   - $18 = 2 \cdot 3^2$
+   - $\text{MCM}(8, 12, 18) = 2^3 \cdot 3^2 = 8 \cdot 9 = \mathbf{72\text{ segons}}$
+   *Resposta:* S'encendran tots tres alhora cada **$72\text{ segons}$** ($1\text{ minut}$ i $12\text{ segons}$).
+
+---
+
+### 📝 Butlletí d'Exercicis Proposats
+
+1. **Calcula l'MCD i l'MCM de:**
+   - a) $48$ i $72$
+   - b) $30, 45$ i $90$
+
+2. **Problema de rajoles:**
+   Una terrassa rectangular fa $360\text{ cm}$ de llarg per $280\text{ cm}$ d'ample. Volem enrajolar-la amb rajoles quadrades de la màxima grandària possible sense haver de tallar cap rajola.
+   - a) Quant mesurarà el costat de cada rajola?
+   - b) Quantes rajoles necessitarem en total?
+
+3. **Problema d'autobusos:**
+   A l'estació central, la línia groga ix cada $15\text{ minuts}$ i la línia blava cada $20\text{ minuts}$. Si han eixit juntes a les $08:00\text{ h}$ del matí, a quina hora tornaran a coincidir?
+
+---
+
+> [!TIP]
+> **Següent pas:** Continua amb el [**4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0405.html) per resoldre els reptes tècnics aplicats a taller, optimització de canaletes de xarxa i sincronització de servidors.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec4-5}
+
+Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, reptes de taller tècnic i la rúbrica d'avaluació competencial per a la **Unitat 4: Divisibilitat, MCM i MCD**.
+
+---
+
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Classificació ràpida mitjançant criteris de divisibilitat
 Indica, sense realitzar cap divisió i justificant la resposta amb el criteri corresponent, si els següents nombres són divisibles per 2, 3, 5, 9, 10 o 11:
 1. $N_1 = 3.420$
 2. $N_2 = 1.716$
@@ -226,13 +555,13 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 | **4.875** | | | | | | |
 | **9.207** | | | | | | |
 
-#### Exercici 2: Descomposició en factors primers i càlcul de divisors
+##### Exercici 2: Descomposició en factors primers i càlcul de divisors
 1. Realitza la descomposició factorial completa per divisions successives dels següents nombres enters:
    $$A = 252 \qquad B = 420 \qquad C = 540$$
 2. Escriu cada nombre expressat com a producte de potències de nombres primers.
 3. Utilitzant la fórmula del nombre total de divisors $N_{\text{div}} = (a_1 + 1)(a_2 + 1)\dots(a_k + 1)$, determina quants divisors positius té el nombre $A = 252$ i enumera'ls en ordre creixent.
 
-#### Exercici 3: Càlcul d'MCD i MCM de conjunts de dades tècniques
+##### Exercici 3: Càlcul d'MCD i MCM de conjunts de dades tècniques
 1. Troba l'$\text{MCD}$ i l'$\text{MCM}$ de les següents parelles de nombres utilitzant la seua descomposició factorial:
    - Parella 1: $72$ i $108$
    - Parella 2: $150$ i $225$
@@ -244,9 +573,9 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Optimització de tall de cablejat i canaletes sense residu
+##### Repte 1: Optimització de tall de cablejat i canaletes sense residu
 - **Objectiu:** Utilitzar el Màxim Comú Divisor per optimitzar el material de canalització evitant sobrants no aprofitables.
 - **Situació de taller:** En una instal·lació d'infraestructura de xarxes a les aules d'informàtica, un tècnic disposa de dues tires rígides de canaleta de PVC sobrants d'una bobina amb les següents longituds:
   - Tira A: $180\text{ cm}$
@@ -257,7 +586,7 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
   3. Quants trossos complets s'obtindran de la Tira B?
   4. Quants trossos iguals en total tindrà el tècnic per fixar les preses de xarxa a les taules?
 
-#### Repte 2: Sincronització de tasques programades i còpies de seguretat en servidors
+##### Repte 2: Sincronització de tasques programades i còpies de seguretat en servidors
 - **Objectiu:** Utilitzar el Mínim Comú Múltiple per preveure la concurrència d'activitats que consumeixen amplada de banda en sistemes informàtics.
 - **Situació:** En el centre de dades d'un institut s'han configurat tres scripts automàtics de manteniment nocturn:
   - L'script de còpia diferencial de fitxers s'executa cada $6\text{ hores}$.
@@ -269,7 +598,7 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
   3. Quantes vegades s'haurà executat cadascun dels tres scripts durant aquest període de temps?
   4. Per què és crucial per a l'administrador del sistema conèixer aquest moment per evitar una saturació de la memòria RAM del servidor?
 
-#### Repte 3: Enrajolat i distribució modular de racks de servidors
+##### Repte 3: Enrajolat i distribució modular de racks de servidors
 - **Objectiu:** Resoldre problemes geomètrics bidimensionals mitjançant la teoria de nombres.
 - **Situació:** S'ha d'instal·lar un terra tècnic modular elevat a la sala de servidors. La sala té unes dimensions rectangulars de:
   - Amplada: $420\text{ cm}$
@@ -282,9 +611,9 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He aplicat correctament els criteris de divisibilitat (2, 3, 5, 9, 10 i 11) sense necessitat de fer la divisió a mà.
 - [ ] He descompost nombres en factors primers utilitzant la ratlla vertical de divisions successives.
 - [ ] He expressat un nombre compost mitjançant el producte de potències de bases primeres.
@@ -293,7 +622,7 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 - [ ] He comprovat la propietat $\text{MCD}(a,b) \cdot \text{MCM}(a,b) = a \cdot b$.
 - [ ] He identificat si un problema de la vida real o de taller requereix aplicar l'MCD (tallar/repartir) o l'MCM (repetir/coincidir).
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -302,3 +631,9 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 | **Algorismes d'MCD i MCM** | Distingeix amb precisió les regles de factors comuns/no comuns i menors/majors exponents calculant ambdós valors ràpidament. | Calcula l'MCD i l'MCM correctament però comet errades puntuals en triar exponents quan hi ha 3 nombres. | Recorda la definició però intercanvia les regles (pren el major exponent per a l'MCD o a l'inrevés). | Incapaç de calcular l'MCD o l'MCM o confon completament el concepte de divisor amb el de múltiple. |
 | **Comprovació de relacions ($\text{MCD} \cdot \text{MCM} = a \cdot b$)** | Verifica sempre la relació algebraica per a dos nombres utilitzant el càlcul per confirmar la validesa de la solució. | Comprova la propietat correctament amb bona comprensió de la igualtat. | Coneix la propietat però li costa operar amb nombres grans sense calculadora. | No comprèn la relació entre producte de nombres i els seus factors comuns. |
 | **Modelització de problemes de taller** | Identifica immediatament si el context requereix tallar (MCD) o sincronitzar (MCM) i en calcula totes les derivades pràctiques. | Identifica correctament el concepte a aplicar i resol el problema amb bona interpretació de les unitats. | Resol el problema amb ajut per identificar si es tracta d'MCD o MCM. | Aplica l'MCD quan calia l'MCM o no sap interpretar el sentit de les dades del problema de taller. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

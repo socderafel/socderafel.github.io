@@ -99,96 +99,379 @@ next_label: "UD6 La Terra i l'Univers ➡️"
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**5.1 Concepte de Fracció i Fraccions Equivalents**](#51-concepte-de-fracció-i-fraccions-equivalents)
-2. [**5.2 Suma i Resta de Fraccions (Mínim Comú Denominador)**](#52-suma-i-resta-de-fraccions-mínim-comú-denominador)
-3. [**5.3 Multiplicació i Divisió de Fraccions**](#53-multiplicació-i-divisió-de-fraccions)
-4. [**5.4 Operacions Combinades i Jerarquia amb Fraccions**](#54-operacions-combinades-i-jerarquia-amb-fraccions)
-5. [**5.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#55-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
-
----
-
-## 📌 5.1 Concepte de Fracció i Fraccions Equivalents
-
-Una **fracció** és una expressió matemàtica de la forma $\dfrac{a}{b}$ (amb $b \neq 0$), on:
-- **Numerador ($a$):** Indica el nombre de parts iguals que es consideren o s'agafen.
-- **Denominador ($b$):** Indica el nombre total de parts iguals en què s'ha dividit la unitat sencera.
-
-### Significats Fonamentals de la Fracció:
-1. **Com a part de la unitat:** Tallar un disc de dades en $4$ particions i ocupar-ne $3$ representa $\dfrac{3}{4}$ del volum.
-2. **Com a quocient indicat:** $\dfrac{15}{3} = 5$ o $\dfrac{3}{4} = 0{,}75$.
-3. **Com a operador sobre una quantitat ($N$):** Per calcular $\dfrac{a}{b}$ d'una magnitud $N$, es divideix la quantitat pel denominador i es multiplica pel numerador:
-   $$\frac{a}{b} \text{ de } N = (N : b) \cdot a = \frac{a \cdot N}{b}$$
-   *Exemple:* $\dfrac{3}{5}$ d'un pressupost de $2.500\text{ €}$ equival a $(2.500 : 5) \cdot 3 = 500 \cdot 3 = 1.500\text{ €}$.
-
-### Fraccions Equivalents i Regla dels Productes Creuats
-Dues fraccions $\dfrac{a}{b}$ i $\dfrac{c}{d}$ són **equivalents** si representen la mateixa part de la unitat. Això es verifica quan els seus productes creuats són exactament iguals:
-
-$$\frac{a}{b} = \frac{c}{d} \iff a \cdot d = b \cdot c$$
-
-- **Amplificació:** Es multipliquen el numerador i el denominador pel mateix nombre natural no nul:
-  $$\frac{2}{3} = \frac{2 \cdot 4}{3 \cdot 4} = \frac{8}{12}$$
-- **Simplificació:** Es divideixen numerador i denominador pel mateix divisor comú.
-- **Fracció Irreductible:** Quan no es pot simplificar més perquè el numerador i el denominador són primers entre si ($\text{MCD}(a, b) = 1$). S'obté dividint ambdós membres directament pel seu $\text{MCD}$:
-  $$\frac{84}{126} \quad \longrightarrow \quad \text{MCD}(84, 126) = 42 \quad \longrightarrow \quad \frac{84 : 42}{126 : 42} = \frac{2}{3}$$
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec5-1"><strong>5.1 Concepte de Fracció i Fraccions Equivalents</strong></a></li>
+    <li><a href="#sec5-2"><strong>5.2 Suma i Resta de Fraccions</strong></a></li>
+    <li><a href="#sec5-3"><strong>5.3 Multiplicació i Divisió de Fraccions</strong></a></li>
+    <li><a href="#sec5-4"><strong>5.4 Operacions Combinades i Jerarquia amb Fraccions</strong></a></li>
+    <li><a href="#sec5-5"><strong>5.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 5.2 Suma i Resta de Fraccions (Mínim Comú Denominador)
+## 📌 5.1 Concepte de Fracció i Fraccions Equivalents {#sec5-1}
 
-### Amb el mateix denominador:
-Se sumen o resten els numeradors i es manté exactament el mateix denominador comú:
-$$\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c} \qquad \frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}$$
+Una **fracció** és l'expressió matemàtica d'una quantitat dividida entre una altra quantitat. S'escriu en la forma:
 
-### Amb denominadors diferents:
-Cal reduir prèviament les fraccions a un **mínim comú denominador** seguint aquest protocol:
-1. Calculem l'$\text{MCM}$ de tots els denominadors. Aquest valor serà el nou denominador comú.
-2. Per a cada fracció, dividim l'$\text{MCM}$ entre el seu denominador antic i multipliquem el resultat pel numerador antic per obtenir el nou numerador:
-   $$\text{Nou Numerador} = (\text{MCM} : d_i) \cdot n_i$$
-3. Realitzem la suma o resta dels nous numeradors sobre el comú denominador i simplifiquem fins a la fracció irreductible.
+$$\frac{a}{b}$$
 
-**Exemple pas a pas:**
-$$\frac{5}{6} + \frac{3}{4} - \frac{7}{10}$$
-- $\text{MCM}(6, 4, 10) = 60$.
-- Terme 1: $(60 : 6) \cdot 5 = 10 \cdot 5 = 50 \longrightarrow \dfrac{50}{60}$
-- Terme 2: $(60 : 4) \cdot 3 = 15 \cdot 3 = 45 \longrightarrow \dfrac{45}{60}$
-- Terme 3: $(60 : 10) \cdot 7 = 6 \cdot 7 = 42 \longrightarrow \dfrac{42}{60}$
-- Resultat: $\dfrac{50 + 45 - 42}{60} = \dfrac{53}{60}$ (ja és irreductible).
+On:
+- **$a$ és el Numerador:** El nombre situat per damunt de la barra. Indica el nombre de parts iguals que prenem o considerem.
+- **$b$ és el Denominador:** El nombre situat per davall de la barra ($b \neq 0$). Indica en quantes parts iguals hem dividit la unitat sencera.
 
 ---
 
-## 📌 5.3 Multiplicació i Divisió de Fraccions
+### 1. Els Tres Significats d'una Fracció
 
-| Operació | Algorisme de Càlcul | Fórmula General | Exemple Resolt |
-| :--- | :--- | :---: | :--- |
-| **Multiplicació (Producte)** | Es multipliquen els numeradors en línia i els denominadors en línia. | $\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{a \cdot c}{b \cdot d}$ | $\dfrac{4}{7} \cdot \dfrac{5}{6} = \dfrac{20}{42} = \dfrac{10}{21}$ |
-| **Divisió (Quocient)** | Es multipliquen en creu o es multiplica per la fracció inversa. | $\dfrac{a}{b} : \dfrac{c}{d} = \dfrac{a \cdot d}{b \cdot c}$ | $\dfrac{3}{8} : \dfrac{5}{4} = \dfrac{3 \cdot 4}{8 \cdot 5} = \dfrac{12}{40} = \dfrac{3}{10}$ |
-| **Fracció Inversa** | S'intercanvien numerador i denominador ($\frac{a}{b} \leftrightarrow \frac{b}{a}$). | $\dfrac{a}{b} \cdot \left(\dfrac{a}{b}\right)^{-1} = 1$ | Inversa de $\dfrac{2}{5}$ és $\dfrac{5}{2} \rightarrow \dfrac{2}{5} \cdot \dfrac{5}{2} = 1$ |
+Una fracció pot interpretar-se de tres formes segons el context:
+
+#### A) La Fracció com a Part d'una Unitat
+Si dividim una pizza en $8$ porcions iguals i ens mengem $3$ porcions, hem consumit:
+$$\frac{3}{8} \text{ de la pizza}$$
+- Ens queden: $\frac{5}{8}$ de la pizza.
+
+#### B) La Fracció com a Quocient o Divisió
+Tota fracció representa el quocient exacte o decimal entre el numerador i el denominador:
+$$\frac{3}{4} = 3 : 4 = 0{,}75$$
+$$\frac{12}{3} = 12 : 3 = 4$$
+
+#### C) La Fracció com a Operador d'una Quantitat
+Calcular la fracció d'un nombre consisteix a **dividir el nombre entre el denominador i multiplicar el resultat pel numerador** (o multiplicar el numerador pel nombre i dividir entre el denominador):
+
+$$\frac{a}{b} \text{ de } N = \frac{a \cdot N}{b} = (N : b) \cdot a$$
+
+> **Exemple:** Calcula els $\frac{3}{5}$ de $250\text{ €}$:
+> $$\frac{3}{5} \text{ de } 250 = (250 : 5) \cdot 3 = 50 \cdot 3 = \mathbf{150\text{ €}}$$
 
 ---
 
-## 📌 5.4 Operacions Combinades i Jerarquia amb Fraccions
+### 2. Tipus de Fraccions
 
-L'ordre estricte d'operacions quan apareixen sumes, restes, productes i parèntesis és:
+- **Fracció Pròpia:** El numerador és més petit que el denominador ($a < b$). Representa una quantitat menor que la unitat ($< 1$):  
+  $$\frac{2}{5} = 0{,}4 < 1$$
+- **Fracció Impròpia:** El numerador és més gran que el denominador ($a > b$). Representa una quantitat major que la unitat ($> 1$):  
+  $$\frac{7}{4} = 1{,}75 > 1$$
+- **Fracció Igual a la Unitat:** Numerador i denominador són iguals ($a = b$):  
+  $$\frac{6}{6} = 1$$
+
+---
+
+### 3. Fraccions Equivalents
+
+Dues fraccions $\frac{a}{b}$ i $\frac{c}{d}$ són **equivalents** ($\frac{a}{b} = \frac{c}{d}$) si representen exactament la mateixa quantitat o el mateix valor decimal.
+
+> [!IMPORTANT]
+> ### Comprovació de la Regla dels Productes Creuats
+> Dues fraccions són equivalents si i només si **el producte dels extrems és igual al producte dels mitjans**:
+> $$\frac{a}{b} = \frac{c}{d} \iff a \cdot d = b \cdot c$$
+
+**Exemple:** Són equivalents $\frac{2}{3}$ i $\frac{8}{12}$?
+$$2 \cdot 12 = 24 \qquad \text{i} \qquad 3 \cdot 8 = 24$$
+Com que $24 = 24$, les dues fraccions són **equivalents**: $\frac{2}{3} = \frac{8}{12}$.
+
+---
+
+### 4. Obtenció de Fraccions Equivalents i Simplificació
+
+Podem obtindre fraccions equivalents de dues maneres:
+
+1. **Per Amplificació:** Multipliquem el numerador i el denominador pel mateix nombre natural diferent de zero:
+   $$\frac{3}{5} = \frac{3 \cdot 4}{5 \cdot 4} = \frac{12}{20}$$
+2. **Per Simplificació:** Dividim el numerador i el denominador entre un divisor comú a tots dos:
+   $$\frac{24}{36} = \frac{24 : 2}{36 : 2} = \frac{12}{18} = \frac{12 : 6}{18 : 6} = \frac{2}{3}$$
+
+#### La Fracció Irreductible
+Una fracció és **irreductible** quan el numerador i el denominador no tenen cap divisor comú excepte l'1 ($\text{MCD}(a, b) = 1$). No es pot simplificar més.
+Per obtindre directament la fracció irreductible, **dividim numerador i denominador pel seu Màxim Comú Divisor ($\text{MCD}$)**:
+- Per a $\frac{60}{84}$, calculem $\text{MCD}(60, 84) = 12$:
+  $$\frac{60 : 12}{84 : 12} = \mathbf{\frac{5}{7}} \quad \text{(fracció irreductible)}$$
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula el valor de les següents fraccions d'una quantitat:**
+   - a) Els $\frac{2}{3}$ de $60\text{ litres}$
+   - b) Els $\frac{5}{8}$ de $320\text{ €}$
+
+2. **Comprova si són equivalents les següents parelles de fraccions:**
+   - a) $\frac{4}{7}$ i $\frac{12}{21}$
+   - b) $\frac{3}{5}$ i $\frac{9}{20}$
+
+3. **Simplifica fins a obtindre la fracció irreductible:**
+   - a) $\frac{36}{48}$
+   - b) $\frac{75}{100}$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 5.2 Suma i Resta de Fraccions {#sec5-2}
+
+Per poder sumar o restar fraccions és **imprescindible que totes tinguen el mateix denominador** (és a dir, que les porcions siguen de la mateixa mida).
+
+---
+
+### 1. Suma i Resta amb el Mateix Denominador
+
+Si les fraccions ja comparteixen el mateix denominador, el càlcul és directe: **se sumen o resten els numeradors i es manté el mateix denominador**.
+
+$$\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c} \qquad \text{i} \qquad \frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}$$
+
+#### Exemples:
+- $\frac{3}{8} + \frac{2}{8} = \mathbf{\frac{5}{8}}$
+- $\frac{7}{10} - \frac{3}{10} = \frac{4}{10} = \mathbf{\frac{2}{5}}$ *(sempre simplifiquem al final)*
+- $\frac{9}{12} + \frac{5}{12} - \frac{6}{12} = \frac{9 + 5 - 6}{12} = \frac{8}{12} = \mathbf{\frac{2}{3}}$
+
+---
+
+### 2. Suma i Resta amb Diferent Denominador
+
+Si les fraccions tenen denominadors diferents, primer hem de transformar-les en fraccions equivalents amb un **comú denominador** utilitzant el **Mínim Comú Múltiple ($\text{MCM}$)**.
+
+> [!IMPORTANT]
+> ### Procediment Pas a Pas
+> 1. **Calcular l'MCM** de tots els denominadors. Aquest valor serà el nou denominador comú.
+> 2. **Calcular els nous numeradors:** Dividim el nou denominador entre el denominador original antic i multipliquem el resultat pel numerador antic:
+>    $$\text{Nou numerador} = (\text{MCM} : \text{denominador antic}) \cdot \text{numerador antic}$$
+> 3. **Sumar o restar els nous numeradors**, mantenint el comú denominador.
+> 4. **Simplificar** la fracció resultant fins a obtindre la fracció irreductible.
+
+---
+
+#### Exemple Resolts Pas a Pas
+
+##### Exemple 1: Suma de dues fraccions
+Calcula:
+$$\frac{3}{4} + \frac{1}{6}$$
+
+1. Calculem l'MCM dels denominadors $4$ i $6$:
+   - $4 = 2^2$
+   - $6 = 2 \cdot 3$
+   - $\text{MCM}(4, 6) = 2^2 \cdot 3 = \mathbf{12}$
+2. Transformem les fraccions a denominador $12$:
+   - Per a $\frac{3}{4}$: $(12 : 4) \cdot 3 = 3 \cdot 3 = 9 \longrightarrow \frac{9}{12}$
+   - Per a $\frac{1}{6}$: $(12 : 6) \cdot 1 = 2 \cdot 1 = 2 \longrightarrow \frac{2}{12}$
+3. Sumem els numeradors:
+   $$\frac{9}{12} + \frac{2}{12} = \mathbf{\frac{11}{12}}$$
+
+---
+
+##### Exemple 2: Operació amb tres fraccions i enters
+Calcula:
+$$2 - \frac{3}{5} + \frac{7}{10}$$
+
+1. Recordem que tot nombre enter té denominador $1$: $2 = \frac{2}{1}$.
+2. Calculem l'MCM de $1, 5$ i $10$:
+   $$\text{MCM}(1, 5, 10) = \mathbf{10}$$
+3. Calculem els nous numeradors:
+   - $(10 : 1) \cdot 2 = 20 \longrightarrow \frac{20}{10}$
+   - $(10 : 5) \cdot 3 = 6 \longrightarrow \frac{6}{10}$
+   - $(10 : 10) \cdot 7 = 7 \longrightarrow \frac{7}{10}$
+4. Operem i simplifiquem:
+   $$\frac{20 - 6 + 7}{10} = \mathbf{\frac{21}{10}}$$
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula i simplifica el resultat:**
+   - a) $\frac{2}{3} + \frac{5}{6}$
+   - b) $\frac{7}{8} - \frac{3}{4}$
+   - c) $\frac{5}{12} + \frac{7}{18}$
+   - d) $1 - \frac{4}{7}$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 5.3 Multiplicació i Divisió de Fraccions {#sec5-3}
+
+A diferència de la suma i la resta, per a multiplicar o dividir fraccions **NO cal buscar un comú denominador**: les operacions es calculen de manera directa i immediata.
+
+---
+
+### 1. La Multiplicació de Fraccions
+
+El producte de dues o més fraccions és una altra fracció que té:
+- Com a numerador: el **producte dels numeradors** (en línia horitzontal).
+- Com a denominador: el **producte dels denominadors** (en línia horitzontal).
+
+$$\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$$
+
+#### Exemples:
+- $\frac{2}{3} \cdot \frac{5}{7} = \frac{2 \cdot 5}{3 \cdot 7} = \mathbf{\frac{10}{21}}$
+- $\frac{3}{4} \cdot \frac{8}{9} = \frac{3 \cdot 8}{4 \cdot 9} = \frac{24}{36} = \mathbf{\frac{2}{3}}$ *(simplificat)*
+
+#### Producte d'un Nombre Sencer per una Fracció:
+Considerem que el nombre sencer té denominador $1$:
+$$5 \cdot \frac{3}{7} = \frac{5}{1} \cdot \frac{3}{7} = \frac{5 \cdot 3}{1 \cdot 7} = \mathbf{\frac{15}{7}}$$
+
+> [!TIP]
+> ### Fracció d'una Fracció
+> Quan calculem una fracció d'una altra fracció, es tracta simplement d'una multiplicació:
+> "La meitat dels tres quarts":
+> $$\frac{1}{2} \text{ de } \frac{3}{4} = \frac{1}{2} \cdot \frac{3}{4} = \mathbf{\frac{3}{8}}$$
+
+---
+
+### 2. La Fracció Inversa
+
+La **fracció inversa** d'una fracció $\frac{a}{b}$ s'obté intercanviant el numerador i el denominador:
+
+$$\text{Inversa de } \frac{a}{b} = \frac{b}{a}$$
+
+- La inversa de $\frac{3}{5}$ és $\mathbf{\frac{5}{3}}$.
+- La inversa de $\frac{1}{4}$ és $\frac{4}{1} = \mathbf{4}$.
+- La inversa de $7$ és $\mathbf{\frac{1}{7}}$.
+
+> [!NOTE]
+> El producte d'una fracció per la seua inversa és sempre igual a la **unitat ($1$)**:
+> $$\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1 \qquad \longrightarrow \qquad \frac{3}{5} \cdot \frac{5}{3} = \frac{15}{15} = 1$$
+
+---
+
+### 3. La Divisió de Fraccions
+
+Per dividir dues fraccions tenim dos mètodes totalment equivalents:
+
+#### Mètode A: Multiplicació en Creu
+Multipliquem el numerador de la primera pel denominador de la segona (nou numerador) i el denominador de la primera pel numerador de la segona (nou denominador):
+
+$$\frac{a}{b} : \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$$
+
+#### Mètode B: Multiplicar per la Fracció Inversa *(Recomanat)*
+Dividir entre una fracció equival a **multiplicar per la seua inversa**:
+
+$$\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b \cdot c}$$
+
+#### Exemples:
+- $\frac{2}{5} : \frac{3}{4} = \frac{2 \cdot 4}{5 \cdot 3} = \mathbf{\frac{8}{15}}$
+- $\frac{7}{6} : \frac{14}{9} = \frac{7 \cdot 9}{6 \cdot 14} = \frac{63}{84} = \mathbf{\frac{3}{4}}$
+- $\frac{4}{5} : 2 = \frac{4}{5} : \frac{2}{1} = \frac{4 \cdot 1}{5 \cdot 2} = \frac{4}{10} = \mathbf{\frac{2}{5}}$
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula i simplifica:**
+   - a) $\frac{3}{8} \cdot \frac{4}{5}$
+   - b) $\frac{9}{10} \cdot \frac{5}{3}$
+   - c) $6 \cdot \frac{5}{12}$
+
+2. **Calcula les següents divisions:**
+   - a) $\frac{5}{7} : \frac{10}{21}$
+   - b) $\frac{2}{9} : \frac{4}{3}$
+   - c) $3 : \frac{6}{5}$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 5.4 Operacions Combinades i Jerarquia amb Fraccions {#sec5-4}
+
+Quan ens trobem amb expressions que combinen sumes, restes, productes, divisions i parèntesis de fraccions, és imprescindible aplicar amb rigor la **jerarquia oficial d'operacions**.
+
+---
+
+### 1. La Jerarquia d'Operacions
 
 ```
-1r [ ( ) ] Parèntesis i claudàtors (simplificant les expressions interiors)
-2n ·  :    Multiplicacions i divisions (d'esquerra a dreta)
-3r +  -    Sumes i restes (reduint prèviament a comú denominador)
-4t         Simplificació final fins a la fracció irreductible
+1r ➔ Resoldre les operacions de dins dels PARÈNTESIS ( ) i CLAUDÀTORS [ ]
+2n ➔ MULTIPLICACIONS (·) i DIVISIONS (:) d'esquerra a dreta
+3r ➔ SUMES (+) i RESTES (-) buscant el comú denominador (MCM)
+4t ➔ SIMPLIFICAR sempre la fracció resultant al màxim
 ```
-
-**Exemple de càlcul complet:**
-$$E = \frac{2}{3} + \frac{5}{2} \cdot \left(\frac{3}{4} - \frac{1}{6}\right)$$
-1. Parèntesi: $\text{MCM}(4, 6) = 12 \longrightarrow \dfrac{3 \cdot 3}{12} - \dfrac{1 \cdot 2}{12} = \dfrac{9 - 2}{12} = \dfrac{7}{12}$.
-2. Multiplicació: $\dfrac{5}{2} \cdot \dfrac{7}{12} = \dfrac{35}{24}$.
-3. Suma final: $\dfrac{2}{3} + \dfrac{35}{24} \longrightarrow \text{MCM}(3, 24) = 24 \longrightarrow \dfrac{16}{24} + \dfrac{35}{24} = \dfrac{51}{24}$.
-4. Simplificació ($\text{MCD} = 3$): $\dfrac{51 : 3}{24 : 3} = \dfrac{17}{8}$.
 
 ---
 
-## 📌 5.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+### 🔍 Exemples Models Resolts Pas a Pas
+
+#### Exemple 1: Sense Parèntesis
+Calcula:
+$$\frac{2}{3} + \frac{1}{4} \cdot \frac{8}{3} - \frac{1}{2}$$
+
+**Pas 1: Resolem primer la multiplicació:**
+$$\frac{1}{4} \cdot \frac{8}{3} = \frac{8}{12} = \frac{2}{3}$$
+L'expressió queda:
+$$\frac{2}{3} + \frac{2}{3} - \frac{1}{2}$$
+
+**Pas 2: Comú denominador per a la suma i la resta:**
+- Denominadors: $3$ i $2 \longrightarrow \text{MCM}(3, 2) = 6$.
+- Transformem a denominador $6$:
+  $$\frac{4}{6} + \frac{4}{6} - \frac{3}{6} = \frac{4 + 4 - 3}{6} = \mathbf{\frac{5}{6}}$$
+
+---
+
+#### Exemple 2: Amb Parèntesis
+Calcula:
+$$\left( \frac{3}{4} - \frac{1}{2} \right) \cdot \left( \frac{2}{3} + \frac{1}{5} \right)$$
+
+**Pas 1: Resolem el contingut del primer parèntesi:**
+$$\frac{3}{4} - \frac{1}{2} = \frac{3}{4} - \frac{2}{4} = \frac{1}{4}$$
+
+**Pas 2: Resolem el contingut del segon parèntesi:**
+- $\text{MCM}(3, 5) = 15$:
+$$\frac{2}{3} + \frac{1}{5} = \frac{10}{15} + \frac{3}{15} = \frac{13}{15}$$
+
+**Pas 3: Multipliquem els dos resultats:**
+$$\frac{1}{4} \cdot \frac{13}{15} = \frac{1 \cdot 13}{4 \cdot 15} = \mathbf{\frac{13}{60}}$$
+
+---
+
+#### Exemple 3: Amb Claudàtors i Nombres Enters
+Calcula:
+$$2 - \frac{3}{5} \cdot \left[ 1 + \left( \frac{4}{3} - \frac{1}{2} \right) \right]$$
+
+**Pas 1: Parèntesi intern:**
+$$\frac{4}{3} - \frac{1}{2} = \frac{8}{6} - \frac{3}{6} = \frac{5}{6}$$
+
+**Pas 2: Resolem l'interior del claudàtor:**
+$$1 + \frac{5}{6} = \frac{6}{6} + \frac{5}{6} = \frac{11}{6}$$
+L'expressió queda:
+$$2 - \frac{3}{5} \cdot \frac{11}{6}$$
+
+**Pas 3: Fem la multiplicació abans de la resta:**
+$$\frac{3}{5} \cdot \frac{11}{6} = \frac{33}{30} = \frac{11}{10}$$
+
+**Pas 4: Fem la resta final:**
+$$2 - \frac{11}{10} = \frac{20}{10} - \frac{11}{10} = \mathbf{\frac{9}{10}}$$
+
+---
+
+### ⚠️ Errors Habituals a Evitar
+
+1. **Sumar abans de multiplicar:** En $\frac{1}{2} + \frac{3}{4} \cdot \frac{2}{5}$, **MAI** sumes $\frac{1}{2} + \frac{3}{4}$ primer; la multiplicació té prioritat absoluta!
+2. **Oblidar buscar comú denominador en sumes:** En $\frac{2}{3} + \frac{1}{4}$, no es pot sumar $2+1$ i $3+4$. Només es pot sumar quan tenen el mateix denominador.
+3. **No simplificar les fraccions intermèdies o el resultat final.**
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula i simplifica:**
+   - a) $\frac{3}{5} : \frac{2}{3} - \frac{1}{10}$
+   - b) $\frac{5}{6} - \frac{1}{3} \cdot \left( \frac{3}{4} + \frac{1}{2} \right)$
+   - c) $\left( 2 - \frac{1}{3} \right) : \left( \frac{1}{2} + \frac{1}{4} \right)$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 5.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec5-5}
 
 En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 1. **Fracció de la part restant:**
@@ -202,9 +485,11 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 
 ---
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
-#### Exercici 1: Fraccions equivalents, productes creuats i fracció irreductible
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Fraccions equivalents, productes creuats i fracció irreductible
 1. Comprova si cadascuna de les següents parelles de fraccions són equivalents utilitzant la regla dels productes creuats:
    - Parella A: $\dfrac{18}{24} \quad \text{i} \quad \dfrac{15}{20}$
    - Parella B: $\dfrac{14}{35} \quad \text{i} \quad \dfrac{16}{42}$
@@ -214,7 +499,7 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 3. Simplifica cadascuna de les següents fraccions fins a obtenir la seua fracció irreductible calculant l'$\text{MCD}$ de numerador i denominador:
    $$F_1 = \frac{72}{108} \qquad F_2 = \frac{140}{210} \qquad F_3 = \frac{198}{264}$$
 
-#### Exercici 2: Suma i resta de fraccions amb mínim comú denominador
+##### Exercici 2: Suma i resta de fraccions amb mínim comú denominador
 Resol les següents operacions reduint primerament a comú denominador mitjançant l'$\text{MCM}$ i simplifica el resultat final:
 1. **Suma simple:**
    $$S_1 = \frac{3}{8} + \frac{5}{12}$$
@@ -223,7 +508,7 @@ Resol les següents operacions reduint primerament a comú denominador mitjança
 3. **Suma amb nombres enters:**
    $$S_3 = 2 - \frac{3}{5} + \frac{7}{10}$$
 
-#### Exercici 3: Operacions combinades i jerarquia amb fraccions
+##### Exercici 3: Operacions combinades i jerarquia amb fraccions
 Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'operacions:
 1. **Expressió A:**
    $$A = \frac{3}{4} \cdot \left(\frac{5}{6} - \frac{1}{3}\right) + \frac{7}{8} : \frac{14}{4}$$
@@ -234,9 +519,9 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Formulació de dissolució desengreixant d'alcohol isopropílic (IPA)
+##### Repte 1: Formulació de dissolució desengreixant d'alcohol isopropílic (IPA)
 - **Objectiu:** Utilitzar la fracció com a operador per calcular quantitats exactes de líquids en un laboratori tècnic.
 - **Situació de taller:** Per netejar restes de pasta tèrmica ressecada i flux de soldadura en plaques base, un tècnic ha de preparar un flascó aplicador d'exactament $500\text{ ml}$ d'una mescla de neteja d'alta puresa:
   - $\dfrac{7}{10}$ del volum total han de ser d'alcohol isopropílic pur al 99%.
@@ -248,7 +533,7 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
   3. Quants mil·lilitres d'aigua destil·lada cal afegir per completar el flascó?
   4. Si per a una neteja intensiva s'utilitzen $\dfrac{2}{5}$ del contingut del flascó preparat, quants mil·lilitres de dissolució s'han gastat i quants en queden disponibles?
 
-#### Repte 2: Particionament lògic d'un disc sòlid NVMe i espai lliure
+##### Repte 2: Particionament lògic d'un disc sòlid NVMe i espai lliure
 - **Objectiu:** Modelar el repartiment proporcional d'un recurs físic i calcular la fracció i capacitat sobrant.
 - **Situació:** En un equip de taller d'FP Bàsica s'instal·la un disc SSD NVMe amb una capacitat neta útil de $960\text{ GB}$. Es planifica la següent distribució de particions:
   - Partició de Sistema Operatiu (Windows/Linux): $\dfrac{1}{4}$ del disc.
@@ -266,7 +551,7 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
      - Espai Lliure no assignat ($\text{GB}$).
   4. Suma els quatre valors obtinguts en GB per comprovar que el total suma exactament $960\text{ GB}$.
 
-#### Repte 3: Control d'inventari i consum progressiu de connectors RJ45
+##### Repte 3: Control d'inventari i consum progressiu de connectors RJ45
 - **Objectiu:** Resoldre problemes de consum encadenat ("fracció del que queda") en la gestió de material de xarxa.
 - **Situació:** A principis de curs, el taller disposa d'un pot ple amb $600\text{ connectors RJ45}$ mascle categoria 6:
   - Durant el primer trimestre, les pràctiques de muntatge de cables consumeixen $\dfrac{1}{3}$ del total de connectors del pot.
@@ -280,9 +565,9 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He verificat l'equivalència entre dues fraccions utilitzant la regla dels productes creuats ($a \cdot d = b \cdot c$).
 - [ ] He simplificat fraccions dividint pel seu màxim comú divisor fins a trobar la fracció irreductible.
 - [ ] He calculat la suma i resta de fraccions reduint correctament a mínim comú denominador mitjançant l'MCM.
@@ -291,7 +576,7 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 - [ ] He calculat quantitats reals de volum i emmagatzematge aplicant la fracció com a operador sobre una xifra.
 - [ ] He resolt problemes encadenats de càlcul de la fracció restant ($1 - \frac{a}{b}$).
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -300,3 +585,9 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 | **Multiplicació i divisió de racionals** | Multiplica en línia i divideix en creu amb soltesa, simplificant factors comuns abans d'operar per evitar xifres gegants. | Aplica correctament les regles de multiplicació en línia i divisió creuada simplificant al final. | Confon la multiplicació en línia amb la divisió creuada en situacions d'examen. | Multiplica en creu per a la multiplicació i en línia per a la divisió. |
 | **Operacions combinades i jerarquia** | Resol expressions amb claudàtors, multiplicacions i sumes respectant estrictament la jerarquia sense saltar-se passos. | Resol operacions combinades amb bona jerarquia i errades menors de càlcul en l'ajust de denominadors. | Resol primer el parèntesi però s'equivoca en prioritzar la multiplicació sobre la suma posterior. | No respecta la jerarquia d'operacions calculant d'esquerra a dreta. |
 | **Resolució de problemes aplicats (taller/química)** | Modela problemes de dissolucions, particions de disc i despeses del que queda amb plantejament matemàtic exemplar. | Planteja i resol problemes de fracció d'una quantitat i de volum de forma clara. | Resol problemes directes de fracció d'un total però s'encalla en "fracció del que queda". | No sap traduir els enunciats a operacions amb fraccions ni interpretar el resultat en context real. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

@@ -94,103 +94,654 @@ Benvingut/da a la **Unitat Didàctica 2** de Ciències Aplicades I (bloc de Biol
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**2.1 Nivells d'Organització de la Matèria, la Cèl·lula i els Teixits**](#21-nivells-dorganització-de-la-matèria-la-cèllula-i-els-teixits)
-2. [**2.2 La Funció de Nutrició i l'Aparell Digestiu**](#22-la-funció-de-nutrició-i-laparell-digestiu)
-3. [**2.3 Els Aparells Respiratori, Circulatori i Sistema Limfàtic**](#23-els-aparells-respiratori-circulatori-i-sistema-limfàtic)
-4. [**2.4 L'Aparell Excretor, Hàbits de Salut i Activitats**](#24-laparell-excretor-hàbits-de-salut-i-activitats)
-5. [**2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#25-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
-
----
-
-## 📌 2.1 Nivells d'Organització de la Matèria, la Cèl·lula i els Teixits
-
-La matèria s'organitza en escales de complexitat creixent:
-- **Nivells Abiòtics:** Subatòmic (protons, neutrons, electrons) ➔ Atòmic ($\text{C, H, O, N}$) ➔ Molecular (aigua, sals minerals, glúcids, lípids, proteïnes, àcids nucleics).
-- **Nivells Biòtics:** Cel·lular (comença la vida) ➔ Tissular (teixits) ➔ Òrgans ➔ Aparells i Sistemes ➔ Organisme ➔ Població ➔ Comunitat ➔ Ecosistema ➔ Biosfera.
-
-### La Cèl·lula i la Teoria Cel·lular
-Descoberta per **Robert Hooke** en 1664 al suro i perfeccionada per Leeuwenhoek, la teoria cel·lular moderna estableix:
-1. Tots els éssers vius estan formats per cèl·lules.
-2. La cèl·lula és la unitat funcional i fisiològica mínima.
-3. Tota cèl·lula prové necessàriament d'una altra cèl·lula preexistent.
-
-### Tipus Cel·lulars
-- **Procariotes (Bacteris i Arquees):** Sense membrana nuclear, ADN dispers en el citoplasma. Essencials per al cicle del nitrogen i la microbiota intestinal.
-- **Eucariotes:** Amb nucli diferenciat protegit per membrana nuclear:
-  - *Cèl·lula vegetal:* Posseeix paret rígida de cel·lulosa, cloroplasts amb clorofil·la per a la fotosíntesi i grans vacúols.
-  - *Cèl·lula animal:* Sense paret ni cloroplasts; posseeix centríols.
-
-### Els Virus i les Vacunes
-Els virus són estructures acel·lulars paràsites (càpside de proteïna + genoma d'ADN/ARN). No tenen metabolisme propi i requereixen infectar cèl·lules vives per replicar-se. Les **vacunes** estimulen el sistema immunitari perquè produïsca anticossos i memòria immunitària defensiva.
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec2-1"><strong>2.1 Nivells d'Organització de la Matèria, la Cèl·lula i els Teixits</strong></a></li>
+    <li><a href="#sec2-2"><strong>2.2 La Funció de Nutrició i l'Aparell Digestiu</strong></a></li>
+    <li><a href="#sec2-3"><strong>2.3 Els Aparells Respiratori, Circulatori i Sistema Limfàtic</strong></a></li>
+    <li><a href="#sec2-4"><strong>2.4 L'Aparell Excretor, Hàbits de Salut i Activitats</strong></a></li>
+    <li><a href="#sec2-5"><strong>2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 2.2 La Funció de Nutrició i l'Aparell Digestiu
+## 📌 2.1 Nivells d'Organització de la Matèria, la Cèl·lula i els Teixits {#sec2-1}
 
-La nutrició és el procés cel·lular involuntari d'obtenció de matèria i energia, a diferència de l'alimentació (ingerir aliments de manera voluntària).
-
-### Els 4 Aparells de la Nutrició
-1. **Digestiu:** Descompon aliments i absorbeix nutrients.
-2. **Respiratori:** Aporta oxigen i expulsa diòxid de carboni.
-3. **Circulatori:** Transporta substàncies a totes les cèl·lules.
-4. **Excretor:** Filtra la sang i elimina deixalles tòxiques.
-
-### Anatomia i Procés Digestiu
-- **Tub digestiu:** Boca (32 dents i llengua) ➔ Faringe (epiglotis) ➔ Esòfag (peristaltisme) ➔ Estómac (càrdies, pílor, $\text{HCl}$ i pepsina) ➔ Intestí prim (duodè, jejú, ili amb microvellositats) ➔ Intestí gros (cec amb apèndix, còlon, recte i anus).
-- **Glàndules annexes:**
-  - *Salivals:* Saliva amb amilasa.
-  - *Fetge:* Produeix bilis (emmagatzemada a la vesícula biliar) per emulsionar greixos.
-  - *Pàncrees:* Suc pancreàtic i hormones (insulina i glucagó per al control de la glucèmia).
-- **Fases:** **Bol alimentari** (boca) ➔ **Quim** (estómac) ➔ **Quil** (intestí prim). L'absorció de la majoria dels nutrients té lloc a les vellositats de l'intestí prim.
+La matèria que forma el nostre univers i tots els éssers vius està organitzada en diferents **graus de complexitat creixent**, des de les partícules elementals fins a tot el planeta Terra.
 
 ---
 
-## 📌 2.3 Els Aparells Respiratori, Circulatori i Sistema Limfàtic
+### 1. Els Nivells d'Organització de la Matèria
 
-### L'Aparell Respiratori
-- **Vies:** Fosses nasals (filtra, humiteja i escalfa), faringe, laringe (cordes vocals), tràquea, bronquis i bronquíols.
-- **Pulmons i Alvèols:** Milions de sacs recoberts de capil·lars on es produeix l'**hematosi** (intercanvi d'$\text{O}_2$ i $\text{CO}_2$ per difusió passiva).
-- **Ventilació:** Inspiració (el diafragma baixa i eixampla la caixa toràcica) i espiració (relaxació).
+Podem dividir els nivells d'organització en dos grans blocs: **nivells abiòtics** (sense vida pròpia) i **nivells biòtics** (a partir dels quals comença la vida).
 
-### L'Aparell Circulatori Cardiovascular
-- **La Sang:** Plasma ($55\%$) i cèl·lules sanguínies ($45\%$): glòbuls vermells (hemoglobina, transport d'oxigen), glòbuls blancs (immunitat) i plaquetes (coagulació).
-- **Vasos:** Artèries (isquen del cor a pressió), venes (tornen al cor amb vàlvules semilunars) i capil·lars (microscòpics per a l'intercanvi cel·lular).
-- **El Cor:** Quatre cavitats (aurícules dreta/esquerra i ventricles dret/esquerre) i vàlvules (tricúspide, mitral, sigmoides).
-- **Circulació Doble i Completa:**
-  - *Circuit Pulmonar (Menor):* Ventricle dret ➔ Pulmons ➔ Aurícula esquerra.
-  - *Circuit General (Major):* Ventricle esquerre ➔ Artèria Aorta ➔ Teixits del cos ➔ Venes caves ➔ Aurícula dreta.
-- **Grups Sanguinis:** Sistema AB0 i factor Rh. Donant universal: **$\text{0}^-$**; Receptor universal: **$\text{AB}^+$**.
+```
+Subatòmic ➔ Atòmic ➔ Molecular ➔ Cel·lular ➔ Tissular ➔ Òrgans ➔ Sistemes ➔ Organisme ➔ Població ➔ Comunitat ➔ Ecosistema ➔ Biosfera
+```
+
+#### Nivells Abiòtics (Inerts)
+1. **Nivell Subatòmic:** Format per les partícules elementals que constitueixen l'àtom: protons, neutrons i electrons.
+2. **Nivell Atòmic:** Els àtoms dels diferents elements químics (bioelements essencials com el carboni $\text{C}$, hidrogen $\text{H}$, oxigen $\text{O}$, nitrogen $\text{N}$, fòsfor $\text{P}$ i sofre $\text{S}$).
+3. **Nivell Molecular:** Unió d'àtoms mitjançant enllaços químics per a formar biomolècules:
+   - **Inorgàniques:** Aigua ($\text{H}_2\text{O}$) i sals minerals.
+   - **Orgàniques:** Glúcids (sucres), lípids (greixos), proteïnes i àcids nucleics (ADN i ARN).
+
+#### Nivells Biòtics (Vius)
+4. **Nivell Cel·lular:** La cèl·lula és el primer nivell amb vida pròpia capaç de realitzar les tres funcions vitals (nutrició, relació i reproducció).
+5. **Nivell Tissular (Teixits):** Conjunt de cèl·lules similars especialitzades que col·laboren en una funció comuna (per exemple, el teixit muscular o ossi).
+6. **Òrgans:** Unió de diferents teixits coordinats per fer una acció concreta (cor, estómac, ronyó).
+7. **Aparells i Sistemes:** Conjunt d'òrgans coordinats que realitzen una funció complexa (aparell digestiu, sistema nerviós).
+8. **Organisme (Individu):** L'ésser viu complet integrat (un ésser humà, un gos, un arbre).
+9. **Població, Comunitat, Ecosistema i Biosfera:** Nivells ecològics que agrupen individus de la mateixa espècie, comunitats biològiques i la totalitat de la vida a la Terra.
 
 ---
 
-## 📌 2.4 L'Aparell Excretor, Hàbits de Salut i Activitats
+### 2. La Cèl·lula: El Descobriment i la Teoria Cel·lular
 
-L'**excreció** és la neteja de substàncies tòxiques cel·lulars abocades a la sang (diferent de la defecació de restes no digerides).
+La **cèl·lula** és la unitat morfològica, estructural i funcional de tots els éssers vius. És l'estructura ordenada i viva més menuda que es coneix. La gran majoria són microscòpiques, encara que algunes (com l'òvul humà) poden observar-se quasi a simple vista.
 
-### L'Aparell Urinari i la Nefrona
-- **Ronyons:** Dos òrgans amb escorça, medul·la i pelvis renal.
-- **Nefrona:** Unitat funcional de filtratge (més d'1 milió per ronyó):
-  1. *Filtració glomerular:* Aigua i molècules xicotetes passen a la càpsula de Bowman.
-  2. *Reabsorció tubular:* El $99\%$ de l'aigua i el $100\%$ de la glucosa tornen a la sang.
-  3. *Excreció d'orina:* Residus (urea, sals) van als conductes col·lectors.
-- **Vies:** Urèters ➔ Bufeta de l'orina ➔ Uretra (micció).
+#### Història del Descobriment
+- A principis del segle XVII es van desenvolupar les primeres lents d'augment i microscopis.
+- En **1664**, el científic anglès **Robert Hooke** va observar amb un microscopi primitiu un tall fi de suro. Va apreciar una estructura en forma de bresca d'abella formada per petites cambretes buides a les quals va anomenar **cel·les o cèl·lules** (*cellulae*).
+- Anys més tard, **Antoni van Leeuwenhoek** va perfeccionar les lents i va ser el primer a observar microorganismes vius en una gota d'aigua ("animàlculs") i cèl·lules sanguínies.
 
-### Hàbits Saludables i Malalties
-- Hidratació diària ($1{,}5-2\,\text{L}$ d'aigua), no fumar, dieta rica en fibra i moderada en sal.
-- Patologies: Cistitis (infecció d'orina), càlculs renals (còlic nefrític), diabetis, arterioesclerosi, insuficiència renal i tractament amb **hemodiàlisi**.
+> [!IMPORTANT]
+> ### Els Tres Principis de la Teoria Cel·lular
+> A mitjan segle XIX, els científics Matthias Schleiden, Theodor Schwann i Rudolf Virchow van establir la **Teoria Cel·lular moderna**:
+> 1. **Unitat estructural:** Tots els éssers vius estan formats per una o més cèl·lules.
+> 2. **Unitat funcional:** La cèl·lula és la unitat fisiològica mínima capaç de realitzar les funcions vitals.
+> 3. **Unitat d'origen:** Tota cèl·lula prové necessàriament de la divisió d'una altra cèl·lula preexistent (*omnis cellula e cellula*).
+
+---
+
+### 3. Classificació Cel·lular: Procariotes vs Eucariotes
+
+Segons si el material genètic està aïllat per una membrana nuclear o no, distingim dos grans tipus cel·lulars:
+
+| Característica | Cèl·lula Procariota | Cèl·lula Eucariota |
+| :--- | :--- | :--- |
+| **Nucli diferenciat** | **No en té** (sense membrana nuclear). | **Sí en té** (amb membrana nuclear que protegeix l'ADN). |
+| **Localització de l'ADN** | Dispers pel citoplasma en una regió anomenada nucleoide. | Tancat i protegit dins del nucli cel·lular. |
+| **Complexitat i orgànuls** | Molt senzilla; té ribosomes però manca d'orgànuls membranosos. | Molt complexa; té múltiples orgànuls membranosos especialitzats. |
+| **Mida aproximada** | Petita ($0{,}5 - 5\,\mu\text{m}$). | Gran ($10 - 100\,\mu\text{m}$). |
+| **Organismes** | Unicel·lulars: **Bacteris** i **Arquees**. | Unicel·lulars o pluricel·lulars: **Animals, plantes, fongs i protoctists**. |
+
+#### Els Bacteris: Microorganismes Essencials
+Els bacteris són els éssers vius més abundants del planeta. Menys de l'**1%** dels bacteris existents són perjudicials per als humans causant malalties. La immensa majoria són beneficiosos i indispensables:
+- **Flora intestinal:** Bacteris com *Lactobacillus* i *Bifidobacterium* ajuden a la digestió, síntesi de vitamines (B i K) i frenen el creixement de bacteris patògens (*Escherichia coli*, *Salmonella*).
+- **Reciclatge d'elements i fixació del nitrogen:** L'atmosfera té un $78\%$ de nitrogen gasós ($\text{N}_2$), però plantes i animals no podem respirar-lo directament per sintetitzar proteïnes i ADN. Els bacteris del sòl el "fixen" en sals minerals que les plantes absorbeixen per les arrels.
+
+---
+
+### 4. Cèl·lules Animals vs Cèl·lules Vegetals
+
+Les dues són eucariotes, però presenten adaptacions i orgànuls exclusius segons el seu estil de vida:
+
+| Estructura / Orgànul | Cèl·lula Animal | Cèl·lula Vegetal | Funció principal |
+| :--- | :---: | :---: | :--- |
+| **Membrana plasmàtica** | Sí | Sí | Barrera selectiva que regula l'entrada de nutrients i eixida de deixalles. |
+| **Paret cel·lular** | **No** | **Sí** (de cel·lulosa) | Capa rígida externa que dóna protecció, resistència i forma prismàtica. |
+| **Nucli** | Sí | Sí | Conté l'ADN i coordina tota l'activitat de la cèl·lula. |
+| **Citoplasma** | Sí | Sí | Medi aquós intern on suren els orgànuls cel·lulars. |
+| **Mitocondris** | Sí | Sí | Centrals energètiques: fan la respiració cel·lular per produir energia (ATP). |
+| **Cloroplasts** | **No** | **Sí** (amb clorofil·la) | Realitzen la **fotosíntesi**, captant la llum solar per crear matèria orgànica. |
+| **Vacúols** | Menuts i escassos | Un gran vacúol central | Emmagatzema aigua, sals minerals i substàncies de reserva. |
+| **Centríols** | Sí | No | Participen en la divisió cel·lular i formació del fus mitòtic. |
+
+---
+
+### 5. Formes Acel·lulars: Els Virus i les Vacunes
+
+Els **virus** (terme llatí que significa "verí" o "toxina") són estructures microscòpiques que se situen en la frontera del que considerem viu. 
+
+```
+Estructura bàsica d'un virus:
+┌─────────────────────────────────┐
+│     Envoltura / Càpside         │  (coberta externa de proteïnes)
+│     ┌─────────────────────┐     │
+│     │   Genoma víric      │     │  (ADN o ARN amb la informació)
+│     └─────────────────────┘     │
+└─────────────────────────────────┘
+```
+
+> [!WARNING]
+> ### Per què els virus no són cèl·lules ni es consideren éssers vius complets?
+> - **Són acel·lulars:** No tenen membrana plasmàtica, ni citoplasma, ni orgànuls, ni metabolisme propi.
+> - **Paràsits intracel·lulars obligats:** Fora d'una cèl·lula hoste són partícules inerts anomenades **virions**.
+> - **No es poden reproduir per ells mateixos:** Necessiten injectar el seu material genètic en una cèl·lula hoste i "segrestar" la maquinària d'aquesta per produir nous virus, destruint sovint la cèl·lula.
+
+#### Les Vacunes i la Immunitat
+Per a combatre les infeccions víriques no serveixen els antibiòtics (que només maten bacteris). L'eina fonamental de prevenció són les **vacunes**:
+1. **Com funcionen:** S'introdueix en el cos un fragment inofensiu del virus o un patogen atenuat/inactivat.
+2. **Reconeixement immunitari:** El nostre sistema immunitari (glòbuls blancs i limfòcits) detecta les proteïnes de l'invasor i fabrica **anticossos** específics.
+3. **Memòria immunitària:** Quan el patogen real intenta infectar-nos, les nostres defenses el reconeixen ràpidament i el destrueixen abans que desenvolupe la malaltia.
+4. **Història:** La primera vacuna la va desenvolupar **Edward Jenner** a finals del segle XVIII contra la verola, salvant centenars de milions de vides.
+
+---
+
+### 6. Els Teixits en el Cos Humà
+
+En els organismes pluricel·lulars, les cèl·lules s'especialitzen i s'associen formant **teixits**. En el cos humà es distingeixen 4 tipus principals de teixits:
+
+1. **Teixit Epitelial:** 
+   - **Funció:** Cobreix les superfícies externes del cos (epidermis de la pell) i recobreix les cavitats internes (epiteli de l'estómac, vies respiratòries). 
+   - També forma les glàndules secretores (teixit glandular).
+2. **Teixit Connectiu (o Conjuntiu):**
+   - **Funció:** Uneix, sosté i protegeix els altres teixits.
+   - **Varietats:** Teixit ossi (ossos), teixit cartilaginós (cartílags), teixit adipós (greix de reserva i aïllant) i teixit sanguini (la sang).
+3. **Teixit Muscular:**
+   - **Funció:** Format per cèl·lules allargades (fibres musculars) capaces de contraure's per generar moviment i força.
+   - **Tipus:** Múscul esquelètic (voluntari, unit als ossos), múscul cardíac (involuntari, al cor) i múscul llis (involuntari, a les parets del tub digestiu i vasos sanguinis).
+4. **Teixit Nerviós:**
+   - **Funció:** Captar estímuls sensorials, transmetre impulsos elèctrics i coordinar la resposta de l'organisme.
+   - **Cèl·lules:** Neurones (transmissió de l'impuls nerviós) i cèl·lules de la glia (suport, nutrició i protecció de les neurones).
+
+---
+
+### 💡 Resum de Conceptes Clau
+
+- La matèria s'organitza des del nivell subatòmic fins a la biosfera; la vida comença en el **nivell cel·lular**.
+- La cèl·lula és la unitat estructural, funcional i d'origen de tot ésser viu (**Teoria Cel·lular**).
+- Les **procariotes** no tenen nucli diferenciat (bacteris); les **eucariotes** tenen nucli amb membrana (animals i vegetals).
+- Les **cèl·lules vegetals** tenen paret cel·lular i cloroplasts per fer la fotosíntesi; les **animals** no en tenen.
+- Els **virus** són estructures acel·lulars paràsites que es combaten eficaçment amb la prevenció mitjançant **vacunes**.
+- Els **teixits** humans principals són l'epitelial, connectiu, muscular i nerviós.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 2.2 La Funció de Nutrició i l'Aparell Digestiu {#sec2-2}
+
+La **funció de nutrició** és el conjunt de processos biològics mitjançant els quals els organismes obtenen la matèria i l'energia necessàries per construir i renovar les seues estructures cel·lulars i dur a terme totes les activitats vitals.
+
+---
+
+### 1. Concepte de Nutrició: Alimentació vs Nutrició
+
+És fonamental no confondre els termes **alimentació** i **nutrició**:
+
+- **Alimentació:** És un acte **voluntari, conscient i educable**, que consisteix a triar, preparar i ingerir els aliments del nostre entorn.
+- **Nutrició:** És un procés **involuntari i inconscient**, que comprén tots els mecanismes fisiològics pels quals el cos descompon els aliments, n'absorbeix els nutrients químics (glucosa, àcids grassos, aminoàcids, vitamines, minerals i aigua) i els transporta a cadascuna de les cèl·lules.
+
+#### Tipus de Nutrició en els Éssers Vius
+- **Nutrició Autòtrofa:** Fabriquen la seua pròpia matèria orgànica a partir de substàncies inorgàniques simples com el diòxid de carboni ($\text{CO}_2$) i l'aigua, utilitzant una font externa d'energia com la llum solar (plantes, algues i bacteris fotosintètics).
+- **Nutrició Heteròtrofa:** No poden fabricar la seua pròpia matèria orgànica i han d'alimentar-se consumint altres éssers vius o les seues restes (animals, fongs, protozous i la majoria de bacteris).
+
+> [!NOTE]
+> ### Els 4 Aparells Coordinats en la Nutrició Humana
+> Per a realitzar la nutrició en el cos humà, quatre grans aparells treballen de manera sincronitzada:
+> 1. **Aparell Digestiu:** Transforma els aliments en nutrients senzills i els absorbeix cap a la sang.
+> 2. **Aparell Respiratori:** Capta l'oxigen ($\text{O}_2$) de l'aire per a la respiració cel·lular i expulsa el diòxid de carboni ($\text{CO}_2$).
+> 3. **Aparell Circulatori:** Transporta els nutrients i l'oxigen fins a cadascuna de les cèl·lules, i arreplega els residus metabòlics.
+> 4. **Aparell Excretor:** Depura la sang eliminant els productes de rebuig tòxics cel·lulars (urea, àcid úric) a través de l'orina i la suor.
+
+![Òrgans interns del cos humà](../img/cos_huma_organs.jpg)
+*Figura 2.1: Disposició dels principals òrgans interns en el tronc humà: **(1)** Pulmons (respiratori), **(2)** Cor (circulatori), **(3)** Fetge (glàndula digestiva), **(4)** Estómac (digestiu), **(5)** Intestí prim (absorció de nutrients), **(6)** Intestí gros (absorció d'aigua), **(7)** Ronyons (excretor).*
+
+---
+
+### 2. Anatomia de l'Aparell Digestiu
+
+L'aparell digestiu humà està format per dues parts fonamentals: el **tub digestiu** i les **glàndules annexes**.
+
+```
+Boca ➔ Faringe ➔ Esòfag ➔ Estómac ➔ Intestí Prim ➔ Intestí Gros ➔ Recte/Anus
+  ▲                         ▲             ▲
+Glàndules Salivals          Fetge      Pàncrees
+```
+
+#### A) El Tub Digestiu
+És un conducte musculós continu d'uns 10 metres de longitud que s'estén des de l'orifici d'entrada (boca) fins a l'orifici d'eixida (anus):
+
+1. **La Boca:**
+   - **Dents:** Estructures dures que trituren el menjar. Els adults tenen **32 peces dentals** (16 a dalt i 16 a baix): 8 incisius (tallen), 4 canins (esquincen), 8 premolars i 12 molars (trituren i molen).
+   - **Llengua:** Múscul molt potent recobert de **papil·les gustatives** que percep els sabors (dolç, salat, àcid, amarg i umami) i ajuda a barrejar el menjar amb la saliva.
+2. **La Faringe:**
+   - Cavitat compartida entre els sistemes digestiu i respiratori.
+   - Posseeix una vàlvula cartilaginosa anomenada **epiglotis**, que tanca l'entrada a la laringe durant la deglució per impedir que el menjar passe a les vies respiratòries (ennuegament).
+3. **L'Esòfag:**
+   - Tub musculós d'uns 25 cm que connecta la faringe amb l'estómac. Condueix el menjar mitjançant contraccions musculars automàtiques anomenades **moviments peristàltics**.
+4. **L'Estómac:**
+   - Eixamplament del tub digestiu en forma de bossa amb una capacitat d'aproximadament $1{,}5$ litres.
+   - Posseeix dues vàlvules d'obertura i tancament: el **càrdies** (a l'entrada, venint de l'esòfag) i el **pílor** (a l'eixida, cap a l'intestí prim).
+5. **L'Intestí Prim:**
+   - Tub llarg i replegat d'uns 6 a 7 metres de longitud. Es divideix en tres trams:
+     - **Duodè:** Tram inicial on desemboquen les secrecions del fetge i del pàncrees.
+     - **Jejú:** Tram intermedi on es produeix la màxima absorció de nutrients.
+     - **Ili:** Tram final que connecta amb l'intestí gros mitjançant la vàlvula ileocecal.
+   - La paret interna està recoberta de milions de replecs diminuts anomenats **vellositats i microvellositats intestinals**, que multipliquen la superfície d'absorció.
+6. **L'Intestí Gros:**
+   - Tub d'aproximadament $1{,}5$ metres de longitud i major diàmetre. Consta de tres regions:
+     - **Cec:** Bossa inicial de la qual sobreix l'**apèndix vermiforme**.
+     - **Còlon:** Es divideix en ascendent, transvers i descendent. Acull la microbiota intestinal (flora bacteriana).
+     - **Recte i Anus:** Tram final on s'emmagatzemen les femtes abans de ser expulsades a l'exterior pel control de l'esfínter anal.
+
+---
+
+#### B) Les Glàndules Digestives Annexes
+Òrgans que produeixen líquids rics en enzims digestius i els aboquen al tub digestiu:
+
+| Glàndula | Localització i Secreció | Funció Principal |
+| :--- | :--- | :--- |
+| **Glàndules Salivals** | 3 parells a la boca (paròtides, submaxil·lars i sublinguals). Secreten **saliva**. | Humitegen l'aliment, contenen lisozima (bactericida) i **amilasa**, enzim que comença la digestió dels glúcids (midó). |
+| **Fetge** | Glàndula més voluminosa del cos, situada a la dreta sota el diafragma. Produeix la **bilis**. | La bilis s'emmagatzema a la **vesícula biliar** i s'aboca al duodè per a emulsionar els greixos (trencar-los en gotetes menudes perquè puguen ser atacats pels enzims). A més, el fetge emmagatzema glucogen i ferro, i desintoxica la sang. |
+| **Pàncrees** | Rere i sota l'estómac. Produeix el **suc pancreàtic** i hormones. | El suc pancreàtic abocat al duodè conté enzims que digereixen proteïnes, lípids i sucres. A més, secreta a la sang la **insulina** (abaixa el sucre en sang) i el **glucagó** (apuja el sucre). |
+
+> [!IMPORTANT]
+> ### El Pàncrees i la Diabetis
+> La glucosa és el combustible energètic primordial de les cèl·lules. La **insulina** permet que la glucosa passe de la sang a l'interior de les cèl·lules.
+> Quan una persona pateix **diabetis**, el seu pàncrees no produeix suficient insulina o les cèl·lules no responen adequadament. Com a resultat, la glucosa s'acumula en excés en la sang (hiperglucèmia), la qual cosa pot danyar greument el cor, els ronyons i la vista si no es controla amb dieta, exercici i medicació o injeccions d'insulina.
+
+---
+
+### 3. El Procés Digestiu Pas a Pas
+
+El procés de transformació del menjar comprén accions mecàniques (triturar i barrejar) i accions químiques (ruptura molecular per enzims):
+
+#### Pas 1: Digestió Bucal
+- **Masticació i insalivació:** Les dents trenquen els aliments i la llengua els barreja amb la saliva.
+- **Acció enzimàtica:** L'amilasa comença a digerir els glúcids.
+- **Resultat:** Es forma una massa pastosa homogènia anomenada **bol alimentari**.
+
+#### Pas 2: Deglució i Pas per l'Esòfag
+- La llengua empeny el bol alimentari cap a la faringe. L'epiglotis es tanca protegint la tràquea.
+- El bol descendeix per l'esòfag gràcies als moviments peristàltics fins a traspassar el càrdies.
+
+#### Pas 3: Digestió Gàstrica (a l'Estómac)
+- Les parets de l'estómac alliberen **àcid clorhídric ($\text{HCl}$)**, que destrueix microorganismes patògens, i **pepsina**, que descompon les proteïnes.
+- Les fortes contraccions musculars de l'estómac baten el menjar durant 2 a 4 hores.
+- **Resultat:** El bol es transforma en una farineta semilíquida i àcida anomenada **quim**. El pílor s'obri deixant-lo passar cap al duodè en xicotetes quantitats.
+
+#### Pas 4: Digestió Intestinal (al Duodè)
+- Al duodè s'aboquen simultàniament: la **bilis** (del fetge), el **suc pancreàtic** (del pàncrees) i el **suc intestinal** (fabricat per les glàndules de la pròpia paret intestinal).
+- Tots els nutrients queden reduïts a molècules bàsiques senzilles: glucosa, aminoàcids, àcids grassos i glicerol.
+- **Resultat:** El quim es transforma en un líquid lletós i ric en nutrients absorbibles anomenat **quil**.
+
+#### Pas 5: Absorció Intestinal (al Jejú i Ili)
+- Els nutrients travessen les fines parets de les **vellositats intestinals** i entren als capil·lars sanguinis (i als vasos quilífers limfàtics en el cas dels greixos).
+- La sang s'encarrega llavors de transportar els nutrients a totes les cèl·lules de l'organisme.
+
+#### Pas 6: Formació de Femtes i Defecació (a l'Intestí Gros)
+- Les substàncies que no han pogut ser digerides (com la fibra vegetal / cel·lulosa) avancen pel còlon.
+- L'intestí gros reabsorbeix la major part de l'aigua i sals minerals, compactant els residus.
+- La microbiota bacteriana fermenta restes orgàniques generant gasos i sintetitzant certes vitamines.
+- Els residus sòlids formen les **femtes**, que passen al recte i són expulsades a l'exterior a través de l'anus en l'acte de la **defecació** (egestió).
+
+---
+
+### 4. Malalties i Hàbits Saludables de l'Aparell Digestiu
+
+- **Càries Dental:** Destrucció de l'esmalt i la dentina per àcids alliberats per bacteris bucals en fermentar sucres. Prevenció: rentar-se les dents després de cada àpat i visites al dentista.
+- **Gastritis i Úlcera Gàstrica:** Inflamació o ferida oberta a la mucosa de l'estómac provocada per estrès, medicaments o el bacteri *Helicobacter pylori*.
+- **Restrenyiment:** Dificultat per evacuar la femta per falta de mobilitat intestinal o per femtes massa seques. Millora menjant fibra (fruita, verdura, cereals integrals) i bevent abundant aigua.
+- **Intolerància a la Lactosa i Celiaquia:** Dificultat digestiva per manca de lactasa (lactosa) o reacció autoimmune al gluten que fa malbé les vellositats intestinals (celiaquia).
+
+---
+
+### 💡 Resum de Conceptes Clau
+
+- La **nutrició** és un conjunt de processos involuntaris per obtenir matèria i energia; l'**alimentació** és l'acte conscient d'ingerir aliments.
+- El tub digestiu inclou boca, faringe, esòfag, estómac, intestí prim, intestí gros i anus.
+- Les glàndules annexes són les glàndules salivals, el fetge (bilis) i el pàncrees (suc pancreàtic i insulina).
+- Transformació del menjar: **Bol alimentari** (boca) ➔ **Quim** (estómac) ➔ **Quil** (intestí prim).
+- L'absorció de la majoria dels nutrients té lloc a l'**intestí prim** a través de les **vellositats intestinals**.
+- L'aigua es reabsorbeix a l'**intestí gros**, formant la femta que s'expulsa per l'anus.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 2.3 Els Aparells Respiratori, Circulatori i Sistema Limfàtic {#sec2-3}
+
+Per tal que els nutrients arribats pel sistema digestiu puguen ser aprofitats per les nostres cèl·lules, cal combinar-los amb **oxigen ($\text{O}_2$)** mitjançant la respiració cel·lular i distribuir-los ràpidament per tot el cos a través del sistema circulatori.
+
+---
+
+### 1. L'Aparell Respiratori
+
+L'aparell respiratori és l'encarregat de captar l'oxigen de l'aire atmosfèric i transportar-lo fins a la sang, alhora que recull el **diòxid de carboni ($\text{CO}_2$)** residual de les cèl·lules i l'expulsa a l'exterior.
+
+```
+Aire exterior ➔ Fosses nasals ➔ Faringe ➔ Laringe ➔ Tràquea ➔ Bronquis ➔ Bronquíols ➔ Alvèols Pulmonars ➔ [Sang]
+```
+
+#### Anatomia de les Vies Respiratòries i Pulmons
+1. **Fosses Nasals:** Dues cavitats que comuniquen amb l'exterior. Tenen pèls que retenen la pols i una mucosa molt vascularitzada (la pituïtària roja) que **escalfa, humiteja i filtra** l'aire inspirat.
+2. **Faringe:** Conducte comú que connecta el nas i la boca amb la laringe.
+3. **Laringe:** Tub curt que conté les **cordes vocals** (responsables de la veu en vibrar amb l'aire) i la nou o poma d'Adan. A l'entrada hi ha l'epiglotis.
+4. **Tràquea:** Conducte d'uns 12 cm format per anells de cartílag incomplets en forma de "C" que eviten que el tub es tanque i permeten el pas permanent de l'aire.
+5. **Bronquis i Bronquíols:** La tràquea es bifurca en dos **bronquis principals** (un per a cada pulmó), que es ramifiquen successivament dins dels pulmons en tubs cada vegada més fins anomenats **bronquíols** (l'arbre bronquial).
+6. **Els Pulmons:**
+   - Dues masses esponjoses i elàstiques situades a la cavitat toràcica a banda i banda del cor, protegides per les costelles.
+   - El **pulmó dret té tres lòbuls**, mentre que l'**esquerre en té dos** per deixar espai al cor.
+   - Estan recoberts per una doble membrana protectora plena de líquid lubrificant: la **pleura**.
+7. **Els Alvèols Pulmonars:**
+   - Són xicotets sacs terminals d'una sola capa de cèl·lules, envoltats per una densa xarxa de capil·lars sanguinis.
+   - Tenim vora 300 milions d'alvèols a cada pulmó, oferint una superfície gegant d'intercanvi d'uns $100\,\text{m}^2$.
+
+#### Mecànica Ventilatòria i Intercanvi de Gasos (Hematosi)
+- **Inspiració (Entrada d'aire):** El diafragma (múscul que separa el tòrax de l'abdomen) es contrau i baixa, i els músculs intercostals eleven les costelles. La caixa toràcica s'eixampla, la pressió interna baixa i l'aire entra des de l'exterior als pulmons.
+- **Espiració (Eixida d'aire):** El diafragma i els intercostals es relaxen i tornen a la posició inicial. La caixa toràcica es redueix, la pressió augmenta i l'aire és expulsat a l'exterior.
+- **L'Intercanvi de Gasos (Hematosi):** Té lloc als alvèols per un procés físic passiu anomenat **difusió** (les molècules es desplacen de la zona de més concentració a la de menys concentració):
+  - L'$\text{O}_2$ de l'aire alvèolar travessa cap a la sang dels capil·lars i s'uneix als glòbuls vermells.
+  - El $\text{CO}_2$ que la sang transportava des de les cèl·lules travessa cap a l'interior dels alvèols per ser expulsat en l'espiració.
+
+---
+
+### 2. L'Aparell Circulatori Cardiovascular
+
+L'aparell circulatori és el circuit tancat que mobilitza la sang per tot l'organisme. Està format pel **cor**, els **vasos sanguinis** i la **sang**.
+
+#### A) La Sang i els Seus Components
+La sang és un teixit connectiu líquid fonamental (un adult té uns 5 litres de sang). Es divideix en dues fraccions:
+
+| Fracció | Component | Descripció i Funció |
+| :--- | :--- | :--- |
+| **Líquida ($55\%$)** | **Plasma Sanguini** | Líquid de color groguenc format per aigua ($90\%$), proteïnes (albúmina, factors de coagulació, anticossos), sals minerals, nutrients (glucosa) i deixalles cel·lulars (urea, àcid úric). |
+| **Cel·lular ($45\%$)** | **Glòbuls Vermells** (Eritròcits o Hematies) | Cèl·lules sense nucli en forma de disc bicòncau. Contenen **hemoglobina**, una proteïna rica en ferro que s'uneix a l'oxigen donant a la sang el seu color vermell. N'hi ha uns 5 milions per $\text{mm}^3$. |
+| | **Glòbuls Blancs** (Leucòcits) | Cèl·lules amb nucli encarregades de la defensa immunitària contra bacteris, virus i infeccions (fagòcits i limfòcits). N'hi ha entre 6.000 i 10.000 per $\text{mm}^3$. |
+| | **Plaquetes** (Trombòcits) | Fragments cel·lulars que intervenen activament en la **coagulació sanguínia** formant un tap que impedeix hemorràgies quan es trenca un vas. N'hi ha entre 150.000 i 400.000 per $\text{mm}^3$. |
+
+---
+
+#### B) Els Vasos Sanguinis: Artèries, Venes i Capil·lars
+
+```
+Cor ➔ Artèries ➔ Arteríoles ➔ Capil·lars [Intercanvi cel·lular] ➔ Vènules ➔ Venes ➔ Cor
+```
+
+- **Artèries:** Vasos amb parets gruixudes, elàstiques i musculars que **surtent del cor** i porten sang a alta pressió cap a tots els òrgans.
+- **Venes:** Vasos amb parets més fines que **tornen la sang al cor**. A causa de la baixa pressió, posseeixen **vàlvules semilunars** internes que impedeixen que la sang retrocedisca per la força de la gravetat.
+- **Capil·lars:** Vasos microscòpics amb una paret ultrafina (d'una sola capa de cèl·lules, l'endoteli) que arriben a totes les cèl·lules del cos, permetent l'intercanvi de nutrients, oxigen i residus.
+
+> [!NOTE]
+> ### Per què es dibuixen de color roig i blau als esquemes anatòmics?
+> La sang mai és de color blau dins del cos humà. En els diagrames s'utilitza el **roig** per a la sang rica en oxigen (que té un to roig escarlata brillant) i el **blau** per a la sang pobra en oxigen i rica en diòxid de carboni (que en realitat és de color roig fosc granat), per a facilitar la identificació de la direcció del flux sanguini.
+
+---
+
+#### C) El Cor i el Cicle Cardíac
+
+El **cor** és un òrgan buit de teixit muscular especialitzat (miocardi), de la mida d'un puny, situat al mig del tòrax lleugerament desplaçat a l'esquerra. Actua com una bomba impulsora contínua:
+
+1. **Les 4 Cavitats:**
+   - **Aurícula dreta (AD):** Rep sang desoxigenada del cos a través de les dues **venes caves** (superior i inferior).
+   - **Ventricle dret (VD):** Rep la sang de l'aurícula dreta i la bombeja cap als pulmons per l'**artèria pulmonar**.
+   - **Aurícula esquerra (AE):** Rep sang oxigenada dels pulmons per les 4 **venes pulmonars**.
+   - **Ventricle esquerre (VE):** Amb una paret muscular molt més grossa i potent, bombeja la sang oxigenada a tot el cos per l'**artèria aorta**.
+2. **Les Vàlvules Cardíaques:** Garanteixen que la sang circule sempre en un únic sentit:
+   - **Vàlvula Tricúspide:** Comunica l'aurícula dreta amb el ventricle dret.
+   - **Vàlvula Mitral (o Bicúspide):** Comunica l'aurícula esquerra amb el ventricle esquerre.
+   - **Vàlvules Sigmoides o Semilunars:** A l'eixida dels ventricles cap a l'artèria pulmonar i l'artèria aorta.
+3. **El Cicle Cardíac (Batec):**
+   - **Diàstole:** El cor es relaxa i les aurícules s'omplin de sang procedent de les venes.
+   - **Sístole auricular:** Les aurícules es contrauen i injecten la sang als ventricles a través de les vàlvules tricúspide i mitral.
+   - **Sístole ventricular:** Els ventricles es contrauen amb força, les vàlvules aurículo-ventriculars es tanquen de colp (primer so del cor) i la sang és expulsada amb potència cap a les artèries (pulmonar i aorta).
+
+---
+
+#### D) La Circulació Sanguínia Humana: Doble i Completa
+
+La circulació en l'ésser humà és:
+- **Doble:** Perquè la sang passa dues vegades pel cor en fer un circuit complet pel cos, formant dos circuits connectats:
+  1. **Circulació Menor (o Pulmonar):** Ventricle dret ➔ Artèria pulmonar ➔ Pulmons (s'oxigena als alvèols) ➔ Venes pulmonars ➔ Aurícula esquerra.
+  2. **Circulació Major (o Sistèmica):** Ventricle esquerre ➔ Artèria Aorta ➔ Tota la xarxa d'artèries i capil·lars del cos (cedeix oxigen i arreplega deixalles) ➔ Venes caves ➔ Aurícula dreta.
+- **Completa:** Perquè la sang rica en oxigen (costat esquerre) no es barreja mai amb la sang pobra en oxigen (costat dret), gràcies a l'envà muscular central (septe cardíac).
+
+---
+
+### 3. Els Grups Sanguinis i el Factor Rh
+
+A la membrana dels glòbuls vermells existeixen unes proteïnes marcadores anomenades **antígens**, i al plasma circulen **anticossos**:
+
+| Grup Sanguini | Antígens en glòbuls vermells | Anticossos al plasma | Pot donar sang a... | Pot rebre sang de... |
+| :---: | :---: | :---: | :--- | :--- |
+| **A** | Antigen A | Anti-B | A, AB | A, 0 |
+| **B** | Antigen B | Anti-A | B, AB | B, 0 |
+| **AB** | Antígens A i B | Cap | **AB** | **A, B, AB, 0 (Receptor Universal)** |
+| **0** | Cap | Anti-A i Anti-B | **A, B, AB, 0 (Donant Universal)** | **0** |
+
+#### El Factor Rh
+- **$\text{Rh}^+$:** Tenen la proteïna Rh a la superfície dels eritròcits ($85\%$ de la població). Poden rebre sang $\text{Rh}^+$ o $\text{Rh}^-$.
+- **$\text{Rh}^-$:** No tenen la proteïna Rh ($15\%$ de la població). Només poden rebre sang $\text{Rh}^-$.
+- Per tant:
+  - **$\text{0}^-$** és el **Donant Universal absolut**.
+  - **$\text{AB}^+$** és el **Receptor Universal absolut**.
+
+---
+
+### 4. El Sistema Limfàtic
+
+El **sistema limfàtic** és una xarxa secundària de vasos i òrgans que circula en paral·lel al sistema sanguini:
+
+1. **La Limfa:** Líquid transparent i blanquinós procedent del líquid intersticial que banya les cèl·lules.
+2. **Vasos Limfàtics:** Conductes cecs que drenen l'excés de líquid dels teixits i el retornen a les venes de la sang. A l'intestí prim, els vasos quilífers absorbeixen els greixos (el quil).
+3. **Òrgans Limfàtics:**
+   - **Primaris:** El **moll de l'os** (on es fabriquen totes les cèl·lules sanguínies i immunitàries) i el **tim** (on maduren els limfòcits T).
+   - **Secundaris:** La **melsa** (filtra la sang i destrueix eritròcits vells) i els **ganglis limfàtics** (nòduls situats al coll, aixelles i engonal que filtren la limfa, retenen bacteris i cèl·lules tumorals, i produeixen glòbuls blancs; s'inflamen durant una infecció).
+
+---
+
+### 5. Malalties Cardiovasculars i Hàbits Saludables
+
+- **Aterotrombosi / Arterioesclerosi:** Acumulació de plaques de colesterol i greix a la paret interior de les artèries, endurint-les i estrenyent-les.
+- **Angina de Pit:** Dolor toràcic intens provocat per falta temporal de reg sanguini al cor per estretor de les artèries coronàries.
+- **Infart de Miocardi (Atac de Cor):** Obstrucció completa i sobtada d'una artèria coronària que causa la mort del teixit cardíac afectat per manca d'oxigen.
+- **Hipertensió Arterial:** Pressió excessivament alta de la sang contra les parets de les artèries de manera continuada (per damunt de $140/90\,\text{mmHg}$).
+- **Varius:** Dilatacions anormals de les venes (habitualment a les cames) causades per fallada de les vàlvules venoses internes.
+
+---
+
+### 💡 Resum de Conceptes Clau
+
+- L'aparell respiratori capta $\text{O}_2$ i elimina $\text{CO}_2$ per **difusió** als **alvèols pulmonars** (hematosi).
+- La sang té **plasma** ($55\%$) i elements cel·lulars: **glòbuls vermells** (oxigen), **glòbuls blancs** (defensa) i **plaquetes** (coagulació).
+- Les **artèries** trauen sang del cor; les **venes** porten sang cap al cor (amb vàlvules); els **capil·lars** connecten amb les cèl·lules.
+- La circulació humana és **doble** (pulmonar i general) i **completa** (mai es barreja la sang oxigenada amb la desoxigenada).
+- El grup **$\text{0}^-$** és donant universal i **$\text{AB}^+$** és receptor universal.
+- El **sistema limfàtic** drena líquids, transporta greixos i constitueix una peça clau de les defenses immunitàries.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 2.4 L'Aparell Excretor, Hàbits de Salut i Activitats {#sec2-4}
+
+La digestió, la respiració cel·lular i les reaccions metabòliques produeixen de manera continuada substàncies residuals tòxiques com la urea i l'àcid úric. L'**excreció** és el procés vital encarregat d'eliminar aquests residus de la sang per mantenir l'equilibri intern de l'organisme (homeòstasi).
+
+---
+
+### 1. Concepte d'Excreció: Excreció vs Defecació
+
+> [!WARNING]
+> ### Diferència biològica clau
+> - **Defecació (Egestió):** Expulsió pel tub digestiu de les restes d'aliments que **mai han entrat a la sang ni han estat utilitzats per les cèl·lules** (com la fibra vegetal).
+> - **Excreció:** Eliminació de substàncies tòxiques que **procedeixen de l'activitat metabòlica cel·lular**, que les cèl·lules han abocat a la sang i que han de ser filtrades i expulsades fora del cos.
+
+---
+
+### 2. L'Aparell Urinari Humà
+
+L'aparell urinari és el principal responsable de filtrar la sang i generar l'orina. Està format pels **dos ronyons** i les **vies urinàries**.
+
+```
+Sang bruta (Artèria renal) ➔ Ronyons [Filtratge a les Nefrones] ➔ Sang neta (Vena renal)
+                                 │
+                               Orina
+                                 ▼
+                              Urèters
+                                 ▼
+                          Bufeta urinària
+                                 ▼
+                              Uretra ➔ Exterior (Micció)
+```
+
+#### A) Els Ronyons
+- Dues estructures de color rogenc fosc amb forma de fesol d'uns 10 a 12 cm de longitud, situades a la part posterior de l'abdomen a banda i banda de la columna vertebral.
+- A cada ronyó es distingeixen tres capes:
+  1. **Escorça renal:** Capa exterior d'aspecte granular on s'allotgen els glomèruls de les nefrones.
+  2. **Medul·la renal:** Zona intermèdia formada per estructures triangulars anomenades **piràmides renals**.
+  3. **Pelvis renal:** Embut central que arreplega l'orina formada i la condueix cap a l'urèter.
+
+#### B) La Nefrona: Unitat Funcional del Ronyó
+Cada ronyó humà conté més d'**un milió de nefrones**, diminuts tubs microscòpics que actuen com a filtres d'alta precisió:
+
+1. **Glomèrul de Malpighi i Càpsula de Bowman:** Un cabdell de capil·lars sanguinis envoltat per una càpsula en forma de copa.
+2. **Túbuls Renals:** Un conducte replegat dividit en el túbul contort proximal, la **nansa de Henle** i el túbul contort distal, que desemboca en un tub col·lector comú.
+
+```
+Fases de formació de l'orina a la nefrona:
+1. FILTRACIÓ (Glomèrul)     ➔ L'aigua i xicotetes molècules passen de la sang a la càpsula.
+2. REABSORCIÓ (Túbuls)      ➔ El 99% de l'aigua i substàncies útils (glucosa) tornen a la sang.
+3. EXCRECIÓ (Tub col·lector)➔ S'obté l'orina concentrada final (aigua, sals, urea).
+```
+
+- **Filtració Glomerular:** La sang arriba a gran pressió per l'artèria renal. A l'interior del glomèrul, gran part del líquid del plasma (aigua, glucosa, sals minerals, urea) es filtra cap a l'interior de la càpsula de Bowman. Les cèl·lules sanguínies i les grans proteïnes no poden passar.
+- **Reabsorció Tubular:** A mesura que el líquid filtrat avança pels túbuls, el cos **recupera el $99\%$ de l'aigua i pràcticament el $100\%$ dels nutrients útils** (glucosa, aminoàcids) retornant-los als capil·lars sanguinis veïns.
+- **Orina Final:** Les substàncies residuals no desitjades (urea, àcid úric i excés de sals) queden a l'interior del conducte amb una xicoteta quantitat d'aigua formant l'**orina** (aproximadament $1{,}5$ litres al dia).
+
+---
+
+#### C) Les Vies Urinàries
+1. **Urèters:** Dos conductes d'uns 25 cm que transporten l'orina des de la pelvis de cada ronyó fins a la bufeta mitjançant peristaltisme.
+2. **Bufeta Urinària:** Bossa muscular i elàstica capaç d'emmagatzemar fins a 500-800 ml d'orina. Quan acumula uns 250-300 ml, els seus receptors de pressió envien un senyal al cervell provocant el reflex de la **micció**.
+3. **Uretra:** Conducte que condueix l'orina des de la bufeta fins a l'exterior. En les dones fa uns 4 cm i s'obre en la vulva; en els homes fa uns 20 cm i recorre l'interior del penis, servint també de via d'eixida per al semen.
+
+---
+
+### 3. Altres Òrgans Excretors del Cos Humà
+
+A més de l'aparell urinari, altres òrgans col·laboren en la depuració:
+- **Glàndules Sudorípares (a la pell):** Produeixen la **suor** (aigua, sals minerals i restes d'urea). A més de funció excretora secundària, té una funció primordial de **termoregulació**: refredar el cos en evaporar-se sobre la pell quan fa calor.
+- **Pulmons:** Expulsen contínuament el gas tòxic **$\text{CO}_2$** i vapor d'aigua generats en la combustió de la glucosa.
+- **Fetge:** Elimina fàrmacs, toxines i pigments biliars (com la bilirubina, que dóna el color marró característic a les femtes).
+
+---
+
+### 4. Malalties de l'Aparell Excretor i Tractaments
+
+| Malaltia | Símptomes i Causes | Tractament i Prevenció |
+| :--- | :--- | :--- |
+| **Cistitis (Infecció d'Orina)** | Inflamació de la bufeta causada pel bacteri *Escherichia coli*. Provoca coïssor intensa en orinar, ganes freqüents d'anar al lavabo i orina tèrbola. Més freqüent en dones per tindre una uretra més curta. | Tractament amb antibiòtics prescrits pel metge. Beure molta aigua diàriament i bona higiene íntima. |
+| **Càlculs Renals (Pedres)** | Cristalls minerals (com l'oxalat de calci) que sedimenten i formen pedres a l'interior dels ronyons o vies urinàries. Bloquegen el pas de l'orina provocant un dolor agut insuportable anomenat **còlic nefrític**. | Hidratació abundant, analgèsics, ultrasons per trencar els càlculs (litotrícia) o cirurgia en casos greus. |
+| **Incontinència Urinària** | Pèrdua involuntària del control de l'esfínter de la bufeta. | Exercicis de reforç del sòl pelvià, hàbits miccionals i tractament mèdic. |
+| **Insuficiència Renal** | Incapacitat dels dos ronyons per a filtrar i netejar la sang de toxines. Si no es tracta és mortal en pocs dies. | **Hemodiàlisi:** La sang del pacient passa a través d'una màquina (ronyó artificial) tres vegades per setmana per depurar-la. En fase crònica irreversible, **trasplantament de ronyó**. |
+
+---
+
+### 5. Decàleg d'Hàbits Saludables per a la Nutrició
+
+Per a cuidar de manera integral els quatre aparells (digestiu, respiratori, circulatori i excretor):
+
+1. **Beure suficient aigua:** Consumir entre $1{,}5$ i 2 litres d'aigua al dia per facilitar el filtratge renal i la digestió.
+2. **Dieta equilibrada:** Rica en fruites, verdures i fibra (prevé restrenyiment i colesterol), moderant els sucres refinats i els greixos saturats.
+3. **No abusar de la sal:** L'excés de sodi eleva la tensió arterial i sobrecarrega els ronyons.
+4. **Mastegar a poc a poc:** Facilita la insalivació i redueix el treball mecànic de l'estómac.
+5. **No fumar:** El tabac destrueix els alvèols pulmonars, provoca càncer i multiplica el risc d'infart cardíac.
+6. **Exercici físic regular:** Enforteix el múscul del cor, oxigena els teixits i manté a ratlla la glucosa.
+7. **Bona higiene bucodental:** Rentar-se les dents després de cada àpat per evitar càries i infeccions bacterianes.
+8. **No aguantar-se la micció:** Buidar la bufeta quan es tenen ganes per evitar la proliferació de bacteris a les vies urinàries.
+
+---
+
+### 📝 Butlletí d'Activitats i Avaluació
+
+#### Activitats de Comprensió i Relació
+
+1. **Relaciona cadascun dels quatre aparells de la nutrició amb la seua funció bàsica:**
+   - a) Aparell digestiu
+   - b) Aparell respiratori
+   - c) Aparell circulatori
+   - d) Aparell excretor  
+   *(Opcions: Transport de substàncies / Captació d'$O_2$ / Transformació d'aliments / Depuració de sang i eliminació d'urea).*
+
+2. **Diferencia entre:**
+   - a) Bol alimentari, quim i quil.
+   - b) Artèria i vena.
+   - c) Donant universal i receptor universal de sang.
+   - d) Excreció i defecació.
+
+3. **Indica si les següents afirmacions són Vertaderes (V) o Falses (F):**
+   - a) La sang rica en diòxid de carboni és de color blau a l'interior dels vasos sanguinis.
+   - b) La nefrona és la unitat funcional del ronyó on es produeix l'orina.
+   - c) Una persona amb grup sanguini $0^-$ pot rebre sang de qualsevol persona.
+   - d) La bilis la produeix el fetge i ajuda a emulsionar els greixos al duodè.
+
+---
+
+#### Qüestionari d'Autoavaluació Tipus Test
+
+**1. On té lloc la major part de l'absorció dels nutrients cap a la sang?**
+- A) A l'estómac
+- B) A l'intestí prim (duodè i jejú)
+- C) A l'intestí gros
+- D) A l'esòfag
+
+**2. Quin vas sanguini transporta sang oxigenada des del cor cap a tot el cos?**
+- A) L'artèria aorta
+- B) L'artèria pulmonar
+- C) La vena cava superior
+- D) La vena porta
+
+**3. Què succeeix a la nefrona durant la fase de reabsorció?**
+- A) Es fabriquen noves cèl·lules sanguínies
+- B) El $99\%$ de l'aigua i substàncies útils filtrades tornen cap a la sang
+- C) S'expulsa directament l'orina cap a l'exterior
+- D) Es trenquen les proteïnes en aminoàcids
+
+**4. Una persona amb sang del grup A+ necessita una transfusió urgent. Quina sang pot rebre amb seguretat?**
+- A) Només de B+ o AB+
+- B) De qualsevol persona perquè és receptor universal
+- C) De persones dels grups A+, A-, 0+ o 0-
+- D) Només de 0-
+
+---
+
+#### Cas Pràctic d'Aplicació
+
+> **Cas d'estudi: Anàlisi clínica d'urgència**
+> 
+> Un metge analitza els resultats d'una anàlisi d'orina d'un pacient adult. En el resultat s'observa:
+> - Volum d'orina: $1{,}6\text{ L/dia}$ (Normal)
+> - Color: Groc clar transparent (Normal)
+> - Glucosa en orina: $180\text{ mg/dL}$ (Anormal, no hauria d'aparèixer glucosa en orina).
+> 
+> **Preguntes a resoldre:**
+> 1. En quina fase de la nefrona s'hauria d'haver recuperat tota la glucosa per tornar-la a la sang?
+> 2. Quin òrgan de l'aparell digestiu secreta l'hormona encarregada de regular la glucosa en sang, i com es diu aquesta hormona?
+> 3. Quina malaltia crònica és molt probable que pateixi aquest pacient?
 
 ---
 
 > [!TIP]
-> Per a consultar el contingut detallat de cada tema, accedeix als apartats mitjançant el menú de navegació lateral o els enllaços de l'índex superior.
+> ### 🔬 Continua amb els Reptes Pràctics de Laboratori
+> Les pràctiques experimentals de la unitat (càlcul de la **Taxa Metabòlica Basal - TMB**, mesura de la **freqüència cardíaca i tensió arterial amb el tensiòmetre**, auditoria de sucres en etiquetes i compatibilitat sanguínia) es troben al següent apartat:  
+> 👉 [**2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0205.html)
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
 
 ---
 
-## 📌 2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec2-5}
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+Aquest quadern recull les activitats aplicades de càlcul biomètric, nutrició i els reptes pràctics experimentals de laboratori corresponents a la **Unitat 2: Organització de la Matèria i la Nutrició Humana**.
+
+---
+
+### 🔬 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 #### Exercici 1: Càlcul de la taxa metabòlica basal (TMB) i balanç calòric
 La nutrició cel·lular requereix energia per mantindre les funcions vitals (respiració, batecs del cor, filtració renal). La fórmula simplificada de l'Organització Mundial de la Salut (OMS) per estimar la **Taxa Metabòlica Basal (TMB)** en joves de 10 a 18 anys és:
@@ -206,6 +757,8 @@ $$\text{TMB (Noies)} = (12{,}2 \cdot m) + 746 \quad (\text{kcal/dia})$$
    - Proteïnes: $15\%$
    Calcula quantes quilocalories han de provindre de cadascun d'aquests tres grups per a l'alumne de $64\text{ kg}$.
 
+---
+
 #### Exercici 2: Hemodinàmica cardíaca i volum de sang bombat
 El cor humà funciona com una bomba impel·lent doble. En cada batec sistòlic, el ventricle esquerre impulsa un volum mitjà de sang conegut com a **volum sistòlic** ($V_s \approx 70\text{ mL} = 0{,}07\text{ L}$).
 El **Cabal Cardíac ($Q_c$)** és el volum total de sang expulsat per minut:
@@ -215,6 +768,8 @@ $$Q_c = V_s \cdot FC \quad (\text{en L/min})$$
 1. Calcula el cabal cardíac per minut d'una persona adulta en repòs amb una freqüència de $72\text{ bpm}$.
 2. Quants litres de sang bombeja el cor d'aquesta persona al llarg d'una hora? I al llarg d'un dia complet de 24 hores?
 3. Durant una sessió d'exercici intens, la freqüència cardíaca s'eleva a $150\text{ bpm}$ i el volum sistòlic augmenta a $90\text{ mL}$. Quin és el nou cabal cardíac en $\text{L/min}$? Quantes vegades s'ha multiplicat el volum d'oxigen i nutrients enviat als músculs?
+
+---
 
 #### Exercici 3: Balanç hídric i filtració glomerular de la nefrona
 Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sanguini que surt del cor.
@@ -229,7 +784,7 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+### 🧪 Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
 #### Repte 1: Mesura i monitoratge de la freqüència cardíaca i tensió arterial
 - **Objectiu:** Registrar les constants vitals cardiovasculars en repòs i avaluar la resposta fisiològica a l'esforç físic.
@@ -242,6 +797,8 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
   5. Realitza 25 flexions o salts en el lloc durant 1 minut i torna a mesurar immediatament la FC.
   6. Cronometra quants minuts triga el pols a tornar al valor inicial de repòs (**temps de recuperació cardíaca**).
 
+---
+
 #### Repte 2: Auditoria nutricional d'etiquetes i control de sucres ocults
 - **Objectiu:** Desxifrar la informació nutricional d'aliments industrials ultraprocessats i contrastar-la amb els límits saludables de l'OMS.
 - **Materials:** 2 envasos reals de productes comercials (per exemple, una llauna de refresc de cola de $330\text{ mL}$ i un paquet de galetes o brioixeria) i bàscula de precisió o terrons de sucre.
@@ -252,6 +809,8 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
      $$\text{Sucre total (g)} = \frac{\text{Sucre per 100 g} \cdot \text{Massa de la ració (g)}}{100}$$
   4. L'OMS recomana no superar els **$25\text{ grams}$ de sucres afegits al dia** en adolescents. Quin percentatge d'aquest límit diari cobreix una sola llauna de refresc?
   5. Pesa en la bàscula els grams equivalents en sucre blanc o compta els terrons (1 terró $\approx 4\text{ grams}$) per visualitzar la quantitat real ingerida.
+
+---
 
 #### Repte 3: Determinació de compatibilitat sanguínia en el sistema AB0 i Rh
 - **Objectiu:** Resoldre situacions clíniques d'urgència transfusional aplicant les regles d'aglutinació d'antígens i anticossos.
@@ -268,7 +827,7 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+### 📊 Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 #### Llista de comprovació per a l'alumnat
 - [ ] He calculat la despesa energètica basal (TMB) i el repartiment calòric de macronutrients.
@@ -287,3 +846,9 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 | **Fisiologia renal i nefrona** | Explica detalladament la filtració i el 99% de reabsorció tubular a la nefrona i calcula volums d'orina. | Comprèn la funció depuradora del ronyó i calcula el volum d'orina normal. | Reconeix que el ronyó filtra la sang però confon excreció amb defecació. | Desconeix la unitat funcional de la nefrona i el procés d'eliminació de toxines. |
 | **Mesura de constants i hàbits saludables** | Mesura el pols radial i tensió amb precisió, analitza etiquetes de sucres i proposa hàbits preventius. | Registra la freqüència cardíaca i analitza etiquetes d'aliments de forma correcta. | Pren el pols amb dificultat i identifica els sucres d'una etiqueta sense calcular la ració. | Incapaç de localitzar el pols arterial o interpretar una etiqueta nutricional bàsica. |
 | **Compatibilitat de grups sanguinis (AB0/Rh)** | Justifica amb claredat la relació antigen-anticòs en transfusions i resol els casos clínics d'urgència sense error. | Identifica correctament el donant universal $0^-$ i receptor universal $AB^+$ en els casos pràctics. | Reconeix els quatre grups sanguinis bàsics però dubta en la compatibilitat del factor Rh. | Confon grups sanguinis o recomana transfusions incompatibles amb risc per a la vida. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

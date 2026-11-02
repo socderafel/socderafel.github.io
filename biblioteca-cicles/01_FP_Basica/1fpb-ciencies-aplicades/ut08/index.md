@@ -99,105 +99,331 @@ next_label: "UD9 La Hidrosfera Terrestre ➡️"
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**8.1 L'Atmosfera Terrestre: Origen i Composició de l'Aire**](#81-latmosfera-terrestre-origen-i-composició-de-laire)
-2. [**8.2 Les Capes de l'Atmosfera: De la Troposfera a l'Exosfera**](#82-les-capes-de-latmosfera-de-la-troposfera-a-lexosfera)
-3. [**8.3 Fonaments de Meteorologia: Pressió, Vent i Precipitacions**](#83-fonaments-de-meteorologia-pressió-vent-i-precipitacions)
-4. [**8.4 Contaminació Atmosfèrica, Canvi Climàtic i Sensòrica Ambiental**](#84-contaminació-atmosfèrica-canvi-climàtic-i-sensòrica-ambiental)
-5. [**8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#85-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec8-1"><strong>8.1 L'Atmosfera Terrestre: Origen i Composició de l'Aire</strong></a></li>
+    <li><a href="#sec8-2"><strong>8.2 Les Capes de l'Atmosfera: De la Troposfera a l'Exosfera</strong></a></li>
+    <li><a href="#sec8-3"><strong>8.3 Fonaments de Meteorologia: Pressió, Vent i Precipitacions</strong></a></li>
+    <li><a href="#sec8-4"><strong>8.4 Contaminació Atmosfèrica, Canvi Climàtic i Activitats</strong></a></li>
+    <li><a href="#sec8-5"><strong>8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 8.1 L'Atmosfera Terrestre: Origen i Composició de l'Aire
+## 📌 8.1 L'Atmosfera Terrestre: Origen i Composició de l'Aire {#sec8-1}
 
-L'atmosfera és l'embolcall gasós que envolta la Terra, retingut per la força d'atracció gravitatòria. Té un gruix aproximat d'uns $1.000\text{ km}$, tot i que el $99\%$ de tota la seua massa es concentra en els primers $30\text{ km}$ més pròxims a la superfície.
+L'**atmosfera** és la capa gasosa que envolta la Terra, retinguda per l'acció de la gravetat. Sense aquesta envoltura protectora, el nostre planeta seria un erm inert i glaçat castigat per les radiacions solars, amb un cel negre com el de la Lluna.
 
-### Origen i Evolució Geològica:
-- **Atmosfera Primitiva:** Formada per l'emissió massiva de gasos volcànics (vapor d'aigua $\text{H}_2\text{O}$, diòxid de carboni $\text{CO}_2$, metà $\text{CH}_4$ i amoníac $\text{NH}_3$). Mancava totalment d'oxigen lliure.
-- **La Gran Oxidació:** Fa uns $2.500\text{ milions d'anys}$, l'aparició dels primers bacteris fotosintètics (cianobacteris) als oceans va començar a alliberar $\text{O}_2$, transformant radicalment l'aire i permetent l'aparició de la respiració cel·lular i de la capa d'ozó.
+---
 
-### Composició de l'Aire Sec i Pur:
+### 1. Origen i Evolució de l'Atmosfera
 
-| Component Gasós | Símbol Químic | Percentatge en Volum | Funció i Característica Principal |
+L'atmosfera no ha tingut sempre la mateixa composició:
+
+1. **Atmosfera Primigènia (fa 4.500 milions d'anys):** Quan la Terra es va formar, l'activitat volcànica extrema va alliberar vapor d'aigua ($\text{H}_2\text{O}$), diòxid de carboni ($\text{CO}_2$), nitrogen ($\text{N}_2$), metà ($\text{CH}_4$) i amoníac ($\text{NH}_3$). **No hi havia oxigen lliure**.
+2. **La Gran Oxidació (fa 2.500 milions d'anys):** L'aparició en els oceans primitius dels primers bacteris fotosintètics (cianobacteris) va començar a alliberar quantitats massives d'**oxigen ($\text{O}_2$)** com a producte residual de la fotosíntesi.
+3. **Formació de l'Ozó:** L'acumulació d'oxigen a les capes altes va permetre la formació de la **capa d'ozó ($\text{O}_3$)**, que va protegir la superfície terrestre dels raigs ultraviolats letals i va fer possible la colonització de la terra ferma per plantes i animals.
+
+---
+
+### 2. Composició de l'Aire Pur i Sec
+
+L'**aire** és una barreja homogènia de diversos gasos que no es veuen ni fan olor. En les capes baixes de l'atmosfera, la seua composició mitjana és:
+
+| Gas | Fórmula Química | Percentatge en Volum | Importància Biològica i Ambiental |
 | :--- | :---: | :---: | :--- |
-| **Nitrogen** | $\text{N}_2$ | **$78{,}08\%$** | Gas inert que dilueix l'oxigen evitant combustions espontànies; essencial per a proteïnes. |
-| **Oxigen** | $\text{O}_2$ | **$20{,}95\%$** | Comburent vital per a la respiració cel·lular aeròbica dels éssers vius. |
-| **Argó** | $\text{Ar}$ | **$0{,}93\%$** | Gas noble procedent de la desintegració radioactiva del potassi-40. |
-| **Diòxid de carboni**| $\text{CO}_2$ | **$0{,}04\%$** ($420\text{ ppm}$) | Imprescindible per a la fotosíntesi vegetal i principal gas d'efecte hivernacle. |
-| **Vapor d'aigua** | $\text{H}_2\text{O}$ | Variable ($0\text{ a }4\%$) | Responsable dels núvols, la humitat relativa i les precipitacions. |
+| **Nitrogen** | $\text{N}_2$ | **$78{,}08\%$** | És el gas més abundant. Actua com a diluent inerte de l'oxigen. Els bacteris del sòl el fixen per a fabricar proteïnes i ADN en plantes i animals. |
+| **Oxigen** | $\text{O}_2$ | **$20{,}95\%$ ($\approx 21\%$)** | Imprescindible per a la **respiració cel·lular** de la majoria d'éssers vius (aeròbics) i per a la combustió. |
+| **Argó** | $\text{Ar}$ | **$0{,}93\%$** | Gas noble completament inerte. |
+| **Diòxid de Carboni** | $\text{CO}_2$ | **$0{,}04\%$** | Vital per a la **fotosíntesi** vegetal i responsable directe de l'**efecte d'hivernacle natural** que manté calenta la Terra. |
+| **Vapor d'Aigua** | $\text{H}_2\text{O}$ | Variable ($0 - 4\%$) | Origina els núvols, les precipitacions i reté la calor solar. |
+| **Ozó** | $\text{O}_3$ | Vestigis | Escut protector contra la radiació ultraviolada solar. |
 
 ---
 
-## 📌 8.2 Les Capes de l'Atmosfera: De la Troposfera a l'Exosfera
+### 3. Per Què és Vital l'Atmosfera per a la Vida?
 
-L'atmosfera es divideix en cinc capes concèntriques segons la variació vertical de la temperatura (gradient tèrmic):
+1. **Aporta els gasos essencials:** Proporciona l'oxigen que respirem els animals i el diòxid de carboni que necessiten les plantes.
+2. **Filtre de radiacions perilloses:** Els gasos de les capes altes absorbeixen els raigs X, gamma i ultraviolats procedents del Sol abans que arriben a tocar terra.
+3. **Escut protector contra meteoroides:** La fricció amb l'aire incinera diàriament tones de fragments de roca còsmica (creant estels fugaços) abans que puguen impactar a la superfície.
+4. **Regulació de la temperatura (Efecte Hivernacle Natural):** Reté part de la calor que la Terra emet a l'espai, evitant nits gèlides de $-100\text{ }^\circ\text{C}$ i dies abrasadors de $+100\text{ }^\circ\text{C}$.
+5. **Permet el cicle de l'aigua i el clima:** Transporta la humitat des dels oceans cap a l'interior dels continents en forma de núvols i pluja.
 
-```text
-Alçada (km)
-  ↑
->500 km  ─── EXOSFERA ──────── Satèl·lits geoestacionaris, molècules escapen a l'espai
-         ─── Termopausa ──────
-80-500   ─── TERMOSFERA ────── Aurores polars, ionització d'ones de ràdio (>1.000 °C)
-         ─── Mesopausa ───────
-50-80    ─── MESOSFERA ─────── Desintegració de meteors (estels fugaços) (-90 °C)
-         ─── Estratopausa ────
-12-50    ─── ESTRATOSFERA ──── Capa d'Ozó (O₃) que absorbeix raigs UV
-         ─── Tropopausa ──────
- 0-12    ─── TROPOSFERA ────── 80% de la massa d'aire, núvols, pluges, vida (T baixa amb h)
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 8.2 Les Capes de l'Atmosfera: De la Troposfera a l'Exosfera {#sec8-2}
+
+L'atmosfera no és una massa de gas uniforme: a mesura que pugem en altura, la densitat de l'aire i la pressió disminueixen ràpidament. Atenent a com varia la **temperatura amb l'altitud**, distingim cinc capes principals:
+
+```
+  Altitud (km)
+     500 km + ────────────────────── EXOSFERA (Frontera amb l'espai exterior)
+              ▲
+      80 km + ────────────────────── TERMOSFERA / IONOSFERA (Aurores polars, >1.000 ºC)
+              ▲
+      50 km + ────────────────────── MESOSFERA (La més freda: -90 ºC, estels fugaços)
+              ▲
+      12 km + ────────────────────── ESTRATOSFERA (Capa d'ozó O₃, calma sense núvols)
+              ▲
+       0 km + ────────────────────── TROPOSFERA (On vivim: núvols, pluja, aire)
 ```
 
-1. **Troposfera ($0\text{ a }12\text{ km}$):** És la capa en contacte amb la superfície. La temperatura descendeix progressivament a raó de **$0{,}65\text{ °C}$ per cada $100\text{ m}$ d'ascens** (gradient vertical típic) fins a assolir $-55\text{ °C}$ a la tropopausa. S'hi concentren pràcticament tot el vapor d'aigua i els fenòmens meteorològics.
-2. **Estratosfera ($12\text{ a }50\text{ km}$):** L'aire és molt calmat i sec (hi volen els avions comercials). Conté l'**ozonosfera** entre els $20$ i $30\text{ km}$, on les molècules d'ozó ($\text{O}_3$) absorbeixen la radiació ultraviolada solar escalfant la capa fins a vora $0\text{ °C}$.
-3. **Mesosfera ($50\text{ a }80\text{ km}$):** La densitat de l'aire és extremadament baixa i la temperatura cau en picat fins als **$-90\text{ °C}$** (la zona més gèlida). En aquesta capa la fricció atmosfèrica frena i incinera els petits meteoroides que entren a la Terra.
-4. **Termosfera o Ionosfera ($80\text{ a }500\text{ km}$):** Els raigs X i gamma solars ionitzen els àtoms generant plasma a temperatures superiors a $1.000\text{ °C}$. Aquesta capa reflecteix les ones electromagnètiques de ràdio d'alta freqüència (HF) permetent comunicacions més enllà de l'horitzó visual, i hi tenen lloc les aurores boreals i australs.
-5. **Exosfera ($>500\text{ km}$):** Zona de transició gradual cap al buit interplanetari, on la gravetat és tan feble que àtoms lleugers com l'hidrogen i l'heli s'escapen a l'espai exterior.
+![Capes de l'atmosfera terrestre](../img/capes_de_atmosfera.jpg)
+*Figura 8.1: Distribució en altitud de les cinc capes de l'atmosfera terrestre: **(1)** Troposfera (vida, fenòmens meteorològics i navegació aèria), **(2)** Estratosfera (capa d'ozó $\text{O}_3$ absorbent de raigs UV), **(3)** Mesosfera (desintegració de meteoroides i estels fugaços), **(4)** Termosfera / Ionosfera (aurores boreals i satèl·lits artificials), **(5)** Exosfera (transició cap a l'espai exterior).*
 
 ---
 
-## 📌 8.3 Fonaments de Meteorologia: Pressió, Vent i Precipitacions
+### 1. La Troposfera ($0 - 12\text{ km}$)
 
-### Pressió Atmosfèrica i Isòbares
-La **pressió atmosfèrica** és el pes de la columna d'aire exercit per unitat de superfície. Al nivell del mar i a $0\text{ °C}$, equival a:
-$$P_0 = 1\text{ atm} = 760\text{ mmHg} = 1.013{,}25\text{ hPa} \text{ (o mbar)}$$
-
-- **Isòbares:** Línies que uneixen punts de la mateixa pressió atmosfèrica en un mapa meteorològic sinòptic.
-- **Anticiclons (A o H):** Centres d'alta pressió ($P > 1.013\text{ hPa}$). L'aire fred i dens descendeix (*subsidiència*), impedint la formació de núvols. Produeixen **temps estable, sec, seré i sense precipitacions**.
-- **Borrasques o Depressions (B o L):** Centres de baixa pressió ($P < 1.013\text{ hPa}$). L'aire calent i menys dens ascendeix (*convecció*), es refreda i condensa el seu vapor creant **nuvolositat abundant, pluja i tempestes**.
-
-### Gènesi del Vent
-El vent és l'aire en moviment causat per les diferències de pressió (*gradient de pressió*). L'aire **es desplaça sempre des dels anticiclons (altes pressions) cap a les borrasques (baixes pressions)**. Com més juntes estiguen les línies isòbares en el mapa, major és la diferència de pressió i major serà la velocitat del vent.
-
-### Instruments de Mesura Meteorològica:
-
-| Variable Física | Unitat de Mesura | Instrument Clàssic | Sensor Digital / Electrònic |
-| :--- | :--- | :--- | :--- |
-| **Temperatura** | Graus Celsius ($^\circ\text{C}$) | Termòmetre de mercuri/alcohol | Sensor de resistència NTC / DHT22 |
-| **Pressió Atmosfèrica**| Hectopascals ($\text{hPa}$) | Baròmetre d'aneroide | Sensor piezoresistiu BMP280 |
-| **Humitat Relativa** | Percentatge ($\%$) | Higròmetre de cabell | Sensor capacitiu DHT22 / SHT31 |
-| **Velocitat del Vent**| Metres per segon ($\text{m/s}$) o $\text{km/h}$ | Anemòmetre de cassoletes | Anemòmetre òptic / ultrasònic |
-| **Direcció del Vent** | Punts cardinals (N, S, E, O) | Penell mecànic | Penell amb potenciòmetre angular |
-| **Precipitació** | Litres per metre quadrat ($\text{l/m}^2$ o $\text{mm}$) | Pluviòmetre de proveta | Pluviòmetre digital de balancí |
+- **La capa de la vida:** És la capa més baixa, en contacte directe amb el sòl i els oceans. Concentra el **$80\%$ de tot el pes de l'aire** i pràcticament el **$100\%$ del vapor d'aigua** de la Terra.
+- **Fenòmens meteorològics:** Tots els canvis de temps que coneixem (núvols, pluges, tempestes, boira, vent i neu) ocorren exclusivament en aquesta capa.
+- **Comportament de la temperatura:** A mesura que pugem en altura fa més fred: la temperatura **baixa aproximadament $6{,}5\text{ }^\circ\text{C}$ per cada quilòmetre** d'ascens, arribant fins a uns **$-55\text{ }^\circ\text{C}$** al sostre de la troposfera (on volen els avions de línia comercial per estalviar combustible evitant tempestes).
 
 ---
 
-## 📌 8.4 Contaminació Atmosfèrica, Canvi Climàtic i Sensòrica Ambiental
+### 2. L'Estratosfera ($12 - 50\text{ km}$)
 
-1. **L'Efecte Hivernacle:**
-   - *Natural:* Fenomen beneficiós pel qual gasos com el vapor d'aigua i el $\text{CO}_2$ retenen part de la radiació infraroja emesa per la Terra, mantenint el planeta a $+15\text{ °C}$ en lloc dels $-18\text{ °C}$ que hi hauria sense atmosfera.
-   - *Antròpic (Escalfament Global):* L'excés d'emissions procedents de la crema de carbó, petroli i gas natural ha disparat la concentració de $\text{CO}_2$ de $280\text{ ppm}$ (preindustrial) a més de $420\text{ ppm}$, provocant l'augment global de temperatures, fosa de glaceres i episodis climàtics extrems.
-2. **Pluja Àcida:**
-   - La combustió industrial allibera òxids de sofre ($\text{SO}_2$) i de nitrogen ($\text{NO}_x$), que reaccionen amb el vapor d'aigua formant àcid sulfúric ($\text{H}_2\text{SO}_4$) i nítric ($\text{HNO}_3$), acidificant aigües i sòls.
-3. **Condicionament Ambiental de Centres de Dades (CPD):**
-   - Els equips electrònics són extremadament sensibles a la temperatura i la humitat de l'aire. La normativa tècnica internacional **ASHRAE** recomana mantenir les sales de servidors entre **$18\text{ °C}$ i $27\text{ °C}$**, i una **humitat relativa entre el $40\%$ i el $60\%$** per evitar descàrregues electroestàtiques (aire massa sec) o condensació d'aigua i curtcircuits (aire massa humit).
+- **Ambient tranquil:** L'aire s'hi mou en corrents horitzontals sense turbulències verticals ni núvols d'aigua.
+- **La Capa d'Ozó ($\text{O}_3$):** Entre els $20$ i els $30\text{ km}$ d'altitud se situa la màxima concentració d'ozó (l'ozonosfera). L'ozó absorbeix la perillosa radiació ultraviolada (UV) del Sol evitant que desseque i danye el material genètic dels éssers vius a terra.
+- **Temperatura:** Com que l'ozó capta directament l'energia del Sol, en aquesta capa la temperatura **puja a mesura que ascendim**, fins a assolir aproximadament els $0\text{ }^\circ\text{C}$.
 
 ---
 
-## 📌 8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+### 3. La Mesosfera ($50 - 80\text{ km}$)
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+- **La capa més gèlida:** La densitat de l'aire és ja molt baixa i la temperatura cau en picat a mesura que pugem, arribant fins a **$-90\text{ }^\circ\text{C}$ o $-100\text{ }^\circ\text{C}$ sota zero**.
+- **Escut contra meteoroides:** Quan xicotetes partícules de pols i roques espacials entren a la mesosfera a desenes de milers de quilòmetres per hora, la fricció amb els gasos les incinera per complet, creant els **estels fugaços** que veiem a la nit.
 
-#### Exercici 1: Gradient tèrmic vertical en la troposfera
+---
+
+### 4. La Termosfera o Ionosfera ($80 - 500\text{ km}$)
+
+- **Aire ionitzat i temperatures extremes:** Els gasos residuals absorbeixen els raigs gamma i raigs X solars d'alta energia, provocant que les temperatures superen els **$1.000\text{ }^\circ\text{C}$**.
+- **Telecomunicacions:** Les partícules de gas tenen càrrega elèctrica (ions), la qual cosa permet reflectir les ones de ràdio i emetre senyals de telecomunicacions d'un continent a un altre.
+- **Aurores Polars:** Les partícules carregades del vent solar canalitzades pel camp magnètic terrestre xoquen contra la ionosfera generant cortines de llum fluorescent de colors verds i vermells (aurora boreal al nord i austral al sud).
+
+---
+
+### 5. L'Exosfera ($> 500\text{ km}$)
+
+- És la capa externa que es difumina gradualment amb el buit de l'espai exterior.
+- Les partícules de gas (principalment hidrogen i heli) estan tan separades que amb prou feines col·lideixen entre si.
+- En aquesta regió orbiten la majoria dels satèl·lits artificials meteorològics i de comunicacions, així com l'**Estació Espacial Internacional (ISS)** a uns $400-420\text{ km}$ d'alçada.
+
+---
+
+### 💡 Resum de les Capes
+
+| Capa | Altitud | Temperatura | Fet Clau |
+| :--- | :---: | :---: | :--- |
+| **Troposfera** | $0 - 12\text{ km}$ | Baixa fins a $-55\text{ }^\circ\text{C}$ | Vida i fenòmens del temps (pluja, núvols). |
+| **Estratosfera**| $12 - 50\text{ km}$ | Puja fins a $0\text{ }^\circ\text{C}$ | **Capa d'ozó** (protecció contra radiació UV). |
+| **Mesosfera** | $50 - 80\text{ km}$ | Baixa fins a $-90\text{ }^\circ\text{C}$ | La més freda; s'hi desintegren els **estels fugaços**. |
+| **Termosfera** | $80 - 500\text{ km}$| Puja a $>1.000\text{ }^\circ\text{C}$| **Aurores polars** i reflex de telecomunicacions. |
+| **Exosfera** | $> 500\text{ km}$ | Variable | Trànsit a l'espai; satèl·lits artificials. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 8.3 Fonaments de Meteorologia: Pressió, Vent i Precipitacions {#sec8-3}
+
+La **meteorologia** és la ciència que estudia l'estat de l'atmosfera i els fenòmens que hi ocorren per poder predir el temps que farà demà o els propers dies.
+
+---
+
+### 1. Temps Atmosfèric vs Clima
+
+És molt important no confondre aquests dos conceptes:
+- **Temps Atmosfèric:** És l'estat de l'atmosfera en un **lloc i moment determinats** (per exemple: *"Hui a València està núvol i plou a $14\text{ }^\circ\text{C}$"*). Canvia d'un dia per l'altre o fins i tot en qüestió d'hores.
+- **Clima:** És el **patró mitjà del temps** observat en una regió al llarg d'un període llarg (com a mínim **30 anys**). Per exemple: *"El clima mediterrani es caracteritza per estius calorosos i secs i hiverns suaus"*.
+
+---
+
+### 2. Variables Meteorològiques i Aparells de Mesura
+
+| Variable | Què mesura? | Aparell de Mesura | Unitat habitual |
+| :--- | :--- | :--- | :---: |
+| **Temperatura** | Grau de calor de l'aire | **Termòmetre** | Graus Celsius ($^\circ\text{C}$) |
+| **Humitat** | Quantitat de vapor d'aigua a l'aire | **Higròmetre** | Tant per cent ($\%$) |
+| **Pressió Atmosfèrica** | Pes de l'aire sobre el terra | **Baròmetre** | Hectopascals ($\text{hPa}$) o mil·libars |
+| **Precipitació** | Aigua caiguda de la pluja | **Pluviòmetre** | $\text{L/m}^2$ o mil·límetres ($\text{mm}$) |
+| **Velocitat del Vent** | Rapidesa amb què es mou l'aire | **Anemòmetre** | $\text{km/h}$ o $\text{m/s}$ |
+| **Direcció del Vent** | D'on bufa el vent | **Penell** (o màniga) | Punts cardinals (N, S, E, O) |
+
+---
+
+### 3. La Pressió Atmosfèrica: Baròmetres i Isòbares
+
+L'aire pesa: una columna d'aire d'$1\text{ metre quadrat}$ de base que va des del nivell del mar fins al límit de l'atmosfera pesa aproximadament **10 tones**! La força que aquest pes exerceix sobre la superfície s'anomena **pressió atmosfèrica**.
+
+- La pressió atmosfèrica mitjana al nivell del mar és de **$1.013\text{ hPa}$** (hectopascals).
+- A mesura que pugem a una muntanya, la pressió baixa perquè tenim menys quantitat d'aire a sobre nostre.
+
+#### Mapes del Temps: Anticiclons i Borrasques
+En els mapes de previsió meteorològica, les línies que uneixen punts amb la mateixa pressió atmosfèrica s'anomenen **isòbares**:
+
+```
+           ANTICICLÓ (A)                             BORRASCA (B)
+        (Alta Pressió > 1013 hPa)               (Baixa Pressió < 1013 hPa)
+        L'aire descendeix i s'asseca            L'aire calent puja i es refreda
+                 │                                       │
+                 ▼                                       ▼
+        Temps ESTABLE i ASSELELLAT              Temps INESTABLE, NÚVOLS i PLUJA
+```
+
+- **Anticicló (A o H):** Centres d'alta pressió ($> 1.013\text{ hPa}$). L'aire fred i pesant baixa cap a terra impedint que es formen núvols. Produeix temps **estable, seré i assolellat** (sense pluja), tant a l'estiu com a l'hivern.
+- **Borrasca o Depressió (B o L):** Centres de baixa pressió ($< 1.013\text{ hPa}$). L'aire càlid i humit ascendeix lliurement. En pujar, es refreda, el vapor d'aigua es condensa formant núvols espessos, provocant **temps inestable, cels coberts, tempestes i vents forts**.
+
+---
+
+### 4. Com Es Forma el Vent?
+
+> [!IMPORTANT]
+> El **vent** és el moviment d'una massa d'aire que es desplaça en sentit horitzontal per la superfície terrestre.
+> El vent bufa sempre des de les zones d'**alta pressió (anticiclons)** cap a les zones de **baixa pressió (borrasques)** per a omplir el buit d'aire deixat per la borrasca. Com més properes estiguen les línies isòbares en un mapa, més ràpid i fort bufarà el vent.
+
+---
+
+### 5. Els Núvols i les Precipitacions
+
+Quan l'aire humit ascendeix i es refreda, el vapor d'aigua es condensa en milions de gotetes diminutes d'aigua líquida o petits cristalls de gel suspesos en l'aire al voltant de motes microscòpiques de pols (anomenades *nuclis de condensació*), formant els **núvols**.
+
+#### Principals Famílies de Núvols
+- **Cirrus:** Núvols molt alts (a més de $8.000\text{ m}$), fins i desfets amb aspecte de plomall de cotó o filaments de seda, formats íntegrament per cristalls de gel.
+- **Cúmuls:** Núvols blancs de desenvolupament vertical, inflats com bales de cotó, típics de dies assolellats de bon temps.
+- **Estrats:** Capes baixes i grises que cobreixen uniformement el cel com una manta, deixant sovint plugim fi o boira.
+- **Cumulonimbes:** Gegantins núvols de tempesta foscos amb forma d'enclusa, que arriben des de la base de la troposfera fins a la tropopausa, provocant xàfecs torrencials, llamps, trons i calamarsa.
+
+#### Tipus de Precipitacions
+Quan les gotetes dels núvols creixen fins a no poder ser sostingudes pels corrents d'aire, cauen per gravetat:
+- **Pluja:** Precipitació líquida de gotes d'aigua quan la temperatura de l'aire és superior a $0\text{ }^\circ\text{C}$.
+- **Neu:** Precipitació sòlida de flocs de cristalls de gel que ocorre quan la temperatura de l'atmosfera és igual o inferior a $0\text{ }^\circ\text{C}$.
+- **Calamarsa:** Boles dures de gel sòlid compacte formades en forts corrents ascendents dins de cumulonimbes a l'estiu.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 8.4 Contaminació Atmosfèrica, Canvi Climàtic i Activitats {#sec8-4}
+
+L'activitat humana, especialment des de la Revolució Industrial amb la crema massiva de carbó, petroli i gas natural, ha alterat significativament la composició natural de l'aire, posant en risc la salut dels ecosistemes i el futur del planeta.
+
+---
+
+### 1. Els Grans Problemes Ambientals de l'Atmosfera
+
+#### A) L'Increment de l'Efecte d'Hivernacle i l'Escalfament Global
+L'**efecte d'hivernacle natural** és un mecanisme beneficiós: sense gasos com el $\text{CO}_2$ i el vapor d'aigua, la temperatura mitjana de la Terra seria de **$-18\text{ }^\circ\text{C}$** i els oceans estarien completament congelats.
+
+El greu problema actual és l'**efecte d'hivernacle antropogènic (artificial)**:
+- La combustió de petroli als cotxes, carbó a les centrals elèctriques i la desforestació han fet créixer la concentració de $\text{CO}_2$ i metà ($\text{CH}_4$) a nivells mai vistos en milions d'anys.
+- Aquest excés de gasos actua com un vidre més gruixut que reté massa calor radiada per la Terra, provocant un ràpid **escalfament global**.
+- **Conseqüències:** Desglaç dels casquets polars i glaceres de muntanya, pujada del nivell del mar (amenaçant ciutats costaneres), augment de sequeres extremes, onades de calor severes i tempestes torrencials més devastadores (episodis de DANA).
+
+---
+
+#### B) La Destrucció de la Capa d'Ozó
+- **Causa:** L'emissió durant dècades de gasos artificials anomenats **CFC (clorofluorocarburs)**, que s'utilitzaven en esprais aerosols, aires condicionats i circuits de frigorífics.
+- **Mecanisme:** Els CFC arriben a l'estratosfera, on la llum solar allibera àtoms de clor que destrueixen milers de molècules d'ozó ($\text{O}_3$), creant un aprimament perillós anomenat popularment el "forat d'ozó" sobre l'Antàrtida.
+- **Un cas d'èxit ambiental:** En 1987 es va signar el **Protocol de Mont-real**, que va prohibir l'ús de CFCs a tot el món. Gràcies a aquest acord internacional, la capa d'ozó ha frenat la seua destrucció i s'està regenerant progressivament.
+
+---
+
+#### C) La Pluja Àcida
+- **Causa:** Les centrals tèrmiques i els motors dièsel alliberen diòxid de sofre ($\text{SO}_2$) i òxids de nitrogen ($\text{NO}_x$).
+- En contacte amb el vapor d'aigua dels núvols, aquests gasos es transformen en **àcid sulfúric** i **àcid nítric**.
+- En ploure, aquesta aigua àcida crema les fulles dels boscos, fa inhabitables rius i llacs per als peixos i desgasta monuments i edificis històrics de pedra calcària (fenomen conegut com a *mal de la pedra*).
+
+---
+
+#### D) El Boirum o Smog Urbà
+A les grans ciutats, durant els períodes d'anticicló a l'hivern (quan no plou ni bufa vent), els fums dels tubs d'escapament dels vehicles i calefaccions queden atrapats formant una boira fosca i irritant rica en sutge i micropartícules fines ($\text{PM}_{2{,}5}$ i $\text{PM}_{10}$), provocant atacs d'asma, al·lèrgies i afeccions respiratòries greus.
+
+---
+
+### 2. Què Podem Fer per Protegir l'Aire?
+
+1. **Apostar per energies netes i renovables:** Substituir el carbó i el petroli per energia solar fotovoltaica, eòlica i geotèrmica.
+2. **Fomentar la mobilitat sostenible:** Desplaçar-se a peu, en bicicleta o en transport públic col·lectiu (tren, metro, autobús elèctric) en lloc del vehicle privat.
+3. **Eficiència energètica a la llar:** Utilitzar bombetes LED, aïllar portes i finestres i moderar l'ús de calefacció a l'hivern i aire condicionat a l'estiu.
+4. **Protegir i plantar boscos:** Els arbres són els "pulmons de la Terra", capturant tones de $\text{CO}_2$ atmosfèric i alliberant oxigen pur.
+
+---
+
+### 📝 Butlletí d'Activitats d'Avaluació
+
+#### Activitats de Relació i Raonament
+
+1. **Per què és incorrecte dir que l'efecte d'hivernacle és un fenomen exclusivament dolent i perjudicial?**
+
+2. **Relaciona cada problema ambiental amb el gas o causa corresponent:**
+   - a) Forat de la capa d'ozó $\longrightarrow$
+   - b) Pluja àcida $\longrightarrow$
+   - c) Escalfament global $\longrightarrow$
+
+---
+
+#### Qüestionari d'Autoavaluació Tipus Test
+
+**1. Quin és el gas més abundant de l'aire que respirem?**
+- A) L'oxigen ($21\%$)
+- B) El nitrogen ($78\%$)
+- C) El diòxid de carboni ($50\%$)
+- D) L'ozó ($10\%$)
+
+**2. A quina capa de l'atmosfera tenen lloc tots els fenòmens meteorològics com la pluja i el vent?**
+- A) A l'estratosfera
+- B) A la troposfera
+- C) A la mesosfera
+- D) A la termosfera
+
+**3. En un mapa meteorològic, un anticicló (alta pressió) sol anar associat a:**
+- A) Pluges intenses i tempestes amb llamps
+- B) Temps estable, seré i assolellat
+- C) Vents huracanats de gran velocitat
+- D) Nevades abundants
+
+**4. Quin acord internacional va aconseguir frenar la destrucció de la capa d'ozó prohibint els gasos CFC?**
+- A) El Protocol de Mont-real
+- B) L'Acord de Kyoto
+- C) La Cimera de París
+- D) El Tractat d'Apol·lo
+
+---
+
+> [!TIP]
+> **Següent pas:** Continua amb el [**8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0805.html) per resoldre els càlculs de gradient tèrmic vertical, petjada de carboni en servidors, sensòrica IoT (BMP280/DHT22) i interpretació de mapes d'isòbares.
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec8-5}
+
+Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, reptes de sensòrica ambiental i climatització de servidors (CPD), així com la rúbrica d'avaluació competencial per a la **Unitat 8: L'Atmosfera Terrestre**.
+
+---
+
+### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+##### Exercici 1: Gradient tèrmic vertical en la troposfera
 El gradient tèrmic vertical mitjà en la troposfera és de $\Gamma = 0{,}65\text{ °C per cada } 100\text{ metres}$ d'altitud (equivalent a $6{,}5\text{ °C/km}$):
 $$T(h) = T_0 - \left(\frac{h}{100} \cdot 0{,}65\right)$$
 1. En un dia de primavera, la ciutat de València situada a nivell del mar ($h_0 = 0\text{ m}$) registra una temperatura ambiental de $T_0 = +21\text{ °C}$.
@@ -205,7 +431,7 @@ $$T(h) = T_0 - \left(\frac{h}{100} \cdot 0{,}65\right)$$
    - Calcula la temperatura de l'aire a l'altitud de creuer d'un avió comercial que vola a $h = 10.500\text{ metres}$ sobre la Comunitat Valenciana.
 2. Si un globus sonda meteorològic mesura a nivell de terra $+18\text{ °C}$ i durant el seu ascens detecta una temperatura de $-34\text{ °C}$, a quina altitud exacta es troba l'aparell?
 
-#### Exercici 2: Pressió atmosfèrica, experiment de Torricelli i conversió d'unitats
+##### Exercici 2: Pressió atmosfèrica, experiment de Torricelli i conversió d'unitats
 L'experiment històric d'Evangelista Torricelli (1643) va demostrar que la pressió atmosfèrica equilibra exactament una columna de mercuri d'una alçada $h = 760\text{ mm}$:
 $$P = \rho_{\text{Hg}} \cdot g \cdot h$$
 Prenent la densitat del mercuri $\rho_{\text{Hg}} = 13.550\text{ kg/m}^3$ i la gravetat $g = 9{,}8\text{ m/s}^2$:
@@ -214,7 +440,7 @@ Prenent la densitat del mercuri $\rho_{\text{Hg}} = 13.550\text{ kg/m}^3$ i la g
 2. Converteix el valor calculat a hectopascals ($\text{hPa}$, recordant que $1\text{ hPa} = 100\text{ Pa}$) i a barres ($1\text{ bar} = 100.000\text{ Pa}$).
 3. Si en lloc de mercuri s'haguera utilitzat aigua dolça líquida ($\rho_{\text{aigua}} = 1.000\text{ kg/m}^3$), quina alçada hauria de tenir el tub de vidre per equilibrar la mateixa pressió atmosfèrica?
 
-#### Exercici 3: Càlcul d'emissions de $\text{CO}_2$ i petjada de carboni en servidors
+##### Exercici 3: Càlcul d'emissions de $\text{CO}_2$ i petjada de carboni en servidors
 Un servidor de base de dades consumeix una potència elèctrica mitjana continuada de $350\text{ W}$ durant les $24\text{ hores}$ del dia, els $365\text{ dies}$ de l'any:
 1. Calcula l'energia elèctrica anual total consumida pel servidor en quilowatts-hora ($\text{kWh}$):
    $$E_{\text{anual}} = \frac{350\text{ W} \cdot 24\text{ h} \cdot 365\text{ dies}}{1.000}$$
@@ -223,9 +449,9 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Muntatge i lectura de sensòrica ambiental en taller
+##### Repte 1: Muntatge i lectura de sensòrica ambiental en taller
 - **Objectiu:** Configurar i calibrar una microestació meteorològica digital per a monitoratge ambiental d'aules i laboratoris.
 - **Situació:** En el taller de muntatge es connecta un microcontrolador (Arduino / ESP32) a dos sensors ambientals:
   - Sensor A: **BMP280** (mesura pressió atmosfèrica i temperatura via bus $\text{I}^2\text{C}$).
@@ -236,7 +462,7 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
   3. Dibuixa l'esquema de connexió dels 4 pins del sensor $\text{I}^2\text{C}$ (VCC a 3.3V, GND a massa, SDA per a dades i SCL per a senyal de rellotge).
   4. Redacta les línies essencials d'un script que envie una alerta acústica si la temperatura ambiental del taller supera els $35\text{ °C}$.
 
-#### Repte 2: Condicionament higrotèrmic en sales de servidors (CPD)
+##### Repte 2: Condicionament higrotèrmic en sales de servidors (CPD)
 - **Objectiu:** Aplicar conceptes de temperatura, humitat i punt de rosada al manteniment d'infraestructures de maquinari.
 - **Situació:** A la sala de servidors d'un institut s'instal·la un sistema d'aire condicionat de precisió. La normativa tècnica ASHRAE TC 9.9 estableix les següents condicions òptimes:
   - Temperatura de l'aire: $18\text{ °C}$ a $27\text{ °C}$.
@@ -246,7 +472,7 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
   2. Què és el **punt de rosada** i per què una humitat relativa superior al $75\%$ en una sala refrigerada pot provocar condensació d'aigua líquida sobre els circuits impresos provocant curtcircuits fatals?
   3. Explica el concepte de configuració de **passadís fred / passadís calent** en un CPD per maximitzar l'eficiència tèrmica i l'estalvi d'energia.
 
-#### Repte 3: Interpretació d'un mapa d'isòbares i predicció de fronts
+##### Repte 3: Interpretació d'un mapa d'isòbares i predicció de fronts
 - **Objectiu:** Desxifrar un mapa meteorològic sinòptic oficial per predir el temps i planificar treballs tècnics d'antenes exteriors.
 - **Situació:** Un equip de tècnics de telecomunicacions ha de pujar a la teulada de l'edifici per orientar una antena parabòlica. Abans de pujar, consulten el mapa meteorològic de superfície de l'AEMET:
   - Al nord de la península s'observa una borrasca profunda centrada amb una isòbara interior de $992\text{ hPa}$.
@@ -261,9 +487,9 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He explicat la composició química de l'aire net identificant el nitrogen (78%) i l'oxigen (21%) com a gasos majoritaris.
 - [ ] He descrit les 5 capes de l'atmosfera (troposfera, estratosfera, mesosfera, termosfera i exosfera) i el paper de la capa d'ozó.
 - [ ] He calculat la variació de temperatura en alçada utilitzant el gradient tèrmic vertical de la troposfera.
@@ -272,7 +498,7 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
 - [ ] He associat instruments i sensors electrònics (BMP280, DHT22) amb les seues magnituds meteorològiques corresponents.
 - [ ] He valorat l'efecte de la temperatura i la humitat relativa en el funcionament i seguretat de sales de servidors (ASHRAE).
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -281,3 +507,9 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
 | **Dinàmica meteorològica (A vs B i vents)** | Interpreta mapes d'isòbares, dedueix la intensitat del vent pel gradient de pressió i preveu el temps amb precisió. | Distingeix anticiclons i borrasques i comprèn que el vent va d'altes a baixes pressions. | Reconeix que les borrasques porten pluja però s'embolica amb la direcció del vent. | Incapaç d'interpretar un mapa d'isòbares o creu que el vent va de la pluja cap al sol. |
 | **Càlcul físic i baromètric** | Calcula gradients tèrmics d'alçada, conversions de pressió (Pa, hPa, mmHg) i petjada de carboni de forma impecable. | Aplica la fórmula del gradient tèrmic i converteix unitats de pressió correctament amb suport. | Fa càlculs senzills de temperatura però li costa convertir unitats de pressió o emissions. | No comprèn el concepte físic de pressió atmosfèrica ni sap operar amb unitats bàsiques. |
 | **Sensòrica aplicada i protecció de CPD** | Analitza paràmetres ASHRAE per a servidors, descriu sensors I²C (BMP280/DHT22) i valora riscos d'humitat i ESD. | Identifica la necessitat de control tèrmic a sales de servidors i coneix els sensors bàsics. | Comprèn que els ordinadors necessiten fred però ignora els perills d'humitat alta o baixa. | Desconeix com afecta la humitat als equips electrònics o confon condensació amb evaporació. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---

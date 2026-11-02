@@ -94,70 +94,476 @@ Benvingut/da a la **Unitat Didàctica 3** del bloc de Matemàtiques de Ciències
 
 ---
 
-## 📑 Índex d'Apartats de la Unitat
+## 📑 Índex d'Apartats de la Unitat {#index-unitat}
 
-1. [**3.1 El Conjunt dels Nombres Enters i Contextos Reals**](#31-el-conjunt-dels-nombres-enters-i-contextos-reals)
-2. [**3.2 Suma i Resta de Nombres Enters**](#32-suma-i-resta-de-nombres-enters)
-3. [**3.3 Multiplicació, Divisió i Jerarquia d'Operacions**](#33-multiplicació-divisió-i-jerarquia-doperacions)
-4. [**3.4 Potències de Nombres Enters i Arrels Quadrades**](#34-potències-de-nombres-enters-i-arrels-quadrades)
-5. [**3.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#35-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
-
----
-
-## 📌 3.1 El Conjunt dels Nombres Enters i Contextos Reals
-
-Els nombres negatius s'escriuen amb un signe menys ($-$) davant i representen valors que estan per davall d'un punt zero de referència (temperatures sota zero, deutes, plantes subterrànies, altituds sota el nivell del mar i anys abans de Crist).
-
-El conjunt dels **nombres enters** es representa per **$\mathbb{Z}$**:
-$$\mathbb{Z} = \{\dots, -3, -2, -1, 0, +1, +2, +3, \dots\}$$
-
-- **Ordre a la recta numèrica:** Un nombre enter és major que un altre si està més a la dreta a la recta. Qualsevol nombre positiu és major que zero i que qualsevol negatiu. Entre dos negatius, és major el més proper al zero ($-2 > -8$).
-- **Valor absolut ($|a|$):** És la distància que separa el nombre del zero. Sempre és positiu o zero: $|-7| = 7$, $|+7| = 7$.
-- **Nombre oposat ($\text{Op}(a)$):** Té el mateix valor absolut però signe contrari: $\text{Op}(+5) = -5$; $\text{Op}(-9) = +9$.
+<div style="background: var(--code-bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; margin: 1.5rem 0;">
+  <p style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary);">Accés ràpid als apartats complets d'aquesta unitat:</p>
+  <ol style="margin: 0; padding-left: 20px; line-height: 2.1;">
+    <li><a href="#sec3-1"><strong>3.1 El Conjunt dels Nombres Enters i Contextos Reals</strong></a></li>
+    <li><a href="#sec3-2"><strong>3.2 Suma i Resta de Nombres Enters</strong></a></li>
+    <li><a href="#sec3-3"><strong>3.3 Multiplicació, Divisió i Jerarquia d'Operacions</strong></a></li>
+    <li><a href="#sec3-4"><strong>3.4 Potències de Nombres Enters i Arrels Quadrades</strong></a></li>
+    <li><a href="#sec3-5"><strong>3.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori</strong></a></li>
+  </ol>
+</div>
 
 ---
 
-## 📌 3.2 Suma i Resta de Nombres Enters
+## 📌 3.1 El Conjunt dels Nombres Enters i Contextos Reals {#sec3-1}
 
-- **Suma de nombres amb el mateix signe:** Se sumen els seus valors absoluts i es manté el signe comú:
-  $$(+4) + (+6) = +10 \qquad (-3) + (-5) = -8$$
-- **Suma de nombres amb signe diferent:** Es resten els valors absoluts (el gran menys el petit) i es posa el signe del de major valor absolut:
-  $$(+9) + (-4) = +5 \qquad (+3) + (-7) = -4$$
-- **Resta:** Restar equival a sumar l'oposat: $a - b = a + \text{Op}(b)$.
-- **Xoc de signes davant de parèntesis:**
-  $$+(+) \rightarrow + \qquad +(-) \rightarrow - \qquad -(+) \rightarrow - \qquad -(-) \rightarrow +$$
+En la vida quotidiana, els nombres naturals ($\mathbb{N} = \{0, 1, 2, 3, \dots\}$) resulten insuficients per expressar determinades situacions reals. Per exemple, com podem expressar que el termòmetre marca cinc graus sota zero, o que tenim un deute de $20\text{ €}$ al banc? Per a resoldre aquestes necessitats van nàixer els **nombres negatius**.
 
 ---
 
-## 📌 3.3 Multiplicació, Divisió i Jerarquia d'Operacions
+### 1. Els Nombres Negatius en Situacions Reals
 
-La **regla dels signes** s'aplica per a multiplicar i dividir:
-- $(+) \cdot (+) = (+)$ i $(-) \cdot (-) = (+)$ *(mateix signe $\rightarrow$ positiu)*
-- $(+) \cdot (-) = (-)$ i $(-) \cdot (+) = (-)$ *(signe diferent $\rightarrow$ negatiu)*
+Els nombres negatius s'escriuen precedits pel signe menys ($-$) i representen valors que estan per davall d'un punt de referència zero:
 
-### Jerarquia Oficial d'Operacions
+| Context Real | Situació Positiva ($+$) | Punt Zero ($0$) | Situació Negativa ($-$) |
+| :--- | :--- | :--- | :--- |
+| **Temperatura** | Fa calor: $+18\text{ }^\circ\text{C}$ (sobre zero) | Punt de congelació: $0\text{ }^\circ\text{C}$ | Fa gelor: $-5\text{ }^\circ\text{C}$ (5 graus sota zero) |
+| **Economia i diners** | Tinc diners / Ingressos: $+50\text{ €}$ | Sense diners: $0\text{ €}$ | Tinc deutes / Pèrdues: $-20\text{ €}$ |
+| **Altitud i relleu** | Cim d'una muntanya: $+1.500\text{ m}$ | Nivell del mar: $0\text{ m}$ | Submarí o fossa marina: $-120\text{ m}$ |
+| **Plantes d'un edifici** | Pisos alts: Planta $+3$ | Planta baixa: Planta $0$ | Soterranis i pàrquing: Soterrani $-2$ |
+| **Història i cronologia** | Segle XXI dC (després de Crist) | Naixement de Crist: Any $0$ | any $212\text{ aC}$ (abans de Crist: $-212$) |
+
+> [!TIP]
+> Quan un nombre és positiu, podem escriure'l amb el signe més davant o sense cap signe:  
+> $+7$ és exactament el mateix que $7$. En canvi, el signe menys ($-$) **mai no es pot ometre**.
+
+---
+
+### 2. El Conjunt dels Nombres Enters ($\mathbb{Z}$)
+
+El conjunt dels **nombres enters** es representa amb la lletra **$\mathbb{Z}$** (de l'alemany *Zahlen*, nombres) i està format per:
+- Els **nombres enters positius** ($\mathbb{Z}^+$): $+1, +2, +3, +4, \dots$ (que coincideixen amb els naturals $\mathbb{N}$).
+- El **zero** ($0$): ni positiu ni negatiu, és el punt neutre.
+- Els **nombres enters negatius** ($\mathbb{Z}^-$): $-1, -2, -3, -4, \dots$
+
+$$\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, +1, +2, +3, +4, \dots\}$$
+
 ```
-1r [ ( ) ] Parèntesis i claudàtors (de dins cap a fora)
-2n         Potències i arrels quadrades
-3r ·  :    Multiplicacions i divisions (d'esquerra a dreta)
-4t +  -    Sumes i restes
+               ┌── Positius (+1, +2, +3, ...) = Nombres Naturals (ℕ)
+               │
+Nombres Enters ├── Zero (0)
+     (ℤ)       │
+               └── Negatius (-1, -2, -3, ...)
+```
+
+Com si fóra una **nina russa (matrioixka)**, el conjunt dels naturals està totalment contingut dins dels enters: $\mathbb{N} \subset \mathbb{Z}$.
+
+---
+
+### 3. La Recta Numèrica i l'Ordre dels Enters
+
+Els nombres enters es representen ordenadament sobre una recta horitzontal:
+1. Tracem una recta i marquem el punt central **$0$**.
+2. A la **dreta del zero** col·loquem els nombres positius en ordre creixent ($+1, +2, +3, \dots$).
+3. A l'**esquerra del zero** col·loquem els nombres negatius en sentit decreixent ($-1, -2, -3, \dots$).
+
+```
+ ───┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼───
+   -4    -3    -2    -1     0    +1    +2    +3    +4    +5   -->
+   <────── Menors ───────       ─────── Majors ──────>
+```
+
+#### Criteri d'Ordenació
+Un nombre enter és **més gran que un altre** si està situat més a la **dreta** en la recta numèrica:
+- Qualsevol nombre positiu és més gran que el zero: $+4 > 0$.
+- Qualsevol nombre negatiu és més petit que el zero: $-3 < 0$.
+- Qualsevol nombre positiu és més gran que qualsevol negatiu: $+2 > -50$.
+- Entre dos nombres negatius, és **més gran el que està més a prop del zero**:  
+  $$-2 > -7 \quad (\text{perquè } -2 \text{ està més a la dreta que } -7)$$
+
+---
+
+### 4. Valor Absolut i Nombre Oposat
+
+#### A) El Valor Absolut ($|a|$)
+El **valor absolut** d'un nombre enter és la **distància** (en unitats) que el separa del zero a la recta numèrica. S'escriu col·locant el nombre entre dues barres verticals: $|a|$.
+
+Com que és una distància, el valor absolut **sempre és un nombre positiu o zero**:
+- $|+5| = 5$ (està a 5 passos del zero cap a la dreta).
+- $|-5| = 5$ (està a 5 passos del zero cap a l'esquerra).
+- $|0| = 0$
+- $|-14| = 14$
+
+#### B) El Nombre Oposat ($\text{Op}(a)$)
+L'**oposat** d'un nombre enter és un altre nombre enter que té el **mateix valor absolut però signe contrari**. Estan a la mateixa distància del zero però en costats oposats de la recta numèrica:
+- L'oposat de $+6$ és **$-6$**: $\text{Op}(+6) = -6$
+- L'oposat de $-9$ és **$+9$**: $\text{Op}(-9) = +9$
+- L'oposat de $0$ és el propi $0$.
+
+---
+
+### ✏️ Exercicis Pràctics d'Aplicació
+
+1. **Escriu el nombre enter que correspon a cada afirmació:**
+   - a) L'ascensor es troba al tercer soterrani:
+   - b) El submarí navega a $85\text{ m}$ de profunditat:
+   - c) Hem ingressat una nòmina de $1.250\text{ €}$:
+   - d) La temperatura a l'hivern a Terol és de 4 graus sota zero:
+
+2. **Ordena de menor a major ($<$) els següents nombres enters:**
+   $$-6, \quad +3, \quad 0, \quad -11, \quad +8, \quad -1, \quad +5$$
+
+3. **Calcula el valor de les següents expressions:**
+   - a) $|-18| =$
+   - b) $|+25| =$
+   - c) $\text{Op}(-12) =$
+   - d) $\text{Op}(+34) =$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 3.2 Suma i Resta de Nombres Enters {#sec3-2}
+
+Sumar i restar nombres enters és com gestionar una guardiola de diners: els **positius són diners que tenim o guanyem** i els **negatius són diners que devem o gastem**.
+
+---
+
+### 1. La Suma de Nombres Enters
+
+Quan sumem dos nombres enters, ens podem trobar amb dos casos:
+
+#### Cas 1: Nombres amb el Mateix Signe
+Si els dos nombres tenen el mateix signe, **sumem els seus valors absoluts** i posem al resultat el **signe comú**:
+- **Dos positius:** Tinc $5\text{ €}$ i en guanye $3\text{ €}$, en tinc $8\text{ €}$.
+  $$(+5) + (+3) = +8$$
+- **Dos negatius:** Dec $4\text{ €}$ i en gaste altres $6\text{ €}$, dec en total $10\text{ €}$.
+  $$(-4) + (-6) = -10$$
+
+#### Cas 2: Nombres amb Signes Diferents
+Si els dos nombres tenen signes diferents, **restem els seus valors absoluts** (el més gran menys el més petit) i posem el **signe del nombre que té major valor absolut**:
+- Tinc $10\text{ €}$ i en dec $4\text{ €}$, em queden $6\text{ €}$:
+  $$(+10) + (-4) = +6$$
+- Tinc $3\text{ €}$ i en dec $8\text{ €}$, continue devent $5\text{ €}$:
+  $$(+3) + (-8) = -5$$
+- Dec $12\text{ €}$ i en pague $12\text{ €}$, em quede a zero:
+  $$(-12) + (+12) = 0 \quad \text{(La suma de dos nombres oposats sempre és 0)}$$
+
+---
+
+### 2. La Resta de Nombres Enters
+
+> [!IMPORTANT]
+> ### Regla de la Resta
+> **Restar un nombre enter equival a sumar el seu oposat:**
+> $$a - b = a + \text{Op}(b)$$
+
+Vegem alguns exemples:
+- $(+7) - (+2) = (+7) + (-2) = +5$
+- $(+4) - (+9) = (+4) + (-9) = -5$
+- $(-6) - (+3) = (-6) + (-3) = -9$
+- $(+5) - (-8) = (+5) + (+8) = +13$
+
+---
+
+### 3. Supressió de Parèntesis (El "Xoc de Signes")
+
+Quan un signe està just davant d'un parèntesi, podem eliminar el parèntesi seguint aquestes normes:
+
+| Expressió amb parèntesi | Simplificació | Significat intuitiu |
+| :---: | :---: | :--- |
+| **$+(+a)$** | **$+a$** | Afegir un guany és positiu. |
+| **$+(-a)$** | **$-a$** | Afegir un deute és negatiu. |
+| **$-(+a)$** | **$-a$** | Llevar un guany és negatiu. |
+| **$-(-a)$** | **$+a$** | **Llevar un deute equival a guanyar diners!** |
+
+#### Exemples de simplificació directa:
+$$+(-7) = -7$$
+$$-(-15) = +15$$
+$$-(+9) = -9$$
+$$+(+4) = +4$$
+
+---
+
+### 4. Operacions Combinades de Sumes i Restes
+
+Quan tenim una cadena llarga de sumes i restes d'enters, el mètode més net i segur és:
+1. **Llevar tots els parèntesis** aplicant el xoc de signes.
+2. **Agrupar tots els positius** per una banda i **tots els negatius** per l'altra.
+3. Fer la resta final.
+
+#### Exemple resolt pas a pas:
+Calcula el valor de la següent expressió:
+$$(-8) - (-12) + (+5) - (+9) + (-3) - (-7)$$
+
+**Pas 1: Llevem parèntesis:**
+$$-8 + 12 + 5 - 9 - 3 + 7$$
+
+**Pas 2: Agrupem positius i negatius:**
+- Positius: $+12 + 5 + 7 = +24$
+- Negatius: $-8 - 9 - 3 = -20$
+
+**Pas 3: Calculem el resultat final:**
+$$+24 - 20 = \mathbf{+4}$$
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula les següents sumes i restes:**
+   - a) $(+9) + (-15) =$
+   - b) $(-14) + (-6) =$
+   - c) $(+18) - (-7) =$
+   - d) $(-11) - (+14) =$
+
+2. **Resol eliminant parèntesis i agrupant:**
+   - a) $15 - (-4) + (-8) - 6$
+   - b) $-12 + (-3) - (-20) - (+7)$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 3.3 Multiplicació, Divisió i Jerarquia d'Operacions {#sec3-3}
+
+Per multiplicar o dividir nombres enters operem amb els seus valors absoluts tal com fèiem amb els nombres naturals, i després apliquem la **regla dels signes** per determinar el signe del resultat.
+
+---
+
+### 1. La Regla dels Signes
+
+La regla dels signes és idèntica tant per a la **multiplicació** com per a la **divisió**:
+
+| Multiplicació ($\cdot$) | Divisió ($:$) | Regla Mnemotècnica |
+| :---: | :---: | :--- |
+| **$(+) \cdot (+) = (+)$** | **$(+) : (+) = (+)$** | Signes iguals $\rightarrow$ **Positiu ($+$)** |
+| **$(-) \cdot (-) = (+)$** | **$(-) : (-) = (+)$** | Signes iguals $\rightarrow$ **Positiu ($+$)** |
+| **$(+) \cdot (-) = (-)$** | **$(+) : (-) = (-)$** | Signes diferents $\rightarrow$ **Negatiu ($-$)** |
+| **$(-) \cdot (+) = (-)$** | **$(-) : (+) = (-)$** | Signes diferents $\rightarrow$ **Negatiu ($-$)** |
+
+#### Exemples:
+- $(+6) \cdot (+4) = +24$
+- $(-8) \cdot (-3) = +24$
+- $(+5) \cdot (-7) = -35$
+- $(-9) \cdot (+2) = -18$
+- $(+20) : (+5) = +4$
+- $(-36) : (-6) = +6$
+- $(+42) : (-7) = -6$
+- $(-40) : (+8) = -5$
+
+> [!TIP]
+> ### Producte de Múltiples Factors
+> Quan multipliquem tres o més nombres enters, només cal comptar quants signes negatius hi ha:
+> - Si el nombre de factors negatius és **PARELL**, el resultat és **POSITIU ($+$)**:  
+>   $$(-2) \cdot (-3) \cdot (-4) \cdot (-5) = +120 \quad \text{(4 negatius, parell)}$$
+> - Si el nombre de factors negatius és **IMPARELL**, el resultat és **NEGATIU ($-$)**:  
+>   $$(-2) \cdot (-3) \cdot (-4) = -24 \quad \text{(3 negatius, imparell)}$$
+
+---
+
+### 2. La Propietat Distributiva i Factor Comú
+
+La multiplicació compleix la **propietat distributiva** respecte a la suma i la resta:
+
+$$a \cdot (b + c) = a \cdot b + a \cdot c$$
+
+#### Exemple de propietat distributiva:
+$$(-3) \cdot (4 - 7) = (-3) \cdot 4 - (-3) \cdot 7 = -12 - (-21) = -12 + 21 = +9$$
+
+#### Extreure Factor Comú:
+És el procés invers a la propietat distributiva:
+$$(-5) \cdot 6 + (-5) \cdot 4 = (-5) \cdot (6 + 4) = (-5) \cdot 10 = -50$$
+
+---
+
+### 3. Jerarquia Oficial d'Operacions Combinades
+
+Quan una expressió matemàtica combina sumes, restes, multiplicacions, divisions i parèntesis, hem de seguir estrictament aquest ordre:
+
+```
+1r ➔ Parèntesis i Claudàtors [ ( ) ] (sempre de dins cap a fora)
+2n ➔ Potències i Arrels quadrades
+3r ➔ Multiplicacions (·) i Divisions (:) (d'esquerra a dreta)
+4t ➔ Sumes (+) i Restes (-) (d'esquerra a dreta o agrupant)
 ```
 
 ---
 
-## 📌 3.4 Potències de Nombres Enters i Arrels Quadrades
+### 🔍 Exemples Resolts Pas a Pas
 
-- **Base positiva:** Sempre dóna positiu: $(+3)^3 = +27$.
-- **Base negativa:**
-  - Amb **exponent parell** $\rightarrow$ resultat **positiu**: $(-2)^4 = +16$.
-  - Amb **exponent imparell** $\rightarrow$ resultat **negatiu**: $(-2)^3 = -8$.
-- **Propietats essencials:**
-  $$a^m \cdot a^n = a^{m+n} \qquad a^m : a^n = a^{m-n} \qquad (a^m)^n = a^{m \cdot n} \qquad a^0 = 1$$
-- **Arrels quadrades:** $\sqrt{25} = \pm 5$. L'arrel d'un nombre negatiu ($\sqrt{-9}$) **no existeix en $\mathbb{Z}$**.
+#### Exemple 1: Operacions bàsiques combinades
+Calcula:
+$$4 - 2 \cdot 5 + 8 : (-2)$$
+
+**Pas 1: Fem multiplicacions i divisions primer:**
+- $2 \cdot 5 = 10$
+- $8 : (-2) = -4$
+
+L'expressió queda:
+$$4 - 10 + (-4) = 4 - 10 - 4$$
+
+**Pas 2: Fem sumes i restes:**
+$$4 - 14 = \mathbf{-10}$$
 
 ---
 
-## 📌 3.5 Problemes Reals i Aplicació en Contextos Tècnics
+#### Exemple 2: Amb parèntesis i claudàtors
+Calcula:
+$$-36 : [-8 : (-5 + 3) + 12 : (-2 + 2 \cdot 4)]$$
+
+**Pas 1: Resolem els parèntesis més interns:**
+- $(-5 + 3) = -2$
+- $(-2 + 2 \cdot 4) = (-2 + 8) = +6$
+
+Substituïm:
+$$-36 : [-8 : (-2) + 12 : 6]$$
+
+**Pas 2: Resolem les divisions dins del claudàtor:**
+- $-8 : (-2) = +4$
+- $12 : 6 = +2$
+
+Substituïm:
+$$-36 : [4 + 2] = -36 : [6]$$
+
+**Pas 3: Divisió final:**
+$$-36 : 6 = \mathbf{-6}$$
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula aplicant la jerarquia:**
+   - a) $6 - 3 \cdot (-4) + 10 : (-2)$
+   - b) $5 \cdot (-2) - 18 : (-3) + 7$
+
+2. **Resol amb claudàtors:**
+   - a) $14 - 2 \cdot [5 - (-3) \cdot 2]$
+   - b) $[-16 : 4 + 3 \cdot (-2)] \cdot [15 - 3 \cdot 6]$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 3.4 Potències de Nombres Enters i Arrels Quadrades {#sec3-4}
+
+Una **potència** és una forma abreujada d'escriure una multiplicació de factors iguals:
+
+$$a^n = \underbrace{a \cdot a \cdot a \cdot \dots \cdot a}_{n \text{ vegades}}$$
+
+On **$a$** és la **base** (el nombre que es repeteix) i **$n$** és l'**exponent** (el nombre de vegades que es multiplica).
+
+---
+
+### 1. El Signe d'una Potència de Base Entera
+
+Quan la base d'una potència és un nombre enter (positiu o negatiu), el signe del resultat depèn del signe de la base i de si l'exponent és parell o imparell:
+
+| Base | Exponent | Signe del Resultat | Exemple |
+| :---: | :---: | :---: | :--- |
+| **Positiva ($+$)** | Parell | **Positiu ($+$)** | $(+3)^2 = (+3) \cdot (+3) = \mathbf{+9}$ |
+| **Positiva ($+$)** | Imparell | **Positiu ($+$)** | $(+2)^3 = (+2) \cdot (+2) \cdot (+2) = \mathbf{+8}$ |
+| **Negativa ($-$)** | **Parell** | **Positiu ($+$)** | $(-3)^2 = (-3) \cdot (-3) = \mathbf{+9}$ |
+| **Negativa ($-$)** | **Imparell** | **Negatiu ($-$)** | $(-2)^3 = (-2) \cdot (-2) \cdot (-2) = \mathbf{-8}$ |
+
+> [!WARNING]
+> ### Atenció a l'Ús dels Parèntesis!
+> No és el mateix $(-3)^2$ que $-3^2$:
+> - **$(-3)^2$:** El quadrat afecta a tot el nombre amb el signe: $(-3) \cdot (-3) = \mathbf{+9}$.
+> - **$-3^2$:** El quadrat només afecta al nombre 3, el menys està davant: $-(3 \cdot 3) = \mathbf{-9}$.
+
+---
+
+### 2. Propietats de les Potències
+
+Les propietats de les potències permeten simplificar càlculs complexos de forma directa:
+
+#### 1. Exponent Zero i Exponent U
+- Qualsevol nombre enter (diferent de zero) elevat a zero és igual a $1$:
+  $$a^0 = 1 \quad \longrightarrow \quad (-5)^0 = 1, \quad 8^0 = 1$$
+- Qualsevol nombre elevat a $1$ és igual a ell mateix:
+  $$a^1 = a \quad \longrightarrow \quad (-7)^1 = -7$$
+
+#### 2. Producte de Potències de la Mateixa Base
+Es manté la mateixa base i **se sumen els exponents**:
+$$a^m \cdot a^n = a^{m+n}$$
+$$(-4)^3 \cdot (-4)^5 = (-4)^{3+5} = (-4)^8$$
+
+#### 3. Quocient de Potències de la Mateixa Base
+Es manté la base i **es resten els exponents**:
+$$a^m : a^n = \frac{a^m}{a^n} = a^{m-n}$$
+$$(-2)^7 : (-2)^4 = (-2)^{7-4} = (-2)^3 = -8$$
+
+#### 4. Potència d'una Potència
+Es manté la base i **es multipliquen els exponents**:
+$$(a^m)^n = a^{m \cdot n}$$
+$$[(-3)^2]^4 = (-3)^{2 \cdot 4} = (-3)^8$$
+
+#### 5. Potència d'un Producte i d'un Quocient
+L'exponent es distribueix a cadascun dels factors:
+$$(a \cdot b)^n = a^n \cdot b^n \quad \longrightarrow \quad [(-2) \cdot 5]^3 = (-2)^3 \cdot 5^3$$
+$$(a : b)^n = a^n : b^n \quad \longrightarrow \quad [(-12) : 4]^2 = (-12)^2 : 4^2$$
+
+#### 6. Potències d'Exponent Negatiu
+Una potència amb exponent negatiu equival a la inversa de la potència amb exponent positiu:
+$$a^{-n} = \frac{1}{a^n} \quad \longrightarrow \quad 2^{-3} = \frac{1}{2^3} = \frac{1}{8}$$
+
+---
+
+### 3. Les Arrels Quadrades de Nombres Enters
+
+L'**arrel quadrada** és l'operació inversa d'elevar al quadrat:
+
+$$\sqrt{a} = b \iff b^2 = a$$
+
+#### A) Arrels Quadrades Exactes
+Un nombre enter té arrel quadrada exacta si és el quadrat d'un altre nombre enter (quadrat perfecte):
+- $\sqrt{25} = \pm 5$, perquè tant $(+5)^2 = 25$ com $(-5)^2 = 25$.
+- En l'àmbit aritmètic habitual s'utilitza l'arrel positiva: $\sqrt{36} = 6$, $\sqrt{81} = 9$, $\sqrt{100} = 10$.
+
+#### B) Arrel Quadrada de Nombres Negatius
+Què val $\sqrt{-16}$?
+- Cap nombre enter elevat al quadrat pot donar un resultat negatiu: $(+4)^2 = +16$ i $(-4)^2 = +16$.
+- Per tant: **No existeix l'arrel quadrada d'un nombre negatiu dins dels nombres enters $\mathbb{Z}$**.
+
+#### C) Arrel Quadrada Entera i Residu
+Quan un nombre no és un quadrat perfecte, podem calcular la seua **arrel quadrada entera** (el major enter el quadrat del qual és menor que el nombre donat) i el seu **residu**:
+
+$$a = (\text{arrel})^2 + \text{residu}$$
+
+Per exemple, per a calcular $\sqrt{45}$:
+- $6^2 = 36 < 45$
+- $7^2 = 49 > 45$
+- L'arrel quadrada entera és **$6$** i el residu és $45 - 36 = \mathbf{9}$.
+
+---
+
+### ✏️ Exercicis Pràctics
+
+1. **Calcula el valor de les següents potències:**
+   - a) $(-4)^3 =$
+   - b) $(-2)^6 =$
+   - c) $-5^2 =$
+   - d) $(-1)^{99} =$
+
+2. **Expressa com una única potència utilitzant les propietats:**
+   - a) $(-3)^4 \cdot (-3)^2 \cdot (-3) =$
+   - b) $5^9 : 5^4 =$
+   - c) $[(-7)^3]^5 =$
+   - d) $\frac{2^3 \cdot 2^6}{(2^2)^4} =$
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
+
+## 📌 3.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori {#sec3-5}
+
+Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, reptes de taller tecnològic i la rúbrica d'avaluació competencial per a la **Unitat 3: Els Nombres Enters**.
+
+---
+
+### 1. Fonaments d'Aplicació en Contextos Tècnics
 
 Els nombres enters són l'eina matemàtica fonamental per modelar fenòmens físics i situacions professionals que evolucionen en dos sentits oposats al voltant d'un valor de referència o punt zero:
 
@@ -177,11 +583,11 @@ Els nombres enters són l'eina matemàtica fonamental per modelar fenòmens fís
 
 ---
 
-## 📌 3.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+### 2. Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+#### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
-#### Exercici 1: Altimetria, variació tèrmica i distàncies amb valors absoluts
+##### Exercici 1: Altimetria, variació tèrmica i distàncies amb valors absoluts
 1. En una estació meteorològica d'alta muntanya es registren les següents temperatures durant una setmana d'hivern:
    - Dilluns: $-6\text{ °C}$
    - Dimarts: $-9\text{ °C}$
@@ -197,7 +603,7 @@ Els nombres enters són l'eina matemàtica fonamental per modelar fenòmens fís
    - Escriu la distància vertical total que separa ambdós vehicles utilitzant valors absoluts: $|(+185) - (-340)|$.
    - Si el submarí ascendeix $120\text{ m}$, quina serà la seua nova cota numèrica en $\mathbb{Z}$?
 
-#### Exercici 2: Jerarquia d'operacions combinades amb signes d'agrupació i regla de signes
+##### Exercici 2: Jerarquia d'operacions combinades amb signes d'agrupació i regla de signes
 Resol cadascuna de les següents expressions mostrant detalladament cada pas intermedi segons la jerarquia d'operacions i la regla dels signes:
 1. **Expressió A:**
    $$A = -15 + 4 \cdot [(-3) \cdot (-2) - (8 - 12)] - (-18) : (-3)$$
@@ -206,7 +612,7 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 3. **Expressió C:**
    $$C = -36 : [(-2)^2 + (-5) \cdot (-2) - 8] - [(-3)^3 : 9 - (-4)]$$
 
-#### Exercici 3: Potències de base negativa, exponents parells/imparells i arrels
+##### Exercici 3: Potències de base negativa, exponents parells/imparells i arrels
 1. Avalua i compara els següents parells d'expressions prestant atenció a l'ús dels parèntesis:
    - $P_1 = (-3)^4 \quad \text{enfront de} \quad P_2 = -3^4$
    - $P_3 = (-5)^3 \quad \text{enfront de} \quad P_4 = -5^3$
@@ -221,9 +627,9 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+#### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Balanç financer de tresoreria i control de caixes en taller de reparacions
+##### Repte 1: Balanç financer de tresoreria i control de caixes en taller de reparacions
 - **Objectiu:** Utilitzar la suma i resta de nombres enters per gestionar la comptabilitat diària d'un negoci tècnic.
 - **Situació de taller:** El departament tècnic d'un servei de reparació d'ordinadors comença el mes amb un fons inicial de caixa de $+450\text{ €}$. Durant la primera setmana es produeixen els següents moviments:
   - Dia 1: Pagament de llicències de programari per valor de $-180\text{ €}$.
@@ -238,7 +644,7 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
   3. Quin és el saldo final de la caixa en tancar la setmana? Hi ha superàvit o dèficit?
   4. Quina quantitat mínima ha d'ingressar el taller el dilluns següent per restablir el fons de maniobra a $+300\text{ €}$?
 
-#### Repte 2: Gestió automatitzada d'un ascensor muntacàrregues en edifici de servidors
+##### Repte 2: Gestió automatitzada d'un ascensor muntacàrregues en edifici de servidors
 - **Objectiu:** Modelar desplaçaments lineals i calcular el consum energètic associat a partir del valor absolut en $\mathbb{Z}$.
 - **Situació:** En un edifici tecnològic d'alta seguretat es disposa de $6\text{ plantes sobre rasant}$ ($+1$ a $+6$), una planta baixa ($0$) i $4\text{ soterranis}$ ($-1$ a $-4$) on s'ubiquen els sistemes de còpia de seguretat i climatització.
 - **Moviments d'un muntacàrregues al llarg d'una ronda de manteniment:**
@@ -254,7 +660,7 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
   3. Si cada planta té una alçada de $3\text{ metres}$, quants metres verticals totals ha recorregut l'ascensor?
   4. Si el motor consumeix $15\text{ Wh}$ per cada metre vertical desplaçat, quin consum elèctric total en $\text{kWh}$ ha generat la ronda?
 
-#### Repte 3: Monitoratge de temperatures extremes en càmeres climàtiques de testatge
+##### Repte 3: Monitoratge de temperatures extremes en càmeres climàtiques de testatge
 - **Objectiu:** Utilitzar nombres enters per interpretar gràfiques de proves de resistència tèrmica de circuits electrònics.
 - **Situació:** En un laboratori d'assaig de servidors industrials, una placa base se sotmet a un cicle tèrmic extrem en una cambra climàtica seguint aquest protocol:
   - Fase 1 (Repòs): Inicialment a $+20\text{ °C}$.
@@ -269,9 +675,9 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+#### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
-#### Llista de comprovació per a l'alumnat
+##### Llista de comprovació per a l'alumnat
 - [ ] He representat correctament nombres positius i negatius a la recta numèrica identificant l'ordre ($a < b$).
 - [ ] He calculat el valor absolut ($|a|$) i l'oposat ($\text{Op}(a)$) d'un enter sense confondre ambdós conceptes.
 - [ ] He aplicat correctament la regla dels signes en productes i quocients: signes iguals donen positiu, diferents donen negatiu.
@@ -279,7 +685,7 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 - [ ] He calculat potències de base negativa distingint correctament $(-a)^n$ de $-a^n$ segons la paritat de l'exponent.
 - [ ] He modelat situacions reals d'altimetria, saldos econòmics i desplaçaments utilitzant nombres enters.
 
-#### Rúbrica d'avaluació d'aprenentatge
+##### Rúbrica d'avaluació d'aprenentatge
 
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -288,3 +694,9 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 | **Producte, quocient i jerarquia combinada** | Aplica la jerarquia oficial i la regla de signes en expressions complexes amb claudàtors niats de manera impecable. | Resol expressions combinades amb bona aplicació de la jerarquia i xicotets errors en càlculs finals. | Recorda la prioritat de multiplicacions sobre sumes però s'encalla en desfer claudàtors interiors. | Incompleix la jerarquia d'operacions calculant d'esquerra a dreta sense respectar els operadors. |
 | **Potències i arrels en $\mathbb{Z}$** | Distingeix amb claredat $(-a)^n$ de $-a^n$, aplica propietats d'exponents i justifica la inexistència d'arrels negatives en $\mathbb{Z}$. | Calcula potències de base negativa amb exponent parell/imparell i simplifica expressions de la mateixa base. | Calcula potències bàsiques però comet errors en el signe de bases negatives sense parèntesis. | Multiplica la base per l'exponent o afirma erròniament que $\sqrt{-16} = -4$. |
 | **Resolució de problemes aplicats (taller/clima)** | Tradueix enunciats tècnics de tresoreria, ascensors i cicles tèrmics a polinomis aritmètics enters i n'interpreta el resultat. | Planteja i resol problemes de la vida quotidiana i de taller interpretant el sentit físic del resultat. | Resol problemes senzills amb ajuda en la formulació de les operacions o en el conveni de signes. | Incapaç de traduir un enunciat verbal a nombres positius i negatius o d'interpretar el resultat final. |
+
+<div style="text-align: right; margin: 1.5rem 0 2rem 0;">
+  <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
+</div>
+
+---
