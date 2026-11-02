@@ -1,187 +1,287 @@
 {
   "title": "🏷️ Llenguatges de Marques i Sistemes de Gestió d'Informació — 1r DAW / DAM / ASIX · Grau Superior",
   "home": {
-    "label": "🏠 Inici Llenguatges de Marques i Sistemes de Gestió d'Informació",
+    "label": "🏠 Inici Llenguatges de Marques",
     "href": "index.html"
   },
   "units": [
     {
-      "summary": "UD1 — UP01. Introducción a los LLMM",
+      "summary": "UD1 — Introducció als LLMM i XML",
       "items": [
         {
-          "label": "📘 UD1 Completa (1 pàgina)",
+          "label": "📘 UT01 Completa (1 pàgina)",
           "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 CONTENIDO LLMMSGI - UP01- INTRODUCCIÓN A LOS LLMM ...",
+          "label": "1.1 Introducció als llenguatges de marques",
           "href": "./ut01/ut0101.html"
         },
         {
-          "label": "1.2 ENTREGAS",
+          "label": "1.2 Classificació dels llenguatges de marques",
           "href": "./ut01/ut0102.html"
         },
         {
-          "label": "1.3 UP01 - ACTIVITAT 01 (CA1.a-5%)",
+          "label": "1.3 Llenguatges de marques de propòsit general",
           "href": "./ut01/ut0103.html"
         },
         {
-          "label": "1.4 UP01 - ACTIVITAT 02 (CA1.b-5%)",
+          "label": "1.4 Estructura i sintaxi de documents XML",
           "href": "./ut01/ut0104.html"
         },
         {
-          "label": "1.5 UP01 - ACTIVITAT 03 (CA1.c-d-5%)",
+          "label": "1.5 Espais de noms (Namespaces en XML)",
           "href": "./ut01/ut0105.html"
         },
         {
-          "label": "1.6 UP01 - ACTIVITAT 04 (CA1.e-10%)",
+          "label": "1.6 Quadern d'Activitats Pràctiques XML",
           "href": "./ut01/ut0106.html"
-        },
-        {
-          "label": "1.7 UP01 - ACTIVITAT 05 (CA1.f-5%)",
-          "href": "./ut01/ut0107.html"
-        },
-        {
-          "label": "1.8 UP01 - ACTIVITAT 06 (CA1.g-h-10%)",
-          "href": "./ut01/ut0108.html"
-        },
-        {
-          "label": "1.9 UP01 - ACTIVITAT 07 (CA1.i-5%)",
-          "href": "./ut01/ut0109.html"
         }
       ]
     },
     {
-      "summary": "UD2 — UP2.- HTML y Sindicación de Contenidos",
+      "summary": "UD2 — HTML5 i Sindicació de Continguts",
       "items": [
         {
-          "label": "📘 UD2 Completa (1 pàgina)",
+          "label": "📘 UT02 Completa (1 pàgina)",
           "href": "./ut02/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 CONTENIDO LLMMSGI - UP01- INTRODUCCIÓN A LOS LLMM ... (còpia)",
+          "label": "2.1 Història, versions i estructura d'un document HTML5",
           "href": "./ut02/ut0201.html"
         },
         {
-          "label": "2.2 ENTREGAS (còpia)",
+          "label": "2.2 Sintaxi d'etiquetes, atributs i semàntica web",
           "href": "./ut02/ut0202.html"
         },
         {
-          "label": "2.3 UP02 - ACTIVITAT 01 (CA2.a 100%)",
+          "label": "2.3 Elements HTML: Text, llistes, taules i enllaços",
           "href": "./ut02/ut0203.html"
         },
         {
-          "label": "2.4 UP02 - ACTIVITAT 02 (CA2.bch 5%)",
+          "label": "2.4 Formularis web i controls d'entrada de dades",
           "href": "./ut02/ut0204.html"
         },
         {
-          "label": "2.5 UP02 - ACTIVITAT 03 (CA2.d 100%)",
+          "label": "2.5 Elements multimèdia, àudio, vídeo i iframes",
           "href": "./ut02/ut0205.html"
         },
         {
-          "label": "2.6 UP02 - ACTIVITAT 04 (CA2.e 100%)",
+          "label": "2.6 Sindicació de contingut: Canals RSS 2.0 i Atom",
           "href": "./ut02/ut0206.html"
         },
         {
-          "label": "2.7 UP02 - ACTIVITAT 05 (CA2.ij 15%)",
+          "label": "2.7 Eines d'edició i validació W3C",
           "href": "./ut02/ut0207.html"
         },
         {
-          "label": "2.8 UP02 - ACTIVITAT 06 (CA2.ij 15%)",
+          "label": "2.8 Quadern d'Activitats Pràctiques HTML5",
           "href": "./ut02/ut0208.html"
         }
       ]
     },
     {
-      "summary": "UD3 — UP03.- Apariencia y diseño de los documentos web - CSS",
+      "summary": "UD3 — Fulls d'Estil en Cascada (CSS3)",
       "items": [
         {
-          "label": "📘 UD3 Completa (1 pàgina)",
+          "label": "📘 UT03 Completa (1 pàgina)",
           "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 CONTENIDO LLMMSGI - UP01- INTRODUCCIÓN A LOS LLMM ...",
+          "label": "3.1 Introducció a CSS, sintaxi i fulls d'estil",
           "href": "./ut03/ut0301.html"
         },
         {
-          "label": "3.2 ENTREGAS",
+          "label": "3.2 Selectors CSS, pseudoclasses i pseudoelements",
           "href": "./ut03/ut0302.html"
         },
         {
-          "label": "3.3 UP03 - ACTIVITATS (CE2f-CE2g-CE2h 5%)",
+          "label": "3.3 El Model de Caixa (Box Model) i posicionament",
           "href": "./ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 Propietats de color, fons, tipografia i unitats",
+          "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 Maquetació moderna amb Flexbox",
+          "href": "./ut03/ut0305.html"
+        },
+        {
+          "label": "3.6 Maquetació bidimensional amb CSS Grid",
+          "href": "./ut03/ut0306.html"
+        },
+        {
+          "label": "3.7 Disseny web adaptatiu (Responsive Web Design i Media Queries)",
+          "href": "./ut03/ut0307.html"
+        },
+        {
+          "label": "3.8 Quadern d'Activitats i Projectes CSS3",
+          "href": "./ut03/ut0308.html"
         }
       ]
     },
     {
-      "summary": "UD4 — UP04.- Sintaxis de JavaScript",
+      "summary": "UD4 — Fonaments i Sintaxi de JavaScript",
       "items": [
         {
-          "label": "📘 UD4 Completa (1 pàgina)",
+          "label": "📘 UT04 Completa (1 pàgina)",
           "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 CONTENIDO LLMMSGI - UP04- Sintaxis JavaScript",
+          "label": "4.1 Introducció a JavaScript, consola i entorn",
           "href": "./ut04/ut0401.html"
         },
         {
-          "label": "4.2 ENTREGAS",
+          "label": "4.2 Conceptes bàsics, tipus de dades i variables",
           "href": "./ut04/ut0402.html"
         },
         {
-          "label": "4.3 UP04 - ACTIVITATS 1-25 (CE3a-CE3b 5%)",
+          "label": "4.3 Estructures de control de flux i bucles",
           "href": "./ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 Funcions en JavaScript (declaració, expressió i funcions fletxa)",
+          "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 Gestió de nombres i cadenes de text",
+          "href": "./ut04/ut0405.html"
+        },
+        {
+          "label": "4.6 Arrays i mètodes d'iteració (map, filter, reduce)",
+          "href": "./ut04/ut0406.html"
+        },
+        {
+          "label": "4.7 Objectes en JavaScript i format d'intercanvi JSON",
+          "href": "./ut04/ut0407.html"
+        },
+        {
+          "label": "4.8 Quadern de Reptes Pràctics de JavaScript (Activitats 01 a 25)",
+          "href": "./ut04/ut0408.html"
         }
       ]
     },
     {
-      "summary": "UD5 — UP05.- Manipulació de documents web JavaScript - DOM",
+      "summary": "UD5 — Manipulació del DOM i Asincronia",
       "items": [
         {
-          "label": "📘 UD5 Completa (1 pàgina)",
+          "label": "📘 UT05 Completa (1 pàgina)",
           "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 CONTENIDO LLMMSGI - UP05 Manipulació de documents web JavaScript - DOM",
+          "label": "5.1 Introducció al DOM (Document Object Model) i accés a nodes",
           "href": "./ut05/ut0501.html"
         },
         {
-          "label": "5.2 ENTREGAS",
+          "label": "5.2 Modificació de continguts i atributs en el DOM",
           "href": "./ut05/ut0502.html"
         },
         {
-          "label": "5.3 UP05 - ACTIVITATS DOM LOCAL (CE3c-CE3d-CE3e-CE3f 2,5%)",
+          "label": "5.3 Creació i eliminació dinàmica d'elements",
           "href": "./ut05/ut0503.html"
         },
         {
-          "label": "5.4 UP05 - ACTIVITATS DOM DINÁMICO (CE3c-CE3d-CE3e-CE3f 2,5%)",
+          "label": "5.4 Modificació d'estils i classes CSS des de JavaScript",
           "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Programació asíncrona: Callbacks, Promeses, async/await i Fetch API",
+          "href": "./ut05/ut0505.html"
+        },
+        {
+          "label": "5.6 Quadern d'Activitats de Manipulació del DOM (DOM Local i Dinàmic)",
+          "href": "./ut05/ut0506.html"
         }
       ]
     },
     {
-      "summary": "UD6 — UP08.- Sistemas empresariales de gestión de información",
+      "summary": "UD6 — Sistemes Empresarials ERP / CRM / CMS",
       "items": [
         {
-          "label": "📘 UD6 Completa (1 pàgina)",
+          "label": "📘 UT06 Completa (1 pàgina)",
           "href": "./ut06/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 CONTENIDO LLMMSGI - UP04- Sintaxis JavaScript",
+          "label": "6.1 Sistemes empresarials de gestió d'informació",
           "href": "./ut06/ut0601.html"
         },
         {
-          "label": "6.2 ENTREGAS",
+          "label": "6.2 Sistemes ERP i CRM: Odoo, instal·lació i configuració",
           "href": "./ut06/ut0602.html"
         },
         {
-          "label": "6.3 UP08 - ACTIVITAT 801 (CE7a-CE7b-CE7c-CE7d-CE7e-CE7f-CE7g-CE7h-CE7i 100%)",
+          "label": "6.3 Gestors de Continguts Web (CMS): WordPress, mòduls i administració",
           "href": "./ut06/ut0603.html"
+        },
+        {
+          "label": "6.4 Quadern d'Activitats Empresarials (Activitats 901)",
+          "href": "./ut06/ut0604.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — Validació XML (DTD i XSD)",
+      "items": [
+        {
+          "label": "📘 UT07 Completa (1 pàgina)",
+          "href": "./ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Descripció i definició d'estructures de dades",
+          "href": "./ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 Definició de documents mitjançant DTD",
+          "href": "./ut07/ut0702.html"
+        },
+        {
+          "label": "7.3 Esquemes XML (XML Schema / XSD): tipus simples i complexos",
+          "href": "./ut07/ut0703.html"
+        },
+        {
+          "label": "7.4 Validació de documents, eines i casos pràctics",
+          "href": "./ut07/ut0704.html"
+        },
+        {
+          "label": "7.5 Quadern d'Activitats de Validació DTD i XSD",
+          "href": "./ut07/ut0705.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — Transformació i Consulta (XPath, XSLT, XQuery)",
+      "items": [
+        {
+          "label": "📘 UT08 Completa (1 pàgina)",
+          "href": "./ut08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Llenguatges de navegació i localització de dades: sintaxi XPath",
+          "href": "./ut08/ut0801.html"
+        },
+        {
+          "label": "8.2 Transformació de documents mitjançant XSLT",
+          "href": "./ut08/ut0802.html"
+        },
+        {
+          "label": "8.3 Mètodes d'emmagatzematge de la informació i BBDD XML",
+          "href": "./ut08/ut0803.html"
+        },
+        {
+          "label": "8.4 Llenguatges de consulta: sintaxi XQuery",
+          "href": "./ut08/ut0804.html"
+        },
+        {
+          "label": "8.5 Quadern d'Activitats de Transformació i Consulta",
+          "href": "./ut08/ut0805.html"
         }
       ]
     }
