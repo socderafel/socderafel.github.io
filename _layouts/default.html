@@ -38,6 +38,20 @@
       try {
         localStorage.setItem('sidebar-collapsed', isCollapsed ? 'true' : 'false');
       } catch (e) {}
+      updateSidebarBtnState();
+    }
+
+    function updateSidebarBtnState() {
+      const btn = document.getElementById('btn-toggle-sidebar');
+      if (!btn) return;
+      const isCollapsed = document.documentElement.classList.contains('sidebar-collapsed');
+      if (isCollapsed) {
+        btn.innerHTML = '☰ Menú Desplegable';
+        btn.classList.remove('btn-active');
+      } else {
+        btn.innerHTML = '✕ Tancar Menú';
+        btn.classList.add('btn-active');
+      }
     }
 
     function changeFontSize(delta) {
@@ -133,9 +147,7 @@
       position: sticky;
       top: 0;
       z-index: 200;
-      overflow-x: hidden !important;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      overflow: visible;
     }
     .md-header::-webkit-scrollbar {
       display: none;
@@ -151,9 +163,7 @@
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
-      overflow-x: hidden !important;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      overflow: visible;
     }
     .md-header-inner::-webkit-scrollbar {
       display: none;
@@ -197,9 +207,7 @@
       align-items: center;
       gap: 4px;
       flex-wrap: wrap;
-      overflow-x: hidden !important;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+      overflow: visible;
     }
     .md-header-nav::-webkit-scrollbar {
       display: none;
@@ -221,6 +229,114 @@
       color: #ffffff !important;
     }
 
+    /* Menús Desplegables de la Capçalera (Header Dropdowns) */
+    .header-nav-item {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-dropdown-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+    }
+
+    .nav-arrow {
+      font-size: 0.74rem;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+      opacity: 0.85;
+      margin-left: 2px;
+    }
+
+    .header-nav-item:hover .nav-arrow,
+    .header-nav-item.is-open .nav-arrow {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+
+    .header-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 290px;
+      max-width: 360px;
+      max-height: 440px;
+      overflow-y: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      padding: 6px;
+      z-index: 1000;
+      margin-top: 4px;
+    }
+
+    .header-nav-item.dropdown-align-right .header-dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+
+    .header-nav-item:hover .header-dropdown-menu,
+    .header-nav-item:focus-within .header-dropdown-menu,
+    .header-nav-item.is-open .header-dropdown-menu {
+      display: block;
+      animation: headerDropdownAnim 0.18s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes headerDropdownAnim {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dropdown-header {
+      padding: 6px 10px 4px 10px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--primary);
+    }
+
+    .dropdown-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 4px 6px;
+    }
+
+    .header-dropdown-menu a.dropdown-item {
+      display: block !important;
+      padding: 8px 10px !important;
+      color: var(--text-main) !important;
+      font-size: 0.83rem !important;
+      font-weight: 500 !important;
+      border-radius: 6px !important;
+      text-decoration: none !important;
+      transition: background 0.15s ease, color 0.15s ease !important;
+      white-space: normal !important;
+      line-height: 1.35 !important;
+    }
+
+    .header-dropdown-menu a.dropdown-item:hover {
+      background: var(--code-bg) !important;
+      color: var(--primary) !important;
+    }
+
+    .header-dropdown-menu a.dropdown-item.active {
+      background: rgba(37, 99, 235, 0.12) !important;
+      color: var(--primary) !important;
+      font-weight: 700 !important;
+    }
+
     .btn-toggle {
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.25);
@@ -232,10 +348,17 @@
       font-weight: 600;
       white-space: nowrap;
       margin-left: 2px;
+      transition: all 0.15s ease;
     }
 
     .btn-toggle:hover {
       background: rgba(255, 255, 255, 0.24);
+    }
+
+    .btn-toggle.btn-active {
+      background: #10b981;
+      border-color: #10b981;
+      color: #ffffff;
     }
 
     .header-controls {
@@ -370,23 +493,82 @@
       font-size: 0.83rem;
     }
 
-    aside.sidebar details.nav-unit {
-      margin-bottom: 6px;
-      border: 1px solid var(--border);
+    .sidebar-ctrls {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .btn-sidebar-ctrl {
+      flex: 1;
+      padding: 6px 8px;
+      font-size: 0.76rem;
+      font-weight: 600;
       border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg-body);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .btn-sidebar-ctrl:hover {
+      background: var(--code-bg);
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    aside.sidebar details.nav-unit {
+      margin-bottom: 8px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
       overflow: hidden;
       background: var(--bg-body);
+      transition: all 0.2s ease;
     }
 
     aside.sidebar details.nav-unit > summary {
-      padding: 8px 10px;
-      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 12px;
+      font-size: 0.85rem;
       font-weight: 700;
       cursor: pointer;
       color: var(--text-main);
       background: var(--code-bg);
       list-style: none;
       user-select: none;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    aside.sidebar details.nav-unit > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    aside.sidebar details.nav-unit > summary .unit-chevron {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--primary);
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    aside.sidebar details.nav-unit:not([open]) > summary .unit-chevron {
+      transform: rotate(-90deg);
+      color: var(--text-muted);
+    }
+
+    aside.sidebar details.nav-unit > summary:hover {
+      background: var(--border);
+      color: var(--primary);
+    }
+
+    aside.sidebar details.nav-unit[open] > summary {
+      border-bottom: 1px solid var(--border);
     }
 
     aside.sidebar ul {
@@ -1379,10 +1561,87 @@
       </a>
       <nav class="md-header-nav">
         <a href="{{ '/' | relative_url }}">🏠 Inici</a>
-        <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}">🔬 Ciències Aplicades 1</a>
-        <a href="{{ '/programacio/' | relative_url }}">☕ Programació</a>
-        <a href="{{ '/projecte-intermodular/' | relative_url }}">🚀 Projecte Intermodular</a>
-        <a href="{{ '/biblioteca-cicles/' | relative_url }}">📚 Biblioteca Cicles</a>
+
+        <!-- Desplegable Ciències Aplicades 1 -->
+        <div class="header-nav-item has-dropdown">
+          <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}" class="nav-dropdown-trigger">
+            🔬 Ciències Aplicades 1 <span class="nav-arrow">▾</span>
+          </a>
+          <div class="header-dropdown-menu">
+            <div class="dropdown-header">1r FPB · Ciències Aplicades I</div>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}" class="dropdown-item">🏠 Portada del Curs</a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut01/' | relative_url }}" class="dropdown-item">📘 UD1 · Els Nombres Naturals</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut02/' | relative_url }}" class="dropdown-item">📗 UD2 · Matèria Viva i Nutrició</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut03/' | relative_url }}" class="dropdown-item">📙 UD3 · Els Nombres Enters</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut04/' | relative_url }}" class="dropdown-item">🧪 UD4 · La Matèria i els seus Estats</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut05/' | relative_url }}" class="dropdown-item">📊 UD5 · Fraccions i Proporcionalitat</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut06/' | relative_url }}" class="dropdown-item">🌍 UD6 · L'Univers i la Terra</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut07/' | relative_url }}" class="dropdown-item">📐 UD7 · Àlgebra Bàsica</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut08/' | relative_url }}" class="dropdown-item">🌤️ UD8 · Atmosfera i Medi Ambient</a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut09/' | relative_url }}" class="dropdown-item">📈 UD9 · Estadística i Salut Ambiental</a>
+          </div>
+        </div>
+
+        <!-- Desplegable Programació -->
+        <div class="header-nav-item has-dropdown">
+          <a href="{{ '/programacio/' | relative_url }}" class="nav-dropdown-trigger">
+            ☕ Programació <span class="nav-arrow">▾</span>
+          </a>
+          <div class="header-dropdown-menu">
+            <div class="dropdown-header">1r DAM / DAW · Programació</div>
+            <a href="{{ '/programacio/' | relative_url }}" class="dropdown-item">🏠 Portada de Programació</a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/programacio/ut00/' | relative_url }}" class="dropdown-item">💻 UT00 · Introducció a la Informàtica</a>
+            <a href="{{ '/programacio/ut01/' | relative_url }}" class="dropdown-item">☕ UT01 · Fonaments de Java</a>
+            <a href="{{ '/programacio/ut02/' | relative_url }}" class="dropdown-item">🔀 UT02 · Estructures de Control</a>
+            <a href="{{ '/programacio/ut03/' | relative_url }}" class="dropdown-item">🧱 UT03 · Programació Modular</a>
+            <a href="{{ '/programacio/ut04/' | relative_url }}" class="dropdown-item">📦 UT04 · Programació Orientada a Objectes</a>
+            <a href="{{ '/programacio/ut05/' | relative_url }}" class="dropdown-item">📚 UT05 · Arrays i Col·leccions</a>
+            <a href="{{ '/programacio/ut06/' | relative_url }}" class="dropdown-item">⚠️ UT06 · Gestió d'Excepcions</a>
+            <a href="{{ '/programacio/ut07/' | relative_url }}" class="dropdown-item">💾 UT07 · Fitxers i Persistència</a>
+          </div>
+        </div>
+
+        <!-- Desplegable Projecte Intermodular -->
+        <div class="header-nav-item has-dropdown">
+          <a href="{{ '/projecte-intermodular/' | relative_url }}" class="nav-dropdown-trigger">
+            🚀 Projecte Intermodular <span class="nav-arrow">▾</span>
+          </a>
+          <div class="header-dropdown-menu">
+            <div class="dropdown-header">1r DAM · Projecte Intermodular</div>
+            <a href="{{ '/projecte-intermodular/' | relative_url }}" class="dropdown-item">🏠 Portada del Projecte</a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/projecte-intermodular/guia-projecte.html' | relative_url }}" class="dropdown-item">📖 Guia Didàctica i Rúbriques</a>
+            <a href="{{ '/projecte-intermodular/tasques-aules.html' | relative_url }}" class="dropdown-item">📑 Lliuraments i Tasques Aules</a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/projecte-intermodular/up01/' | relative_url }}" class="dropdown-item">🌱 UP01 · Ideació i Proposta de Valor</a>
+            <a href="{{ '/projecte-intermodular/up02/' | relative_url }}" class="dropdown-item">📋 UP02 · Anàlisi de Requisits</a>
+            <a href="{{ '/projecte-intermodular/up03/' | relative_url }}" class="dropdown-item">🎨 UP03 · Disseny UI/UX</a>
+            <a href="{{ '/projecte-intermodular/up04/' | relative_url }}" class="dropdown-item">🗄️ UP04 · Modelatge de Dades</a>
+            <a href="{{ '/projecte-intermodular/up05/' | relative_url }}" class="dropdown-item">⚙️ UP05 · Backend</a>
+            <a href="{{ '/projecte-intermodular/up06/' | relative_url }}" class="dropdown-item">💻 UP06 · Frontend</a>
+            <a href="{{ '/projecte-intermodular/up07/' | relative_url }}" class="dropdown-item">🧪 UP07 · Proves i QA</a>
+            <a href="{{ '/projecte-intermodular/up08/' | relative_url }}" class="dropdown-item">🚀 UP08 · Desplegament i Presentació</a>
+          </div>
+        </div>
+
+        <!-- Desplegable Biblioteca Cicles -->
+        <div class="header-nav-item has-dropdown dropdown-align-right">
+          <a href="{{ '/biblioteca-cicles/' | relative_url }}" class="nav-dropdown-trigger">
+            📚 Biblioteca Cicles <span class="nav-arrow">▾</span>
+          </a>
+          <div class="header-dropdown-menu">
+            <div class="dropdown-header">Recursos per Cicles i Nivells</div>
+            <a href="{{ '/biblioteca-cicles/' | relative_url }}" class="dropdown-item">🏛️ Índex General de Cicles</a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/biblioteca-cicles/#fpb' | relative_url }}" class="dropdown-item">🟢 FP Bàsica (Informàtica d'Oficina)</a>
+            <a href="{{ '/biblioteca-cicles/#gm' | relative_url }}" class="dropdown-item">🔵 Grau Mitjà (SMR)</a>
+            <a href="{{ '/biblioteca-cicles/#gs' | relative_url }}" class="dropdown-item">🟣 Grau Superior (DAM · DAW · ASIR)</a>
+            <a href="{{ '/biblioteca-cicles/#eso-bat' | relative_url }}" class="dropdown-item">🟠 Secundària i Batxillerat</a>
+          </div>
+        </div>
+
         <div class="header-controls">
           <div class="font-zoom-group" title="Ajustar mida del text">
             <button class="btn-zoom" onclick="changeFontSize(-1)" title="Reduir mida de la lletra (A-)">A-</button>
@@ -1401,6 +1660,10 @@
   <div class="layout">
     <aside class="sidebar" id="course-sidebar" data-course-root="{{ page.course_root }}">
       <input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+      <div class="sidebar-ctrls">
+        <button type="button" class="btn-sidebar-ctrl" onclick="toggleAllUnits(true)" title="Desplegar totes les unitats">📂 Desplegar tot</button>
+        <button type="button" class="btn-sidebar-ctrl" onclick="toggleAllUnits(false)" title="Replegar totes les unitats">📁 Replegar tot</button>
+      </div>
       <div id="sidebar-nav-content">Carregant índex del curs...</div>
     </aside>
     <main class="content">
@@ -2256,7 +2519,7 @@
         if (!basePath.endsWith('/') && !basePath.endsWith('.html') && !basePath.endsWith('.md')) {
           basePath += '/';
         }
-        const fetchUrl = new URL(prefix + 'sidebar.json?v=6', window.location.origin + basePath).href;
+        const fetchUrl = new URL(prefix + 'sidebar.json?v=7', window.location.origin + basePath).href;
 
         fetch(fetchUrl, { cache: 'no-store' })
           .then(r => {
@@ -2285,8 +2548,8 @@
                 const cls = [item.class || '', isItemActive ? 'active' : ''].filter(Boolean).join(' ');
                 itemsHtml += '<li><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a></li>';
               });
-              const openAttr = (root === '.' || unitActive) ? ' open' : '';
-              html += '<details class="nav-unit"' + openAttr + '><summary>' + unit.summary + '</summary><ul>' + itemsHtml + '</ul></details>';
+              const openAttr = unitActive ? ' open' : (root === '.' && unit.summary.startsWith('UD1') ? ' open' : '');
+              html += '<details class="nav-unit"' + openAttr + '><summary><span class="unit-title">' + unit.summary + '</span><span class="unit-chevron">▾</span></summary><ul>' + itemsHtml + '</ul></details>';
             });
             if (data.footer && data.footer.length) {
               html += '<ul>';
@@ -2311,6 +2574,42 @@
                 '</div>';
             }
           });
+      }
+
+      // Funcions per al menú desplegable d'unitats del curs
+      window.toggleAllUnits = function(openState) {
+        document.querySelectorAll('aside.sidebar details.nav-unit').forEach(d => {
+          d.open = openState;
+        });
+      };
+
+      // Suport per als menús desplegables de la capçalera (clic/toc en dispositius tàctils i mòbils)
+      document.querySelectorAll('.header-nav-item.has-dropdown').forEach(item => {
+        const trigger = item.querySelector('.nav-dropdown-trigger');
+        if (trigger) {
+          trigger.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024) {
+              if (!item.classList.contains('is-open')) {
+                e.preventDefault();
+                document.querySelectorAll('.header-nav-item.has-dropdown.is-open').forEach(el => {
+                  if (el !== item) el.classList.remove('is-open');
+                });
+                item.classList.add('is-open');
+              }
+            }
+          });
+        }
+      });
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.header-nav-item.has-dropdown')) {
+          document.querySelectorAll('.header-nav-item.has-dropdown.is-open').forEach(el => {
+            el.classList.remove('is-open');
+          });
+        }
+      });
+
+      if (typeof updateSidebarBtnState === 'function') {
+        updateSidebarBtnState();
       }
 
       if (window.renderMathPortal) window.renderMathPortal();
