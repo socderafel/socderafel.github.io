@@ -1,4 +1,4 @@
-# 💻 Portal Docent d'Informàtica · Curs 26/27
+# 💻 Portal Docent de Pepe Cuenca · Curs 26/27
 
 Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de laboratori i activitats avaluables d'aquest curs acadèmic **2026/2027**:
 

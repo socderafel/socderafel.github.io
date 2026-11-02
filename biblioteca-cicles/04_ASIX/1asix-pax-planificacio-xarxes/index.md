@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: "Índex — Planificació i Administració de Xarxes — Planificació i Administració de Xarxes | Portal Docent d'Informàtica"
+title: "Índex — Planificació i Administració de Xarxes — Planificació i Administració de Xarxes | Portal Docent de Pepe Cuenca"
 course_root: "."
 badge: "1r ASIX · Grau Superior · FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)"
 next_url: "./ut01/index.html"

@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: "Índex — Programació, IA i Robòtica I — Programació, IA i Robòtica I | Portal Docent d'Informàtica"
+title: "Índex — Programació, IA i Robòtica I — Programació, IA i Robòtica I | Portal Docent de Pepe Cuenca"
 course_root: "."
 badge: "2n ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

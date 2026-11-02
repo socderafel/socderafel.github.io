@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: "Índex — Programació d'Intel·ligència Artificial amb Python — Programació d'Intel·ligència Artificial amb Python | Portal Docent d'Informàtica"
+title: "Índex — Programació d'Intel·ligència Artificial amb Python — Programació d'Intel·ligència Artificial amb Python | Portal Docent de Pepe Cuenca"
 course_root: "."
 badge: "CE IA i Big Data · Cursos d'Especialització (IA & Big Data / Ciberseguretat)"
 next_url: "./ut01/index.html"

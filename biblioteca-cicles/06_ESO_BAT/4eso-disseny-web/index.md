@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: "Índex — Disseny Web amb HTML5, CSS i WordPress — Disseny Web amb HTML5, CSS i WordPress | Portal Docent d'Informàtica"
+title: "Índex — Disseny Web amb HTML5, CSS i WordPress — Disseny Web amb HTML5, CSS i WordPress | Portal Docent de Pepe Cuenca"
 course_root: "."
 badge: "4t ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

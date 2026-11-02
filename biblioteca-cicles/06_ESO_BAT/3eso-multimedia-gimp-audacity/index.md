@@ -1,6 +1,6 @@
 ﻿---
 layout: default
-title: "Índex — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity | Portal Docent d'Informàtica"
+title: "Índex — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity | Portal Docent de Pepe Cuenca"
 course_root: "."
 badge: "3r ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

@@ -17,9 +17,9 @@
         window.renderMathInElement(document.body, {
           delimiters: [
             { left: '$$', right: '$$', display: true },
-            { left: '\\[', right: '\\]', display: true },
+            { left: '\[', right: '\]', display: true },
             { left: '$', right: '$', display: false },
-            { left: '\\(', right: '\\)', display: false }
+            { left: '\(', right: '\)', display: false }
           ],
           ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
           throwOnError: false
@@ -28,10 +28,43 @@
     }
     document.addEventListener('DOMContentLoaded', renderMathPortal);
     window.addEventListener('load', renderMathPortal);
-    (function() {
-      const saved = localStorage.getItem('portal-theme');
-      if (saved) document.documentElement.setAttribute('data-theme', saved);
-    })();
+
+    function setThemePalette(themeKey) {
+      document.documentElement.setAttribute('data-theme', themeKey);
+      try {
+        localStorage.setItem('portal-theme-palette', themeKey);
+        localStorage.setItem('portal-theme', themeKey);
+      } catch (e) {}
+      updateThemeSelectorLabel(themeKey);
+    }
+
+    function updateThemeSelectorLabel(themeKey) {
+      const lbl = document.getElementById('current-theme-label');
+      const labels = {
+        'navy': 'Blau Marí',
+        'zinc': 'Zinc Tech',
+        'forest': 'Verd Bosc',
+        'academic': 'Bordeus',
+        'dark': 'Mode Fosc',
+        'oled': 'Negre Pur'
+      };
+      if (lbl) lbl.textContent = labels[themeKey] || 'Blau Marí';
+      document.querySelectorAll('.theme-opt').forEach(el => {
+        if (el.getAttribute('data-theme-val') === themeKey) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const cur = html.getAttribute('data-theme') || 'navy';
+      const isDark = (cur === 'dark' || cur === 'oled');
+      const next = isDark ? 'navy' : 'dark';
+      setThemePalette(next);
+    }
 
     function toggleSidebar() {
       const isCollapsed = document.documentElement.classList.toggle('sidebar-collapsed');
@@ -65,17 +98,10 @@
       } catch (e) {}
     }
 
-    function toggleTheme() {
-      const html = document.documentElement;
-      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', next);
-      try {
-        localStorage.setItem('portal-theme', next);
-      } catch (e) {}
-    }
-
     (function() {
       try {
+        const saved = localStorage.getItem('portal-theme-palette') || localStorage.getItem('portal-theme') || 'navy';
+        document.documentElement.setAttribute('data-theme', saved);
         const isCol = localStorage.getItem('sidebar-collapsed') === 'true';
         if (isCol) document.documentElement.classList.add('sidebar-collapsed');
         const savedScale = localStorage.getItem('portal-font-scale');
@@ -84,33 +110,91 @@
     })();
   </script>
   <style>
-    :root {
+    :root, [data-theme="navy"], [data-theme="light"] {
       --content-font-scale: 1;
-      --md-text-font: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+      --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
-      --primary: #2563eb;
-      --primary-dark: #1d4ed8;
-      --md-primary-fg-color: #1e3a8a;
-      --bg-body: #f5f7fa;
+      --primary: #1d4ed8;
+      --primary-dark: #1e40af;
+      --md-primary-fg-color: #0f2042;
+      --bg-body: #f8fafc;
       --bg-card: #ffffff;
-      --text-main: #1f2937;
-      --text-muted: #4b5563;
-      --border: #e5e7eb;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #cbd5e1;
       --code-bg: #f1f5f9;
-      --header-bg: #3f51b5;
+      --header-bg: #0f2042;
+      --header-border: #1e3a8a;
+    }
+
+    [data-theme="zinc"] {
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --md-primary-fg-color: #18181b;
+      --bg-body: #f4f4f5;
+      --bg-card: #ffffff;
+      --text-main: #18181b;
+      --text-muted: #52525b;
+      --border: #d4d4d8;
+      --code-bg: #f4f4f5;
+      --header-bg: #18181b;
+      --header-border: #27272a;
+    }
+
+    [data-theme="forest"] {
+      --primary: #059669;
+      --primary-dark: #065f46;
+      --md-primary-fg-color: #064e3b;
+      --bg-body: #f0fdf4;
+      --bg-card: #ffffff;
+      --text-main: #062e24;
+      --text-muted: #374151;
+      --border: #bbf7d0;
+      --code-bg: #dcfce7;
+      --header-bg: #064e3b;
+      --header-border: #047857;
+    }
+
+    [data-theme="academic"] {
+      --primary: #7e22ce;
+      --primary-dark: #581c87;
+      --md-primary-fg-color: #4a044e;
+      --bg-body: #faf5ff;
+      --bg-card: #ffffff;
+      --text-main: #2e1065;
+      --text-muted: #4b5563;
+      --border: #e9d5ff;
+      --code-bg: #f3e8ff;
+      --header-bg: #4a044e;
+      --header-border: #701a75;
     }
 
     [data-theme="dark"] {
-      --primary: #60a5fa;
-      --primary-dark: #93c5fd;
-      --md-primary-fg-color: #0f172a;
-      --bg-body: #0f172a;
-      --bg-card: #1e293b;
+      --primary: #38bdf8;
+      --primary-dark: #0284c7;
+      --md-primary-fg-color: #0b1120;
+      --bg-body: #0b1120;
+      --bg-card: #151f32;
       --text-main: #f8fafc;
-      --text-muted: #cbd5e1;
-      --border: #334155;
-      --code-bg: #334155;
-      --header-bg: #0f172a;
+      --text-muted: #94a3b8;
+      --border: #24334c;
+      --code-bg: #1a263c;
+      --header-bg: #0b1120;
+      --header-border: #1e293b;
+    }
+
+    [data-theme="oled"] {
+      --primary: #60a5fa;
+      --primary-dark: #3b82f6;
+      --md-primary-fg-color: #000000;
+      --bg-body: #000000;
+      --bg-card: #101010;
+      --text-main: #ffffff;
+      --text-muted: #a1a1aa;
+      --border: #27272a;
+      --code-bg: #18181b;
+      --header-bg: #000000;
+      --header-border: #27272a;
     }
 
     * {
@@ -1557,7 +1641,7 @@
           <path d="M16 22 L28 32 L16 42" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
           <line x1="32" y1="42" x2="48" y2="42" stroke="#4ade80" stroke-width="5" stroke-linecap="round"/>
         </svg>
-        <span>Portal Docent d'Informàtica <span class="curs-badge">Curs 26/27</span></span>
+        <span>Portal Docent de Pepe Cuenca <span class="curs-badge">Curs 26/27</span></span>
       </a>
       <nav class="md-header-nav">
         <a href="{{ '/' | relative_url }}">🏠 Inici</a>
@@ -1647,7 +1731,35 @@
             <button class="btn-zoom" onclick="changeFontSize(-1)" title="Reduir mida de la lletra (A-)">A-</button>
             <button class="btn-zoom" onclick="changeFontSize(1)" title="Augmentar mida de la lletra (A+)">A+</button>
           </div>
-          <button class="btn-toggle" onclick="toggleTheme()" title="Canviar entre mode fosc i clar">🌓 Tema</button>
+          <!-- Selector de Temes Visuals -->
+          <div class="header-nav-item has-dropdown dropdown-align-right theme-selector-wrapper">
+            <button class="btn-toggle nav-dropdown-trigger" id="btn-theme-selector" title="Selector de temes visuals i contrast">
+              🎨 <span id="current-theme-label">Blau Marí</span> <span class="nav-arrow">▾</span>
+            </button>
+            <div class="header-dropdown-menu theme-dropdown-menu" style="min-width: 260px; right: 0; left: auto;">
+              <div class="dropdown-header">Temes Institucionals Seriosos</div>
+              <a href="javascript:void(0)" onclick="setThemePalette('navy')" class="dropdown-item theme-opt" data-theme-val="navy">
+                🔵 <strong>Blau Marí</strong> (Institucional / Per defecte)
+              </a>
+              <a href="javascript:void(0)" onclick="setThemePalette('zinc')" class="dropdown-item theme-opt" data-theme-val="zinc">
+                ⬛ <strong>Zinc &amp; Pissarra</strong> (Tech Minimalista)
+              </a>
+              <a href="javascript:void(0)" onclick="setThemePalette('forest')" class="dropdown-item theme-opt" data-theme-val="forest">
+                🌲 <strong>Verd Bosc</strong> (Educació / Conselleria)
+              </a>
+              <a href="javascript:void(0)" onclick="setThemePalette('academic')" class="dropdown-item theme-opt" data-theme-val="academic">
+                🍷 <strong>Bordeus</strong> (Acadèmic Universitari)
+              </a>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-header">Modes de Contrast</div>
+              <a href="javascript:void(0)" onclick="setThemePalette('dark')" class="dropdown-item theme-opt" data-theme-val="dark">
+                🌙 <strong>Mode Fosc</strong> (Dark Slate Professional)
+              </a>
+              <a href="javascript:void(0)" onclick="setThemePalette('oled')" class="dropdown-item theme-opt" data-theme-val="oled">
+                🖤 <strong>Negre Pur</strong> (Alt Contrast OLED)
+              </a>
+            </div>
+          </div>
           {% if page.course_root %}
           <button class="btn-toggle" id="btn-toggle-sidebar" onclick="toggleSidebar()" title="Mostrar o amagar el menú lateral">☰ Menú</button>
           {% endif %}
@@ -2608,6 +2720,7 @@
         }
       });
 
+      if (typeof updateThemeSelectorLabel === 'function') updateThemeSelectorLabel(document.documentElement.getAttribute('data-theme') || 'navy');
       if (typeof updateSidebarBtnState === 'function') {
         updateSidebarBtnState();
       }
