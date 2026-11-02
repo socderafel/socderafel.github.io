@@ -195,18 +195,38 @@ Els **criteris de divisibilitat** són regles ràpides que ens permeten saber si
 
 ### ✏️ Exercicis Pràctics
 
-1. **Escriu els cinc primers múltiples de:**
-   - a) $6 \rightarrow$
-   - b) $12 \rightarrow$
-   - c) $25 \rightarrow$
 
-2. **Troba tots els divisors de:**
-   - a) $24 \rightarrow$
-   - b) $40 \rightarrow$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Indica per quins nombres ($2, 3, 5, 9, 10, 11$) són divisibles els següents números:**
-   - a) $180 \rightarrow$
-   - b) $275 \rightarrow$
+
+#### 1. Múltiples i Divisors
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_1_q1" data-answer="6" data-hint="Els divisors exactes són {1, 2, 3, 6, 9, 18}, en total 6 divisors.">
+  <div class="quiz-question">✍️ Quants divisors positius diferents té el nombre 18 (1, 2, 3, 6, 9, 18)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u4_1_vf1" data-answer="V" data-hint="VERTADER: 42 = 7 × 6, per tant 42 és múltiple de 7.">
+  <span class="vf-statement"><strong>El nombre 42 és múltiple exacte de 7 (perquè 7 × 6 = 42).</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -304,16 +324,49 @@ $$504 = \mathbf{2^3 \cdot 3^2 \cdot 7}$$
 
 ### ✏️ Exercicis Pràctics
 
-1. **Classifica en primers o compostos:**
-   - a) $17 \rightarrow$
-   - b) $21 \rightarrow$
-   - c) $29 \rightarrow$
-   - d) $51 \rightarrow$
 
-2. **Descompon en factors primers els següents nombres:**
-   - a) $72$
-   - b) $120$
-   - c) $300$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Criteris de Divisibilitat Ràpids
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u4_2_vf1" data-answer="V" data-hint="VERTADER: Com que la suma de les xifres és 6 (múltiple de 3), 240 és divisible per 3.">
+  <span class="vf-statement"><strong>a) El nombre 240 és divisible per 3 (comprova sumant les seues xifres: 2 + 4 + 0 = 6).</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u4_2_vf2" data-answer="F" data-hint="FALS: 315 acaba en 5 (xifra imparell), de manera que mai pot ser divisible per 2.">
+  <span class="vf-statement"><strong>b) El nombre 315 és divisible per 2 (analitza la seua última xifra).</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u4_2_vf3" data-answer="V" data-hint="VERTADER: Com que acaba en 0, compleix simultàniament el criteri del 5 i del 10.">
+  <span class="vf-statement"><strong>c) El nombre 750 és divisible alhora per 5 i per 10.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -411,10 +464,49 @@ $$36 \cdot 216 = 7.776 \qquad \text{i} \qquad 72 \cdot 108 = 7.776 \quad \checkm
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula l'MCD i l'MCM de les següents parelles de nombres:**
-   - a) $24$ i $36$
-   - b) $45$ i $60$
-   - c) $20, 28$ i $35$
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Nombres Primers i Descomposició Factorial
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_3_q1" data-answer="2" data-hint="El 2 és el primer nombre primer: només té dos divisors, l'1 i ell mateix.">
+  <div class="quiz-question">✍️ Quin és el nombre primer més xicotet de tots (i l'únic que és parell)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u4_3_vf1" data-answer="F" data-hint="FALS: 91 no és primer perquè 91 = 7 × 13 (té com a divisors l'1, el 7, el 13 i el 91).">
+  <span class="vf-statement"><strong>El nombre 91 és un nombre primer.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_3_q2" data-answer="4" data-hint="60 = 2 × 2 × 3 × 5 (4 factors en total).">
+  <div class="quiz-question">✍️ Descompon factorialment el nombre 60 (2² · 3 · 5). Quants factors totals apareixen multiplicats (2 · 2 · 3 · 5)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -507,17 +599,76 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
 
 ### 📝 Butlletí d'Exercicis Proposats
 
-1. **Calcula l'MCD i l'MCM de:**
-   - a) $48$ i $72$
-   - b) $30, 45$ i $90$
 
-2. **Problema de rajoles:**
-   Una terrassa rectangular fa $360\text{ cm}$ de llarg per $280\text{ cm}$ d'ample. Volem enrajolar-la amb rajoles quadrades de la màxima grandària possible sense haver de tallar cap rajola.
-   - a) Quant mesurarà el costat de cada rajola?
-   - b) Quantes rajoles necessitarem en total?
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Problema d'autobusos:**
-   A l'estació central, la línia groga ix cada $15\text{ minuts}$ i la línia blava cada $20\text{ minuts}$. Si han eixit juntes a les $08:00\text{ h}$ del matí, a quina hora tornaran a coincidir?
+
+#### 1. Càlcul Ràpid d'MCD i MCM
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_4_q1a" data-answer="24" data-hint="48 = 2⁴ · 3; 72 = 2³ · 3². Factors comuns al menor exponent: 2³ · 3 = 24.">
+  <div class="quiz-question">✍️ Calcula el Màxim Comú Divisor de 48 i 72: MCD(48, 72)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_4_q1b" data-answer="144" data-hint="MCM(48, 72): factors comuns i no comuns al major exponent: 2⁴ · 3² = 16 · 9 = 144.">
+  <div class="quiz-question">✍️ Calcula el Mínim Comú Múltiple de 48 i 72: MCM(48, 72)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Problemes Reals d'Aplicació
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_4_q2a" data-answer="40" data-hint="Troba l'MCD de 360 i 280: MCD(360, 280) = 40 cm de costat màxim.">
+  <div class="quiz-question">✍️ Problema de rajoles: Una terrassa fa 360 cm de llarg per 280 cm d'ample. Quant mesurarà el costat màxim en cm de cada rajola quadrada sense tallar-ne cap (MCD)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_4_q2b" data-answer="63" data-hint="Rajoles de llarg: 360 : 40 = 9; Rajoles d'ample: 280 : 40 = 7. Total rajoles = 9 × 7 = 63.">
+  <div class="quiz-question">✍️ Quantes rajoles quadrades de 40 cm necessitarem en total per cobrir tota la terrassa (9 de llarg × 7 d'ample)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_4_q3" data-answer="09:00|9:00|9|60" data-hint="MCM(15, 20) = 60 minuts. Si han sortit a les 08:00 h, tornaran a coincidir exactament a les 09:00 h (escriu '09:00' o '60').">
+  <div class="quiz-question">✍️ Problema d'autobusos: La línia groga passa cada 15 min i la blava cada 20 min. Si coincideixen a les 08:00 h, a quina hora tornaran a coincidir per primera vegada?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
@@ -538,6 +689,14 @@ Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, rep
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Classificació ràpida mitjançant criteris de divisibilitat
@@ -554,6 +713,28 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 | **1.716** | | | | | | |
 | **4.875** | | | | | | |
 | **9.207** | | | | | | |
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_5_ex1_mcd" data-answer="24" data-hint="MCD(48, 72) = 2³ · 3 = 24.">
+  <div class="quiz-question">✍️ Exercici 1: Quin és el Màxim Comú Divisor de 48 i 72: MCD(48, 72) ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_5_ex1_mcm" data-answer="144" data-hint="MCM(48, 72) = 2⁴ · 3² = 16 · 9 = 144.">
+  <div class="quiz-question">✍️ Exercici 1: Quin és el Mínim Comú Múltiple de 48 i 72: MCM(48, 72) ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 2: Descomposició en factors primers i càlcul de divisors
 1. Realitza la descomposició factorial completa per divisions successives dels següents nombres enters:
@@ -609,6 +790,17 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
   3. Quants trossos complets s'obtindran de la Tira B?
   4. Quants trossos iguals en total tindrà el tècnic per fixar les preses de xarxa a les taules?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_5_rep1" data-answer="16" data-hint="MCD(48, 64) = 16 caixes (amb 3 SSD i 4 RAM cadascuna).">
+  <div class="quiz-question">✍️ Repte 1: Quin és el nombre màxim de caixes idèntiques que es poden preparar amb 48 SSD i 64 RAM sense que sobre cap component (MCD)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Repte 2: Sincronització de tasques programades i còpies de seguretat en servidors
 - **Objectiu:** Utilitzar el Mínim Comú Múltiple per preveure la concurrència d'activitats que consumeixen amplada de banda en sistemes informàtics.
 - **Situació:** En el centre de dades d'un institut s'han configurat tres scripts automàtics de manteniment nocturn:
@@ -620,6 +812,17 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
   2. A quina hora i quin dia de la setmana tindrà lloc aquesta primera concurrència simultània?
   3. Quantes vegades s'haurà executat cadascun dels tres scripts durant aquest període de temps?
   4. Per què és crucial per a l'administrador del sistema conèixer aquest moment per evitar una saturació de la memòria RAM del servidor?
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_5_rep2" data-answer="24" data-hint="MCM(6, 8, 12) = 24 dies.">
+  <div class="quiz-question">✍️ Repte 2: Cada quants dies coincidiran les tasques de manteniment que es fan cada 6, 8 i 12 dies (MCM)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Repte 3: Enrajolat i distribució modular de racks de servidors
 - **Objectiu:** Resoldre problemes geomètrics bidimensionals mitjançant la teoria de nombres.
@@ -633,6 +836,17 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
   4. Quin és el nombre total de plaques modulars necessàries per pavimentar completament la sala tècnica?
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u4_5_rep3" data-answer="10" data-hint="MCD(180, 250) = 10 cm.">
+  <div class="quiz-question">✍️ Repte 3: Quina és la màxima longitud en cm dels trossos iguals de canaleta per a barres de 180 cm i 250 cm (MCD)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 #### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
 

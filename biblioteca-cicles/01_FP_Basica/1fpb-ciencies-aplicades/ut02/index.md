@@ -657,76 +657,170 @@ Per a cuidar de manera integral els quatre aparells (digestiu, respiratori, circ
 
 ### 📝 Butlletí d'Activitats i Avaluació
 
-#### Activitats de Comprensió i Relació
 
-1. **Relaciona cadascun dels quatre aparells de la nutrició amb la seua funció bàsica:**
-   - a) Aparell digestiu
-   - b) Aparell respiratori
-   - c) Aparell circulatori
-   - d) Aparell excretor  
-   *(Opcions: Transport de substàncies / Captació d'$O_2$ / Transformació d'aliments / Depuració de sang i eliminació d'urea).*
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-2. **Diferencia entre:**
-   - a) Bol alimentari, quim i quil.
-   - b) Artèria i vena.
-   - c) Donant universal i receptor universal de sang.
-   - d) Excreció i defecació.
 
-3. **Indica si les següents afirmacions són Vertaderes (V) o Falses (F):**
-   - a) La sang rica en diòxid de carboni és de color blau a l'interior dels vasos sanguinis.
-   - b) La nefrona és la unitat funcional del ronyó on es produeix l'orina.
-   - c) Una persona amb grup sanguini $0^-$ pot rebre sang de qualsevol persona.
-   - d) La bilis la produeix el fetge i ajuda a emulsionar els greixos al duodè.
+#### 1. Activitats de Vertader (V) o Fals (F)
+
+Fes clic sobre **V** o **F** per comprovar el teu diagnòstic biomèdic:
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u2_vf1" data-answer="F" data-hint="FALS: La sang mai és blava; la sang desoxigenada és d'un color roig fosc granat.">
+  <span class="vf-statement"><strong>a) La sang rica en diòxid de carboni és de color blau a l'interior dels vasos sanguinis.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u2_vf2" data-answer="V" data-hint="VERTADER: Cada ronyó compta amb més d'un milió de nefrones de filtració.">
+  <span class="vf-statement"><strong>b) La nefrona és la unitat microscòpica funcional del ronyó on es produeix l'orina.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u2_vf3" data-answer="F" data-hint="FALS: El grup 0⁻ és donant universal, però com que té anticossos anti-A i anti-B només pot rebre sang del seu mateix grup (0⁻).">
+  <span class="vf-statement"><strong>c) Una persona amb grup sanguini 0⁻ pot rebre sang de qualsevol grup sanguini.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u2_vf4" data-answer="V" data-hint="VERTADER: El fetge produeix la bilis, que s'emmagatzema a la vesícula biliar i emulsiona els lípids.">
+  <span class="vf-statement"><strong>d) La bilis la produeix el fetge i ajuda a emulsionar els greixos al duodè.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
-#### Qüestionari d'Autoavaluació Tipus Test
+#### 2. Qüestionari d'Autoavaluació Tipus Test
 
-**1. On té lloc la major part de l'absorció dels nutrients cap a la sang?**
-- A) A l'estómac
-- B) A l'intestí prim (duodè i jejú)
-- C) A l'intestí gros
-- D) A l'esòfag
+Tria l'opció correcta per a cadascuna de les preguntes clíniques:
 
-**2. Quin vas sanguini transporta sang oxigenada des del cor cap a tot el cos?**
-- A) L'artèria aorta
-- B) L'artèria pulmonar
-- C) La vena cava superior
-- D) La vena porta
 
-**3. Què succeeix a la nefrona durant la fase de reabsorció?**
-- A) Es fabriquen noves cèl·lules sanguínies
-- B) El $99\%$ de l'aigua i substàncies útils filtrades tornen cap a la sang
-- C) S'expulsa directament l'orina cap a l'exterior
-- D) Es trenquen les proteïnes en aminoàcids
+<div class="interactive-mcq" data-quiz-id="ca1_u2_mcq1" data-answer="B" data-hint="L'absorció de nutrients es produeix a les vellositats de l'intestí prim.">
+  <p class="mcq-question"><strong>1. On té lloc la major part de l'absorció dels nutrients cap a la sang?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) A l'estómac</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) A l'intestí prim (duodè i jejú)</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) A l'intestí gros</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) A l'esòfag</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
-**4. Una persona amb sang del grup A+ necessita una transfusió urgent. Quina sang pot rebre amb seguretat?**
-- A) Només de B+ o AB+
-- B) De qualsevol persona perquè és receptor universal
-- C) De persones dels grups A+, A-, 0+ o 0-
-- D) Només de 0-
+
+
+<div class="interactive-mcq" data-quiz-id="ca1_u2_mcq2" data-answer="A" data-hint="L'artèria aorta sorgeix del ventricle esquerre i distribueix la sang oxigenada per tot l'organisme.">
+  <p class="mcq-question"><strong>2. Quin vas sanguini transporta sang oxigenada des del cor cap a tot el cos?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) L'artèria aorta</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) L'artèria pulmonar</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) La vena cava superior</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) La vena porta</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-mcq" data-quiz-id="ca1_u2_mcq3" data-answer="B" data-hint="La reabsorció recupera el 99% de l'aigua i nutrients per evitar la deshidratació.">
+  <p class="mcq-question"><strong>3. Què succeeix a la nefrona durant la fase de reabsorció tubular?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Es fabriquen noves cèl·lules sanguínies</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El 99% de l'aigua i substàncies útils filtrades tornen cap a la sang</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) S'expulsa directament l'orina cap a l'exterior</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Es destrueixen els glòbuls blancs</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-mcq" data-quiz-id="ca1_u2_mcq4" data-answer="C" data-hint="Pot rebre del seu mateix grup (A) i del grup donant (0), tant positius com negatius.">
+  <p class="mcq-question"><strong>4. Una persona amb sang del grup A⁺ necessita una transfusió urgent. Quina sang pot rebre amb seguretat?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Només de B⁺ o AB⁺</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) De qualsevol persona perquè és receptor universal</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) De persones dels grups A⁺, A⁻, 0⁺ o 0⁻</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Només de 0⁻</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
-#### Cas Pràctic d'Aplicació
+#### 3. Cas Pràctic d'Aplicació Clínica
 
-> **Cas d'estudi: Anàlisi clínica d'urgència**
-> 
-> Un metge analitza els resultats d'una anàlisi d'orina d'un pacient adult. En el resultat s'observa:
-> - Volum d'orina: $1{,}6\text{ L/dia}$ (Normal)
-> - Color: Groc clar transparent (Normal)
-> - Glucosa en orina: $180\text{ mg/dL}$ (Anormal, no hauria d'aparèixer glucosa en orina).
-> 
-> **Preguntes a resoldre:**
-> 1. En quina fase de la nefrona s'hauria d'haver recuperat tota la glucosa per tornar-la a la sang?
-> 2. Quin òrgan de l'aparell digestiu secreta l'hormona encarregada de regular la glucosa en sang, i com es diu aquesta hormona?
-> 3. Quina malaltia crònica és molt probable que pateixi aquest pacient?
+> **Cas d'estudi: Anàlisi clínica d'urgència**  
+> Un metge analitza els resultats d'una anàlisi d'orina d'un pacient adult:  
+> - Volum d'orina: 1,6 L/dia (Normal)  
+> - Color: Groc clar transparent (Normal)  
+> - Glucosa en orina: 180 mg/dL (Anormal, no hauria d'aparèixer glucosa en l'orina).
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_cas_q1" data-answer="reabsorcio|reabsorció" data-hint="A la fase de reabsorció tubular dels túbuls renals.">
+  <div class="quiz-question">✍️ En quina fase de la nefrona s'hauria d'haver recuperat tota la glucosa per tornar-la a la sang?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_cas_q2" data-answer="pancrees|pàncrees" data-hint="El pàncrees és la glàndula mixta encarregada de segregar la insulina.">
+  <div class="quiz-question">✍️ Quin òrgan de l'aparell digestiu secreta l'hormona que regula la glucosa (insulina)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_cas_q3" data-answer="diabetis|diabetes" data-hint="La presència de glucosa a l'orina (glucosúria) és un símptoma clàssic de la diabetis.">
+  <div class="quiz-question">✍️ Quina malaltia crònica és molt probable que pateixi aquest pacient?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
 > [!TIP]
 > ### 🔬 Continua amb els Reptes Pràctics de Laboratori
-> Les pràctiques experimentals de la unitat (càlcul de la **Taxa Metabòlica Basal - TMB**, mesura de la **freqüència cardíaca i tensió arterial amb el tensiòmetre**, auditoria de sucres en etiquetes i compatibilitat sanguínia) es troben al següent apartat:  
+> Les pràctiques experimentals de la unitat (càlcul de la **Taxa Metabòlica Basal - TMB**, mesura de la **freqüència cardíaca i tensió arterial**, auditoria de sucres i compatibilitat sanguínia) es troben al següent apartat:  
 > 👉 [**2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0205.html)
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
@@ -742,6 +836,14 @@ Aquest quadern recull les activitats aplicades de càlcul biomètric, nutrició 
 ---
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
@@ -761,6 +863,28 @@ $$\text{TMB (Noies)} = (12{,}2 \cdot m) + 746 \quad (\text{kcal/dia})$$
 
 ---
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex1_1" data-answer="1771" data-hint="TMB = 1.120 + 651 = 1.771 kcal/dia.">
+  <div class="quiz-question">✍️ Exercici 1.1: Calcula la TMB d'un noi de 64 kg amb la fórmula OMS: (17,5 × 64) + 651</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex1_2" data-answer="2833.6|2834|2833,6" data-hint="1.771 × 1,6 = 2.833,6 kcal/dia (aprox. 2.834 kcal).">
+  <div class="quiz-question">✍️ Exercici 1.2: Si té activitat moderada (FA = 1,6), quina és la seua despesa energètica total diària (GET = 1.771 × 1,6)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 2: Hemodinàmica cardíaca i volum de sang bombat
 El cor humà funciona com una bomba impel·lent doble. En cada batec sistòlic, el ventricle esquerre impulsa un volum mitjà de sang conegut com a **volum sistòlic** ($V_s \approx 70\text{ mL} = 0{,}07\text{ L}$).
 El **Cabal Cardíac ($Q_c$)** és el volum total de sang expulsat per minut:
@@ -772,6 +896,28 @@ $$Q_c = V_s \cdot FC \quad (\text{en L/min})$$
 3. Durant una sessió d'exercici intens, la freqüència cardíaca s'eleva a $150\text{ bpm}$ i el volum sistòlic augmenta a $90\text{ mL}$. Quin és el nou cabal cardíac en $\text{L/min}$? Quantes vegades s'ha multiplicat el volum d'oxigen i nutrients enviat als músculs?
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex2_1" data-answer="5.04|5,04|5" data-hint="Qc = 0,07 L × 72 bpm = 5,04 L/min.">
+  <div class="quiz-question">✍️ Exercici 2.1: Cabal cardíac en repòs en L/min (70 mL × 72 bpm = 0,07 L × 72):</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex2_2" data-answer="7257.6|7258|7257,6" data-hint="5,04 × 60 × 24 = 7.257,6 litres al dia.">
+  <div class="quiz-question">✍️ Exercici 2.2: Quants litres de sang bombeja el cor en un dia complet de 24 hores (5,04 L/min × 60 min × 24 h)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 3: Balanç hídric i filtració glomerular de la nefrona
 Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sanguini que surt del cor.
@@ -785,6 +931,28 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 3. Per què la presència de glucosa (sucre) o proteïnes a l'anàlisi d'orina és un indicador de malaltia (com la diabetis o fallada renal), si a la filtració inicial sí que passen a la càpsula de Bowman?
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex3_1" data-answer="1.8|1,8" data-hint="180 L × 0,01 = 1,8 litres d'orina al dia.">
+  <div class="quiz-question">✍️ Exercici 3.1: Quants litres d'orina produeix el cos en condicions normals (180 L filtrats × 0,01 fracció no reabsorbida)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex3_2" data-answer="7.2|7,2" data-hint="180 L × 0,04 = 7,2 litres al dia (provocaria deshidratació extrema).">
+  <div class="quiz-question">✍️ Exercici 3.2: Si per fallada renal la reabsorció cau al 96% (es perd el 4%), quants litres d'orina s'abocarien (180 L × 0,04)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
@@ -856,6 +1024,17 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
   5. Pesa en la bàscula els grams equivalents en sucre blanc o compta els terrons (1 terró $\approx 4\text{ grams}$) per visualitzar la quantitat real ingerida.
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u2_5_rep2_4" data-answer="140" data-hint="(35 : 25) × 100 = 140% (supera en un 40% el màxim diari recomanat).">
+  <div class="quiz-question">✍️ Repte 2.4: Si una llauna de refresc conté 35 g de sucre, quin percentatge (%) del límit diari saludable de l'OMS (25 g) cobreix aquesta única llauna?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Repte 3: Determinació de compatibilitat sanguínia en el sistema AB0 i Rh
 - **Objectiu:** Resoldre situacions clíniques d'urgència transfusional aplicant les regles d'aglutinació d'antígens i anticossos.

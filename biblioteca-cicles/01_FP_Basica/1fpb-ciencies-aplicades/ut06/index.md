@@ -259,6 +259,38 @@ $$1 \text{ Any Llum} = 300.000\text{ km/s} \times 31.536.000\text{ s} \approx \m
 2. **Per què els estels fugaços no són realment estrelles que cauen?**
 
 3. **Si una sonda espacial viatja a un planeta situat a $4\text{ UA}$, quants quilòmetres aproximadament haurà de recórrer?**
+#### 🎯 Reptes Interactius d'Escala Astronòmica
+
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u6_2_q1" data-answer="150|149.6|149,6" data-hint="Aproximadament 150 milions de km (149,6 milions).">
+  <div class="quiz-question">✍️ A quants milions de quilòmetres equival la distància mitjana Terra-Sol (1 UA)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u6_2_q2" data-answer="300" data-hint="La velocitat c és de 300.000 km/s (300 milers).">
+  <div class="quiz-question">✍️ A quina velocitat viatja la llum en el buit en milers de km/s (escriu '300')?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -363,52 +395,81 @@ Des de l'antiguitat, la humanitat ha mirat al cel amb curiositat. En les darrere
 
 ### 📝 Butlletí d'Activitats d'Avaluació
 
-#### Activitats de Relació i Comprensió
 
-1. **Ordena els 8 planetes del Sistema Solar des del més proper al Sol fins al més allunyat:**
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-2. **Indica a quin planeta correspon cadascuna de les següents afirmacions:**
-   - a) Té l'atmosfera més calenta per un efecte hivernacle descontrolat $\rightarrow$
-   - b) Posseeix el volcà més alt anomenat Mont Olimp $\rightarrow$
-   - c) És el més gran de tots i té la Gran Taca Roja $\rightarrow$
-   - d) Posseeix un sistema espectacular d'anells brillants $\rightarrow$
-   - e) Gira pràcticament tombat sobre el seu eix de rotació $\rightarrow$
 
-3. **Càlcul d'escales espacials:**
-   - Si la nau *Voyager 1* es troba a unes $160\text{ UA}$ de la Terra, a quants milions de quilòmetres equival aquesta distància?
+#### 1. Activitats de Vertader (V) o Fals (F)
 
----
 
-#### Qüestionari d'Autoavaluació Tipus Test
+<div class="interactive-vf" data-quiz-id="ca1_u6_4_vf1" data-answer="V" data-hint="VERTADER: El Sol conté el 99,86% de tota la massa de tot el Sistema Solar.">
+  <span class="vf-statement"><strong>a) El Sol concentra més del 99% de tota la matèria i massa del Sistema Solar.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
-**1. Quants milions d'anys té aproximadament l'Univers segons la teoria del Big Bang?**
-- A) 4.600 milions d'anys
-- B) 13.800 milions d'anys
-- C) 2.000 milions d'anys
-- D) 100 milions d'anys
 
-**2. Com es diu la nostra galàxia i quin tipus de forma té?**
-- A) Andròmeda, el·líptica
-- B) Via Làctia, espiral barrada
-- C) Braç d'Orió, irregular
-- D) Sombrero, lenticular
 
-**3. Què és un estel fugaç o meteor?**
-- A) Una estrella que es trenca i cau de l'espai
-- B) Un fragment de roca (meteoroide) que s'incinera per fricció a l'atmosfera terrestre
-- C) Un cometa que passa a prop del Sol
-- D) Un satèl·lit artificial que s'ha quedat sense bateria
+<div class="interactive-vf" data-quiz-id="ca1_u6_4_vf2" data-answer="F" data-hint="FALS: Com que no té atmosfera que retinga la calor, a la nit la seua temperatura cau a -180 °C. El més càlid globalment és Venus pel seu efecte d'hivernacle.">
+  <span class="vf-statement"><strong>b) Mercuri és el planeta amb les temperatures nocturnes més càlides del Sistema Solar.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
-**4. Quin grup de planetes són coneguts com a planetes interiors o rocosos?**
-- A) Júpiter, Saturn, Urà i Neptú
-- B) Mercuri, Venus, Terra i Mart
-- C) La Terra, la Lluna i el Sol
-- D) Mart, Ceres i Plutó
 
 ---
 
-> [!TIP]
-> **Següent pas:** Continua amb el [**6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0605.html) per resoldre els càlculs de retard de la velocitat de la llum a Mart, enllaços per a satèl·lits LEO/GEO i la maqueta a escala del Sistema Solar.
+#### 2. Qüestionari d'Autoavaluació Astronòmica Tipus Test
+
+
+<div class="interactive-mcq" data-quiz-id="ca1_u6_4_mcq1" data-answer="B" data-hint="Venus triga 243 dies terrestres a fer un gir de rotació sobre si mateix i 225 dies a orbitar el Sol.">
+  <p class="mcq-question"><strong>1. Quin planeta té el dia més llarg que el seu any a causa de la seua rotació retrògrada extremadament lenta?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Mart</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Venus</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Júpiter</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Mercuri</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-mcq" data-quiz-id="ca1_u6_4_mcq2" data-answer="B" data-hint="El cinturó principal d'asteroides s'ubica entre les òrbites de Mart i Júpiter.">
+  <p class="mcq-question"><strong>2. Quina estructura astronòmica separa els planetes interiors rocosos dels planetes exteriors gegants?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) El núvol d'Oort</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El cinturó d'asteroides (entre Mart i Júpiter)</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) El cinturó de Kuiper</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Els anells de Saturn</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-mcq" data-quiz-id="ca1_u6_4_mcq3" data-answer="B" data-hint="Júpiter té una massa més de dues vegades superior a la de tots els altres planetes junts.">
+  <p class="mcq-question"><strong>3. Quin és el planeta més gran i massiu de tot el Sistema Solar?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Saturn</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Júpiter</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Neptú</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) La Terra</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -424,6 +485,14 @@ Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, rep
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Velocitat de propagació de la llum i retard de senyal còsmic
@@ -437,11 +506,44 @@ Aplica la fórmula fonamental del moviment rectilini uniforme $t = \dfrac{d}{c}$
    - En el moment d'oposició més llunyana (amb el Sol entremig): $d_{\text{màx}} = 400.000.000\text{ km}$.
 4. Explica per què un operador humà no pot conduir el ròver de Mart amb un comandament a distància en temps real i cal dotar el robot de navegació autònoma per IA.
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u6_5_ex1_s" data-answer="750" data-hint="225.000.000 km : 300.000 km/s = 750 segons.">
+  <div class="quiz-question">✍️ Exercici 1: Quants segons triga un senyal de ràdio a viatjar a Mart situat a 225 milions de km (225.000.000 : 300.000)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u6_5_ex1_m" data-answer="12.5|12,5" data-hint="750 : 60 = 12,5 minuts.">
+  <div class="quiz-question">✍️ Exercici 1: A quants minuts equivalen aquests 750 segons de retard (750 : 60)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 2: Conversió d'unitats astronòmiques i notació científica
 1. L'estel més proper al Sistema Solar és **Pròxima Centauri**, situat a una distància de $4{,}24\text{ anys llum}$. Converteix aquesta distància física a quilòmetres reals expressant el resultat en notació científica:
    $$d = 4{,}24 \times (9{,}46 \times 10^{12}\text{ km})$$
 2. Júpiter orbita a una distància mitjana del Sol de $5{,}2\text{ UA}$. Converteix aquesta mesura a quilòmetres ($1\text{ UA} = 1{,}5 \times 10^8\text{ km}$).
 3. La sonda espacial Voyager 1 es troba aproximadament a $162\text{ UA}$ de la Terra navegant per l'espai interestel·lar. Quantes hores tarda un paquet de dades de telemetria emès per la Voyager 1 a arribar a les antenes de la Xarxa d'Espai Profund (DSN) de la NASA?
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u6_5_ex2" data-answer="780" data-hint="5,2 × 150 = 780 milions de km.">
+  <div class="quiz-question">✍️ Exercici 2: Si Júpiter està a 5,2 UA del Sol, quina és la seua distància en milions de km (5,2 × 150)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 3: Densitat i classificació de planetes del Sistema Solar
 La densitat mitjana d'un cos celeste es calcula dividint la seua massa pel seu volum: $\rho = \dfrac{M}{V}$.
@@ -492,6 +594,17 @@ Analitza les dades de la següent taula i respon a les preguntes:
   2. Per a completar la connexió bidireccional (*ping* / RTT d'anada i tornada completa Terra-Espai-Terra dues vegades), calcula el retard mínim afegit en mil·lisegons ($\text{ms}$).
   3. Repeteix el càlcul d'anada i tornada per a la connexió LEO a $600\text{ km}$.
   4. Redacta una recomanació tècnica argumentant quina connexió és apta per a videotrucades i jocs en xarxa interactius i per què.
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u6_5_rep1" data-answer="240" data-hint="0,24 segons = 240 mil·lisegons de latència.">
+  <div class="quiz-question">✍️ Repte 1: Quin és el retard d'anada i tornada (72.000 km : 300.000 km/s) d'un satèl·lit GEO expressat en mil·lisegons (ms)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Repte 2: Orientació d'antena parabòlica domèstica a satèl·lit geoestacionari
 - **Objectiu:** Identificar els paràmetres d'instal·lació d'una antena receptora de televisió per satèl·lit.

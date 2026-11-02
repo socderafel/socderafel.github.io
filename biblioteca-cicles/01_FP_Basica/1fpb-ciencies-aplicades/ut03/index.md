@@ -198,20 +198,77 @@ L'**oposat** d'un nombre enter és un altre nombre enter que té el **mateix val
 
 ### ✏️ Exercicis Pràctics d'Aplicació
 
-1. **Escriu el nombre enter que correspon a cada afirmació:**
-   - a) L'ascensor es troba al tercer soterrani:
-   - b) El submarí navega a $85\text{ m}$ de profunditat:
-   - c) Hem ingressat una nòmina de $1.250\text{ €}$:
-   - d) La temperatura a l'hivern a Terol és de 4 graus sota zero:
 
-2. **Ordena de menor a major ($<$) els següents nombres enters:**
-   $$-6, \quad +3, \quad 0, \quad -11, \quad +8, \quad -1, \quad +5$$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Calcula el valor de les següents expressions:**
-   - a) $|-18| =$
-   - b) $|+25| =$
-   - c) $\text{Op}(-12) =$
-   - d) $\text{Op}(+34) =$
+
+#### 1. Modelització amb Nombres Enters (ℤ)
+
+Escriu el nombre enter amb el seu signe (+ o -):
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_1_q1a" data-answer="-3" data-hint="Els soterranis són plantes inferiors a la cota zero: -3.">
+  <div class="quiz-question">✍️ L'ascensor es troba al tercer soterrani:</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_1_q1b" data-answer="-85" data-hint="Les cotes marines sota el nivell del mar són negatives: -85.">
+  <div class="quiz-question">✍️ El submarí navega a 85 m de profunditat marina:</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_1_q1c" data-answer="+1250|1250" data-hint="Els ingressos i cobraments són positius: +1250.">
+  <div class="quiz-question">✍️ Hem ingressat una nòmina de 1.250 € a la caixa del taller:</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_1_q1d" data-answer="-4" data-hint="Sota zero representa valors negatius: -4.">
+  <div class="quiz-question">✍️ La temperatura a l'hivern a Terol és de 4 graus sota zero:</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Ordenació de Nombres Enters
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_1_q2" data-answer="-15" data-hint="A la recta numèrica, com més a l'esquerra del zero està un nombre negatiu, menor és el seu valor: -15.">
+  <div class="quiz-question">✍️ D'entre els següents enters: {-8, +4, -15, 0, -2, +9}, quin és el nombre menor de tots?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -306,15 +363,86 @@ $$+24 - 20 = \mathbf{+4}$$
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula les següents sumes i restes:**
-   - a) $(+9) + (-15) =$
-   - b) $(-14) + (-6) =$
-   - c) $(+18) - (-7) =$
-   - d) $(-11) - (+14) =$
 
-2. **Resol eliminant parèntesis i agrupant:**
-   - a) $15 - (-4) + (-8) - 6$
-   - b) $-12 + (-3) - (-20) - (+7)$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Sumes i Restes de Nombres Enters
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_2_q1a" data-answer="-6" data-hint="Tenen signe diferent: es resten valors absoluts (15 - 9 = 6) i es posa el signe del major (-): -6.">
+  <div class="quiz-question">✍️ Calcula: (+9) + (-15)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_2_q1b" data-answer="-20" data-hint="Tenen el mateix signe (-): se sumen valors absoluts (14 + 6 = 20) i es manté el signe negatiu: -20.">
+  <div class="quiz-question">✍️ Calcula: (-14) + (-6)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_2_q1c" data-answer="25" data-hint="Restar un negatiu equival a sumar: 18 + 7 = 25.">
+  <div class="quiz-question">✍️ Calcula: (+18) - (-7)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_2_q1d" data-answer="-25" data-hint="Restar un positiu equival a restar: -11 - 14 = -25.">
+  <div class="quiz-question">✍️ Calcula: (-11) - (+14)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Eliminació de Parèntesis i Agrupació
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_2_q2a" data-answer="5" data-hint="Elimina parèntesis: 15 + 4 - 8 - 6 = 19 - 14 = 5.">
+  <div class="quiz-question">✍️ Resol: 15 - (-4) + (-8) - 6</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_2_q2b" data-answer="-2" data-hint="Elimina parèntesis: -12 - 3 + 20 - 7 = 20 - 22 = -2.">
+  <div class="quiz-question">✍️ Resol: -12 + (-3) - (-20) - (+7)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -430,13 +558,60 @@ $$-36 : 6 = \mathbf{-6}$$
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula aplicant la jerarquia:**
-   - a) $6 - 3 \cdot (-4) + 10 : (-2)$
-   - b) $5 \cdot (-2) - 18 : (-3) + 7$
 
-2. **Resol amb claudàtors:**
-   - a) $14 - 2 \cdot [5 - (-3) \cdot 2]$
-   - b) $[-16 : 4 + 3 \cdot (-2)] \cdot [15 - 3 \cdot 6]$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Jerarquia d'Operacions i Regla dels Signes
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_3_q1a" data-answer="13" data-hint="Multiplicacions i divisions primer: 6 - (-12) + (-5) = 6 + 12 - 5 = 13.">
+  <div class="quiz-question">✍️ Calcula: 6 - 3 · (-4) + 10 : (-2)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_3_q1b" data-answer="-4" data-hint="5·(-2) = -10; (-18):(-3) = +6; -10 + 6 = -4.">
+  <div class="quiz-question">✍️ Calcula: 5 · (-2) + (-18) : (-3)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_3_q1c" data-answer="-40" data-hint="Interior: 8 - (-2) = 10; Multiplicació: (-4) · 10 = -40.">
+  <div class="quiz-question">✍️ Calcula amb claudàtor: (-4) · [8 - (-2)]</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_3_q1d" data-answer="6" data-hint="Claudàtor: 2 - 5 = -3; Multiplicació: (-3) · (-3) = +9; Resta: 15 - 9 = 6.">
+  <div class="quiz-question">✍️ Calcula: 15 - (-3) · [2 - 5]</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -539,17 +714,71 @@ Per exemple, per a calcular $\sqrt{45}$:
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula el valor de les següents potències:**
-   - a) $(-4)^3 =$
-   - b) $(-2)^6 =$
-   - c) $-5^2 =$
-   - d) $(-1)^{99} =$
 
-2. **Expressa com una única potència utilitzant les propietats:**
-   - a) $(-3)^4 \cdot (-3)^2 \cdot (-3) =$
-   - b) $5^9 : 5^4 =$
-   - c) $[(-7)^3]^5 =$
-   - d) $\frac{2^3 \cdot 2^6}{(2^2)^4} =$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Potències de Base Negativa i Arrels en ℤ
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_4_q1a" data-answer="9" data-hint="Exponent parell dóna resultat positiu: (-3) · (-3) = +9.">
+  <div class="quiz-question">✍️ Calcula amb exponent parell: (-3)²</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_4_q1b" data-answer="-8" data-hint="Exponent imparell manté el signe negatiu: (-2) · (-2) · (-2) = -8.">
+  <div class="quiz-question">✍️ Calcula amb exponent imparell: (-2)³</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_4_q1c" data-answer="-16" data-hint="El signe menys està fora de la potència: -(4²) = -16.">
+  <div class="quiz-question">✍️ Calcula sense parèntesi a la base: -4²</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_4_q1d" data-answer="-1" data-hint="Com que 15 és imparell, (-1) elevat a qualsevol nombre imparell és sempre -1.">
+  <div class="quiz-question">✍️ Calcula: (-1)¹⁵</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_4_q1e" data-answer="9" data-hint="9² = 81, per tant l'arrel positiva és 9.">
+  <div class="quiz-question">✍️ Calcula l'arrel exacta: √(+81)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -585,6 +814,14 @@ Els nombres enters són l'eina matemàtica fonamental per modelar fenòmens fís
 
 ### 2. Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Altimetria, variació tèrmica i distàncies amb valors absoluts
@@ -602,6 +839,28 @@ Els nombres enters són l'eina matemàtica fonamental per modelar fenòmens fís
 2. Un dron de reconeixement s'eleva a $+185\text{ m}$ per damunt del nivell del mar i un submarí d'investigació oceanogràfica s'enfonsa fins a $-340\text{ m}$ a la mateixa vertical:
    - Escriu la distància vertical total que separa ambdós vehicles utilitzant valors absoluts: $|(+185) - (-340)|$.
    - Si el submarí ascendeix $120\text{ m}$, quina serà la seua nova cota numèrica en $\mathbb{Z}$?
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_ex1_1" data-answer="11" data-hint="ΔT = 2 - (-9) = 2 + 9 = 11 °C.">
+  <div class="quiz-question">✍️ Exercici 1.1: Calcula la variació tèrmica entre dimarts (-9 °C) i dimecres (+2 °C): ΔT = (+2) - (-9)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_ex1_2" data-answer="525" data-hint="185 - (-340) = 185 + 340 = 525 metres.">
+  <div class="quiz-question">✍️ Exercici 1.2: Desnivell vertical entre dron (+185 m) i submarí (-340 m): |(+185) - (-340)|</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 2: Jerarquia d'operacions combinades amb signes d'agrupació i regla de signes
 Resol cadascuna de les següents expressions mostrant detalladament cada pas intermedi segons la jerarquia d'operacions i la regla dels signes:
@@ -671,6 +930,28 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
   3. Quin és el saldo final de la caixa en tancar la setmana? Hi ha superàvit o dèficit?
   4. Quina quantitat mínima ha d'ingressar el taller el dilluns següent per restablir el fons de maniobra a $+300\text{ €}$?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_rep1_3" data-answer="-25" data-hint="Ingressos: 450 + 125 + 310 = 885 €. Despeses: 180 + 240 + 490 = 910 €. Saldo: 885 - 910 = -25 €.">
+  <div class="quiz-question">✍️ Repte 1.3: Saldo final de caixa del taller: (+450) + (-180) + (+125) + (-240) + (+310) + (-490)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_rep1_4" data-answer="325" data-hint="300 - (-25) = 300 + 25 = 325 €.">
+  <div class="quiz-question">✍️ Repte 1.4: Quants euros cal ingressar per restablir el fons de caixa a +300 € partint del saldo de -25 €?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Repte 2: Gestió automatitzada d'un ascensor muntacàrregues en edifici de servidors
 - **Objectiu:** Modelar desplaçaments lineals i calcular el consum energètic associat a partir del valor absolut en $\mathbb{Z}$.
 - **Situació:** En un edifici tecnològic d'alta seguretat es disposa de $6\text{ plantes sobre rasant}$ ($+1$ a $+6$), una planta baixa ($0$) i $4\text{ soterranis}$ ($-1$ a $-4$) on s'ubiquen els sistemes de còpia de seguretat i climatització.
@@ -687,6 +968,28 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
   3. Si cada planta té una alçada de $3\text{ metres}$, quants metres verticals totals ha recorregut l'ascensor?
   4. Si el motor consumeix $15\text{ Wh}$ per cada metre vertical desplaçat, quin consum elèctric total en $\text{kWh}$ ha generat la ronda?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_rep2_2" data-answer="25" data-hint="4 + 9 + 7 + 5 = 25 plantes en total.">
+  <div class="quiz-question">✍️ Repte 2.2: Plantes totals recorregudes per l'ascensor: |(-4)-0| + |(+5)-(-4)| + |(-2)-(+5)| + |(+3)-(-2)|</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_rep2_3" data-answer="75" data-hint="25 plantes × 3 m = 75 metres totals.">
+  <div class="quiz-question">✍️ Repte 2.3: Si cada planta fa 3 metres d'alçada, quants metres verticals totals ha recorregut l'ascensor (25 × 3)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Repte 3: Monitoratge de temperatures extremes en càmeres climàtiques de testatge
 - **Objectiu:** Utilitzar nombres enters per interpretar gràfiques de proves de resistència tèrmica de circuits electrònics.
 - **Situació:** En un laboratori d'assaig de servidors industrials, una placa base se sotmet a un cicle tèrmic extrem en una cambra climàtica seguint aquest protocol:
@@ -701,6 +1004,17 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
   4. Quina és la variació tèrmica global $\Delta T = T_4 - T_3$ que ha hagut de suportar el silici de la CPU sense clivellar-se?
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u3_5_rep3_4" data-answer="85" data-hint="ΔT = 42 - (-43) = 42 + 43 = 85 °C.">
+  <div class="quiz-question">✍️ Repte 3.4: Si la CPU va baixar fins a -43 °C a la Fase 3 i va pujar fins a +42 °C a la Fase 4, quina variació tèrmica global ΔT = 42 - (-43) va suportar?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 #### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
 

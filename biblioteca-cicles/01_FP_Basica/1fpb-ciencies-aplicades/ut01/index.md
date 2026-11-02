@@ -184,21 +184,88 @@ Descompon el nombre **$4.708$**:
 
 ### ✍️ Activitats d'Aprenentatge
 
-1. **Identifica el valor de la xifra subratllada:**
-   - a) $3.\underline{4}52 \rightarrow$
-   - b) $\underline{7}.120 \rightarrow$
-   - c) $98\underline{6} \rightarrow$
-   - d) $\underline{5}4.300 \rightarrow$
 
-2. **Realitza la descomposició polinòmica dels següents nombres:**
-   - a) $645$
-   - b) $1.820$
-   - c) $35.409$
-   - d) $702.150$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Escriu el nombre que correspon a cada descomposició:**
-   - a) $(8 \times 10^3) + (3 \times 10^2) + (5 \times 10^1) + 4$
-   - b) $(6 \times 10^4) + (2 \times 10^2) + 9$
+
+#### 1. Identifica el valor posicional de la xifra subratllada
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_1_q1a" data-answer="400|4 centenes|4C" data-hint="La xifra 4 està en la centena: 4 × 100 = 400 unitats.">
+  <div class="quiz-question">✍️ Quin valor en unitats té la xifra subratllada a: 3.<u>4</u>52 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_1_q1b" data-answer="7000|7 unitats de millar|7UM" data-hint="La xifra 7 està en les unitats de millar: 7 × 1.000 = 7.000 unitats.">
+  <div class="quiz-question">✍️ Quin valor en unitats té la xifra subratllada a: <u>7</u>.120 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_1_q1c" data-answer="6|6 unitats|6U" data-hint="La xifra 6 està en les unitats: 6 × 1 = 6.">
+  <div class="quiz-question">✍️ Quin valor en unitats té la xifra subratllada a: 98<u>6</u> ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_1_q1d" data-answer="50000|5 desenes de millar|5DM" data-hint="La xifra 5 està en les desenes de millar: 5 × 10.000 = 50.000 unitats.">
+  <div class="quiz-question">✍️ Quin valor en unitats té la xifra subratllada a: <u>5</u>4.300 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Descomposició Polinòmica Inversa
+
+Escriu el nombre complet que correspon a cadascuna de les expressions polinòmiques:
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_1_q3a" data-answer="8354" data-hint="8.000 + 300 + 50 + 4 = 8.354.">
+  <div class="quiz-question">✍️ Quin nombre és: (8 × 10³) + (3 × 10²) + (5 × 10¹) + 4 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_1_q3b" data-answer="60209" data-hint="60.000 + 0 milers + 200 + 0 desenes + 9 = 60.209.">
+  <div class="quiz-question">✍️ Quin nombre és: (6 × 10⁴) + (2 × 10²) + 9 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -324,19 +391,112 @@ $$32 \times 23 + 18 = 736 + 18 = 754 \quad \text{(Correcte!)}$$
 
 ### ✍️ Activitats d'Aprenentatge
 
-1. **Calcula les següents sumes i restes:**
-   - a) $348 + 925$
-   - b) $1.405 - 867$
-   - c) $12.340 - 5.789$
 
-2. **Realitza les multiplicacions:**
-   - a) $234 \times 15$
-   - b) $1.042 \times 36$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Resol les divisions i aplica la prova per verificar el resultat:**
-   - a) $840 : 6$
-   - b) $957 : 24$
-   - c) $1.520 : 35$
+
+#### 1. Sumes i Restes amb Nombres Naturals
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q1a" data-answer="1273" data-hint="Suma per columnes: 8+5=13 (portem 1); 4+2+1=7; 3+9=12 -> 1.273.">
+  <div class="quiz-question">✍️ Calcula la suma: 348 + 925</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q1b" data-answer="538" data-hint="15 - 7 = 8; 9 - 6 = 3; 13 - 8 = 5 -> 538.">
+  <div class="quiz-question">✍️ Calcula la resta amb préstec: 1.405 - 867</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q1c" data-answer="6551" data-hint="12.340 - 5.789 = 6.551.">
+  <div class="quiz-question">✍️ Calcula la resta: 12.340 - 5.789</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Multiplicacions
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q2a" data-answer="3510" data-hint="234 × 10 = 2340; 234 × 5 = 1170; 2340 + 1170 = 3.510.">
+  <div class="quiz-question">✍️ Calcula el producte: 234 × 15</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q2b" data-answer="37512" data-hint="1.042 × 36 = 37.512.">
+  <div class="quiz-question">✍️ Calcula el producte: 1.042 × 36</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 3. Divisions i Prova del Residu
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q3a" data-answer="140" data-hint="840 : 6 = 140 (residu 0).">
+  <div class="quiz-question">✍️ Calcula la divisió exacta: 840 : 6</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q3b" data-answer="39" data-hint="24 × 39 = 936; 957 - 936 = 21 de residu.">
+  <div class="quiz-question">✍️ Quin és el quocient enter de: 957 : 24 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_2_q3c" data-answer="43" data-hint="35 × 43 = 1.505; 1.520 - 1.505 = 15 de residu.">
+  <div class="quiz-question">✍️ Quin és el quocient enter de: 1.520 : 35 ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -431,17 +591,108 @@ Calcular: $10 \cdot [(6 - 5) + (9 - 4)]$
 
 ### ✍️ Activitats d'Aprenentatge
 
-1. **Aplica la propietat distributiva i resol:**
-   - a) $5 \cdot (6 + 3)$
-   - b) $4 \cdot (10 - 2)$
-   - c) $3 \cdot (8 + 12)$
 
-2. **Calcula respectant la jerarquia d'operacions:**
-   - a) $5 \cdot 4 + 2 \cdot 3$
-   - b) $20 : 5 - 8 : 2$
-   - c) $27 : (12 - 9) - 4$
-   - d) $19 + 3 \cdot [5 + (10 - 8)]$
-   - e) $25 - 2 \cdot [(9 - 7) \cdot 3] + (16 - 8)$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Propietat Distributiva
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q1a" data-answer="45" data-hint="5·6 + 5·3 = 30 + 15 = 45.">
+  <div class="quiz-question">✍️ Aplica la distributiva i resol: 5 · (6 + 3)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q1b" data-answer="32" data-hint="4·10 - 4·2 = 40 - 8 = 32.">
+  <div class="quiz-question">✍️ Aplica la distributiva i resol: 4 · (10 - 2)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q1c" data-answer="60" data-hint="3·8 + 3·12 = 24 + 36 = 60.">
+  <div class="quiz-question">✍️ Aplica la distributiva i resol: 3 · (8 + 12)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Jerarquia d'Operacions Combinades
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q2a" data-answer="26" data-hint="Primer multiplicacions: 20 + 6 = 26.">
+  <div class="quiz-question">✍️ Calcula segons la jerarquia: 5 · 4 + 2 · 3</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q2b" data-answer="0" data-hint="Primer divisions: 4 - 4 = 0.">
+  <div class="quiz-question">✍️ Calcula segons la jerarquia: 20 : 5 - 8 : 2</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q2c" data-answer="5" data-hint="Parèntesi primer: 27 : 3 - 4 = 9 - 4 = 5.">
+  <div class="quiz-question">✍️ Calcula amb parèntesi: 27 : (12 - 9) - 4</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q2d" data-answer="40" data-hint="Interior: 10 - 8 = 2; Claudàtor: 5 + 2 = 7; Multiplicació: 3 · 7 = 21; Suma: 19 + 21 = 40.">
+  <div class="quiz-question">✍️ Calcula amb claudàtor: 19 + 3 · [5 + (10 - 8)]</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_3_q2e" data-answer="21" data-hint="Parèntesis: (9-7)=2 i (16-8)=8; Claudàtor: [2·3]=6; Multiplicació: 2·6=12; Operacions: 25 - 12 + 8 = 21.">
+  <div class="quiz-question">✍️ Calcula: 25 - 2 · [(9 - 7) · 3] + (16 - 8)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -520,23 +771,108 @@ Només cal escriure l'$1$ seguit de tants zeros com indique l'exponent:
 
 ### ✍️ Activitats d'Aprenentatge
 
-1. **Calcula el valor de les següents potències:**
-   - a) $2^4$
-   - b) $5^3$
-   - c) $10^4$
-   - d) $3^3$
-   - e) $7^0$
 
-2. **Redueix a una sola potència aplicant les propietats:**
-   - a) $5^2 \cdot 5^4 =$
-   - b) $3^8 : 3^5 =$
-   - c) $(2^3)^2 =$
-   - d) $4^2 \cdot 5^2 =$
-   - e) $18^3 : 6^3 =$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Resol aquest problema amb potències:**
-   - En una papereria hi ha $4$ prestatgeries. Cada prestatgeria té $4$ lleixes, i en cada lleixa hi ha $4$ caixes amb $4$ retoladors cadascuna.
-   - Expressa en forma d'una sola potència el nombre total de retoladors i calcula el resultat.
+
+#### 1. Càlcul de Potències Bàsiques
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q1a" data-answer="16" data-hint="2 × 2 × 2 × 2 = 16.">
+  <div class="quiz-question">✍️ Calcula el valor de la potència: 2⁴</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q1b" data-answer="125" data-hint="5 × 5 × 5 = 125.">
+  <div class="quiz-question">✍️ Calcula el valor de la potència: 5³</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q1c" data-answer="10000" data-hint="L'1 seguit de 4 zeros = 10.000.">
+  <div class="quiz-question">✍️ Calcula la potència de 10: 10⁴</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q1d" data-answer="27" data-hint="3 × 3 × 3 = 27.">
+  <div class="quiz-question">✍️ Calcula: 3³</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q1e" data-answer="1" data-hint="Per conveni matemàtic internacional, a⁰ = 1 per a qualsevol a ≠ 0.">
+  <div class="quiz-question">✍️ Quin és el valor de qualsevol nombre elevat a zero: 7⁰ ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+---
+
+#### 2. Propietats dels Exponents i Problema de Taller
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q2a" data-answer="6" data-hint="Es manté la base 5 i se sumen exponents: 2 + 4 = 6.">
+  <div class="quiz-question">✍️ Producte de la mateixa base: 5² · 5⁴ (escriu el valor de l'exponent final)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q2b" data-answer="27" data-hint="Es resten exponents: 3^(8-5) = 3³ = 27.">
+  <div class="quiz-question">✍️ Divisió de la mateixa base: 3⁸ : 3⁵ (escriu el valor final calculat)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_4_q3" data-answer="256" data-hint="Calcula 4 × 4 × 4 × 4 = 256 retoladors.">
+  <div class="quiz-question">✍️ En una botiga hi ha 4 prestatgeries, cadascuna amb 4 lleixes, 4 caixes per lleixa i 4 retoladors per caixa. Quants retoladors hi ha en total (4⁴)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -552,6 +888,14 @@ Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, rep
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Valor posicional i descomposició polinòmica en entorns tecnològics
@@ -562,6 +906,17 @@ En el magatzem central de manteniment informàtic es rep una gran comanda de car
    $$14.856 = (1 \cdot 10^4) + (4 \cdot 10^3) + (8 \cdot 10^2) + (5 \cdot 10^1) + (6 \cdot 10^0)$$
 3. Si un operari canvia per error la xifra de les centenes ($8$) per la xifra de les unitats ($6$), quin nou nombre s'obté? Quina és la diferència econòmica si cada cargol té un cost de $0{,}05\text{ €}$?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_ex1_3" data-answer="9.90|9.9|9,90|9,9" data-hint="Diferència de peces: 14.856 - 14.658 = 198 cargols. Cost: 198 × 0,05 € = 9,90 €.">
+  <div class="quiz-question">✍️ Exercici 1.3: Si un operari canvia per error les centenes (8) per les unitats (6), quin és el sobrecost econòmic en euros si cada cargol costa 0,05 € (198 cargols × 0,05 €)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 2: Jerarquia d'operacions combinades amb signes d'agrupació
 Resol cadascuna de les següents operacions combinades mostrant tots els passos intermedis segons la jerarquia oficial d'operacions (1r parèntesis/claudàtors, 2n potències, 3r multiplicacions/divisions, 4t sumes/restes):
 1. **Expressió A:**
@@ -570,6 +925,28 @@ Resol cadascuna de les següents operacions combinades mostrant tots els passos 
    $$B = 5 \cdot (4^2 - 6) : 2 + [35 - (8 \cdot 3 - 4)]$$
 3. **Expressió C:**
    $$C = 120 : [2 \cdot (18 - 3) - 20] + 7 \cdot 3^2$$
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_ex2_b" data-answer="40" data-hint="B = 5 · 10 : 2 + [35 - 20] = 25 + 15 = 40.">
+  <div class="quiz-question">✍️ Exercici 2 (Expressió B): Quin és el valor final de B = 5 · (4² - 6) : 2 + [35 - (8 · 3 - 4)] ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_ex2_c" data-answer="75" data-hint="C = 120 : [30 - 20] + 63 = 120 : 10 + 63 = 12 + 63 = 75.">
+  <div class="quiz-question">✍️ Exercici 2 (Expressió C): Quin és el valor final de C = 120 : [2 · (18 - 3) - 20] + 7 · 3² ?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 3: Lleis dels exponents i simplificació a potència única
 Aplica les propietats de les potències de nombres naturals per reduir cadascuna de les expressions a una sola potència de base irreductible (no calcules el valor final enorme, només simplifica la base i l'exponent):
@@ -582,6 +959,17 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
 4. Determina el valor exacte de: $18^0 + 7^1 - (12^3 : 12^3)$.
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_ex3_4" data-answer="7" data-hint="18⁰ = 1; 7¹ = 7; 12³ : 12³ = 1. Per tant: 1 + 7 - 1 = 7.">
+  <div class="quiz-question">✍️ Exercici 3.4: Determina el valor exacte de: 18⁰ + 7¹ - (12³ : 12³)</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
@@ -626,6 +1014,28 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
      $$345 = (16 \cdot c) + r \quad \text{i comprova que} \quad r < 16$$
   4. Si cada estudiant ha de construir latiguillos de $2\text{ metres}$, quants cables complets podrà fabricar cadascú amb els seus metres assignats?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_rep2_2" data-answer="9" data-hint="345 = (16 × 21) + 9 metres de residu.">
+  <div class="quiz-question">✍️ Repte 2.2: Quants metres exactes de cable romanen a la bobina com a residu (345 : 16)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_rep2_4" data-answer="10" data-hint="21 : 2 = 10 cables complets (amb 1 metre sobrant).">
+  <div class="quiz-question">✍️ Repte 2.4: Si cada estudiant fabrica latiguillos de 2 m, quants cables complets podrà fer amb els seus 21 metres assignats (21 : 2)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Repte 3: Auditoria energètica i càlcul de consum en kWh
 - **Objectiu:** Utilitzar el producte de nombres naturals per calcular el consum elèctric i el cost econòmic d'una instal·lació informàtica.
 - **Situació:** L'aula de grau bàsic disposa de:
@@ -641,6 +1051,17 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
   4. Si el preu de l'electricitat és de $0{,}18\text{ € per kWh}$, quin és el cost mensual d'energia de l'aula?
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u1_5_rep3_4" data-answer="50.76|50,76" data-hint="282 kWh × 0,18 €/kWh = 50,76 €.">
+  <div class="quiz-question">✍️ Repte 3.4: Si l'aula consumeix 282 kWh al mes i el preu és 0,18 €/kWh, quin és el cost mensual d'energia en euros?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 #### 🎯 Reptes d'Autocomprovació Interactiva (Self-Check)
 

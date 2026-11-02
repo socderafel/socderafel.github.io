@@ -620,7 +620,7 @@
       border-color: #ef4444;
     }
 
-    /* Components Interactius: Quizzes, Calculadores de Laboratori i Lliurament Aules */
+    /* Components Interactius: Quizzes, MCQ, V/F, Calculadores i Lliurament Aules */
     .interactive-quiz {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -632,9 +632,11 @@
       transition: all 0.2s ease;
     }
 
-    .interactive-quiz.is-solved {
-      border-left-color: #10b981;
-      background: rgba(16, 185, 129, 0.04);
+    .interactive-quiz.is-solved,
+    .interactive-mcq.is-solved,
+    .interactive-vf.is-solved {
+      border-left-color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.05) !important;
     }
 
     .quiz-question {
@@ -702,6 +704,160 @@
     .quiz-feedback.incorrect {
       display: block;
       color: #ef4444;
+    }
+
+    /* Qüestionari Tipus Test (Multiple Choice - MCQ) */
+    .interactive-mcq {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 5px solid #3b82f6;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 1.4rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+    }
+
+    .mcq-question {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .mcq-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-mcq-opt {
+      text-align: left;
+      background: var(--bg-body);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      color: var(--text-main);
+      font-size: 0.92rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-mcq-opt:hover {
+      border-color: var(--primary);
+      background: var(--code-bg);
+    }
+
+    .btn-mcq-opt.selected-correct {
+      background: #10b981 !important;
+      color: #ffffff !important;
+      border-color: #10b981 !important;
+      font-weight: 600;
+    }
+
+    .btn-mcq-opt.selected-incorrect {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    /* Activitats Vertader / Fals (V/F) */
+    .interactive-vf {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 5px solid #8b5cf6;
+      border-radius: 8px;
+      padding: 12px 18px;
+      margin: 0.9rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      transition: all 0.2s ease;
+    }
+
+    .vf-statement {
+      font-size: 0.93rem;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .vf-buttons {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .btn-vf {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-vf:hover {
+      border-color: var(--primary);
+    }
+
+    .btn-vf.selected-correct {
+      background: #10b981 !important;
+      color: #ffffff !important;
+      border-color: #10b981 !important;
+    }
+
+    .btn-vf.selected-incorrect {
+      background: #ef4444 !important;
+      color: #ffffff !important;
+      border-color: #ef4444 !important;
+    }
+
+    /* Barra de Gamificació i Progrés de l'Alumnat FPB */
+    .interactive-progress-tracker {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 1.5rem 0 2rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .tracker-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tracker-bar {
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+      height: 10px;
+      overflow: hidden;
+    }
+
+    .tracker-fill {
+      background: linear-gradient(90deg, #3b82f6, #10b981);
+      height: 100%;
+      width: 0%;
+      border-radius: 6px;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .tracker-pts {
+      font-weight: 700;
+      color: #f59e0b;
+      font-size: 0.96rem;
     }
 
     /* Simuladors i Calculadores Científiques de Laboratori */
@@ -1514,22 +1670,35 @@
         updateProgress();
       });
 
-      // 3.6. Manejador de Quizzes Interactius, Calculadores de Laboratori i Lliurament Aules
+      // 3.6. Manejador de Quizzes Interactius, MCQ, V/F, Calculadores i Lliurament Aules
       (function initInteractiveLearning() {
-        const updateAulesSummary = () => {
-          const totalQuizzes = document.querySelectorAll('.interactive-quiz').length;
-          const solvedQuizzes = document.querySelectorAll('.interactive-quiz.is-solved').length;
+        const updateAllTrackers = () => {
+          const allInteractive = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf');
+          const totalInteractive = allInteractive.length;
+          const solvedInteractive = document.querySelectorAll('.interactive-quiz.is-solved, .interactive-mcq.is-solved, .interactive-vf.is-solved').length;
           const totalChecks = document.querySelectorAll('li.task-list-item').length;
           const solvedChecks = document.querySelectorAll('li.task-list-item.is-checked').length;
+          const pct = totalInteractive > 0 ? Math.round((solvedInteractive / totalInteractive) * 100) : 100;
+          const pts = solvedInteractive * 25;
 
-          const countEl = document.querySelector('.aules-score-count');
-          if (countEl) {
-            const pct = totalQuizzes > 0 ? Math.round((solvedQuizzes / totalQuizzes) * 100) : 100;
-            countEl.textContent = `${solvedQuizzes}/${totalQuizzes} reptes completats (${pct}%) · ${solvedChecks}/${totalChecks} criteris d'autoavaluació`;
+          // Actualitzar barres de progrés a la pàgina
+          document.querySelectorAll('.interactive-progress-tracker').forEach(tracker => {
+            const countEl = tracker.querySelector('.tracker-count');
+            const ptsEl = tracker.querySelector('.tracker-pts');
+            const fillEl = tracker.querySelector('.tracker-fill');
+            if (countEl) countEl.textContent = `${solvedInteractive} de ${totalInteractive} superats (${pct}%)`;
+            if (ptsEl) ptsEl.innerHTML = `⭐ <strong>${pts} punts</strong>`;
+            if (fillEl) fillEl.style.width = `${pct}%`;
+          });
+
+          // Actualitzar targeta de lliurament per a Aules
+          const aulesCount = document.querySelector('.aules-score-count');
+          if (aulesCount) {
+            aulesCount.textContent = `${solvedInteractive}/${totalInteractive} reptes completats (${pct}%) · ${pts} punts · ${solvedChecks}/${totalChecks} criteris d'autoavaluació`;
           }
         };
 
-        // Inicialitzar tots els quizzes
+        // 1. Inicialitzar Quizzes Numèrics i de Resposta Curta
         document.querySelectorAll('.interactive-quiz').forEach((quiz, qIdx) => {
           const input = quiz.querySelector('.quiz-input');
           const checkBtn = quiz.querySelector('.btn-quiz-check');
@@ -1548,7 +1717,7 @@
                 quiz.classList.add('is-solved');
                 if (feedback) {
                   feedback.className = 'quiz-feedback correct';
-                  feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit.';
+                  feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+25 pts).';
                 }
               }
             }
@@ -1562,7 +1731,7 @@
 
             if (isCorrect) {
               feedback.className = 'quiz-feedback correct';
-              feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+1 encert).';
+              feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+25 pts).';
               quiz.classList.add('is-solved');
               try {
                 localStorage.setItem(quizId, JSON.stringify({ val: input.value.trim(), correct: true }));
@@ -1575,7 +1744,7 @@
                 localStorage.setItem(quizId, JSON.stringify({ val: input.value.trim(), correct: false }));
               } catch(e) {}
             }
-            updateAulesSummary();
+            updateAllTrackers();
           };
 
           if (checkBtn) checkBtn.addEventListener('click', checkAnswer);
@@ -1586,7 +1755,145 @@
           }
         });
 
-        // Manejador del Lliurament per a Aules
+        // 2. Inicialitzar Qüestionaris Tipus Test (MCQ)
+        document.querySelectorAll('.interactive-mcq').forEach((mcq, mIdx) => {
+          const feedback = mcq.querySelector('.quiz-feedback');
+          const rawExpected = (mcq.getAttribute('data-answer') || '').trim().toUpperCase();
+          const hint = mcq.getAttribute('data-hint') || 'Tria l\'opció més adequada segons la teoria.';
+          const mcqId = mcq.getAttribute('data-quiz-id') || ('mcq_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + mIdx);
+          const optBtns = mcq.querySelectorAll('.btn-mcq-opt');
+
+          // Carregar estat previ
+          try {
+            const saved = localStorage.getItem(mcqId);
+            if (saved) {
+              const parsed = JSON.parse(saved);
+              optBtns.forEach(btn => {
+                if (btn.getAttribute('data-opt') === parsed.selected) {
+                  if (parsed.correct) {
+                    btn.classList.add('selected-correct');
+                    mcq.classList.add('is-solved');
+                    if (feedback) {
+                      feedback.className = 'quiz-feedback correct';
+                      feedback.innerHTML = '✅ <strong>Correcte!</strong> Resposta encertada (+25 pts).';
+                    }
+                  } else {
+                    btn.classList.add('selected-incorrect');
+                    if (feedback) {
+                      feedback.className = 'quiz-feedback incorrect';
+                      feedback.innerHTML = '❌ <strong>Incorrecte.</strong> 💡 ' + hint;
+                    }
+                  }
+                }
+              });
+            }
+          } catch(e) {}
+
+          optBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const selectedOpt = (btn.getAttribute('data-opt') || '').trim().toUpperCase();
+              optBtns.forEach(b => {
+                b.classList.remove('selected-correct');
+                b.classList.remove('selected-incorrect');
+              });
+
+              const isCorrect = (selectedOpt === rawExpected);
+              if (isCorrect) {
+                btn.classList.add('selected-correct');
+                mcq.classList.add('is-solved');
+                if (feedback) {
+                  feedback.className = 'quiz-feedback correct';
+                  feedback.innerHTML = '✅ <strong>Correcte!</strong> Resposta encertada (+25 pts).';
+                }
+                try {
+                  localStorage.setItem(mcqId, JSON.stringify({ selected: selectedOpt, correct: true }));
+                } catch(e) {}
+              } else {
+                btn.classList.add('selected-incorrect');
+                mcq.classList.remove('is-solved');
+                if (feedback) {
+                  feedback.className = 'quiz-feedback incorrect';
+                  feedback.innerHTML = '❌ <strong>Incorrecte.</strong> 💡 ' + hint;
+                }
+                try {
+                  localStorage.setItem(mcqId, JSON.stringify({ selected: selectedOpt, correct: false }));
+                } catch(e) {}
+              }
+              updateAllTrackers();
+            });
+          });
+        });
+
+        // 3. Inicialitzar Activitats de Vertader / Fals (V/F)
+        document.querySelectorAll('.interactive-vf').forEach((vf, vIdx) => {
+          const feedback = vf.querySelector('.quiz-feedback');
+          const rawExpected = (vf.getAttribute('data-answer') || '').trim().toUpperCase();
+          const hint = vf.getAttribute('data-hint') || 'Analitza detingudament l\'afirmació.';
+          const vfId = vf.getAttribute('data-quiz-id') || ('vf_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + vIdx);
+          const vfBtns = vf.querySelectorAll('.btn-vf');
+
+          // Carregar estat previ
+          try {
+            const saved = localStorage.getItem(vfId);
+            if (saved) {
+              const parsed = JSON.parse(saved);
+              vfBtns.forEach(btn => {
+                if (btn.getAttribute('data-opt') === parsed.selected) {
+                  if (parsed.correct) {
+                    btn.classList.add('selected-correct');
+                    vf.classList.add('is-solved');
+                    if (feedback) {
+                      feedback.className = 'quiz-feedback correct';
+                      feedback.innerHTML = '✅ <strong>Correcte!</strong> (+25 pts)';
+                    }
+                  } else {
+                    btn.classList.add('selected-incorrect');
+                    if (feedback) {
+                      feedback.className = 'quiz-feedback incorrect';
+                      feedback.innerHTML = '❌ 💡 ' + hint;
+                    }
+                  }
+                }
+              });
+            }
+          } catch(e) {}
+
+          vfBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              const selectedOpt = (btn.getAttribute('data-opt') || '').trim().toUpperCase();
+              vfBtns.forEach(b => {
+                b.classList.remove('selected-correct');
+                b.classList.remove('selected-incorrect');
+              });
+
+              const isCorrect = (selectedOpt === rawExpected);
+              if (isCorrect) {
+                btn.classList.add('selected-correct');
+                vf.classList.add('is-solved');
+                if (feedback) {
+                  feedback.className = 'quiz-feedback correct';
+                  feedback.innerHTML = '✅ <strong>Correcte!</strong> (+25 pts)';
+                }
+                try {
+                  localStorage.setItem(vfId, JSON.stringify({ selected: selectedOpt, correct: true }));
+                } catch(e) {}
+              } else {
+                btn.classList.add('selected-incorrect');
+                vf.classList.remove('is-solved');
+                if (feedback) {
+                  feedback.className = 'quiz-feedback incorrect';
+                  feedback.innerHTML = '❌ 💡 ' + hint;
+                }
+                try {
+                  localStorage.setItem(vfId, JSON.stringify({ selected: selectedOpt, correct: false }));
+                } catch(e) {}
+              }
+              updateAllTrackers();
+            });
+          });
+        });
+
+        // 4. Manejador del Lliurament per a Aules
         const nameInput = document.querySelector('#aules-student-name');
         const copyBtn = document.querySelector('.btn-aules-copy');
         const dlBtn = document.querySelector('.btn-aules-dl');
@@ -1607,16 +1914,34 @@
           const pageTitle = document.title.split('—')[0].trim();
           const dateStr = new Date().toLocaleString('ca-ES', { dateStyle: 'long', timeStyle: 'short' });
 
-          const quizzes = document.querySelectorAll('.interactive-quiz');
+          const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf');
           let solvedCount = 0;
           let quizDetails = [];
-          quizzes.forEach((q, idx) => {
-            const qTitle = q.querySelector('.quiz-question') ? q.querySelector('.quiz-question').innerText.trim() : `Repte ${idx + 1}`;
-            const inp = q.querySelector('.quiz-input');
-            const val = inp ? inp.value.trim() : '(buit)';
-            const isSolved = q.classList.contains('is-solved');
+          allItems.forEach((el, idx) => {
+            const isSolved = el.classList.contains('is-solved');
             if (isSolved) solvedCount++;
-            quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta introduïda: ${val}  -->  [${isSolved ? 'CORRECTE ✅' : 'PENDENT ❌'}]`);
+
+            let qTitle = `Activitat ${idx + 1}`;
+            let userVal = '(buit)';
+
+            if (el.classList.contains('interactive-quiz')) {
+              const qText = el.querySelector('.quiz-question');
+              if (qText) qTitle = qText.innerText.trim();
+              const inp = el.querySelector('.quiz-input');
+              if (inp) userVal = inp.value.trim() || '(buit)';
+            } else if (el.classList.contains('interactive-mcq')) {
+              const qText = el.querySelector('.mcq-question');
+              if (qText) qTitle = qText.innerText.trim();
+              const sel = el.querySelector('.btn-mcq-opt.selected-correct, .btn-mcq-opt.selected-incorrect');
+              if (sel) userVal = sel.innerText.trim();
+            } else if (el.classList.contains('interactive-vf')) {
+              const qText = el.querySelector('.vf-statement');
+              if (qText) qTitle = qText.innerText.trim();
+              const sel = el.querySelector('.btn-vf.selected-correct, .btn-vf.selected-incorrect');
+              if (sel) userVal = sel.innerText.trim();
+            }
+
+            quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta: ${userVal}  -->  [${isSolved ? 'CORRECTE ✅ (+25 pts)' : 'PENDENT ❌'}]`);
           });
 
           const checks = document.querySelectorAll('li.task-list-item');
@@ -1624,6 +1949,9 @@
           checks.forEach(c => {
             if (c.classList.contains('is-checked')) checkedCount++;
           });
+
+          const totalPts = solvedCount * 25;
+          const pct = allItems.length > 0 ? Math.round((solvedCount / allItems.length) * 100) : 100;
 
           return [
             `============================================================`,
@@ -1633,13 +1961,13 @@
             `📚 Mòdul: Ciències Aplicades 1 (1r FPB · Grau Bàsic)`,
             `📖 Unitat: ${pageTitle}`,
             `🗓️ Data i hora: ${dateStr}`,
-            `🎯 Reptes Numèrics Resolts: ${solvedCount}/${quizzes.length} correctes (${quizzes.length > 0 ? Math.round((solvedCount/quizzes.length)*100) : 100}%)`,
+            `🏆 Puntuació Obtinguda: ${totalPts} punts (${solvedCount}/${allItems.length} reptes resolts · ${pct}%)`,
             `📋 Autoavaluació / Llista de comprovació: ${checkedCount}/${checks.length} criteris assolits`,
             `------------------------------------------------------------`,
-            `DETALL DELS REPTES INTERACTIUS:`,
-            quizDetails.length ? quizDetails.join('\n\n') : '  (Sense reptes numèrics addicionals registrats en aquesta pàgina)',
+            `DETALL DE LES ACTIVITATS INTERACTIVES:`,
+            quizDetails.length ? quizDetails.join('\n\n') : '  (Sense activitats interactives registrades en aquesta pàgina)',
             `------------------------------------------------------------`,
-            `Estat: Validat amb el motor d'autocorreció interactiu de classe.`,
+            `Estat: Validat amb el motor d'aprenentatge gamificat de classe.`,
             `============================================================`
           ].join('\n');
         };
@@ -1662,6 +1990,20 @@
             const report = buildReport();
             const rawName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim().replace(/\s+/g, '_') : 'Alumne';
             const filename = `Comprovant_Aules_${rawName}_CA1.txt`;
+            const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          });
+        }
+
+        updateAllTrackers();
+      })();
             const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');

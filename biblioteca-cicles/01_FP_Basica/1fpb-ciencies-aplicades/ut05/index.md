@@ -195,17 +195,38 @@ Per obtindre directament la fracció irreductible, **dividim numerador i denomin
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula el valor de les següents fraccions d'una quantitat:**
-   - a) Els $\frac{2}{3}$ de $60\text{ litres}$
-   - b) Els $\frac{5}{8}$ de $320\text{ €}$
 
-2. **Comprova si són equivalents les següents parelles de fraccions:**
-   - a) $\frac{4}{7}$ i $\frac{12}{21}$
-   - b) $\frac{3}{5}$ i $\frac{9}{20}$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-3. **Simplifica fins a obtindre la fracció irreductible:**
-   - a) $\frac{36}{48}$
-   - b) $\frac{75}{100}$
+
+#### 1. Concepte de Fracció i Fracció d'una Quantitat
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_1_q1" data-answer="3" data-hint="El numerador indica el nombre de parts que prenem (3).">
+  <div class="quiz-question">✍️ Si dividim una pizza en 8 porcions iguals i en mengem 3, quin nombre ocupa el lloc del numerador (3/8)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_1_q2" data-answer="40" data-hint="Divideix pel denominador i multiplica pel numerador: (60 : 3) × 2 = 20 × 2 = 40 €.">
+  <div class="quiz-question">✍️ Calcula la fracció d'una quantitat: quant són els 2/3 de 60 € d'una comanda?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -282,11 +303,38 @@ $$2 - \frac{3}{5} + \frac{7}{10}$$
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula i simplifica el resultat:**
-   - a) $\frac{2}{3} + \frac{5}{6}$
-   - b) $\frac{7}{8} - \frac{3}{4}$
-   - c) $\frac{5}{12} + \frac{7}{18}$
-   - d) $1 - \frac{4}{7}$
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Fraccions Equivalents i Simplificació
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_2_q1" data-answer="3" data-hint="18 : 6 = 3; 24 : 6 = 4 -> la fracció irreductible és 3/4.">
+  <div class="quiz-question">✍️ Simplifica la fracció 18/24 dividint numerador i denominador entre 6: quin és el nou numerador irreductible (3/4)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u5_2_vf1" data-answer="V" data-hint="VERTADER: Els productes creuats donen exactament 24, per tant són equivalents.">
+  <span class="vf-statement"><strong>Les fraccions 2/3 i 8/12 són equivalents (comprova multiplicant en creu: 2 × 12 = 3 × 8 = 24).</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -363,15 +411,49 @@ $$\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula i simplifica:**
-   - a) $\frac{3}{8} \cdot \frac{4}{5}$
-   - b) $\frac{9}{10} \cdot \frac{5}{3}$
-   - c) $6 \cdot \frac{5}{12}$
 
-2. **Calcula les següents divisions:**
-   - a) $\frac{5}{7} : \frac{10}{21}$
-   - b) $\frac{2}{9} : \frac{4}{3}$
-   - c) $3 : \frac{6}{5}$
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Operacions amb Fraccions
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_3_q1" data-answer="3/4|0.75|0,75" data-hint="Com que el denominador és 4, se sumen numeradors: 1 + 2 = 3 -> 3/4.">
+  <div class="quiz-question">✍️ Suma amb el mateix denominador: 1/4 + 2/4 (escriu '3/4' o '0.75')</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_3_q2" data-answer="5/6" data-hint="Denominador comú MCM(2,3) = 6: 3/6 + 2/6 = 5/6.">
+  <div class="quiz-question">✍️ Suma amb diferent denominador: 1/2 + 1/3 (escriu la fracció resultant amb denominador 6: '5/6')</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_3_q3" data-answer="7/12" data-hint="Denominador comú MCM(4,6) = 12: 9/12 - 2/12 = 7/12.">
+  <div class="quiz-question">✍️ Resta de fraccions: 3/4 - 1/6 (escriu la fracció resultant amb denominador 12: '7/12')</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -460,10 +542,49 @@ $$2 - \frac{11}{10} = \frac{20}{10} - \frac{11}{10} = \mathbf{\frac{9}{10}}$$
 
 ### ✏️ Exercicis Pràctics
 
-1. **Calcula i simplifica:**
-   - a) $\frac{3}{5} : \frac{2}{3} - \frac{1}{10}$
-   - b) $\frac{5}{6} - \frac{1}{3} \cdot \left( \frac{3}{4} + \frac{1}{2} \right)$
-   - c) $\left( 2 - \frac{1}{3} \right) : \left( \frac{1}{2} + \frac{1}{4} \right)$
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
+
+#### 1. Operacions Combinades amb Fraccions
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_4_q1" data-answer="4/5|0.8|0,8" data-hint="Divisió primer: 3/5 : 2/3 = 9/10. Resta: 9/10 - 1/10 = 8/10 = 4/5 (o 0,8).">
+  <div class="quiz-question">✍️ Calcula i simplifica: (3/5 : 2/3) - 1/10 (escriu la fracció simplificada '4/5' o '0.8')</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_4_q2" data-answer="5/12" data-hint="Parèntesi primer: 3/4 + 2/4 = 5/4; Multiplicació: 1/3 · 5/4 = 5/12; Resta: 10/12 - 5/12 = 5/12.">
+  <div class="quiz-question">✍️ Calcula: 5/6 - 1/3 · (3/4 + 1/2) (escriu la fracció amb denominador 12: '5/12')</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_4_q3" data-answer="20/9" data-hint="Parèntesi esquerre: 6/3 - 1/3 = 5/3; Dret: 2/4 + 1/4 = 3/4; Divisió: 5/3 : 3/4 = 20/9.">
+  <div class="quiz-question">✍️ Calcula: (2 - 1/3) : (1/2 + 1/4) (escriu la fracció irreductible '20/9')</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -487,6 +608,14 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Fraccions equivalents, productes creuats i fracció irreductible
@@ -498,6 +627,17 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
    $$\frac{x}{12} = \frac{15}{20} \qquad \frac{9}{x} = \frac{27}{45} \qquad \frac{8}{14} = \frac{20}{x}$$
 3. Simplifica cadascuna de les següents fraccions fins a obtenir la seua fracció irreductible calculant l'$\text{MCD}$ de numerador i denominador:
    $$F_1 = \frac{72}{108} \qquad F_2 = \frac{140}{210} \qquad F_3 = \frac{198}{264}$$
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_5_ex1" data-answer="4/5|0.8|0,8" data-hint="Divideix numerador i denominador entre MCD(48, 60) = 12 -> 4/5 (o 0,8).">
+  <div class="quiz-question">✍️ Exercici 1: Simplifica la fracció 48/60 fins a fracció irreductible (escriu '4/5' o '0.8'):</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 2: Suma i resta de fraccions amb mínim comú denominador
 Resol les següents operacions reduint primerament a comú denominador mitjançant l'$\text{MCM}$ i simplifica el resultat final:
@@ -556,6 +696,28 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
   3. Quants mil·lilitres d'aigua destil·lada cal afegir per completar el flascó?
   4. Si per a una neteja intensiva s'utilitzen $\dfrac{2}{5}$ del contingut del flascó preparat, quants mil·lilitres de dissolució s'han gastat i quants en queden disponibles?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_5_rep1_dades" data-answer="250" data-hint="500 × 1/2 = 250 GB.">
+  <div class="quiz-question">✍️ Repte 1: En un disc SSD de 500 GB, quants GB ocupa la partició de dades si representa 1/2 de la capacitat?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_5_rep1_lliure" data-answer="50" data-hint="500 × 1/10 = 50 GB.">
+  <div class="quiz-question">✍️ Repte 1: Quants GB queden d'espai lliure sense assignar si representen 1/10 de la capacitat?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Repte 2: Particionament lògic d'un disc sòlid NVMe i espai lliure
 - **Objectiu:** Modelar el repartiment proporcional d'un recurs físic i calcular la fracció i capacitat sobrant.
 - **Situació:** En un equip de taller d'FP Bàsica s'instal·la un disc SSD NVMe amb una capacitat neta útil de $960\text{ GB}$. Es planifica la següent distribució de particions:
@@ -573,6 +735,17 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
      - Espai de Còpies de Seguretat ($\text{GB}$).
      - Espai Lliure no assignat ($\text{GB}$).
   4. Suma els quatre valors obtinguts en GB per comprovar que el total suma exactament $960\text{ GB}$.
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u5_5_rep2" data-answer="25" data-hint="(150 : 600) × 100 = 25%.">
+  <div class="quiz-question">✍️ Repte 2: Quin percentatge (%) de dissolució representa mesclar 150 ml d'alcohol isopropílic en 600 ml de volum total?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Repte 3: Control d'inventari i consum progressiu de connectors RJ45
 - **Objectiu:** Resoldre problemes de consum encadenat ("fracció del que queda") en la gestió de material de xarxa.

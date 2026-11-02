@@ -365,47 +365,79 @@ A les grans ciutats, durant els períodes d'anticicló a l'hivern (quan no plou 
 
 ### 📝 Butlletí d'Activitats d'Avaluació
 
-#### Activitats de Relació i Raonament
 
-1. **Per què és incorrecte dir que l'efecte d'hivernacle és un fenomen exclusivament dolent i perjudicial?**
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-2. **Relaciona cada problema ambiental amb el gas o causa corresponent:**
-   - a) Forat de la capa d'ozó $\longrightarrow$
-   - b) Pluja àcida $\longrightarrow$
-   - c) Escalfament global $\longrightarrow$
+
+#### 1. Activitats de Vertader (V) o Fals (F) sobre l'Atmosfera
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u8_4_vf1" data-answer="V" data-hint="VERTADER: El nitrogen representa el 78% de l'aire, seguit per l'oxigen amb un 21%.">
+  <span class="vf-statement"><strong>a) El gas nitrogen (N₂) és el component més abundant de l'aire atmosfèric sec amb un 78% del volum total.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u8_4_vf2" data-answer="F" data-hint="FALS: L'efecte d'hivernacle natural és indispensable per a la vida, ja que manté una temperatura mitjana agradable de +15 °C. Sense ell, la Terra es congelaria a -18 °C.">
+  <span class="vf-statement"><strong>b) L'efecte d'hivernacle natural és un procés nociu que hauríem d'eliminar al 100% de la Terra.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u8_4_vf3" data-answer="V" data-hint="VERTADER: El protocol de Montreal de 1987 va prohibir els CFCs per permetre la regeneració gradual de l'ozó estratosfèric.">
+  <span class="vf-statement"><strong>c) Els gasos CFC (clorofluorocarbonis) d'antics aerosols i refrigerants van ser els principals causants del forat de la capa d'ozó.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
-#### Qüestionari d'Autoavaluació Tipus Test
+#### 2. Qüestionari d'Autoavaluació Tipus Test
 
-**1. Quin és el gas més abundant de l'aire que respirem?**
-- A) L'oxigen ($21\%$)
-- B) El nitrogen ($78\%$)
-- C) El diòxid de carboni ($50\%$)
-- D) L'ozó ($10\%$)
 
-**2. A quina capa de l'atmosfera tenen lloc tots els fenòmens meteorològics com la pluja i el vent?**
-- A) A l'estratosfera
-- B) A la troposfera
-- C) A la mesosfera
-- D) A la termosfera
+<div class="interactive-mcq" data-quiz-id="ca1_u8_4_mcq1" data-answer="B" data-hint="La troposfera conté el 80% de tota la massa d'aire de l'atmosfera i és on es desenvolupa el clima i la vida.">
+  <p class="mcq-question"><strong>1. En quina capa inferior de l'atmosfera es concentren el vapor d'aigua i pràcticament tots els fenòmens meteorològics (núvols, vents i pluges)?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) A la mesosfera</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) A la troposfera (cota 0 fins a 12 km)</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) A la termosfera</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) A l'estratosfera</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
-**3. En un mapa meteorològic, un anticicló (alta pressió) sol anar associat a:**
-- A) Pluges intenses i tempestes amb llamps
-- B) Temps estable, seré i assolellat
-- C) Vents huracanats de gran velocitat
-- D) Nevades abundants
 
-**4. Quin acord internacional va aconseguir frenar la destrucció de la capa d'ozó prohibint els gasos CFC?**
-- A) El Protocol de Mont-real
-- B) L'Acord de Kyoto
-- C) La Cimera de París
-- D) El Tractat d'Apol·lo
 
----
-
-> [!TIP]
-> **Següent pas:** Continua amb el [**8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0805.html) per resoldre els càlculs de gradient tèrmic vertical, petjada de carboni en servidors, sensòrica IoT (BMP280/DHT22) i interpretació de mapes d'isòbares.
+<div class="interactive-mcq" data-quiz-id="ca1_u8_4_mcq2" data-answer="B" data-hint="1 atmosfera estàndard equival a 1.013,25 hPa (o mil·libars) i a 760 mmHg.">
+  <p class="mcq-question"><strong>2. Quina és la pressió atmosfèrica estàndard mitjana a nivell del mar comprovada per l'experiment de Torricelli?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) 500 hPa</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) 1.013 hPa (equivalent a 760 mm de mercuri)</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) 2.500 hPa</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) 100 hPa</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -421,6 +453,14 @@ Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, rep
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Gradient tèrmic vertical en la troposfera
@@ -431,6 +471,17 @@ $$T(h) = T_0 - \left(\frac{h}{100} \cdot 0{,}65\right)$$
    - Calcula la temperatura de l'aire a l'altitud de creuer d'un avió comercial que vola a $h = 10.500\text{ metres}$ sobre la Comunitat Valenciana.
 2. Si un globus sonda meteorològic mesura a nivell de terra $+18\text{ °C}$ i durant el seu ascens detecta una temperatura de $-34\text{ °C}$, a quina altitud exacta es troba l'aparell?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u8_5_ex1" data-answer="7" data-hint="Descens tèrmic: 20 × 0,65 = 13 °C. Temperatura: 20 - 13 = 7 °C.">
+  <div class="quiz-question">✍️ Exercici 1: Si a nivell del mar fa 20 °C, quina temperatura en °C hi haurà a 2.000 m d'altitud (gradient de 0,65 °C / 100 m)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 2: Pressió atmosfèrica, experiment de Torricelli i conversió d'unitats
 L'experiment històric d'Evangelista Torricelli (1643) va demostrar que la pressió atmosfèrica equilibra exactament una columna de mercuri d'una alçada $h = 760\text{ mm}$:
 $$P = \rho_{\text{Hg}} \cdot g \cdot h$$
@@ -440,6 +491,17 @@ Prenent la densitat del mercuri $\rho_{\text{Hg}} = 13.550\text{ kg/m}^3$ i la g
 2. Converteix el valor calculat a hectopascals ($\text{hPa}$, recordant que $1\text{ hPa} = 100\text{ Pa}$) i a barres ($1\text{ bar} = 100.000\text{ Pa}$).
 3. Si en lloc de mercuri s'haguera utilitzat aigua dolça líquida ($\rho_{\text{aigua}} = 1.000\text{ kg/m}^3$), quina alçada hauria de tenir el tub de vidre per equilibrar la mateixa pressió atmosfèrica?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u8_5_ex2" data-answer="760" data-hint="L'altura mitjana de la columna de mercuri a nivell del mar és de 760 mmHg.">
+  <div class="quiz-question">✍️ Exercici 2: Quants mil·límetres de mercuri (mmHg) mesura exactament la pressió d'1 atmosfera en l'experiment de Torricelli?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 3: Càlcul d'emissions de $\text{CO}_2$ i petjada de carboni en servidors
 Un servidor de base de dades consumeix una potència elèctrica mitjana continuada de $350\text{ W}$ durant les $24\text{ hores}$ del dia, els $365\text{ dies}$ de l'any:
 1. Calcula l'energia elèctrica anual total consumida pel servidor en quilowatts-hora ($\text{kWh}$):
@@ -448,6 +510,28 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
 3. Si un arbre jove absorbeix de mitjana uns $20\text{ kg de CO}_2$ a l'any, quants arbres caldria plantar per compensar l'impacte climàtic del funcionament d'aquest equip?
 
 ---
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u8_5_ex3_co2" data-answer="657" data-hint="2.628 × 0,25 = 657 kg de CO₂ anuals.">
+  <div class="quiz-question">✍️ Exercici 3.2: Quants kg anuals de CO₂ genera un servidor que consumeix 2.628 kWh l'any amb factor d'emissió de 0,25 kg/kWh (2.628 × 0,25)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u8_5_ex3_arbres" data-answer="33" data-hint="657 : 20 = 32,85 (aproximadament 33 arbres joves).">
+  <div class="quiz-question">✍️ Exercici 3.3: Si cada arbre absorbeix 20 kg de CO₂/any, quants arbres caldria plantar per compensar aquests 657 kg (657 : 20 aprox)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 

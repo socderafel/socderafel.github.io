@@ -345,46 +345,79 @@ La **petjada hídrica** és el volum total d'aigua dolça utilitzat directa o in
 
 ### 📝 Butlletí d'Activitats d'Avaluació
 
-#### Activitats de Relació i Comprensió
 
-1. **Quina diferència fonamental hi ha entre una ETAP i una EDAR?**
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-2. **Què és l'eutrofització d'una massa d'aigua?**
 
-3. **Per què diem que el gel d'aigua té una densitat anòmala i quina importància té per a la vida marina?**
+#### 1. Activitats de Vertader (V) o Fals (F) sobre la Hidrosfera
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u9_4_vf1" data-answer="V" data-hint="VERTADER: Més del 68% de l'aigua dolça està congelada en glaceres i casquets polars, i prop del 30% és aigua subterrània profunda.">
+  <span class="vf-statement"><strong>a) L'aigua dolça superficial líquida (rius i llacs) representa menys de l'1% de tota l'aigua dolça del planeta.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u9_4_vf2" data-answer="V" data-hint="VERTADER: L'aigua assoleix la màxima densitat a 4 °C líquida. El gel té estructura cristal·lina oberta i sura.">
+  <span class="vf-statement"><strong>b) El gel d'aigua té una densitat anòmala menor que la de l'aigua líquida, motiu pel qual sura protegint la vida aquàtica inferior del fred extrem.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u9_4_vf3" data-answer="F" data-hint="FALS: La instal·lació que fa l'aigua potable és l'ETAP (Estació de Tractament d'Aigua Potable). L'EDAR s'encarrega de depurar les aigües residuals usades de clavegueram abans d'abocar-les al medi.">
+  <span class="vf-statement"><strong>c) Una EDAR és la instal·lació que recull l'aigua bruta d'un pantà o riu per potabilitzar-la i enviar-la a les aixetes.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
-#### Qüestionari Tipus Test
+#### 2. Qüestionari d'Autoavaluació Tipus Test
 
-**1. Quin percentatge de tota l'aigua del planeta Terra és aigua dolça?**
-- A) El 50%
-- B) El 97%
-- C) Només el 3%
-- D) El 25%
 
-**2. En quin tram d'un riu és dominant l'acció d'erosió excavant gorges estretes en forma de "V"?**
-- A) Al curs baix
-- B) Al curs mitjà
-- C) Al curs alt (a la muntanya)
-- D) A la desembocadura
+<div class="interactive-mcq" data-quiz-id="ca1_u9_4_mcq1" data-answer="B" data-hint="L'agricultura i la producció d'aliments és el gran consumidor d'aigua dolça del planeta.">
+  <p class="mcq-question"><strong>1. Quin sector econòmic concentra aproximadament el 70% del consum d'aigua dolça global de la humanitat?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) El sector energètic</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) L'agricultura i els cultius de regadiu</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) L'ús domèstic a les llars</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) La mineria industrial</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
-**3. Què és un aqüífer?**
-- A) Un tub de plàstic per a regar
-- B) Una acumulació d'aigua subterrània dolça atrapada en roques poroses sobre una capa impermeable
-- C) Una alga marina microscòpica
-- D) Un núvol molt baix
 
-**4. Com s'anomena la fase del cicle de l'aigua en la qual les plantes alliberen vapor a l'atmosfera a través de les fulles?**
-- A) Fotosíntesi
-- B) Evapotranspiració
-- C) Infiltració
-- D) Esgorrentia
 
----
-
-> [!TIP]
-> **Següent pas:** Continua amb el [**9.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0905.html) per resoldre els càlculs de dissipació tèrmica per refrigeració líquida en CPUs, protocol de manteniment de circuits AIO i control de depuració d'aigües residuals (EDAR).
+<div class="interactive-mcq" data-quiz-id="ca1_u9_4_mcq2" data-answer="B" data-hint="A 4 °C l'aigua adquireix la seua màxima compacitat molecular abans d'expandir-se en congelar-se cap als 0 °C.">
+  <p class="mcq-question"><strong>2. A quina temperatura exacta té l'aigua líquida la seua màxima densitat física (1.000 kg/m³)?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) A 0 °C</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) A 4 °C</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) A 20 °C</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) A 100 °C</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -400,6 +433,14 @@ Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, rep
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Balanç hídric global i aigua dolça disponible
@@ -414,6 +455,17 @@ El volum total d'aigua a la Terra s'estima en $V_{\text{total}} = 1.386.000.000\
    Calcula el volum d'aigua dolça superficial en $\text{km}^3$ disponible per al consum directe de la biosfera.
 3. Quina fracció en percentatge representa aquesta aigua superficial accessible respecte al volum total d'aigua del planeta Terra?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u9_5_ex1" data-answer="38808000" data-hint="1.386.000.000 × 0,028 = 38.808.000 km³ d'aigua dolça.">
+  <div class="quiz-question">✍️ Exercici 1: Quants km³ d'aigua dolça conté la Terra si el volum total és 1.386.000.000 km³ i l'aigua dolça és el 2,8% (1.386.000.000 × 0,028)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 2: Termodinàmica de dissipació tèrmica en refrigeració líquida
 L'energia tèrmica dissipada per una massa de líquid ve donada per l'equació fonamental de la calorimetria:
 $$Q = m \cdot c_e \cdot \Delta T$$
@@ -421,6 +473,17 @@ Un circuit de refrigeració líquida de taller utilitza un cabal d'aigua desioni
 1. Quina energia tèrmica total en Joules ($Q$) ha de dissipar el circuit al llarg de $10\text{ minuts}$ de funcionament al 100% de càrrega?
 2. Si el circuit conté una massa de $m = 1{,}5\text{ kg}$ d'aigua líquida i durant eixos 10 minuts el radiador estiguera apagat, quant augmentaria la temperatura de l'aigua ($\Delta T$)?
 3. Si en lloc d'aigua s'haguera utilitzat un oli mineral sintètic amb una calor específica molt inferior ($c_{e,\text{oli}} = 2.000\text{ J/(kg}\cdot\text{°C)}$), quant augmentaria la temperatura en les mateixes condicions? Per què l'aigua és insubstituïble com a refrigerant?
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u9_5_ex2" data-answer="4184|4180|4200" data-hint="La calor específica de l'aigua és de 4.184 J/(kg·°C).">
+  <div class="quiz-question">✍️ Exercici 2: Quina és la calor específica de l'aigua en J/(kg·°C) que la converteix en un refrigerant òptim?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 3: Mesura de conductivitat i corrosió galvànica
 1. En el laboratori es mesura la resistència elèctrica de tres mostres líquides col·locant dos elèctrodes separats $1\text{ cm}$:
@@ -481,6 +544,17 @@ Un circuit de refrigeració líquida de taller utilitza un cabal d'aigua desioni
      $$\text{WUE} = \frac{\text{Aigua consumida (litres)}}{\text{Energia IT consumida (kWh)}} = \frac{7.500.000}{5.000.000} = \dots \text{ L/kWh}$$
   2. Si un ciutadà mitjà consumeix $135\text{ litres d'aigua al dia}$ per a ús domèstic, a quantes persones equival el consum d'aigua anual del centre de dades?
   3. Quines tecnologies alternatives de refrigeració en circuit tancat (refrigeració per immersió en líquid dielèctric o aerorefrigeradors en sec) permeten reduir el consum d'aigua de xarxa a zero?
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u9_5_rep2" data-answer="49275" data-hint="135 L/dia × 365 dies = 49.275 litres anuals.">
+  <div class="quiz-question">✍️ Repte 2: Quants litres d'aigua consumeix a l'any una persona amb una pauta domèstica de 135 L/dia (135 × 365 dies)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Repte 3: Control analític i depuració d'aigües residuals de taller (EDAR)
 - **Objectiu:** Identificar els paràmetres químics bàsics d'abocament d'aigües industrials de taller.

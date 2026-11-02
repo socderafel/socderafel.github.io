@@ -360,43 +360,79 @@ Aquestes plaques es desplacen lentament (uns quants centímetres cada any) impul
 
 ### 📝 Butlletí d'Activitats d'Avaluació
 
-#### Preguntes de Comprensió i Relació
 
-1. **Quina diferència hi ha entre l'escorça continental i l'escorça oceànica?**
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
 
-2. **Per què el nucli intern de la Terra és sòlid si està a més de $5.000\text{ }^\circ\text{C}$?**
 
-3. **Indica si les següents afirmacions són Vertaderes (V) o Falses (F):**
-   - a) L'eclipsi de Sol es produeix quan la Terra es posa entre el Sol i la Lluna.
-   - b) El moviment del nucli extern líquid de ferro genera el camp magnètic de la Terra.
-   - c) Les marees vives ocorren en Quart Creixent.
+#### 1. Activitats de Vertader (V) o Fals (F) sobre la Geosfera
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u7_4_vf1" data-answer="V" data-hint="VERTADER: L'escorça continental és menys densa i molt més gruixuda que l'oceànica.">
+  <span class="vf-statement"><strong>a) L'escorça continental és més gruixuda (30-70 km) i de composició granítica respecte a l'oceànica (5-10 km basàltica).</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u7_4_vf2" data-answer="F" data-hint="FALS: Tot i l'extrema temperatura, l'immensa pressió litostàtica manté el ferro i níquel en estat sòlid cristal·lí.">
+  <span class="vf-statement"><strong>b) El nucli intern de la Terra és líquid a causa de temperatures superiors als 5.000 °C.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
+
+<div class="interactive-vf" data-quiz-id="ca1_u7_4_vf3" data-answer="F" data-hint="FALS: Les ones S no es propaguen en fluids líquids, motiu pel qual es produeix la zona d'ombra sísmica que va permetre descobrir el nucli extern líquid.">
+  <span class="vf-statement"><strong>c) Les ones sísmiques transversals (S) tenen la capacitat de travessar líquids com el magma o el nucli extern.</strong></span>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">V</button>
+    <button type="button" class="btn-vf" data-opt="F">F</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ---
 
-#### Qüestionari Tipus Test
+#### 2. Qüestionari d'Autoavaluació Tipus Test
 
-**1. Quina és la capa més voluminosa de la Terra?**
-- A) L'escorça
-- B) El mantell
-- C) El nucli intern
-- D) La hidrosfera
 
-**2. Què anomenem epicentre d'un terratrèmol?**
-- A) El punt profund subterrani on es trenca la roca
-- B) L'aparell que mesura les ones sísmiques
-- C) El punt de la superfície terrestre situat directament sobre l'origen del sisme
-- D) L'escala numèrica de danys
+<div class="interactive-mcq" data-quiz-id="ca1_u7_4_mcq1" data-answer="B" data-hint="El mantell s'estén fins a 2.900 km de profunditat i representa el 84% del volum del nostre planeta.">
+  <p class="mcq-question"><strong>1. Quina és la capa concèntrica més voluminosa de la geosfera, concentrant més del 80% del volum terrestre?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) L'escorça</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El mantell terrestre</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) El nucli intern</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) La litosfera</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
-**3. Què és la litosfera?**
-- A) La capa d'aigua dolça
-- B) La capa rígida formada per l'escorça i el mantell superior dividida en plaques tectòniques
-- C) El gas de l'atmosfera
-- D) El centre de ferro fos de la Terra
 
----
 
-> [!TIP]
-> **Següent pas:** Continua amb el [**7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](ut0705.html) per resoldre els càlculs de fusos horaris i servidors NTP, distància a l'epicentre d'un sisme mitjançant ones P i S, i minerals crítics de la geosfera per al maquinari informàtic.
+<div class="interactive-mcq" data-quiz-id="ca1_u7_4_mcq2" data-answer="B" data-hint="Les falles són fractures de la litosfera on s'acumula tensió elàstica que s'allibera bruscament en forma de sismes.">
+  <p class="mcq-question"><strong>2. Com s'anomena la fractura o discontinuïtat tectònica de l'escorça al llarg de la qual es produeix moviment sobtat generant terratrèmols?</strong></p>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Fossa oceànica</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Falla tectònica</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Dorsal volcànica</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Plec anticlinal</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
 
 <div style="text-align: right; margin: 1.5rem 0 2rem 0;">
   <a href="#index-unitat" class="page-nav-btn" style="display: inline-block; padding: 4px 14px; font-size: 0.85rem;">⬆️ Pujar a l'Índex</a>
@@ -412,6 +448,14 @@ Aquest apartat recull el conjunt complet d'exercicis d'aplicació pràctica, rep
 
 ### 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🎮 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
+    <span class="tracker-pts">⭐ 0 punts</span>
+  </div>
+  <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
+</div>
+
 #### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 ##### Exercici 1: Fusos horaris, longitud geogràfica i sincronització de servidors
@@ -423,6 +467,17 @@ $$\omega = \frac{360^\circ}{24\text{ h}} = 15^\circ \text{ per cada hora de temp
    - Si a València són les $15:00\text{ h}$, quina hora solar és a la seu de Califòrnia?
 3. Un servidor registra un incident de ciberseguretat a les `2026-10-13T14:30:00Z` en temps universal coordinat (UTC). Quina hora local marcava el rellotge a Tòquio (Japó, fus horari $\text{UTC}+9$)?
 
+
+<div class="interactive-quiz" data-quiz-id="ca1_u7_5_ex1" data-answer="15" data-hint="360° : 24 h = 15° per cada hora de temps solar.">
+  <div class="quiz-question">✍️ Exercici 1: Quants graus de longitud geogràfica abasta cadascun dels 24 fusos horaris (360° : 24 h)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+
 ##### Exercici 2: Propagació d'ones sísmiques i distància a l'epicentre
 Quan es produeix un sisme, es generen dos tipus principals d'ones internes:
 - **Ones primàries ($P$):** Són longitudinals (de compressió), les més ràpides, amb velocitat $v_P = 8\text{ km/s}$.
@@ -432,6 +487,17 @@ Quan es produeix un sisme, es generen dos tipus principals d'ones internes:
    $$d = \Delta t \cdot \frac{v_P \cdot v_S}{v_P - v_S}$$
    Calcula la distància física exacta $d$ en quilòmetres des de l'estació sismològica fins a l'epicentre.
 3. Quantes estacions sismològiques independents calen com a mínim per determinar mitjançant triangulació la ubicació exacta d'un epicentre sobre un mapa? Justifica-ho geomètricament.
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u7_5_ex2" data-answer="160" data-hint="Distància = 20 s × 8 km/s = 160 km.">
+  <div class="quiz-question">✍️ Exercici 2: Si les ones S arriben 20 segons després de les ones P a velocitat relativa de 8 km/s, a quants km està l'epicentre (20 × 8)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Exercici 3: Pressió litostàtica en l'escorça i el mantell
 La pressió hidroestàtica o litostàtica que suporten les roques a una profunditat $h$ ve donada per l'equació fonamental:
@@ -472,6 +538,17 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
   2. Si no s'afegira el 29 de febrer cada 4 anys, quants dies de desfasament s'acumularien al cap d'un segle ($100\text{ anys}$)?
   3. Què és el protocol NTP (*Network Time Protocol*) i per què utilitza servidors d'estrat 1 connectats a rellotges atòmics i receptors GPS en lloc de confiar en el cristall de quars intern de la placa base?
   4. Què és el temps Unix / temps POSIX (segons transcorreguts des de l'1 de gener de 1970 a les 00:00:00 UTC) i per què existirà el problema de l'any 2038 en sistemes de 32 bits?
+
+
+<div class="interactive-quiz" data-quiz-id="ca1_u7_5_rep1" data-answer="86400" data-hint="24 × 3.600 = 86.400 segons al dia.">
+  <div class="quiz-question">✍️ Repte 1: Quants segons exactes té un dia complet de 24 hores (24 × 60 × 60) en el comptador de temps POSIX?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="El teu resultat...">
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
 
 ##### Repte 2: Minerals crítics de la geosfera per a la indústria de xips i electrònica
 - **Objectiu:** Identificar la procedència geològica dels materials essencials per al maquinari tecnològic.
