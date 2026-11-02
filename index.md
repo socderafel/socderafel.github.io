@@ -1,15 +1,15 @@
-# 💻 Portal Docent d'Informàtica
+# 💻 Portal Docent d'Informàtica · Curs 26/27
 
-Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de laboratori i activitats avaluables:
+Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de laboratori i activitats avaluables d'aquest curs acadèmic **2026/2027**:
 
 <div class="module-grid">
-  <div class="module-card smx">
+  <div class="module-card ca1">
     <div>
-      <span class="module-badge">2n SMX · Grau Mitjà</span>
-      <h3>🌐 Serveis en Xarxa</h3>
-      <p>Configuració de xarxa, DHCP, DNS, HTTP, transferència FTP/FTPS i accés remot SSH/SFTP en Windows Server i Ubuntu sobre AWS.</p>
+      <span class="module-badge">1r FPB · Grau Bàsic</span>
+      <h3>🔬 Ciències Aplicades 1</h3>
+      <p>Bloc de Matemàtiques, Biologia i Geologia: nombres naturals, nutrició humana, enters, divisibilitat, fraccions, univers, atmosfera i hidrosfera.</p>
     </div>
-    <a href="./serveis-en-xarxa/" class="module-btn">Entrar a Serveis en Xarxa →</a>
+    <a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/" class="module-btn">Entrar a Ciències Aplicades 1 →</a>
   </div>
 
   <div class="module-card prog">

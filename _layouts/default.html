@@ -172,6 +172,20 @@
       flex-shrink: 0;
     }
 
+    .curs-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-left: 6px;
+      vertical-align: middle;
+      letter-spacing: 0.02em;
+    }
+
     .md-header-brand svg {
       width: 22px;
       height: 22px;
@@ -639,6 +653,7 @@
     }
 
     .module-card.smx { border-top-color: #3f51b5; }
+    .module-card.ca1 { border-top-color: #7c3aed; }
     .module-card.prog { border-top-color: #00897b; }
     .module-card.inter { border-top-color: #f57c00; }
 
@@ -656,6 +671,7 @@
       width: fit-content;
     }
 
+    .module-card.ca1 .module-badge { background: #f3e8ff; color: #7c3aed; }
     .module-card.prog .module-badge { background: #e0f2f1; color: #00695c; }
     .module-card.inter .module-badge { background: #fff3e0; color: #e65100; }
 
@@ -686,6 +702,8 @@
     }
 
     .module-btn:hover { background-color: #303f9f; }
+    .module-card.ca1 .module-btn { background-color: #7c3aed; }
+    .module-card.ca1 .module-btn:hover { background-color: #6d28d9; }
     .module-card.prog .module-btn { background-color: #00897b; }
     .module-card.prog .module-btn:hover { background-color: #00695c; }
     .module-card.inter .module-btn { background-color: #f57c00; }
@@ -920,11 +938,11 @@
           <path d="M16 22 L28 32 L16 42" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
           <line x1="32" y1="42" x2="48" y2="42" stroke="#4ade80" stroke-width="5" stroke-linecap="round"/>
         </svg>
-        <span>Portal Docent d'Informàtica</span>
+        <span>Portal Docent d'Informàtica <span class="curs-badge">Curs 26/27</span></span>
       </a>
       <nav class="md-header-nav">
         <a href="{{ '/' | relative_url }}">🏠 Inici</a>
-        <a href="{{ '/serveis-en-xarxa/' | relative_url }}">🌐 Serveis en Xarxa</a>
+        <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}">🔬 Ciències Aplicades 1</a>
         <a href="{{ '/programacio/' | relative_url }}">☕ Programació</a>
         <a href="{{ '/projecte-intermodular/' | relative_url }}">🚀 Projecte Intermodular</a>
         <a href="{{ '/biblioteca-cicles/' | relative_url }}">📚 Biblioteca Cicles</a>
