@@ -1,87 +1,335 @@
 {
-  "title": "🗄️ Bases de Dades (SQL i Model E/R) — 1r DAW / DAM · Grau Superior",
+  "title": "🗄️ Bases de Dades — 1r DAW / DAM / ASIX · Grau Superior",
   "home": {
-    "label": "🏠 Inici Bases de Dades (SQL i Model E/R)",
+    "label": "🏠 Inici Bases de Dades",
     "href": "index.html"
   },
   "units": [
     {
-      "summary": "UD1 — Sistemes d'Emmagatzematge i SGBD (RA1)",
+      "summary": "UD1: Sistemes d'Emmagatzematge i SGBD (RA1)",
       "items": [
         {
-          "label": "📘 UD1: SGBD i Fonaments Relacionals",
+          "label": "📘 UT01 Completa (Portada)",
           "href": "./ut01/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 Introducció. Fitxers tradicionals i accés a dades",
+          "href": "./ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 Introducció a les Bases de Dades i Objectius",
+          "href": "./ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 Sistemes Gestors de Bases de Dades (SGBD)",
+          "href": "./ut01/ut0103.html"
+        },
+        {
+          "label": "1.4 Arquitectura ANSI/SPARC: Nivells Intern, Conceptual i Extern",
+          "href": "./ut01/ut0104.html"
+        },
+        {
+          "label": "1.5 Bases de Dades Centralitzades i Distribuïdes. Fragmentació",
+          "href": "./ut01/ut0105.html"
+        },
+        {
+          "label": "1.6 Protecció de Dades, Seguretat i Normativa RGPD / LOPD",
+          "href": "./ut01/ut0106.html"
+        },
+        {
+          "label": "1.7 Big Data, Business Intelligence i Noves Tendències",
+          "href": "./ut01/ut0107.html"
+        },
+        {
+          "label": "1.8 Quadern d'Activitats Pràctiques i Reptes Interactius",
+          "href": "./ut01/ut0108.html"
         }
       ]
     },
     {
-      "summary": "UD2 — Disseny Conceptual: Model E/R (RA6)",
+      "summary": "UD2: Disseny Conceptual: Model Entitat-Relació (E/R) (RA6)",
       "items": [
         {
-          "label": "📘 UD2: Model Entitat-Relació (E/R)",
+          "label": "📘 UT02 Completa (Portada)",
           "href": "./ut02/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 Metodologia de Disseny de Bases de Dades",
+          "href": "./ut02/ut0201.html"
+        },
+        {
+          "label": "2.2 Components del Model E/R: Entitats, Atributs i Dominis",
+          "href": "./ut02/ut0202.html"
+        },
+        {
+          "label": "2.3 Semàntica de les Relacions: Tipus de Correspondència (1:1, 1:N, M:N)",
+          "href": "./ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Eines Gràfiques de Modelatge Conceptual (Draw.io, DIA)",
+          "href": "./ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Restriccions sobre Relacions: Participació Total i Parcial",
+          "href": "./ut02/ut0205.html"
+        },
+        {
+          "label": "2.6 Model Entitat-Relació Estès (EER): Jerarquies, Especialització i Agregació",
+          "href": "./ut02/ut0206.html"
+        },
+        {
+          "label": "2.7 Quadern de Pràctiques de Modelatge E/R",
+          "href": "./ut02/ut0207.html"
         }
       ]
     },
     {
-      "summary": "UD3 — Disseny Lògic i Normalització (RA6)",
+      "summary": "UD3: Disseny Lògic: Model Relacional i Normalització (RA6)",
       "items": [
         {
-          "label": "📘 UD3: Model Relacional i Normalització",
+          "label": "📘 UT03 Completa (Portada)",
           "href": "./ut03/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 Fonaments del Model Relacional: Taules, Tuples, Atributs i Claus",
+          "href": "./ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 Transformació del Model E/R al Model Relacional (Regles 1:1, 1:N, M:N)",
+          "href": "./ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 Transformació Avançada: Relacions Reflexives i Entitats Dèbils",
+          "href": "./ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 Transformació de Jerarquies d'Especialització i Herència",
+          "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 Restriccions d'Integritat: Clau Primària, Not Null, Check i Integritat Referencial",
+          "href": "./ut03/ut0305.html"
+        },
+        {
+          "label": "3.6 Teoria de la Normalització: Anomalies de Disseny i 1a Forma Normal (1FN)",
+          "href": "./ut03/ut0306.html"
+        },
+        {
+          "label": "3.7 2a Forma Normal (2FN) i 3a Forma Normal (3FN)",
+          "href": "./ut03/ut0307.html"
+        },
+        {
+          "label": "3.8 Formes Normals Avançades: FNBC, 4FN, 5FN i Desnormalització Controlada",
+          "href": "./ut03/ut0308.html"
+        },
+        {
+          "label": "3.9 Quadern de Pràctiques de Disseny Lògic i Normalització",
+          "href": "./ut03/ut0309.html"
         }
       ]
     },
     {
-      "summary": "UD4 — Disseny Físic: SQL DDL i DCL (RA2)",
+      "summary": "UD4: Disseny Físic: SQL DDL i DCL (RA2)",
       "items": [
         {
-          "label": "📘 UD4: Definició d'Estructures (DDL/DCL)",
+          "label": "📘 UT04 Completa (Portada)",
           "href": "./ut04/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 Introducció al Llenguatge SQL i Motors Relacionals",
+          "href": "./ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Emmagatzematge Físic de la Informació i Motors de Taules",
+          "href": "./ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Tipus de Dades SQL: Numèrics, Cadenes, Dates i Booleans",
+          "href": "./ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 Llenguatge de Definició de Dades (DDL): CREATE, ALTER, DROP, TRUNCATE",
+          "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 Llenguatge de Control de Dades (DCL): CREATE USER, GRANT i REVOKE",
+          "href": "./ut04/ut0405.html"
+        },
+        {
+          "label": "4.6 Quadern de Pràctiques DDL/DCL",
+          "href": "./ut04/ut0406.html"
         }
       ]
     },
     {
-      "summary": "UD5 — Manipulació de Dades: DML i TCL (RA4)",
+      "summary": "UD5: Manipulació de Dades: SQL DML i Transaccions TCL (RA4)",
       "items": [
         {
-          "label": "📘 UD5: Tractament de Dades i Transaccions",
+          "label": "📘 UT05 Completa (Portada)",
           "href": "./ut05/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 Introducció al DML i Integritat de Dades",
+          "href": "./ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Creació de Registres: Sentència INSERT INTO",
+          "href": "./ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Esborrat de Registres: Sentència DELETE i Clàusula WHERE",
+          "href": "./ut05/ut0503.html"
+        },
+        {
+          "label": "5.4 Modificació de Registres: Sentència UPDATE amb Condicions",
+          "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Transaccions (TCL): Propietats ACID, COMMIT, ROLLBACK i Savepoints",
+          "href": "./ut05/ut0505.html"
+        },
+        {
+          "label": "5.6 Quadern de Pràctiques DML i TCL",
+          "href": "./ut05/ut0506.html"
         }
       ]
     },
     {
-      "summary": "UD6 — Consultes a Bases de Dades: DQL (RA3)",
+      "summary": "UD6: Consultes a Bases de Dades: SQL DQL (RA3)",
       "items": [
         {
-          "label": "📘 UD6: Consultes Avançades en SQL (DQL)",
+          "label": "📘 UT06 Completa (Portada)",
           "href": "./ut06/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 Estructura Bàsica d'una Consulta SQL: Clàusula SELECT i FROM",
+          "href": "./ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Consultes Simples: Filtratge amb WHERE i Operadors de Comparació",
+          "href": "./ut06/ut0602.html"
+        },
+        {
+          "label": "6.3 Operadors Especials (BETWEEN, IN, LIKE, IS NULL)",
+          "href": "./ut06/ut0603.html"
+        },
+        {
+          "label": "6.4 Camps Calculats, Àlies (AS), Ordenació (ORDER BY) i Limitació (LIMIT)",
+          "href": "./ut06/ut0604.html"
+        },
+        {
+          "label": "6.5 Consultes d'Agregat: Funcions de Resum (COUNT, SUM, AVG) i GROUP BY",
+          "href": "./ut06/ut0605.html"
+        },
+        {
+          "label": "6.6 Filtratge de Grups amb la Clàusula HAVING",
+          "href": "./ut06/ut0606.html"
+        },
+        {
+          "label": "6.7 Consultes Multitaula I: Composició Interna (INNER JOIN)",
+          "href": "./ut06/ut0607.html"
+        },
+        {
+          "label": "6.8 Consultes Multitaula II: Composició Externa (LEFT JOIN, RIGHT JOIN)",
+          "href": "./ut06/ut0608.html"
+        },
+        {
+          "label": "6.9 Subconsultes (Subqueries): Escalares, de Llista i Correlacionades",
+          "href": "./ut06/ut0609.html"
+        },
+        {
+          "label": "6.10 Vistes (CREATE VIEW) i Optimització de Consultes amb EXPLAIN",
+          "href": "./ut06/ut0610.html"
+        },
+        {
+          "label": "6.11 Quadern de Pràctiques DQL Avançat",
+          "href": "./ut06/ut0611.html"
         }
       ]
     },
     {
-      "summary": "UD7 — Programació en Servidor: PL/SQL (RA5)",
+      "summary": "UD7: Programació en Servidor: Procediments, Triggers i Cursors (RA5)",
       "items": [
         {
-          "label": "📘 UD7: Procediments, Triggers i Cursors",
+          "label": "📘 UT07 Completa (Portada)",
           "href": "./ut07/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Introducció a la Programació en SGBD: Guions SQL i Delimitadors",
+          "href": "./ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 Declaració de Variables (DECLARE) i Assignació (SET, INTO)",
+          "href": "./ut07/ut0702.html"
+        },
+        {
+          "label": "7.3 Procediments Emmagatzemats (CREATE PROCEDURE): Paràmetres IN, OUT, INOUT",
+          "href": "./ut07/ut0703.html"
+        },
+        {
+          "label": "7.4 Sentències Preparades (PREPARE, EXECUTE) i SQL Dinàmic",
+          "href": "./ut07/ut0704.html"
+        },
+        {
+          "label": "7.5 Estructures de Control de Flux: Condicionals (IF, CASE) i Bucles (WHILE, LOOP)",
+          "href": "./ut07/ut0705.html"
+        },
+        {
+          "label": "7.6 Esdeveniments Programats (Event Scheduler): Tasques Automàtiques",
+          "href": "./ut07/ut0706.html"
+        },
+        {
+          "label": "7.7 Disparadors (Triggers): Tipus BEFORE/AFTER, Registres NEW i OLD",
+          "href": "./ut07/ut0707.html"
+        },
+        {
+          "label": "7.8 Cursors: Declaració, Obertura, Lectura (FETCH) i Tancament",
+          "href": "./ut07/ut0708.html"
+        },
+        {
+          "label": "7.9 Funcions d'Usuari (CREATE FUNCTION): Retorn de Valors",
+          "href": "./ut07/ut0709.html"
+        },
+        {
+          "label": "7.10 Gestió d'Excepcions i Controladors d'Errors (DECLARE HANDLER)",
+          "href": "./ut07/ut0710.html"
+        },
+        {
+          "label": "7.11 Quadern de Pràctiques de Programació en Servidor",
+          "href": "./ut07/ut0711.html"
         }
       ]
     },
     {
-      "summary": "UD8 — Bases de Dades NoSQL i Tendències (RA7)",
+      "summary": "UD8: Bases de Dades NoSQL i Tendències: MongoDB (RA7)",
       "items": [
         {
-          "label": "📘 UD8: Paradigmes NoSQL (MongoDB, Redis)",
+          "label": "📘 UT08 Completa (Portada)",
           "href": "./ut08/index.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Introducció als Paradigmes NoSQL: Teorema CAP i Models de Dades",
+          "href": "./ut08/ut0801.html"
+        },
+        {
+          "label": "8.2 Bases de Dades Orientades a Documents: MongoDB i Format BSON",
+          "href": "./ut08/ut0802.html"
+        },
+        {
+          "label": "8.3 Configuració de l'Entorn MongoDB (mongosh, Docker i Compass)",
+          "href": "./ut08/ut0803.html"
+        },
+        {
+          "label": "8.4 Quadern de Pràctiques NoSQL i MongoDB",
+          "href": "./ut08/ut0804.html"
         }
       ]
     }
