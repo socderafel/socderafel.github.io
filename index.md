@@ -33,7 +33,7 @@ Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de l
 
 ---
 
-## 📚 Biblioteca General de Cicles, Mòduls i Assignatures (+40 Cursos)
+## 📚 Biblioteca General de Cicles, Mòduls i Assignatures
 
 Accés directe al repositori de temaris complets i apunts teòrics classificats per etapa educativa (sense duplicats, actualitzats a la versió 2025/2026):
 
