@@ -6,7 +6,9 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1="32" y1="42" x2="48" y2="42" stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <!-- KaTeX per a fórmules matemàtiques clares i accessibles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
@@ -112,38 +114,47 @@
   <style>
     :root, [data-theme="navy"], [data-theme="light"] {
       --content-font-scale: 1;
-      --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+      --md-text-font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --md-code-font: "JetBrains Mono", SFMono-Regular, Consolas, Menlo, monospace;
       --primary: #1d4ed8;
       --primary-dark: #1e40af;
-      --md-primary-fg-color: #0f2042;
+      --primary-light: #eff6ff;
+      --md-primary-fg-color: #0a1628;
       --bg-body: #f8fafc;
       --bg-card: #ffffff;
       --text-main: #0f172a;
       --text-muted: #475569;
-      --border: #cbd5e1;
+      --border: #e2e8f0;
       --code-bg: #f1f5f9;
-      --header-bg: #0f2042;
-      --header-border: #1e3a8a;
+      --header-bg: #091322;
+      --header-border: #1e293b;
     }
 
     [data-theme="zinc"] {
+      --content-font-scale: 1;
+      --md-text-font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --md-code-font: "JetBrains Mono", SFMono-Regular, Consolas, Menlo, monospace;
       --primary: #0284c7;
       --primary-dark: #0369a1;
+      --primary-light: #f0f9ff;
       --md-primary-fg-color: #18181b;
       --bg-body: #f4f4f5;
       --bg-card: #ffffff;
       --text-main: #18181b;
       --text-muted: #52525b;
-      --border: #d4d4d8;
+      --border: #e4e4e7;
       --code-bg: #f4f4f5;
-      --header-bg: #18181b;
-      --header-border: #27272a;
+      --header-bg: #111827;
+      --header-border: #1f2937;
     }
 
     [data-theme="forest"] {
+      --content-font-scale: 1;
+      --md-text-font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --md-code-font: "JetBrains Mono", SFMono-Regular, Consolas, Menlo, monospace;
       --primary: #059669;
       --primary-dark: #065f46;
+      --primary-light: #ecfdf5;
       --md-primary-fg-color: #064e3b;
       --bg-body: #f0fdf4;
       --bg-card: #ffffff;
@@ -156,8 +167,12 @@
     }
 
     [data-theme="academic"] {
+      --content-font-scale: 1;
+      --md-text-font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --md-code-font: "JetBrains Mono", SFMono-Regular, Consolas, Menlo, monospace;
       --primary: #7e22ce;
       --primary-dark: #581c87;
+      --primary-light: #faf5ff;
       --md-primary-fg-color: #4a044e;
       --bg-body: #faf5ff;
       --bg-card: #ffffff;
@@ -170,8 +185,12 @@
     }
 
     [data-theme="dark"] {
+      --content-font-scale: 1;
+      --md-text-font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --md-code-font: "JetBrains Mono", SFMono-Regular, Consolas, Menlo, monospace;
       --primary: #38bdf8;
       --primary-dark: #0284c7;
+      --primary-light: rgba(56, 189, 248, 0.1);
       --md-primary-fg-color: #0b1120;
       --bg-body: #0b1120;
       --bg-card: #151f32;
@@ -184,8 +203,12 @@
     }
 
     [data-theme="oled"] {
+      --content-font-scale: 1;
+      --md-text-font: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --md-code-font: "JetBrains Mono", SFMono-Regular, Consolas, Menlo, monospace;
       --primary: #60a5fa;
       --primary-dark: #3b82f6;
+      --primary-light: rgba(96, 165, 250, 0.12);
       --md-primary-fg-color: #000000;
       --bg-body: #000000;
       --bg-card: #101010;
@@ -223,93 +246,125 @@
       max-width: 100vw;
     }
 
-    /* Barra superior compacta estilo MkDocs Material (sin scrollbar nunca) */
+    /* ==========================================================
+       BARRA DE NAVEGACIÓ SUPERIOR (MODERNA I MINIMALISTA)
+       ========================================================== */
     .md-header {
       background: var(--header-bg);
       color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+      border-bottom: 1px solid var(--header-border);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
       position: sticky;
       top: 0;
       z-index: 200;
       overflow: visible;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     .md-header::-webkit-scrollbar {
       display: none;
     }
 
     .md-header-inner {
-      max-width: 1460px;
+      max-width: 1440px;
       margin: 0 auto;
-      padding: 0 20px;
-      min-height: 48px;
+      padding: 0 24px;
+      min-height: 56px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 16px;
       overflow: visible;
-    }
-    .md-header-inner::-webkit-scrollbar {
-      display: none;
     }
 
     .md-header-brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #ffffff !important;
       text-decoration: none !important;
-      font-weight: 700;
-      font-size: 0.96rem;
-      letter-spacing: 0.01em;
+      letter-spacing: -0.01em;
       white-space: nowrap;
       flex-shrink: 0;
     }
 
-    .curs-badge {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.22);
-      border: 1px solid rgba(255, 255, 255, 0.38);
-      color: #ffffff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 1px 7px;
-      border-radius: 999px;
-      margin-left: 6px;
-      vertical-align: middle;
-      letter-spacing: 0.02em;
+    .brand-icon-box {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
     }
 
-    .md-header-brand svg {
-      width: 22px;
-      height: 22px;
-      flex-shrink: 0;
+    .brand-title-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+    }
+
+    .brand-name {
+      font-weight: 750;
+      font-size: 0.98rem;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      font-weight: 450;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .curs-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(16, 185, 129, 0.16);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-size: 0.72rem;
+      font-weight: 650;
+      padding: 2px 8px;
+      border-radius: 999px;
+      letter-spacing: 0.02em;
+    }
+    .curs-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
     }
 
     .md-header-nav {
       display: flex;
       align-items: center;
-      gap: 4px;
-      flex-wrap: wrap;
+      gap: 6px;
       overflow: visible;
     }
-    .md-header-nav::-webkit-scrollbar {
-      display: none;
-    }
 
-    .md-header-nav a {
-      color: rgba(255, 255, 255, 0.92) !important;
+    .md-header-nav a.nav-link {
+      color: rgba(255, 255, 255, 0.84) !important;
       text-decoration: none !important;
-      font-size: 0.82rem;
+      font-size: 0.86rem;
       font-weight: 500;
-      padding: 5px 9px;
-      border-radius: 5px;
-      transition: background-color 0.15s ease, color 0.15s ease;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
       white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
-    .md-header-nav a:hover {
-      background-color: rgba(255, 255, 255, 0.16);
+    .md-header-nav a.nav-link:hover,
+    .header-nav-item:hover > .nav-link {
+      background-color: rgba(255, 255, 255, 0.1);
       color: #ffffff !important;
     }
 
@@ -323,15 +378,15 @@
     .nav-dropdown-trigger {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       cursor: pointer;
     }
 
     .nav-arrow {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       display: inline-block;
-      opacity: 0.85;
+      opacity: 0.75;
       margin-left: 2px;
     }
 
@@ -346,17 +401,17 @@
       position: absolute;
       top: 100%;
       left: 0;
-      min-width: 290px;
-      max-width: 360px;
-      max-height: 440px;
+      min-width: 320px;
+      max-width: 400px;
+      max-height: 480px;
       overflow-y: auto;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-      padding: 6px;
+      border-radius: 12px;
+      box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.22), 0 0 1px rgba(0,0,0,0.1);
+      padding: 8px;
       z-index: 1000;
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     .header-nav-item.dropdown-align-right .header-dropdown-menu {
@@ -383,60 +438,82 @@
     }
 
     .dropdown-header {
-      padding: 6px 10px 4px 10px;
-      font-size: 0.74rem;
-      font-weight: 700;
+      padding: 8px 12px 4px 12px;
+      font-size: 0.72rem;
+      font-weight: 750;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--primary);
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
     }
 
     .dropdown-divider {
       height: 1px;
       background: var(--border);
-      margin: 4px 6px;
+      margin: 6px 8px;
     }
 
     .header-dropdown-menu a.dropdown-item {
       display: block !important;
-      padding: 8px 10px !important;
-      color: var(--text-main) !important;
-      font-size: 0.83rem !important;
-      font-weight: 500 !important;
-      border-radius: 6px !important;
+      padding: 8px 12px !important;
+      border-radius: 8px !important;
       text-decoration: none !important;
-      transition: background 0.15s ease, color 0.15s ease !important;
-      white-space: normal !important;
-      line-height: 1.35 !important;
+      transition: all 0.15s ease !important;
+      color: var(--text-main) !important;
     }
 
     .header-dropdown-menu a.dropdown-item:hover {
       background: var(--code-bg) !important;
-      color: var(--primary) !important;
     }
 
-    .header-dropdown-menu a.dropdown-item.active {
-      background: rgba(37, 99, 235, 0.12) !important;
-      color: var(--primary) !important;
-      font-weight: 700 !important;
+    .dropdown-item-title {
+      font-size: 0.86rem;
+      font-weight: 650;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .header-dropdown-menu a.dropdown-item:hover .dropdown-item-title {
+      color: var(--primary);
+    }
+
+    .dropdown-item-meta {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.35;
+    }
+
+    .badge-new {
+      background: rgba(37, 99, 235, 0.12);
+      color: var(--primary);
+      font-size: 0.68rem;
+      font-weight: 750;
+      padding: 1px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
     }
 
     .btn-toggle {
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       color: #ffffff;
-      padding: 4px 9px;
-      border-radius: 5px;
+      padding: 5px 11px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       font-weight: 600;
       white-space: nowrap;
-      margin-left: 2px;
       transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
 
     .btn-toggle:hover {
-      background: rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .btn-toggle.btn-active {
@@ -448,24 +525,24 @@
     .header-controls {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .font-zoom-group {
       display: inline-flex;
       align-items: center;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 6px;
       overflow: hidden;
-      margin-left: 4px;
+      margin-left: 2px;
     }
 
     .btn-zoom {
       background: transparent !important;
       border: none !important;
       color: #ffffff !important;
-      padding: 4px 8px !important;
+      padding: 5px 9px !important;
       font-size: 0.78rem !important;
       font-weight: 700 !important;
       cursor: pointer;
@@ -475,10 +552,582 @@
     }
 
     .btn-zoom:hover {
-      background: rgba(255, 255, 255, 0.22) !important;
+      background: rgba(255, 255, 255, 0.2) !important;
     }
 
-    /* Contenedor de 1 columna (Portal principal e índices generales) */
+    /* ==========================================================
+       SISTEMA DE DISSENY MODERN PER A LA LANDING PAGE
+       ========================================================== */
+    .landing-main {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 0 80px 0;
+      overflow-x: hidden;
+    }
+
+    .landing-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero Section */
+    .landing-hero {
+      position: relative;
+      padding: 72px 24px 56px 24px;
+      text-align: center;
+      background: radial-gradient(circle at 50% 15%, rgba(37, 99, 235, 0.08) 0%, transparent 68%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 15px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+      font-weight: 850;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: var(--text-main);
+      max-width: 980px;
+      margin: 0 auto 18px auto;
+    }
+
+    .hero-title .text-gradient {
+      background: linear-gradient(135deg, #1d4ed8 0%, #0284c7 50%, #0d9488 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin-top: 6px;
+    }
+
+    [data-theme="dark"] .hero-title .text-gradient,
+    [data-theme="oled"] .hero-title .text-gradient {
+      background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #2dd4bf 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      line-height: 1.6;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 34px auto;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--header-bg);
+      color: #ffffff !important;
+      font-size: 0.95rem;
+      font-weight: 650;
+      padding: 13px 26px;
+      border-radius: 9px;
+      text-decoration: none !important;
+      box-shadow: 0 4px 16px rgba(15, 32, 66, 0.24);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-hero-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(15, 32, 66, 0.34);
+      background: #1e3a8a;
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      color: var(--text-main) !important;
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+      font-weight: 650;
+      padding: 13px 26px;
+      border-radius: 9px;
+      text-decoration: none !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-hero-secondary:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+      color: var(--primary) !important;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .hero-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .hero-stat-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+    .hero-stat-num {
+      font-size: 2.1rem;
+      font-weight: 850;
+      color: var(--primary);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-stat-label {
+      font-size: 0.84rem;
+      font-weight: 750;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+    .hero-stat-desc {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Headers */
+    .landing-section {
+      padding: 68px 0 0 0;
+    }
+    .landing-section-header {
+      margin-bottom: 36px;
+      text-align: left;
+    }
+    .landing-section-kicker {
+      font-size: 0.74rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    .landing-section-title {
+      font-size: clamp(1.6rem, 2.8vw, 2.15rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      margin: 0 0 8px 0;
+    }
+    .landing-section-desc {
+      font-size: 1.02rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Active Courses Grid */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+    .course-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.03);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+    .course-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--card-accent, var(--primary));
+    }
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.08);
+      border-color: var(--card-accent, var(--primary));
+    }
+    .course-card.accent-blue { --card-accent: #2563eb; }
+    .course-card.accent-emerald { --card-accent: #059669; }
+    .course-card.accent-purple { --card-accent: #7c3aed; }
+    .course-card.accent-amber { --card-accent: #d97706; }
+    .course-card.accent-cyan { --card-accent: #0891b2; }
+
+    .course-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .course-stage-badge {
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--code-bg);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .course-status-pill {
+      font-size: 0.72rem;
+      font-weight: 650;
+      color: #10b981;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .course-status-pill::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10b981;
+    }
+    .course-card-title {
+      font-size: 1.32rem;
+      font-weight: 750;
+      color: var(--text-main);
+      margin: 0 0 10px 0;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+    }
+    .course-card-desc {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin: 0 0 20px 0;
+      flex-grow: 1;
+    }
+    .course-tags-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+    .course-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 5px;
+      background: var(--code-bg);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+    .course-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: var(--code-bg);
+      color: var(--text-main) !important;
+      font-weight: 650;
+      font-size: 0.86rem;
+      text-decoration: none !important;
+      border: 1px solid var(--border);
+      transition: all 0.18s ease;
+    }
+    .course-card:hover .course-btn {
+      background: var(--header-bg);
+      color: #ffffff !important;
+      border-color: var(--header-bg);
+    }
+    .course-btn-arrow {
+      transition: transform 0.18s ease;
+    }
+    .course-card:hover .course-btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* Cycles Library Grid */
+    .cycles-catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 22px;
+    }
+    .cycle-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .cycle-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 8px 24px -4px rgba(0,0,0,0.06);
+    }
+    .cycle-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .cycle-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .cycle-card-title {
+      font-size: 1.14rem;
+      font-weight: 750;
+      color: var(--text-main);
+      margin: 0 0 3px 0;
+    }
+    .cycle-card-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 650;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .cycle-modules-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 12px 0 20px 0;
+      list-style: none;
+      padding: 0;
+    }
+    .cycle-module-pill {
+      font-size: 0.74rem;
+      padding: 3px 9px;
+      background: var(--code-bg);
+      color: var(--text-main);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-weight: 550;
+    }
+    .cycle-card-footer a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary) !important;
+      font-size: 0.84rem;
+      font-weight: 650;
+      text-decoration: none !important;
+      transition: gap 0.15s ease;
+    }
+    .cycle-card-footer a:hover {
+      gap: 10px;
+    }
+
+    /* Pedagogical Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .pillar-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .pillar-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .pillar-title {
+      font-size: 1.05rem;
+      font-weight: 750;
+      color: var(--text-main);
+      margin: 0 0 8px 0;
+    }
+    .pillar-desc {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .tool-item-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+      text-decoration: none !important;
+      color: var(--text-main) !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .tool-item-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+    .tool-item-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+    .tool-item-role {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Institutional Footer */
+    .landing-footer {
+      margin-top: 80px;
+      padding: 56px 0 32px 0;
+      border-top: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+    .footer-col-title {
+      font-size: 0.8rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-main);
+      margin: 0 0 16px 0;
+    }
+    .footer-col p {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 12px 0;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .footer-links a {
+      font-size: 0.84rem;
+      color: var(--text-muted) !important;
+      text-decoration: none !important;
+      transition: color 0.15s ease;
+    }
+    .footer-links a:hover {
+      color: var(--primary) !important;
+    }
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 980px) {
+      .hero-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-stats-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .courses-grid, .cycles-catalog-grid {
+        grid-template-columns: 1fr;
+      }
+      .landing-hero {
+        padding: 48px 16px 36px 16px;
+      }
+    }
+/* Contenedor de 1 columna (Portal principal e índices generales) */
     .main-wrapper {
       padding: 24px 16px 40px 16px;
     }
@@ -1633,98 +2282,96 @@
   </style>
 </head>
 <body>
-  <header class="md-header">
+    <header class="md-header">
     <div class="md-header-inner">
       <a href="{{ '/' | relative_url }}" class="md-header-brand">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-          <rect width="64" height="64" rx="14" fill="rgba(255,255,255,0.18)"/>
-          <path d="M16 22 L28 32 L16 42" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-          <line x1="32" y1="42" x2="48" y2="42" stroke="#4ade80" stroke-width="5" stroke-linecap="round"/>
-        </svg>
-        <span>Portal Docent de Pepe Cuenca <span class="curs-badge">Curs 26/27</span></span>
+        <div class="brand-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+            <polyline points="10 2 10 10 13 7 16 10 16 2"></polyline>
+          </svg>
+        </div>
+        <div class="brand-title-wrap">
+          <span class="brand-name">Pepe Cuenca</span>
+          <span class="brand-sub">Portal Docent FP</span>
+        </div>
+        <span class="curs-badge">Curs 26/27</span>
       </a>
+
       <nav class="md-header-nav">
-        <a href="{{ '/' | relative_url }}">🏠 Inici</a>
+        <a href="{{ '/' | relative_url }}" class="nav-link">Inici</a>
 
-        <!-- Desplegable Ciències Aplicades 1 -->
+        <!-- Desplegable Cursos Actius 2026/27 -->
         <div class="header-nav-item has-dropdown">
-          <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}" class="nav-dropdown-trigger">
-            🔬 Ciències Aplicades 1 <span class="nav-arrow">▾</span>
+          <a href="javascript:void(0)" class="nav-dropdown-trigger nav-link">
+            <span>Assignatures Actives</span> <span class="nav-arrow">▾</span>
           </a>
           <div class="header-dropdown-menu">
-            <div class="dropdown-header">1r FPB · Ciències Aplicades I</div>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}" class="dropdown-item">🏠 Portada del Curs</a>
-            <div class="dropdown-divider"></div>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut01/' | relative_url }}" class="dropdown-item">📘 UD1 · Els Nombres Naturals</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut02/' | relative_url }}" class="dropdown-item">📗 UD2 · Matèria Viva i Nutrició</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut03/' | relative_url }}" class="dropdown-item">📙 UD3 · Els Nombres Enters</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut04/' | relative_url }}" class="dropdown-item">🧪 UD4 · La Matèria i els seus Estats</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut05/' | relative_url }}" class="dropdown-item">📊 UD5 · Fraccions i Proporcionalitat</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut06/' | relative_url }}" class="dropdown-item">🌍 UD6 · L'Univers i la Terra</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut07/' | relative_url }}" class="dropdown-item">📐 UD7 · Àlgebra Bàsica</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut08/' | relative_url }}" class="dropdown-item">🌤️ UD8 · Atmosfera i Medi Ambient</a>
-            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/ut09/' | relative_url }}" class="dropdown-item">📈 UD9 · Estadística i Salut Ambiental</a>
+            <div class="dropdown-header">Curs Acadèmic 2026/2027</div>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Ciències Aplicades I</div>
+              <div class="dropdown-item-meta">1r FPB · STEM (Matemàtiques, Biologia i Geologia)</div>
+            </a>
+            <a href="{{ '/programacio/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Programació en Java</div>
+              <div class="dropdown-item-meta">1r DAW / DAM · POO, Algorísmica i Java 21</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/03_DAW_DAM/1daw-dam-bbdd-bases-dades/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Bases de Dades (BBDD) <span class="badge-new">Nou</span></div>
+              <div class="dropdown-item-meta">1r DAW / DAM / ASIX · SQL, Model E/R i NoSQL</div>
+            </a>
+            <a href="{{ '/projecte-intermodular/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Projecte Intermodular</div>
+              <div class="dropdown-item-meta">2n FPB · Simulació d'Empresa Informàtica i RAEE</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/01_FP_Basica/2fpb-imx-instal-lacio-xarxes/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Instal·lació de Xarxes (IMX)</div>
+              <div class="dropdown-item-meta">2n FPB · Cisco Packet Tracer, Cablejat i IPv4</div>
+            </a>
           </div>
         </div>
 
-        <!-- Desplegable Programació -->
+        <!-- Desplegable Biblioteca de Cicles -->
         <div class="header-nav-item has-dropdown">
-          <a href="{{ '/programacio/' | relative_url }}" class="nav-dropdown-trigger">
-            ☕ Programació <span class="nav-arrow">▾</span>
-          </a>
-          <div class="header-dropdown-menu">
-            <div class="dropdown-header">1r DAM / DAW · Programació</div>
-            <a href="{{ '/programacio/' | relative_url }}" class="dropdown-item">🏠 Portada de Programació</a>
-            <div class="dropdown-divider"></div>
-            <a href="{{ '/programacio/ut00/' | relative_url }}" class="dropdown-item">💻 UT00 · Introducció a la Informàtica</a>
-            <a href="{{ '/programacio/ut01/' | relative_url }}" class="dropdown-item">☕ UT01 · Fonaments de Java</a>
-            <a href="{{ '/programacio/ut02/' | relative_url }}" class="dropdown-item">🔀 UT02 · Estructures de Control</a>
-            <a href="{{ '/programacio/ut03/' | relative_url }}" class="dropdown-item">🧱 UT03 · Programació Modular</a>
-            <a href="{{ '/programacio/ut04/' | relative_url }}" class="dropdown-item">📦 UT04 · Programació Orientada a Objectes</a>
-            <a href="{{ '/programacio/ut05/' | relative_url }}" class="dropdown-item">📚 UT05 · Arrays i Col·leccions</a>
-            <a href="{{ '/programacio/ut06/' | relative_url }}" class="dropdown-item">⚠️ UT06 · Gestió d'Excepcions</a>
-            <a href="{{ '/programacio/ut07/' | relative_url }}" class="dropdown-item">💾 UT07 · Fitxers i Persistència</a>
-          </div>
-        </div>
-
-        <!-- Desplegable Projecte Intermodular -->
-        <div class="header-nav-item has-dropdown">
-          <a href="{{ '/projecte-intermodular/' | relative_url }}" class="nav-dropdown-trigger">
-            🚀 Projecte Intermodular <span class="nav-arrow">▾</span>
-          </a>
-          <div class="header-dropdown-menu">
-            <div class="dropdown-header">1r DAM · Projecte Intermodular</div>
-            <a href="{{ '/projecte-intermodular/' | relative_url }}" class="dropdown-item">🏠 Portada del Projecte</a>
-            <div class="dropdown-divider"></div>
-            <a href="{{ '/projecte-intermodular/guia-projecte.html' | relative_url }}" class="dropdown-item">📖 Guia Didàctica i Rúbriques</a>
-            <a href="{{ '/projecte-intermodular/tasques-aules.html' | relative_url }}" class="dropdown-item">📑 Lliuraments i Tasques Aules</a>
-            <div class="dropdown-divider"></div>
-            <a href="{{ '/projecte-intermodular/up01/' | relative_url }}" class="dropdown-item">🌱 UP01 · Ideació i Proposta de Valor</a>
-            <a href="{{ '/projecte-intermodular/up02/' | relative_url }}" class="dropdown-item">📋 UP02 · Anàlisi de Requisits</a>
-            <a href="{{ '/projecte-intermodular/up03/' | relative_url }}" class="dropdown-item">🎨 UP03 · Disseny UI/UX</a>
-            <a href="{{ '/projecte-intermodular/up04/' | relative_url }}" class="dropdown-item">🗄️ UP04 · Modelatge de Dades</a>
-            <a href="{{ '/projecte-intermodular/up05/' | relative_url }}" class="dropdown-item">⚙️ UP05 · Backend</a>
-            <a href="{{ '/projecte-intermodular/up06/' | relative_url }}" class="dropdown-item">💻 UP06 · Frontend</a>
-            <a href="{{ '/projecte-intermodular/up07/' | relative_url }}" class="dropdown-item">🧪 UP07 · Proves i QA</a>
-            <a href="{{ '/projecte-intermodular/up08/' | relative_url }}" class="dropdown-item">🚀 UP08 · Desplegament i Presentació</a>
-          </div>
-        </div>
-
-        <!-- Desplegable Biblioteca Cicles -->
-        <div class="header-nav-item has-dropdown dropdown-align-right">
-          <a href="{{ '/biblioteca-cicles/' | relative_url }}" class="nav-dropdown-trigger">
-            📚 Biblioteca Cicles <span class="nav-arrow">▾</span>
+          <a href="{{ '/biblioteca-cicles/' | relative_url }}" class="nav-dropdown-trigger nav-link">
+            <span>Biblioteca de Cicles</span> <span class="nav-arrow">▾</span>
           </a>
           <div class="header-dropdown-menu">
             <div class="dropdown-header">Recursos per Cicles i Nivells</div>
-            <a href="{{ '/biblioteca-cicles/' | relative_url }}" class="dropdown-item">🏛️ Índex General de Cicles</a>
+            <a href="{{ '/biblioteca-cicles/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Catàleg General de Cicles</div>
+              <div class="dropdown-item-meta">Tots els cicles i etapes formatives</div>
+            </a>
             <div class="dropdown-divider"></div>
-            <a href="{{ '/biblioteca-cicles/#fpb' | relative_url }}" class="dropdown-item">🟢 FP Bàsica (Informàtica d'Oficina)</a>
-            <a href="{{ '/biblioteca-cicles/#gm' | relative_url }}" class="dropdown-item">🔵 Grau Mitjà (SMR)</a>
-            <a href="{{ '/biblioteca-cicles/#gs' | relative_url }}" class="dropdown-item">🟣 Grau Superior (DAM · DAW · ASIR)</a>
-            <a href="{{ '/biblioteca-cicles/#eso-bat' | relative_url }}" class="dropdown-item">🟠 Secundària i Batxillerat</a>
+            <a href="{{ '/biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">FP Grau Bàsic (CFGB)</div>
+              <div class="dropdown-item-meta">Informàtica d'Oficina i Ciències</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">FP Grau Mitjà (SMX)</div>
+              <div class="dropdown-item-meta">Sistemes Microinformàtics i Xarxes</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">FP Grau Superior (DAW / DAM)</div>
+              <div class="dropdown-item-meta">Desenvolupament Web i Multiplataforma</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">FP Grau Superior (ASIX)</div>
+              <div class="dropdown-item-meta">Administració de Sistemes i Xarxes</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Cursos d'Especialització</div>
+              <div class="dropdown-item-meta">IA, Big Data i Ciberseguretat</div>
+            </a>
+            <a href="{{ '/biblioteca-cicles/#-secundària-eso-i-batxillerat' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">Secundària i Batxillerat</div>
+              <div class="dropdown-item-meta">Digitalització, Robòtica i Programació</div>
+            </a>
           </div>
         </div>
+
+        <a href="{{ '/#metodologia' | relative_url }}" class="nav-link">Metodologia</a>
+        <a href="{{ '/#eines' | relative_url }}" class="nav-link">Eines</a>
 
         <div class="header-controls">
           <div class="font-zoom-group" title="Ajustar mida del text">
@@ -1734,29 +2381,35 @@
           <!-- Selector de Temes Visuals -->
           <div class="header-nav-item has-dropdown dropdown-align-right theme-selector-wrapper">
             <button class="btn-toggle nav-dropdown-trigger" id="btn-theme-selector" title="Selector de temes visuals i contrast">
-              🎨 <span id="current-theme-label">Blau Marí</span> <span class="nav-arrow">▾</span>
+              <span id="current-theme-label">Blau Marí</span> <span class="nav-arrow">▾</span>
             </button>
-            <div class="header-dropdown-menu theme-dropdown-menu" style="min-width: 260px; right: 0; left: auto;">
-              <div class="dropdown-header">Temes Institucionals Seriosos</div>
+            <div class="header-dropdown-menu theme-dropdown-menu" style="min-width: 250px; right: 0; left: auto;">
+              <div class="dropdown-header">Temes Institucionals</div>
               <a href="javascript:void(0)" onclick="setThemePalette('navy')" class="dropdown-item theme-opt" data-theme-val="navy">
-                🔵 <strong>Blau Marí</strong> (Institucional / Per defecte)
+                <div class="dropdown-item-title">Blau Marí</div>
+                <div class="dropdown-item-meta">Institucional i acadèmic</div>
               </a>
               <a href="javascript:void(0)" onclick="setThemePalette('zinc')" class="dropdown-item theme-opt" data-theme-val="zinc">
-                ⬛ <strong>Zinc &amp; Pissarra</strong> (Tech Minimalista)
+                <div class="dropdown-item-title">Pissarra &amp; Zinc</div>
+                <div class="dropdown-item-meta">Minimalista tecnològic</div>
               </a>
               <a href="javascript:void(0)" onclick="setThemePalette('forest')" class="dropdown-item theme-opt" data-theme-val="forest">
-                🌲 <strong>Verd Bosc</strong> (Educació / Conselleria)
+                <div class="dropdown-item-title">Verd Bosc</div>
+                <div class="dropdown-item-meta">Educació i sostenibilitat</div>
               </a>
               <a href="javascript:void(0)" onclick="setThemePalette('academic')" class="dropdown-item theme-opt" data-theme-val="academic">
-                🍷 <strong>Bordeus</strong> (Acadèmic Universitari)
+                <div class="dropdown-item-title">Bordeus</div>
+                <div class="dropdown-item-meta">Acadèmic universitari</div>
               </a>
               <div class="dropdown-divider"></div>
               <div class="dropdown-header">Modes de Contrast</div>
               <a href="javascript:void(0)" onclick="setThemePalette('dark')" class="dropdown-item theme-opt" data-theme-val="dark">
-                🌙 <strong>Mode Fosc</strong> (Dark Slate Professional)
+                <div class="dropdown-item-title">Mode Fosc</div>
+                <div class="dropdown-item-meta">Dark Slate professional</div>
               </a>
               <a href="javascript:void(0)" onclick="setThemePalette('oled')" class="dropdown-item theme-opt" data-theme-val="oled">
-                🖤 <strong>Negre Pur</strong> (Alt Contrast OLED)
+                <div class="dropdown-item-title">Negre Pur</div>
+                <div class="dropdown-item-meta">Alt contrast OLED</div>
               </a>
             </div>
           </div>
@@ -1797,6 +2450,10 @@
       {% endif %}
     </main>
   </div>
+  {% elsif page.is_landing %}
+  <main class="landing-main">
+    {{ content }}
+  </main>
   {% else %}
   <main class="main-wrapper">
     <div class="page-container">
