@@ -14,23 +14,23 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 Què és una xarxa informàtica i classificació segons l'abast",
+          "label": "1.1 Què és una xarxa informàtica, abast i elements de comunicació",
           "href": "./ut01/ut0101.html"
         },
         {
-          "label": "1.2 Topologies físiques i lògiques de xarxa",
+          "label": "1.2 Topologies físiques i lògiques de xarxa i modes de transmissió",
           "href": "./ut01/ut0102.html"
         },
         {
-          "label": "1.3 Arquitectura en capes: models OSI i TCP/IP",
+          "label": "1.3 Arquitectura en capes: models OSI i TCP/IP i l'encapsulament",
           "href": "./ut01/ut0103.html"
         },
         {
-          "label": "1.4 Normes i estàndards de comunicació (IEEE 802.3 i 802.11)",
+          "label": "1.4 Normes, estàndards IEEE i representació de la informació",
           "href": "./ut01/ut0104.html"
         },
         {
-          "label": "1.5 Pràctica de laboratori: Identificació i esquema d'una xarxa local",
+          "label": "1.5 Quadern de Taller: Fitxes Pràctiques i Laboratori d'Aula",
           "href": "./ut01/ut0105.html"
         }
       ]
@@ -60,7 +60,7 @@
           "href": "./ut02/ut0204.html"
         },
         {
-          "label": "2.5 Diagnòstic de fallades habituals en el conectoritzat",
+          "label": "2.5 Quadern de Taller: Diagnòstic de Fallades i Fitxes 2.01 i 2.02",
           "href": "./ut02/ut0205.html"
         }
       ]
@@ -74,11 +74,11 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Fonaments de la fibra òptica: monomode vs multimode",
+          "label": "3.1 Fonaments de la fibra òptica: monomode vs multimode i connectors",
           "href": "./ut03/ut0301.html"
         },
         {
-          "label": "3.2 Seguretat i precaucions laborals amb fibra òptica",
+          "label": "3.2 Seguretat i precaucions laborals amb fibra òptica (PRL)",
           "href": "./ut03/ut0302.html"
         },
         {
@@ -90,7 +90,7 @@
           "href": "./ut03/ut0304.html"
         },
         {
-          "label": "3.5 Pràctica: Anàlisi d'espectre Wi-Fi i configuració d'un AP",
+          "label": "3.5 Pràctica de Taller: Anàlisi d'Espectre Wi-Fi i Configuració d'un AP",
           "href": "./ut03/ut0305.html"
         }
       ]
@@ -112,15 +112,15 @@
           "href": "./ut04/ut0402.html"
         },
         {
-          "label": "4.3 Encaminadors (Routers): interconnexió de xarxes",
+          "label": "4.3 Encaminadors (Routers): interconnexió de xarxes i porta d'enllaç",
           "href": "./ut04/ut0403.html"
         },
         {
-          "label": "4.4 Dispositius auxiliars: repetidors, adaptadors PLC i PoE",
+          "label": "4.4 Dispositius auxiliars: repetidors, adaptadors PLC i tecnologia PoE",
           "href": "./ut04/ut0404.html"
         },
         {
-          "label": "4.5 Pràctica: Muntatge d'una xarxa commutada d'aula",
+          "label": "4.5 Pràctica de Taller: Muntatge d'una Xarxa Commutada d'Aula",
           "href": "./ut04/ut0405.html"
         }
       ]
@@ -138,7 +138,7 @@
           "href": "./ut05/ut0501.html"
         },
         {
-          "label": "5.2 L'armari de telecomunicacions (Rack de 19 polzades)",
+          "label": "5.2 L'armari de telecomunicacions (Rack de 19 polzades) i accessoris",
           "href": "./ut05/ut0502.html"
         },
         {
@@ -146,11 +146,11 @@
           "href": "./ut05/ut0503.html"
         },
         {
-          "label": "5.4 Prevenció de Riscos Laborals (PRL) en instal·lacions",
+          "label": "5.4 Tipus de fixacions i criteris de selecció",
           "href": "./ut05/ut0504.html"
         },
         {
-          "label": "5.5 Pràctica de taller: Muntatge de canaleta, roseta i patch panel",
+          "label": "5.5 Quadern de Taller: Muntatge de Canaleta, Roseta i Patch Panel",
           "href": "./ut05/ut0505.html"
         }
       ]
@@ -168,7 +168,7 @@
           "href": "./ut06/ut0601.html"
         },
         {
-          "label": "6.2 Màscara de subxarxa, porta d'enllaç i difusió",
+          "label": "6.2 Màscara de subxarxa, porta d'enllaç i difusió (Broadcast)",
           "href": "./ut06/ut0602.html"
         },
         {
@@ -176,11 +176,11 @@
           "href": "./ut06/ut0603.html"
         },
         {
-          "label": "6.4 Ordres bàsiques de diagnòstic de xarxa en consola",
+          "label": "6.4 Ordres bàsiques de diagnòstic de xarxa en consola (CLI)",
           "href": "./ut06/ut0604.html"
         },
         {
-          "label": "6.5 Pràctica: Configuració manual d'IPs i resolució de conflictes",
+          "label": "6.5 Quadern de Taller: Pràctiques d'Adreçament i Fitxes 1.04",
           "href": "./ut06/ut0605.html"
         }
       ]
@@ -210,7 +210,7 @@
           "href": "./ut07/ut0704.html"
         },
         {
-          "label": "7.5 Pràctica: Creació d'un recurs compartit amb permisos diferenciats",
+          "label": "7.5 Pràctica de Taller: Creació d'un Recurs Compartit amb Permisos",
           "href": "./ut07/ut0705.html"
         }
       ]
@@ -232,15 +232,15 @@
           "href": "./ut08/ut0802.html"
         },
         {
-          "label": "8.3 Seguretat bàsica perimetral: el tallafocs (Firewall)",
+          "label": "8.3 Seguretat bàsica perimetral: el tallafocs (Firewall) i prevenció de bucles",
           "href": "./ut08/ut0803.html"
         },
         {
-          "label": "8.4 Manteniment preventiu: neteja, etiquetatge i còpies de suport",
+          "label": "8.4 Manteniment preventiu: neteja, etiquetatge TIA-606 i còpies",
           "href": "./ut08/ut0804.html"
         },
         {
-          "label": "8.5 Pràctica: Resolució de supòsits d'incidències en xarxa",
+          "label": "8.5 Pràctica de Taller: Resolució de Supòsits d'Incidències en Xarxa",
           "href": "./ut08/ut0805.html"
         }
       ]
