@@ -250,78 +250,151 @@ full_width: true
 
 .devtoys-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 18px;
 }
 
 .devtoys-tool-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px;
+  border-radius: 14px;
+  padding: 20px;
   display: flex;
-  gap: 14px;
+  gap: 16px;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   color: inherit;
-  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .devtoys-tool-card:hover {
   transform: translateY(-3px);
   border-color: #3b82f6;
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 10px 28px rgba(59, 130, 246, 0.16);
 }
 
 .devtoys-tool-icon-box {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(59, 130, 246, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.18);
   color: #2563eb;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   flex-shrink: 0;
+  transition: all 0.2s ease;
 }
 [data-theme="dark"] .devtoys-tool-icon-box,
 [data-theme="oled"] .devtoys-tool-icon-box {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(59, 130, 246, 0.16);
+  border-color: rgba(59, 130, 246, 0.3);
   color: #60a5fa;
+}
+.devtoys-tool-card:hover .devtoys-tool-icon-box {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  transform: scale(1.04);
 }
 
 .devtoys-tool-card-body {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.devtoys-card-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 
 .devtoys-tool-card-title {
-  font-size: 0.98rem;
-  font-weight: 700;
-  margin: 0 0 4px 0;
+  font-size: 1.02rem;
+  font-weight: 750;
+  line-height: 1.32;
+  margin: 0;
   color: var(--text-color);
+  flex: 1;
+}
+
+.devtoys-card-action {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(125, 125, 125, 0.08);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+.devtoys-tool-card:hover .devtoys-card-action {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  transform: translate(2px, -2px);
 }
 
 .devtoys-tool-card-desc {
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
-  line-height: 1.4;
-  margin: 0;
+  line-height: 1.45;
+  margin: 0 0 12px 0;
+  flex: 1;
 }
 
-.devtoys-tool-card-badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
+.devtoys-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid rgba(125, 125, 125, 0.1);
+  margin-top: auto;
+}
+
+.devtoys-card-cat-badge {
   font-size: 0.68rem;
   font-weight: 700;
-  padding: 2px 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(59, 130, 246, 0.08);
+  color: #2563eb;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+[data-theme="dark"] .devtoys-card-cat-badge,
+[data-theme="oled"] .devtoys-card-cat-badge {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.devtoys-card-status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  border: 1px solid var(--border);
+  font-weight: 600;
+}
+.devtoys-card-status-dot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
 }
 
 /* ACTIVE TOOL VIEW LAYOUT */
@@ -768,140 +841,224 @@ full_width: true
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('json-formatter')">
             <div class="devtoys-tool-icon-box">📋</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Validador &amp; Formatador JSON</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Validador &amp; Formatador JSON</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Formata, indenta, minifica i detecta errades sintàctiques en temps real amb indicació exacta de fila i columna.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Formatadors</span>
+                <span class="devtoys-card-status-dot">Offline</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Format</span>
           </div>
 
           <!-- XML Validator -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('xml-validator')">
             <div class="devtoys-tool-icon-box">📄</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Validador &amp; Formatador XML</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Validador &amp; Formatador XML</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Comprova documents XML ben formats, indenta estructures imbricades i localitza etiquetes sense tancar.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Formatadors</span>
+                <span class="devtoys-card-status-dot">DOMParser</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Format</span>
           </div>
 
           <!-- SQL Formatter -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('sql-formatter')">
             <div class="devtoys-tool-icon-box">🗄️</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Formatador SQL</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Formatador SQL</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Estandarditza paraules clau en MAJÚSCULES, indenta clàusules (JOIN, WHERE, GROUP BY) i minifica consultes.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Bases de Dades</span>
+                <span class="devtoys-card-status-dot">ANSI / MariaDB</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">BD</span>
           </div>
 
           <!-- Number Base Converter -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('base-converter')">
             <div class="devtoys-tool-icon-box">🔢</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Conversor de Bases Numèriques</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Conversor de Bases Numèriques</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Conversió reactiva 4-vies (Decimal, Hexadecimal, Binari i Octal) amb visualitzador interactiu de registres de 32 bits.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Convertidors</span>
+                <span class="devtoys-card-status-dot">32-Bit</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Sistemes</span>
           </div>
 
           <!-- Cron Parser -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('cron-parser')">
             <div class="devtoys-tool-icon-box">⏰</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Analitzador d'Expressions Cron</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Analitzador d'Expressions Cron</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Tradueix expressions cron (crontab de Linux) a llenguatge natural en valencià i calcula les pròximes 5 execucions.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Convertidors</span>
+                <span class="devtoys-card-status-dot">Linux Cron</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Linux</span>
           </div>
 
           <!-- Date Converter -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('date-converter')">
             <div class="devtoys-tool-icon-box">📅</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Conversor de Dates &amp; Unix Epoch</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Conversor de Dates &amp; Unix Epoch</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Rellotge Unix Epoch en viu, conversió de segons/mil·lisegons a dates ISO 8601, UTC i càlcul de temps relatiu.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Convertidors</span>
+                <span class="devtoys-card-status-dot">Temps Real</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Convert</span>
           </div>
 
           <!-- Base64 Text -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('base64-text')">
             <div class="devtoys-tool-icon-box">🔤</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Codificador Base64 de Text</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Codificador Base64 de Text</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Codificació i descodificació Base64 100% segura amb UTF-8 (accents, valencià i emojis) i mode URL-safe.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Codificadors</span>
+                <span class="devtoys-card-status-dot">UTF-8 Segur</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Encode</span>
           </div>
 
           <!-- Base64 Image -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('base64-image')">
             <div class="devtoys-tool-icon-box">🖼️</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Base64 Imatges &amp; Data URI</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Base64 Imatges &amp; Data URI</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Arrossega o puja una imatge per generar el seu Data URI i etiquetes HTML/CSS, o enganxa Base64 per previsualitzar-la.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Codificadors</span>
+                <span class="devtoys-card-status-dot">PNG/JPG/SVG</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Media</span>
           </div>
 
           <!-- JWT Decoder -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('jwt-decoder')">
             <div class="devtoys-tool-icon-box">🎫</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Decodificador JWT (JSON Web Token)</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Decodificador JWT (JSON Web Token)</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Desglossa tokens JWT en Capçalera i Càrrega útil (Payload), comprova la data d'expiració i verifica rols.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Seguretat</span>
+                <span class="devtoys-card-status-dot">Expiració</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Seguretat</span>
           </div>
 
           <!-- URL & HTML Entities -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('url-html')">
             <div class="devtoys-tool-icon-box">🔗</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">URL &amp; Entitats HTML</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">URL &amp; Entitats HTML</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Codifica paràmetres d'URL, desglossa query strings en taules clau-valor i converteix caràcters reservats HTML.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Web</span>
+                <span class="devtoys-card-status-dot">Query &amp; HTML</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Web</span>
           </div>
 
           <!-- Hash Generator -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('hash-generator')">
             <div class="devtoys-tool-icon-box">🔑</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Hashes &amp; Checksums</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Hashes &amp; Checksums</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Genera simultàniament empremtes MD5, SHA-1, SHA-256 i SHA-512 a partir de text o fitxers amb verificador d'integritat.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Generadors</span>
+                <span class="devtoys-card-status-dot">Crypto</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Crypto</span>
           </div>
 
           <!-- UUID Generator -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('uuid-generator')">
             <div class="devtoys-tool-icon-box">🆔</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Generador de UUID / GUID (v4)</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Generador de UUID / GUID (v4)</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Generació d'identificadors únics universals criptogràficament segurs amb opcions de majúscules, guions i lots.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Generadors</span>
+                <span class="devtoys-card-status-dot">RFC 4122</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Generador</span>
           </div>
 
           <!-- RegEx Tester -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('regex-tester')">
             <div class="devtoys-tool-icon-box">🔍</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Provador RegEx (Expressions Regulars)</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Provador RegEx</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Avalua patrons amb resaltat de coincidències en viu, taula de grups de captura i banc de patrons comuns (email, DNI, IP).</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Provadors</span>
+                <span class="devtoys-card-status-dot">Resaltat</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Test</span>
           </div>
 
           <!-- Text Diff -->
           <div class="devtoys-tool-card" onclick="devToysSwitchTool('text-diff')">
             <div class="devtoys-tool-icon-box">🔀</div>
             <div class="devtoys-tool-card-body">
-              <div class="devtoys-tool-card-title">Comparador de Text (Diff Checker)</div>
+              <div class="devtoys-card-top-row">
+                <h3 class="devtoys-tool-card-title">Comparador de Text (Diff)</h3>
+                <div class="devtoys-card-action">↗</div>
+              </div>
               <p class="devtoys-tool-card-desc">Compara dos textos o fragments de codi línia a línia, mostrant addicions i supressions amb estadístiques.</p>
+              <div class="devtoys-card-footer">
+                <span class="devtoys-card-cat-badge">Provadors</span>
+                <span class="devtoys-card-status-dot">Línia a línia</span>
+              </div>
             </div>
-            <span class="devtoys-tool-card-badge">Diff</span>
           </div>
         </div>
       </div>
