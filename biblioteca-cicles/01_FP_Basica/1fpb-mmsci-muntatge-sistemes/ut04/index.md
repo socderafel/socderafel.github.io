@@ -49,7 +49,7 @@ En aquesta unitat coneixerem tots els òrgans interns que donen vida a la torre 
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
-    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
+    <button type="button" class="btn-aules-dl" data-module="MMSCI" data-unit="UD04" data-activity="Global">📄 Descarregar Comprovant (.pdf)</button>
   </div>
   <div class="aules-toast"></div>
 </div>

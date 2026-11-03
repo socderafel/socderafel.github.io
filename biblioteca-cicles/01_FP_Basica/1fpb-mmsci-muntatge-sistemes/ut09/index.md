@@ -44,7 +44,7 @@ En aquesta unitat posarem en pràctica tot el que hem aprés durant el curs mitj
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
-    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
+    <button type="button" class="btn-aules-dl" data-module="MMSCI" data-unit="UD09" data-activity="Global">📄 Descarregar Comprovant (.pdf)</button>
   </div>
   <div class="aules-toast"></div>
 </div>

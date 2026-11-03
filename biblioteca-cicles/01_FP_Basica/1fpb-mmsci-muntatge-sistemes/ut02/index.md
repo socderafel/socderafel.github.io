@@ -43,7 +43,7 @@ En aquesta unitat analitzarem com s'estructura internament un ordinador segons e
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
-    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
+    <button type="button" class="btn-aules-dl" data-module="MMSCI" data-unit="UD02" data-activity="Global">📄 Descarregar Comprovant (.pdf)</button>
   </div>
   <div class="aules-toast"></div>
 </div>
