@@ -19,9 +19,7 @@
         window.renderMathInElement(document.body, {
           delimiters: [
             { left: '$$', right: '$$', display: true },
-            { left: '\[', right: '\]', display: true },
-            { left: '$', right: '$', display: false },
-            { left: '\(', right: '\)', display: false }
+            { left: '$', right: '$', display: false }
           ],
           ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
           throwOnError: false
@@ -1421,6 +1419,11 @@
       color: var(--text-muted);
     }
 
+    strong, b {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
     a {
       color: var(--primary);
       text-decoration: none;
@@ -1576,6 +1579,28 @@
       margin: 1.4rem 0;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
       transition: all 0.2s ease;
+    }
+
+    .interactive-challenge-card {
+      background: var(--bg-card) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 1.4rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+      color: var(--text-main);
+    }
+
+    .interactive-challenge-card.is-solved {
+      border-color: #10b981 !important;
+      border-left: 5px solid #10b981 !important;
+      background: rgba(16, 185, 129, 0.06) !important;
+    }
+
+    .interactive-challenge-card span,
+    .interactive-challenge-card label {
+      color: var(--text-main) !important;
     }
 
     .interactive-quiz.is-solved,
