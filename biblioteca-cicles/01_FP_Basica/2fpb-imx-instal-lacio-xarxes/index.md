@@ -111,3 +111,24 @@ Aquest curs està estructurat en **9 unitats didàctiques progressives**, enriqu
 - **Zona d'Entrenament FPB:** Cada apartat incorpora entre 2 i 4 reptes interactius amb comprovació automàtica i pistes pedagògiques.
 - **Quadern de Taller:** Fitxes d'activitats pràctiques amb solucions desplegables pas a pas per a l'autoavaluació de l'alumnat.
 - **Comprovant de Lliurament per a Aules:** En acabar cada unitat o pràctica, l'alumne o alumna pot generar el seu informe oficial en format text o copiar-lo al porta-retalls amb un sol clic per enganxar-lo a la plataforma Aules.
+
+---
+
+## 📋 Comprovant de Lliurament per a Aules
+
+<div class="aules-delivery-card">
+  <h3>📋 Comprovant de Lliurament per a Aules</h3>
+  <p>En acabar els reptes interactius d'aquest tema, genera el teu informe oficial per adjuntar-lo al lliurament de la tasca d'Aules:</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Pere Martí Soler">
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>
