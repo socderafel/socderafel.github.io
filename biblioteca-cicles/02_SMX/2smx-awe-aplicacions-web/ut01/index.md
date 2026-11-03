@@ -5,6 +5,16 @@ course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT01"
 ---
 
+<div class="interactive-progress-tracker" data-module="AWE" data-unit="1" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
+</div>
+
 # UT01 — Arquitectura d'Aplicacions Web i la Pila LAMP / WAMP
 
 Les aplicacions web han substituït el programari tradicional d'escriptori en la majoria de processos d'empresa (facturació, ERP, botigues en línia, aules virtuals). Per a allotjar i executar aquestes aplicacions es necessita una infraestructura especialitzada coneguda com a **pila de servidors web**.
@@ -248,3 +258,86 @@ En entorns professionals està totalment prohibit que una aplicació web utilitz
 | **Arquitectura de 3 capes i LAMP** | Explica detalladament el flux entre client, Apache, PHP i MariaDB, calculant RAM. | Coneix els components de la pila però dubta en el rol del motor PHP front a Apache. | Confon el programari de client amb el de servidor o no entén la capa de dades. |
 | **Administració segura de MariaDB** | Crea usuaris específics amb privilegis mínims necessaris i jocs de caràcters UTF-8. | Crea la base de dades però empra l'usuari `root` per a connectar des de PHP. | No sap utilitzar la consola SQL per crear taules o gestionar usuaris. |
 | **Configuració de PHP i PDO** | Ajusta `php.ini` amb coherència (`post_max_size >= upload_max`) i empra PDO amb `try-catch`. | Modifica `php.ini` però oblida reiniciar Apache o configura `post_max` menor que `upload_max`. | Errors en el fitxer PHP que provoquen errors 500 sense saber consultar els logs. |
+
+---
+
+## 🎯 Reptes Globals de Síntesi (Unitat 1)
+
+Demostra la teua comprensió integral de l'arquitectura d'aplicacions web i la pila servidora LAMP resolent els 4 reptes de síntesi (+100 XP):
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="awe-1-sintesi-c1">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 1: Interacció entre les 3 Capes</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina és la seqüència exacta de comunicació quan un usuari entra a una botiga online feta en WordPress?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c1" value="A"> A) El navegador (Capa 1) envia una petició HTTP al servidor Apache (Capa 2); PHP executa el codi i fa una consulta SQL a MariaDB (Capa 3); la base de dades retorna les dades a PHP, que munta l'HTML final i el retorna al navegador per a ser mostrat</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c1" value="B"> B) El navegador es connecta directament a MariaDB sense passar per Apache</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c1" value="C"> C) MariaDB envia el codi font a la targeta de xarxa de l'usuari</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c1" value="D"> D) Apache genera la base de dades cada segon</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="awe-1-sintesi-c2">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 2: Ús d'Amfitrions Virtuals (Virtual Hosts)</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quin gran avantatge econòmic i operatiu aporta la tecnologia de Virtual Hosts a una empresa d'allotjament web?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c2" value="A"> A) Allotjar centenars de llocs web i dominis completament independents sobre un únic servidor físic i una única adreça IP</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c2" value="B"> B) Evitar l'ús d'electricitat</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c2" value="C"> C) Eliminar la necessitat de registrar dominis a internet</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c2" value="D"> D) Fer que les pàgines web no necessiten codi PHP</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="awe-1-sintesi-c3">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 3: Requisit d'Actualització de php.ini</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Què hem de fer obligatòriament després de modificar els valors de <code>memory_limit</code> o <code>upload_max_filesize</code> al fitxer <code>php.ini</code> perquè el servidor aplique la nova configuració?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c3" value="A"> A) Recarregar o reiniciar el servei d'Apache (<code>systemctl restart apache2</code>)</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c3" value="B"> B) Desinstal·lar el navegador web</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c3" value="C"> C) Apagar l'equip durant 24 hores</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c3" value="D"> D) Modificar la resolució de la pantalla</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="awe-1-sintesi-c4">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 4: Seguretat en Gestors de Bases de Dades</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina combinació de mesures és la més recomanable per a protegir una instal·lació de phpMyAdmin en un servidor de producció?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c4" value="A"> A) Ofuscar l'àlies de la ruta URL, bloquejar l'inici de sessió de l'usuari 'root' i afegir autenticació HTTP bàsica amb fitxer .htaccess</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c4" value="B"> B) Deixar la contrasenya en blanc per a no oblidar-la</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c4" value="C"> C) Publicar la contrasenya a les xarxes socials</label>
+    <label class="option-label"><input type="radio" name="awe-1-sintesi-c4" value="D"> D) Utilitzar exclusivament la connexió HTTP sense xifratge</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+---
+
+<div class="aules-delivery-card" data-module="AWE" data-unit="1" data-topic="0">
+  <div class="delivery-header">
+    <span class="delivery-icon">📦</span>
+    <div>
+      <h4 class="delivery-title">Lliurament de Projecte de la Unitat 1 — Desplegament i Assegurament d'una Pila Servidora LAMP</h4>
+      <p class="delivery-subtitle">Desenvolupa i lliura la memòria de desplegament complet de la pila LAMP: configuració d'Apache2 amb Virtual Host, mòduls PHP, MariaDB assegurat i phpMyAdmin protegit.</p>
+    </div>
+  </div>
+  <button class="btn-aules-download">📥 Descarrega Guia de Projecte de la Unitat en PDF</button>
+</div>

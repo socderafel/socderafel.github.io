@@ -1,69 +1,183 @@
-﻿{
-    "title":  "💻 Aplicacions Web — 2n SMX · Grau Mitjà",
-    "home":  {
-                 "label":  "🏠 Inici Aplicacions Web",
-                 "href":  "index.html"
-             },
-    "units":  [
-                  {
-                      "summary":  "UD1 — Arquitectura d\u0027Aplicacions Web i Pila LAMP",
-                      "items":  [
-                                    {
-                                        "label":  "📘 UD1 Completa (1 pàgina)",
-                                        "href":  "./ut01/index.html",
-                                        "class":  "unit-full-link"
-                                    }
-                                ]
-                  },
-                  {
-                      "summary":  "UD2 — Sistemes de Gestió de Continguts (CMS): WordPress",
-                      "items":  [
-                                    {
-                                        "label":  "📘 UD2 Completa (1 pàgina)",
-                                        "href":  "./ut02/index.html",
-                                        "class":  "unit-full-link"
-                                    }
-                                ]
-                  },
-                  {
-                      "summary":  "UD3 — Plataformes de Formació Virtual (LMS): Moodle",
-                      "items":  [
-                                    {
-                                        "label":  "📘 UD3 Completa (1 pàgina)",
-                                        "href":  "./ut03/index.html",
-                                        "class":  "unit-full-link"
-                                    }
-                                ]
-                  },
-                  {
-                      "summary":  "UD4 — Núvol Privat i Gestió d\u0027Arxius: Nextcloud",
-                      "items":  [
-                                    {
-                                        "label":  "📘 UD4 Completa (1 pàgina)",
-                                        "href":  "./ut04/index.html",
-                                        "class":  "unit-full-link"
-                                    }
-                                ]
-                  },
-                  {
-                      "summary":  "UD5 — Aplicacions Web d\u0027Escriptori i Ofimàtica Col·laborativa",
-                      "items":  [
-                                    {
-                                        "label":  "📘 UD5 Completa (1 pàgina)",
-                                        "href":  "./ut05/index.html",
-                                        "class":  "unit-full-link"
-                                    }
-                                ]
-                  },
-                  {
-                      "summary":  "UD6 — Seguretat, Còpies de Seguretat i Manteniment Web",
-                      "items":  [
-                                    {
-                                        "label":  "📘 UD6 Completa (1 pàgina)",
-                                        "href":  "./ut06/index.html",
-                                        "class":  "unit-full-link"
-                                    }
-                                ]
-                  }
-              ]
+{
+  "title": "💻 Aplicacions Web — 2n SMX · Grau Mitjà",
+  "home": {
+    "label": "🏠 Inici Aplicacions Web",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UD1 — Arquitectura Web i Pila LAMP / WAMP",
+      "items": [
+        {
+          "label": "📘 UD1 Completa (1 pàgina)",
+          "href": "./ut01/index.html"
+        },
+        {
+          "label": "1.1 Arquitectura de 3 Capes i Protocols HTTP/HTTPS",
+          "href": "./ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 Servidors Web: Apache2 i Virtual Hosts",
+          "href": "./ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 Lògica de Servidor: PHP 8.x i Mòduls Crítics",
+          "href": "./ut01/ut0103.html"
+        },
+        {
+          "label": "1.4 Gestor de Bases de Dades: MariaDB / MySQL",
+          "href": "./ut01/ut0104.html"
+        },
+        {
+          "label": "1.5 Administració Gràfica Web amb phpMyAdmin",
+          "href": "./ut01/ut0105.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD2 — Gestors de Continguts Web (CMS): WordPress",
+      "items": [
+        {
+          "label": "📘 UD2 Completa (1 pàgina)",
+          "href": "./ut02/index.html"
+        },
+        {
+          "label": "2.1 Arquitectura i Requeriments de WordPress",
+          "href": "./ut02/ut0201.html"
+        },
+        {
+          "label": "2.2 Instal·lació, Configuració de VirtualHost i Permisos",
+          "href": "./ut02/ut0202.html"
+        },
+        {
+          "label": "2.3 Gestió d'Usuaris, Rols i Polítiques de Seguretat",
+          "href": "./ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Continguts, Taxonomies, Temes i Child Themes",
+          "href": "./ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Connectors Essencials i WP-CLI",
+          "href": "./ut02/ut0205.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD3 — Plataformes d'E-learning (LMS): Moodle",
+      "items": [
+        {
+          "label": "📘 UD3 Completa (1 pàgina)",
+          "href": "./ut03/index.html"
+        },
+        {
+          "label": "3.1 Arquitectura de Moodle i Requeriments del Sistema",
+          "href": "./ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 Instal·lació, Automatització per CLI i Cron",
+          "href": "./ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 Gestió d'Usuaris, Rols i Mètodes de Matriculació",
+          "href": "./ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 Categories, Cursos i Còpies de Seguretat (.mbz)",
+          "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 Recursos, Activitats, Llibre de Qualificacions i Avaluació",
+          "href": "./ut03/ut0305.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD4 — Serveis de Núvol Privat i Gestió d'Arxius: Nextcloud",
+      "items": [
+        {
+          "label": "📘 UD4 Completa (1 pàgina)",
+          "href": "./ut04/index.html"
+        },
+        {
+          "label": "4.1 Núvol Privat vs Núvol Públic i Sobirania de Dades",
+          "href": "./ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Desplegament en Pila LAMP i Memòria Cau Redis",
+          "href": "./ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Gestió d'Usuaris, Grups i Quotes d'Emmagatzematge",
+          "href": "./ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 Sincronització Multidispositiu i Compartició Segura",
+          "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 Ecosistema d'Aplicacions i Administració amb 'occ'",
+          "href": "./ut04/ut0405.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD5 — Ofimàtica Col·laborativa i Comunicació Web",
+      "items": [
+        {
+          "label": "📘 UD5 Completa (1 pàgina)",
+          "href": "./ut05/index.html"
+        },
+        {
+          "label": "5.1 Suites Ofimàtiques Web i Protocols WOPI",
+          "href": "./ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Desplegament i Integració d'ONLYOFFICE Document Server",
+          "href": "./ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Gestió Documental (DMS) i Taulers Col·laboratius",
+          "href": "./ut05/ut0503.html"
+        },
+        {
+          "label": "5.4 Correu Web Corporatiu i Webmail (Roundcube)",
+          "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Plataformes de Comunicació i Videoconferència Web",
+          "href": "./ut05/ut0505.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD6 — Seguretat, Còpies de Seguretat i Manteniment Web",
+      "items": [
+        {
+          "label": "📘 UD6 Completa (1 pàgina)",
+          "href": "./ut06/index.html"
+        },
+        {
+          "label": "6.1 Certificats SSL/TLS i Connexions Segures HTTPS",
+          "href": "./ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Hardening de Servidors Web i Protecció OWASP",
+          "href": "./ut06/ut0602.html"
+        },
+        {
+          "label": "6.3 Estratègies i Eines de Còpia de Seguretat",
+          "href": "./ut06/ut0603.html"
+        },
+        {
+          "label": "6.4 Automatització de Backups i Monitoratge de Logs",
+          "href": "./ut06/ut0604.html"
+        },
+        {
+          "label": "6.5 Plans de Recuperació davant Desastres (DRP)",
+          "href": "./ut06/ut0605.html"
+        }
+      ]
+    }
+  ]
 }
