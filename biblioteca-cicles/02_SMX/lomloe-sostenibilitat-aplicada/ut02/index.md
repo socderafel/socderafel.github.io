@@ -5,6 +5,16 @@ course_root: ".."
 badge: "Transversal LOMLOE · FP · UT02"
 ---
 
+<div class="interactive-progress-tracker" data-module="SOST" data-unit="2" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
+</div>
+
 # UT02 — Impacte Ambiental i Social del Sector TIC
 
 Sovint es percep la tecnologia com quelcom «virtual» o «immaterial» que substitueix el paper i estalvia viatges. Tanmateix, el sector de les Tecnologies de la Informació i la Comunicació (TIC) depèn d'una **gegantina cadena industrial extractiva, logística i energètica** que genera un impacte ambiental superior al de tot el sector de l'aviació comercial mundial.
@@ -218,3 +228,86 @@ Un institut té 30 ordinadors de fa 7 anys que funcionen molt lents amb sistemes
 | **Diagnòstic de Maquinari i Modularitat** | No sap diferenciar entre components soldats i mòduls en sòcol a la placa base. | Identifica la memòria RAM i el disc dur però desconeix altres sòcols com Wi-Fi o CPU. | Desmunta equips amb seguretat, identifica tots els elements reemplaçables i avalua el dany. | Dissenya plans complets de modernització (*Upgrade*) per allargar la vida útil d'equips corporatius. |
 | **Propostes de Reacondicionament Sostenible** | Proposa substituir equips funcionals per nous models sense cap intent de diagnòstic o reparació. | Proposa canvis de peces bàsics sense considerar la compatibilitat ni la relació cost-benefici. | Dissenya projectes de reacondicionament amb equips reals, instal·lant SSDs i sistemes lliures. | Construeix una memòria econòmica i ecològica completa que demostra la viabilitat de la circularitat. |
 
+
+---
+
+## 🎯 Reptes Globals de Síntesi (Unitat 2)
+
+Demostra la teua comprensió integral sobre l'impacte ambiental i social del sector tecnològic resolent els 4 reptes de síntesi (+100 XP):
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-2-sintesi-c1">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 1: La Fase Crítica de l'ACV d'un Equip</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">En l'Anàlisi de Cicle de Vida d'un ordinador portàtil o smartphone, quina fase genera entre el 70% i el 85% de la seua petjada total de carboni?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c1" value="A"> A) La fase d'extracció de matèries primeres minerals i fabricació de xips a les fàbriques</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c1" value="B"> B) El consum elèctric diari mentre l'usuari el carrega a casa</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c1" value="C"> C) La impressió de la caixa de cartó</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c1" value="D"> D) La descàrrega d'aplicacions des de la botiga</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-2-sintesi-c2">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 2: Per què Allargar la Vida Útil és Decisiu?</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Tenint en compte la motxilla ecològica de fabricació, per quina raó ampliar la vida útil d'un ordinador de 3 a 6 anys és la mesura ecològica més efectiva?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c2" value="A"> A) Perquè evita haver d'extreure i fabricar un segon ordinador, amortitzant l'enorme petjada de carboni de fabricació en el doble de temps</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c2" value="B"> B) Perquè els ordinadors de 6 anys consumeixen la meitat d'energia que els nous</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c2" value="C"> C) Perquè els components vells es tornen biodegradables amb el pas dels anys</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c2" value="D"> D) Perquè ho exigeix el contracte de garantia</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-2-sintesi-c3">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 3: Pràctica d'Aparellament de Peces (Part Pairing)</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Què és el "Part Pairing" o bloqueig per número de sèrie que la Directiva Europea del Dret a Reparar ha prohibit expressament?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c3" value="A"> A) Una tècnica de programari que vincula per xifratge la placa base amb components concrets, desactivant funcions si la peça de recanvi no ha sigut calibrada pel servei oficial del fabricant</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c3" value="B"> B) Emparellar dos ordinadors mitjançant cable de xarxa creuat</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c3" value="C"> C) La sincronització per Bluetooth de dos auriculars</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c3" value="D"> D) Utilitzar dos discs durs en RAID 1</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-2-sintesi-c4">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 4: Els Minerals 3TG en la Indústria</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina conseqüència directa té l'ús de minerals no certificats lliures de conflicte (Conflict-Free) en la fabricació de components electrònics?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c4" value="A"> A) Finançar indirectament grups paramilitars armats que vulneren els drets humans i cometen violència a les zones d'extracció</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c4" value="B"> B) Fer que els ordinadors s'escalfen més ràpidament</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c4" value="C"> C) Disminuir la capacitat de memòria del disc dur</label>
+    <label class="option-label"><input type="radio" name="sost-2-sintesi-c4" value="D"> D) Provocar interferències en les ones de ràdio FM</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+---
+
+<div class="aules-delivery-card" data-module="SOST" data-unit="2" data-topic="0">
+  <div class="delivery-header">
+    <span class="delivery-icon">📦</span>
+    <div>
+      <h4 class="delivery-title">Lliurament de Projecte de la Unitat 2 — Informe d'Impacte del Sector TIC i Dret a Reparar</h4>
+      <p class="delivery-subtitle">Desenvolupa i lliura la memòria d'avaluació d'impacte ambiental i social: anàlisi d'un dispositiu, traçabilitat de minerals 3TG i proposta d'allargament de vida útil.</p>
+    </div>
+  </div>
+  <button class="btn-aules-download">📥 Descarrega Guia de Projecte de la Unitat en PDF</button>
+</div>

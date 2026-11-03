@@ -5,6 +5,16 @@ course_root: ".."
 badge: "Transversal LOMLOE · FP · UT05"
 ---
 
+<div class="interactive-progress-tracker" data-module="SOST" data-unit="5" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
+</div>
+
 # UT05 — Sostenibilitat Corporativa, ODS i Governança ESG
 
 La sostenibilitat ha deixat de ser una simple opció voluntària de màrqueting per a convertir-se en un **requeriment legal, estratègic i financer** per a qualsevol empresa. Els tècnics informàtics participen activament en la selecció ètica de proveïdors, la reducció d'emissions i la protecció dels drets digitals i laborals.
@@ -221,3 +231,86 @@ Realitza l'auditoria ergonòmica del teu lloc d'aprenentatge a l'aula d'informà
 | **Sistemes de Gestió Ambiental (ISO 14001 / EMAS)** | Desconeix el cicle PDCA o la diferència entre normes certificables i recomanacions voluntàries. | Explica el cicle de millora contínua bàsic però no sap redactar una política ambiental. | Redacta polítiques ambientals i procediments operatius conformes a l'apartat 5 de la ISO 14001. | Dissenya indicadors de seguiment ambiental, prepara auditories internes i compara marcs EMAS. |
 | **Ergonomia i Drets Digitals Laborals** | Ignora els riscos ergonòmics de les pantalles de visualització o la seguretat de dades en l'empresa. | Reconeix pautes ergonòmiques bàsiques però no sap aplicar la normativa de l'INSST. | Audita llocs de treball microinformàtics, mesurant distàncies i angles d'acord amb la legislació. | Dissenya llocs de treball integrals sans, accessibles i conformes a la normativa de prevenció de riscos. |
 
+
+---
+
+## 🎯 Reptes Globals de Síntesi (Unitat 5)
+
+Demostra la teua comprensió integral sobre sostenibilitat corporativa, ODS, governança ESG i sistemes ISO 14001 resolent els 4 reptes de síntesi (+100 XP):
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-5-sintesi-c1">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 1: Articulació de l'ODS 12 en Serveis Informàtics</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Com contribueix de manera directa un servei tècnic de reparació i manteniment informàtic a la consecució de l'ODS 12 de l'Agenda 2030?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c1" value="A"> A) Allargant la vida útil del maquinari, evitant la generació prematura de residus RAEE tòxics i promovent models de consum circular</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c1" value="B"> B) Augmentant la velocitat dels jocs online</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c1" value="C"> C) Venent ordinadors nous cada 6 mesos</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c1" value="D"> D) Utilitzant discs durs de menor capacitat</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-5-sintesi-c2">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 2: Rellevància dels Criteris ESG en el Sector TIC</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Per quina raó una PIME tecnològica ha d'implantar criteris ESG fins i tot si no és una multinacional cotitzada a borsa?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c2" value="A"> A) Perquè les grans empreses clientes i les administracions públiques exigeixen certificacions ESG a tots els seus proveïdors de serveis de la cadena de valor</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c2" value="B"> B) Perquè ho exigeix el protocol de xarxa WiFi</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c2" value="C"> C) Perquè els equips informàtics s'apaguen si no hi ha informe ESG</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c2" value="D"> D) Perquè és gratuït</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-5-sintesi-c3">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 3: Riscos Legals del Greenwashing</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quins riscos greus assumeix una empresa informàtica que faça publicitat amb afirmacions ambientals enganyoses (greenwashing)?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c3" value="A"> A) Sancions econòmiques greus segons la Directiva 2024/825, pèrdua irreversible de reputació comercial i possibles demandes per competència deslleial</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c3" value="B"> B) Que el seu lloc web es veja en blanc i negre</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c3" value="C"> C) Que els teclats no funcionen</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c3" value="D"> D) Cap risc</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-5-sintesi-c4">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 4: Utilitat del Cicle de Millora Contínua</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quin és l'objectiu de mantindre actiu el cicle PDCA de la norma ISO 14001 any rere any?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c4" value="A"> A) Assegurar que la gestió ambiental siga un procés dinàmic d'evolució contínua, adaptant-se a nous desafiaments i millorant progressivament l'eficiència</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c4" value="B"> B) Complir un tràmit administratiu per a no pagar multes</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c4" value="C"> C) Duplicar la despesa energètica cada any</label>
+    <label class="option-label"><input type="radio" name="sost-5-sintesi-c4" value="D"> D) Justificar sous més alts</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+---
+
+<div class="aules-delivery-card" data-module="SOST" data-unit="5" data-topic="0">
+  <div class="delivery-header">
+    <span class="delivery-icon">📦</span>
+    <div>
+      <h4 class="delivery-title">Lliurament de Projecte de la Unitat 5 — Pla Corporatiu Integral de Sostenibilitat i RSC</h4>
+      <p class="delivery-subtitle">Desenvolupa i lliura la memòria de projecte final de sostenibilitat corporativa: diagnòstic d'impactes, pla d'acció ODS/ESG, protocols antiobsolescència i auditoria ISO 14001.</p>
+    </div>
+  </div>
+  <button class="btn-aules-download">📥 Descarrega Guia de Projecte de la Unitat en PDF</button>
+</div>

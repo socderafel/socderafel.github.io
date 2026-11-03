@@ -5,6 +5,16 @@ course_root: ".."
 badge: "Transversal LOMLOE · FP · UT03"
 ---
 
+<div class="interactive-progress-tracker" data-module="SOST" data-unit="3" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
+</div>
+
 # UT03 — Economia Circular, Ecodisseny i Gestió de Residus RAEE
 
 Davant l'esgotament de les reserves minerals del planeta i la proliferació d'abocadors electrònics, el model industrial del segle XXI ha de transitar obligatòriament d'un sistema lineal d'«extreure, fabricar, usar i llençar» cap a un model d'**Economia Circular**.
@@ -217,3 +227,86 @@ Redacta el protocol oficial d'economia circular de l'aula de microinformàtica q
 | **Pràctica de Desballestament i Segregació** | Desmunta equips de forma destructiva o no sap segregar metalls, plàstics i bateries. | Segrega les peces principals amb alguna confusió en aliatges o components electrònics. | Desmunta amb tècnica segura, pesant i classificant cada fracció en contenidors adequats. | Executa procediments de mineria urbana i desmuntatge professional amb zero dany i màxima recuperació. |
 | **Seguretat de Dades i Preparació per a la Reutilització** | Lliura equips a tercers sense esborrar dades personals o privades del disc dur. | Esborra dades formatant de forma convencional sense aplicar tècniques de sobreescriptura segura. | Aplica comandes bash d'esborrat segur (`dd`/`shred`) verificant la destrucció completa de dades. | Construeix protocols corporatius d'eliminació de dades certificats d'acord amb els estàndards del RGPD. |
 
+
+---
+
+## 🎯 Reptes Globals de Síntesi (Unitat 3)
+
+Demostra la teua comprensió integral sobre economia circular, ecodisseny i tractament de RAEE resolent els 4 reptes de síntesi (+100 XP):
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-3-sintesi-c1">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 1: Jerarquia de les 9R en l'Acció Tècnica</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina de les següents actuacions sobre un parc de 20 ordinadors escolars té un major rang en la jerarquia de les 9R de l'economia circular?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c1" value="A"> A) Triturar-los en una planta de reciclatge per recuperar coure (R8 Reciclar)</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c1" value="B"> B) Netejar-los, substituir discs mecànics per SSDs i ampliar RAM per a mantindre'ls en ús 4 anys més (R5 Restaurar / R4 Reparar)</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c1" value="C"> C) Incinerar-los per a produir electricitat (R9 Recuperar)</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c1" value="D"> D) Llançar-los a un contenidor de brossa comuna</label>
+  </div>
+  <button class="btn-check" data-correct="B">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-3-sintesi-c2">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 2: Requisits d'Ecodisseny per al Desmuntatge</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quin criteri constructiu compleix fidelment la norma d'ecodisseny ISO 14006 en un nou ordinador portàtil?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c2" value="A"> A) Bateria subjecta amb pestanyes mecàniques o tires adhesives d'extracció fàcil que es retira en menys de 2 minuts sense escalfar</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c2" value="B"> B) Bateria soldada directament a la placa base amb resina epoxi</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c2" value="C"> C) Carcassa tancada amb reblons d'acer inoxidables</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c2" value="D"> D) Caragols de seguretat triangulars propietaris sense eina pública</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-3-sintesi-c3">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 3: Compliment del RD 110/2015 en la Gestió de RAEE</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina responsabilitat té una empresa informàtica davant la llei quan retira 15 ordinadors vells d'un client?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c3" value="A"> A) Lliurar-los obligatòriament a un gestor de residus autoritzat o dipositar-los a l'ecoparc, obtenint el justificant documental de traçabilitat de residu</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c3" value="B"> B) Abandonar-los al carrer al costat dels contenidors</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c3" value="C"> C) Cremar-los en un descampat</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c3" value="D"> D) Vendre'ls a qualsevol persona sense cap factura</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-3-sintesi-c4">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 4: Conseqüència de la Directiva RoHS</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quin gran canvi ambiental va consolidar la Directiva RoHS a tota la indústria mundial de components electrònics?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c4" value="A"> A) L'erradicació del plom a les soldadures i la prohibició de retardants de flama bromats i metalls pesants d'alta toxicitat</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c4" value="B"> B) L'eliminació dels processadors Intel</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c4" value="C"> C) La prohibició de connectar ordinadors per cable Ethernet</label>
+    <label class="option-label"><input type="radio" name="sost-3-sintesi-c4" value="D"> D) L'obligació de fabricar ordinadors només en color blanc</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+---
+
+<div class="aules-delivery-card" data-module="SOST" data-unit="3" data-topic="0">
+  <div class="delivery-header">
+    <span class="delivery-icon">📦</span>
+    <div>
+      <h4 class="delivery-title">Lliurament de Projecte de la Unitat 3 — Taller d'Economia Circular i Gestió de RAEE</h4>
+      <p class="delivery-subtitle">Desenvolupa i lliura la memòria de projecte de taller: protocol d'ecodisseny, restauració d'un equip retirat i gestió documental de residus RAEE.</p>
+    </div>
+  </div>
+  <button class="btn-aules-download">📥 Descarrega Guia de Projecte de la Unitat en PDF</button>
+</div>

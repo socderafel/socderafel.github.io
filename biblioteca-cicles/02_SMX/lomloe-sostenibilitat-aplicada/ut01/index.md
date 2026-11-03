@@ -5,6 +5,16 @@ course_root: ".."
 badge: "Transversal LOMLOE · FP · UT01"
 ---
 
+<div class="interactive-progress-tracker" data-module="SOST" data-unit="1" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
+</div>
+
 # UT01 — Desafiaments Ecosocials Globals i Límits Planetaris
 
 Vivim en una era geològica definida com a **Antropocè**, on les activitats industrials humanes s'han convertit en la força predominant que altera els cicles biogeoquímics de la Terra. Comprendre la magnitud d'aquesta crisi és el primer pas per a redissenyar els processos tecnològics des d'un paradigma de sostenibilitat.
@@ -227,3 +237,86 @@ Dissenya una proposta concreta de 4 mesures tècniques per a reduir les emission
 | **Auditoria Pràctica de Consum de Maquinari** | Incapaç d'utilitzar un vatímetre o no sap interpretar les dades de potència (Watts vs Joules). | Mesura el consum bàsic de l'equip en un sol estat sense contrastar càrregues de treball. | Realitza mesures comparatives completes en repòs i càrrega i utilitza eines com `powertop`. | Audita energèticament l'aula, identifica consums residuals i calcula l'estalvi anualitzat d'ajustos. |
 | **Pensament Sistèmic i Ecodisseny** | Proposa mesures testimonials sense cap impacte real (apagar un llum 5 minuts). | Proposa mesures convencionals d'estalvi energètic centrades només en la fase d'ús. | Proposa mesures tècniques argumentades que aborden tant la fase d'ús com l'allargament de vida. | Dissenya un pla integral de transició ecològica d'infraestructura microinformàtica viable i mesurable. |
 
+
+---
+
+## 🎯 Reptes Globals de Síntesi (Unitat 1)
+
+Demostra la teua comprensió integral dels reptes ecosocials i els límits del planeta resolent els 4 reptes de síntesi (+100 XP):
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-1-sintesi-c1">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 1: Efecte d'Escalfament del Metà vs CO2</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Per quina raó el metà (CH4) és objecte de regulació urgent tot i romandre menys temps a l'atmosfera que el CO2?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c1" value="A"> A) Perquè té un Potencial d'Escalfament Global (GWP) 28 vegades superior al del CO2 a 100 anys, provocant un fort impacte a curt termini</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c1" value="B"> B) Perquè és invisible i no té color</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c1" value="C"> C) Perquè només s'emet des de centrals nuclears</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c1" value="D"> D) Perquè no reacciona amb cap altre gas</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-1-sintesi-c2">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 2: Conseqüència de Traspassar Límits Planetaris</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina conseqüència té per a la humanitat eixir de la zona segura dels 9 límits planetaris?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c2" value="A"> A) Augmenta dràsticament el risc de desestabilització irreversible dels sistemes que sustenten la vida a la Terra</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c2" value="B"> B) Disminueix la velocitat de connexió de fibra òptica</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c2" value="C"> C) Fa que els satèl·lits caiguen a terra</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c2" value="D"> D) Obliga a canviar la moneda a euros</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-1-sintesi-c3">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 3: Dominància de l'Abast 3 en el Sector TIC</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Per quina raó les empreses tecnològiques centren els seus esforços en reduir les emissions d'Abast 3 (Scope 3)?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c3" value="A"> A) Perquè en dispositius electrònics, entre el 80% i el 90% de la petjada total de carboni es produeix durant la mineria, fabricació de xips i transport per proveïdors externs</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c3" value="B"> B) Perquè l'Abast 1 està prohibit a la Unió Europea</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c3" value="C"> C) Perquè és l'únic que es pot calcular sense matemàtiques</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c3" value="D"> D) Perquè l'Abast 2 no té cap cost econòmic</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-1-sintesi-c4">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 4: Vessant Social de la Sostenibilitat</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Per què un dispositiu que siga energèticament eficient però s'haja fabricat amb mà d'obra infantil o en condicions d'explotació no es pot considerar sostenible?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c4" value="A"> A) Perquè la sostenibilitat exigeix el compliment simultani i equilibrat dels tres pilars: Ambiental, Econòmic i Social (Drets Humans i Treball Digne)</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c4" value="B"> B) Perquè les bateries no es carreguen si no hi ha contracte laboral</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c4" value="C"> C) Perquè ho impedeix el protocol TCP/IP</label>
+    <label class="option-label"><input type="radio" name="sost-1-sintesi-c4" value="D"> D) Perquè només els productes de fusta són sostenibles</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+---
+
+<div class="aules-delivery-card" data-module="SOST" data-unit="1" data-topic="0">
+  <div class="delivery-header">
+    <span class="delivery-icon">📦</span>
+    <div>
+      <h4 class="delivery-title">Lliurament de Projecte de la Unitat 1 — Auditoria Ecosocial i Pla de Descarbonització</h4>
+      <p class="delivery-subtitle">Desenvolupa i lliura la memòria d'auditoria ambiental corporativa que incloga anàlisi de gasos GEH, petjada d'abast 1-3 i proposta de mitigació.</p>
+    </div>
+  </div>
+  <button class="btn-aules-download">📥 Descarrega Guia de Projecte de la Unitat en PDF</button>
+</div>

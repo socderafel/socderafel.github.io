@@ -5,6 +5,16 @@ course_root: ".."
 badge: "Transversal LOMLOE · FP · UT04"
 ---
 
+<div class="interactive-progress-tracker" data-module="SOST" data-unit="4" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
+  </div>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
+</div>
+
 # UT04 — Eficiència Energètica, Green IT i Descarbonització
 
 El concepte de **Green IT (*Tecnologies Verdes*)** agrupa totes aquelles pràctiques, arquitectures i decisions tecnològiques enfocades a minimitzar el consum elèctric dels equips informàtics, reduir la seua petjada de carboni i maximitzar el rendiment per watt consumit.
@@ -256,3 +266,86 @@ Amb un ordinador del taller que presenta sobreescalfament:
 | **Optimització Tèrmica i Manteniment Físic** | Desmunta dissipadors sense aplicar pasta tèrmica o dobla les aletes del radiador. | Neteja la pols superficialment sense monitoritzar les temperatures abans i després. | Realitza neteja tèrmica professional, canvi de pasta i mesura la caiguda de graus amb `sensors`. | Justifica la relació entre resistència tèrmica, acústica i consum de ventiladors en el taller. |
 | **Arquitectura de Virtualització i Consolidació** | Proposa mantindre múltiples màquines físiques infrautilitzades sense consolidar. | Comprèn els beneficis de la virtualització bàsica però no sap dimensionar la càrrega. | Dimensiona servidors amfitrions per a consolidar serveis reduint dràsticament el consum en watts. | Dissenya projectes complets de consolidació amb mètriques d'estalvi energètic i retorn d'inversió. |
 
+
+---
+
+## 🎯 Reptes Globals de Síntesi (Unitat 4)
+
+Demostra la teua comprensió integral sobre eficiència energètica, Green IT i gestió de consums resolent els 4 reptes de síntesi (+100 XP):
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-4-sintesi-c1">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 1: Impacte de la Font d'Alimentació</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Com influeix l'elecció d'una font d'alimentació amb certificació 80 PLUS Platinum enfront d'una font sense certificar en una sala amb 20 servidors encesos 24/7?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c1" value="A"> A) Redueix milers de quilowatts-hora d'electricitat a l'any i disminueix dràsticament la càrrega tèrmica sobre l'aire condicionat de la sala</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c1" value="B"> B) Fa que els servidors augmenten la resolució gràfica</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c1" value="C"> C) Només canvia el color dels cables interiors</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c1" value="D"> D) No té cap efecte pràctic mesurable</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-4-sintesi-c2">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 2: Interpretació d'un Índex PUE</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Si una auditoria d'un CPD indica un valor PUE de 1,15, com s'ha de qualificar aquesta instal·lació?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c2" value="A"> A) Com una instal·lació altament eficient i d'avantguarda, on només el 15% de l'energia es destina a tasques auxiliars de refrigeració i suport</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c2" value="B"> B) Com un desastre ecològic que s'ha de tancar immediatament</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c2" value="C"> C) Com un centre de dades que no consumeix cap tipus d'energia</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c2" value="D"> D) Com una instal·lació sense servidors</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-4-sintesi-c3">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 3: Doble Estalvi de la Consolidació Virtual</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quina doble dimensió d'estalvi ambiental aporta la consolidació de servidors mitjançant hipervisors com Proxmox o KVM?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c3" value="A"> A) Estalvi directe d'electricitat en mantenir la CPU en un rang de treball òptim i estalvi de la petjada ecològica associada a la fabricació i manteniment de múltiples xassissos físics</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c3" value="B"> B) Permet que els servidors no necessiten connexió elèctrica</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c3" value="C"> C) Elimina la necessitat de tindre administradors de sistemes</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c3" value="D"> D) Redueix el pes físic de l'edifici</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="sost-4-sintesi-c4">
+  <div class="challenge-header">
+    <span class="challenge-title">Rept de Síntesi 4: Localització Geogràfica de Servidors</span>
+    <span class="challenge-score">+25 XP</span>
+  </div>
+  <p class="challenge-question">Per quina raó la ubicació geogràfica d'un servidor cloud és decisiva per a la seua petjada de carboni fins i tot si el seu consum en kWh és idèntic?</p>
+  <div class="challenge-options">
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c4" value="A"> A) Perquè el mix elèctric de cada país té un factor d'emissió molt diferent depenent de si l'electricitat es genera amb carbó o amb renovables (solar/eòlica)</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c4" value="B"> B) Perquè la gravetat terrestre canvia segons la latitud</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c4" value="C"> C) Perquè els electrons viatgen més ràpid al nord</label>
+    <label class="option-label"><input type="radio" name="sost-4-sintesi-c4" value="D"> D) Perquè a alguns països no hi ha internet</label>
+  </div>
+  <button class="btn-check" data-correct="A">Comprova la Resposta</button>
+  <div class="feedback-msg"></div>
+</div>
+
+---
+
+<div class="aules-delivery-card" data-module="SOST" data-unit="4" data-topic="0">
+  <div class="delivery-header">
+    <span class="delivery-icon">📦</span>
+    <div>
+      <h4 class="delivery-title">Lliurament de Projecte de la Unitat 4 — Pla d'Eficiència Energètica i Descarbonització de CPD</h4>
+      <p class="delivery-subtitle">Desenvolupa i lliura el projecte integral d'optimització energètica: auditoria PUE, política de C-States, pla de consolidació en Proxmox i provisió d'autoconsum solar.</p>
+    </div>
+  </div>
+  <button class="btn-aules-download">📥 Descarrega Guia de Projecte de la Unitat en PDF</button>
+</div>
