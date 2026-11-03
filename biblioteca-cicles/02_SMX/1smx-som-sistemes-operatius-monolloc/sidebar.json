@@ -6,7 +6,7 @@
   },
   "units": [
     {
-      "summary": "UD1 — Presentación del curso",
+      "summary": "UD1 — Presentació del curs i arquitectura",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
@@ -14,8 +14,24 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 Presentación",
+          "label": "1.1 Presentació i Entorn de Taller",
           "href": "./ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 Arquitectura del Maquinari i SO",
+          "href": "./ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 Límits 32 vs 64 bits i Adreçament",
+          "href": "./ut01/ut0103.html"
+        },
+        {
+          "label": "1.4 Auditoria en Consola (CLI)",
+          "href": "./ut01/ut0104.html"
+        },
+        {
+          "label": "1.5 Seguretat, Credencials i Mitjans",
+          "href": "./ut01/ut0105.html"
         }
       ]
     },
