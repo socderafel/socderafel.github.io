@@ -1,190 +1,125 @@
 ---
-layout: default
 title: "Muntatge i Manteniment d'Equips — UD7 Desplegament de Programari amb Imatges de Disc"
-course_root: ".."
-badge: "1r SMX · Grau Mitjà · UD7"
+layout: default
 ---
 
-# UT7 - Desplegament de Programari mitjançant Imatges de Disc
+# UD7 Desplegament de Programari amb Imatges de Disc
 
-Aquesta unitat tracta la instal·lació i desplegament massiu de sistemes operatius i programari en entorns corporatius i aules d'informàtica mitjançant la creació de mitjans d'arrencada amb Ventoy/Rufus, la generalització del sistema amb Microsoft Sysprep per evitar col·lisions d'identificadors de seguretat (SID) i la clonació ràpida amb Clonezilla o DISM.
+Benvingut a la **Unitat Didàctica 7** del mòdul professional de **Muntatge i Manteniment d'Equips (MME)**. Aquesta unitat et capacita per a clonar, mantenir i desplegar parcs informàtics complets de forma automatitzada, utilitzant les eines més potents de la indústria: Sysprep, Clonezilla, Ventoy i servidors d'arrencada PXE amb transmissió massiva per Multicast.
 
 ---
 
-## 💿 Flux de Treball de Desplegament Massiu i Clonació
+## Mapa d'Aprenentatge de la Unitat
 
-<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
-  <div style="text-align: center; margin-bottom: 15px;">
-    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
-    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Cicle de Vida d'una Imatge Mestra (Golden Master)</h3>
-    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Equip patró, generalització del Machine SID amb Sysprep, captura i restauració multicast</p>
+```mermaid
+graph TD
+    UD7["UD7: Desplegament de Programari"] --> S1["7.1 Fonaments del Clonat i Desplegament d'Equips"]
+    UD7 --> S2["7.2 Preparació del Sistema Mestre amb Microsoft Sysprep"]
+    UD7 --> S3["7.3 Clonat Avançat amb Clonezilla: Modes, Repositoris i Algorismes"]
+    UD7 --> S4["7.4 Eines d'Arrencada Múltiple i Rescat amb Ventoy"]
+    UD7 --> S5["7.5 Desplegament Massiu en Xarxa: PXE Boot i Multicast"]
+
+    S1 --> OBJ1["Comprendre les diferències entre imatges per blocs i per fitxers"]
+    S2 --> OBJ2["Generalitzar imatges eliminant SIDs i automatitzar amb unattend.xml"]
+    S3 --> OBJ3["Capturar i restaurar equips amb Partclone, repositoris Samba/NFS i opció -k1"]
+    S4 --> OBJ4["Crear una suite forense i de rescat multiboot amb suport Secure Boot"]
+    S5 --> OBJ5["Configurar arrencades per xarxa PXE i clonacions massives per Multicast"]
+```
+
+---
+
+## Sessions d'Estudi i Activitats Pràctiques
+
+1. [**7.1 Fonaments del Clonat i Desplegament d'Equips**](ut0701.html)
+   - El cicle de vida del parc informàtic i la màquina mestra (*Golden Image*).
+   - Imatges a nivell de bloc (*sector-by-sector*) vs nivell de fitxer (WIM/DISM).
+   - El motor d'eficiència Partclone i els avantatges a les aules d'informàtica.
+
+2. [**7.2 Preparació del Sistema Mestre amb Microsoft Sysprep**](ut0702.html)
+   - El problema del SID duplicat en dominis Active Directory.
+   - L'ordre de generalització: `sysprep.exe /generalize /oobe /shutdown`.
+   - Automatització d'instal·lacions desateses amb fitxers `unattend.xml`.
+
+3. [**7.3 Clonat Avançat amb Clonezilla: Modes, Repositoris i Algorismes**](ut0703.html)
+   - Modes operatius: `device-image` (savedisk/restoredisk) vs `device-device`.
+   - Connexió de repositoris remots a `/home/partimag` (Samba, NFS, USB).
+   - Algorismes de compressió multinucli (*zstd*, *pigz*) i redimensionament proporcional (`-k1`).
+
+4. [**7.4 Eines d'Arrencada Múltiple i Rescat amb Ventoy**](ut0704.html)
+   - Arquitectura de particionat de Ventoy (partició de dades exFAT + partició VTOYEFI).
+   - La suite de rescat indispensable: Clonezilla, Rescuezilla, Hiren's BootCD PE i MemTest86.
+   - Gestió de claus de seguretat amb MokManager i compatibilitat Secure Boot.
+
+5. [**7.5 Desplegament Massiu en Xarxa: PXE Boot i Multicast**](ut0705.html)
+   - El protocol d'arrencada PXE mitjançant serveis DHCP i TFTP.
+   - Comparativa de cabal: Unicast (col·lapse) vs Multicast (emissió única paral·lela).
+   - Requisit de commutació IGMP Snooping i plataformes Clonezilla Server i FOG Project.
+
+---
+
+## Reptes Globals d'Avaluació de la Unitat (+100 pts)
+
+<div class="interactive-challenge-card" data-points="25" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; margin-bottom: 20px; background: #ffffff;">
+  <div style="font-weight: 700; color: #1e293b; margin-bottom: 8px;">Repte Global 1: Seqüència Integral de Desplegament</div>
+  <p style="color: #475569; font-size: 0.95rem;">Quina és la seqüència cronològica correcta d'accions per a preparar i desplegar una imatge mestra de Windows en 25 ordinadors nous d'un institut?</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin: 12px 0;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q1" value="a"> Clonar el disc directament, encendre els 25 equips i després executar Sysprep en cadascun.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q1" value="b"> Configurar l'equip mestre completament -> Executar `sysprep /generalize /oobe /shutdown` -> Arrancar immediatament des d'USB/PXE amb Clonezilla sense iniciar Windows -> Capturar la imatge al repositori -> Desplegar la imatge als 25 equips destinataris.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q1" value="c"> Formatar tots els equips amb Ventoy i instal·lar Windows un a un amb el DVD.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q1" value="d"> Executar MemTest86 als 25 equips simultàniament.</label>
   </div>
-  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
-    <defs>
-      <linearGradient id="imgMasterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="imgSysprepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="imgCloneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="imgDeployGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
-      </linearGradient>
-    </defs>
+  <button class="btn-check" data-correct="b" data-feedback="Correcte! Aquesta és la seqüència professional canònica: preparar el patró, generalitzar el SID, capturar el disc en fred i desplegar massivament.">Comprova la resposta</button>
+  <div class="feedback-msg" style="display:none; margin-top: 10px; font-weight: 600;"></div>
+</div>
 
-    <!-- Bloc 1: Equip Patró -->
-    <rect x="20" y="20" width="185" height="210" rx="8" fill="url(#imgMasterGrad)" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="112" y="45" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">🖥️ 1. EQUIP PATRÓ</text>
-    <text x="112" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Golden Image Reference</text>
-    <line x1="30" y1="73" x2="195" y2="73" stroke="#334155"/>
-    <text x="32" y="93" fill="#cbd5e1" font-size="9.5">• SO net instal·lat</text>
-    <text x="32" y="113" fill="#cbd5e1" font-size="9.5">• Controladors de maquinari</text>
-    <text x="32" y="133" fill="#cbd5e1" font-size="9.5">• Programari d'aula instal·lat</text>
-    <text x="32" y="153" fill="#cbd5e1" font-size="9.5">• Actualitzacions de seguretat</text>
-    <text x="32" y="173" fill="#34d399" font-size="9.5">• Perfil d'usuari configurat</text>
-    <text x="112" y="218" fill="#38bdf8" font-size="9" text-anchor="middle" font-weight="bold">Model Base Únic</text>
+<div class="interactive-challenge-card" data-points="25" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; margin-bottom: 20px; background: #ffffff;">
+  <div style="font-weight: 700; color: #1e293b; margin-bottom: 8px;">Repte Global 2: Resolució de Col·lisions de SID</div>
+  <p style="color: #475569; font-size: 0.95rem;">Dos ordinadors clonats sense Sysprep s'intenten unir a un domini corporatiu de Windows Server. Quina incidència es manifestarà a la xarxa?</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin: 12px 0;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q2" value="a"> Es cremarà la targeta de xarxa dels equips.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q2" value="b"> En compartir el mateix identificador de seguretat (SID), el controlador de domini sobreescriurà el compte d'un equip sobre l'altre, provocant pèrdua de confiança de domini, errors d'inici de sessió i conflictes de polítiques GPO.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q2" value="c"> La velocitat de connexió caurà a 10 Mbps.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q2" value="d"> La resolució de pantalla canviarà automàticament a 800x600.</label>
+  </div>
+  <button class="btn-check" data-correct="b" data-feedback="Molt bé! Active Directory utilitza el SID per identificar unívocament les màquines. Dos SIDs idèntics generen col·lisions que trenquen la relació de confiança amb el domini.">Comprova la resposta</button>
+  <div class="feedback-msg" style="display:none; margin-top: 10px; font-weight: 600;"></div>
+</div>
 
-    <!-- Fletxa 1 -> 2 -->
-    <path d="M 205 115 L 230 115" stroke="#38bdf8" stroke-width="2"/>
+<div class="interactive-challenge-card" data-points="25" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; margin-bottom: 20px; background: #ffffff;">
+  <div style="font-weight: 700; color: #1e293b; margin-bottom: 8px;">Repte Global 3: Disseny d'una Aula amb Desplegament Multicast</div>
+  <p style="color: #475569; font-size: 0.95rem;">Com a administrador de l'institut, has de renovar 35 equips d'una aula d'informàtica cada trimestre. Quin equipament i configuració de xarxa garanteix el temps mínim de clonació sense alterar la feina dels altres departaments?</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin: 12px 0;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q3" value="a"> Connectar els 35 equips per Wi-Fi 2.4 GHz i clonar amb un disc USB compartit.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q3" value="b"> Un servidor Clonezilla Server o FOG Project amb interfície Gigabit/10G, arrencada per xarxa PXE i switches gestionats amb suport i activació d'IGMP Snooping per enviar la imatge per Multicast.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q3" value="c"> Portar un llapis USB de màquina en màquina durant 3 dies.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q3" value="d"> Utilitzar discos òptics DVD-RW regravables.</label>
+  </div>
+  <button class="btn-check" data-correct="b" data-feedback="Exacte! La combinació de PXE (sense necessitat de tocar físicament els equips), Multicast (un sol flux compartit) i IGMP Snooping (trànsit aïllat a l'aula) és la solució òptima d'enginyeria.">Comprova la resposta</button>
+  <div class="feedback-msg" style="display:none; margin-top: 10px; font-weight: 600;"></div>
+</div>
 
-    <!-- Bloc 2: Sysprep Generalize -->
-    <rect x="235" y="20" width="195" height="210" rx="8" fill="url(#imgSysprepGrad)" stroke="#c084fc" stroke-width="1.5"/>
-    <text x="332" y="45" fill="#c084fc" font-size="11" font-weight="bold" text-anchor="middle">🛡️ 2. MICROSOFT SYSPREP</text>
-    <text x="332" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Generalització del Sistema</text>
-    <line x1="245" y1="73" x2="420" y2="73" stroke="#334155"/>
-    <text x="248" y="93" fill="#ef4444" font-size="9.5" font-weight="bold">• Elimina Machine SID:</text>
-    <text x="258" y="108" fill="#94a3b8" font-size="9">Evita conflictes de xarxa</text>
-    <text x="248" y="128" fill="#cbd5e1" font-size="9.5">• Esborra GUIDs i logs</text>
-    <text x="248" y="148" fill="#cbd5e1" font-size="9.5">• Paràmetres clau:</text>
-    <text x="258" y="165" fill="#38bdf8" font-size="8.5" font-family="monospace">/generalize /oobe /shutdown</text>
-    <text x="248" y="188" fill="#34d399" font-size="9.5">• Prepara mode OOBE</text>
-    <text x="332" y="218" fill="#c084fc" font-size="9" text-anchor="middle" font-weight="bold">Despersonalització</text>
-
-    <!-- Fletxa 2 -> 3 -->
-    <path d="M 430 115 L 455 115" stroke="#c084fc" stroke-width="2"/>
-
-    <!-- Bloc 3: Clonació amb Clonezilla -->
-    <rect x="460" y="20" width="195" height="210" rx="8" fill="url(#imgCloneGrad)" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="557" y="45" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">💾 3. CLONEZILLA / DISM</text>
-    <text x="557" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Captura de la Imatge</text>
-    <line x1="470" y1="73" x2="645" y2="73" stroke="#334155"/>
-    <text x="472" y="93" fill="#cbd5e1" font-size="9.5">• Arrencada per USB (Ventoy)</text>
-    <text x="472" y="113" fill="#cbd5e1" font-size="9.5">• <tspan fill="#34d399" font-weight="bold">Partclone:</tspan> Només copia</text>
-    <text x="482" y="128" fill="#94a3b8" font-size="9">els blocs ocupats (estalvi 80%)</text>
-    <text x="472" y="148" fill="#cbd5e1" font-size="9.5">• Compressió gzip / zstd</text>
-    <text x="472" y="168" fill="#cbd5e1" font-size="9.5">• Desat en xarxa: <tspan fill="#f59e0b">Samba / SSH</tspan></text>
-    <text x="472" y="188" fill="#cbd5e1" font-size="9.5">• Mode: <tspan fill="#38bdf8">savedisk</tspan></text>
-    <text x="557" y="218" fill="#f59e0b" font-size="9" text-anchor="middle" font-weight="bold">Còpia Sectorial Intel·ligent</text>
-
-    <!-- Fletxa 3 -> 4 -->
-    <path d="M 655 115 L 680 115" stroke="#f59e0b" stroke-width="2"/>
-
-    <!-- Bloc 4: Desplegament Multicast -->
-    <rect x="685" y="20" width="155" height="210" rx="8" fill="url(#imgDeployGrad)" stroke="#34d399" stroke-width="1.5"/>
-    <text x="762" y="45" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">🚀 4. DESPLEGAMENT</text>
-    <text x="762" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Restauració en Massa</text>
-    <line x1="695" y1="73" x2="830" y2="73" stroke="#334155"/>
-    <text x="697" y="93" fill="#cbd5e1" font-size="9.5">• Multicast per xarxa</text>
-    <text x="697" y="113" fill="#cbd5e1" font-size="9.5">• <tspan fill="#34d399" font-weight="bold">30 PCs a l'hora</tspan></text>
-    <text x="707" y="128" fill="#94a3b8" font-size="9">Temps: 15 minuts</text>
-    <text x="697" y="148" fill="#cbd5e1" font-size="9.5">• Primer arrencament:</text>
-    <text x="707" y="163" fill="#f59e0b" font-size="9">Genera nou SID únic</text>
-    <text x="697" y="183" fill="#38bdf8" font-size="9.5">• Unió a domini OK</text>
-    <text x="762" y="218" fill="#34d399" font-size="9" text-anchor="middle" font-weight="bold">Aula 100% Homogènia</text>
-
-    <!-- Peu informatiu -->
-    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
-    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or del Desplegament: <tspan fill="#ef4444" font-weight="bold">MAI clonar un Windows sense passar Sysprep prèviament.</tspan></text>
-    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Els ordinadors clonats sense Sysprep compartiran el mateix Machine SID provocant fallades crítiques d'autenticació en xarxa.</text>
-  </svg>
+<div class="interactive-challenge-card" data-points="25" style="border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; margin-bottom: 20px; background: #ffffff;">
+  <div style="font-weight: 700; color: #1e293b; margin-bottom: 8px;">Repte Global 4: Recuperació davant d'Infecció Massiva</div>
+  <p style="color: #475569; font-size: 0.95rem;">Un grup d'alumnes infecta accidentalment amb ransomware les màquines d'un laboratori. Quina és la resposta més ràpida i eficaç del tècnic de manteniment?</p>
+  <div style="display: flex; flex-direction: column; gap: 8px; margin: 12px 0;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q4" value="a"> Intentar desxifrar els fitxers un a un buscant claus per Internet.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q4" value="b"> Llançar una tasca de restauració d'imatge PXE per xarxa utilitzant la imatge mestre certificada, retornant tots els ordinadors al seu estat original net i funcional en menys de 10 minuts.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q4" value="c"> Canviar els discs SSD físics de tots els ordinadors.</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_07_global_q4" value="d"> Pagar el rescat exigit pel programari maliciós.</label>
+  </div>
+  <button class="btn-check" data-correct="b" data-feedback="Molt bé! El desplegament automatitzat permet una recuperació davant de desastres instantània, tornant les màquines a un estat net i certificat en minuts.">Comprova la resposta</button>
+  <div class="feedback-msg" style="display:none; margin-top: 10px; font-weight: 600;"></div>
 </div>
 
 ---
 
-## 📊 Comparativa de Tecnologies de Clonació
-
-| Eina / Mètode | Tipus de Còpia | Velocitat | Mida de la Imatge | Compatibilitat de Maquinari | Ús Recomanat |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **`dd` (Sector a sector)** | Físic en brut (Raw) | Lenta | Igual a la capacitat del disc sencer | Només maquinari idèntic | Anàlisi forense i recuperació de dades |
-| **Clonezilla (Partclone)** | Lògic per blocs de sistema de fitxers | Molt Ràpida | Només l'espai ocupat comprimit | Equips similars (MBR o GPT) | **Clonació d'aules i manteniment periòdic** |
-| **DISM / ImageX (`.WIM`)** | Basat en fitxers i capes | Ràpida | Mínima (deduplicació de fitxers) | Multi-maquinari (HAL universal) | Desplegament corporatiu oficial Microsoft |
-
----
-
-## 📑 Continguts de la Unitat
-
-| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
-| :---: | :--- | :--- | :---: |
-| **7.1** | [**Imatges de Disc, Clonezilla i Sysprep**](./ut0701.md) | Concepte d'imatge de disc, mitjans d'arrencada amb Ventoy i Rufus, resolució de conflictes de SID amb Sysprep, modalitats de clonació amb Clonezilla | [**💿 Estudiar Clonació →**](./ut0701.md) |
-
----
-
-## 🎯 Resultats d'Aprenentatge Vinculats
-- **RA6:** Instal·la programari en un equip microinformàtic utilitzant imatges de disc, justificant el procediment triat segons les característiques del parc d'equips.
-- **Criteris d'Avaluació:**
-  - S'ha utilitzat programari de clonació de discos creant imatges funcionals i arrencables.
-  - S'han preparat les imatges mestres eliminant identificadors únics de seguretat abans de la seua distribució.
-
----
-
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-### 📋 Bloc A: Fonaments de Clonació, Mitjans d'Arrencada i Conflictes de SID
-1. **La Col·lisió de Machine SID en Xarxes Corporatives:**
-   - A cada instal·lació de Windows, el sistema genera un **SID d'equip** (*Machine SID*) únic, format per un conjunt de 96 bits aleatoris (ex: `S-1-5-21-3623811015-3361044348-30300820`).
-     - Si cloneu 25 ordinadors d'una aula sense executar `Sysprep /generalize`, quin greu problema de seguretat es produeix quan els equips intenten unir-se a un domini d'Active Directory?
-     - Per què el servei WSUS (actualitzacions de Windows) o sistemes d'antivirus corporatius només reconeixeran una única màquina en compte de les 25 reals?
-2. **Partclone vs Clonació Sectorial `dd`:**
-   - En un laboratori es vol clonar una màquina amb un disc SSD NVMe d'**$1\text{ TB}$**, on la partició de Windows té ocupats només **$55\text{ GB}$** de programari i la resta són blocs no assignats.
-     - Si s'utilitza una comanda clàssica `dd` sector a sector, quanta mida ocuparà la imatge al disc extern i quant de temps trigarà a través d'una interfície USB 3.0 de $120\text{ MB/s}$?
-     - Quants Gigabytes copiarà Clonezilla utilitzant el motor intel·ligent **Partclone**?
-3. **Avantatges de Ventoy en el Treball Diari del Tècnic:**
-   - Per què la tecnologia multiboot de **Ventoy** ha substituït l'ús de Rufus en el taller informàtic quan cal disposar de múltiples instal·ladors (Windows 10, Windows 11, Ubuntu, Clonezilla, Hirens BootCD) en un sol pendrive?
-
-### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
-
-#### Repte 1: Generalització d'un Equip Patró amb Sysprep
-1. A la màquina patró de laboratori un cop configurada amb el programari complet:
-2. Obre la consola de l'Administrador (CMD o PowerShell) i canvia al directori de Sysprep:
-   ```cmd
-   cd C:\Windows\System32\Sysprep
-   ```
-3. Executa l'eina de generalització amb opció d'aturada automàtica:
-   ```cmd
-   sysprep.exe /generalize /oobe /shutdown
-   ```
-4. Espera que l'equip s'apague completament. **Important: No tornis a encendre l'equip de forma normal abans de capturar la imatge!** (Si arrenca Windows, el procés OOBE s'iniciarà i caldrà repetir el Sysprep).
-
-#### Repte 2: Consulta del Machine SID amb PowerShell abans i després
-1. Consulta el SID complet dels usuaris locals per comprovar la part comuna corresponent al Machine SID:
-   ```powershell
-   Get-LocalUser | Select-Object Name, SID
-   ```
-2. Observa la cadena comuna `S-1-5-21-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX`.
-3. Després de restaurar la imatge clonada en una segona màquina i finalitzar l'assistent OOBE, torna a executar la comanda i comprova que la terna numèrica ha canviat completament, demostrant que el nou equip té una identitat de seguretat única a la xarxa.
-
-#### Repte 3: Captura d'Imatge de Windows en format `.WIM` amb DISM
-1. Arrenca l'equip amb un pendrive de rescat de Windows PE.
-2. Identifica la lletra de la unitat del sistema (habitualment `C:` o `D:`) i la unitat externa d'emmagatzematge:
-   ```cmd
-   dism /Capture-Image /ImageFile:"E:\Imatges\Aula_SMX.wim" /CaptureDir:C:\ /Name:"Imatge_Mestra_SMX" /Description:"Windows 11 amb eines de taller" /Compress:fast
-   ```
-3. Comprova que la imatge s'ha creat correctament consultant la seua informació interna:
-   ```cmd
-   dism /Get-ImageInfo /ImageFile:"E:\Imatges\Aula_SMX.wim" /Index:1
-   ```
-
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
-
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Generalització amb Sysprep i Seguretat de SID** | Explica amb rigor el perill del SID duplicat, executa `sysprep /generalize /oobe` i comprova la regeneració de GUIDs. | Coneix que cal passar Sysprep però oblida el paràmetre `/generalize` o encén l'equip abans de fer la imatge. | Clona equips sense passar Sysprep desconeixent que comparteixen el mateix identificador a la xarxa. |
-| **Eines de Clonació (Clonezilla vs DISM)** | Domina la creació d'imatges amb Clonezilla i DISM, justificant l'ús de Partclone i formats comprimits. | Clona discs amb èxit mitjançant assistent gràfic però es perd en les opcions de xarxa o formats de compressió. | Utilitza còpies manuals de carpetes fitxer a fitxer que no conserven particions arrencables ni permisos ACL. |
-| **Mitjans d'Arrencada i Desplegament Massiu** | Configura pendrives multiboot amb Ventoy i dissenya procediments de restauració multicast per a aules senceres. | Prepara un llapis USB amb Rufus però necessita formatar-lo cada vegada que vol canviar de sistema operatiu. | Incapaç de configurar l'ordre d'arrencada a la UEFI per arrencar des del dispositiu USB extern. |
+<div class="aules-delivery-card" style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 20px; margin-top: 28px;">
+  <h3 style="color: #1e40af; margin-top: 0;">Lliurament del Projecte Global de la Unitat a Aules</h3>
+  <p style="color: #1e3a8a; font-size: 0.95rem;">
+    Envia el dossier complet de la Unitat Didàctica 7: <strong>Dossier Tècnic de Desplegament de Programari amb Sysprep, Clonezilla, Ventoy i PXE Multicast</strong>. Genera el PDF oficial per a Aules.
+  </p>
+  <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
+    <input type="text" class="student-name-input" placeholder="El teu nom i cognoms..." style="padding: 8px 12px; border: 1px solid #94a3b8; border-radius: 6px; flex-grow: 1; min-width: 240px;">
+    <button class="btn-generate-aules-pdf btn-aules-dl" data-module="MME" data-unit="UD07" data-activity="Global" style="background: #2563eb; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 600;">Generar PDF Aules</button>
+  </div>
+</div>

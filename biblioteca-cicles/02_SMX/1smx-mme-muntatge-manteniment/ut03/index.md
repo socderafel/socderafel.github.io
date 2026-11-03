@@ -1,194 +1,113 @@
 ---
 layout: default
-title: "Muntatge i Manteniment d'Equips — UD3 Components del PC: Caixes, Refrigeració i Emmagatzematge"
+title: "UD3: Components del PC: Caixes, Refrigeració i Emmagatzematge — MME"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD3"
+prev_url: "../ut02/index.html"
+prev_label: "⬅️ UD2: Electricitat i Fonts PSU"
+next_url: "ut0301.html"
+next_label: "3.1 Caixes i Airflow ➡️"
 ---
 
-# UT3 - Components del PC: Caixes, Refrigeració i Emmagatzematge
-
-En aquesta unitat s'estudien els components essencials de l'estructura física i l'emmagatzematge permanent d'un ordinador: els factors de forma de caixes, la dinàmica de flux d'aire i refrigeració per aire o líquida, i la comparativa tecnològica entre discs durs magnètics (HDD) i unitats d'estat sòlid (SSD SATA i NVMe M.2).
-
----
-
-## 💾 Arquitectura d'Emmagatzematge i Termodinàmica
-
-<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
-  <div style="text-align: center; margin-bottom: 15px;">
-    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
-    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Emmagatzematge (HDD vs SSD SATA vs NVMe) i Flux d'Aire</h3>
-    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Comparativa de velocitats de transferència, cel·les NAND Flash i dinàmica tèrmica del xassís</p>
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:16px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:var(--text-color);">⚡ Progrés global de la Unitat 3</span>
+    <span class="tracker-count" style="font-weight:700; color:#2563eb;">0 / 4 reptes globals resolts</span>
   </div>
-  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
-    <defs>
-      <linearGradient id="hddGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#64748b" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#334155" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="ssdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="nvmeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="airGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
-      </linearGradient>
-    </defs>
+  <div style="background:#e2e8f0; border-radius:999px; height:8px; overflow:hidden; margin-top:10px;">
+    <div class="tracker-fill" style="background:#2563eb; width:0%; height:100%; transition:width 0.3s ease;"></div>
+  </div>
+</div>
 
-    <!-- Bloc 1: Disc HDD Magnètic -->
-    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#hddGrad)" stroke="#94a3b8" stroke-width="1.5"/>
-    <text x="115" y="45" fill="#cbd5e1" font-size="11" font-weight="bold" text-anchor="middle">💿 HDD MAGNÈTIC (3.5")</text>
-    <text x="115" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Plats mecànics giratoris</text>
-    <line x1="30" y1="73" x2="200" y2="73" stroke="#334155"/>
-    <text x="32" y="93" fill="#cbd5e1" font-size="9.5">• Velocitat: <tspan fill="#f59e0b">5400 - 7200 RPM</tspan></text>
-    <text x="32" y="113" fill="#cbd5e1" font-size="9.5">• Bus: <tspan fill="#94a3b8">SATA III (6 Gbps)</tspan></text>
-    <text x="32" y="133" fill="#cbd5e1" font-size="9.5">• Seqüencial: <tspan fill="#cbd5e1">150 - 250 MB/s</tspan></text>
-    <text x="32" y="153" fill="#cbd5e1" font-size="9.5">• Latència: <tspan fill="#ef4444">10 - 15 ms (Molt lenta)</tspan></text>
-    <text x="32" y="173" fill="#cbd5e1" font-size="9.5">• IOPS aleatoris: <tspan fill="#ef4444">~100 IOPS</tspan></text>
-    <text x="32" y="193" fill="#94a3b8" font-size="9">Ús: Còpies seguretat, dades massives</text>
-    <text x="115" y="218" fill="#94a3b8" font-size="9" text-anchor="middle" font-weight="bold">Sensible a Cops i Vibracions</text>
+# 📦 UD3: Components del PC: Caixes, Refrigeració i Emmagatzematge
 
-    <!-- Fletxa 1 -> 2 -->
-    <path d="M 210 115 L 235 115" stroke="#94a3b8" stroke-width="2"/>
+Benvingut/da a la **Unitat Didàctica 3** del mòdul professional de **Muntatge i Manteniment d'Equips (MME)** de **1r de Sistemes Microinformàtics i Xarxes (SMX)**.
 
-    <!-- Bloc 2: SSD SATA 2.5" -->
-    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#ssdGrad)" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="335" y="45" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">🗄️ SSD SATA (2.5")</text>
-    <text x="335" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">NAND Flash sobre cable SATA</text>
-    <line x1="250" y1="73" x2="420" y2="73" stroke="#334155"/>
-    <text x="252" y="93" fill="#cbd5e1" font-size="9.5">• Tecnologia: <tspan fill="#38bdf8">Sense peces mòbils</tspan></text>
-    <text x="252" y="113" fill="#cbd5e1" font-size="9.5">• Bus: <tspan fill="#f59e0b">SATA III (Coll d'ampolla)</tspan></text>
-    <text x="252" y="133" fill="#cbd5e1" font-size="9.5">• Seqüencial: <tspan fill="#34d399">~550 MB/s (Límit)</tspan></text>
-    <text x="252" y="153" fill="#cbd5e1" font-size="9.5">• Latència: <tspan fill="#34d399">&lt; 0,1 ms (Instantani)</tspan></text>
-    <text x="252" y="173" fill="#cbd5e1" font-size="9.5">• IOPS aleatoris: <tspan fill="#38bdf8">~90.000 IOPS</tspan></text>
-    <text x="252" y="193" fill="#94a3b8" font-size="9">Ús: Actualització de PCs antics</text>
-    <text x="335" y="218" fill="#38bdf8" font-size="9" text-anchor="middle" font-weight="bold">Silenciós i Resistent a Cops</text>
+En aquesta unitat abordarem el disseny estructural, tèrmic i d'emmagatzematge d'un equip: formats de xassís i control de pressió d'aire (*airflow*), sistemes de refrigeració per aire amb tubs de calor (*heatpipes*), refrigeració líquida AIO, tècniques d'aplicació de pasta tèrmica, discs mecànics HDD de 3.5", SSDs SATA de 2.5" i les ultraràpides unitats SSD M.2 NVMe PCIe 4.0/5.0.
 
-    <!-- Fletxa 2 -> 3 -->
-    <path d="M 430 115 L 455 115" stroke="#38bdf8" stroke-width="2"/>
+---
 
-    <!-- Bloc 3: SSD NVMe M.2 -->
-    <rect x="460" y="20" width="200" height="210" rx="8" fill="url(#nvmeGrad)" stroke="#c084fc" stroke-width="1.5"/>
-    <text x="560" y="45" fill="#c084fc" font-size="11" font-weight="bold" text-anchor="middle">⚡ SSD M.2 NVMe (PCIe)</text>
-    <text x="560" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Connexió directa a la CPU</text>
-    <line x1="470" y1="73" x2="650" y2="73" stroke="#334155"/>
-    <text x="472" y="93" fill="#cbd5e1" font-size="9.5">• Bus: <tspan fill="#c084fc" font-weight="bold">PCIe 4.0 / 5.0 x4</tspan></text>
-    <text x="472" y="113" fill="#cbd5e1" font-size="9.5">• Seqüencial: <tspan fill="#34d399" font-weight="bold">7.000 - 14.000 MB/s</tspan></text>
-    <text x="472" y="133" fill="#cbd5e1" font-size="9.5">• Latència: <tspan fill="#34d399">&lt; 0,02 ms (Ultra baixa)</tspan></text>
-    <text x="472" y="153" fill="#cbd5e1" font-size="9.5">• IOPS aleatoris: <tspan fill="#c084fc">&gt; 1.000.000 IOPS</tspan></text>
-    <text x="472" y="173" fill="#f59e0b" font-size="9.5">• Termal: <tspan fill="#f59e0b">Requereix dissipador</tspan></text>
-    <text x="472" y="193" fill="#94a3b8" font-size="9">Ús: Sistema Operatiu, Gaming, IA</text>
-    <text x="560" y="218" fill="#c084fc" font-size="9" text-anchor="middle" font-weight="bold">Màxim Rendiment Actual</text>
+## 🗺️ Mapa d'Aprenentatge de la Unitat 3
 
-    <!-- Fletxa 3 -> 4 -->
-    <path d="M 660 115 L 685 115" stroke="#c084fc" stroke-width="2"/>
+| Apartat | Títol del Tema | Continguts Pràctics i Tècnics | Activitats i Puntuació | Accés Directe |
+| :---: | :--- | :--- | :--- | :---: |
+| **3.1** | **Caixes i Gestió del Flux Tèrmic** | Formats de xassís (Full Tower, Mid Tower, SFF), pressió positiva vs negativa i filtres antipols. | 3 Reptes (+75 pts) + PDF Aules | [**Entrar ➡️**](./ut0301.html) |
+| **3.2** | **Refrigeració per Aire i Heatpipes** | Canvi de fase intern, aletes d'alumini, ventiladors PWM de 4 pins i protecció *thermal throttling*. | 3 Reptes (+75 pts) + PDF Aules | [**Entrar ➡️**](./ut0302.html) |
+| **3.3** | **Refrigeració Líquida i Pasta Tèrmica** | Kits AIO segellats, mida de radiadors (240/360mm), conductivitat (W/mK) i mètode del gra de pésol. | 3 Reptes (+75 pts) + PDF Aules | [**Entrar ➡️**](./ut0303.html) |
+| **3.4** | **Discs HDD Mecànics i SSD SATA** | Plats magnètics i sectors, bus SATA III (6 Gbps), protocol AHCI, NCQ i comanda TRIM. | 3 Reptes (+75 pts) + PDF Aules | [**Entrar ➡️**](./ut0304.html) |
+| **3.5** | **SSDs Ultraràpids M.2 NVMe** | Factor de forma 2280, generacions PCIe 3.0/4.0/5.0 (fins a 14.000 MB/s) i coixinets tèrmics. | 3 Reptes (+75 pts) + PDF Aules | [**Entrar ➡️**](./ut0305.html) |
 
-    <!-- Bloc 4: Refrigeració i Pressió -->
-    <rect x="690" y="20" width="150" height="210" rx="8" fill="url(#airGrad)" stroke="#34d399" stroke-width="1.5"/>
-    <text x="765" y="45" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">❄️ FLUX D'AIRE</text>
-    <text x="765" y="62" fill="#94a3b8" font-size="9.5" text-anchor="middle">Pressió Positiva vs Negativa</text>
-    <line x1="700" y1="73" x2="830" y2="73" stroke="#334155"/>
-    <text x="702" y="93" fill="#cbd5e1" font-size="9.5">• <tspan fill="#34d399" font-weight="bold">Pressió Positiva:</tspan></text>
-    <text x="712" y="110" fill="#cbd5e1" font-size="9">Intake &gt; Exhaust</text>
-    <text x="712" y="125" fill="#34d399" font-size="9">★ Evita entrada de pols</text>
-    <text x="702" y="148" fill="#cbd5e1" font-size="9.5">• <tspan fill="#ef4444" font-weight="bold">Pressió Negativa:</tspan></text>
-    <text x="712" y="165" fill="#cbd5e1" font-size="9">Exhaust &gt; Intake</text>
-    <text x="712" y="180" fill="#ef4444" font-size="9">Aspirador de pols</text>
-    <text x="765" y="218" fill="#34d399" font-size="9" text-anchor="middle" font-weight="bold">Equilibri Tèrmic</text>
+---
 
-    <!-- Peu informatiu -->
-    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
-    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Resistència NAND Flash (TBW): <tspan fill="#38bdf8" font-weight="bold">La vida útil d'un SSD es mesura en Terabytes Escrits (TBW).</tspan></text>
-    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Les cel·les TLC (3 bits/cel·la) i QLC (4 bits/cel·la) degraden la capa d'òxid amb cada cicle d'esborrat elèctric.</text>
-  </svg>
+## 🎯 Reptes Globals d'Avaluació de la Unitat
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 1: Com s'aconsegueix una pressió positiva a l'interior de la caixa d'un ordinador?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_1" value="a"> Fent que el cabal d'aire dels ventiladors d'entrada (intake) siga superior al dels ventiladors d'eixida (exhaust)</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_1" value="b"> Segellant la caixa amb silicona</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_1" value="c"> Apagant tots els ventiladors</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_1" value="d"> Posant la font d'alimentació de cap per avall</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! L'excés d'aire ix disparat per les juntes, evitant l'entrada de pols sense filtrar." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 2: Quina diferència tècnica hi ha entre un ventilador de 3 pins i un de 4 pins (PWM)?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_2" value="a"> El de 4 pins compta amb un senyal de control digital PWM que permet regular la velocitat de forma molt més suau i precisa</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_2" value="b"> El de 3 pins fa llum RGB i el de 4 pins no</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_2" value="c"> El de 4 pins necessita aigua per funcionar</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_2" value="d"> No hi ha cap diferència</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! El quart pin rep el tren de polsos de modulació PWM a tensió constant." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 3: Quin protocol és necessari configurar a la UEFI per habilitar NCQ i connexió en calent en discs SATA?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_3" value="a"> AHCI (Advanced Host Controller Interface)</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_3" value="b"> IDE / Legacy</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_3" value="c"> RAID 0</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_3" value="d"> FAT32</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Exacte! El mode AHCI és indispensable per extreure el màxim rendiment dels dispositius SATA." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 4: Per què un SSD NVMe PCIe 5.0 requereix obligatòriament un dissipador tèrmic robust?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_4" value="a"> Perquè a velocitats de 14.000 MB/s el controlador genera enorme calor i sense dissipador patiria fre tèrmic greu</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_4" value="b"> Perquè la normativa europea ho prohibeix</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_4" value="c"> Perquè pesa massa i es desconnectaria</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="mme_g03_4" value="d"> No requereix cap dissipador</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! La dissipació activa o passiva massiva és imprescindible a la generació PCIe 5.0." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
 </div>
 
 ---
 
-## 📊 Comparativa Tecnològica de Cel·les NAND Flash
-
-| Tipus de Cel·la | Bits per Cel·la | Estats de Voltatge | Cicles P/E (Programació / Esborrat) | Densitat d'Espai | Cost per Gigabyte | Fiabilitat i Rendiment |
-| :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| **SLC** (*Single-Level Cell*) | **1 bit** | $2^1 = 2$ | $\approx 50.000 - 100.000$ | Molt Baixa | Molt Alt | Màxima velocitat i fiabilitat (militar / enterprise extrem) |
-| **MLC** (*Multi-Level Cell*) | **2 bits** | $2^2 = 4$ | $\approx 3.000 - 10.000$ | Baixa | Alt | Alta durabilitat (estacions de treball professionals) |
-| **TLC** (*Triple-Level Cell*) | **3 bits** | $2^3 = 8$ | $\approx 1.000 - 3.000$ | Alta | Mitjà | **Estàndard actual recomanat** (equilibri perfecte rendiment/preu) |
-| **QLC** (*Quad-Level Cell*) | **4 bits** | $2^4 = 16$ | $\approx 300 - 1.000$ | Molt Alta | Baix | Emmagatzematge secundari econòmic; caiguda de velocitat en escriptura contínua |
-
----
-
-## 📑 Continguts de la Unitat
-
-| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
-| :---: | :--- | :--- | :---: |
-| **3.1** | [**El Xassís o Caixa del PC**](./ut0301.md) | Factors de forma (Torre, Semitorre, Micro-ATX, Mini-ITX), gestió de cablejat, badies d'expansió | [**📘 Llegir Apartat →**](./ut0301.md) |
-| **3.2** | [**Refrigeració i Ventilació**](./ut0302.md) | Flux d'aire (pressió positiva vs negativa), refrigeració per aire (dissipadors i heatpipes), refrigeració líquida AIO | [**❄️ Estudiar Refrigeració →**](./ut0302.md) |
-| **3.3** | [**Dispositius d'Emmagatzematge**](./ut0303.md) | Comparativa HDD vs SSD SATA vs M.2 NVMe, arquitectura de cel·les NAND Flash (TLC/QLC), velocitats, latències i fiabilitat TBW | [**💾 Veure Comparativa →**](./ut0303.md) |
-
----
-
-## 🎯 Resultats d'Aprenentatge Vinculats
-- **RA1:** Reconeix els blocs funcionals d'un equip microinformàtic i les seues funcions.
-- **Criteris d'Avaluació:**
-  - S'han identificat i comparat els diferents suports d'emmagatzematge secundari fix i extraïble.
-  - S'ha avaluat l'impacte de la refrigeració i el flux d'aire en la vida útil i rendiment dels components.
-
----
-
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-### 📋 Bloc A: Fonaments, Comparativa d'Emmagatzematge i Termodinàmica
-1. **Rendiment Seqüencial vs Operacions Aleatòries 4K (IOPS):**
-   - Un disc mecànic HDD lliura una velocitat seqüencial de $180\text{ MB/s}$, mentre que un SSD SATA lliura $550\text{ MB/s}$ (unes 3 vegades més). Tanmateix, a l'hora d'iniciar el sistema operatiu Windows, l'SSD arrenca en 10 segons i el disc dur triga 90 segons (9 vegades més).
-     - Per què en l'arrencada del sistema operatiu no importa la velocitat seqüencial sinó el nombre d'**IOPS** (*Input/Output Operations Per Second*) en blocs xicotets de $4\text{ KB}$?
-     - Com influeix el temps de cerca mecànic del capçal del disc dur en aquesta diferència abismal?
-2. **Càlcul de Vida Útil TBW (*Terabytes Written*):**
-   - Un SSD NVMe M.2 de $1\text{ TB}$ té una especificació de fiabilitat de **$600\text{ TBW}$**.
-     - Si un usuari d'oficina escriu una mitjana de $35\text{ GB}$ de fitxers diaris al disc, quants anys trigarà teòricament a esgotar els cicles d'esborrat de les cel·les NAND?
-     - Què fa el controlador de l'SSD quan detecta cel·les defectuoses mitjançant l'algorisme de **Wear Leveling** (anivellament de desgast)?
-3. **Disseny del Flux Tèrmic del Xassís:**
-   - En una caixa de PC semitorre es disposa de 3 ventiladors d'entrada frontals (*intake*) de $120\text{ mm}$ amb filtre antipols i 1 ventilador posterior d'extracció (*exhaust*).
-     - Aquesta configuració genera pressió d'aire positiva o negativa?
-     - Quin benefici crític té la pressió positiva respecte a l'entrada de pols per les ranures no filtrades de la caixa?
-
-### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
-
-#### Repte 1: Diagnòstic d'Estat S.M.A.R.T. amb PowerShell
-1. Obre PowerShell com a administrador per consultar la integritat física de totes les unitats de disc:
-   ```powershell
-   Get-PhysicalDisk | Select-Object DeviceId, FriendlyName, MediaType, BusType, HealthStatus, OperationalStatus
-   ```
-2. Consulta el percentatge de desgast restant i la temperatura dels discs NVMe:
-   ```powershell
-   Get-StorageReliabilityCounter -PhysicalDisk (Get-PhysicalDisk)[0] | Select-Object Temperature, ReadErrorsTotal, WriteErrorsTotal, Wear
-   ```
-3. Verifica que l'estat `HealthStatus` és `Healthy` (saludable) i que el comptador d'errors d'escriptura està a 0.
-
-#### Repte 2: Prova de Rendiment d'Escriptura Seqüencial amb Consola a Linux
-1. En un equip amb Ubuntu Linux, executa una prova de velocitat d'escriptura directa mesurant el temps de resposta del disc:
-   ```bash
-   sync; dd if=/dev/zero of=tempfile bs=1M count=1024; sync
-   ```
-2. Elimina el fitxer temporal generat:
-   ```bash
-   rm tempfile
-   ```
-3. Comprova la taxa de transferència en $\text{MB/s}$ retornada i compara-la amb la velocitat teòrica del bus (SATA o PCIe).
-
-#### Repte 3: Monitorització de Temperatures Tèrmiques de CPU i SSD sota Càrrega
-1. Descarrega i executa una eina de monitorització tèrmica de maquinari (com HWMonitor o OpenHardwareMonitor).
-2. Registra la temperatura de repòs (*Idle*) del processador i de l'SSD NVMe.
-3. Executa una prova de càrrega breu (com obrir un joc, renderitzar o passar CrystalDiskMark):
-   - A quina temperatura arriba l'SSD NVMe sense dissipador metàl·lic?
-   - Si supera els $70^\circ\text{C}$, comprova si s'activa el mecanisme de protecció de **Thermal Throttling** (reducció forçada de la velocitat per evitar danys al silici).
-
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
-
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Comparativa d'Emmagatzematge i Protocols** | Justifica les diferències tècniques entre HDD, SSD SATA i NVMe PCIe explicant IOPS, latència i cel·les NAND TLC/QLC. | Coneix que l'SSD és més ràpid que l'HDD però confon el format físic M.2 amb el protocol lògic NVMe. | Creu que tots els discs són iguals o no comprèn la diferència entre memòria RAM i emmagatzematge secundari. |
-| **Càlcul de Vida Útil TBW i Diagnosi SMART** | Interpreta els paràmetres SMART de salut, calcula la durabilitat TBW d'un SSD i descriu l'algorisme de Wear Leveling. | Sap consultar l'estat SMART però no sap interpretar la columna de valors bruts ni calcular els anys de vida útil. | Desconeix el significat de TBW o pensa que els SSDs no pateixen cap desgast per no tindre peces mòbils. |
-| **Flux d'Aire i Control Tèrmic** | Dissenya configuracions de refrigeració equilibrades amb pressió positiva i avalua l'impacte del Thermal Throttling. | Identifica la posició dels ventiladors però no té en compte la direcció de l'aire ni l'acumulació de pols. | Munta ventiladors en sentits oposats creant turbulències o deixa components d'alta potència sense dissipació. |
+<div class="aules-delivery-card" style="border:2px dashed #0284c7; border-radius:8px; padding:16px; background:#f0f9ff; margin:24px 0;">
+  <h3 style="margin-top:0; color:#0369a1;">📦 Lliurament Global d'Aules (UD3: Caixes, Refrigeració i SSDs)</h3>
+  <p>En acabar els reptes interactius i pràctiques de la UD3, genera el teu certificat oficial per a la tasca d'Aules:</p>
+  <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+    <input type="text" class="aules-student-name" placeholder="Cognoms, Nom de l'Alumne/a" style="padding:8px 12px; border:1px solid #94a3b8; border-radius:4px; flex-grow:1; min-width:240px;">
+    <button class="btn-generate-aules-pdf" data-unit="UD03" data-activity="Global" data-module="MME" style="padding:8px 16px; background:#0284c7; color:#fff; border:none; border-radius:4px; font-weight:600; cursor:pointer;">📄 Descarregar PDF per a Aules</button>
+  </div>
+</div>
