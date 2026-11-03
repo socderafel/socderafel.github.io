@@ -1,13 +1,24 @@
 ---
 layout: default
-title: "UD2 — Introducció als Sistemes Informàtics i Sistemes Operatius"
+title: "UD2 — Fonaments dels Sistemes Operatius i Gestió de Recursos — SOM"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD2"
 ---
 
-# 📘 UD2 — Introducció als Sistemes Informàtics i Sistemes Operatius
+# 📘 UD2 — Fonaments dels Sistemes Operatius i Gestió de Recursos
 
-La **Unitat Didàctica 2** analitza els fonaments de l'arquitectura d'un sistema informàtic, el paper essencial del sistema operatiu com a gestor de recursos, la transició entre espai d'usuari (*User Mode*) i espai de nucli (*Kernel Mode*), el cicle de vida dels processos i la lògica interna d'adreçament de memòria i sistemes de fitxers.
+<div class="interactive-progress-tracker" style="background:var(--code-bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:1.5rem 0 2rem 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.92rem; margin-bottom:8px;">
+    <span>Progrés d'aprenentatge interactiu de la Unitat 2</span>
+    <span class="tracker-pts" style="font-weight:700; color:#f59e0b;">⭐ 0 punts</span>
+  </div>
+  <div style="background:rgba(0,0,0,0.08); border-radius:6px; height:10px; overflow:hidden;">
+    <div class="tracker-fill" style="background:linear-gradient(90deg, #3b82f6, #10b981); height:100%; width:0%; border-radius:6px; transition:width 0.4s ease;"></div>
+  </div>
+  <div style="font-size:0.8rem; color:var(--text-muted); margin-top:6px; text-align:right;" class="tracker-count">0 de 4 superats (0%)</div>
+</div>
+
+La **Unitat Didàctica 2** analitza els fonaments de l'arquitectura d'un sistema informàtic, el paper essencial del sistema operatiu com a gestor de recursos, la transició entre espai d'usuari (*User Mode*) i espai de nucli (*Kernel Mode*), el cicle de vida dels processos, els algorismes de planificació de la CPU, la gestió de memòria virtual amb paginació i els sistemes de fitxers (Inodes vs MFT).
 
 ---
 
@@ -125,149 +136,110 @@ La **Unitat Didàctica 2** analitza els fonaments de l'arquitectura d'un sistema
 
 ---
 
-## 📊 Comparativa d'Algorismes de Planificació de CPU
-
-| Algorisme de Planificació | Tipus d'Aproximació | Avantatge Principal | Inconvenient / Risc Principal | Ús Típic |
-| :--- | :--- | :--- | :--- | :--- |
-| **FIFO / FCFS (*First In, First Out*)** | No apropiatiu (*Non-preemptive*) | Màxima simplicitat de disseny i baix cost de gestió. | Efecte Comboi (*Convoy effect*): processos curts bloquegen darrere d'un llarg. | Sistemes de processament per lots antics. |
-| **Round Robin (RR)** | **Apropiatiu (*Preemptive*)** | Equitatiu; cada procés rep un quàntum de temps fixat ($q$). | Si el quàntum és massa xicotet, es perd rendiment pel canvi de context constant. | **Sistemes de temps compartit i escriptori moderns.** |
-| **SJF (*Shortest Job First*)** | No apropiatiu o apropiatiu (SRTF) | Minimitza el temps mitjà d'espera global. | Risc d'inanició (*starvation*) per als processos de llarga durada. | Càlcul científic i cues d'impressió grans. |
-| **Cues Multinivell amb Retroalimentació (MLFQ)** | Apropiatiu i dinàmic | Afavoreix processos interactius d'E/S i castiga els que consumeixen CPU excessiva. | Complexitat elevada de configuració de llindars. | **Nuclis moderns (Linux CFS, Windows NT Scheduler).** |
-
----
-
-## 📐 Càlculs d'Adreçament de Memòria i Sistemes de Numeració
-
-Els sistemes operatius gestionen l'espai de memòria mitjançant busos d'adreces de $n$ bits. La quantitat màxima de posicions de memòria directament adreçables és:
-
-$$\text{Capacitat Màxima Adreçable} = 2^n \text{ bytes}$$
-
-Per exemple:
-- En una arquitectura clàssica de **32 bits**:
-  $$2^{32} \text{ bytes} = 4.294.967.296 \text{ bytes} = 4 \text{ GiB}$$
-  Aquest límit explica per què un sistema operatiu de 32 bits no pot aprofitar més de 4 GiB de RAM física.
-- En una arquitectura moderna de **64 bits** (x86-64 / AMD64):
-  $$2^{64} \text{ bytes} = 18.446.744.073.709.551.616 \text{ bytes} = 16 \text{ EiB (Exbibytes)}$$
-
----
-
 ## 📑 Continguts i Apartats de la Unitat
 
 | Apartat | Títol del Tema | Continguts Clau | Accés Directe |
-| :---: | :--- | :--- | :---: |
-| **2.3** | [**El Sistema Informàtic i Funcions del SO**](./ut0203.md) | Estructura maquinari/programari, funcions del nucli i gestió d'E/S | [**📘 Estudiar Funcions →**](./ut0203.md) |
-| **2.4** | [**Gestió de Processos i Fils**](./ut0204.md) | Cicle de vida, PCB, algorismes de planificació (FIFO, Round Robin, Prioritat) | [**⚙️ Estudiar Processos →**](./ut0204.md) |
-| **2.8** | [**Sistemes de Numeració**](./ut0208.md) | Conversió Binari, Decimal i Hexadecimal en adreces de memòria | [**🔢 Estudiar Numeració →**](./ut0208.md) |
-| **2.10** | [**El Sistema d'Arxius**](./ut0210.md) | Jerarquia de directoris, metadades (inodos, MFT) i rutes relatives vs absolutes | [**📁 Estudiar Arxius →**](./ut0210.md) |
-| **2.12** | [**Permisos i Atributs de Seguretat**](./ut0212.md) | Model POSIX (`rwx`, càlcul octal `chmod`) i llistes de control d'accés (ACL) | [**🔐 Estudiar Permisos →**](./ut0212.md) |
-| **2.13** | [**Sistemes Transaccionals i Journaling**](./ut0213.md) | Integritat del sistema de fitxers, tolerància a fallades i eines `fsck` / `chkdsk` | [**🛡️ Estudiar Journaling →**](./ut0213.md) |
+| :---: | :--- | :--- | :--- |
+| **2.1** | [**Funcions del SO i Estructures del Nucli**](./ut0201.md) | Gestió de recursos, màquina virtual, aïllament, subsistemes del nucli i classificació (monotask/multitask, SMP, RTOS). | [**📘 Entrar a l'Apartat 2.1 →**](./ut0201.md) |
+| **2.2** | [**Gestió de Processos, Fils i Bloc PCB**](./ut0202.md) | Programa vs procés, cicle d'estats (Ready, Running, Blocked), fitxa tècnica PCB, threads i eines CLI (`ps`, `kill`, `Get-Process`). | [**📘 Entrar a l'Apartat 2.2 →**](./ut0202.md) |
+| **2.3** | [**Algorismes de Planificació de la CPU**](./ut0203.md) | Planificació expulsiva vs cooperativa, FCFS i efecte comboi, SJF, Round Robin amb quàntum de temps i cues multinivell (MLFQ). | [**📘 Entrar a l'Apartat 2.3 →**](./ut0203.md) |
+| **2.4** | [**Gestió de Memòria Principal: Paginació**](./ut0204.md) | Adreces virtuals vs físiques, MMU, taula de pàgines i TLB, cicle de Page Fault, algorismes LRU/FIFO i fragmentació interna. | [**📘 Entrar a l'Apartat 2.4 →**](./ut0204.md) |
+| **2.5** | [**Sistemes de Fitxers: Inodes vs Taula MFT**](./ut0205.md) | Inodes en ext4 (punters directes/indirectes, hard/symlinks), Master File Table (MFT) en NTFS, fitxers residents i taula comparativa. | [**📘 Entrar a l'Apartat 2.5 →**](./ut0205.md) |
 
 ---
 
 ## 🎯 Resultats d'Aprenentatge Vinculats
-- **RA1:** Reconeix les característiques i l'arquitectura dels sistemes informàtics i operatius, descrivint les seues funcions i components.
-- **Criteris d'Avaluació:**
+* **RA1:** Reconeix les característiques i l'arquitectura dels sistemes informàtics i operatius, descrivint les seues funcions, components i mètodes de gestió de recursos.
+* **Criteris d'Avaluació:**
   - S'ha diferenciat el funcionament en mode nucli (Ring 0) del mode usuari (Ring 3).
   - S'ha comprès el cicle de transició d'estats d'un procés i la funció del bloc de control de procés (PCB).
-  - S'han convertit adreces i mides entre bases binàries, decimals i hexadecimals.
+  - S'han analitzat els algorismes de planificació de CPU calculant temps mitjans d'espera.
+  - S'han identificat els mecanismes de traducció d'adreces de memòria virtual per paginació.
+  - S'han comparat les estructures d'indexació de fitxers basades en Inodes i en la Master File Table (MFT).
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 🧪 Reptes Globals de Síntesi de la Unitat 2
 
-### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+Demostra la teua consolidació teòrica i pràctica superant els 4 reptes oficials de síntesi:
 
-1. **Càlcul de Temps de CPU i Planificació Round Robin:**
-   - Tres processos arriben a la cua de la CPU a l'instant $t=0$ amb els següents temps de ràfega de CPU:
-     - $P_1 = 24\text{ ms}$
-     - $P_2 = 6\text{ ms}$
-     - $P_3 = 8\text{ ms}$
-   - Si el planificador utilitza un algorisme **Round Robin (RR)** amb un quàntum de temps $q = 4\text{ ms}$ en ordre $P_1 \rightarrow P_2 \rightarrow P_3$:
-     - Dibuixa el diagrama de Gantt de l'execució dels processos fins a la seua finalització.
-     - Calcula el temps de finalització de cadascun dels tres processos.
-     - Determina el temps mitjà d'espera global de la cua.
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 1: Quin canvi d'estat experimenta un procés en execució quan sol·licita llegir un arxiu d'un disc dur i ha d'esperar que el controlador físic complete la transferència?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g1" value="a"> Passa d'En Execució (Running) a Bloquejat / En Espera (Waiting / Blocked)</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g1" value="b"> Passa immediatament a Terminat (Terminated)</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g1" value="c"> Es queda congelat a la CPU sense alliberar el nucli</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g1" value="d"> Torna a l'estat Nou (New)</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! El procés passa a l'estat Bloquejat i allibera la CPU perquè un altre procés preparat puga aprofitar-la. Quan el disc finalitza la lectura, una interrupció trasllada el procés de nou a l'estat Preparat." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
-2. **Conversió d'Adreces de Memòria en Hexadecimal:**
-   - Els registres de memòria del sistema operatiu s'expressen en base hexadecimal ($16$).
-   - **Preguntes de conversió:**
-     - Converteix l'adreça de càrrega del bootloader `0x7C00` a valor decimal i a codi binari complet de 16 bits.
-     - Si un segment de memòria comença a l'adreça `0x00100000` ($1\text{ MiB}$) i té una mida de $64\text{ KiB}$ ($65.536\text{ bytes}$), quina és l'adreça hexadecimal exacta de l'últim byte del bloc?
-     - Si una instrucció genera una fallada de pàgina a l'adreça `0xFFFFFFFF`, a quin límit de memòria en GB correspon en un sistema de 32 bits?
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 2: En l'algorisme de planificació Round Robin amb quàntum q = 10 ms, què succeeix si un procés requereix una ràfega de CPU de 35 ms sense fer cap operació d'E/S?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g2" value="a"> S'executa durant 10 ms, el temporitzador de maquinari genera una interrupció, és expulsat a la cua de preparats i necessitarà 4 torns en total per finalitzar</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g2" value="b"> S'executa durant 35 ms ininterrompudament ignorant el quàntum</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g2" value="c"> Es cancel·la el procés per superar el límit de temps</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g2" value="d"> La CPU es divideix en 4 nuclis virtuals</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Exacte! El procés rebrà 3 torns complets de 10 ms (acumulant 30 ms) i un quart torn final de 5 ms, sent expulsat al final de cada quàntum per permetre que la resta de processos s'executen de forma fluïda." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
-3. **Estructura d'Inodes i Espai de Sistema de Fitxers:**
-   - Un disc formatejat amb el sistema de fitxers `ext4` utilitza una mida de bloc per defecte de $4\text{ KiB}$ ($4.096\text{ bytes}$).
-   - **Preguntes de dimensionament:**
-     - Si un usuari crea un fitxer de text que conté únicament $120\text{ caràcters}$ ($120\text{ bytes}$), quant d'espai real a disc ocuparà el fitxer a causa de la fragmentació interna?
-     - Quina estructura de dades del sistema de fitxers conté els permisos, el propietari, les dates d'accés i els punters a blocs de dades, sense guardar el nom del propi fitxer?
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 3: Quina és la funció de la memòria cau TLB (Translation Lookaside Buffer) integrada a la CPU?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g3" value="a"> Emmagatzemar en memòria cau les traduccions recents d'adreces virtuals a marcs físics per evitar haver de consultar la Taula de Pàgines a la RAM</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g3" value="b"> Guardar còpies de seguretat dels arxius del sistema operatiu</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g3" value="c"> Descodificar arxius de vídeo MP4</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g3" value="d"> Gestionar les contrasenyes dels usuaris</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! El TLB és una memòria cau associativa a la CPU que fa que la traducció d'adreces virtuals a marcs reals de RAM siga gairebé instantània (evitant dobles lectures a la memòria principal)." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
----
-
-### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
-
-#### Repte 1: Inspecció del Cicle de Vida i Arbre de Processos en Linux
-1. Obre un terminal Bash i inspecciona la jerarquia de processos amb identificador PID:
-   ```bash
-   pstree -p | head -n 25
-   ```
-2. Inicia un procés de càrrega en segon pla:
-   ```bash
-   sleep 300 &
-   ```
-3. Consulta el PID assignat i el seu estat actual:
-   ```bash
-   ps aux | grep sleep
-   ```
-4. Pausa el procés enviant el senyal de detenció (passant a estat *Bloquejat / Detingut*):
-   ```bash
-   kill -SIGSTOP <PID>
-   ps aux | grep sleep
-   ```
-   (Comprova que l'estat canvia a `T` - Stopped).
-5. Reprèn el procés enviant el senyal de continuació:
-   ```bash
-   kill -SIGCONT <PID>
-   ```
-6. Finalitza el procés de forma definitiva:
-   ```bash
-   kill -9 <PID>
-   ```
-
-#### Repte 2: Gestió de Processos i Prioritats en Windows amb PowerShell
-1. Inicia PowerShell com a Administrador i llista els 5 processos que consumeixen major temps de CPU:
-   ```powershell
-   Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 Id, ProcessName, CPU, WorkingSet64, PriorityClass
-   ```
-2. Executa l'aplicació Bloc de Notes (`notepad.exe`):
-   ```powershell
-   Start-Process notepad
-   $p = Get-Process -Name notepad
-   $p.Id
-   ```
-3. Canvia la classe de prioritat del procés a un nivell superior (*AboveNormal*):
-   ```powershell
-   $p.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::AboveNormal
-   Get-Process -Id $p.Id | Select-Object ProcessName, PriorityClass
-   ```
-4. Tanca el procés forçosament des de la consola:
-   ```powershell
-   Stop-Process -Id $p.Id -Force
-   ```
-
-#### Repte 3: Rastreig de Crides al Sistema (*Syscalls*) amb `strace`
-1. En un sistema Linux, executa la comanda `strace` per monitorar les crides al nucli d'una comanda senzilla:
-   ```bash
-   strace -c ls -l /tmp
-   ```
-2. Analitza la taula resum generada:
-   - Quines són les tres *syscalls* més utilitzades (`openat`, `read`, `write`, `close`, `mmap`)?
-   - Quin percentatge del temps total d'execució s'ha passat dins de l'espai de nucli (*System Time*) enfront de l'espai d'usuari?
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 4: Si en Linux creem un enllaç dur (Hard Link) amb la comanda 'ln fitxer.txt enllac.txt', quina afirmació és tècnicament correcta?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g4" value="a"> S'ha creat una segona entrada de directori amb un nom nou que apunta exactament al mateix número d'Inode i blocs de dades que l'original</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g4" value="b"> S'ha duplicat l'espai que ocupa el fitxer al disc dur</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g4" value="c"> Si s'esborra fitxer.txt, enllac.txt queda inservible i trencat</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som02_g4" value="d"> L'enllaç només funcionarà si l'equip no es reinicia</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Exacte! Un hard link comparteix el mateix Inode i les mateixes dades físiques; el comptador d'enllaços de l'inode s'incrementa a 2, i les dades només s'esborraran físicament quan s'eliminen tots dos noms." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
 ---
 
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+## 📬 Lliurament d'Activitats a Aules
 
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Arquitectura de Nucli i Anells de Privilegi** | Explica amb claredat la diferència entre Ring 0 i Ring 3, justificant el paper de les crides al sistema (syscalls) i la protecció de maquinari. | Distingeix entre nucli i aplicacions d'usuari, però té dubtes sobre com es produeix la transició i el canvi de context. | Creu que les aplicacions accedeixen lliurement als registres i memòria física sense intervenció del sistema operatiu. |
-| **Cicle de Vida dels Processos i Planificació** | Dibuixa i calcula diagrames de Gantt de Round Robin, temps d'espera i manipula estats amb senyals POSIX (`SIGSTOP`, `SIGCONT`, `SIGKILL`). | Coneix els estats d'un procés (Nou, Preparat, Execució, Bloquejat) però s'equivoca en el càlcul de temps mitjà de retorn. | Confon un programa emmagatzemat a disc amb un procés actiu a memòria RAM. |
-| **Adreçament de Memòria i Eines CLI** | Converteix amb facilitat adreces entre hexadecimal, binari i decimal; diagnostica processos mitjançant PowerShell i Bash sense errors. | Utilitza les comandes de consulta de processos però depèn de la interfície gràfica per aturar o prioritzar tasques. | No sap interpretar la sortida de l'ordre `ps` ni com consultar el consum de memòria d'un servei. |
+<div class="aules-delivery-card" style="background:linear-gradient(135deg, rgba(37,99,235,0.05) 0%, rgba(124,58,237,0.08) 100%); border:2px solid #8b5cf6; border-radius:12px; padding:22px 26px; margin:2.5rem 0 2rem 0;">
+  <h3 style="margin-top:0; color:#7c3aed; font-size:1.25rem;">📄 Registre Oficial de Progrés de la Unitat 2 (Aules)</h3>
+  <p style="font-size:0.94rem; color:var(--text-muted);">Quan hages completat l'estudi dels 5 temes i superat els 4 reptes globals de síntesi, introdueix les teues dades per generar l'informe oficial en format PDF i adjuntar-lo a la tasca corresponent d'Aules.</p>
+  <div style="margin:14px 0;">
+    <label style="display:block; font-weight:600; font-size:0.88rem; margin-bottom:6px;">Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" class="aules-student-name" placeholder="Ex: Marc Gómez Martínez" style="width:100%; max-width:420px; padding:9px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); color:var(--text-main); font-size:0.95rem;">
+  </div>
+  <div class="aules-score-badge" style="display:inline-block; background:#ede9fe; color:#6d28d9; font-weight:700; font-size:0.88rem; padding:4px 12px; border-radius:999px; margin:8px 0 14px 0;">
+    Puntuació: <span class="aules-score-count">0 / 100 punts</span>
+  </div>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;">
+    <button class="btn-generate-aules-pdf" data-module="SOM" data-unit="UD02" data-lesson="Global" style="background:#7c3aed; color:#ffffff; border:none; padding:10px 18px; border-radius:6px; font-weight:600; font-size:0.9rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+      📥 Descarrega PDF Oficial per a Aules
+    </button>
+  </div>
+</div>

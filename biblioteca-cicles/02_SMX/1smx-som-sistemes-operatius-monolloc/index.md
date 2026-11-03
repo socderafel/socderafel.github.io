@@ -2,26 +2,41 @@
 layout: default
 title: "Sistemes Operatius Monolloc — 1r SMX · Grau Mitjà"
 course_root: "."
-badge: "1r SMX · Grau Mitjà"
+badge: "1r SMX · Grau Mitjà · Mòdul SOM"
+next_url: "ut01/index.md"
+next_label: "Començar la UD1 ➡️"
 ---
+
+<div class="interactive-progress-tracker" data-unit="SOM-GLOBAL" data-topic="portal" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:16px 20px;margin-bottom:1.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span style="font-size:1.6rem;">💽</span>
+    <div>
+      <div style="font-weight:700;font-size:1.05rem;color:var(--text-main);">Sistemes Operatius Monolloc (SOM) — 1r Curs SMX</div>
+      <div style="font-size:0.84rem;color:var(--text-muted);">5 Unitats Didàctiques · 25 Apartats Pràctics · 95 Reptes Interactius Gamificats (+500 XP)</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span class="badge-som-xp" style="background:#e0f2fe;color:#0369a1;padding:6px 14px;border-radius:20px;font-size:0.85rem;font-weight:700;">Curs Complet Gamificat</span>
+  </div>
+</div>
 
 # 💽 Sistemes Operatius Monolloc (SOM)
 
-Benvinguts al mòdul professional de **Sistemes Operatius Monolloc**, integrat en el primer curs del Cicle Formatiu de Grau Mitjà en **Sistemes Microinformàtics i Xarxes (SMX)**.
+Benvinguts al portal docent del mòdul professional de **Sistemes Operatius Monolloc**, assignat al primer curs del Cicle Formatiu de Grau Mitjà en **Sistemes Microinformàtics i Xarxes (SMX)**.
 
 Aquest mòdul capacita l'alumnat per instal·lar, configurar, personalitzar, mantenir i diagnosticar sistemes operatius propietaris (família Microsoft Windows) i lliures (distribucions GNU/Linux), tant en equips físics autònoms com en entorns virtualitzats avançats.
 
 ---
 
-## 🗺️ Mapa Curricular del Mòdul
+## 🗺️ Mapa Curricular del Mòdul (5 Unitats Didàctiques)
 
-| Unitat Didàctica | Nom del Bloc Temàtic | Continguts Clau | Infografia Destacada | Accés Directe |
+| Unitat Didàctica | Nom del Bloc Temàtic | Continguts Curriculars Clau | Reptes i Pràctica | Accés Directe |
 | :---: | :--- | :--- | :---: | :---: |
-| **UD1** | **Presentació i Metodologia del Curs** | Criteris d'avaluació, eines de taller, prevenció de riscos i protocols de laboratori. | 📋 Guia Didàctica | [**📘 Entrar a la UD1 →**](./ut01/index.md) |
-| **UD2** | **Introducció als Sistemes Informàtics** | Arquitectura del SO, modes d'execució (Ring 0 / Ring 3), cicle de vida de processos, gestió de fitxers i permisos POSIX. | 🖼️ [Arquitectura del SO i Processos](./ut02/index.md) | [**📘 Entrar a la UD2 →**](./ut02/index.md) |
-| **UD3** | **Virtualització i Màquines Virtuals** | Hipervisors Tipus 1 vs Tipus 2, Oracle VirtualBox, modes de xarxa (NAT, Bridge, Internal, Host-Only) i Guest Additions. | 🖼️ [Hipervisors i Xarxes Virtuals](./ut03/index.md) | [**📘 Entrar a la UD3 →**](./ut03/index.md) |
-| **UD4** | **Instal·lació de Sistemes Operatius** | MBR vs GPT, BIOS vs UEFI, partició ESP, càrrega de sistemes (GRUB 2, Windows BCD), memòria virtual i Dual Boot. | 🖼️ [Particionament i Seqüències de Boot](./ut04/index.md) | [**📘 Entrar a la UD4 →**](./ut04/index.md) |
-| **UD5** | **Configuració, Administració i Automatització** | Interfície CLI (Bash / PowerShell), arbre FHS de Linux, permisos octals, gestors de paquets, tasques programades (cron). | 🖼️ [Arbre FHS i Permisos POSIX](./ut05/index.md) | [**📘 Entrar a la UD5 →**](./ut05/index.md) |
+| **UD1** | **Presentació del Curs i Arquitectura** | Protocols de taller, arquitectura Von Neumann, CPU, modes Ring 0/Ring 3, adreçament de memòria 32 vs 64 bits i auditoria de maquinari CLI. | 19 Reptes (+95 XP) · 6 Tasques Aules | [**📘 Entrar a la UD1 →**](./ut01/index.md) |
+| **UD2** | **Estructura i Fonaments dels Sistemes Operatius** | Funcions del nucli (monolític vs micronucli), cicle de processos i fils, bloc PCB, algorismes de CPU (Round Robin), paginació de memòria i sistemes de fitxers (Inodes vs MFT). | 19 Reptes (+95 XP) · 6 Tasques Aules | [**📘 Entrar a la UD2 →**](./ut02/index.md) |
+| **UD3** | **Virtualització i Entorns de Proves** | Hipervisors Tipus 1 vs Tipus 2, màquines virtuals a VirtualBox, assignació de CPU/RAM, discs VDI/VMDK, snapshots, xarxa (NAT, Pont, Host-Only) i Guest Additions. | 19 Reptes (+95 XP) · 6 Tasques Aules | [**📘 Entrar a la UD3 →**](./ut03/index.md) |
+| **UD4** | **Instal·lació de Sistemes Operatius Propietaris i Lliures** | Firmware BIOS vs UEFI, Secure Boot, taules MBR vs GPT (límit 2,2 TB), partició ESP, instal·lació neta de Windows 11 Pro, Ubuntu Desktop i Dual Boot amb GRUB 2. | 19 Reptes (+95 XP) · 6 Tasques Aules | [**📘 Entrar a la UD4 →**](./ut04/index.md) |
+| **UD5** | **Configuració, Administració i Manteniment del SO** | Arbre FHS de Linux vs Jerarquia Windows, usuaris i permisos POSIX octals/especials, administració amb PowerShell i ACLs, crontab i Task Scheduler, còpies 3-2-1 i Clonezilla. | 19 Reptes (+95 XP) · 6 Tasques Aules | [**📘 Entrar a la UD5 →**](./ut05/index.md) |
 
 ---
 

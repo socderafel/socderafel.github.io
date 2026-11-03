@@ -1,13 +1,24 @@
 ---
 layout: default
-title: "UD3 — Virtualització i Màquines Virtuals"
+title: "UD3 — Virtualització i Màquines Virtuals — SOM"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD3"
 ---
 
 # 📘 UD3 — Virtualització i Màquines Virtuals
 
-La **Unitat Didàctica 3** aborda una de les tecnologies més disruptives i essencials en l'administració de sistemes moderna: la **virtualització de plataformes**. Aquesta tècnica permet executar múltiples sistemes operatius complets i independents de forma concurrent sobre una mateixa màquina física, facilitant el desplegament de laboratoris aïllats, proves d'auditoria i serveis corporatius d'alta disponibilitat.
+<div class="interactive-progress-tracker" style="background:var(--code-bg); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin:1.5rem 0 2rem 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.92rem; margin-bottom:8px;">
+    <span>Progrés d'aprenentatge interactiu de la Unitat 3</span>
+    <span class="tracker-pts" style="font-weight:700; color:#f59e0b;">⭐ 0 punts</span>
+  </div>
+  <div style="background:rgba(0,0,0,0.08); border-radius:6px; height:10px; overflow:hidden;">
+    <div class="tracker-fill" style="background:linear-gradient(90deg, #3b82f6, #10b981); height:100%; width:0%; border-radius:6px; transition:width 0.4s ease;"></div>
+  </div>
+  <div style="font-size:0.8rem; color:var(--text-muted); margin-top:6px; text-align:right;" class="tracker-count">0 de 4 superats (0%)</div>
+</div>
+
+La **Unitat Didàctica 3** aborda una de les tecnologies més disruptives i essencials en l'administració de sistemes moderna: la **virtualització de plataformes**. Aquesta tècnica permet executar múltiples sistemes operatius complets i independents de forma concurrent sobre una mateixa màquina física, facilitant el desplegament de laboratoris aïllats, proves d'auditoria, configuració de xarxes virtuals i serveis corporatius d'alta disponibilitat.
 
 ---
 
@@ -118,124 +129,109 @@ La **Unitat Didàctica 3** aborda una de les tecnologies més disruptives i esse
 
 ---
 
-## 📊 Comparativa dels 4 Modes de Xarxa en Oracle VirtualBox
-
-| Mode de Xarxa | Adreça IP del Convidat | Accés a Internet | Connexió Host $\leftrightarrow$ VM | Connexió VM $\leftrightarrow$ VM | Ús Recomanat |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **NAT (*Network Address Translation*)** | Assignada per VirtualBox (`10.0.2.15/24`) | **Sí** | No directa (requereix reenviament de ports) | No | Navegació i descàrrega de paquets individual en aïllament bàsic. |
-| **Adaptador Pont (*Bridged*)** | Assignada pel router físic de l'aula | **Sí** | **Sí** | **Sí** (a través de la LAN física) | Servidors que han de ser accessibles per altres alumnes de l'aula. |
-| **Xarxa Interna (*Internal Network*)** | Requereix IP estàtica o DHCP intern | **No** | **No** | **Sí** (si comparteixen el mateix nom de xarxa) | **Laboratoris aïllats de xarxa, proves DHCP/DNS i simulació corporativa.** |
-| **Només-Amfitrió (*Host-Only*)** | Assignada per subxarxa privada host | **No** | **Sí** | **Sí** (entre VMs del mateix adaptador) | Administració SSH i transferència de fitxers segura entre host i convidat. |
-
----
-
 ## 📑 Continguts i Apartats de la Unitat
 
 | Apartat | Títol del Tema | Continguts Clau | Accés Directe |
-| :---: | :--- | :--- | :---: |
-| **3.3** | [**Fonaments de la Virtualització**](./ut0303.md) | Concepte d'Host vs Guest, emulació vs virtualització assistida per maquinari | [**📘 Estudiar Fonaments →**](./ut0303.md) |
-| **3.4** | [**Tipus d'Hipervisors i Arquitectura**](./ut0304.md) | Anàlisi comparativa d'hipervisors Tipus 1 (Bare-Metal) vs Tipus 2 (Hosted) | [**☁️ Estudiar Hipervisors →**](./ut0304.md) |
-| **3.7** | [**Oracle VM VirtualBox en Detall**](./ut0307.md) | Interfície, paràmetres de memòria, processador, controladors de disc i xarxa | [**⚙️ Configurar VirtualBox →**](./ut0307.md) |
-| **3.10** | [**Instal·lació de Màquines Guests**](./ut0310.md) | Desplegament pas a pas d'Ubuntu Desktop i Windows 11 en VM | [**🖥️ Desplegar Màquines →**](./ut0310.md) |
-| **3.14** | [**Guest Additions i Integració**](./ut0314.md) | Instal·lació de controladors gràfics, carpetes compartides i portapapers | [**🔗 Integrar Guest Additions →**](./ut0314.md) |
+| :---: | :--- | :--- | :--- |
+| **3.1** | [**Fonaments de la Virtualització i Hipervisors**](./ut0301.md) | Concepte Host vs Guest, Hipervisors Tipus 1 (Bare-Metal) vs Tipus 2 (Hosted) i beneficis d'aïllament. | [**📘 Entrar a l'Apartat 3.1 →**](./ut0301.md) |
+| **3.2** | [**Instal·lació i Configuració de VirtualBox**](./ut0302.md) | Desplegament de VirtualBox 7, Extension Pack, assignació de RAM/vCPUs, EFI, TPM 2.0 i memòria de vídeo. | [**📘 Entrar a l'Apartat 3.2 →**](./ut0302.md) |
+| **3.3** | [**Discs Virtuals, Mida Dinàmica i Snapshots**](./ut0303.md) | Formats VDI, VMDK i VHDX, assignació dinàmica vs fixa, arbre d'instantànies i clonació completa vs enllaçada. | [**📘 Entrar a l'Apartat 3.3 →**](./ut0303.md) |
+| **3.4** | [**Modes de Xarxa: NAT, Pont, Interna i Host-Only**](./ut0304.md) | Característiques, assignació d'IPs, aïllament, reenviament de ports (*Port Forwarding*) i matriu de visibilitat. | [**📘 Entrar a l'Apartat 3.4 →**](./ut0304.md) |
+| **3.5** | [**Integració: Guest Additions i Carpetes**](./ut0305.md) | Instal·lació en Windows i Linux (`build-essential`), resolució dinàmica, carpetes compartides i grup `vboxsf`. | [**📘 Entrar a l'Apartat 3.5 →**](./ut0305.md) |
 
 ---
 
 ## 🎯 Resultats d'Aprenentatge Vinculats
-- **RA2:** Instal·la sistemes operatius monolloc planificant el procés i utilitzant tecnologies de virtualització per a la creació d'entorns de prova.
-- **Criteris d'Avaluació:**
+* **RA5:** Utilitza eines de virtualització instal·lant i configurant màquines virtuals per a entorns de prova i desplegament segur.
+* **Criteris d'Avaluació:**
   - S'ha diferenciat l'arquitectura d'un hipervisor de Tipus 1 i Tipus 2, justificant la seua aplicació.
   - S'han seleccionat i configurat els modes de xarxa adequats segons el nivell d'aïllament requerit.
   - S'han gestionat instantànies (*snapshots*) per al retorn ràpid a punts segurs de restauració.
+  - S'han instal·lat eines d'integració (*Guest Additions*) per a optimitzar el rendiment i la interoperabilitat.
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 🧪 Reptes Globals de Síntesi de la Unitat 3
 
-### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+Demostra la teua consolidació teòrica i pràctica superant els 4 reptes oficials de síntesi:
 
-1. **Càlcul de Sobreassignació de Memòria (*Memory Overcommit*):**
-   - Un servidor amfitrió físic disposa de $64\text{ GiB}$ de memòria RAM física instal·lada.
-   - El sistema operatiu amfitrió requereix $6\text{ GiB}$ per al seu funcionament estable.
-   - Es volen desplegar 6 màquines virtuals de proves:
-     - 4 màquines virtuals Windows 11 amb $8\text{ GiB}$ de RAM assignada cadascuna.
-     - 2 màquines virtuals Ubuntu Server amb $4\text{ GiB}$ de RAM assignada cadascuna.
-   - **Preguntes de dimensionament:**
-     - Calcula la suma total de memòria RAM demandada per les 6 màquines virtuals més el sistema amfitrió.
-     - És possible encendre totes les màquines simultàniament sense entrar en sobreassignació de memòria (*overcommit*)? Quants GiB sobrarien o faltarien?
-     - Si la memòria es reserva en mode dinàmic i en repòs cada VM Windows només consumeix realment $3\text{ GiB}$ i cada Linux $1\text{ GiB}$, quina quantitat de memòria física real s'estarà consumint?
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 1: Quina diferència estructural separa un hipervisor de Tipus 1 (com Proxmox VE o VMware ESXi) d'un hipervisor de Tipus 2 (com VirtualBox)?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g1" value="a"> El Tipus 1 s'executa directament sobre el maquinari buit sense sistema operatiu amfitrió previ, mentre que el Tipus 2 requereix un SO amfitrió com Windows o Linux</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g1" value="b"> El Tipus 1 només admet màquines virtuals de 16 bits</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g1" value="c"> El Tipus 2 no permet connectar-se a Internet</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g1" value="d"> Són idèntics; només canvia el nom comercial</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! L'hipervisor de Tipus 1 (Bare-Metal) actua directament sobre el maquinari de silici oferint un rendiment màxim de centre de dades, mentre que el Tipus 2 és una aplicació que conviu amb l'escriptori de l'usuari." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
-2. **Dimensionament de Discs Dinàmics (*Thin Provisioning*):**
-   - Es disposa d'un SSD físic de $500\text{ GB}$ amb $380\text{ GB}$ d'espai lliure.
-   - Es creen 5 màquines virtuals amb un disc virtual de format VDI de $60\text{ GB}$ cadascuna configurades en mode **Reservat Dinàmicament**.
-   - En el moment de la instal·lació inicial, cada sistema operatiu convidat ocupa únicament $12\text{ GB}$ reals a disc.
-   - **Preguntes d'anàlisi:**
-     - Quant d'espai físic total ocupen els 5 fitxers `.vdi` immediatament després d'instal·lar-se?
-     - Quin greu risc operatiu es produeix si amb el pas dels mesos cadascuna de les 5 VMs creix en dades fins a assolir els seus $60\text{ GB}$ màxims teòrics? Com ha de gestionar el tècnic aquest risc?
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 2: Què ocorre en un disc virtual VDI quan prenem una 'Instantània' (Snapshot) abans de fer una prova perillosa a la VM?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g2" value="a"> El disc base es congela en mode només lectura i es crea un fitxer diferencial nou on s'escriuran tots els canvis posteriors</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g2" value="b"> Es duplica immediatament tot el contingut físic de la memòria RAM al disc</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g2" value="c"> S'esborra el contingut de la màquina virtual</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g2" value="d"> La màquina s'apaga i no es pot tornar a encendre</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Exacte! L'instantània congela el fitxer base original i encamina les noves escriptures cap a un fitxer diferencial ({uuid}.vdi); si la prova falla, es descarta el diferencial i la VM torna a l'estat original en segons." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
-3. **Càlcul de Reenviament de Ports (*Port Forwarding*) en Mode NAT:**
-   - Una màquina virtual convidada s'executa darrere d'un adaptador NAT de VirtualBox amb la seua adreça interna estàndard `10.0.2.15`.
-   - Dins d'aquesta màquina s'inicia un servidor web Apache que escolta al port estàndard `80`.
-   - **Preguntes de disseny:**
-     - Per quina raó un altre equip de l'aula física no pot obrir el navegador i accedir directament a `http://10.0.2.15`?
-     - Dissenya una regla de redirecció de ports (*Port Forwarding*) establint el port del host `8080` cap al port del convidat `80`. A quina URL accedirà l'equip amfitrió per visualitzar la pàgina web?
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 3: Per quina raó tècnica i de seguretat està terminantment prohibit configurar un servidor DHCP de proves en mode 'Adaptador Pont' (Bridged) en un taller d'informàtica?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g3" value="a"> Perquè el servidor DHCP de la VM competirà amb el router oficial del centre i començarà a repartir IPs errònies a ordinadors físics reals d'altres aules, provocant una caiguda de xarxa</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g3" value="b"> Perquè la màquina virtual s'apagarà per sobreescalfament</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g3" value="c"> Perquè l'adaptador pont només admet adreces IPv6</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g3" value="d"> Perquè VirtualBox bloqueja el protocol UDP</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! En mode pont la VM està connectada al mateix domini de difusió que la xarxa física; un servidor DHCP mal configurat respondrà als missatges DHCPDISCOVER de tota la planta escolar deixant equips sense connexió." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
----
-
-### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
-
-#### Repte 1: Gestió de Màquines Virtuals per Línia d'Ordres amb `VBoxManage`
-1. Obre un símbol del sistema o consola PowerShell a la carpeta d'instal·lació d'Oracle VirtualBox (`C:\Program Files\Oracle\VirtualBox`):
-   ```cmd
-   cd "C:\Program Files\Oracle\VirtualBox"
-   VBoxManage.exe list vms
-   ```
-2. Consulta la informació detallada d'una màquina virtual de laboratori:
-   ```cmd
-   VBoxManage.exe showvminfo "NomDeLaVM" --machinereadable | findstr /I "memory cpus ostype"
-   ```
-3. Inicia la màquina virtual en mode desatès (*Headless*, sense finestra gràfica, com si fóra un servidor en un CPD):
-   ```cmd
-   VBoxManage.exe startvm "NomDeLaVM" --type headless
-   ```
-4. Comprova amb `VBoxManage.exe list runningvms` que s'està executant correctament i atura-la amb apagament suau ACPI:
-   ```cmd
-   VBoxManage.exe controlvm "NomDeLaVM" acpipowerbutton
-   ```
-
-#### Repte 2: Gestió d'Instantànies (*Snapshots*) per Consola
-1. Abans de dur a terme una modificació crítica o instal·lació en una màquina virtual, crea una instantània de seguretat:
-   ```cmd
-   VBoxManage.exe snapshot "NomDeLaVM" take "EstatInicial_Segur" --description "Snapshot previ a proves"
-   ```
-2. Llista les instantànies existents per verificar l'arbre jeràrquic:
-   ```cmd
-   VBoxManage.exe snapshot "NomDeLaVM" list
-   ```
-3. Simula una fallada intencionada (modificació d'un fitxer clau a la VM) i reverteix l'estat complet al punt segur:
-   ```cmd
-   VBoxManage.exe controlvm "NomDeLaVM" poweroff
-   VBoxManage.exe snapshot "NomDeLaVM" restore "EstatInicial_Segur"
-   ```
-
-#### Repte 3: Desplegament d'una Topologia en Xarxa Interna Aïllada
-1. Modifica la configuració de xarxa de dues màquines virtuals per unir-les a un commutador virtual privat anomenat `TallerSMX`:
-   ```cmd
-   VBoxManage.exe modifyvm "VM1_Linux" --nic1 intnet --intnet1 "TallerSMX"
-   VBoxManage.exe modifyvm "VM2_Linux" --nic1 intnet --intnet1 "TallerSMX"
-   ```
-2. Inicia les dues màquines i assigna adreces estàtiques a la mateixa subxarxa:
-   - A VM1: `192.168.50.10/24`
-   - A VM2: `192.168.50.20/24`
-3. Executa una prova de connectivitat `ping 192.168.50.20` des de VM1 cap a VM2.
-4. Verifica que cap d'elles té accés a Internet (`ping 8.8.8.8` ha de fallar) i que el sistema operatiu físic no pot arribar a aquestes adreces IP, confirmant l'aïllament segur del laboratori.
+<div class="interactive-challenge-card" data-points="25">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700;">Repte Global 4: A quin grup de seguretat de Linux cal afegir un usuari per tal que puga obrir i llegir les carpetes compartides de VirtualBox muntades a '/media/sf_NomCarpeta'?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g4" value="a"> vboxsf</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g4" value="b"> root</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g4" value="c"> sudoers</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="som03_g4" value="d"> www-data</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Exacte! El grup 'vboxsf' (VirtualBox Shared Folders) és el propietari d'aquestes unitats muntades; afegint l'usuari amb 'sudo usermod -aG vboxsf $USER' s'elimina immediatament l'error de permís denegat." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
 
 ---
 
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+## 📬 Lliurament d'Activitats a Aules
 
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Arquitectura d'Hipervisors i Recursos** | Distingeix amb precisió hipervisors Tipus 1 i Tipus 2, calcula sobreassignacions de RAM i avalua riscos de Thin Provisioning. | Coneix que Proxmox és Tipus 1 i VirtualBox Tipus 2, però s'equivoca en el càlcul d'espai en discos dinàmics. | Confon la virtualització amb l'emulació per programari pur o desconeix què és un hipervisor. |
-| **Topologia i Modes de Xarxa Virtual** | Configura correctament els quatre modes de xarxa (NAT, Pont, Interna, Host-Only) garantint l'aïllament de serveis i evitant col·lapses LAN. | Configura les xarxes mitjançant la interfície gràfica però no sap explicar per què una màquina en NAT no és accessible des de fora. | Utilitza sempre el mode per defecte sense saber adaptar la xarxa als requeriments del laboratori. |
-| **Gestió Avançada i Eines CLI (VBoxManage)** | Domina la comanda `VBoxManage` per llistar, iniciar en mode headless, crear instantànies i revertir estats sense GUI. | Utilitza les instantànies des de la interfície gràfica però no sap interactuar amb l'hipervisor des de la línia d'ordres. | No utilitza mai instantànies de seguretat i ha de reinstal·lar les màquines virtuals davant qualsevol fallada. |
+<div class="aules-delivery-card" style="background:linear-gradient(135deg, rgba(37,99,235,0.05) 0%, rgba(124,58,237,0.08) 100%); border:2px solid #8b5cf6; border-radius:12px; padding:22px 26px; margin:2.5rem 0 2rem 0;">
+  <h3 style="margin-top:0; color:#7c3aed; font-size:1.25rem;">📄 Registre Oficial de Progrés de la Unitat 3 (Aules)</h3>
+  <p style="font-size:0.94rem; color:var(--text-muted);">Quan hages completat l'estudi dels 5 temes i superat els 4 reptes globals de síntesi, introdueix les teues dades per generar l'informe oficial en format PDF i adjuntar-lo a la tasca corresponent d'Aules.</p>
+  <div style="margin:14px 0;">
+    <label style="display:block; font-weight:600; font-size:0.88rem; margin-bottom:6px;">Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" class="aules-student-name" placeholder="Ex: Marc Gómez Martínez" style="width:100%; max-width:420px; padding:9px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-card); color:var(--text-main); font-size:0.95rem;">
+  </div>
+  <div class="aules-score-badge" style="display:inline-block; background:#ede9fe; color:#6d28d9; font-weight:700; font-size:0.88rem; padding:4px 12px; border-radius:999px; margin:8px 0 14px 0;">
+    Puntuació: <span class="aules-score-count">0 / 100 punts</span>
+  </div>
+  <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:10px;">
+    <button class="btn-generate-aules-pdf" data-module="SOM" data-unit="UD03" data-lesson="Global" style="background:#7c3aed; color:#ffffff; border:none; padding:10px 18px; border-radius:6px; font-weight:600; font-size:0.9rem; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+      📥 Descarrega PDF Oficial per a Aules
+    </button>
+  </div>
+</div>

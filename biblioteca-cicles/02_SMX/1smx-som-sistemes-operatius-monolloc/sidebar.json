@@ -36,7 +36,7 @@
       ]
     },
     {
-      "summary": "UD2 — UT1: Introducción a los sistemas informáticos",
+      "summary": "UD2 — Estructura i fonaments dels sistemes operatius",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
@@ -44,354 +44,111 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 RA1",
+          "label": "2.1 Funcions del SO i Estructura del Nucli",
           "href": "./ut02/ut0201.html"
         },
         {
-          "label": "2.2 Presentacions",
+          "label": "2.2 Gestió de Processos, Fils i Bloc PCB",
           "href": "./ut02/ut0202.html"
         },
         {
-          "label": "2.3 1.1 - 1.2 El sistema informatico",
+          "label": "2.3 Algorismes de Planificació de la CPU",
           "href": "./ut02/ut0203.html"
         },
         {
-          "label": "2.4 1.4 Els processos",
+          "label": "2.4 Gestió de Memòria Principal: Paginació",
           "href": "./ut02/ut0204.html"
         },
         {
-          "label": "2.5 Recursos",
+          "label": "2.5 Sistemes de Fitxers: Inodes vs MFT",
           "href": "./ut02/ut0205.html"
-        },
-        {
-          "label": "2.6 1.1 Introducción",
-          "href": "./ut02/ut0206.html"
-        },
-        {
-          "label": "2.7 1.2 El sistema informático",
-          "href": "./ut02/ut0207.html"
-        },
-        {
-          "label": "2.8 1.3 Sistemes de numeració",
-          "href": "./ut02/ut0208.html"
-        },
-        {
-          "label": "2.9 1.4 Procesos",
-          "href": "./ut02/ut0209.html"
-        },
-        {
-          "label": "2.10 1.5 El sistema de archivos",
-          "href": "./ut02/ut0210.html"
-        },
-        {
-          "label": "2.11 1.6 Atributos de un archivo y un directorio",
-          "href": "./ut02/ut0211.html"
-        },
-        {
-          "label": "2.12 1.7 Permisos de archivos y directorios",
-          "href": "./ut02/ut0212.html"
-        },
-        {
-          "label": "2.13 1.8 Sistemas transaccionales e implicaciones",
-          "href": "./ut02/ut0213.html"
-        },
-        {
-          "label": "2.14 Activitats",
-          "href": "./ut02/ut0214.html"
-        },
-        {
-          "label": "2.15 Actividad 1.2: El sistema informatic a)",
-          "href": "./ut02/ut0215.html"
-        },
-        {
-          "label": "2.16 Actividad 1.3: Sistemes de numeració - b)",
-          "href": "./ut02/ut0216.html"
-        },
-        {
-          "label": "2.17 1.3 Soluciones Actividades Sistemas Numéricos",
-          "href": "./ut02/ut0217.html"
-        },
-        {
-          "label": "2.18 1.3 Activitats de repas extra",
-          "href": "./ut02/ut0218.html"
-        },
-        {
-          "label": "2.19 Activitat 1.4: Processos c)",
-          "href": "./ut02/ut0219.html"
-        },
-        {
-          "label": "2.20 Activitat 1.5: Sistema d'arxius, atributs i permissos d) e) f)",
-          "href": "./ut02/ut0220.html"
-        },
-        {
-          "label": "2.21 Controls",
-          "href": "./ut02/ut0221.html"
-        },
-        {
-          "label": "2.22 Questionary - CE1.a",
-          "href": "./ut02/ut0222.html"
-        },
-        {
-          "label": "2.23 Questionario CE 1.4 Procesos",
-          "href": "./ut02/ut0223.html"
-        },
-        {
-          "label": "2.24 Questionario CE 1.5 1.6 1.7",
-          "href": "./ut02/ut0224.html"
         }
       ]
     },
     {
-      "summary": "UD3 — UT2: Máquinas Virtuales",
+      "summary": "UD3 — Virtualització i entorns de proves",
       "items": [
         {
-          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "./ut03/index.html",
-          "class": "unit-full-link"
+          "label": "📘 UD3 Completa (1 pàgina)"
         },
         {
-          "label": "3.1 RA5",
-          "href": "./ut03/ut0301.html"
+          "href": "./ut03/ut0301.html",
+          "label": "3.1 Fonaments de Virtualització i Hipervisors"
         },
         {
-          "label": "3.2 Recursos",
-          "href": "./ut03/ut0302.html"
+          "href": "./ut03/ut0302.html",
+          "label": "3.2 Configuració de Maquinari Virtual i BIOS/UEFI"
         },
         {
-          "label": "3.3 2.1 Introducción a la virtualización",
-          "href": "./ut03/ut0303.html"
+          "href": "./ut03/ut0303.html",
+          "label": "3.3 Discs Virtuals, Imatges i Snapshots"
         },
         {
-          "label": "3.4 2.2 Tipos de máquinas virtuales",
-          "href": "./ut03/ut0304.html"
+          "href": "./ut03/ut0304.html",
+          "label": "3.4 Configuració de Xarxa en VirtualBox"
         },
         {
-          "label": "3.5 2.3 Ventajas y desventajas de la virtualización",
-          "href": "./ut03/ut0305.html"
-        },
-        {
-          "label": "3.6 2.4 Instalación de VirtualBox",
-          "href": "./ut03/ut0306.html"
-        },
-        {
-          "label": "3.7 2.5 Un vistazo rápido a VirtualBox",
-          "href": "./ut03/ut0307.html"
-        },
-        {
-          "label": "3.8 Activitats",
-          "href": "./ut03/ut0308.html"
-        },
-        {
-          "label": "3.9 Práctica 1: Creación de máquinas virtuales",
-          "href": "./ut03/ut0309.html"
-        },
-        {
-          "label": "3.10 Práctica 2: Instalación de Ubuntu",
-          "href": "./ut03/ut0310.html"
-        },
-        {
-          "label": "3.11 Practica 3: Instalación de Windows 11",
-          "href": "./ut03/ut0311.html"
-        },
-        {
-          "label": "3.12 Practica 4: relación VM y host",
-          "href": "./ut03/ut0312.html"
-        },
-        {
-          "label": "3.13 Practica 5: analisis del rendimiento del sistema",
-          "href": "./ut03/ut0313.html"
-        },
-        {
-          "label": "3.14 Práctica 6: instalación de Guest Additions",
-          "href": "./ut03/ut0314.html"
-        },
-        {
-          "label": "3.15 Actividades de repaso UT2",
-          "href": "./ut03/ut0315.html"
+          "href": "./ut03/ut0305.html",
+          "label": "3.5 Integració: Guest Additions i Carpetes Compartides"
         }
       ]
     },
     {
-      "summary": "UD4 — UT3: Instalación de Sistemas Operativos",
+      "summary": "UD4 — Instal·lació de sistemes operatius",
       "items": [
         {
-          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "./ut04/index.html",
-          "class": "unit-full-link"
+          "label": "📘 UD4 Completa (1 pàgina)"
         },
         {
-          "label": "4.1 Àrea de text i multimèdia",
-          "href": "./ut04/ut0401.html"
+          "href": "./ut04/ut0401.html",
+          "label": "4.1 Firmware del Sistema: BIOS vs UEFI i Secure Boot"
         },
         {
-          "label": "4.2 3.1 Introducción",
-          "href": "./ut04/ut0402.html"
+          "href": "./ut04/ut0402.html",
+          "label": "4.2 Esquemes de Particionament: MBR vs GPT"
         },
         {
-          "label": "4.3 3.2 Funciones de los Sistemas Operativos",
-          "href": "./ut04/ut0403.html"
+          "href": "./ut04/ut0403.html",
+          "label": "4.3 Seqüència d'Arrancada, Partició ESP i Gestors"
         },
         {
-          "label": "4.4 3.2.1 Gestión de archivos",
-          "href": "./ut04/ut0404.html"
+          "href": "./ut04/ut0404.html",
+          "label": "4.4 Mitjans d'Instal·lació i Windows 11 Pro"
         },
         {
-          "label": "4.5 3.2.2 Gestión de memoria",
-          "href": "./ut04/ut0405.html"
-        },
-        {
-          "label": "4.6 3.2.3 Gestión de procesos",
-          "href": "./ut04/ut0406.html"
-        },
-        {
-          "label": "4.7 3.2.4 Gestión de E/S",
-          "href": "./ut04/ut0407.html"
-        },
-        {
-          "label": "4.8 3.3 Arquitectura del Sistema Operativo",
-          "href": "./ut04/ut0408.html"
-        },
-        {
-          "label": "4.9 3.4 Instalación del Sistema Operativo",
-          "href": "./ut04/ut0409.html"
-        },
-        {
-          "label": "4.10 3.5 Métodos de instalación y planificación de parámetros básicos",
-          "href": "./ut04/ut0410.html"
-        },
-        {
-          "label": "4.11 3.6 Instalación del Sistema Operativo",
-          "href": "./ut04/ut0411.html"
-        },
-        {
-          "label": "4.12 3.7 Cargadores de arranque (Boot Loader)",
-          "href": "./ut04/ut0412.html"
-        },
-        {
-          "label": "4.13 Activitats (còpia)",
-          "href": "./ut04/ut0413.html"
-        },
-        {
-          "label": "4.14 Actividad 1: El sistema operativo y sus funciones",
-          "href": "./ut04/ut0414.html"
-        },
-        {
-          "label": "4.15 Actividad 2: Gestion de archivos",
-          "href": "./ut04/ut0415.html"
-        },
-        {
-          "label": "4.16 Actividad 3: Actividades Procesos",
-          "href": "./ut04/ut0416.html"
-        },
-        {
-          "label": "4.17 Actividad 4: Gestion de ES",
-          "href": "./ut04/ut0417.html"
-        },
-        {
-          "label": "4.18 Actividad 5: Arquitectura del SO",
-          "href": "./ut04/ut0418.html"
-        },
-        {
-          "label": "4.19 Actividad 6: Elección de sistema operativo",
-          "href": "./ut04/ut0419.html"
-        },
-        {
-          "label": "4.20 Actividad 7: Plan de instalación",
-          "href": "./ut04/ut0420.html"
-        },
-        {
-          "label": "4.21 Actividad 8: Gestores de arranque, incidencias, licencias y actualizaciones del sistema",
-          "href": "./ut04/ut0421.html"
+          "href": "./ut04/ut0405.html",
+          "label": "4.5 Instal·lació de GNU/Linux i Doble Arrancada (Dual Boot)"
         }
       ]
     },
     {
-      "summary": "UD5 — UT4: Tareas básicas de configuración de sistemas operativos",
+      "summary": "UD5 — Tasques bàsiques de configuració i administració",
       "items": [
         {
-          "label": "📘 UD5 Completa (1 pàgina)",
           "href": "./ut05/index.html",
-          "class": "unit-full-link"
+          "label": "📘 UD5 Completa (1 pàgina)"
         },
         {
-          "label": "5.1 Àrea de text i multimèdia",
-          "href": "./ut05/ut0501.html"
+          "href": "./ut05/ut0501.html",
+          "label": "5.1 Estructura de Directoris: FHS vs Jerarquia Windows"
         },
         {
-          "label": "5.2 4.1 Introducción",
-          "href": "./ut05/ut0502.html"
+          "href": "./ut05/ut0502.html",
+          "label": "5.2 Gestió d'Usuaris, Grups i Permisos POSIX en Linux"
         },
         {
-          "label": "5.3 4.2 Interfaces de usuario",
-          "href": "./ut05/ut0503.html"
+          "href": "./ut05/ut0503.html",
+          "label": "5.3 Administració de Windows: PowerShell, Serveis i ACL"
         },
         {
-          "label": "5.4 4.3 Preferencias en la configuración",
-          "href": "./ut05/ut0504.html"
+          "href": "./ut05/ut0504.html",
+          "label": "5.4 Automatització de Tasques: Crontab i Task Scheduler"
         },
         {
-          "label": "5.5 4.4 Gestión de sistemas de archivos específicos",
-          "href": "./ut05/ut0505.html"
-        },
-        {
-          "label": "5.6 4.5 Métodos para la recuperación del sistema",
-          "href": "./ut05/ut0506.html"
-        },
-        {
-          "label": "5.7 4.6 Configuración para actualizar un sistema operativo",
-          "href": "./ut05/ut0507.html"
-        },
-        {
-          "label": "5.8 4.7 Instalación / desinstalación de software",
-          "href": "./ut05/ut0508.html"
-        },
-        {
-          "label": "5.9 4.8 Automatización de tareas",
-          "href": "./ut05/ut0509.html"
-        },
-        {
-          "label": "5.10 Contenidos de la unidad",
-          "href": "./ut05/ut0510.html"
-        },
-        {
-          "label": "5.11 Activitats (còpia) (còpia)",
-          "href": "./ut05/ut0511.html"
-        },
-        {
-          "label": "5.12 4.1 - 4.2: Interfaces de usuario en los Sistemas Operativos y configuración",
-          "href": "./ut05/ut0512.html"
-        },
-        {
-          "label": "5.13 Práctica 2: Comandos iniciales",
-          "href": "./ut05/ut0513.html"
-        },
-        {
-          "label": "5.14 Práctica 3: Permisos en Linux",
-          "href": "./ut05/ut0514.html"
-        },
-        {
-          "label": "5.15 4.3 Personalización y Accesibilidad",
-          "href": "./ut05/ut0515.html"
-        },
-        {
-          "label": "5.16 4.4 Sistemas de archivos",
-          "href": "./ut05/ut0516.html"
-        },
-        {
-          "label": "5.17 4.5 Restauración de un sistema en Windows",
-          "href": "./ut05/ut0517.html"
-        },
-        {
-          "label": "5.18 4.6 Actualizar el sistema operativo",
-          "href": "./ut05/ut0518.html"
-        },
-        {
-          "label": "5.19 4.7 Instalación / desinstalación de software",
-          "href": "./ut05/ut0519.html"
-        },
-        {
-          "label": "5.20 4.8 Automatización de tareas",
-          "href": "./ut05/ut0520.html"
+          "href": "./ut05/ut0505.html",
+          "label": "5.5 Manteniment, Còpies 3-2-1, Clonezilla i Avaries"
         }
       ]
     }
