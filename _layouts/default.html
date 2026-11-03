@@ -2391,7 +2391,50 @@
         </div>
 
         <a href="{{ '/#metodologia' | relative_url }}" class="nav-link">Metodologia</a>
-        <a href="{{ '/#eines' | relative_url }}" class="nav-link">Eines</a>
+
+        <!-- Desplegable Eines & DevToys -->
+        <div class="header-nav-item has-dropdown">
+          <a href="{{ '/eines/' | relative_url }}" class="nav-dropdown-trigger nav-link">
+            <span>Eines &amp; DevToys</span> <span class="nav-arrow">▾</span>
+          </a>
+          <div class="header-dropdown-menu">
+            <div class="dropdown-header">Suite per a Desenvolupadors</div>
+            <a href="{{ '/eines/' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">🛠️ DevToys Web (Totes les Eines)</div>
+              <div class="dropdown-item-meta">Validadors, convertidors i eines 100% offline</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/eines/#json-formatter' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">📋 Validador &amp; Formatador JSON</div>
+              <div class="dropdown-item-meta">Formatació, minificació i cerca d'errors</div>
+            </a>
+            <a href="{{ '/eines/#xml-validator' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">📄 Validador &amp; Formatador XML</div>
+              <div class="dropdown-item-meta">Comprovació de sintaxi i ben format</div>
+            </a>
+            <a href="{{ '/eines/#sql-formatter' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">🗄️ Formatador SQL</div>
+              <div class="dropdown-item-meta">Majúscules i indentació de consultes</div>
+            </a>
+            <a href="{{ '/eines/#base-converter' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">🔢 Conversor de Bases Numèriques</div>
+              <div class="dropdown-item-meta">Hexadecimal, Decimal, Binari i Octal</div>
+            </a>
+            <a href="{{ '/eines/#cron-parser' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">⏰ Analitzador d'Expressions Cron</div>
+              <div class="dropdown-item-meta">Traducció a valencià i pròximes execucions</div>
+            </a>
+            <a href="{{ '/eines/#base64-text' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">🔐 Codificador Base64 (Text i Imatges)</div>
+              <div class="dropdown-item-meta">UTF-8 segur i generació de Data URIs</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ '/#eines' | relative_url }}" class="dropdown-item">
+              <div class="dropdown-item-title">💻 Programari d'Entorn Recomanat</div>
+              <div class="dropdown-item-meta">VS Code, MariaDB, Packet Tracer, LibreOffice</div>
+            </a>
+          </div>
+        </div>
 
         <div class="header-controls">
           <div class="font-zoom-group" title="Ajustar mida del text">
@@ -2472,6 +2515,10 @@
   </div>
   {% elsif page.is_landing %}
   <main class="landing-main">
+    {{ content }}
+  </main>
+  {% elsif page.full_width %}
+  <main class="main-wrapper-full" style="max-width: 1600px; margin: 0 auto; padding: 24px 20px 48px; width: 100%;">
     {{ content }}
   </main>
   {% else %}

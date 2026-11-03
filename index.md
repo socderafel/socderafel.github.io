@@ -392,6 +392,95 @@ is_landing: true
       </p>
     </div>
 
+    <!-- Targeta Destacada: DevToys Web Suite -->
+    <div class="devtoys-hero-card" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 30px; margin-bottom: 32px; box-shadow: 0 12px 36px rgba(0,0,0,0.25); display: flex; flex-direction: column; gap: 20px; position: relative; overflow: hidden;">
+      <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(59, 130, 246, 0.25), transparent 70%); pointer-events: none;"></div>
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div style="max-width: 780px;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(59, 130, 246, 0.18); color: #60a5fa; border: 1px solid rgba(96, 165, 250, 0.3); font-size: 0.78rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px;">
+            <span>⚡ Novetat · 100% Client-Side &amp; Offline</span>
+          </div>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: #f8fafc; margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;">
+            <span>🛠️ DevToys Web</span>
+            <span style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; background: rgba(255,255,255,0.08); padding: 3px 8px; border-radius: 6px;">v2.0 Web</span>
+          </h3>
+          <p style="color: #cbd5e1; font-size: 0.98rem; line-height: 1.55; margin: 0;">
+            La <strong>navalla suïssa definitiva</strong> per a estudiants i professionals del desenvolupament de programari i administració de sistemes. Validadors d'XML i JSON amb detecció d'errors en temps real, formatadors SQL, conversor 4-vies de bases numèriques, analitzador d'expressions cron, codificadors Base64 per a text i imatges, decodificador JWT, generadors de hashes i UUIDs, provador RegEx i comparador de fitxers. Tot executat en local al teu navegador sense enviar cap dada a servidors externs.
+          </p>
+        </div>
+        <div>
+          <a href="{{ '/eines/' | relative_url }}" class="landing-btn landing-btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-weight: 700; font-size: 1rem; border-radius: 10px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4); text-decoration: none;">
+            <span>Obrir DevToys Web</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; margin-top: 4px;">
+        <a href="{{ '/eines/#json-formatter' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">📋</span>
+          <div>
+            <div style="font-weight: 600;">Validador JSON</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Format, minificació i errors</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#xml-validator' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">📄</span>
+          <div>
+            <div style="font-weight: 600;">Validador XML</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Sintaxi i ben format</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#sql-formatter' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">🗄️</span>
+          <div>
+            <div style="font-weight: 600;">Formatador SQL</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Beautifier i majúscules</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#base-converter' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">🔢</span>
+          <div>
+            <div style="font-weight: 600;">Bases Numèriques</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Hex, Dec, Bin i Octal</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#cron-parser' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">⏰</span>
+          <div>
+            <div style="font-weight: 600;">Parser Cron</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Traducció i calendari</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#base64-text' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">🔐</span>
+          <div>
+            <div style="font-weight: 600;">Base64 &amp; JWT</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Text, imatges i tokens</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#hash-generator' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">🔑</span>
+          <div>
+            <div style="font-weight: 600;">Hashes i Checksum</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">MD5, SHA-1, SHA-256</div>
+          </div>
+        </a>
+        <a href="{{ '/eines/#regex-tester' | relative_url }}" style="text-decoration: none; color: #e2e8f0; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 14px; font-size: 0.88rem; display: flex; align-items: center; gap: 10px; transition: all 0.2s ease;">
+          <span style="font-size: 1.2rem;">🔍</span>
+          <div>
+            <div style="font-weight: 600;">Provador RegEx</div>
+            <div style="font-size: 0.72rem; color: #94a3b8;">Resaltat i captures</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div style="margin-bottom: 14px;">
+      <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-color); margin: 0;">Programari d'Escriptori Recomanat</h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin: 4px 0 0 0;">Eines essencials per a instal·lar a la teua estació de treball als mòduls de cicles formatius.</p>
+    </div>
+
     <div class="tools-grid">
       <a href="https://code.visualstudio.com/" target="_blank" rel="noopener" class="tool-item-card">
         <div style="font-size: 1.6rem;">💻</div>
@@ -455,8 +544,9 @@ is_landing: true
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">Mòduls Actius</div>
+        <div class="footer-col-title">Mòduls & Eines</div>
         <ul class="footer-links">
+          <li><a href="./eines/" style="font-weight:700; color:#3b82f6 !important;">🛠️ DevToys Web Suite</a></li>
           <li><a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/">Ciències Aplicades 1</a></li>
           <li><a href="./programacio/">Programació en Java</a></li>
           <li><a href="./projecte-intermodular/">Projecte Intermodular</a></li>
