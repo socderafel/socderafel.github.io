@@ -3073,18 +3073,27 @@
             if (path.includes('ciencies-aplicades') || pageTitle.includes('Ciències') || badgeText.includes('Ciències')) {
               moduleCode = 'CA1';
               moduleFullName = 'Ciències Aplicades I (1r FPB)';
+            } else if (path.includes('mmsci') || pageTitle.includes('Muntatge') || badgeText.includes('Muntatge')) {
+              moduleCode = 'MMSCI';
+              moduleFullName = 'Muntatge i Manteniment de Sistemes (1r FPB)';
+            } else if (path.includes('oad') || pageTitle.includes('Ofimàtica') || badgeText.includes('Ofimàtica')) {
+              moduleCode = 'OAD';
+              moduleFullName = 'Operacions Auxiliars amb TIC (1r FPB)';
+            } else if (path.includes('imx') || pageTitle.includes('Xarxes') || badgeText.includes('Xarxes')) {
+              moduleCode = 'IMX';
+              moduleFullName = 'Instal·lació de Xarxes (2n FPB)';
+            } else if (path.includes('oace') || pageTitle.includes('Configuració') || badgeText.includes('Configuració')) {
+              moduleCode = 'OACE';
+              moduleFullName = 'Operacions Auxiliars Explotació (2n FPB)';
+            } else if (path.includes('projecte') || pageTitle.includes('Projecte') || badgeText.includes('Projecte')) {
+              moduleCode = 'PROJECTE';
+              moduleFullName = 'Projecte Intermodular (2n FPB)';
             } else if (path.includes('programacio') || pageTitle.includes('Programació') || badgeText.includes('Programació')) {
               moduleCode = 'PROG';
               moduleFullName = 'Programació en Java (1r DAW/DAM)';
             } else if (path.includes('bbdd') || pageTitle.includes('Bases de Dades') || badgeText.includes('Bases de Dades')) {
               moduleCode = 'BBDD';
               moduleFullName = 'Bases de Dades (1r DAW/DAM/ASIX)';
-            } else if (path.includes('projecte') || pageTitle.includes('Projecte') || badgeText.includes('Projecte')) {
-              moduleCode = 'PROJECTE';
-              moduleFullName = 'Projecte Intermodular (2n FPB)';
-            } else if (path.includes('imx') || pageTitle.includes('Xarxes') || badgeText.includes('Xarxes')) {
-              moduleCode = 'IMX';
-              moduleFullName = 'Instal·lació de Xarxes (2n FPB)';
             } else if (badgeText) {
               moduleCode = cleanForFilename(badgeText.split('·')[0].trim()) || 'MOD';
               moduleFullName = badgeText;

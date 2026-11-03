@@ -1,36 +1,36 @@
 {
-  "title": "🛠️ Muntatge i Manteniment de Sistemes i Components — 1r FPB · Grau Bàsic",
+  "title": "🛠️ Muntatge i Manteniment (MMSCI) — 1r FPB",
   "home": {
-    "label": "🏠 Inici Muntatge i Manteniment de Sistemes i Components",
+    "label": "🏠 Inici MMSCI (1r FPB)",
     "href": "index.html"
   },
   "units": [
     {
-      "summary": "UD1 — Elements Elèctrics i Electrònics Bàsics i Seguretat",
+      "summary": "UD1 — Elements Elèctrics i Seguretat al Taller",
       "items": [
         {
-          "label": "📘 UD1 Completa (1 pàgina)",
+          "label": "📋 UD1 Índex",
           "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 Fonaments d'electricitat i Llei d'Ohm",
+          "label": "1.1 Magnituds elèctriques i Llei d'Ohm",
           "href": "./ut01/ut0101.html"
         },
         {
-          "label": "1.2 Corrent continu, altern i components passius",
+          "label": "1.2 Components passius i actius a la placa",
           "href": "./ut01/ut0102.html"
         },
         {
-          "label": "1.3 Circuits en sèrie, paral·lel i càlculs",
+          "label": "1.3 Circuits en sèrie i paral·lel",
           "href": "./ut01/ut0103.html"
         },
         {
-          "label": "1.4 Aparells de mesura: El polímetre digital",
+          "label": "1.4 Codi de colors i ús del polímetre",
           "href": "./ut01/ut0104.html"
         },
         {
-          "label": "1.5 Eines de taller, protecció ESD i seguretat",
+          "label": "1.5 Riscos laborals, EPIs i protecció ESD",
           "href": "./ut01/ut0105.html"
         }
       ]
@@ -39,28 +39,28 @@
       "summary": "UD2 — Unitats Funcionals de l'Ordinador",
       "items": [
         {
-          "label": "📘 UD2 Completa (1 pàgina)",
+          "label": "📋 UD2 Índex",
           "href": "./ut02/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Model i arquitectura de Von Neumann",
+          "label": "2.1 L'arquitectura de Von Neumann",
           "href": "./ut02/ut0201.html"
         },
         {
-          "label": "2.2 La Unitat Central de Processament (CPU)",
+          "label": "2.2 La CPU: UC, ALU i Registres",
           "href": "./ut02/ut0202.html"
         },
         {
-          "label": "2.3 Jerarquia de memòria: Cau, RAM i ROM",
+          "label": "2.3 Memòries RAM volàtil vs ROM/UEFI",
           "href": "./ut02/ut0203.html"
         },
         {
-          "label": "2.4 Subsistema d'E/S i busos del sistema",
+          "label": "2.4 Busos de comunicació del sistema",
           "href": "./ut02/ut0204.html"
         },
         {
-          "label": "2.5 El cicle d'execució d'una instrucció",
+          "label": "2.5 Jerarquia de memòries cau L1/L2/L3",
           "href": "./ut02/ut0205.html"
         }
       ]
@@ -69,28 +69,28 @@
       "summary": "UD3 — La Placa Base de l'Ordinador",
       "items": [
         {
-          "label": "📘 UD3 Completa (1 pàgina)",
+          "label": "📋 UD3 Índex",
           "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Funció, estructura i factors de forma",
+          "label": "3.1 Factors de forma: ATX, mATX, ITX",
           "href": "./ut03/ut0301.html"
         },
         {
-          "label": "3.2 El sòcol del microprocessador (Sockets LGA/PGA)",
+          "label": "3.2 El sòcol del processador: LGA vs PGA",
           "href": "./ut03/ut0302.html"
         },
         {
-          "label": "3.3 El chipset i fases d'alimentació VRM",
+          "label": "3.3 Chipset PCH i ranures PCI Express",
           "href": "./ut03/ut0303.html"
         },
         {
-          "label": "3.4 Zòcols de memòria RAM i ranures PCIe",
+          "label": "3.4 Ranures DIMM Dual-Channel i ports M.2",
           "href": "./ut03/ut0304.html"
         },
         {
-          "label": "3.5 El firmware: BIOS, UEFI, CMOS i pila CR2032",
+          "label": "3.5 Firmware UEFI, pila CR2032 i Clear CMOS",
           "href": "./ut03/ut0305.html"
         }
       ]
@@ -99,32 +99,32 @@
       "summary": "UD4 — Components Interns de l'Ordinador",
       "items": [
         {
-          "label": "📘 UD4 Completa (1 pàgina)",
+          "label": "📋 UD4 Índex",
           "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 La caixa o xassís i el flux d'aire",
+          "label": "4.1 Xassís i flux d'aire tèrmic",
           "href": "./ut04/ut0401.html"
         },
         {
-          "label": "4.2 La font d'alimentació ATX (80 PLUS)",
+          "label": "4.2 Fonts d'alimentació ATX (80 PLUS)",
           "href": "./ut04/ut0402.html"
         },
         {
-          "label": "4.3 Microprocessadors i sistemes de refrigeració",
+          "label": "4.3 Microprocessadors Intel/AMD i TDP",
           "href": "./ut04/ut0403.html"
         },
         {
-          "label": "4.4 Memòria RAM: DDR4/DDR5 i Dual Channel",
+          "label": "4.4 Sistemes de refrigeració i pasta tèrmica",
           "href": "./ut04/ut0404.html"
         },
         {
-          "label": "4.5 Dispositius d'emmagatzematge: HDD vs SSD NVMe",
+          "label": "4.5 Memòria RAM: DIMM/SO-DIMM i XMP",
           "href": "./ut04/ut0405.html"
         },
         {
-          "label": "4.6 Targetes d'expansió: Gràfiques (GPU)",
+          "label": "4.6 Emmagatzematge: HDD vs SSD NVMe M.2",
           "href": "./ut04/ut0406.html"
         }
       ]
@@ -133,28 +133,28 @@
       "summary": "UD5 — Connectors i Cablejat",
       "items": [
         {
-          "label": "📘 UD5 Completa (1 pàgina)",
+          "label": "📋 UD5 Índex",
           "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Pins, contactes i tipus de connectors",
+          "label": "5.1 Alimentació interna (ATX 24p, EPS, PCIe)",
           "href": "./ut05/ut0501.html"
         },
         {
-          "label": "5.2 Connectors d'alimentació interns de la font ATX",
+          "label": "5.2 Connexió del panell frontal JFP1",
           "href": "./ut05/ut0502.html"
         },
         {
-          "label": "5.3 Cables de dades SATA i panell frontal",
+          "label": "5.3 Dades SATA III, USB intern i HD Audio",
           "href": "./ut05/ut0503.html"
         },
         {
-          "label": "5.4 Ports de comunicació externs (USB i RJ-45)",
+          "label": "5.4 Ventiladors PWM i perill RGB vs ARGB",
           "href": "./ut05/ut0504.html"
         },
         {
-          "label": "5.5 Connectors de vídeo i àudio (HDMI, DisplayPort)",
+          "label": "5.5 Ports externs: HDMI, DisplayPort, USB",
           "href": "./ut05/ut0505.html"
         }
       ]
@@ -163,58 +163,58 @@
       "summary": "UD6 — Perifèrics de l'Ordinador",
       "items": [
         {
-          "label": "📘 UD6 Completa (1 pàgina)",
+          "label": "📋 UD6 Índex",
           "href": "./ut06/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 Concepte i classificació de perifèrics",
+          "label": "6.1 Teclats de membrana vs mecànics i ratolins",
           "href": "./ut06/ut0601.html"
         },
         {
-          "label": "6.2 Perifèrics d'entrada: Teclat, ratolí i escàner",
+          "label": "6.2 Monitors i panells (IPS, VA, OLED, Hz)",
           "href": "./ut06/ut0602.html"
         },
         {
-          "label": "6.3 Perifèrics d'eixida: Monitors i pantalles",
+          "label": "6.3 Impressores de tinta vs làser (tòner)",
           "href": "./ut06/ut0603.html"
         },
         {
-          "label": "6.4 Impressores i equips multifunció",
+          "label": "6.4 Connexió física i controladors (drivers)",
           "href": "./ut06/ut0604.html"
         },
         {
-          "label": "6.5 Instal·lació física i controladors (Drivers)",
+          "label": "6.5 Ergonomia laboral i neteja",
           "href": "./ut06/ut0605.html"
         }
       ]
     },
     {
-      "summary": "UD7 — Consumibles Informàtics, Neteja i Residus",
+      "summary": "UD7 — Consumibles, Neteja i Residus RAEE",
       "items": [
         {
-          "label": "📘 UD7 Completa (1 pàgina)",
+          "label": "📋 UD7 Índex",
           "href": "./ut07/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 Consumibles d'impressió: Tinta, tòner i paper",
+          "label": "7.1 Consumibles d'impressió CMYK i tòners",
           "href": "./ut07/ut0701.html"
         },
         {
-          "label": "7.2 Consumibles d'energia: Piles i bateries",
+          "label": "7.2 Pila CR2032 i renovació de pasta tèrmica",
           "href": "./ut07/ut0702.html"
         },
         {
-          "label": "7.3 Neteja preventiva dels equips al taller",
+          "label": "7.3 Eines de neteja i alcohol isopropílic 99%",
           "href": "./ut07/ut0703.html"
         },
         {
-          "label": "7.4 Substitució segura de consumibles",
+          "label": "7.4 Gestió mediambiental de residus RAEE",
           "href": "./ut07/ut0704.html"
         },
         {
-          "label": "7.5 Gestió ambiental i residus RAEE",
+          "label": "7.5 Punts nets i esborrat segur de dades",
           "href": "./ut07/ut0705.html"
         }
       ]
@@ -223,62 +223,62 @@
       "summary": "UD8 — Gestió Logística, Inventari i Embalatge",
       "items": [
         {
-          "label": "📘 UD8 Completa (1 pàgina)",
+          "label": "📋 UD8 Índex",
           "href": "./ut08/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 Sistemes d'etiquetatge (Barres, QR i RFID)",
+          "label": "8.1 Recepció de comandes i albarans (S/N)",
           "href": "./ut08/ut0801.html"
         },
         {
-          "label": "8.2 Eines, impressores i programari d'inventari",
+          "label": "8.2 Codis de barres (1D), QR i xips RFID",
           "href": "./ut08/ut0802.html"
         },
         {
-          "label": "8.3 Embalatge i protecció antiestàtica (ESD)",
+          "label": "8.3 Embalatge i bosses metal·litzades ESD",
           "href": "./ut08/ut0803.html"
         },
         {
-          "label": "8.4 Recepció, magatzem i control d'estoc",
+          "label": "8.4 Transport de PCs i protecció de GPU",
           "href": "./ut08/ut0804.html"
         },
         {
-          "label": "8.5 Trasllat i transport segur d'equips",
+          "label": "8.5 Programari d'inventari d'actius TI (GLPI)",
           "href": "./ut08/ut0805.html"
         }
       ]
     },
     {
-      "summary": "UD9 — Banc de Proves Pràctiques de Taller",
+      "summary": "UD9 — Banc de Proves i Avaluació de Taller",
       "items": [
         {
-          "label": "📘 UD9 Completa (1 pàgina)",
+          "label": "📋 UD9 Índex",
           "href": "./ut09/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 Prova 1: Electricitat, circuits i polímetre",
+          "label": "9.1 Protocol POST, Beep Codes i Debug LEDs",
           "href": "./ut09/ut0901.html"
         },
         {
-          "label": "9.2 Prova 2: Placa base, sockets i memòria RAM",
+          "label": "9.2 Configuració BIOS/UEFI i Boot Order",
           "href": "./ut09/ut0902.html"
         },
         {
-          "label": "9.3 Prova 3: Cables, tensions ATX i panell frontal",
+          "label": "9.3 Suports d'arrencada amb Rufus i Ventoy",
           "href": "./ut09/ut0903.html"
         },
         {
-          "label": "9.4 Prova 4: Muntatge de CPU, refrigeració i discs",
+          "label": "9.4 Diagnòstic d'avaries típiques de taller",
           "href": "./ut09/ut0904.html"
         },
         {
-          "label": "9.5 Prova 5: Manteniment, consumibles i RAEE",
+          "label": "9.5 Simulador de muntatge integral pas a pas",
           "href": "./ut09/ut0905.html"
         },
         {
-          "label": "9.6 Prova 6: Logística, inventari i embalatge ESD",
+          "label": "9.6 Avaluació global de taller (RA1 a RA6)",
           "href": "./ut09/ut0906.html"
         }
       ]
