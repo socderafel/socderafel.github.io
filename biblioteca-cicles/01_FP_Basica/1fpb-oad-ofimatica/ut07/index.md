@@ -1,245 +1,133 @@
 ---
 layout: default
-title: "UT07: Dispositius Digitals, Sincronització i Treball al Núvol — Ofimàtica i Arxiu de Documents"
+title: "UD7: Dispositius Digitals, Mobilitat i Treball al Núvol — Ofimàtica i Arxiu de Documents"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD7"
 ---
 
-# ☁️ UT07: Dispositius Digitals, Sincronització i Treball al Núvol
+# ☁️ UD7: Dispositius Digitals, Mobilitat i Treball al Núvol
 
-Benvingut/da a la **Unitat Temàtica 7** d'**Ofimàtica i Arxiu de Documents (OAD)**. El treball administratiu modern ja no es limita a un ordinador aïllat a una taula: els documents viuen al núvol i s'hi accedeix de manera coordinada des d'ordinadors de sobretaula, portàtils corporatius, tauletes i telèfons intel·ligents. En aquesta unitat aprendràs a utilitzar plataformes d'emmagatzematge al núvol com Google Drive i Microsoft OneDrive, dominaràs la gestió de permisos (**Lector**, **Comentador** i **Editor**) per evitar esborrats accidentals, treballaràs en equip en documents col·laboratius en temps real i aprendràs a resoldre conflictes de sincronització entre equips.
+Benvingut/da a la **Unitat Didàctica 7** d'**Ofimàtica i Arxiu de Documents (OAD)**. El teletreball i la mobilitat han transformat l'oficina tradicional en un espai connectat i flexible. En aquesta unitat aprendràs a sincronitzar dispositius mòbils amb el PC, dominaràs plataformes d'emmagatzematge al núvol com **Google Drive** i **OneDrive**, gestionaràs permisos d'accés i aplicaràs la regla 3-2-1 de còpies de seguretat.
 
-<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
-<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
-  <defs>
-    <linearGradient id="g-cl-dis" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-cl-emm" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-cl-per" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-cl-col" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
+---
 
-  <!-- Capçalera -->
-  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">ECOSISTEMA NÚVOL: DISPOSITIUS, EMMAGATZEMATGE, PERMISOS I SINCRONITZACIÓ</text>
-  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">Treball col·laboratiu en temps real, gestió de permisos d'accés i sincronització multiplataforma</text>
+### 🗺️ Mapa Conceptual de la Unitat
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+│     UD7: DISPOSITIUS DIGITALS, MOBILITAT I TREBALL AL NÚVOL            │
+├────────────────────┬────────────────────┬──────────────────────────────┤
+│ 📱 CONNEXIÓ I MÒBILS│ ☁️ EMMAGATZEMATGE NÚVOL│ 🔄 SEGURETAT I COOPERACIÓ    │
+│ • Protocols USB MTP │ • Google Drive / OD │ • Permisos de compartició    │
+│ • Bluetooth i lectors│ • Sincronització PC │ • Coedició simultània        │
+│ • Transferència fitx│ • Historial versions│ • Còpies de seguretat 3-2-1  │
+└────────────────────┴────────────────────┴──────────────────────────────┘
+```
 
-  <!-- Bloc 1: Dispositius Digitals -->
-  <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-cl-dis)" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📱</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Dispositius Digitals</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Entorn Multiplataforma</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• PC sobretaula i portàtils</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Mòbils i tauletes (Android/iOS)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Sistemes híbrids corporatius</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Sincronització de fitxers</text>
-  </g>
+---
 
-  <!-- Bloc 2: Plataformes Núvol -->
-  <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-cl-emm)" stroke="#818cf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">☁️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Emmagatzematge</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Serveis al Núvol</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Google Drive / Workspace</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Microsoft OneDrive / 365</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Nextcloud privat de taller</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Historial de versions (Backup)</text>
-  </g>
+### 📑 Continguts de la Unitat Didàctica
 
-  <!-- Bloc 3: Gestió de Permisos -->
-  <g transform="translate(435, 70)">
-    <rect width="195" height="165" rx="10" fill="url(#g-cl-per)" stroke="#34d399" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🔒</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Gestió de Permisos</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Control d'Accés</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Lector: Només visualització</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Comentador: Afegeix notes</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Editor: Modificació i esborrat</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Enllaç restringit per domini</text>
-  </g>
+| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
+| :---: | :--- | :--- | :---: |
+| **7.1** | **Connexió i gestió de dispositius mòbils** | Connexió USB MTP, Bluetooth, lectors de targetes microSD i transferència d'arxius. | [**Accedir al Tema 7.1 ➡️**](./ut0701.html) |
+| **7.2** | **Emmagatzematge al núvol (Drive / OneDrive)** | Espai d'emmagatzematge, estructura de carpetes al núvol i sincronitzador d'escriptori. | [**Accedir al Tema 7.2 ➡️**](./ut0702.html) |
+| **7.3** | **Gestió de permisos: lector, comentador i editor** | Compartició restringida, accés per enllaç, permisos d'escriptura i dates de caducitat. | [**Accedir al Tema 7.3 ➡️**](./ut0703.html) |
+| **7.4** | **Treball col·laboratiu en temps real** | Coedició de documents, xat i comentaris interns, i restauració des de l'historial de versions. | [**Accedir al Tema 7.4 ➡️**](./ut0704.html) |
+| **7.5** | **Còpies de seguretat i la regla 3-2-1** | La regla d'or de seguretat de dades (3 còpies, 2 suports, 1 al núvol) i restauració de còpies. | [**Accedir al Tema 7.5 ➡️**](./ut0705.html) |
 
-  <!-- Bloc 4: Treball Col·laboratiu -->
-  <g transform="translate(650, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-cl-col)" stroke="#f59e0b" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">👥</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Treball en Equip</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Coedició en Viu</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Coautoria en temps real</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Cursors de colors de companys</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Mencions amb @usuari</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Eliminació de duplicats locals</text>
-  </g>
-</svg>
+---
+
+### 🧪 Taller Pràctic de la Unitat: Carpeta Compartida i Pla de Còpies
+
+1. **Creació de l'espai corporatiu:** Crea a Google Drive o OneDrive una carpeta anomenada `Projecte_Oficina_EquipX`.
+2. **Assignació de permisos diferenciats:**
+   - Comparteix la carpeta amb el teu company amb permís d'**Editor**.
+   - Genera un enllaç de **Només Lectura** per al client de prova.
+3. **Coedició en temps real:** Obriu simultàniament un document de text al núvol i redacteu una fitxa de producte a quatre mans, deixant comentaris i suggeriments.
+4. **Recuperació de versions:** Esborra intencionadament un paràgraf i utilitza l'**Historial de versions** per restaurar el document a l'estat anterior exacte.
+5. **Pla de Còpia 3-2-1:** Empaqueta els documents en un arxiu ZIP, deixa una còpia al disc local i puja la segona al núvol institucional.
+
+---
+
+## 🏆 Avaluació Global de la Unitat (+100 punts)
+
+<div class="interactive-progress-tracker">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+    <span class="tracker-count">0 de 4 reptes superats (0%)</span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+  </div>
+  <div style="background:rgba(0,0,0,0.1); height:8px; border-radius:4px; overflow:hidden;">
+    <div class="tracker-bar" style="background:#2563eb; height:100%; width:0%; transition:width 0.3s ease;"></div>
+  </div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 1: Quin permís has d'assignar en compartir un full de càlcul al núvol si només vols que el client consulte les xifres sense tocar cap dada?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_1" value="a"> Editor</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_1" value="b"> Propietari</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_1" value="c"> Lector / Visualitzador</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_1" value="d"> Administrador del sistema</label>
+  </div>
+  <button class="btn-check" data-correct="c" data-feedback="Correcte! El permís de lector permet visualitzar i descarregar (si no està restringit) però impedeix modificar el contingut." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 2: Què dicta la regla d'or 3-2-1 per a la protecció de còpies de seguretat (*backups*)?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_2" value="a"> 3 còpies totals, en 2 suports diferents (ex: disc i núvol), i almenys 1 fora de la seu física</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_2" value="b"> 3 fotos, 2 arxius Word i 1 arxiu Excel</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_2" value="c"> Guardar el document 3 vegades seguides a la mateixa memòria USB</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_2" value="d"> Fer una còpia cada 3 anys, 2 mesos i 1 dia</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! La regla 3-2-1 garanteix que ni un incendi físic a l'oficina ni una fallada de maquinari puguen destruir les dades." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 3: Si un company de feina esborra per error el pressupost d'ahir en un document compartit de Google Docs, com es recupera?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_3" value="a"> No es pot recuperar, cal tornar a escriure'l de memòria</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_3" value="b"> Entrant a 'Fitxer > Historial de versions' i restaurant la versió anterior al canvi</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_3" value="c"> Reiniciant el router</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_3" value="d"> Comprant una llicència nova</label>
+  </div>
+  <button class="btn-check" data-correct="b" data-feedback="Exacte! L'historial de versions registra cada canvi al núvol amb data, hora i autor, permetent restaurar qualsevol punt del passat." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="border:1px solid #e2e8f0; border-radius:8px; padding:16px; margin:16px 0; background:#f8fafc;">
+  <div style="display:flex; justify-content:space-between; align-items:center;">
+    <span style="font-weight:700; color:#1e293b;">Repte Global 4: Quin mode de connexió USB cal triar al telèfon intel·ligent Android quan el connectes a l'ordinador per passar fotografies?</span>
+    <span class="badge-pts" style="background:#dbeafe; color:#1e40af; padding:2px 8px; border-radius:12px; font-size:12px; font-weight:600;">+25 pts</span>
+  </div>
+  <div style="margin-top:12px; display:flex; flex-direction:column; gap:8px;">
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_4" value="a"> Només càrrega</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_4" value="b"> Transferència de fitxers / MTP</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_4" value="c"> Mode avió</label>
+    <label style="display:flex; align-items:center; gap:8px; cursor:pointer;"><input type="radio" name="rg7_4" value="d"> Format ràpid</label>
+  </div>
+  <button class="btn-check" data-correct="b" data-feedback="Molt bé! MTP (Media Transfer Protocol) permet a l'explorador de fitxers de l'ordinador accedir a les fotos i documents del mòbil." style="margin-top:12px; padding:6px 14px; background:#2563eb; color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova</button>
+  <div class="feedback-msg" style="margin-top:8px; font-size:13px; display:none;"></div>
 </div>
 
 ---
 
-## 📑 Apartats de la Unitat Didàctica
-
-| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
-| :---: | :--- | :---: |
-| **7.1** | Tipus de dispositius digitals i els seus sistemes operatius | [**📘 Llegir Apartat 7.1 →**](./ut0701.html) |
-| **7.2** | Sistemes d'emmagatzematge al núvol: Google Drive i OneDrive | [**📘 Llegir Apartat 7.2 →**](./ut0702.html) |
-| **7.3** | Compartició de fitxers i gestió de permisos | [**📘 Llegir Apartat 7.3 →**](./ut0703.html) |
-| **7.4** | Treball col·laboratiu en temps real sobre documents | [**📘 Llegir Apartat 7.4 →**](./ut0704.html) |
-| **7.5** | Sincronització de dispositius mòbils amb l'ordinador | [**📘 Llegir Apartat 7.5 →**](./ut0705.html) |
-
----
-
-## 🎯 Resultats d'Aprenentatge Treballats
-
-- **RA 5:** Utilitza serveis de comunicació telemàtica, emmagatzematge distribuït i eines de treball col·laboratiu en entorns de xarxa.
-  - *CE a:* S'han descrit els dispositius digitals personals i corporatius i els seus mecanismes de connectivitat.
-  - *CE b:* S'han organitzat arxius i carpetes en servidors d'emmagatzematge al núvol.
-  - *CE c:* S'han assignat permisos d'accés (lectura, comentari i edició) protegint la integritat de la informació.
-  - *CE d:* S'ha participat en tasques d'edició compartida en temps real resolent conflictes de versions.
-
----
-
-## 📊 Matriu de Permisos al Núvol i Riscos de Seguretat de Dades
-
-| Nivell de Permís | Què POT fer l'Usuari | Què NO POT fer l'Usuari | Risc de Seguretat si S'Assigna per Error | Àmbit Recomanat a l'Empresa |
-| :--- | :--- | :--- | :--- | :--- |
-| **Lector (*Viewer*)** | Veure el document, descarregar còpia i imprimir (si no s'ha bloquejat) | Modificar text, afegir comentaris o canviar el nom del document | **Risc mínim:** la informació original roman totalment inalterada | Clients, lliurament de catàlegs i pressupostos tancats |
-| **Comentador (*Commenter*)** | Veure el document i afegir notes o suggeriments al marge | Modificar el text directament sense l'aprovació del propietari | **Risc molt baix:** només pot proposar canvis que cal acceptar | Revisions prèvies de contractes i correccions de projectes |
-| **Editor (*Editor*)** | **Modificar tot el text, esborrar seccions senceres, canviar permisos i eliminar arxius** | No pot transferir la propietat final del document | **Risc MÀXIM:** un usuari maldestre o maliciós pot esborrar tota la feina | **Exclusivament membres de l'equip directe de treball** |
-| **Propietari (*Owner*)** | Control absolut del fitxer, canvi de propietat i esborrat permanent | Cap restricció | Control exclusiu de l'arxiu | El creador del document o compte d'administració |
-
----
-
-## 📌 Resum Didàctic i Idees Clau
-
-1. **El Concepte de Núvol (*Cloud Computing*):** Els documents no estan guardats físicament al disc dur local de la nostra màquina, sinó en grans centres de processament de dades (CPD) connectats a Internet. Això permet que un canvi fet des d'un mòbil a les 9:00 estiga disponible a l'ordinador de la feina a les 9:01.
-2. **Eliminació de Documents Duplicats:** En l'oficina antiga s'enviava un arxiu per correu com a `document_v1.docx`, el company responia amb `document_v1_revisat.docx` i el cap tornava a respondre amb `document_definitiu_OK.docx`, creant un caos de versions. Al núvol existeix **un únic arxiu mestre** sobre el qual tothom treballa alhora.
-3. **Gestió de Permisos de Compartició:**
-   - Mai s'ha de compartir un arxiu amb l'opció *"Qualsevol persona que tinga l'enllaç pot editar"*, ja que qualsevol desconegut a Internet podria esborrar el contingut.
-   - La regla professional és compartir sempre mitjançant **adreces de correu electrònic nominatives** de l'organització.
-4. **Historial de Versions:** Si un company esborra per error 5 pàgines d'un informe compartit, no cal patir: les plataformes com Google Docs o Word Online guarden un **historial complet de versions minut a minut** que permet viatjar enrere en el temps i restaurar qualsevol estat anterior amb un sol clic.
-5. **Conflictes de Sincronització:** Quan dos usuaris modifiquen un mateix fitxer mentre treballaven sense connexió a Internet (en un avió o sense Wi-Fi), en recuperar la connexió el gestor de núvol (OneDrive/Drive) no sap quina modificació és la correcta i genera automàticament una còpia addicional amb el nom de l'equip (*Fitxer - Còpia en conflicte*), exigint la revisió manual.
-
----
-
-## 📸 Guia Visual Pas a Pas d'Emmagatzematge i Col·laboració al Núvol
-
-### Pujar Fitxers i Gestió de Permisos de Compartició (Drive / OneDrive)
-![Pujar fitxers i permisos al núvol](../img/13_nuvol_drive_pujar_compartir.png)
-
----
-
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-
-### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
-
-#### Exercici 1: Dimensionament d'Emmagatzematge i Temps de Sincronització
-Una empresa de disseny i serveis d'oficina té contractat un compte d'emmagatzematge al núvol amb una quota total d'**1 Terabyte (1.000 GB)**. L'estat actual d'ocupació és el següent:
-- Carpeta de Factures i Documents PDF: $45\text{ GB}$.
-- Còpia de seguretat de bases de dades: $120\text{ GB}$.
-- Fotografies i vídeos corporatius de productes: $680\text{ GB}$.
-1. Calcula quant espai lliure restant li queda a l'empresa tant en Gigabytes com en percentatge respecte al límit d'1 TB.
-2. L'empresa necessita pujar un lot de noves imatges que ocupa **180 GB**. Hi cabrà a l'espai restant disponible? Quina acció d'estalvi o ampliació s'ha de planificar abans que el núvol es bloquege per excés de quota?
-3. Si la connexió a Internet de l'oficina té una velocitat de pujada (*Upload*) simètrica de **300 Mbps** ($37,5\text{ MB/s}$), quant de temps trigarà a sincronitzar-se completament aquest lot de 180 GB ($184.320\text{ MB}$) des del primer ordinador fins al núvol? Aplica:
-   $$\text{Temps (s)} = \frac{\text{Mida (MB)}}{\text{Velocitat (MB/s)}}$$
-   Expressa el resultat en segons, minuts i hores.
-
-#### Exercici 2: Matriu de Risc en la Compartició d'Arxius de Recursos Humans
-El departament de personal disposa d'un full de càlcul anomenat `Sous_i_Bonus_2026.xlsx` que conté els sous privats de tots els empleats de l'empresa.
-1. Analitza què passaria si l'administratiu genera un enllaç de compartició configurat com a:
-   `"Tothom qui tinga l'enllaç - Editor"`
-   Quins riscos de difusió massiva a Internet, filtració de dades personals i xantatge podrien produir-se?
-2. Com s'ha de configurar correctament l'accés a aquest arxiu segons les bones pràctiques corporatives:
-   - Quin tipus d'enllaç s'ha de seleccionar (Restringit només a persones afegides)?
-   - Quins permisos ha de tenir la cap de comptabilitat (Editor)?
-   - Quins permisos ha de tenir el director general (Lector o Comentador)?
-3. Si un treballador de l'empresa deixa de formar part de la plantilla, quina acció immediata de revocació d'accés s'ha d'executar al panell de control del núvol?
-
-#### Exercici 3: Diagnòstic de Fallades de Sincronització i Duplicats en Conflicte
-Un tècnic d'oficina obre la seua carpeta local de OneDrive a l'Explorador d'arxius de Windows i observa dos problemes:
-1. Al costat del nom de tres fitxers apareix una **icona de núvol blau**, mentre que al costat d'altres apareix un **cercle verd amb un xec blanc** i en un altre apareix una **creu roja**. Què significa cadascuna d'aquestes tres icones d'estat de sincronització?
-2. Dins de la carpeta de projectes apareixen de sobte dos arxius: `Pressupost_Oficina.docx` i `Pressupost_Oficina-PC-MARTA-conflicte.docx`. Explica detalladament com s'ha originat aquest duplicat i com han de coordinar-se els dos usuaris per fusionar els canvis i esborrar la còpia redundant.
-
----
-
-### Bloc B: Reptes Pràctics de Laboratori i Taller
-
-#### Repte 1: Creació d'Estructura de Carpetes al Núvol i Gestió de Permisos
-- **Objectiu:** Crear un espai compartit a Google Drive o Microsoft OneDrive, assignar permisos diferenciats i verificar que les restriccions funcionen.
-- **Material de laboratori:** Dos ordinadors de taller amb comptes de correu corporatiu d'aula (Alumne A i Alumne B).
-- **Passos d'execució:**
-  1. L'Alumne A accedeix al seu espai de **Google Drive** o **OneDrive** i crea una carpeta principal anomenada `Projecte_Taller_OAD`.
-  2. Dins de la carpeta, crea dues subcarpetes:
-     - `01_Documentacio_Oficial`
-     - `02_Borrador_i_Treball`
-  3. Fes clic dret sobre la carpeta `01_Documentacio_Oficial` > **Comparteix**:
-     - Afegeix l'adreça de correu de l'Alumne B.
-     - Assigna-li exclusivament el rol de **Lector**.
-     - Desactiva l'opció perquè els lectors puguen descarregar o imprimir si es desitja màxima protecció.
-  4. Fes clic dret sobre la carpeta `02_Borrador_i_Treball` > **Comparteix**:
-     - Afegeix l'adreça de correu de l'Alumne B amb el rol d'**Editor**.
-  5. L'Alumne B accedeix des del seu ordinador a la secció *Compartit amb mi*:
-     - Intenta crear un document nou a la carpeta `01_Documentacio_Oficial`: comprova que el sistema li ho impedeix per falta de permisos d'escriptura.
-     - Intenta crear un document a `02_Borrador_i_Treball`: comprova que té accés complet per crear i editar.
-
-#### Repte 2: Coedició d'un Document d'Acta de Reunió en Temps Real
-- **Objectiu:** Experimentar el treball simultani de dos o més usuaris sobre el mateix document en línia sense bloquejos ni pèrdua d'informació.
-- **Material de laboratori:** Document compartit de Google Docs o Word Online, dos alumnes treballant en equips diferents.
-- **Passos d'execució:**
-  1. L'Alumne A crea un document de text en línia anomenat `Acta_Reunio_Tecnica` i el comparteix com a Editor amb l'Alumne B.
-  2. Tots dos alumnes obren el document simultàniament des dels seus navegadors web:
-     - Observeu com a la cantonada superior dreta apareix la icona de perfil del company connectat en directe.
-  3. L'Alumne A comença a redactar a la part superior l'apartat *1. Assistents i Ordre del dia*. L'Alumne B comença a redactar a la part inferior l'apartat *2. Acords adoptats*.
-  4. Observeu com a la pantalla de cadascú es veu el cursor de color del company movent-se i escrivint caràcter a caràcter en temps real.
-  5. L'Alumne B selecciona una frase escrita per l'Alumne A, fa clic al botó d'afegir comentari i escriu:
-     `"@nom_de_l_alumne_A Si us plau, revisa si cal incloure el pressupost del proveïdor"`.
-  6. L'Alumne A rep la notificació al document, respon al comentari i el marca com a *Resolt*.
-
-#### Repte 3: Restauració d'Emergència d'una Versió Anterior (*Version History*)
-- **Objectiu:** Recuperar informació eliminada accidentalment mitjançant l'eina d'historial de canvis del núvol.
-- **Material de laboratori:** Document de text utilitzat al Repte 2.
-- **Passos d'execució:**
-  1. Sobre el document de l'acta de reunió que ja conté text, un dels alumnes selecciona a propòsit 3 paràgrafs importants i els esborra prement la tecla `Supr`, i a continuació escriu: "Text de prova accidental".
-  2. Espereu 10 segons que el document desitge els canvis al núvol automàticament.
-  3. Aneu al menú **Fitxer > Historial de versions > Mostra l'historial de versions** (o fes clic a l'enllaç superior "Última modificació fa uns segons").
-  4. S'obrirà un panell lateral dret que mostra la llista cronològica de totes les versions desades del document amb el nom de qui va fer cada canvi i l'hora exacta:
-     - Selecciona la versió anterior al moment de l'esborrat.
-     - Comprova a la pantalla com reapareixen els 3 paràgrafs eliminats assenyalats en verd o lila.
-  5. Fes clic al botó superior **Restaura aquesta versió**.
-  6. Confirma la restauració i verifica que el document torna a estar intacte sense haver perdut cap dada.
-
----
-
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
-
-#### Llista de Verificació de Treball al Núvol
-- [ ] S'ha creat una estructura de carpetes ordenada al núvol sense barrejar fitxers solts a l'arrel.
-- [ ] S'han assignat els permisos d'accés (Lector, Comentador, Editor) segons el principi del mínim privilegi.
-- [ ] No s'han creat enllaços públics oberts per a documents d'empresa confidencials.
-- [ ] S'ha participat activament en la coautoria en temps real sense sobreescriure el text dels companys.
-- [ ] S'han utilitzat els comentaris amb mencions `@` per a comunicar-se dins del document de treball.
-- [ ] Es comprèn el significat de les icones de sincronització local (al núvol, descarregat, en sincronització).
-- [ ] S'ha utilitzat amb èxit l'historial de versions per recuperar informació danyada o esborrada.
-
-#### Rúbrica d'Avaluació Tècnica (FP Bàsica OAD - UT07)
-
-| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Plataformes i Espai al Núvol** | Gestiona quotes d'emmagatzematge, calcula temps de transferència i domina les eines de Drive/OneDrive/Nextcloud. | Utilitza el servei de núvol amb soltesa i organitza carpetes i fitxers correctament. | Guarda i descarrega arxius del núvol seguint les instruccions del taller. | No sap accedir al seu compte de núvol o barreja arxius locals amb arxius en xarxa de manera desordenada. |
-| **Gestió de Permisos (Lector / Editor)** | Assigna rols de Lector, Comentador i Editor de manera professional, evitant enllaços públics perillosos. | Configura permisos per adreça de correu i distingeix la diferència entre veure i editar. | Assigna permisos de lectura o edició amb suport de la llista de verificació. | Dona permisos d'Editor a tothom per defecte o comparteix enllaços oberts amb dades privades. |
-| **Treball Col·laboratiu en Temps Real** | Coedita en viu amb coordinació impecable, respecta les àrees de treball dels companys i empra comentaris amb mencions. | Participa en l'edició simultània de documents i aporta contingut sense interferir en la feina aliena. | Escriu en un document compartit seguint les indicacions de l'equip. | Esborra el text dels companys sense mirar, provoca conflictes o no participa en la coautoria. |
-| **Historial de Versions i Resolució de Conflictes** | Navega per l'historial de versions, restaura estats anteriors amb rapidesa i resol còpies en conflicte manualment. | Utilitza l'historial de versions per recuperar dades eliminades satisfactòriament. | Localitza l'opció d'historial de versions guiat pel professor. | Esborra documents i no sap com recuperar-los, donant la feina per perduda. |
+<div class="aules-delivery-card" style="border:2px dashed #3b82f6; border-radius:8px; padding:16px; background:#eff6ff; margin:24px 0;">
+  <h3 style="margin-top:0; color:#1e40af;">📦 Lliurament del Quadern d'Aules (UD07)</h3>
+  <p>Genera el document oficial de seguiment de la Unitat Didàctica 7 amb les teues respostes validades.</p>
+  <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+    <input type="text" class="aules-student-name" placeholder="Cognoms, Nom de l'Alumne/a" style="padding:8px 12px; border:1px solid #94a3b8; border-radius:4px; flex-grow:1; min-width:240px;">
+    <button class="btn-generate-aules-pdf" data-unit="UD07" data-module="OAD" style="padding:8px 16px; background:#1e40af; color:#fff; border:none; border-radius:4px; font-weight:600; cursor:pointer;">📄 Descarregar PDF per a Aules</button>
+  </div>
+</div>
