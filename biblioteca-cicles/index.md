@@ -8,7 +8,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 ## 📁 FP Grau Bàsic (Informàtica d'Oficina)
 
-| Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
+| Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
 | **FP Grau Bàsic (1r Curs)** | 🔬 Ciències Aplicades I | `9 UD` | `50 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-ciencies-aplicades/) |
 | **FP Grau Bàsic (1r Curs)** | 🛠️ Muntatge i Manteniment de Sistemes i Components (MMSCI) | `9 UD` | `58 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-mmsci-muntatge-sistemes/) |
@@ -19,7 +19,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 ## 📁 FP Grau Mitjà — SMX (Sistemes Microinformàtics i Xarxes)
 
-| Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
+| Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
 | **FP Grau Mitjà** | 📊 Aplicacions Ofimàtiques | `13 UD` | `44 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/1smx-aof-aplicacions-ofimatiques/) |
 | **FP Grau Mitjà** | 🔧 Muntatge i Manteniment d'Equips | `9 UD` | `76 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/1smx-mme-muntatge-manteniment/) |
@@ -33,7 +33,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 ## 📁 FP Grau Superior — DAW i DAM (Desenvolupament d'Aplicacions)
 
-| Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
+| Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
 | **FP Grau Superior** | 🗄️ Bases de Dades (SQL i Model E/R) | `9 UD` | `63 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-bbdd-bases-dades/) |
 | **FP Grau Superior** | ⚙️ Entorns de Desenvolupament | `20 UD` | `280 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-ed-entorns-desenvolupament/) |
@@ -49,7 +49,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 ## 📁 FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)
 
-| Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
+| Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
 | **FP Grau Superior** | 📡 Planificació i Administració de Xarxes | `12 UD` | `29 pàgs` | [**📘 Entrar al Curs →**](./04_ASIX/1asix-pax-planificacio-xarxes/) |
 | **FP Grau Superior** | 🗄️ Administració de Sistemes Gestors de Bases de Dades | `6 UD` | `24 pàgs` | [**📘 Entrar al Curs →**](./04_ASIX/2asix-asgbd-administracio-sgbd/) |
@@ -58,7 +58,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 ## 📁 Cursos d'Especialització (IA & Big Data / Ciberseguretat)
 
-| Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
+| Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
 | **Cursos d'Especialització (IA & Big Data / Ciberseguretat)** | 🕵️ Hacking Ètic i Auditoria de Seguretat | `14 UD` | `42 pàgs` | [**📘 Entrar al Curs →**](./05_Especialitzacio/ceti-he-hacking-etic/) |
 | **Cursos d'Especialització (IA & Big Data / Ciberseguretat)** | 🐍 Programació d'Intel·ligència Artificial amb Python | `4 UD` | `17 pàgs` | [**📘 Entrar al Curs →**](./05_Especialitzacio/iabd-pia-programacio-ia-python/) |
@@ -66,7 +66,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 ## 📁 Secundària (ESO) i Batxillerat
 
-| Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
+| Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
 | **Secundària (ESO) i Batxillerat** | 💻 Programació, Xarxes i Sistemes Informàtics I | `3 UD` | `14 pàgs` | [**📘 Entrar al Curs →**](./06_ESO_BAT/1bat-programacio-xarxes-sistemes-1/) |
 | **Secundària (ESO) i Batxillerat** | 📱 Taller de Relacions Digitals Responsables | `5 UD` | `13 pàgs` | [**📘 Entrar al Curs →**](./06_ESO_BAT/1eso-relacions-digitals/) |

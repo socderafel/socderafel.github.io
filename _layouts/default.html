@@ -288,17 +288,48 @@
       flex-shrink: 0;
     }
 
-    .brand-icon-box {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+    .brand-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
+      display: block;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .md-header-brand:hover .brand-avatar {
+      transform: scale(1.06);
+      border-color: #38bdf8;
+    }
+
+    .hero-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .footer-author-box {
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #38bdf8;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.15);
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .footer-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      flex-shrink: 0;
     }
 
     .brand-title-wrap {
@@ -2284,13 +2315,8 @@
 <body>
     <header class="md-header">
     <div class="md-header-inner">
-      <a href="{{ '/' | relative_url }}" class="md-header-brand">
-        <div class="brand-icon-box">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
-            <polyline points="10 2 10 10 13 7 16 10 16 2"></polyline>
-          </svg>
-        </div>
+      <a href="{{ '/' | relative_url }}" class="md-header-brand" title="Portal Docent de Pepe Cuenca">
+        <img src="{{ '/assets/img/pepe-cuenca.png' | relative_url }}" alt="Pepe Cuenca" class="brand-avatar">
         <div class="brand-title-wrap">
           <span class="brand-name">Pepe Cuenca</span>
           <span class="brand-sub">Portal Docent FP</span>
@@ -2304,7 +2330,7 @@
         <!-- Desplegable Cursos Actius 2026/27 -->
         <div class="header-nav-item has-dropdown">
           <a href="javascript:void(0)" class="nav-dropdown-trigger nav-link">
-            <span>Assignatures Actives</span> <span class="nav-arrow">▾</span>
+            <span>Mòduls Actius</span> <span class="nav-arrow">▾</span>
           </a>
           <div class="header-dropdown-menu">
             <div class="dropdown-header">Curs Acadèmic 2026/2027</div>

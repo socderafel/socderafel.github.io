@@ -10,8 +10,9 @@ is_landing: true
 <section class="landing-hero">
   <div class="landing-container">
     <div class="hero-badge-wrap">
+      <img src="./assets/img/pepe-cuenca.png" alt="Pepe Cuenca" class="hero-avatar">
       <span class="hero-badge-dot"></span>
-      <span>Generalitat Valenciana · Conselleria d'Educació · Curs Acadèmic 2026 / 2027</span>
+      <span>Pepe Cuenca · Generalitat Valenciana · Curs Acadèmic 2026 / 2027</span>
     </div>
 
     <h1 class="hero-title">
@@ -25,7 +26,7 @@ is_landing: true
 
     <div class="hero-actions">
       <a href="#cursos-actius" class="btn-hero-primary">
-        <span>⚡ Explorar Assignatures del Curs</span>
+        <span>⚡ Explorar Mòduls en Curs</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
       </a>
       <a href="#biblioteca" class="btn-hero-secondary">
@@ -37,7 +38,7 @@ is_landing: true
     <div class="hero-stats-grid">
       <div class="hero-stat-card">
         <div class="hero-stat-num">3</div>
-        <div class="hero-stat-label">Assignatures Actives</div>
+        <div class="hero-stat-label">Mòduls Actius</div>
         <div class="hero-stat-desc">Grups impartits el curs 2026/2027</div>
       </div>
       <div class="hero-stat-card">
@@ -66,7 +67,7 @@ is_landing: true
   <div class="landing-container">
     <div class="landing-section-header">
       <span class="landing-section-kicker">CURS ACADÈMIC 2026 / 2027</span>
-      <h2 class="landing-section-title">Assignatures i Mòduls Impartits Enguany</h2>
+      <h2 class="landing-section-title">Mòduls Impartits Enguany</h2>
       <p class="landing-section-desc">
         Accés directe als apunts oficials, laboratoris tècnics, activitats avaluables i criteris d'entrega per a l'alumnat matriculat aquest curs.
       </p>
@@ -438,7 +439,13 @@ is_landing: true
   <div class="landing-container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-col-title">Portal Docent de Pepe Cuenca</div>
+        <div class="footer-author-box">
+          <img src="./assets/img/pepe-cuenca.png" alt="Pepe Cuenca" class="footer-avatar">
+          <div>
+            <div class="footer-col-title" style="margin-bottom: 2px;">Pepe Cuenca</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Professor d'Ensenyament Secundari i FP</div>
+          </div>
+        </div>
         <p>
           Recursos didàctics, apunts tècnics i laboratoris pràctics d'Informàtica i Ciències Aplicades per a la Formació Professional de la Comunitat Valenciana.
         </p>
@@ -448,7 +455,7 @@ is_landing: true
       </div>
 
       <div class="footer-col">
-        <div class="footer-col-title">Assignatures Actives</div>
+        <div class="footer-col-title">Mòduls Actius</div>
         <ul class="footer-links">
           <li><a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/">Ciències Aplicades 1</a></li>
           <li><a href="./programacio/">Programació en Java</a></li>

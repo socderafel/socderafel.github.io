@@ -7,7 +7,7 @@ badge: "2n FPB · Grau Bàsic · IMX"
 
 # 🔌 Instal·lació i Manteniment de Xarxes per a Transmissió de Dades
 
-Benvingut/da al portal del mòdul d'**Instal·lació i Manteniment de Xarxes per a Transmissió de Dades**, assignatura clau de **2n curs de Formació Professional Bàsica (Grau Bàsic)** en Informàtica i Comunicacions / Informàtica d'Oficina.
+Benvingut/da al portal del mòdul d'**Instal·lació i Manteniment de Xarxes per a Transmissió de Dades**, mòdul clau de **2n curs de Formació Professional Bàsica (Grau Bàsic)** en Informàtica i Comunicacions / Informàtica d'Oficina.
 
 Aquest curs està estructurat en **9 unitats didàctiques progressives**, enriquides amb el temari oficial i el quadern de fitxes pràctiques de taller adaptades de *Networking Essentials* (RA1 i RA5 de Flexibilització Curricular), comptant amb **zones d'entrenament interactives amb autocorrecció**, **progress trackers** i **comprovants de lliurament per a Aules**.
 
