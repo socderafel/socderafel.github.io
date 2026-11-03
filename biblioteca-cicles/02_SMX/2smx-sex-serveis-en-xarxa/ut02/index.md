@@ -1,284 +1,135 @@
 ---
 layout: default
-title: "Serveis en Xarxa — UT02 Servei de Resolució de Noms (DNS)"
-course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT02"
+title: "UT 02: Resolució de Noms de Domini (DNS)"
+parent: "2n SMX · Serveis en Xarxa"
+has_children: true
+nav_order: 2
 ---
 
-# UT02 — Servei de Resolució de Noms de Domini (DNS)
+# 🌐 Unitat Temàtica 02: Resolució de Noms de Domini (DNS)
 
-El **Sistema de Noms de Domini (DNS - *Domain Name System*)** és el servei d'infraestructura més crític d'Internet. S'encarrega de traduir noms fàcilment memoritzables pels humans com `www.iesrafel.internal` a adreces IP numèriques que els routers i encaminadors necessiten per a transportar els paquets de dades.
-
----
-
-## 📌 1. Estructura Jeràrquica de l'Espai de Noms
-
-El DNS funciona com una base de dades distribuïda i jeràrquica en forma d'arbre invertit:
-
-<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
-  <div style="text-align: center; margin-bottom: 15px;">
-    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
-    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">L'Arbre Jeràrquic de Noms de Domini (DNS)</h3>
-    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Estructura piramidal i delegació autoritativa des de l'arrel mundial fins als equips individuals</p>
+<div class="interactive-progress-tracker" data-module="SEX" data-unit="2" data-topic="0">
+  <div class="progress-bar-container">
+    <div class="progress-fill"></div>
   </div>
-  <svg viewBox="0 0 860 270" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
-    <defs>
-      <linearGradient id="rootGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0284c7" stop-opacity="0.4"/>
-        <stop offset="100%" stop-color="#0369a1" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="tldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.4"/>
-        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="sldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
-        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
-      </linearGradient>
-    </defs>
-
-    <!-- Nivell 0: Arrel "." -->
-    <rect x="340" y="20" width="180" height="50" rx="8" fill="url(#rootGrad)" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="430" y="42" fill="#38bdf8" font-size="13" font-weight="bold" text-anchor="middle">🌐 ARREL (ROOT ".")</text>
-    <text x="430" y="58" fill="#94a3b8" font-size="10" text-anchor="middle">13 Servidors Arrel (A-M)</text>
-
-    <!-- Fletxes Nivell 1 -->
-    <line x1="390" y1="70" x2="160" y2="105" stroke="#475569" stroke-width="1.5"/>
-    <line x1="430" y1="70" x2="430" y2="105" stroke="#475569" stroke-width="1.5"/>
-    <line x1="470" y1="70" x2="700" y2="105" stroke="#475569" stroke-width="1.5"/>
-
-    <!-- Nivell 1: TLDs -->
-    <rect x="80" y="105" width="160" height="50" rx="8" fill="url(#tldGrad)" stroke="#c084fc" stroke-width="1.5"/>
-    <text x="160" y="127" fill="#c084fc" font-size="13" font-weight="bold" text-anchor="middle">.es / .cat</text>
-    <text x="160" y="143" fill="#94a3b8" font-size="10" text-anchor="middle">ccTLD Geogràfic</text>
-
-    <rect x="350" y="105" width="160" height="50" rx="8" fill="url(#tldGrad)" stroke="#c084fc" stroke-width="1.5"/>
-    <text x="430" y="127" fill="#c084fc" font-size="13" font-weight="bold" text-anchor="middle">.com / .net</text>
-    <text x="430" y="143" fill="#94a3b8" font-size="10" text-anchor="middle">gTLD Genèric</text>
-
-    <rect x="620" y="105" width="160" height="50" rx="8" fill="url(#tldGrad)" stroke="#c084fc" stroke-width="1.5"/>
-    <text x="700" y="127" fill="#c084fc" font-size="13" font-weight="bold" text-anchor="middle">.arpa</text>
-    <text x="700" y="143" fill="#94a3b8" font-size="10" text-anchor="middle">Zona Inversa (in-addr)</text>
-
-    <!-- Fletxes Nivell 2 -->
-    <line x1="160" y1="155" x2="160" y2="185" stroke="#475569" stroke-width="1.5"/>
-    <line x1="430" y1="155" x2="430" y2="185" stroke="#475569" stroke-width="1.5"/>
-    <line x1="700" y1="155" x2="700" y2="185" stroke="#475569" stroke-width="1.5"/>
-
-    <!-- Nivell 2: Segon Nivell i Hosts -->
-    <rect x="60" y="185" width="200" height="65" rx="8" fill="url(#sldGrad)" stroke="#34d399" stroke-width="1.5"/>
-    <text x="160" y="207" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">iesrafel.es</text>
-    <text x="160" y="224" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Hosts: www, correu, ns1</text>
-    <text x="160" y="238" fill="#94a3b8" font-size="9" text-anchor="middle">Zona Autoritativa Directa</text>
-
-    <rect x="330" y="185" width="200" height="65" rx="8" fill="url(#sldGrad)" stroke="#34d399" stroke-width="1.5"/>
-    <text x="430" y="207" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">empresa.com</text>
-    <text x="430" y="224" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Hosts: botiga, api, vpn</text>
-    <text x="430" y="238" fill="#94a3b8" font-size="9" text-anchor="middle">Registrat a registrador ICANN</text>
-
-    <rect x="600" y="185" width="200" height="65" rx="8" fill="url(#sldGrad)" stroke="#34d399" stroke-width="1.5"/>
-    <text x="700" y="207" fill="#34d399" font-size="12" font-weight="bold" text-anchor="middle">1.168.192.in-addr.arpa</text>
-    <text x="700" y="224" fill="#cbd5e1" font-size="9.5" text-anchor="middle">Punters PTR: IP -&gt; Nom</text>
-    <text x="700" y="238" fill="#94a3b8" font-size="9" text-anchor="middle">Resolució inversa de xarxa</text>
-  </svg>
+  <div class="progress-stats">
+    <span class="progress-text">Progrés global de la unitat: 0%</span>
+    <span class="points-badge">0 / 475 punts</span>
+  </div>
 </div>
 
-- **FQDN (*Fully Qualified Domain Name*):** Nom de domini complet acabat en punt (ex.: `servidor1.iesrafel.es.`).
-- **Resolució Recursiva:** El client fa la pregunta al seu servidor DNS local (`192.168.1.1`) i aquest s'encarrega de fer totes les consultes necessàries fins a retornar la IP final al client.
-- **Resolució Iterativa:** El servidor DNS consulta seqüencialment l'Arrel $\to$ el TLD $\to$ el servidor autoritatiu del domini.
+Benvingut/da a la **Unitat Temàtica 02** de **Serveis en Xarxa (SEX)**. En aquesta unitat aprofundirem en el funcionament, arquitectura, desplegament i manteniment del servei de resolució de noms de domini (**DNS**), implementant zones directes i inverses amb el programari lliure **Bind9** a Linux i analitzant la seua integració a Windows Server 2022.
 
 ---
 
-## 📌 2. Tipologia de Registres de Recursos (Resource Records - RR)
+## 🎯 Resultats d'Aprenentatge i Criteris d'Avaluació (RA2)
 
-Dins d'un fitxer de zona DNS, cada entrada s'anomena registre de recurs (RR):
+D'acord amb el currículum oficial (Reial Decret 1691/2007 i Decret 81/2010 CV), aquesta unitat desenvolupa el **Resultat d'Aprenentatge 2 (RA2)**: *Instal·la serveis de resolució de noms (DNS), descrivint l'estructura jeràrquica de l'espai de noms i verificant el funcionament de les consultes directes i inverses*:
 
-| Tipus de Registre | Nom Complet | Funció Tècnica | Exemple de Sintaxi |
-| :---: | :--- | :--- | :--- |
-| **SOA** | *Start of Authority* | Primer registre de la zona. Defineix paràmetres de control i número de sèrie. | `@ IN SOA ns1.iesrafel.es. admin.iesrafel.es. (...)` |
-| **NS** | *Name Server* | Identifica els servidors DNS autoritatius per a la zona. | `@ IN NS ns1.iesrafel.es.` |
-| **A** | *IPv4 Address* | Assigna un nom de host a una adreça IPv4 (32 bits). | `servidor IN A 192.168.1.10` |
-| **AAAA** | *IPv6 Address* | Assigna un nom de host a una adreça IPv6 (128 bits). | `servidor IN AAAA 2001:db8::10` |
-| **CNAME** | *Canonical Name* | Àlies o sobrenom que apunta a un altre nom canònic (registre A). | `www IN CNAME servidor.iesrafel.es.` |
-| **MX** | *Mail Exchanger* | Especifica el servidor de correu del domini amb prioritat numèrica. | `@ IN MX 10 correu.iesrafel.es.` |
-| **PTR** | *Pointer* | Resolució inversa (converteix IP a FQDN) en la zona `in-addr.arpa`. | `10 IN PTR servidor.iesrafel.es.` |
+- **a)** S'ha descrit l'arbre jeràrquic d'Internet (Root, TLD, dominis de segon nivell, FQDN).
+- **b)** S'ha distingit entre consultes recursives i iteratives i analitzat l'ús dels ports UDP/TCP 53.
+- **c)** S'ha instal·lat i configurat el servidor Bind9 creant zones directes amb registres SOA i NS.
+- **d)** S'han definit registres A, AAAA, àlies CNAME, registres de correu MX amb prioritat i registres TXT (SPF).
+- **e)** S'han creat zones inverses utilitzant el domini especial `.in-addr.arpa` i registres de punter PTR.
+- **f)** S'ha configurat un servidor DNS secundari (esclau) i autoritzat transferències de zona AXFR.
+- **g)** S'han aplicat eines avançades de diagnosi (`dig`, `nslookup`, `host`) i buidat de memòria cau local.
 
 ---
 
-## 📌 3. Desplegament de Bind9 en Ubuntu Server
+## 🗺️ Mapa de Continguts de la Unitat
 
-**Bind9** (*Berkeley Internet Name Domain*) és el servidor DNS de codi obert més utilitzat arreu del món:
-
-```bash
-# 1. Instal·lar Bind9 i eines de diagnòstic DNS
-sudo apt update && sudo apt install bind9 bind9utils dnsutils -y
-```
-
-### A) Configuració dels Reenviadors (`/etc/bind/named.conf.options`):
-Si el nostre servidor no coneix un domini públic extern (com `google.com`), reenvia la consulta als servidors DNS públics:
-```text
-options {
-    directory "/var/cache/bind";
-    forwarders {
-        1.1.1.1;
-        8.8.8.8;
-    };
-    dnssec-validation auto;
-    listen-on { any; };
-    allow-query { any; };
-};
-```
-
-### B) Declaració de Zones a `/etc/bind/named.conf.local`:
-```text
-// Zona directa
-zone "iesrafel.internal" {
-    type master;
-    file "/etc/bind/db.iesrafel.internal";
-};
-
-// Zona inversa (per a la xarxa 192.168.1.0/24)
-zone "1.168.192.in-addr.arpa" {
-    type master;
-    file "/etc/bind/db.192.168.1";
-};
-```
-
-### C) Creació del Fitxer de Zona Directa (`/etc/bind/db.iesrafel.internal`):
-```text
-$TTL    604800
-@       IN      SOA     ns1.iesrafel.internal. admin.iesrafel.internal. (
-                              2026101301 ; Serial (YYYYMMDDNN)
-                                  604800 ; Refresh (1 setmana)
-                                   86400 ; Retry (1 dia)
-                                 2419200 ; Expire (4 setmanes)
-                                  604800 ) ; Negative Cache TTL
-; Servidors de Noms
-@       IN      NS      ns1.iesrafel.internal.
-
-; Registres d'Amfitrions (Hosts)
-ns1     IN      A       192.168.1.10
-servidor IN     A       192.168.1.10
-correu  IN      A       192.168.1.20
-
-; Àlies (CNAME)
-www     IN      CNAME   servidor
-ftp     IN      CNAME   servidor
-
-; Servidor de Correu
-@       IN      MX      10 correu.iesrafel.internal.
-```
-
-### D) Creació del Fitxer de Zona Inversa (`/etc/bind/db.192.168.1`):
-```text
-$TTL    604800
-@       IN      SOA     ns1.iesrafel.internal. admin.iesrafel.internal. (
-                              2026101301 ; Serial
-                                  604800 ; Refresh
-                                   86400 ; Retry
-                                 2419200 ; Expire
-                                  604800 ) ; Negative Cache TTL
-; Servidors de Noms
-@       IN      NS      ns1.iesrafel.internal.
-
-; Punter Invers (PTR): Últim octet de la IP -> FQDN
-10      IN      PTR     servidor.iesrafel.internal.
-20      IN      PTR     correu.iesrafel.internal.
-```
+| Subtema | Títol | Descripció i Objectius Clau | Punts XP |
+| :---: | :--- | :--- | :---: |
+| **2.1** | [L'Espai de Noms Jeràrquic d'Internet i el Protocol DNS](ut0201.md) | Arbre de noms, TLDs gTLD/ccTLD, tipus de servidors (Mestre, Esclau, Memòria cau), consultes recursives vs iteratives i ports UDP/TCP 53. | **75 XP** |
+| **2.2** | [Desplegament de Bind9 i Zones Directes a Linux](ut0202.md) | Fitxers de Bind9 (`named.conf.*`), reenviadors forwarders, registre SOA (Serial, Refresh, TTL), importància del punt final i `named-checkzone`. | **75 XP** |
+| **2.3** | [Tipus de Registres DNS Fonamentals](ut0203.md) | Registres A/AAAA, gestió d'àlies CNAME, prioritat de servidors de correu MX i cadenes de seguretat antispam TXT (SPF). | **75 XP** |
+| **2.4** | [Zones de Resolució Inversa i Servidors Secundaris](ut0204.md) | Domini invers `.in-addr.arpa`, registres PTR, servidors esclaus (`type slave`), notificacions DNS NOTIFY i transferències AXFR. | **75 XP** |
+| **2.5** | [DNS a Windows Server 2022 i Diagnosi](ut0205.md) | Zones integrades a Active Directory, resolució multimestre, bateria de diagnosi amb `dig`, `nslookup`, `host` i `ipconfig /flushdns`. | **75 XP** |
 
 ---
 
-## 📌 4. Verificació de Sintaxi i Eines de Diagnòstic
+## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
 
-Abans de reiniciar el servei Bind9 cal comprovar que els fitxers no contenen cap error tipogràfic:
+<div class="interactive-challenge-card" data-points="25">
+  <div class="challenge-header">
+    <span class="challenge-badge">Síntesi 1 · Jerarquia DNS</span>
+    <span class="points-val">+25 XP</span>
+  </div>
+  <p class="challenge-question">A quina categoria de dominis de primer nivell pertanyen les extensions territorials d'estat com .es, .fr o .de?</p>
+  <div class="challenge-options">
+    <label><input type="radio" name="s1" value="0"> gTLD (Genèrics)</label>
+    <label><input type="radio" name="s1" value="1" data-correct="true"> ccTLD (Country Code Top Level Domain)</label>
+    <label><input type="radio" name="s2" value="2"> FQDN arrel</label>
+    <label><input type="radio" name="s3" value="3"> TLD d'infraestructura</label>
+  </div>
+  <button class="btn-check">Comprova</button>
+  <div class="feedback-msg"></div>
+</div>
 
-```bash
-# Validar el fitxer de configuració general
-sudo named-checkconf
+<div class="interactive-challenge-card" data-points="25">
+  <div class="challenge-header">
+    <span class="challenge-badge">Síntesi 2 · Mestre i Esclau</span>
+    <span class="points-val">+25 XP</span>
+  </div>
+  <p class="challenge-question">Com s'anomena el procés mitjançant el qual un servidor DNS esclau descarrega una còpia completa de la base de dades d'una zona des del servidor mestre?</p>
+  <div class="challenge-options">
+    <label><input type="radio" name="s2" value="0"> Descàrrega HTTP GET</label>
+    <label><input type="radio" name="s2" value="1" data-correct="true"> Transferència de zona (Zone Transfer - AXFR)</label>
+    <label><input type="radio" name="s2" value="2"> Sincronització DHCP DORA</label>
+    <label><input type="radio" name="s2" value="3"> Túnel SSH</label>
+  </div>
+  <button class="btn-check">Comprova</button>
+  <div class="feedback-msg"></div>
+</div>
 
-# Validar la zona directa
-sudo named-checkzone iesrafel.internal /etc/bind/db.iesrafel.internal
+<div class="interactive-challenge-card" data-points="25">
+  <div class="challenge-header">
+    <span class="challenge-badge">Síntesi 3 · Registres</span>
+    <span class="points-val">+25 XP</span>
+  </div>
+  <p class="challenge-question">Si volem que l'adreça 'ftp.iesrafael.local' apunte automàticament a la mateixa màquina que 'server.iesrafael.local' sense haver de reescriure l'adreça IP, quin registre hem de crear?</p>
+  <div class="challenge-options">
+    <label><input type="radio" name="s3" value="0"> Un registre MX</label>
+    <label><input type="radio" name="s3" value="1" data-correct="true"> Un registre CNAME (Canonical Name)</label>
+    <label><input type="radio" name="s3" value="2"> Un registre PTR</label>
+    <label><input type="radio" name="s3" value="3"> Un registre SOA</label>
+  </div>
+  <button class="btn-check">Comprova</button>
+  <div class="feedback-msg"></div>
+</div>
 
-# Validar la zona inversa
-sudo named-checkzone 1.168.192.in-addr.arpa /etc/bind/db.192.168.1
-
-# Si tot torna 'OK', reiniciar el servei
-sudo systemctl restart bind9
-```
-
-### Comprovació amb `dig` i `nslookup`:
-```bash
-# Prova de resolució directa contra el nostre servidor local
-dig @127.0.0.1 www.iesrafel.internal +short
-# Retorn esperat:
-# servidor.iesrafel.internal.
-# 192.168.1.10
-
-# Prova de resolució inversa
-dig @127.0.0.1 -x 192.168.1.10 +short
-# Retorn esperat:
-# servidor.iesrafel.internal.
-```
+<div class="interactive-challenge-card" data-points="25">
+  <div class="challenge-header">
+    <span class="challenge-badge">Síntesi 4 · Resolució Inversa</span>
+    <span class="points-val">+25 XP</span>
+  </div>
+  <p class="challenge-question">Quin tipus de registre DNS és l'únic que s'utilitza dins d'una zona inversa per traduir una adreça IP al seu nom d'amfitrió FQDN?</p>
+  <div class="challenge-options">
+    <label><input type="radio" name="s4" value="0"> Registre A</label>
+    <label><input type="radio" name="s4" value="1" data-correct="true"> Registre PTR (Pointer)</label>
+    <label><input type="radio" name="s4" value="2"> Registre AAAA</label>
+    <label><input type="radio" name="s4" value="3"> Registre SRV</label>
+  </div>
+  <button class="btn-check">Comprova</button>
+  <div class="feedback-msg"></div>
+</div>
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-### 📋 Bloc A: Fonaments Tècnics de Registres i Protocols DNS
-1. **La Importància Crítica del Serial Number al SOA:**
-   - En una infraestructura DNS amb un servidor mestre i dos servidors esclaus (secundaris), l'administrador afegeix un registre A per a una nova impressora al fitxer de zona, però oblida incrementar el camp `Serial` al registre SOA.
-   - Què passarà quan els servidors esclaus intenten sincronitzar la zona mitjançant transferència AXFR? S'actualitzarà la nova IP als esclaus?
-   - Quin format estàndard recomana la IETF per a assignar números de sèrie (p. ex., `YYYYMMDDNN`)?
-2. **Resolució Inversa i el Domini `.in-addr.arpa`:**
-   - Per què en les consultes inverses és imprescindible invertir l'ordre dels octets de l'adreça IP (de `192.168.1.50` a `50.1.168.192.in-addr.arpa`)? Com es relaciona aquesta inversió amb la lectura jeràrquica d'esquerra a dreta en l'arbre de noms?
-3. **El Flag Autoritatiu (`aa`):**
-   - Quan s'executa una consulta amb `dig`, què significa la presència de la bandera `aa` (*Authoritative Answer*) a la línia de capçalera `flags: qr aa rd ra`?
-
-### 💻 Bloc B: Reptes Pràctics de Laboratori i Configuració
-
-#### Repte 1: Creació d'una Zona Autoritativa Pròpia a Bind9
-A la màquina Ubuntu Server de laboratori:
-1. Edita el fitxer `/etc/bind/named.conf.local` i afegeix la declaració per al domini `smx-lab.internal`:
-   ```text
-   zone "smx-lab.internal" {
-       type master;
-       file "/etc/bind/db.smx-lab.internal";
-   };
-   ```
-2. Crea el fitxer `/etc/bind/db.smx-lab.internal` copiant la plantilla `/etc/bind/db.local` o creant-lo des de zero amb:
-   - Registre SOA configurat per a `ns1.smx-lab.internal` i serial actualitzat.
-   - Registre NS per a `ns1`.
-   - Registres A per a `ns1` (`192.168.1.10`), `web` (`192.168.1.10`), `router` (`192.168.1.1`).
-   - Registres CNAME per a `www` i `ftp` apuntant al nom canònic `web`.
-   - Registre MX amb prioritat 10 apuntant a `correu.smx-lab.internal`.
-3. Valida la sintaxi amb les eines oficials de Bind9:
-   ```bash
-   sudo named-checkconf
-   sudo named-checkzone smx-lab.internal /etc/bind/db.smx-lab.internal
-   ```
-4. Si el resultat és `OK`, reinicia el servei: `sudo systemctl restart bind9`.
-
-#### Repte 2: Diagnòstic Integral de Consultes amb `dig`
-Des del client Linux o des del mateix servidor, executa les consultes i analitza la resposta:
-1. Consulta de registre A del servidor web:
-   ```bash
-   dig @127.0.0.1 web.smx-lab.internal
-   ```
-   *Comprova a la sortida:* la secció `ANSWER SECTION`, el valor de TTL (Time to Live) i que el camp `SERVER` siga `127.0.0.1#53`.
-2. Consulta de registres de correu MX:
-   ```bash
-   dig @127.0.0.1 smx-lab.internal MX +noall +answer
-   ```
-3. Comprovació d'àlies CNAME:
-   ```bash
-   dig @127.0.0.1 www.smx-lab.internal +noall +answer
-   ```
-   *Documenta:* Comprova com Bind9 retorna primer el CNAME i tot seguit el registre A associat en una sola resposta.
-
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
-
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Arquitectura i tipus de registres** | Domina tots els tipus de RR (SOA, NS, A, CNAME, MX, PTR) i el flux recursiu/iteratiu. | Comprèn els registres bàsics A i CNAME però té dificultats amb el format del SOA o MX. | Confon la resolució directa amb la inversa o desconeix el format FQDN. |
-| **Configuració de zones a Bind9** | Fitxers de zona impecables, sintaxi validada amb `named-checkzone` i servei actiu. | Crea la zona però oblida el punt final FQDN o el serial no s'incrementa. | Errors de sintaxi que impedeixen arrencar el dimoni `named`. |
-| **Auditoria amb eines de diagnòstic** | Interpreta fluidament les respostes de `dig`, flags (`aa`), TTLs i temps de consulta. | Utilitza `nslookup` bàsic però no sap extreure registres MX o SOA amb `dig`. | No sap dirigir consultes cap a un servidor DNS específic amb `@IP`. |
+<div class="aules-delivery-card">
+  <div class="delivery-header">
+    <span class="delivery-icon">📬</span>
+    <div>
+      <h3 class="delivery-title">Projecte de Síntesi Aules: Desplegament de Servidor DNS Redundant (Mestre/Esclau)</h3>
+      <p class="delivery-subtitle">Memòria tècnica de disseny de zones directes, inverses i replicació amb Bind9.</p>
+    </div>
+  </div>
+  <div class="delivery-instructions">
+    <p>Presenta un projecte tècnic complet on desplegues una arquitectura DNS redundant amb Bind9: servidor mestre amb zona directa i inversa per a la teua xarxa local, configuració del servidor esclau amb recepció de notificacions NOTIFY i transferències AXFR, i captures de comprovació de resolució amb la comanda <code>dig</code>.</p>
+    <div class="delivery-meta">
+      <span class="badge-format">Format: PDF institucional complet</span>
+      <span class="badge-deadline">Pes: Projecte Pràctic de la UD02</span>
+    </div>
+  </div>
+  <button class="btn-aules-download" data-module="SEX" data-unit="2" data-topic="0">📥 Descarrega Especificació del Projecte (PDF)</button>
+</div>
