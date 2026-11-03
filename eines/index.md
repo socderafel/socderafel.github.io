@@ -1,12 +1,12 @@
 ---
 layout: default
-title: "DevToys Web · Suite d'Eines per a Desenvolupadors | Pepe Cuenca"
+title: "Caixa d'Eines Web · Utilitats per a Desenvolupadors | Pepe Cuenca"
 full_width: true
 ---
 
 <style>
 /* ========================================================
-   DEVTOYS WEB SUITE - STYLES INTEGRATS
+   CAIXA D'EINES WEB - STYLES INTEGRATS
    ======================================================== */
 .devtoys-root {
   display: flex;
@@ -721,8 +721,8 @@ full_width: true
       <div class="devtoys-brand">
         <div class="devtoys-brand-icon">🛠️</div>
         <div>
-          <div class="devtoys-brand-title">DevToys Web</div>
-          <div class="devtoys-brand-sub">Suite Docent FP</div>
+          <div class="devtoys-brand-title">Caixa d'Eines</div>
+          <div class="devtoys-brand-sub">Utilitats Tècniques FP</div>
         </div>
       </div>
       <div class="devtoys-search-wrap">
@@ -813,7 +813,7 @@ full_width: true
       <div style="display: flex; align-items: center; gap: 10px;">
         <button class="devtoys-mobile-nav-toggle" onclick="devToysToggleMobileSidebar()">☰ Menú Eines</button>
         <div class="devtoys-breadcrumbs">
-          <a class="devtoys-breadcrumb-link" onclick="devToysSwitchTool('all')">DevToys</a>
+          <a class="devtoys-breadcrumb-link" onclick="devToysSwitchTool('all')">Caixa d'Eines</a>
           <span>/</span>
           <span class="devtoys-breadcrumb-current" id="dt-crumb-name">Totes les Eines</span>
         </div>
@@ -830,7 +830,7 @@ full_width: true
            ========================================== -->
       <div class="devtoys-tool-view active" id="view-all">
         <div class="devtoys-hero-head">
-          <h1 class="devtoys-hero-title">Benvingut a DevToys Web</h1>
+          <h1 class="devtoys-hero-title">Caixa d'Eines Web per a FP</h1>
           <p class="devtoys-hero-subtitle">
             La col·lecció d'utilitats essencials per a l'alumnat i professorat de cicles formatius d'Informàtica. Tot s'executa en local al navegador, sense servidors ni recollida de dades.
           </p>
@@ -2001,7 +2001,7 @@ function md5(string) {
 
 // NAVIGATION & TOOL ROUTER
 const toolTitles = {
-  'all': 'Totes les Eines',
+  'all': 'Totes les Utilitats',
   'json-formatter': 'Validador & Formatador JSON',
   'xml-validator': 'Validador & Formatador XML',
   'sql-formatter': 'Formatador SQL',

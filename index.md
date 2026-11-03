@@ -392,7 +392,7 @@ is_landing: true
       </p>
     </div>
 
-    <!-- Targeta Destacada: DevToys Web Suite -->
+    <!-- Targeta Destacada: Caixa d'Eines Web -->
     <div class="devtoys-hero-card" style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 30px; margin-bottom: 32px; box-shadow: 0 12px 36px rgba(0,0,0,0.25); display: flex; flex-direction: column; gap: 20px; position: relative; overflow: hidden;">
       <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(59, 130, 246, 0.25), transparent 70%); pointer-events: none;"></div>
       <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
@@ -401,7 +401,7 @@ is_landing: true
             <span>⚡ Novetat · 100% Client-Side &amp; Offline</span>
           </div>
           <h3 style="font-size: 1.6rem; font-weight: 800; color: #f8fafc; margin: 0 0 8px 0; display: flex; align-items: center; gap: 10px;">
-            <span>🛠️ DevToys Web</span>
+            <span>🛠️ Caixa d'Eines Web</span>
             <span style="font-size: 0.85rem; font-weight: 600; color: #94a3b8; background: rgba(255,255,255,0.08); padding: 3px 8px; border-radius: 6px;">v2.0 Web</span>
           </h3>
           <p style="color: #cbd5e1; font-size: 0.98rem; line-height: 1.55; margin: 0;">
@@ -410,7 +410,7 @@ is_landing: true
         </div>
         <div>
           <a href="{{ '/eines/' | relative_url }}" class="landing-btn landing-btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; font-weight: 700; font-size: 1rem; border-radius: 10px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4); text-decoration: none;">
-            <span>Obrir DevToys Web</span>
+            <span>Obrir Caixa d'Eines Web</span>
             <span>→</span>
           </a>
         </div>
@@ -546,7 +546,7 @@ is_landing: true
       <div class="footer-col">
         <div class="footer-col-title">Mòduls & Eines</div>
         <ul class="footer-links">
-          <li><a href="./eines/" style="font-weight:700; color:#3b82f6 !important;">🛠️ DevToys Web Suite</a></li>
+          <li><a href="./eines/" style="font-weight:700; color:#3b82f6 !important;">🛠️ Caixa d'Eines Web</a></li>
           <li><a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/">Ciències Aplicades 1</a></li>
           <li><a href="./programacio/">Programació en Java</a></li>
           <li><a href="./projecte-intermodular/">Projecte Intermodular</a></li>
