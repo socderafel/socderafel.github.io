@@ -2311,6 +2311,8 @@
       text-decoration: none;
     }
   </style>
+  <!-- jsPDF per a la generació de comprovants oficials en PDF -->
+  <script defer src="{{ '/assets/js/jspdf.umd.min.js' | relative_url }}"></script>
 </head>
 <body>
     <header class="md-header">
@@ -3037,21 +3039,300 @@
 
         if (dlBtn) {
           dlBtn.addEventListener('click', () => {
-            const report = buildReport();
-            const rawName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim().replace(/\s+/g, '_') : 'Alumne';
-            const filename = `Comprovant_Aules_${rawName}_CA1.txt`;
-            const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
+            // 1. Validar i recuperar el nom de l'alumne
+            let studentRawName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : '';
+            if (!studentRawName) {
+              const promptName = prompt("Per favor, escriu el teu Nom i Cognoms per al comprovant PDF d'Aules:");
+              if (promptName && promptName.trim()) {
+                studentRawName = promptName.trim();
+                if (nameInput) nameInput.value = studentRawName;
+                try { localStorage.setItem('aules_student_name', studentRawName); } catch(e) {}
+              } else {
+                studentRawName = 'Alumne_a';
+              }
+            }
+
+            const cleanForFilename = (str) => {
+              if (!str) return '';
+              return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                        .replace(/[^a-zA-Z0-9_-]/g, "_")
+                        .replace(/_+/g, "_")
+                        .replace(/^_|_$/g, "");
+            };
+
+            const studentFilePart = cleanForFilename(studentRawName) || 'Alumne';
+
+            // 2. Detectar el Mòdul
+            let moduleCode = 'FP';
+            let moduleFullName = 'Formació Professional';
+            const path = window.location.pathname.toLowerCase();
+            const pageTitle = document.title.split('—')[0].trim();
+            const badgeEl = document.querySelector('.up-badge');
+            const badgeText = badgeEl ? badgeEl.innerText : '';
+
+            if (path.includes('ciencies-aplicades') || pageTitle.includes('Ciències') || badgeText.includes('Ciències')) {
+              moduleCode = 'CA1';
+              moduleFullName = 'Ciències Aplicades I (1r FPB)';
+            } else if (path.includes('programacio') || pageTitle.includes('Programació') || badgeText.includes('Programació')) {
+              moduleCode = 'PROG';
+              moduleFullName = 'Programació en Java (1r DAW/DAM)';
+            } else if (path.includes('bbdd') || pageTitle.includes('Bases de Dades') || badgeText.includes('Bases de Dades')) {
+              moduleCode = 'BBDD';
+              moduleFullName = 'Bases de Dades (1r DAW/DAM/ASIX)';
+            } else if (path.includes('projecte') || pageTitle.includes('Projecte') || badgeText.includes('Projecte')) {
+              moduleCode = 'PROJECTE';
+              moduleFullName = 'Projecte Intermodular (2n FPB)';
+            } else if (path.includes('imx') || pageTitle.includes('Xarxes') || badgeText.includes('Xarxes')) {
+              moduleCode = 'IMX';
+              moduleFullName = 'Instal·lació de Xarxes (2n FPB)';
+            } else if (badgeText) {
+              moduleCode = cleanForFilename(badgeText.split('·')[0].trim()) || 'MOD';
+              moduleFullName = badgeText;
+            }
+
+            // 3. Detectar la Unitat
+            let unitCode = 'UD';
+            const unitMatch = path.match(/\/u([dtp])(\d+)/i) || badgeText.match(/U([DTP])\s*(\d+)/i) || pageTitle.match(/U([DTP])\s*(\d+)/i);
+            if (unitMatch) {
+              const uType = unitMatch[1].toUpperCase();
+              const uNum = parseInt(unitMatch[2], 10);
+              unitCode = `${uType}${uNum < 10 ? '0' + uNum : uNum}`;
+            } else {
+              unitCode = 'UD01';
+            }
+
+            // 4. Detectar l'Activitat
+            let activityCode = 'Activitats';
+            const actMatch = path.match(/ut\d{2}(\d{2})/i) || path.match(/up\d{2}(\d{2})/i);
+            const titleActMatch = pageTitle.match(/^(\d+\.\d+)/);
+            if (actMatch) {
+              activityCode = `Act${actMatch[1]}`;
+            } else if (titleActMatch) {
+              activityCode = `Act${titleActMatch[1].replace('.', '_')}`;
+            } else if (path.endsWith('index.html') || path.endsWith('/')) {
+              activityCode = 'Quadern';
+            }
+
+            // 5. Nom del fitxer PDF segons el format requerit: Aules_[Modul]_[Unitat]_[Activitat]_[NomAlumne].pdf
+            const filename = `Aules_${moduleCode}_${unitCode}_${activityCode}_${studentFilePart}.pdf`;
+
+            // 6. Recopilar activitats interactives
+            const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf');
+            let solvedCount = 0;
+            let quizDetails = [];
+            allItems.forEach((el, idx) => {
+              const isSolved = el.classList.contains('is-solved');
+              if (isSolved) solvedCount++;
+
+              let qTitle = `Activitat ${idx + 1}`;
+              let userVal = '(buit)';
+
+              if (el.classList.contains('interactive-quiz')) {
+                const qText = el.querySelector('.quiz-question');
+                if (qText) qTitle = qText.innerText.trim();
+                const inp = el.querySelector('.quiz-input');
+                if (inp) userVal = inp.value.trim() || '(buit)';
+              } else if (el.classList.contains('interactive-mcq')) {
+                const qText = el.querySelector('.mcq-question');
+                if (qText) qTitle = qText.innerText.trim();
+                const sel = el.querySelector('.btn-mcq-opt.selected-correct, .btn-mcq-opt.selected-incorrect');
+                if (sel) userVal = sel.innerText.trim();
+              } else if (el.classList.contains('interactive-vf')) {
+                const qText = el.querySelector('.vf-statement');
+                if (qText) qTitle = qText.innerText.trim();
+                const sel = el.querySelector('.btn-vf.selected-correct, .btn-vf.selected-incorrect');
+                if (sel) userVal = sel.innerText.trim();
+              }
+
+              quizDetails.push({
+                num: idx + 1,
+                title: qTitle,
+                answer: userVal,
+                solved: isSolved
+              });
+            });
+
+            const checks = document.querySelectorAll('li.task-list-item');
+            let checkedCount = 0;
+            checks.forEach(c => {
+              if (c.classList.contains('is-checked')) checkedCount++;
+            });
+
+            const totalPts = solvedCount * 25;
+            const pct = allItems.length > 0 ? Math.round((solvedCount / allItems.length) * 100) : 100;
+            const dateStr = new Date().toLocaleString('ca-ES', { dateStyle: 'long', timeStyle: 'short' });
+
+            // 7. Generar el PDF real amb jsPDF
+            if (window.jspdf && window.jspdf.jsPDF) {
+              const { jsPDF } = window.jspdf;
+              const doc = new jsPDF({
+                orientation: 'portrait',
+                unit: 'mm',
+                format: 'a4'
+              });
+
+              // Capçalera corporativa blau marí
+              doc.setFillColor(15, 32, 66); // #0f2042 Navy
+              doc.rect(14, 14, 182, 22, 'F');
+
+              doc.setTextColor(255, 255, 255);
+              doc.setFont("helvetica", "bold");
+              doc.setFontSize(13);
+              doc.text("COMPROVANT DE LLIURAMENT D'ACTIVITATS — AULES GVA", 20, 23);
+
+              doc.setFont("helvetica", "normal");
+              doc.setFontSize(8.5);
+              doc.setTextColor(203, 213, 225);
+              doc.text("Portal Docent de Pepe Cuenca · Formació Professional · Curs 2026/2027", 20, 30);
+
+              // Targeta dades de l'alumne i de la tasca
+              doc.setFillColor(248, 250, 252);
+              doc.setDrawColor(226, 232, 240);
+              doc.roundedRect(14, 40, 182, 44, 3, 3, 'FD');
+
+              doc.setTextColor(15, 23, 42);
+              doc.setFont("helvetica", "bold");
+              doc.setFontSize(10);
+              doc.text("DADES DE L'ALUMNE/A I DEL MÒDUL", 20, 48);
+
+              doc.setFont("helvetica", "normal");
+              doc.setFontSize(9);
+              doc.setTextColor(71, 85, 105);
+
+              doc.text("Alumne/a: ", 20, 55);
+              doc.setFont("helvetica", "bold");
+              doc.setTextColor(15, 23, 42);
+              doc.text(studentRawName, 40, 55);
+
+              doc.setFont("helvetica", "normal");
+              doc.setTextColor(71, 85, 105);
+              doc.text("Mòdul: ", 20, 62);
+              doc.setFont("helvetica", "bold");
+              doc.setTextColor(15, 23, 42);
+              doc.text(moduleFullName, 40, 62);
+
+              doc.setFont("helvetica", "normal");
+              doc.setTextColor(71, 85, 105);
+              doc.text("Unitat i Secció: ", 20, 69);
+              doc.setFont("helvetica", "bold");
+              doc.setTextColor(15, 23, 42);
+              doc.text(`${unitCode} — ${pageTitle}`, 46, 69);
+
+              doc.setFont("helvetica", "normal");
+              doc.setTextColor(71, 85, 105);
+              doc.text("Data i hora: ", 20, 76);
+              doc.text(dateStr, 42, 76);
+
+              // Blocs de puntuació i verificació
+              doc.setFillColor(239, 246, 255);
+              doc.setDrawColor(191, 219, 254);
+              doc.roundedRect(14, 88, 88, 22, 2, 2, 'FD');
+
+              doc.setFont("helvetica", "bold");
+              doc.setFontSize(9);
+              doc.setTextColor(30, 64, 175);
+              doc.text("PUNTUACIÓ DELS REPTES", 18, 95);
+              doc.setFontSize(13);
+              doc.setTextColor(29, 78, 216);
+              doc.text(`${totalPts} punts (${solvedCount}/${allItems.length} · ${pct}%)`, 18, 104);
+
+              doc.setFillColor(236, 253, 245);
+              doc.setDrawColor(167, 243, 208);
+              doc.roundedRect(108, 88, 88, 22, 2, 2, 'FD');
+
+              doc.setFont("helvetica", "bold");
+              doc.setFontSize(9);
+              doc.setTextColor(6, 95, 70);
+              doc.text("CRITERIS ASSOLITS (CHECKLIST)", 112, 95);
+              doc.setFontSize(13);
+              doc.setTextColor(5, 150, 105);
+              doc.text(`${checkedCount}/${checks.length} criteris completats`, 112, 104);
+
+              // Detall activitats
+              let y = 120;
+              doc.setFont("helvetica", "bold");
+              doc.setFontSize(10.5);
+              doc.setTextColor(15, 32, 66);
+              doc.text("REGISTRE DETALLAT DE LES ACTIVITATS PRÀCTIQUES:", 14, y);
+              y += 7;
+
+              doc.setDrawColor(226, 232, 240);
+              doc.line(14, y - 2, 196, y - 2);
+
+              if (quizDetails.length === 0) {
+                doc.setFont("helvetica", "italic");
+                doc.setFontSize(9);
+                doc.setTextColor(100, 116, 139);
+                doc.text("Aquesta secció no conté reptes interactius addicionals.", 14, y + 4);
+                y += 12;
+              } else {
+                quizDetails.forEach((q) => {
+                  if (y > 265) {
+                    doc.addPage();
+                    y = 20;
+                  }
+
+                  doc.setFont("helvetica", "bold");
+                  doc.setFontSize(9);
+                  doc.setTextColor(15, 23, 42);
+                  const titleLines = doc.splitTextToSize(`${q.num}. ${q.title}`, 135);
+                  doc.text(titleLines, 14, y);
+
+                  if (q.solved) {
+                    doc.setTextColor(5, 150, 105);
+                    doc.text("[ CORRECTE +25 pts ]", 152, y);
+                  } else {
+                    doc.setTextColor(220, 38, 38);
+                    doc.text("[ PENDENT ]", 168, y);
+                  }
+
+                  y += (titleLines.length * 4.5);
+
+                  doc.setFont("helvetica", "normal");
+                  doc.setFontSize(8.5);
+                  doc.setTextColor(71, 85, 105);
+                  const ansLines = doc.splitTextToSize(`Resposta de l'alumne/a: ${q.answer}`, 180);
+                  doc.text(ansLines, 18, y);
+                  y += (ansLines.length * 4) + 4;
+                });
+              }
+
+              // Peu de pàgina a totes les pàgines
+              const totalPages = doc.internal.getNumberOfPages();
+              for (let p = 1; p <= totalPages; p++) {
+                doc.setPage(p);
+                doc.setDrawColor(226, 232, 240);
+                doc.line(14, 282, 196, 282);
+
+                doc.setFont("helvetica", "normal");
+                doc.setFontSize(7.5);
+                doc.setTextColor(148, 163, 184);
+                doc.text(`Portal Docent de Pepe Cuenca · Comprovant Aules Oficial · Pàgina ${p} de ${totalPages}`, 14, 287);
+                doc.text(filename, 196, 287, { align: 'right' });
+              }
+
+              doc.save(filename);
+
+              if (toast) {
+                toast.style.display = 'block';
+                toast.innerHTML = `✅ <strong>S'ha generat el document PDF:</strong> <code>${filename}</code><br>Ja pots adjuntar-lo a la teua tasca a la plataforma Aules!`;
+                setTimeout(() => { toast.style.display = 'none'; }, 6000);
+              }
+            } else {
+              // Fallback text
+              const report = buildReport();
+              const blob = new Blob([report], { type: 'text/plain;charset=utf-8' });
+              const url = URL.createObjectURL(blob);
+              const a = document.createElement('a');
+              a.href = url;
+              a.download = filename.replace('.pdf', '.txt');
+              document.body.appendChild(a);
+              a.click();
+              document.body.removeChild(a);
+              URL.revokeObjectURL(url);
+            }
           });
         }
-
         updateAllTrackers();
       })();
 

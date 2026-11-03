@@ -151,7 +151,7 @@ Benvingut/da a la **Unitat Didàctica 3** del mòdul d'Instal·lació i Mantenim
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
-    <button type="button" class="btn-aules-dl">📥 Descarregar Informe (.txt)</button>
+    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
   </div>
   <div class="aules-toast"></div>
 </div>
