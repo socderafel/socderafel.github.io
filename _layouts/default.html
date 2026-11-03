@@ -2772,9 +2772,9 @@
       // 3.6. Manejador de Quizzes Interactius, MCQ, V/F, Calculadores i Lliurament Aules
       (function initInteractiveLearning() {
         const updateAllTrackers = () => {
-          const allInteractive = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf');
+          const allInteractive = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
           const totalInteractive = allInteractive.length;
-          const solvedInteractive = document.querySelectorAll('.interactive-quiz.is-solved, .interactive-mcq.is-solved, .interactive-vf.is-solved').length;
+          const solvedInteractive = document.querySelectorAll('.interactive-quiz.is-solved, .interactive-mcq.is-solved, .interactive-vf.is-solved, .interactive-challenge-card.is-solved').length;
           const totalChecks = document.querySelectorAll('li.task-list-item').length;
           const solvedChecks = document.querySelectorAll('li.task-list-item.is-checked').length;
           const pct = totalInteractive > 0 ? Math.round((solvedInteractive / totalInteractive) * 100) : 100;
@@ -2784,7 +2784,7 @@
           document.querySelectorAll('.interactive-progress-tracker').forEach(tracker => {
             const countEl = tracker.querySelector('.tracker-count');
             const ptsEl = tracker.querySelector('.tracker-pts');
-            const fillEl = tracker.querySelector('.tracker-fill');
+            const fillEl = tracker.querySelector('.tracker-fill, .tracker-bar');
             if (countEl) countEl.textContent = `${solvedInteractive} de ${totalInteractive} superats (${pct}%)`;
             if (ptsEl) ptsEl.innerHTML = `⭐ <strong>${pts} punts</strong>`;
             if (fillEl) fillEl.style.width = `${pct}%`;
@@ -2992,28 +2992,92 @@
           });
         });
 
+        // 3.5. Inicialitzar Targetes de Repte Interactiu (.interactive-challenge-card)
+        document.querySelectorAll('.interactive-challenge-card').forEach((card, cIdx) => {
+          const btn = card.querySelector('.btn-check');
+          const feedback = card.querySelector('.feedback-msg');
+          const cardId = card.getAttribute('data-challenge-id') || ('card_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + cIdx);
+          const correctVal = (btn ? btn.getAttribute('data-correct') : '').trim().toLowerCase();
+          const feedbackText = btn ? (btn.getAttribute('data-feedback') || 'Molt bé! Resposta correcta.') : 'Molt bé!';
+
+          try {
+            const saved = localStorage.getItem(cardId);
+            if (saved) {
+              const parsed = JSON.parse(saved);
+              if (parsed.val) {
+                const rad = card.querySelector(`input[value="${parsed.val}"]`);
+                if (rad) rad.checked = true;
+              }
+              if (parsed.correct) {
+                card.classList.add('is-solved');
+                if (feedback) {
+                  feedback.style.display = 'block';
+                  feedback.style.color = '#15803d';
+                  feedback.innerHTML = `✅ <strong>Correcte!</strong> ${feedbackText}`;
+                }
+              }
+            }
+          } catch(e) {}
+
+          if (btn) {
+            btn.addEventListener('click', () => {
+              const selected = card.querySelector('input[type="radio"]:checked');
+              if (!selected) {
+                if (feedback) {
+                  feedback.style.display = 'block';
+                  feedback.style.color = '#b91c1c';
+                  feedback.innerHTML = '⚠️ Tria una opció abans de comprovar.';
+                }
+                return;
+              }
+              const val = selected.value.trim().toLowerCase();
+              const isCorrect = (val === correctVal);
+              if (isCorrect) {
+                card.classList.add('is-solved');
+                if (feedback) {
+                  feedback.style.display = 'block';
+                  feedback.style.color = '#15803d';
+                  feedback.innerHTML = `✅ <strong>Correcte!</strong> ${feedbackText}`;
+                }
+                try { localStorage.setItem(cardId, JSON.stringify({ val: val, correct: true })); } catch(e) {}
+              } else {
+                card.classList.remove('is-solved');
+                if (feedback) {
+                  feedback.style.display = 'block';
+                  feedback.style.color = '#b91c1c';
+                  feedback.innerHTML = '❌ Incorrecte. Torna a intentar-ho!';
+                }
+                try { localStorage.setItem(cardId, JSON.stringify({ val: val, correct: false })); } catch(e) {}
+              }
+              updateAllTrackers();
+            });
+          }
+        });
+
         // 4. Manejador del Lliurament per a Aules
-        const nameInput = document.querySelector('#aules-student-name');
-        const copyBtn = document.querySelector('.btn-aules-copy');
-        const dlBtn = document.querySelector('.btn-aules-dl');
+        const nameInputs = document.querySelectorAll('#aules-student-name, .aules-student-name');
+        const copyBtns = document.querySelectorAll('.btn-aules-copy');
+        const dlBtns = document.querySelectorAll('.btn-aules-dl, .btn-generate-aules-pdf');
         const toast = document.querySelector('.aules-toast');
 
-        if (nameInput) {
+        nameInputs.forEach(input => {
           try {
             const savedName = localStorage.getItem('aules_student_name');
-            if (savedName) nameInput.value = savedName;
-            nameInput.addEventListener('input', () => {
-              localStorage.setItem('aules_student_name', nameInput.value);
+            if (savedName) input.value = savedName;
+            input.addEventListener('input', () => {
+              nameInputs.forEach(inp => inp.value = input.value);
+              localStorage.setItem('aules_student_name', input.value);
             });
           } catch(e) {}
-        }
+        });
 
         const buildReport = () => {
-          const studentName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : 'Alumne/a de 1r FPB';
+          const firstInp = document.querySelector('#aules-student-name, .aules-student-name');
+          const studentName = (firstInp && firstInp.value.trim()) ? firstInp.value.trim() : 'Alumne/a de FP';
           const pageTitle = document.title.split('—')[0].trim();
           const dateStr = new Date().toLocaleString('ca-ES', { dateStyle: 'long', timeStyle: 'short' });
 
-          const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf');
+          const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
           let solvedCount = 0;
           let quizDetails = [];
           allItems.forEach((el, idx) => {
@@ -3038,6 +3102,14 @@
               if (qText) qTitle = qText.innerText.trim();
               const sel = el.querySelector('.btn-vf.selected-correct, .btn-vf.selected-incorrect');
               if (sel) userVal = sel.innerText.trim();
+            } else if (el.classList.contains('interactive-challenge-card')) {
+              const qText = el.querySelector('span[style*="font-weight:700"], span[style*="font-weight: 700"]');
+              if (qText) qTitle = qText.innerText.trim();
+              const rad = el.querySelector('input[type="radio"]:checked');
+              if (rad) {
+                const parentLabel = rad.closest('label');
+                userVal = parentLabel ? parentLabel.innerText.trim() : rad.value;
+              }
             }
 
             quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta: ${userVal}  -->  [${isSolved ? 'CORRECTE ✅ (+25 pts)' : 'PENDENT ❌'}]`);
@@ -3057,7 +3129,7 @@
             `📑 COMPROVANT DE TREBALL I ACTIVITATS PRÀCTIQUES (AULES)`,
             `============================================================`,
             `👤 Alumne/a: ${studentName}`,
-            `📚 Mòdul: Ciències Aplicades 1 (1r FPB · Grau Bàsic)`,
+            `📚 Mòdul: Formació Professional`,
             `📖 Unitat: ${pageTitle}`,
             `🗓️ Data i hora: ${dateStr}`,
             `🏆 Puntuació Obtinguda: ${totalPts} punts (${solvedCount}/${allItems.length} reptes resolts · ${pct}%)`,
@@ -3071,8 +3143,8 @@
           ].join('\n');
         };
 
-        if (copyBtn) {
-          copyBtn.addEventListener('click', () => {
+        copyBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
             const report = buildReport();
             navigator.clipboard.writeText(report).then(() => {
               if (toast) {
@@ -3082,17 +3154,17 @@
               }
             });
           });
-        }
+        });
 
-        if (dlBtn) {
-          dlBtn.addEventListener('click', () => {
-            // 1. Validar i recuperar el nom de l'alumne
-            let studentRawName = (nameInput && nameInput.value.trim()) ? nameInput.value.trim() : '';
+        dlBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            let firstInp = document.querySelector('#aules-student-name, .aules-student-name');
+            let studentRawName = (firstInp && firstInp.value.trim()) ? firstInp.value.trim() : '';
             if (!studentRawName) {
               const promptName = prompt("Per favor, escriu el teu Nom i Cognoms per al comprovant PDF d'Aules:");
               if (promptName && promptName.trim()) {
                 studentRawName = promptName.trim();
-                if (nameInput) nameInput.value = studentRawName;
+                nameInputs.forEach(inp => inp.value = studentRawName);
                 try { localStorage.setItem('aules_student_name', studentRawName); } catch(e) {}
               } else {
                 studentRawName = 'Alumne_a';
@@ -3117,7 +3189,19 @@
             const badgeEl = document.querySelector('.up-badge');
             const badgeText = badgeEl ? badgeEl.innerText : '';
 
-            if (path.includes('ciencies-aplicades') || pageTitle.includes('Ciències') || badgeText.includes('Ciències')) {
+            const forcedModule = btn.getAttribute('data-module');
+            const forcedUnit = btn.getAttribute('data-unit');
+            const forcedAct = btn.getAttribute('data-activity');
+
+            if (forcedModule) {
+              moduleCode = forcedModule.toUpperCase();
+              if (moduleCode === 'OAD') moduleFullName = 'Ofimàtica i Arxiu de Documents (1r FPB)';
+              else if (moduleCode === 'IMX') moduleFullName = 'Instal·lació de Xarxes (2n FPB)';
+              else if (moduleCode === 'OACE') moduleFullName = 'Operacions Auxiliars de Configuració i Explotació (2n FPB)';
+              else if (moduleCode === 'MMSCI') moduleFullName = 'Muntatge i Manteniment de Sistemes (1r FPB)';
+              else if (moduleCode === 'CA1') moduleFullName = 'Ciències Aplicades I (1r FPB)';
+              else if (moduleCode === 'PROJECTE') moduleFullName = 'Projecte Intermodular (2n FPB)';
+            } else if (path.includes('ciencies-aplicades') || pageTitle.includes('Ciències') || badgeText.includes('Ciències')) {
               moduleCode = 'CA1';
               moduleFullName = 'Ciències Aplicades I (1r FPB)';
             } else if (path.includes('mmsci') || pageTitle.includes('Muntatge') || badgeText.includes('Muntatge')) {
@@ -3125,7 +3209,7 @@
               moduleFullName = 'Muntatge i Manteniment de Sistemes (1r FPB)';
             } else if (path.includes('oad') || pageTitle.includes('Ofimàtica') || badgeText.includes('Ofimàtica')) {
               moduleCode = 'OAD';
-              moduleFullName = 'Operacions Auxiliars amb TIC (1r FPB)';
+              moduleFullName = 'Ofimàtica i Arxiu de Documents (1r FPB)';
             } else if (path.includes('imx') || pageTitle.includes('Xarxes') || badgeText.includes('Xarxes')) {
               moduleCode = 'IMX';
               moduleFullName = 'Instal·lació de Xarxes (2n FPB)';
@@ -3147,33 +3231,39 @@
             }
 
             // 3. Detectar la Unitat
-            let unitCode = 'UD';
-            const unitMatch = path.match(/\/u([dtp])(\d+)/i) || badgeText.match(/U([DTP])\s*(\d+)/i) || pageTitle.match(/U([DTP])\s*(\d+)/i);
-            if (unitMatch) {
-              const uType = unitMatch[1].toUpperCase();
-              const uNum = parseInt(unitMatch[2], 10);
-              unitCode = `${uType}${uNum < 10 ? '0' + uNum : uNum}`;
+            let unitCode = 'UD01';
+            if (forcedUnit) {
+              unitCode = forcedUnit.toUpperCase();
             } else {
-              unitCode = 'UD01';
+              const unitMatch = path.match(/\/u([dtp])(\d+)/i) || badgeText.match(/U([DTP])\s*(\d+)/i) || pageTitle.match(/U([DTP])\s*(\d+)/i);
+              if (unitMatch) {
+                const uType = unitMatch[1].toUpperCase();
+                const uNum = parseInt(unitMatch[2], 10);
+                unitCode = `${uType}${uNum < 10 ? '0' + uNum : uNum}`;
+              }
             }
 
             // 4. Detectar l'Activitat
-            let activityCode = 'Activitats';
-            const actMatch = path.match(/ut\d{2}(\d{2})/i) || path.match(/up\d{2}(\d{2})/i);
-            const titleActMatch = pageTitle.match(/^(\d+\.\d+)/);
-            if (actMatch) {
-              activityCode = `Act${actMatch[1]}`;
-            } else if (titleActMatch) {
-              activityCode = `Act${titleActMatch[1].replace('.', '_')}`;
-            } else if (path.endsWith('index.html') || path.endsWith('/')) {
-              activityCode = 'Quadern';
+            let activityCode = 'Quadern';
+            if (forcedAct) {
+              activityCode = forcedAct;
+            } else {
+              const actMatch = path.match(/ut\d{2}(\d{2})/i) || path.match(/up\d{2}(\d{2})/i);
+              const titleActMatch = pageTitle.match(/^(\d+\.\d+)/);
+              if (actMatch) {
+                activityCode = `Act${actMatch[1]}`;
+              } else if (titleActMatch) {
+                activityCode = `Act${titleActMatch[1].replace('.', '_')}`;
+              } else if (path.endsWith('index.html') || path.endsWith('/')) {
+                activityCode = 'Quadern';
+              }
             }
 
             // 5. Nom del fitxer PDF segons el format requerit: Aules_[Modul]_[Unitat]_[Activitat]_[NomAlumne].pdf
             const filename = `Aules_${moduleCode}_${unitCode}_${activityCode}_${studentFilePart}.pdf`;
 
             // 6. Recopilar activitats interactives
-            const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf');
+            const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
             let solvedCount = 0;
             let quizDetails = [];
             allItems.forEach((el, idx) => {
@@ -3198,6 +3288,14 @@
                 if (qText) qTitle = qText.innerText.trim();
                 const sel = el.querySelector('.btn-vf.selected-correct, .btn-vf.selected-incorrect');
                 if (sel) userVal = sel.innerText.trim();
+              } else if (el.classList.contains('interactive-challenge-card')) {
+                const qText = el.querySelector('span[style*="font-weight:700"], span[style*="font-weight: 700"]');
+                if (qText) qTitle = qText.innerText.trim();
+                const rad = el.querySelector('input[type="radio"]:checked');
+                if (rad) {
+                  const parentLabel = rad.closest('label');
+                  userVal = parentLabel ? parentLabel.innerText.trim() : rad.value;
+                }
               }
 
               quizDetails.push({
@@ -3348,31 +3446,29 @@
                   doc.setFontSize(8.5);
                   doc.setTextColor(71, 85, 105);
                   const ansLines = doc.splitTextToSize(`Resposta de l'alumne/a: ${q.answer}`, 180);
-                  doc.text(ansLines, 18, y);
+                  doc.text(ansLines, 14, y);
                   y += (ansLines.length * 4) + 4;
                 });
               }
 
-              // Peu de pàgina a totes les pàgines
+              // Peu de pàgina del certificat
               const totalPages = doc.internal.getNumberOfPages();
               for (let p = 1; p <= totalPages; p++) {
                 doc.setPage(p);
-                doc.setDrawColor(226, 232, 240);
-                doc.line(14, 282, 196, 282);
-
                 doc.setFont("helvetica", "normal");
-                doc.setFontSize(7.5);
+                doc.setFontSize(8);
                 doc.setTextColor(148, 163, 184);
-                doc.text(`Portal Docent de Pepe Cuenca · Comprovant Aules Oficial · Pàgina ${p} de ${totalPages}`, 14, 287);
-                doc.text(filename, 196, 287, { align: 'right' });
+                doc.text(`Document generat automàticament des de socderafel.github.io · Codi d'autenticitat: ${Math.random().toString(36).substring(2, 10).toUpperCase()}`, 14, 287);
+                doc.text(`Pàgina ${p} de ${totalPages}`, 180, 287);
               }
 
               doc.save(filename);
 
-              if (toast) {
-                toast.style.display = 'block';
-                toast.innerHTML = `✅ <strong>S'ha generat el document PDF:</strong> <code>${filename}</code><br>Ja pots adjuntar-lo a la teua tasca a la plataforma Aules!`;
-                setTimeout(() => { toast.style.display = 'none'; }, 6000);
+              const activeToast = document.querySelector('.aules-toast') || toast;
+              if (activeToast) {
+                activeToast.style.display = 'block';
+                activeToast.innerHTML = `✅ <strong>S'ha generat el document PDF:</strong> <code>${filename}</code><br>Ja pots adjuntar-lo a la teua tasca a la plataforma Aules!`;
+                setTimeout(() => { activeToast.style.display = 'none'; }, 6000);
               }
             } else {
               // Fallback text
@@ -3388,7 +3484,7 @@
               URL.revokeObjectURL(url);
             }
           });
-        }
+        });
         updateAllTrackers();
       })();
 
