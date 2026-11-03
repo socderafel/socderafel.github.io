@@ -6,242 +6,178 @@
   },
   "units": [
     {
-      "summary": "UD1 — Processador de text (I)",
+      "summary": "UD1 — Implantació de Suites Ofimàtiques i Llicenciament",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
           "href": "./ut01/index.html"
         },
         {
-          "label": "1.1 Tema 0. Suites Ofimàtiques",
+          "label": "1.1 Introducció a les Suites Ofimàtiques: FOSS vs Propietari",
           "href": "./ut01/ut0101.html"
         },
         {
-          "label": "1.2 Tema 0. Writer",
+          "label": "1.2 Models de Llicenciament: GPL, OEM, Retail i Subscripció SaaS",
           "href": "./ut01/ut0102.html"
         },
         {
-          "label": "1.3 Tema 2. Taules",
+          "label": "1.3 Desplegament i Instal·lació Desatesa de Paquets Ofimàtics",
           "href": "./ut01/ut0103.html"
         },
         {
-          "label": "1.4 Tema 3. IMATGES",
+          "label": "1.4 Formats de Document Estàndard: ODF, OOXML i PDF/A",
           "href": "./ut01/ut0104.html"
         },
         {
-          "label": "1.5 Exemple Numeració i Vinyetes",
+          "label": "1.5 Manteniment, Còpies de Seguretat 3-2-1 i Seguretat de Macros",
           "href": "./ut01/ut0105.html"
-        },
-        {
-          "label": "1.6 curiosidades en Writer",
-          "href": "./ut01/ut0106.html"
         }
       ]
     },
     {
-      "summary": "UD2 — Processador de text (II)",
+      "summary": "UD2 — Processament de Textos Avançat: Writer i Word",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
           "href": "./ut02/index.html"
         },
         {
-          "label": "2.1 Tema 7. COMBINAR CORRESPONDENCIA",
+          "label": "2.1 Jerarquia de Formatació: Caràcter, Paràgraf i Pàgina",
           "href": "./ut02/ut0201.html"
         },
         {
-          "label": "2.2 Exemple Combinar correspondència",
+          "label": "2.2 Estils Tipogràfics i Creació de Plantilles Corporatives (.ott)",
           "href": "./ut02/ut0202.html"
         },
         {
-          "label": "2.3 Tema 9. PLANTILLES",
+          "label": "2.3 Estructuració Avançada: Taules, Tabulacions i Imatges Ancorades",
           "href": "./ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Documents Extensos: Seccions, Capçaleres i Taules de Contingut (TOC)",
+          "href": "./ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Automatització: Combinació de Correspondència i Formularis Interactius",
+          "href": "./ut02/ut0205.html"
         }
       ]
     },
     {
-      "summary": "UD3 — Processador de text (III)",
+      "summary": "UD3 — Fulls de Càlcul i Anàlisi de Dades: Calc i Excel",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
           "href": "./ut03/index.html"
         },
         {
-          "label": "3.1 Tema 11. Index de continguts, figures i alfabèti",
+          "label": "3.1 Entorn de Treball, Estructura del Llibre i Formatació a Calc/Excel",
           "href": "./ut03/ut0301.html"
         },
         {
-          "label": "3.2 Tema 13. Treballar amb documents llargs",
+          "label": "3.2 Adreçament de Cel·les: Referències Relatives, Absolutes ($A$1) i Mixtes",
           "href": "./ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 Funcions Matemàtiques, Estadístiques i de Manipulació de Text",
+          "href": "./ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 Lògica Condicional (SI, I, O) i Funcions de Cerca Avançada (VLOOKUP)",
+          "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 Representació Gràfica, Taules Dinàmiques i Automatització amb Macros",
+          "href": "./ut03/ut0305.html"
         }
       ]
     },
     {
-      "summary": "UD4 — Calc Mòdul 1 (I)",
+      "summary": "UD4 — Disseny i Gestió de Bases de Dades: Base i Access",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
           "href": "./ut04/index.html"
         },
         {
-          "label": "4.1 Manual bàsic CALC",
+          "label": "4.1 Fonaments de Bases de Dades Relacionals i el Model Entitat-Relació (E-R)",
           "href": "./ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Pas al Model Relacional: Claus Primàries, Foranes i Integritat Referencial",
+          "href": "./ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Consultes de Selecció (Queries), Disseny Visual QBE i Filtres Lògics",
+          "href": "./ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 Consultes de Totals, Agrupament (GROUP BY) i Fonaments del Llenguatge SQL",
+          "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 Interfície d'Usuari: Formularis amb Subformularis i Informes Imprimibles",
+          "href": "./ut04/ut0405.html"
         }
       ]
     },
     {
-      "summary": "UD5 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)",
+      "summary": "UD5 — Edició d'Imatge Digital i Disseny Multimèdia: GIMP i Inkscape",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
           "href": "./ut05/index.html"
         },
         {
-          "label": "5.1 Tema 0. Introducció a les base de dades.",
+          "label": "5.1 Fonaments de la Imatge Digital: Ràster vs Vectorial, Resolució i Models de Color",
           "href": "./ut05/ut0501.html"
         },
         {
-          "label": "5.2 Tema 1. Sistemas Gestores de Base de Datos (vers",
+          "label": "5.2 Retoc Fotogràfic, Eines de Selecció i Ajust Tonal amb GIMP",
           "href": "./ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Treball Avançat amb Capes, Màscares de Capa i Canal Alfa a GIMP",
+          "href": "./ut05/ut0503.html"
+        },
+        {
+          "label": "5.4 Disseny Vectorial amb Inkscape: Corbes de Bézier, Nodes i Operacions Booleanes",
+          "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Formats Gràfics, Algorismes de Compressió i Optimització per a Web",
+          "href": "./ut05/ut0505.html"
         }
       ]
     },
     {
-      "summary": "UD6 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)",
+      "summary": "UD6 — Presentacions Multimèdia i Ofimàtica al Núvol: Google Workspace i M365",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
           "href": "./ut06/index.html"
         },
         {
-          "label": "6.1 Exemple_inicial_Classe_ER",
+          "label": "6.1 Disseny de Presentacions Eficaces: Estructura Narrativa i Patrons de Diapositives",
           "href": "./ut06/ut0601.html"
         },
         {
-          "label": "6.2 Tema 2. Model Entitat-Relació (COMPLET)",
+          "label": "6.2 Elements Multimèdia, Animacions Controlades, Transicions i Botons d'Acció",
           "href": "./ut06/ut0602.html"
         },
         {
-          "label": "6.3 Tema 2. Model Entitat-Relació (RESUMEN)",
+          "label": "6.3 Ecosistemes Ofimàtics al Núvol: Google Workspace, M365 i Emmagatzematge",
           "href": "./ut06/ut0603.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — BDA. Model RELACIONAL (Segona part)",
-      "items": [
-        {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html"
         },
         {
-          "label": "7.1 Tema 2. Model Relacional (2ª part)",
-          "href": "./ut07/ut0701.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD8 — BDA. Base de Datos. TAULES",
-      "items": [
-        {
-          "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html"
+          "label": "6.4 Treball Col·laboratiu en Temps Real: Coautoria, Historial de Versions i Permisos",
+          "href": "./ut06/ut0604.html"
         },
         {
-          "label": "8.1 Tema 3. TAULES ACCESS",
-          "href": "./ut08/ut0801.html"
-        },
-        {
-          "label": "8.2 Tema 3. Integridad Referencial",
-          "href": "./ut08/ut0802.html"
-        },
-        {
-          "label": "8.3 DEFINICION Mascara entrada_Regla validación",
-          "href": "./ut08/ut0803.html"
-        },
-        {
-          "label": "8.4 Ejemplos reglas de validación",
-          "href": "./ut08/ut0804.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD9 — BDA. Base de Datos. CONSULTES",
-      "items": [
-        {
-          "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.html"
-        },
-        {
-          "label": "9.1 Tema 4. CONSULTES",
-          "href": "./ut09/ut0901.html"
-        },
-        {
-          "label": "9.2 RESUMEN CONSULTES",
-          "href": "./ut09/ut0902.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD10 — BDA. Base de Datos. FORMULARIS",
-      "items": [
-        {
-          "label": "📘 UD10 Completa (1 pàgina)",
-          "href": "./ut10/index.html"
-        },
-        {
-          "label": "10.1 Tema 5. FORMULARIS",
-          "href": "./ut10/ut1001.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD11 — BDA. Base de Datos. INFORMES",
-      "items": [
-        {
-          "label": "📘 UD11 Completa (1 pàgina)",
-          "href": "./ut11/index.html"
-        },
-        {
-          "label": "11.1 Tema 6. INFORMES",
-          "href": "./ut11/ut1101.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD12 — BDA. Base de Datos. MACROS",
-      "items": [
-        {
-          "label": "📘 UD12 Completa (1 pàgina)",
-          "href": "./ut12/index.html"
-        },
-        {
-          "label": "12.1 Tema 7. MACROS",
-          "href": "./ut12/ut1201.html"
-        },
-        {
-          "label": "12.2 Abrir Form sin Abrir Access",
-          "href": "./ut12/ut1202.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD13 — GIMP",
-      "items": [
-        {
-          "label": "📘 UD13 Completa (1 pàgina)",
-          "href": "./ut13/index.html"
-        },
-        {
-          "label": "13.1 Tema 1: Imatge Digital",
-          "href": "./ut13/ut1301.html"
-        },
-        {
-          "label": "13.2 Tema 2. Imatge vectorial (Inkscape)",
-          "href": "./ut13/ut1302.html"
+          "label": "6.5 Gestió de Correu Corporatiu, Calendaris Compartits, Contactes i Compliment RGPD",
+          "href": "./ut06/ut0605.html"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }
