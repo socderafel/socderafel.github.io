@@ -31,15 +31,12 @@ is_landing: true
       <a href="#biblioteca" class="btn-hero-secondary">
         <span>📚 Catàleg de Cicles Formatius</span>
       </a>
-      <a href="./biblioteca-cicles/03_DAW_DAM/1daw-dam-bbdd-bases-dades/" class="btn-hero-secondary" style="border-color: #0284c7; color: #0284c7 !important;">
-        <span>🗄️ Nou: Bases de Dades (BBDD)</span>
-      </a>
     </div>
 
     <!-- Stats Ribbon -->
     <div class="hero-stats-grid">
       <div class="hero-stat-card">
-        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-num">3</div>
         <div class="hero-stat-label">Assignatures Actives</div>
         <div class="hero-stat-desc">Grups impartits el curs 2026/2027</div>
       </div>
@@ -125,32 +122,7 @@ is_landing: true
         </a>
       </div>
 
-      <!-- Card 3: Bases de Dades (BBDD) -->
-      <div class="course-card accent-cyan">
-        <div>
-          <div class="course-card-top">
-            <span class="course-stage-badge">1r DAW / DAM / ASIX · Grau Superior</span>
-            <span class="course-status-pill" style="color: #0284c7;">✨ Nou mòdul integrat</span>
-          </div>
-          <h3 class="course-card-title">Bases de Dades (BBDD)</h3>
-          <p class="course-card-desc">
-            Disseny conceptual Entitat-Relació (E/R), pas al model relacional i normalització (1FN-3FN). Llenguatge SQL complet: DDL (creació), DML (manipulació), consultes DQL avançades, triggers PL/SQL, procediments i bases NoSQL amb MongoDB.
-          </p>
-          <div class="course-tags-row">
-            <span class="course-tag">8 Unitats (UD1-UD8)</span>
-            <span class="course-tag">Model E/R</span>
-            <span class="course-tag">MySQL / MariaDB</span>
-            <span class="course-tag">SQL Avançat</span>
-            <span class="course-tag">MongoDB NoSQL</span>
-          </div>
-        </div>
-        <a href="./biblioteca-cicles/03_DAW_DAM/1daw-dam-bbdd-bases-dades/" class="course-btn">
-          <span>Accedir a Bases de Dades</span>
-          <span class="course-btn-arrow">→</span>
-        </a>
-      </div>
-
-      <!-- Card 4: Projecte Intermodular -->
+      <!-- Card 3: Projecte Intermodular -->
       <div class="course-card accent-amber">
         <div>
           <div class="course-card-top">
@@ -170,30 +142,6 @@ is_landing: true
         </div>
         <a href="./projecte-intermodular/" class="course-btn">
           <span>Accedir al Projecte Intermodular</span>
-          <span class="course-btn-arrow">→</span>
-        </a>
-      </div>
-
-      <!-- Card 5: Instal·lació de Xarxes (IMX) -->
-      <div class="course-card accent-purple">
-        <div>
-          <div class="course-card-top">
-            <span class="course-stage-badge">2n FPB · Informàtica d'Oficina</span>
-            <span class="course-status-pill">En curs</span>
-          </div>
-          <h3 class="course-card-title">Instal·lació i Manteniment de Xarxes</h3>
-          <p class="course-card-desc">
-            Muntatge de cablejat estructurat Cat.6 i connectors RJ-45, armaris rack i preses de xarxa. Simulació de topologies amb Cisco Packet Tracer, adreçament IPv4 i màscares, encaminament bàsic, punts d'accés Wi-Fi i seguretat local.
-          </p>
-          <div class="course-tags-row">
-            <span class="course-tag">9 Unitats (UD1-UD9)</span>
-            <span class="course-tag">Cisco Packet Tracer</span>
-            <span class="course-tag">Cablejat UTP</span>
-            <span class="course-tag">IPv4 Subnetting</span>
-          </div>
-        </div>
-        <a href="./biblioteca-cicles/01_FP_Basica/2fpb-imx-instal-lacio-xarxes/" class="course-btn">
-          <span>Accedir a Xarxes (IMX)</span>
           <span class="course-btn-arrow">→</span>
         </a>
       </div>
@@ -504,9 +452,7 @@ is_landing: true
         <ul class="footer-links">
           <li><a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/">Ciències Aplicades 1</a></li>
           <li><a href="./programacio/">Programació en Java</a></li>
-          <li><a href="./biblioteca-cicles/03_DAW_DAM/1daw-dam-bbdd-bases-dades/">Bases de Dades (BBDD)</a></li>
           <li><a href="./projecte-intermodular/">Projecte Intermodular</a></li>
-          <li><a href="./biblioteca-cicles/01_FP_Basica/2fpb-imx-instal-lacio-xarxes/">Instal·lació de Xarxes (IMX)</a></li>
         </ul>
       </div>
 
