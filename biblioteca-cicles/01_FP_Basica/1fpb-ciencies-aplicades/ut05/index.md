@@ -838,7 +838,7 @@ Introdueix els teus resultats numèrics i comprova immediatament si la teua resp
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
-    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
+    <button type="button" class="btn-aules-dl" data-module="CA" data-unit="UD05" data-activity="Global">📄 Descarregar Comprovant (.pdf)</button>
   </div>
   <div class="aules-toast"></div>
 </div>
