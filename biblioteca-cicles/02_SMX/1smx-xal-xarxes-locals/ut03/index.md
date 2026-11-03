@@ -1,244 +1,189 @@
 ---
 layout: default
-title: "UD3 — Interconnexió de la Xarxa, Adreçament IPv4 i Subnetting"
+title: "UD3: Interconnexió de Xarxes, Adreçament IPv4 i Subnetting — Xarxes Locals"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD3"
+prev_url: "../ut02/index.md"
+prev_label: "◀ UD2 Arquitectura i Cablejat"
+next_url: "../ut04/index.md"
+next_label: "UD4 Equips, Wi-Fi i VLANs ▶"
 ---
 
-# 📘 UD3 — Interconnexió de la Xarxa, Adreçament IPv4 i Subnetting
-
-La **Unitat Didàctica 3** constitueix el bloc matemàtic i d'enginyeria de xarxes angular del mòdul. S'hi aprofundeix en l'adreçament lògic IPv4, les màscares de subxarxa de longitud fixa (FLSM), el càlcul d'adreces de xarxa i difusió (*broadcast*) mitjançant l'operació lògica AND, els rangs privats RFC 1918 i la tècnica de **subnetting** per optimitzar i segmentar espais d'adreces corporatius.
-
----
-
-## 🔢 Adreçament IPv4, Notació CIDR i Fórmules de Subnetting
-
-<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
-  <div style="text-align: center; margin-bottom: 15px;">
-    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
-    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Estructura de 32 Bits, Rangs RFC 1918, Operació AND i Divisió en Subxarxes</h3>
-    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Lògica binària, càlcul de xarxa / broadcast i fórmules de dimensionament de hosts útils</p>
+<div class="interactive-progress-tracker" data-unit="XAL-UD03" data-topic="index" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:14px 18px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <span style="font-size:1.3rem;">🌐</span>
+    <div>
+      <div style="font-weight:700;font-size:0.92rem;color:var(--text-main);">Unitat Didàctica 3: Interconnexió de Xarxes, Adreçament IPv4 i Subnetting</div>
+      <div style="font-size:0.8rem;color:var(--text-muted);">Índex General i Reptes Globals de Síntesi · 5 Apartats Formatius</div>
+    </div>
   </div>
-  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
-    <defs>
-      <linearGradient id="xalU3OctetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="xalU3RfcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="xalU3SubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="xalU3AndGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
-      </linearGradient>
-    </defs>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <span class="badge-som-xp" style="background:#e0f2fe;color:#0369a1;padding:4px 10px;border-radius:20px;font-size:0.8rem;font-weight:700;">+100 XP globals</span>
+  </div>
+</div>
 
-    <!-- Bloc 1: Estructura 32 bits -->
-    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#xalU3OctetGrad)" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="115" y="42" fill="#38bdf8" font-size="11" font-weight="bold" text-anchor="middle">🧩 ESTRUCTURA IPv4</text>
-    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">32 Bits en 4 Octets (Bytes)</text>
-    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
-    <text x="32" y="80" fill="#cbd5e1" font-size="8.5">• Format: 4 nombres (0 a 255)</text>
-    <text x="32" y="98" fill="#38bdf8" font-size="8.5" font-weight="bold">• 192 . 168 . 10 . 150 /24</text>
-    <rect x="28" y="108" width="174" height="26" rx="4" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
-    <text x="115" y="121" fill="#cbd5e1" font-size="7.5" text-anchor="middle">11000000.10101000.00001010.10010110</text>
-    <text x="32" y="150" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Network ID:</tspan> Bits de xarxa</text>
-    <text x="32" y="168" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Host ID:</tspan> Bits d'equip</text>
-    <text x="32" y="186" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">CIDR (/n):</tspan> Longitud màscara</text>
-    <text x="115" y="218" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Adreçament Global Únic</text>
+# Unitat Didàctica 3: Interconnexió de Xarxes, Adreçament IPv4 i Subnetting
 
-    <!-- Fletxa 1 -> 2 -->
-    <path d="M 210 115 L 235 115" stroke="#38bdf8" stroke-width="2"/>
+L'adreçament IP i la subdivisió en subxarxes és el nucli matemàtic i operatiu del mòdul de **Xarxes Locals**. En aquesta unitat s'aprèn a gestionar l'espai d'adreces IPv4: des de la seua estructura de 32 bits i classes històriques, passant per la normativa d'adreces privades **RFC 1918**, la notació **CIDR**, les fórmules de càlcul de subxarxes i hosts útils, fins a les tècniques avançades de **VLSM** i les comandes CLI de diagnòstic.
 
-    <!-- Bloc 2: Rangs Privats RFC 1918 -->
-    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#xalU3RfcGrad)" stroke="#c084fc" stroke-width="1.5"/>
-    <text x="335" y="42" fill="#c084fc" font-size="11" font-weight="bold" text-anchor="middle">🔒 RANGS RFC 1918</text>
-    <text x="335" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">IPs Privades No Encaminables</text>
-    <line x1="250" y1="63" x2="420" y2="63" stroke="#334155"/>
-    <text x="252" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Classe A:</tspan> `10.0.0.0/8`</text>
-    <text x="262" y="93" fill="#94a3b8" font-size="8">16,7 milions d'equips</text>
-    <text x="252" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Classe B:</tspan> `172.16.0.0/12`</text>
-    <text x="262" y="125" fill="#94a3b8" font-size="8">172.16.0.0 fins 172.31.255.255</text>
-    <text x="252" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Classe C:</tspan> `192.168.0.0/16`</text>
-    <text x="262" y="157" fill="#94a3b8" font-size="8">Blocs /24 estàndard per a llars</text>
-    <text x="252" y="176" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Loopback:</tspan> 127.0.0.1</text>
-    <text x="252" y="194" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f87171" font-weight="bold">APIPA:</tspan> 169.254.0.0/16</text>
-    <text x="335" y="218" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Reutilització via NAT</text>
+---
 
-    <!-- Fletxa 2 -> 3 -->
-    <path d="M 430 115 L 455 115" stroke="#c084fc" stroke-width="2"/>
+## 🗺️ Mapa Curricular de la Unitat 3
 
-    <!-- Bloc 3: Fórmules Subnetting -->
-    <rect x="460" y="20" width="190" height="210" rx="8" fill="url(#xalU3SubGrad)" stroke="#34d399" stroke-width="1.5"/>
-    <text x="555" y="42" fill="#34d399" font-size="11" font-weight="bold" text-anchor="middle">📐 FÓRMULES CLAU</text>
-    <text x="555" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Robar $s$ Bits de Host</text>
-    <line x1="470" y1="63" x2="640" y2="63" stroke="#334155"/>
-    <text x="472" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Subxarxes Creades:</tspan></text>
-    <text x="485" y="95" fill="#38bdf8" font-size="10" font-weight="bold">S = 2^s &ge; N</text>
-    <text x="472" y="115" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Hosts Útils per Subxarxa:</tspan></text>
-    <text x="485" y="130" fill="#f59e0b" font-size="10" font-weight="bold">H = 2^h - 2</text>
-    <text x="472" y="148" fill="#94a3b8" font-size="8">(-2 per Xarxa i Broadcast)</text>
-    <text x="472" y="168" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Salt de Xarxa (Delta):</tspan></text>
-    <text x="485" y="183" fill="#cbd5e1" font-size="9" font-weight="bold">Δ = 256 - Octet_Màscara</text>
-    <text x="555" y="218" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Segmentació Eficient</text>
+A continuació es detallen els 5 blocs de continguts que conformen la Unitat 3:
 
-    <!-- Fletxa 3 -> 4 -->
-    <path d="M 650 115 L 675 115" stroke="#34d399" stroke-width="2"/>
+| Apartat | Títol del Bloc Formatiu | Conceptes i Tecnologies Clau | Puntuació |
+| :--- | :--- | :--- | :---: |
+| [**3.1**](ut0301.md) | **Adreçament IPv4 i Classes** | Estructura 32 bits, octets, Net ID vs Host ID, Classes A, B, C, D i E. | `+75 XP` |
+| [**3.2**](ut0302.md) | **Adreces Privades RFC 1918** | Rangs privats (10.x, 172.16.x, 192.168.x), Loopback 127.0.0.1 i APIPA 169.254.x. | `+75 XP` |
+| [**3.3**](ut0303.md) | **Matemàtiques de Subnetting** | Notació CIDR (/24 a /30), fórmules $2^s$ subxarxes i $2^h - 2$ hosts útils. | `+75 XP` |
+| [**3.4**](ut0304.md) | **Càlculs Pràctics Pas a Pas** | Mètode del salt de xarxa ($256 - 	ext{octet}$), adreça de xarxa, broadcast i rang útil. | `+75 XP` |
+| [**3.5**](ut0305.md) | **VLSM i Diagnòstic CLI** | Màscares de longitud variable, comandes `ipconfig`, `ip a`, `ping` i `traceroute`. | `+75 XP` |
 
-    <!-- Bloc 4: Operació Lògica AND -->
-    <rect x="680" y="20" width="160" height="210" rx="8" fill="url(#xalU3AndGrad)" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="760" y="42" fill="#f59e0b" font-size="11" font-weight="bold" text-anchor="middle">⚙️ OPERACIÓ AND</text>
-    <text x="760" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Càlcul Lògic de Xarxa</text>
-    <line x1="690" y1="63" x2="830" y2="63" stroke="#334155"/>
-    <text x="692" y="80" fill="#cbd5e1" font-size="8.5">• Taula de veritat AND:</text>
-    <text x="702" y="93" fill="#94a3b8" font-size="8">1 AND 1 = 1 (Resta = 0)</text>
-    <text x="692" y="112" fill="#38bdf8" font-size="8.5" font-weight="bold">• IP AND Màscara =</text>
-    <text x="702" y="125" fill="#34d399" font-size="8.5" font-weight="bold">Adreça de Xarxa (Net ID)</text>
-    <text x="692" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">1a IP útil:</tspan> Net ID + 1</text>
-    <text x="692" y="162" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Broadcast:</tspan> Tots 1s host</text>
-    <text x="692" y="180" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Última útil:</tspan> Bcast - 1</text>
-    <text x="692" y="196" fill="#94a3b8" font-size="8">Validació local vs remota</text>
-    <text x="760" y="218" fill="#f59e0b" font-size="8.5" text-anchor="middle" font-weight="bold">Càlcul Matemàtic</text>
+---
 
-    <!-- Peu informatiu -->
-    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
-    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or del Subnetting: <tspan fill="#34d399" font-weight="bold">La primera adreça d'una subxarxa és la de xarxa i l'última és la de broadcast; cap d'elles s'assigna a un host.</tspan></text>
-    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">El càlcul del nombre de dispositius vàlids sempre compleix la relació matemàtica estricta H = 2^h - 2.</text>
-  </svg>
+## 📊 Infografia d'Anatomia d'un Octet i Subnetting
+
+```
+                          ANATOMIA DE L'OCTET CRÍTIC
+ ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
+ │ Bit 7   │ Bit 6   │ Bit 5   │ Bit 4   │ Bit 3   │ Bit 2   │ Bit 1   │ Bit 0   │
+ │ Pes 128 │ Pes 64  │ Pes 32  │ Pes 16  │ Pes 8   │ Pes 4   │ Pes 2   │ Pes 1   │
+ └─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┴─────────┘
+      │         │         │         │         │         │         │         │
+     /25       /26       /27       /28       /29       /30       /31       /32
+    .128      .192      .224      .240      .248      .252      .254      .255
+  Salt 128   Salt 64   Salt 32   Salt 16   Salt 8    Salt 4    Salt 2    Salt 1
+  126 hosts  62 hosts  30 hosts  14 hosts  6 hosts   2 hosts     -         -
+```
+
+---
+
+## Reptes Globals de Síntesi de la Unitat 3 (+100 XP)
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:1.4rem 0;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+    <strong style="color:var(--text-main);font-size:1.02rem;">Repte Global 1: Diagnòstic d'error d'adreçament a l'aula</strong>
+    <span class="badge-points" style="background:rgba(59,130,246,0.12);color:#2563eb;padding:3px 9px;border-radius:12px;font-size:0.75rem;font-weight:700;">+25 XP</span>
+  </div>
+  <p style="margin:0 0 12px 0;font-size:0.92rem;color:var(--text-main);">Dos equips de la mateixa aula estan connectats al mateix switch. L'equip A té la IP <code>192.168.1.50/24</code> i l'equip B té la IP <code>192.168.2.50/24</code>. Poden comunicar-se directament sense passar per un router?</p>
+  <div class="challenge-options" style="display:flex;flex-direction:column;gap:8px;">
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q1" value="0"> No, perquè tenen porcions de xarxa diferents (192.168.1.0 vs 192.168.2.0); necessiten obligatòriament un router que encamine el tràfic entre ambdues xarxes.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q1" value="1"> Sí, perquè estan connectats físicament al mateix switch i la IP és indiferent.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q1" value="2"> Sí, perquè ambdós tenen el número 50 al final.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q1" value="3"> Només si el cable és de fibra òptica.
+    </label>
+  </div>
+  <div style="margin-top:14px;display:flex;align-items:center;gap:12px;">
+    <button class="btn-check" data-correct="0" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem;">Comprova la Resposta</button>
+    <span class="feedback-msg" style="font-size:0.85rem;font-weight:600;"></span>
+  </div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:1.4rem 0;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+    <strong style="color:var(--text-main);font-size:1.02rem;">Repte Global 2: Càlcul ràpid de xarxa i broadcast</strong>
+    <span class="badge-points" style="background:rgba(59,130,246,0.12);color:#2563eb;padding:3px 9px;border-radius:12px;font-size:0.75rem;font-weight:700;">+25 XP</span>
+  </div>
+  <p style="margin:0 0 12px 0;font-size:0.92rem;color:var(--text-main);">Un ordinador té la IP <code>172.16.20.80/27</code>. Quina és la primera IP útil i quina és l'adreça de difusió d'aquesta subxarxa (salt 32)?</p>
+  <div class="challenge-options" style="display:flex;flex-direction:column;gap:8px;">
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q2" value="0"> Primera útil: 172.16.20.65; Broadcast: 172.16.20.95 (la subxarxa és la .64).
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q2" value="1"> Primera útil: 172.16.20.1; Broadcast: 172.16.20.255.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q2" value="2"> Primera útil: 172.16.20.81; Broadcast: 172.16.20.100.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q2" value="3"> Primera útil: 172.16.20.0; Broadcast: 172.16.20.128.
+    </label>
+  </div>
+  <div style="margin-top:14px;display:flex;align-items:center;gap:12px;">
+    <button class="btn-check" data-correct="0" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem;">Comprova la Resposta</button>
+    <span class="feedback-msg" style="font-size:0.85rem;font-weight:600;"></span>
+  </div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:1.4rem 0;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+    <strong style="color:var(--text-main);font-size:1.02rem;">Repte Global 3: Motiu de la reserva de dues adreces per subxarxa</strong>
+    <span class="badge-points" style="background:rgba(59,130,246,0.12);color:#2563eb;padding:3px 9px;border-radius:12px;font-size:0.75rem;font-weight:700;">+25 XP</span>
+  </div>
+  <p style="margin:0 0 12px 0;font-size:0.92rem;color:var(--text-main);">Per quina raó tècnica no es pot assignar l'adreça <code>192.168.10.127</code> a una impressora si la màscara és <code>255.255.255.128</code> (/25)?</p>
+  <div class="challenge-options" style="display:flex;flex-direction:column;gap:8px;">
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q3" value="0"> Perquè amb salt 128, la .127 és l'adreça de difusió (broadcast) de la primera subxarxa (tots els bits de host a 1).
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q3" value="1"> Perquè el número 127 està prohibit per llei en impressores.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q3" value="2"> Perquè és una adreça de la NASA.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q3" value="3"> Perquè només es permeten números menors de 100.
+    </label>
+  </div>
+  <div style="margin-top:14px;display:flex;align-items:center;gap:12px;">
+    <button class="btn-check" data-correct="0" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem;">Comprova la Resposta</button>
+    <span class="feedback-msg" style="font-size:0.85rem;font-weight:600;"></span>
+  </div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:1.4rem 0;">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+    <strong style="color:var(--text-main);font-size:1.02rem;">Repte Global 4: Economia d'adreces amb VLSM</strong>
+    <span class="badge-points" style="background:rgba(59,130,246,0.12);color:#2563eb;padding:3px 9px;border-radius:12px;font-size:0.75rem;font-weight:700;">+25 XP</span>
+  </div>
+  <p style="margin:0 0 12px 0;font-size:0.92rem;color:var(--text-main);">Quin és el benefici primordial d'implementar VLSM en una xarxa corporativa que conté subxarxes d'usuaris i diversos enllaços WAN punt a punt?</p>
+  <div class="challenge-options" style="display:flex;flex-direction:column;gap:8px;">
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q4" value="0"> Evitar el malbaratament d'adreces IP assignant a cada segment una màscara a mida (per exemple /30 per a enllaços de 2 routers en compte de malgastar una /24 de 254 hosts).
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q4" value="1"> Fer que els cables de xarxa funcionen al doble de velocitat física.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q4" value="2"> Eliminar la necessitat de comprar switches.
+    </label>
+    <label style="display:flex;align-items:center;gap:10px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:0.88rem;">
+      <input type="radio" name="cx3g_q4" value="3"> Permetre que els equips naveguen sense necessitat de router.
+    </label>
+  </div>
+  <div style="margin-top:14px;display:flex;align-items:center;gap:12px;">
+    <button class="btn-check" data-correct="0" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem;">Comprova la Resposta</button>
+    <span class="feedback-msg" style="font-size:0.85rem;font-weight:600;"></span>
+  </div>
 </div>
 
 ---
 
-## 📊 Taula de Subxarxes de Longitud Fixa (FLSM): /24 a /30
-
-| Màscara CIDR | Màscara Decimal Puntejada | Bits de Host ($h$) | Total Adreces ($2^h$) | Hosts Útils ($2^h - 2$) | Sal de Xarxa ($\Delta$) | Ús Típic |
-| :---: | :--- | :---: | :---: | :---: | :---: | :--- |
-| **/24** | `255.255.255.0` | 8 | 256 | **254** | 256 | Xarxa local d'oficina o aula estàndard. |
-| **/25** | `255.255.255.128` | 7 | 128 | **126** | 128 | Divisió en 2 departaments mitjans. |
-| **/26** | `255.255.255.192` | 6 | 64 | **62** | 64 | Divisió en 4 aules o seccions de 50 equips. |
-| **/27** | `255.255.255.224` | 5 | 32 | **30** | 32 | Xarxa de departament xicotet o servidors locals. |
-| **/28** | `255.255.255.240` | 4 | 16 | **14** | 16 | VLAN de gestió d'equips, impressores o càmeres IP. |
-| **/29** | `255.255.255.248` | 3 | 8 | **6** | 8 | Zona desmilitaritzada (DMZ) xicoteta de servidors web. |
-| **/30** | `255.255.255.252` | 2 | 4 | **2** | 4 | **Enllaços punt a punt entre dos encaminadors (WAN).** |
-
----
-
-## 📑 Continguts i Apartats de la Unitat
-
-| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
-| :---: | :--- | :--- | :---: |
-| **3.1** | [**Interconnexió d'Equips en Xarxes Locals**](./ut0301.md) | Configuració de targetes IP estàtiques i dinàmiques, passarel·les i DNS | [**⚙️ Configurar Adaptadors →**](./ut0301.md) |
-| **3.5** | [**Classificació d'Adreces IP**](./ut0305.md) | Classes històriques A, B, C, D (Multicast), E i rangs privats RFC 1918 | [**📋 Classificar Rangs →**](./ut0305.md) |
-| **3.6** | [**L'Operació Lògica AND**](./ut0306.md) | Càlcul de la xarxa origen i destinació mitjançant màscara de subxarxa | [**🧠 Dominar Lògica AND →**](./ut0306.md) |
-| **3.9** | [**Fonaments de Subnetting**](./ut0309.md) | Divisió d'espais de xarxa, càlcul de bits prestats i planificació corporativa | [**📐 Fórmules Subnetting →**](./ut0309.md) |
-| **3.17** | [**Guia Pràctica de Subnetting Classe C**](./ut0317.md) | Resolució d'exercicis tipus examen pas a pas amb taules completes | [**📝 Resoldre Exercicis →**](./ut0317.md) |
-
----
-
-## 🎯 Resultats d'Aprenentatge Vinculats
-- **RA3:** Interconnecta equips en xarxes locals configurant adaptadors, paràmetres de nivell de xarxa (adreçament IPv4 i subnetting) i comprovant la connectivitat.
-- **Criteris d'Avaluació:**
-  - S'han convertit adreces i màscares entre representació binària, decimal puntejada i notació prefixada CIDR.
-  - S'ha executat l'operació AND lògica per a identificar l'adreça de xarxa i broadcast d'un node.
-  - S'han calculat i planificat subxarxes FLSM optimitzant l'assignació d'adreces a hosts.
-
----
-
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
-
-1. **Projecte de Subnetting FLSM per a 4 Departaments:**
-   - Una acadèmia de formació rep el bloc d'adreces de xarxa de Classe C privada `192.168.50.0/24`.
-   - Cal crear **4 subxarxes independents** per als següents departaments:
-     - Subxarxa 0: Administració (requereix 25 hosts).
-     - Subxarxa 1: Aula Informàtica 1 (requereix 28 hosts).
-     - Subxarxa 2: Aula Informàtica 2 (requereix 28 hosts).
-     - Subxarxa 3: Professors i Servidors (requereix 15 hosts).
-   - **Preguntes de desenvolupament matemàtic:**
-     - Quants bits cal manllevar ($s$) a la porció de host per aconseguir $2^s \ge 4$?
-     - Quina és la nova màscara en format CIDR i en format decimal puntejat?
-     - Quants bits queden per a host ($h$) i quants hosts útils admet cada subxarxa ($2^h - 2$)?
-     - Quin és el valor del salt de xarxa ($\Delta = 256 - \text{octet\_màscara}$)?
-     - Elabora la taula completa amb les 4 subxarxes indicant: Identificador de Xarxa, Primera IP Útil, Última IP Útil, Adreça de Difusió (*Broadcast*) i Màscara de subxarxa.
-
-2. **Càlcul Binari de l'Operació Lògica AND:**
-   - Un ordinador té assignada la configuració IP: `172.26.138.75 / 21`.
-   - **Preguntes d'anàlisi:**
-     - Determina quants bits corresponen a la màscara en el tercer octet i escriu la màscara de subxarxa en format decimal puntejat.
-     - Converteix el tercer octet de la IP ($138$) i el tercer octet de la màscara a binari de 8 bits.
-     - Executa l'operació lògica bit a bit `138 AND Màscara` i converteix el resultat a decimal per trobar l'adreça exacta de xarxa (*Network ID*).
-     - Determina l'adreça de difusió (*Broadcast Address*) i el rang complet d'adreces útils per a equips.
-
-3. **Optimització d'Enllaços WAN Punt a Punt:**
-   - Dos encaminadors corporatius a València i Alacant s'interconnecten mitjançant una línia dedicada punt a punt.
-   - **Preguntes de disseny:**
-     - Si s'utilitzara una màscara clàssica `/24` per a aquest enllaç, quantes adreces IP es malgastarien?
-     - Demostra per quina raó una màscara `/30` ($255.255.255.252$) és l'elecció estàndard perfecta en xarxes tradicionals (calcula el nombre de hosts útils).
-     - A partir de la xarxa base `10.250.0.0/30`, escriu l'adreça de xarxa, les dues adreces assignables a les interfícies dels dos routers i l'adreça de broadcast.
-
----
-
-### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
-
-#### Repte 1: Configuració d'Adreçament Estàtic i DNS amb PowerShell
-1. Inicia PowerShell com a Administrador i identifica el nom de l'adaptador Ethernet de laboratori:
-   ```powershell
-   Get-NetAdapter | Select-Object Name, Status, LinkSpeed
-   ```
-2. Assigna una adreça IP estàtica de la Subxarxa 0 (`192.168.50.10/26`) amb passarel·la `192.168.50.1`:
-   ```powershell
-   New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress "192.168.50.10" -PrefixLength 26 -DefaultGateway "192.168.50.1"
-   ```
-3. Configura els servidors DNS preferit i secundari:
-   ```powershell
-   Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("1.1.1.1","8.8.8.8")
-   ```
-4. Comprova la configuració amb `Get-NetIPConfiguration`.
-
-#### Repte 2: Diagnòstic d'Adreçament i Taula d'Encaminament en Linux
-1. En un terminal de Linux, afegeix una adreça d'una subxarxa a la interfície de pràctiques:
-   ```bash
-   sudo ip addr add 192.168.50.66/26 dev eth0
-   ```
-2. Consulta les adreces i màscares actives a la interfície:
-   ```bash
-   ip -4 addr show dev eth0
-   ```
-3. Comprova la taula d'encaminament del nucli per verificar com el sistema determina quines xarxes són locals (*link*) i quines requereixen passar per la passarel·la per defecte (*default via*):
-   ```bash
-   ip route show
-   ```
-
-#### Repte 3: Desplegament de Subnetting en Cisco Packet Tracer
-1. Crea una topologia amb 1 Encaminador (Router 2911), 2 Commutadors (Switch 2960) i 2 PCs a cada commutador.
-2. Configura la interfície `GigabitEthernet 0/0` del router per a la Subxarxa 0:
-   ```text
-   Router(config)# interface GigabitEthernet 0/0
-   Router(config-if)# ip address 192.168.50.1 255.255.255.192
-   Router(config-if)# no shutdown
-   ```
-3. Configura la interfície `GigabitEthernet 0/1` del router per a la Subxarxa 1:
-   ```text
-   Router(config)# interface GigabitEthernet 0/1
-   Router(config-if)# ip address 192.168.50.65 255.255.255.192
-   Router(config-if)# no shutdown
-   ```
-4. Configura els PCs de cada subxarxa amb la seua IP corresponent i passarel·la predeterminada.
-5. Executa una prova de connectivitat `ping` entre el PC de la Subxarxa 0 i el PC de la Subxarxa 1 verificant que el router encamina els paquets amb èxit entre les dues subxarxes.
-
----
-
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
-
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Càlcul Matemàtic de Subnetting FLSM** | Calcula amb precisió bits manllevats, salts de xarxa $\Delta$, adreces de xarxa, broadcast i hosts útils per a qualsevol prefix CIDR. | Construeix la taula de subxarxes per a màscares /26 o /27 però comet xicotets errors en determinar l'adreça de broadcast. | No comprèn per què cal restar 2 adreces ($2^h - 2$) o assigna adreces de xarxa a ordinadors. |
-| **Operació Lògica AND i Rangs RFC 1918** | Executa en binari l'operació AND bit a bit sobre qualsevol octet i distingeix amb claredat rangs privats, públics, loopback i APIPA. | Identifica si una IP és privada o pública però no sap calcular l'operació AND en binari quan la màscara no és /24. | Confon adreces privades amb públiques o creu que una adreça APIPA (`169.254.x.x`) té connexió a Internet. |
-| **Configuració i Verificació CLI d'Adaptadors** | Configura adaptadors estàtics i DNS mitjançant comandes PowerShell i Linux, verificant rutes i comprovant connectivitat amb èxit. | Configura la IP correctament des de la consola però oblida establir la màscara o la passarel·la per defecte. | Només sap assignar adreces IP mitjançant l'assistent gràfic de Windows i desconeix com veure la IP en consola. |
+<div class="aules-delivery-card" data-module="XAL" style="background:var(--bg-card);border:1.5px solid #0284c7;border-radius:10px;padding:20px;margin-top:2rem;">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+    <span style="font-size:1.6rem;">📋</span>
+    <div>
+      <h3 style="margin:0;color:var(--text-main);font-size:1.1rem;">Lliurament de Projecte Global a Aules — UD3 Projecte de Subnetting</h3>
+      <p style="margin:2px 0 0 0;font-size:0.84rem;color:var(--text-muted);">Mòdul: Xarxes Locals (XAL) · Cicle: 1r SMX</p>
+    </div>
+  </div>
+  <p style="font-size:0.88rem;color:var(--text-main);margin:0 0 14px 0;">
+    Dissenya el pla d'adreçament IP complet mitjançant VLSM per a la xarxa d'un centre de formació professional a partir del bloc <code>172.20.0.0/16</code>. Es requereixen 4 subxarxes: Aula 1 (100 equips), Aula 2 (50 equips), Departaments (20 equips) i Gestió/Direcció (10 equips), a més de 2 enllaços punt a punt entre routers. Descarrega el model oficial en PDF, elabora la memòria de càlculs i puja-la a Aules.
+  </p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <button class="btn-aules-download" data-format="pdf" style="background:#0284c7;color:#fff;border:none;padding:8px 18px;border-radius:6px;font-weight:600;font-size:0.85rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px;">
+      <span>📥</span> Descarregar Guia de Projecte en PDF
+    </button>
+    <a href="https://aules.edu.gva.es" target="_blank" rel="noopener noreferrer" style="background:var(--border);color:var(--text-main);padding:8px 18px;border-radius:6px;font-weight:600;font-size:0.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
+      <span>🌐</span> Obre Aules GVA
+    </a>
+  </div>
+</div>
