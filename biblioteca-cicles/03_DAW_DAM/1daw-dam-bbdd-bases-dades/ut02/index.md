@@ -4,67 +4,131 @@ title: "UD2: Disseny Conceptual: Model Entitat-Relació (E/R) — Bases de Dades
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Bases de Dades · UD2"
 prev_url: "../ut01/index.html"
-prev_label: "⬅️ UD1"
+prev_label: "⬅️ UD1 Sistemes SGBD"
 next_url: "ut0201.html"
 next_label: "Començar 2.1 ➡️"
 ---
 
 # UD2: Disseny Conceptual: Model Entitat-Relació (E/R)
 
-Benvingut/da a la **UD2: Disseny Conceptual: Model Entitat-Relació (E/R)** del mòdul professional de **Bases de Dades** per als cicles formatius de Grau Superior en **Desenvolupament d'Aplicacions Web (DAW)**, **Desenvolupament d'Aplicacions Multiplataforma (DAM)** i **Administració de Sistemes Informàtics en Xarxa (ASIX)**.
-
-<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
-<svg viewBox="0 0 860 220" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
-  <defs>
-    <linearGradient id="bg-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="700" letter-spacing="1">UD2: DISSENY CONCEPTUAL: MODEL ENTITAT-RELACIÓ (E/R)</text>
-  <text x="430" y="58" text-anchor="middle" fill="#94a3b8" font-size="12">1r DAW / DAM / ASIX · Mòdul de Bases de Dades · Curs 26/27</text>
-  <g transform="translate(40, 80)">
-    <rect width="240" height="110" rx="8" fill="url(#bg-grad-2)" stroke="#38bdf8" stroke-width="1.2"/>
-    <text x="20" y="32" fill="#38bdf8" font-size="14" font-weight="700">1. Fonaments i Teoria</text>
-    <text x="20" y="58" fill="#cbd5e1" font-size="11">Conceptes clau, estàndards,</text>
-    <text x="20" y="76" fill="#cbd5e1" font-size="11">normatives i especificacions tècniques.</text>
-  </g>
-  <g transform="translate(310, 80)">
-    <rect width="240" height="110" rx="8" fill="url(#bg-grad-2)" stroke="#818cf8" stroke-width="1.2"/>
-    <text x="20" y="32" fill="#818cf8" font-size="14" font-weight="700">2. Pràctica en Servidor</text>
-    <text x="20" y="58" fill="#cbd5e1" font-size="11">Execució real de sentències SQL,</text>
-    <text x="20" y="76" fill="#cbd5e1" font-size="11">scripts, procediments i consultes.</text>
-  </g>
-  <g transform="translate(580, 80)">
-    <rect width="240" height="110" rx="8" fill="url(#bg-grad-2)" stroke="#34d399" stroke-width="1.2"/>
-    <text x="20" y="32" fill="#34d399" font-size="14" font-weight="700">3. Validació i Entrega</text>
-    <text x="20" y="58" fill="#cbd5e1" font-size="11">Reptes interactius gamificats (+25 pts)</text>
-    <text x="20" y="76" fill="#cbd5e1" font-size="11">i comprovant oficial per a Aules.</text>
-  </g>
-</svg>
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <span style="font-weight:700; color:var(--primary);">Progrés de la Unitat Didàctica 2</span>
+    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes superats (0%)</div>
+  </div>
+  <div style="width:120px; height:10px; background:var(--border); border-radius:5px; overflow:hidden;">
+    <div class="progress-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+  </div>
 </div>
 
-## 🎯 Resultat d'Aprenentatge Oficial
-> **RA6: Dissenya bases de dades aplicant regles de normalització i garantint la integritat de les dades.**
+Benvingut/da a la **UD2: Disseny Conceptual: Model Entitat-Relació (E/R)** del mòdul professional de **Bases de Dades**.
+
+El disseny d'una base de dades és una de les fases més crítiques en l'enginyeria de programari. Si l'esquema conceptual conté errors d'origen, el sistema serà ineficient, generarà inconsistències i resultarà extremadament car de mantenir. En aquesta unitat dominarem el **Model Entitat-Relació (Peter Chen, 1976)** i les seues extensions (**EER**), l'estàndard gràfic universal per modelar la semàntica del món real.
 
 ---
 
-## 🗺️ Mapa de Continguts i Apartats de la Unitat
+## 🎯 Objectius i Resultats d'Aprenentatge (RA6)
 
-| Apartat | Descripció | Enllaç Directe |
-| :--- | :--- | :--- |
-| [`2.1 Metodologia de Disseny de Bases de Dades`](ut0201.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0201.html) |
-| [`2.2 Components del Model E/R: Entitats, Atributs i Dominis`](ut0202.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0202.html) |
-| [`2.3 Semàntica de les Relacions: Tipus de Correspondència (1:1, 1:N, M:N)`](ut0203.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0203.html) |
-| [`2.4 Eines Gràfiques de Modelatge Conceptual (Draw.io, DIA)`](ut0204.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0204.html) |
-| [`2.5 Restriccions sobre Relacions: Participació Total i Parcial`](ut0205.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0205.html) |
-| [`2.6 Model Entitat-Relació Estès (EER): Jerarquies, Especialització i Agregació`](ut0206.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0206.html) |
-| [`2.7 Quadern de Pràctiques de Modelatge E/R`](ut0207.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0207.html) |
+Segons el currículum oficial (Reials Decrets 453/2010 i 686/2010):
+- **RA6:** Dissenya bases de dades relacionals identificant els elements que les componen i aplicant tècniques de modelització conceptual (E/R i E/R estès).
+  - Reconèixer les fases del cicle de vida d'una base de dades (anàlisi de requeriments, disseny conceptual, disseny lògic i físic).
+  - Identificar entitats fortes, entitats febles i els seus atributs (simples, compostos, multivalorats i derivats).
+  - Determinar claus primàries, candidates i alternatives.
+  - Representar relacions binàries, recursives i n-àries amb les seues cardinalitats màximes i mínimes.
+  - Aplicar conceptes del model E/R estès: generalització, especialització, herència d'atributs i restriccions de disjunció i completitud.
+  - Transformar especificacions narratives del client en diagrames conceptuals rigorosos.
 
 ---
 
-## 💡 Metodologia i Avaluació
-1. **Comprensió Teòrica:** Estudi dels conceptes fonamentals, regles de modelatge i sintaxi estàndard SQL / NoSQL.
-2. **Desenvolupament Pràctic:** Resolució dels exercicis i reptes en entorns reals de laboratori (MariaDB, MySQL, MongoDB Compass).
-3. **Autoavaluació Gamificada:** Cada unitat disposa de reptes interactius amb puntuació (+25 pts) per comprovar els coneixements immediatament.
-4. **Lliurament Aules:** Utilitza el generador de comprovants oficials per a lliurar les tasques a la plataforma virtual del centre.
+## 📑 Apartats de la Unitat
+
+1. **[2.1 Fonaments del Disseny Conceptual i Cicle de Vida de les BD](ut0201.html)**
+   - Fases del cicle de vida: anàlisi de requeriments, disseny conceptual, lògic i físic. L'abstracció com a eina d'enginyeria.
+2. **[2.2 Entitats, Atributs i Tipus de Claus](ut0202.html)**
+   - Entitats regulars vs. febles (per existència i per identificació). Classificació d'atributs i elecció de claus primàries.
+3. **[2.3 Relacions, Tipus de Correspondència i Cardinalitats](ut0203.html)**
+   - Grau de la relació (binària, reflexiva, ternària). Cardinalitat màxima (1:1, 1:N, M:N) i cardinalitat mínima (0 o 1, participació opcional o obligatòria).
+4. **[2.4 Model Entitat-Relació Estès (EER): Jerarquies i Especialització](ut0204.html)**
+   - Superclasses i subclasses. Restriccions de disjunció (disjunta / solapada) i de completitud (total / parcial).
+5. **[2.5 Resolució de Casos Pràctics i Diagrames E/R Reals](ut0205.html)**
+   - Metodologia de resolució, anàlisi de textos narratius, comprovació de redundàncies, trampes de disseny (fan traps i chasm traps).
+
+---
+
+## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
+
+Posa a prova els teus coneixements de modelització conceptual resolent aquests 4 reptes de síntesi:
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 1: Fases de Disseny</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">En quina fase del disseny d'una base de dades es decideixen els tipus d'emmagatzematge físic, els índexs B-Tree i els paràmetres de disc de l'SGBD?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) En el disseny conceptual mitjançant diagrames E/R.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) En la fase de recopilació i anàlisi de requeriments d'usuari.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) En el disseny físic de la base de dades.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) En la fase de normalització a tercera forma normal.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 2: Entitats Febles</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Quina característica defineix de manera inconfusible una entitat feble per identificació en un diagrama E/R?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Que conté menys de tres atributs en el seu interior.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Que no té atributs propis suficients per formar una clau primària i necessita la clau de l'entitat forana de la qual depèn.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Que no es pot emmagatzemar en cap disc rígid magnètic.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Que només admet relacions de tipus molts a molts (M:N).</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 3: Cardinalitats de Relació</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Un hospital estableix que 'un metge pot tindre assignats diversos pacients (o cap), però cada pacient té assignat exactament un metge responsable'. Quina és la cardinalitat de la relació entre Metge i Pacient?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Molts a Molts (M:N).</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Un a Un (1:1).</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Un a Molts (1:N) des de Metge cap a Pacient.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Ternària amb participació parcial obligatòria.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 4: Jerarquies EER</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">En una jerarquia de generalització d'una universitat on PERSONA és la superclasse i ALUMNE i PROFESSOR són les subclasses, si una persona NO pot ser simultàniament alumne i professor, la jerarquia és:</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Solapada (overlapping).</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Disjunta (disjoint).</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Recursiva.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Feblesa total.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="aules-delivery-card" style="background:var(--bg-card); border:2px dashed var(--primary); border-radius:10px; padding:20px; margin-top:35px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+    <div>
+      <h3 style="margin:0 0 5px 0; color:var(--primary); font-size:1.15rem;">📋 Lliurament d'Activitats a Aules</h3>
+      <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">
+        En acabar de resoldre els reptes interactius d'aquest apartat, descarrega el justificant en PDF i puja'l a la tasca corresponent d'Aules.
+      </p>
+    </div>
+    <button class="btn-aules-download" onclick="window.print()" style="background:var(--primary); color:#fff; border:none; padding:10px 20px; border-radius:6px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
+      📥 Descarregar Justificant PDF
+    </button>
+  </div>
+</div>

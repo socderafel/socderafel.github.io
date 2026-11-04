@@ -4,71 +4,132 @@ title: "UD6: Consultes a Bases de Dades: SQL DQL — Bases de Dades"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Bases de Dades · UD6"
 prev_url: "../ut05/index.html"
-prev_label: "⬅️ UD5"
+prev_label: "⬅️ UD5 SQL DML i TCL"
 next_url: "ut0601.html"
 next_label: "Començar 6.1 ➡️"
 ---
 
 # UD6: Consultes a Bases de Dades: SQL DQL
 
-Benvingut/da a la **UD6: Consultes a Bases de Dades: SQL DQL** del mòdul professional de **Bases de Dades** per als cicles formatius de Grau Superior en **Desenvolupament d'Aplicacions Web (DAW)**, **Desenvolupament d'Aplicacions Multiplataforma (DAM)** i **Administració de Sistemes Informàtics en Xarxa (ASIX)**.
-
-<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
-<svg viewBox="0 0 860 220" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
-  <defs>
-    <linearGradient id="bg-grad-6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="700" letter-spacing="1">UD6: CONSULTES A BASES DE DADES: SQL DQL</text>
-  <text x="430" y="58" text-anchor="middle" fill="#94a3b8" font-size="12">1r DAW / DAM / ASIX · Mòdul de Bases de Dades · Curs 26/27</text>
-  <g transform="translate(40, 80)">
-    <rect width="240" height="110" rx="8" fill="url(#bg-grad-6)" stroke="#38bdf8" stroke-width="1.2"/>
-    <text x="20" y="32" fill="#38bdf8" font-size="14" font-weight="700">1. Fonaments i Teoria</text>
-    <text x="20" y="58" fill="#cbd5e1" font-size="11">Conceptes clau, estàndards,</text>
-    <text x="20" y="76" fill="#cbd5e1" font-size="11">normatives i especificacions tècniques.</text>
-  </g>
-  <g transform="translate(310, 80)">
-    <rect width="240" height="110" rx="8" fill="url(#bg-grad-6)" stroke="#818cf8" stroke-width="1.2"/>
-    <text x="20" y="32" fill="#818cf8" font-size="14" font-weight="700">2. Pràctica en Servidor</text>
-    <text x="20" y="58" fill="#cbd5e1" font-size="11">Execució real de sentències SQL,</text>
-    <text x="20" y="76" fill="#cbd5e1" font-size="11">scripts, procediments i consultes.</text>
-  </g>
-  <g transform="translate(580, 80)">
-    <rect width="240" height="110" rx="8" fill="url(#bg-grad-6)" stroke="#34d399" stroke-width="1.2"/>
-    <text x="20" y="32" fill="#34d399" font-size="14" font-weight="700">3. Validació i Entrega</text>
-    <text x="20" y="58" fill="#cbd5e1" font-size="11">Reptes interactius gamificats (+25 pts)</text>
-    <text x="20" y="76" fill="#cbd5e1" font-size="11">i comprovant oficial per a Aules.</text>
-  </g>
-</svg>
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <span style="font-weight:700; color:var(--primary);">Progrés de la Unitat Didàctica 6</span>
+    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes superats (0%)</div>
+  </div>
+  <div style="width:120px; height:10px; background:var(--border); border-radius:5px; overflow:hidden;">
+    <div class="progress-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+  </div>
 </div>
 
-## 🎯 Resultat d'Aprenentatge Oficial
-> **RA3: Consulta la informació continguda en bases de dades utilitzant el llenguatge d'interrogació (DQL).**
+Benvingut/da a la **UD6: Consultes a Bases de Dades: SQL DQL** del mòdul professional de **Bases de Dades**.
+
+L'extracció precisa de dades és l'operació més freqüent en qualsevol sistema d'informació, representant més del 80% de les consultes en aplicacions web i mòbils. El subllenguatge **DQL (Data Query Language)**, articulat al voltant de la poderosa sentència **`SELECT`**, permet des de filtratges senzills fins a anàlisis estadístiques complexes, combinacions multidimensionals de taules (`JOIN`), subconsultes correlacionades i optimització de plans d'execució.
 
 ---
 
-## 🗺️ Mapa de Continguts i Apartats de la Unitat
+## 🎯 Objectius i Resultats d'Aprenentatge (RA3)
 
-| Apartat | Descripció | Enllaç Directe |
-| :--- | :--- | :--- |
-| [`6.1 Estructura Bàsica d'una Consulta SQL: Clàusula SELECT i FROM`](ut0601.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0601.html) |
-| [`6.2 Consultes Simples: Filtratge amb WHERE i Operadors de Comparació`](ut0602.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0602.html) |
-| [`6.3 Operadors Especials (BETWEEN, IN, LIKE, IS NULL)`](ut0603.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0603.html) |
-| [`6.4 Camps Calculats, Àlies (AS), Ordenació (ORDER BY) i Limitació (LIMIT)`](ut0604.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0604.html) |
-| [`6.5 Consultes d'Agregat: Funcions de Resum (COUNT, SUM, AVG) i GROUP BY`](ut0605.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0605.html) |
-| [`6.6 Filtratge de Grups amb la Clàusula HAVING`](ut0606.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0606.html) |
-| [`6.7 Consultes Multitaula I: Composició Interna (INNER JOIN)`](ut0607.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0607.html) |
-| [`6.8 Consultes Multitaula II: Composició Externa (LEFT JOIN, RIGHT JOIN)`](ut0608.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0608.html) |
-| [`6.9 Subconsultes (Subqueries): Escalares, de Llista i Correlacionades`](ut0609.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0609.html) |
-| [`6.10 Vistes (CREATE VIEW) i Optimització de Consultes amb EXPLAIN`](ut0610.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0610.html) |
-| [`6.11 Quadern de Pràctiques DQL Avançat`](ut0611.html) | Teoria i aplicació pràctica | [Entrar ➡️](ut0611.html) |
+Segons el currículum oficial (Reials Decrets 453/2010 i 686/2010):
+- **RA3:** Consulta la informació emmagatzemada en una base de dades utilitzant assistents i llenguatges de consulta (DQL).
+  - Escriure consultes bàsiques amb clàusules de selecció, projecció, ordenació i paginació.
+  - Aplicar funcions d'agregació (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) i la clàusula `GROUP BY`.
+  - Diferenciar amb exactitud entre el filtratge de files (`WHERE`) i el filtratge d'agrupacions (`HAVING`).
+  - Dominar la combinació de dades entre múltiples taules mitjançant `INNER JOIN` i `OUTER JOIN` (LEFT, RIGHT, FULL).
+  - Resoldre problemes complexos mitjançant subconsultes i expressions de taula comunes (CTEs amb `WITH`).
+  - Combinar resultats amb operadors de conjunts (`UNION`, `INTERSECT`, `EXCEPT`).
+  - Analitzar el rendiment de consultes mitjançant `EXPLAIN ANALYZE`.
 
 ---
 
-## 💡 Metodologia i Avaluació
-1. **Comprensió Teòrica:** Estudi dels conceptes fonamentals, regles de modelatge i sintaxi estàndard SQL / NoSQL.
-2. **Desenvolupament Pràctic:** Resolució dels exercicis i reptes en entorns reals de laboratori (MariaDB, MySQL, MongoDB Compass).
-3. **Autoavaluació Gamificada:** Cada unitat disposa de reptes interactius amb puntuació (+25 pts) per comprovar els coneixements immediatament.
-4. **Lliurament Aules:** Utilitza el generador de comprovants oficials per a lliurar les tasques a la plataforma virtual del centre.
+## 📑 Apartats de la Unitat
+
+1. **[6.1 Estructura Bàsica de Consultes SQL DQL](ut0601.html)**
+   - Sintaxi `SELECT ... FROM ... WHERE`, àlies de camps, operadors relacionals, `LIKE`, `IN`, `BETWEEN`, `IS NULL`, `ORDER BY` i paginació amb `LIMIT` i `OFFSET`.
+2. **[6.2 Funcions d'Agregació i Agrupament de Dades](ut0602.html)**
+   - Resums estadístics (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`), clàusula `GROUP BY`, i filtratge d'agregacions mitjançant `HAVING`.
+3. **[6.3 Combinació de Taules: Joins Relacionals](ut0603.html)**
+   - Àlgebra relacional a la pràctica: `INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`, `FULL JOIN`, `CROSS JOIN` i autoreferències (*self-join*).
+4. **[6.4 Subconsultes i Expressions de Taula Comunes (CTEs)](ut0604.html)**
+   - Subconsultes escalars, correlacionades, predicats `EXISTS` / `NOT EXISTS`, i modularització amb `WITH` (CTEs).
+5. **[6.5 Operadors de Conjunts i Optimització de Consultes](ut0605.html)**
+   - `UNION` vs. `UNION ALL`, `INTERSECT`, `EXCEPT`. Lectura i interpretació de plans d'execució amb `EXPLAIN ANALYZE`.
+
+---
+
+## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
+
+Demostra la teua destresa analítica en consultes SQL resolent aquests 4 reptes de síntesi:
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 1: WHERE vs. HAVING</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Quin és el criteri exacte per utilitzar HAVING en lloc de WHERE en una consulta SQL?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) WHERE s'utilitza només per a lletres i HAVING per a números.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) WHERE filtra files individuals abans d'agrupar, mentre que HAVING filtra els grups resultants després d'aplicar GROUP BY i les funcions d'agregació.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) HAVING és una paraula obsoleta que ja no funciona en PostgreSQL.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) No hi ha cap diferència, són completament intercanviables.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 2: Comportament de LEFT JOIN</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Si fem un LEFT JOIN entre 'clients' (taula esquerra) i 'comandes' (taula dreta), què obtindrem per a aquells clients que mai han comprat res?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Eixos clients no apareixeran en el resultat de la consulta.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Apareixeran les dades del client amb les columnes de la comanda plenes de valors NULL.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) L'SGBD donarà un error de clau forana buida.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) S'inventarà una comanda amb preu zero.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 3: Subconsultes amb EXISTS</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Quin avantatge té utilitzar 'WHERE EXISTS (SELECT 1 FROM ...)' enfront de 'WHERE col IN (SELECT col FROM ...)' en taules molt grans?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) EXISTS s'atura tan prompte com troba la primera coincidència (avaluació de curtcircuit), resultant generalment molt més ràpid.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) EXISTS permet canviar la contrasenya de l'administrador.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) IN només admet números negatius.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) EXISTS ocupa menys espai a la memòria cau del disc rígid.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 4: Plans d'Execució EXPLAIN</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">En la sortida de la comanda 'EXPLAIN SELECT...', quin tipus d'accés indica que l'SGBD ha hagut de llegir totes les pàgines de la taula una a una perquè no ha trobat un índex adequat?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Index Scan.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Sequential Scan (Seq Scan / Full Table Scan).</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Hash Join.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Bitmap Index Scan.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="aules-delivery-card" style="background:var(--bg-card); border:2px dashed var(--primary); border-radius:10px; padding:20px; margin-top:35px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+    <div>
+      <h3 style="margin:0 0 5px 0; color:var(--primary); font-size:1.15rem;">📋 Lliurament d'Activitats a Aules</h3>
+      <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">
+        En acabar de resoldre els reptes interactius d'aquest apartat, descarrega el justificant en PDF i puja'l a la tasca corresponent d'Aules.
+      </p>
+    </div>
+    <button class="btn-aules-download" onclick="window.print()" style="background:var(--primary); color:#fff; border:none; padding:10px 20px; border-radius:6px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
+      📥 Descarregar Justificant PDF
+    </button>
+  </div>
+</div>

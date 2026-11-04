@@ -1,121 +1,60 @@
 ---
 layout: default
-title: "🗄️ Bases de Dades — 1r DAW / DAM / ASIX · Grau Superior"
+title: "Bases de Dades — Cicles Formatius Grau Superior (DAW / DAM / ASIX)"
 course_root: "."
-badge: "1r DAW / DAM / ASIX · Grau Superior · Curs 26/27"
+badge: "1r Curs · Mòdul Professional de Bases de Dades (BBDD)"
+next_url: "ut01/index.html"
+next_label: "Començar UT01: Sistemes SGBD ➡️"
 ---
 
-# 🗄️ Bases de Dades (SQL, Modelatge i NoSQL)
+# Bases de Dades
 
-Benvingut/da al portal del mòdul professional de **Bases de Dades**, comú als cicles formatius de Grau Superior en **Desenvolupament d'Aplicacions Web (DAW)**, **Desenvolupament d'Aplicacions Multiplataforma (DAM)** i **Administració de Sistemes Informàtics en Xarxa (ASIX)**.
+Benvingut/da al repositori formatiu de **Bases de Dades (BBDD)**, mòdul professional tronc comú de primer curs dels cicles formatius de Grau Superior en **Desenvolupament d'Aplicacions Web (DAW)**, **Desenvolupament d'Aplicacions Multiplataforma (DAM)** i **Administració de Sistemes Informàtics en Xarxa (ASIX)**, regulat pels Reials Decrets 453/2010 i 686/2010 (192 hores lectives oficials).
 
-Aquest curs proporciona una formació sòlida i pràctica: des del disseny conceptual mitjançant diagrames Entitat-Relació i la normalització matemàtica de taules, fins a la implementació en servidors relacionals (MySQL / MariaDB), la programació de procediments i disparadors (*triggers*), i el desplegament en tecnologies NoSQL orientades a documents (MongoDB).
-
-<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
-<svg viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
-  <defs>
-    <linearGradient id="g-dis" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-sql" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-prg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-nosql" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-
-  <text x="450" y="34" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="700" letter-spacing="1">ARQUITECTURA I CICLE DE VIDA DE LES BASES DE DADES (CURS 26/27)</text>
-  <text x="450" y="54" text-anchor="middle" fill="#94a3b8" font-size="12">1r DAW / 1r DAM / 1r ASIX · Modelatge Conceptual, Lògic, Físic, Llenguatge SQL, PL/SQL i Paradigmes NoSQL</text>
-
-  <!-- Bloc 1: Disseny i Modelatge -->
-  <g transform="translate(30, 75)">
-    <rect width="195" height="175" rx="10" fill="url(#g-dis)" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📐</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Modelatge &amp; E/R</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">UD1, UD2 i UD3</text>
-    <text x="15" y="86" fill="#cbd5e1" font-size="11">• Sistemes SGBD i ANSI/SPARC</text>
-    <text x="15" y="106" fill="#cbd5e1" font-size="11">• Model Entitat-Relació (E/R)</text>
-    <text x="15" y="126" fill="#cbd5e1" font-size="11">• Pas al Model Relacional</text>
-    <text x="15" y="146" fill="#cbd5e1" font-size="11">• Normalització (1FN, 2FN, 3FN)</text>
-  </g>
-
-  <!-- Bloc 2: Llenguatge SQL -->
-  <g transform="translate(245, 75)">
-    <rect width="195" height="175" rx="10" fill="url(#g-sql)" stroke="#818cf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">⚙️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Llenguatge SQL</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">UD4, UD5 i UD6</text>
-    <text x="15" y="86" fill="#cbd5e1" font-size="11">• DDL: CREATE, ALTER, DROP</text>
-    <text x="15" y="106" fill="#cbd5e1" font-size="11">• DCL: Usuaris i Permisos GRANT</text>
-    <text x="15" y="126" fill="#cbd5e1" font-size="11">• DML: INSERT, UPDATE, DELETE</text>
-    <text x="15" y="146" fill="#cbd5e1" font-size="11">• DQL: Consultes, JOINs i Vistes</text>
-  </g>
-
-  <!-- Bloc 3: Programació Servidor -->
-  <g transform="translate(460, 75)">
-    <rect width="195" height="175" rx="10" fill="url(#g-prg)" stroke="#34d399" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">⚡</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Programació en BD</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">UD7 · PL/SQL i Triggers</text>
-    <text x="15" y="86" fill="#cbd5e1" font-size="11">• Procediments emmagatzemats</text>
-    <text x="15" y="106" fill="#cbd5e1" font-size="11">• Disparadors (Triggers) d'auditoria</text>
-    <text x="15" y="126" fill="#cbd5e1" font-size="11">• Cursors iteratius i control</text>
-    <text x="15" y="146" fill="#cbd5e1" font-size="11">• Gestió d'excepcions i Handlers</text>
-  </g>
-
-  <!-- Bloc 4: NoSQL i Big Data -->
-  <g transform="translate(675, 75)">
-    <rect width="195" height="175" rx="10" fill="url(#g-nosql)" stroke="#f59e0b" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🍃</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">NoSQL &amp; Documents</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">UD8 · MongoDB</text>
-    <text x="15" y="86" fill="#cbd5e1" font-size="11">• Teorema CAP i escalabilitat</text>
-    <text x="15" y="106" fill="#cbd5e1" font-size="11">• Arquitectura de documents BSON</text>
-    <text x="15" y="126" fill="#cbd5e1" font-size="11">• Entorn mongosh i Compass</text>
-    <text x="15" y="146" fill="#cbd5e1" font-size="11">• Operacions CRUD completes</text>
-  </g>
-</svg>
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:22px; margin:25px 0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+  <div>
+    <span style="font-weight:800; font-size:1.15rem; color:var(--primary);">📊 Panell de Gamificació del Mòdul</span>
+    <div style="font-size:0.95rem; color:var(--text-muted); margin-top:4px;">
+      8 Unitats Didàctiques · 40 Apartats Formatius · 152 Reptes Interactius Disponibles
+    </div>
+  </div>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <span style="background:var(--primary); color:#fff; padding:6px 14px; border-radius:20px; font-weight:800; font-size:0.95rem;">
+      🏆 3.800 XP Totals
+    </span>
+  </div>
 </div>
 
 ---
 
-## 🗺️ Mapa Curricular del Curs (8 Unitats Didàctiques)
+## 🎯 Resultats d'Aprenentatge Oficials (RA)
 
-| Unitat | Bloc Temàtic Curricular | Resultat d'Aprenentatge | Accés Directe |
-| :---: | :--- | :---: | :---: |
-| **UT01** | **UD1: Sistemes d'Emmagatzematge i SGBD** | `RA1` | [**Entrar a la Unitat ➡️**](./ut01/index.html) |
-| **UT02** | **UD2: Disseny Conceptual: Model Entitat-Relació (E/R)** | `RA6` | [**Entrar a la Unitat ➡️**](./ut02/index.html) |
-| **UT03** | **UD3: Disseny Lògic: Model Relacional i Normalització** | `RA6` | [**Entrar a la Unitat ➡️**](./ut03/index.html) |
-| **UT04** | **UD4: Disseny Físic: SQL DDL i DCL** | `RA2` | [**Entrar a la Unitat ➡️**](./ut04/index.html) |
-| **UT05** | **UD5: Manipulació de Dades: SQL DML i Transaccions TCL** | `RA4` | [**Entrar a la Unitat ➡️**](./ut05/index.html) |
-| **UT06** | **UD6: Consultes a Bases de Dades: SQL DQL** | `RA3` | [**Entrar a la Unitat ➡️**](./ut06/index.html) |
-| **UT07** | **UD7: Programació en Servidor: Procediments, Triggers i Cursors** | `RA5` | [**Entrar a la Unitat ➡️**](./ut07/index.html) |
-| **UT08** | **UD8: Bases de Dades NoSQL i Tendències: MongoDB** | `RA7` | [**Entrar a la Unitat ➡️**](./ut08/index.html) |
+El mòdul desenvolupa de forma integral els 7 Resultats d'Aprenentatge curriculars:
+- **RA1:** Reconeix els sistemes d'emmagatzematge d'informació analitzant-ne les característiques i valorant la seua utilitat per al tractament de la informació (UT01).
+- **RA2:** Crea bases de dades definint la seua estructura i aplicant mecanismes per garantir la integritat i seguretat de les dades (UT04).
+- **RA3:** Consulta la informació emmagatzemada en una base de dades utilitzant assistents i llenguatges de consulta (UT06).
+- **RA4:** Modifica la informació emmagatzemada en la base de dades utilitzant sentències DML i assegurant la integritat transaccional (UT05).
+- **RA5:** Desenvolupa procediments emmagatzemats, funcions, disparadors i cursors aplicant les estructures de control del llenguatge procedural de l'SGBD (UT07).
+- **RA6:** Dissenya bases de dades relacionals identificant els elements que les componen i aplicant tècniques de modelització conceptual i lògica (UT02 i UT03).
+- **RA7:** Reconeix les característiques de les bases de dades no relacionals i gestiona la informació en sistemes NoSQL orientats a documents (UT08).
 
 ---
 
-## ⚙️ Entorn Tecnològic de Treball
-Al llarg del curs es faran servir les eines professionals més utilitzades al sector del desenvolupament de programari:
-- **Motors Relacionals:** MariaDB 10.x / MySQL 8.0 desplegats en local i amb contenidors Docker.
-- **Clients i Entorns Gràfics:** DBeaver Community, MySQL Workbench, phpMyAdmin i consola de terminal CLI.
-- **Eines de Disseny Conceptual:** Draw.io i visualitzadors de modelatge relacional.
-- **Bases de Dades NoSQL:** MongoDB 7.x, shell interactiu `mongosh` i MongoDB Compass.
+## 📚 Estructura de les Unitats Didàctiques
+
+| Unitat Didàctica | Temàtica Principal | Reptes | Experiència | Accés |
+| :--- | :--- | :---: | :---: | :---: |
+| **UD1** | **Sistemes d'Emmagatzematge i SGBD** | 19 reptes | +475 XP | [Explorar UD1](ut01/index.html) |
+| **UD2** | **Disseny Conceptual: Model Entitat-Relació (E/R)** | 19 reptes | +475 XP | [Explorar UD2](ut02/index.html) |
+| **UD3** | **Disseny Lògic: Model Relacional i Normalització** | 19 reptes | +475 XP | [Explorar UD3](ut03/index.html) |
+| **UD4** | **Disseny Físic: SQL DDL i DCL** | 19 reptes | +475 XP | [Explorar UD4](ut04/index.html) |
+| **UD5** | **Manipulació de Dades: SQL DML i Transaccions TCL** | 19 reptes | +475 XP | [Explorar UD5](ut05/index.html) |
+| **UD6** | **Consultes a Bases de Dades: SQL DQL** | 19 reptes | +475 XP | [Explorar UD6](ut06/index.html) |
+| **UD7** | **Programació en Servidor: Procediments, Triggers i Cursors** | 19 reptes | +475 XP | [Explorar UD7](ut07/index.html) |
+| **UD8** | **Bases de Dades NoSQL i Tendències: MongoDB** | 19 reptes | +475 XP | [Explorar UD8](ut08/index.html) |
 
 ---
 
-## 🏆 Sistema d'Autoavaluació Gamificada i Lliurament Aules
-- Cada unitat didàctica compta amb un **Quadern de Pràctiques i Reptes Interactius** amb més de 45 activitats de laboratori resoltes pas a pas.
-- **Reptes Interactius (+25 pts):** Preguntes d'autoavaluació, qüestionaris test i reptes Vertader/Fals amb retroacció instantània.
-- **Targeta de Lliurament Aules:** Generador automàtic d'informes per a copiar el resum del treball realitzat i adjuntar-lo a la plataforma virtual del centre educatiu amb un sol clic.
+## 🚀 Metodologia i Avaluació
+
+Cada apartat de cada unitat didàctica inclou explicacions rigoroses, exemples d'SQL i diagramació reals, 3 reptes interactius auto-avaluables de 25 punts cadascun, i un botó de descàrrega de justificant per a Aules. Les portades d'unitat incorporen a més 4 reptes globals de síntesi (+100 XP per unitat), completant un itinerari formatiu d'excel·lència professional.
