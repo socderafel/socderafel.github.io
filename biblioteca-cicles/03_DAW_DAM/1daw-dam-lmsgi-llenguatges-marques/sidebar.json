@@ -1,791 +1,932 @@
 {
+  "title": "📚 Lenguajes de Marcas y Sistemas de Gestión de Información — 1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI)",
   "home": {
-    "label": "🏠 Portada: Llenguatges de Marques i Sistemes de Gestió d'Informació",
+    "label": "🏠 Portada: Lenguajes de Marcas y Sistemas de Gestión de Información",
     "href": "index.html"
   },
   "units": [
     {
-      "summary": "UD1: Introducció als Llenguatges de Marques (XML i JSON)",
+      "summary": "UD1: Introducción a los Lenguajes de Marcas (XML y JSON)",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD1",
-          "href": "ut01/index.html"
+          "label": "🧭 Portada e Índice UD1",
+          "href": "./ut01/index.html",
+          "class": ""
         },
         {
-          "label": "📋 1.0 Proposta Didàctica: Introducció als Llenguatges de marques.",
-          "href": "ut01/ut0100.html"
+          "label": "📋 1.0 Propuesta Didáctica: Introducción a los Lenguajes de Marcas.",
+          "href": "./ut01/ut0100.html",
+          "class": ""
         },
         {
-          "label": "1.1.1 Introducció als llenguatges de marques.",
-          "href": "ut01/ut0111.html"
+          "label": "1.1.1 Introducción a los lenguajes de marcas.",
+          "href": "./ut01/ut0111.html",
+          "class": ""
         },
         {
-          "label": "1.1.2 Classificació i principals llenguatges",
-          "href": "ut01/ut0112.html"
+          "label": "1.1.2 Clasificación y principales lenguajes",
+          "href": "./ut01/ut0112.html",
+          "class": ""
         },
         {
-          "label": "1.1.3 Llenguatges de marques de propòsit general",
-          "href": "ut01/ut0113.html"
+          "label": "1.1.3 Lenguajes de marcas de propósito general",
+          "href": "./ut01/ut0113.html",
+          "class": ""
         },
         {
-          "label": "1.1.4 Estructura i sintaxi de documents XML",
-          "href": "ut01/ut0114.html"
+          "label": "1.1.4 Estructura y sintaxis de documentos XML",
+          "href": "./ut01/ut0114.html",
+          "class": ""
         },
         {
-          "label": "1.1.5 Espais de noms (Namespaces)",
-          "href": "ut01/ut0115.html"
+          "label": "1.1.5 Espacios de nombres (Namespaces)",
+          "href": "./ut01/ut0115.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 101",
-          "href": "ut01/act101.html"
+          "label": "✏️ ACT101 101",
+          "href": "./ut01/act_act101.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 102",
-          "href": "ut01/act102.html"
+          "label": "✏️ ACT102 102",
+          "href": "./ut01/act_act102.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 103",
-          "href": "ut01/act103.html"
+          "label": "✏️ ACT103 103",
+          "href": "./ut01/act_act103.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 104",
-          "href": "ut01/act104.html"
+          "label": "✏️ ACT104 104",
+          "href": "./ut01/act_act104.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 105",
-          "href": "ut01/act105.html"
+          "label": "✏️ ACT105 105",
+          "href": "./ut01/act_act105.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 106",
-          "href": "ut01/act106.html"
+          "label": "✏️ ACT106 106",
+          "href": "./ut01/act_act106.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 107",
-          "href": "ut01/act107.html"
+          "label": "✏️ ACT107 107",
+          "href": "./ut01/act_act107.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 108",
-          "href": "ut01/act108.html"
+          "label": "✏️ ACT108 108",
+          "href": "./ut01/act_act108.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 109",
-          "href": "ut01/act109.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD1)",
-          "href": "ut01/activitats.html"
+          "label": "✏️ ACT109 109",
+          "href": "./ut01/act_act109.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD2: Utilització de Llenguatges de Marques en Entorns Web — HTML5",
+      "summary": "UD2: Utilización de Lenguajes de Marcas en Entornos Web — HTML5",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD2",
-          "href": "ut02/index.html"
+          "label": "🧭 Portada e Índice UD2",
+          "href": "./ut02/index.html",
+          "class": ""
         },
         {
-          "label": "📋 2.0 Proposta Didàctica: HTML i Sindicació de contingut.",
-          "href": "ut02/ut0200.html"
+          "label": "📋 2.0 Propuesta Didáctica: HTML y Sindicación de Contenido.",
+          "href": "./ut02/ut0200.html",
+          "class": ""
         },
         {
-          "label": "2.1.1 Introducció als llenguatges web",
-          "href": "ut02/ut0211.html"
+          "label": "2.1.1 Introducción a los lenguajes web",
+          "href": "./ut02/ut0211.html",
+          "class": ""
         },
         {
-          "label": "2.1.2 Versions de HTML",
-          "href": "ut02/ut0212.html"
+          "label": "2.1.2 Versiones de HTML",
+          "href": "./ut02/ut0212.html",
+          "class": ""
         },
         {
-          "label": "2.2.1 Estructura i sintaxi de documents HTML",
-          "href": "ut02/ut0221.html"
+          "label": "2.2.1 Estructura y sintaxis de documentos HTML",
+          "href": "./ut02/ut0221.html",
+          "class": ""
         },
         {
-          "label": "2.2.2 Sintaxi: etiquetes i atributs",
-          "href": "ut02/ut0222.html"
+          "label": "2.2.2 Sintaxis: etiquetas y atributos",
+          "href": "./ut02/ut0222.html",
+          "class": ""
         },
         {
-          "label": "2.2.3 Tipus d'atributs",
-          "href": "ut02/ut0223.html"
+          "label": "2.2.3 Tipos de atributos",
+          "href": "./ut02/ut0223.html",
+          "class": ""
         },
         {
           "label": "2.2.4 XHTML",
-          "href": "ut02/ut0224.html"
+          "href": "./ut02/ut0224.html",
+          "class": ""
         },
         {
-          "label": "2.2.5 Estructura d'un document HTML",
-          "href": "ut02/ut0225.html"
+          "label": "2.2.5 Estructura de un documento HTML",
+          "href": "./ut02/ut0225.html",
+          "class": ""
         },
         {
-          "label": "2.3.1 Elements HTML",
-          "href": "ut02/ut0231.html"
+          "label": "2.3.1 Elementos HTML",
+          "href": "./ut02/ut0231.html",
+          "class": ""
         },
         {
-          "label": "2.3.2 Seccions",
-          "href": "ut02/ut0232.html"
+          "label": "2.3.2 Secciones",
+          "href": "./ut02/ut0232.html",
+          "class": ""
         },
         {
-          "label": "2.4.1 Text",
-          "href": "ut02/ut0241.html"
+          "label": "2.4.1 Texto",
+          "href": "./ut02/ut0241.html",
+          "class": ""
         },
         {
-          "label": "2.4.2 Llistes",
-          "href": "ut02/ut0242.html"
+          "label": "2.4.2 Listas",
+          "href": "./ut02/ut0242.html",
+          "class": ""
         },
         {
-          "label": "2.4.3 Taules",
-          "href": "ut02/ut0243.html"
+          "label": "2.4.3 Tablas",
+          "href": "./ut02/ut0243.html",
+          "class": ""
         },
         {
-          "label": "2.4.4 Formularis",
-          "href": "ut02/ut0244.html"
+          "label": "2.4.4 Formularios",
+          "href": "./ut02/ut0244.html",
+          "class": ""
         },
         {
-          "label": "2.4.5 Multimèdia i iframe",
-          "href": "ut02/ut0245.html"
+          "label": "2.4.5 Multimedia e iframe",
+          "href": "./ut02/ut0245.html",
+          "class": ""
         },
         {
-          "label": "2.5 Eines per a la creació i edició",
-          "href": "ut02/ut0250.html"
+          "label": "2.5 Herramientas para la creación y edición",
+          "href": "./ut02/ut0250.html",
+          "class": ""
         },
         {
-          "label": "2.6 Validació de documents HTML",
-          "href": "ut02/ut0260.html"
+          "label": "2.6 Validación de documentos HTML",
+          "href": "./ut02/ut0260.html",
+          "class": ""
         },
         {
-          "label": "2.7.1 Introducció i avantatges de la sindicació de continguts",
-          "href": "ut02/ut0271.html"
+          "label": "2.7.1 Introducción y ventajas de la sindicación de contenidos",
+          "href": "./ut02/ut0271.html",
+          "class": ""
         },
         {
-          "label": "2.7.2 Estàndards RSS, Atom i JSON Feed",
-          "href": "ut02/ut0272.html"
+          "label": "2.7.2 Estándares RSS, Atom y JSON Feed",
+          "href": "./ut02/ut0272.html",
+          "class": ""
         },
         {
-          "label": "2.7.3 Publicació i àmbits d'aplicació",
-          "href": "ut02/ut0273.html"
+          "label": "2.7.3 Publicación y ámbitos de aplicación",
+          "href": "./ut02/ut0273.html",
+          "class": ""
         },
         {
-          "label": "2.7.4 Estructura d'un document RSS",
-          "href": "ut02/ut0274.html"
+          "label": "2.7.4 Estructura de un documento RSS",
+          "href": "./ut02/ut0274.html",
+          "class": ""
         },
         {
-          "label": "2.7.5 Validació i agregadors",
-          "href": "ut02/ut0275.html"
+          "label": "2.7.5 Validación y agregadores",
+          "href": "./ut02/ut0275.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 201",
-          "href": "ut02/act201.html"
+          "label": "✏️ ACT201 201",
+          "href": "./ut02/act_act201.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 202",
-          "href": "ut02/act202.html"
+          "label": "✏️ ACT202 202",
+          "href": "./ut02/act_act202.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 203",
-          "href": "ut02/act203.html"
+          "label": "✏️ ACT203 203",
+          "href": "./ut02/act_act203.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 204",
-          "href": "ut02/act204.html"
+          "label": "✏️ ACT204 204",
+          "href": "./ut02/act_act204.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 205",
-          "href": "ut02/act205.html"
+          "label": "✏️ ACT205 205",
+          "href": "./ut02/act_act205.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 206",
-          "href": "ut02/act206.html"
+          "label": "✏️ ACT206 206",
+          "href": "./ut02/act_act206.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 207",
-          "href": "ut02/act207.html"
+          "label": "✏️ ACT207 207",
+          "href": "./ut02/act_act207.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 208",
-          "href": "ut02/act208.html"
+          "label": "✏️ ACT208 208",
+          "href": "./ut02/act_act208.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 209",
-          "href": "ut02/act209.html"
+          "label": "✏️ ACT209 209",
+          "href": "./ut02/act_act209.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 210",
-          "href": "ut02/act210.html"
+          "label": "✏️ ACT210 210",
+          "href": "./ut02/act_act210.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 211",
-          "href": "ut02/act211.html"
+          "label": "✏️ ACT211 211",
+          "href": "./ut02/act_act211.html",
+          "class": ""
         },
         {
-          "label": "🏆 Simulacre d'Examen UD2",
-          "href": "ut02/simulacre_examen.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD2)",
-          "href": "ut02/activitats.html"
+          "label": "✏️ SIMULACRO_EXAMEN SIMULACRO DE EXAMEN HTML",
+          "href": "./ut02/act_simulacro_examen.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design",
+      "summary": "UD3: Hojas de Estilo en Cascada — CSS3, Flexbox, Grid y Responsive Design",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD3",
-          "href": "ut03/index.html"
+          "label": "🧭 Portada e Índice UD3",
+          "href": "./ut03/index.html",
+          "class": ""
         },
         {
-          "label": "📋 3.0 Proposta Didàctica: Aparença i disseny dels documents WEB - CSS.",
-          "href": "ut03/ut0300.html"
+          "label": "📋 3.0 Propuesta Didáctica: Apariencia y diseño de los documentos WEB - CSS.",
+          "href": "./ut03/ut0300.html",
+          "class": ""
         },
         {
-          "label": "3.1.1 Introducció",
-          "href": "ut03/ut0311.html"
+          "label": "3.1.1 Introducción",
+          "href": "./ut03/ut0311.html",
+          "class": ""
         },
         {
-          "label": "3.1.2 Versions",
-          "href": "ut03/ut0312.html"
+          "label": "3.1.2 Versiones",
+          "href": "./ut03/ut0312.html",
+          "class": ""
         },
         {
-          "label": "3.1.3 Com aplicar estils CSS",
-          "href": "ut03/ut0313.html"
+          "label": "3.1.3 Cómo aplicar estilos CSS",
+          "href": "./ut03/ut0313.html",
+          "class": ""
         },
         {
-          "label": "3.1.4 Full d'estils",
-          "href": "ut03/ut0314.html"
+          "label": "3.1.4 Hoja de estilos",
+          "href": "./ut03/ut0314.html",
+          "class": ""
         },
         {
-          "label": "3.1.5 Sintaxi d'una full d'estils.",
-          "href": "ut03/ut0315.html"
+          "label": "3.1.5 Sintaxis de una hoja de estilos.",
+          "href": "./ut03/ut0315.html",
+          "class": ""
         },
         {
-          "label": "3.2 Tipus de selectors.",
-          "href": "ut03/ut0320.html"
+          "label": "3.2 Tipos de selectores.",
+          "href": "./ut03/ut0320.html",
+          "class": ""
         },
         {
-          "label": "3.3 Pseudo-classes i pseudo elements",
-          "href": "ut03/ut0330.html"
+          "label": "3.3 Pseudo-clases y pseudo elements",
+          "href": "./ut03/ut0330.html",
+          "class": ""
         },
         {
-          "label": "3.4 Estils en Cascada",
-          "href": "ut03/ut0340.html"
+          "label": "3.4 Estilos en Cascada",
+          "href": "./ut03/ut0340.html",
+          "class": ""
         },
         {
-          "label": "3.5.1 Propietats Principals",
-          "href": "ut03/ut0351.html"
+          "label": "3.5.1 Propiedades Principales",
+          "href": "./ut03/ut0351.html",
+          "class": ""
         },
         {
-          "label": "3.5.2 Propietats de color i fons",
-          "href": "ut03/ut0352.html"
+          "label": "3.5.2 Propiedades de color y fondo",
+          "href": "./ut03/ut0352.html",
+          "class": ""
         },
         {
-          "label": "3.5.3 Propietats de font",
-          "href": "ut03/ut0353.html"
+          "label": "3.5.3 Propiedades de fuente",
+          "href": "./ut03/ut0353.html",
+          "class": ""
         },
         {
-          "label": "3.5.4 Propietats de text",
-          "href": "ut03/ut0354.html"
+          "label": "3.5.4 Propiedades de texto",
+          "href": "./ut03/ut0354.html",
+          "class": ""
         },
         {
-          "label": "3.5.5 Propietats de llista",
-          "href": "ut03/ut0355.html"
+          "label": "3.5.5 Propiedades de lista",
+          "href": "./ut03/ut0355.html",
+          "class": ""
         },
         {
-          "label": "3.5.6 Propietat display",
-          "href": "ut03/ut0356.html"
+          "label": "3.5.6 Propiedad display",
+          "href": "./ut03/ut0356.html",
+          "class": ""
         },
         {
-          "label": "3.5.7 Propietat overflow",
-          "href": "ut03/ut0357.html"
+          "label": "3.5.7 Propiedad overflow",
+          "href": "./ut03/ut0357.html",
+          "class": ""
         },
         {
-          "label": "3.6.1 Introducció",
-          "href": "ut03/ut0361.html"
+          "label": "3.6.1 Introducción",
+          "href": "./ut03/ut0361.html",
+          "class": ""
         },
         {
-          "label": "3.6.2 Parts d'una caixa",
-          "href": "ut03/ut0362.html"
+          "label": "3.6.2 Partes de una caja",
+          "href": "./ut03/ut0362.html",
+          "class": ""
         },
         {
-          "label": "3.6.3 Unitats de mida",
-          "href": "ut03/ut0363.html"
+          "label": "3.6.3 Unidades de tamaño",
+          "href": "./ut03/ut0363.html",
+          "class": ""
         },
         {
-          "label": "3.6.4 Mida de caixa",
-          "href": "ut03/ut0364.html"
+          "label": "3.6.4 Tamaño de caja",
+          "href": "./ut03/ut0364.html",
+          "class": ""
         },
         {
-          "label": "3.6.5 Exemples del box model",
-          "href": "ut03/ut0365.html"
+          "label": "3.6.5 Ejemplos del box model",
+          "href": "./ut03/ut0365.html",
+          "class": ""
         },
         {
-          "label": "3.6.6 Posicionament",
-          "href": "ut03/ut0366.html"
+          "label": "3.6.6 Posicionamiento",
+          "href": "./ut03/ut0366.html",
+          "class": ""
         },
         {
-          "label": "3.7.1 Què és Responsive Design?",
-          "href": "ut03/ut0371.html"
+          "label": "3.7.1 ¿Qué es Responsive Design?",
+          "href": "./ut03/ut0371.html",
+          "class": ""
         },
         {
           "label": "3.7.2 Bases del Responsive Design",
-          "href": "ut03/ut0372.html"
+          "href": "./ut03/ut0372.html",
+          "class": ""
         },
         {
-          "label": "3.7.3 CSS Mitjana Queries",
-          "href": "ut03/ut0373.html"
+          "label": "3.7.3 CSS Media Queries",
+          "href": "./ut03/ut0373.html",
+          "class": ""
         },
         {
           "label": "3.8.1 Flexbox",
-          "href": "ut03/ut0381.html"
+          "href": "./ut03/ut0381.html",
+          "class": ""
         },
         {
-          "label": "3.8.2 Propietats Flexbox",
-          "href": "ut03/ut0382.html"
+          "label": "3.8.2 Propiedades Flexbox",
+          "href": "./ut03/ut0382.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 301",
-          "href": "ut03/act301.html"
+          "label": "✏️ ACT301 Ejercicio 301",
+          "href": "./ut03/act_act301.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 302",
-          "href": "ut03/act302.html"
+          "label": "✏️ ACT302 Ejercicio 302",
+          "href": "./ut03/act_act302.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 303",
-          "href": "ut03/act303.html"
+          "label": "✏️ ACT303 Ejercicio 303",
+          "href": "./ut03/act_act303.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 304",
-          "href": "ut03/act304.html"
+          "label": "✏️ ACT304 Ejercicio 304",
+          "href": "./ut03/act_act304.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 305",
-          "href": "ut03/act305.html"
+          "label": "✏️ ACT305 Ejercicio 305",
+          "href": "./ut03/act_act305.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 306",
-          "href": "ut03/act306.html"
+          "label": "✏️ ACT306 Ejercicio 306",
+          "href": "./ut03/act_act306.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 307",
-          "href": "ut03/act307.html"
+          "label": "✏️ ACT307 Ejercicio 307",
+          "href": "./ut03/act_act307.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 308",
-          "href": "ut03/act308.html"
+          "label": "✏️ ACT308 Ejercicio 308",
+          "href": "./ut03/act_act308.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 309",
-          "href": "ut03/act309.html"
+          "label": "✏️ ACT309 Ejercicio 309",
+          "href": "./ut03/act_act309.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 310",
-          "href": "ut03/act310.html"
+          "label": "✏️ ACT310 Ejercicio 310",
+          "href": "./ut03/act_act310.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 311",
-          "href": "ut03/act311.html"
+          "label": "✏️ ACT311 Ejercicio 311",
+          "href": "./ut03/act_act311.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 312",
-          "href": "ut03/act312.html"
+          "label": "✏️ ACT312 Ejercicio 312",
+          "href": "./ut03/act_act312.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 313",
-          "href": "ut03/act313.html"
+          "label": "✏️ ACT313 Ejercicio 313",
+          "href": "./ut03/act_act313.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 314",
-          "href": "ut03/act314.html"
+          "label": "✏️ ACT314 Ejercicio 314",
+          "href": "./ut03/act_act314.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 315",
-          "href": "ut03/act315.html"
+          "label": "✏️ ACT315 Ejercicio 315",
+          "href": "./ut03/act_act315.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 316",
-          "href": "ut03/act316.html"
+          "label": "✏️ ACT316 Ejercicio 316",
+          "href": "./ut03/act_act316.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 317",
-          "href": "ut03/act317.html"
+          "label": "✏️ ACT317 317",
+          "href": "./ut03/act_act317.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 318",
-          "href": "ut03/act318.html"
+          "label": "✏️ ACT318 318",
+          "href": "./ut03/act_act318.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 319",
-          "href": "ut03/act319.html"
+          "label": "✏️ ACT319 319",
+          "href": "./ut03/act_act319.html",
+          "class": ""
         },
         {
-          "label": "💻 Pràctica de Classe UD3",
-          "href": "ut03/pract_classe.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD3)",
-          "href": "ut03/activitats.html"
+          "label": "✏️ PRACTCLASE Clase",
+          "href": "./ut03/act_practclase.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes",
+      "summary": "UD4: Programación con JavaScript — Sintaxis, Arrays, Funciones y Objetos",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD4",
-          "href": "ut04/index.html"
+          "label": "🧭 Portada e Índice UD4",
+          "href": "./ut04/index.html",
+          "class": ""
         },
         {
-          "label": "📋 4.0 Proposta Didàctica: Sintaxi de JavaScript",
-          "href": "ut04/ut0400.html"
+          "label": "📋 4.0 Propuesta Didáctica: Sintaxis de JavaScript",
+          "href": "./ut04/ut0400.html",
+          "class": ""
         },
         {
-          "label": "4.1.1 Introducció",
-          "href": "ut04/ut0411.html"
+          "label": "4.1.1 Introducción",
+          "href": "./ut04/ut0411.html",
+          "class": ""
         },
         {
-          "label": "4.1.2 Àmbits",
-          "href": "ut04/ut0412.html"
+          "label": "4.1.2 Ámbitos",
+          "href": "./ut04/ut0412.html",
+          "class": ""
         },
         {
           "label": "4.1.3 La consola Javascript",
-          "href": "ut04/ut0413.html"
+          "href": "./ut04/ut0413.html",
+          "class": ""
         },
         {
-          "label": "4.1.4 Com funciona Javascript?",
-          "href": "ut04/ut0414.html"
+          "label": "4.1.4 ¿Cómo funciona Javascript?",
+          "href": "./ut04/ut0414.html",
+          "class": ""
         },
         {
-          "label": "4.1.5 L'especificació ECMAScript",
-          "href": "ut04/ut0415.html"
+          "label": "4.1.5 La especificación ECMAScript",
+          "href": "./ut04/ut0415.html",
+          "class": ""
         },
         {
-          "label": "4.2.1 Conceptes Bàsics",
-          "href": "ut04/ut0421.html"
+          "label": "4.2.1 Conceptos Básicos",
+          "href": "./ut04/ut0421.html",
+          "class": ""
         },
         {
-          "label": "4.3.1 Tipus de dades",
-          "href": "ut04/ut0431.html"
+          "label": "4.3.1 Tipos de Datos",
+          "href": "./ut04/ut0431.html",
+          "class": ""
         },
         {
-          "label": "4.3.2 Variables i Constants",
-          "href": "ut04/ut0432.html"
+          "label": "4.3.2 Variables y Constantes",
+          "href": "./ut04/ut0432.html",
+          "class": ""
         },
         {
-          "label": "4.3.3 Estructures de control",
-          "href": "ut04/ut0433.html"
+          "label": "4.3.3 Estructuras de Control",
+          "href": "./ut04/ut0433.html",
+          "class": ""
         },
         {
-          "label": "4.3.4 Bucles i iteracions",
-          "href": "ut04/ut0434.html"
+          "label": "4.3.4 Bucles e iteraciones",
+          "href": "./ut04/ut0434.html",
+          "class": ""
         },
         {
-          "label": "4.3.5 Funcions",
-          "href": "ut04/ut0435.html"
+          "label": "4.3.5 Funciones",
+          "href": "./ut04/ut0435.html",
+          "class": ""
         },
         {
           "label": "4.4.1 Numbers",
-          "href": "ut04/ut0441.html"
+          "href": "./ut04/ut0441.html",
+          "class": ""
         },
         {
           "label": "4.4.2 Strings",
-          "href": "ut04/ut0442.html"
+          "href": "./ut04/ut0442.html",
+          "class": ""
         },
         {
           "label": "4.5.1 Arrays",
-          "href": "ut04/ut0451.html"
+          "href": "./ut04/ut0451.html",
+          "class": ""
         },
         {
           "label": "4.5.2 Array Functions",
-          "href": "ut04/ut0452.html"
+          "href": "./ut04/ut0452.html",
+          "class": ""
         },
         {
-          "label": "4.6.1 Objectes",
-          "href": "ut04/ut0461.html"
+          "label": "4.6.1 Objetos",
+          "href": "./ut04/ut0461.html",
+          "class": ""
         },
         {
-          "label": "4.6.2 Format JSON",
-          "href": "ut04/ut0462.html"
+          "label": "4.6.2 Formato JSON",
+          "href": "./ut04/ut0462.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 400: Instruccions",
-          "href": "ut04/act400.html"
+          "label": "✏️ ACT400 Introducción a Javascript",
+          "href": "./ut04/act_act400.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 401: Activitat 01 - El meu primer programa",
-          "href": "ut04/act401.html"
+          "label": "✏️ ACT401 es 01-05",
+          "href": "./ut04/act_act401.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 402: Activitat 06 - suma total",
-          "href": "ut04/act402.html"
+          "label": "✏️ ACT402 es 06-10",
+          "href": "./ut04/act_act402.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 403: Activitat 11",
-          "href": "ut04/act403.html"
+          "label": "✏️ ACT403 es 11-15",
+          "href": "./ut04/act_act403.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 404: Activitat 16",
-          "href": "ut04/act404.html"
+          "label": "✏️ ACT404 es 16-20",
+          "href": "./ut04/act_act404.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 405: Activitat 21",
-          "href": "ut04/act405.html"
+          "label": "✏️ ACT405 es 21-25",
+          "href": "./ut04/act_act405.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 406: 1. Creació d'arrays i accés a elements",
-          "href": "ut04/act406.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD4)",
-          "href": "ut04/activitats.html"
+          "label": "✏️ ACT406 Ejercicios de Arrays y Array Functions en JavaScript",
+          "href": "./ut04/act_act406.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API",
+      "summary": "UD5: JavaScript Avanzado — Manipulación del DOM, Eventos, Formularios y Fetch API",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD5",
-          "href": "ut05/index.html"
+          "label": "🧭 Portada e Índice UD5",
+          "href": "./ut05/index.html",
+          "class": ""
         },
         {
-          "label": "📋 5.0 Proposta Didàctica: Manipulació de documents web JavaScript - DOM",
-          "href": "ut05/ut0500.html"
+          "label": "📋 5.0 Propuesta Didáctica: Manipulación de documentos web JavaScript - DOM",
+          "href": "./ut05/ut0500.html",
+          "class": ""
         },
         {
-          "label": "5.1 Introducció al DOM",
-          "href": "ut05/ut0510.html"
+          "label": "5.1 Introducción al DOM",
+          "href": "./ut05/ut0510.html",
+          "class": ""
         },
         {
-          "label": "5.2 Accés al DOM",
-          "href": "ut05/ut0520.html"
+          "label": "5.2 Acceso al DOM",
+          "href": "./ut05/ut0520.html",
+          "class": ""
         },
         {
           "label": "5.3 Modificar el DOM",
-          "href": "ut05/ut0530.html"
+          "href": "./ut05/ut0530.html",
+          "class": ""
         },
         {
-          "label": "5.4 Crear i Eliminar en el DOM",
-          "href": "ut05/ut0540.html"
+          "label": "5.4 Crear y Eliminar en el DOM",
+          "href": "./ut05/ut0540.html",
+          "class": ""
         },
         {
-          "label": "5.5 Modificar estils i CSS del DOM amb JavaScript.",
-          "href": "ut05/ut0550.html"
+          "label": "5.5 Modificar estilos y CSS del DOM con JavaScript.",
+          "href": "./ut05/ut0550.html",
+          "class": ""
         },
         {
-          "label": "5.6.1 Asincronia en Javascript",
-          "href": "ut05/ut0561.html"
+          "label": "5.6.1 Asincronía en Javascript",
+          "href": "./ut05/ut0561.html",
+          "class": ""
         },
         {
           "label": "5.6.2 Callbacks",
-          "href": "ut05/ut0562.html"
+          "href": "./ut05/ut0562.html",
+          "class": ""
         },
         {
-          "label": "5.6.3 Promeses",
-          "href": "ut05/ut0563.html"
+          "label": "5.6.3 Promesas",
+          "href": "./ut05/ut0563.html",
+          "class": ""
         },
         {
           "label": "5.6.4 Async/await",
-          "href": "ut05/ut0564.html"
+          "href": "./ut05/ut0564.html",
+          "class": ""
         },
         {
-          "label": "5.6.5 Ús de fetch",
-          "href": "ut05/ut0565.html"
+          "label": "5.6.5 Uso de fetch",
+          "href": "./ut05/ut0565.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 501: 1 Introducció al DOM",
-          "href": "ut05/act501.html"
+          "label": "✏️ ACT501 Ejercicios de DOM",
+          "href": "./ut05/act_act501.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 502: Bloc 1. Callback",
-          "href": "ut05/act502.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD5)",
-          "href": "ut05/activitats.html"
+          "label": "✏️ ACT502 es sobre asincronía y DOM dinámico",
+          "href": "./ut05/act_act502.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)",
+      "summary": "UD6: Validación de Documentos XML y JSON — DTD y XML Schema (XSD)",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD6",
-          "href": "ut06/index.html"
+          "label": "🧭 Portada e Índice UD6",
+          "href": "./ut06/index.html",
+          "class": ""
         },
         {
-          "label": "📋 6.0 Proposta Didàctica: Validació de documents",
-          "href": "ut06/ut0600.html"
+          "label": "📋 6.0 Propuesta Didáctica: Validación de documentos",
+          "href": "./ut06/ut0600.html",
+          "class": ""
         },
         {
-          "label": "6.1 Descripció de la informació i les seues regles",
-          "href": "ut06/ut0601.html"
+          "label": "6.1 Descripción de la información y sus reglas",
+          "href": "./ut06/ut0601.html",
+          "class": ""
         },
         {
-          "label": "6.2 Tecnologies per a definir documents",
-          "href": "ut06/ut0602.html"
+          "label": "6.2 Tecnologías para definir documentos",
+          "href": "./ut06/ut0602.html",
+          "class": ""
         },
         {
-          "label": "6.3 Estructura i Sintaxi de les descripcions",
-          "href": "ut06/ut0603.html"
+          "label": "6.3 Estructura y Sintaxis de las descripciones",
+          "href": "./ut06/ut0603.html",
+          "class": ""
         },
         {
-          "label": "6.4 Creació de descripcions de documents",
-          "href": "ut06/ut0604.html"
+          "label": "6.4 Creación de descripciones de documentos",
+          "href": "./ut06/ut0604.html",
+          "class": ""
         },
         {
-          "label": "6.5 Ús de descripcions per a validar documents",
-          "href": "ut06/ut0605.html"
+          "label": "6.5 Uso de descripciones para validar documentos",
+          "href": "./ut06/ut0605.html",
+          "class": ""
         },
         {
-          "label": "6.6 Eines específiques per a la validació",
-          "href": "ut06/ut0606.html"
+          "label": "6.6 Herramientas específicas para la validación",
+          "href": "./ut06/ut0606.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 601: DTD",
-          "href": "ut06/act601.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD6)",
-          "href": "ut06/activitats.html"
+          "label": "✏️ ACT601 Ejercicios Validación de documentos",
+          "href": "./ut06/act_act601.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD7: Conversió i Adaptació de Documents — XPath, JSONPath, XSLT i RSS/Atom",
+      "summary": "UD7: Conversión y Adaptación de Documentos — XPath, JSONPath, XSLT y RSS/Atom",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD7",
-          "href": "ut07/index.html"
+          "label": "🧭 Portada e Índice UD7",
+          "href": "./ut07/index.html",
+          "class": ""
         },
         {
-          "label": "📋 7.0 Proposta Didàctica: Conversió de documents",
-          "href": "ut07/ut0700.html"
+          "label": "📋 7.0 Propuesta Didáctica: Conversión de documentos",
+          "href": "./ut07/ut0700.html",
+          "class": ""
         },
         {
-          "label": "7.1 Introducció a la conversió de documents",
-          "href": "ut07/ut0701.html"
+          "label": "7.1 Introducción a la conversión de documentos",
+          "href": "./ut07/ut0701.html",
+          "class": ""
         },
         {
-          "label": "7.2 Tecnologies de processament de documents",
-          "href": "ut07/ut0702.html"
+          "label": "7.2 Tecnologías de procesamiento de documentos",
+          "href": "./ut07/ut0702.html",
+          "class": ""
         },
         {
-          "label": "7.3 Sintaxi de localització de dades: XPath i JSONPath",
-          "href": "ut07/ut0703.html"
+          "label": "7.3 Sintaxis de localización de datos: XPath y JSONPath",
+          "href": "./ut07/ut0703.html",
+          "class": ""
         },
         {
-          "label": "7.4 Sintaxi i regles de les especificacions de conversió",
-          "href": "ut07/ut0704.html"
+          "label": "7.4 Sintaxis y reglas de las especificaciones de conversión",
+          "href": "./ut07/ut0704.html",
+          "class": ""
         },
         {
-          "label": "7.5 Creació d'especificacions de conversió",
-          "href": "ut07/ut0705.html"
+          "label": "7.5 Creación de especificaciones de conversión",
+          "href": "./ut07/ut0705.html",
+          "class": ""
         },
         {
-          "label": "7.6 Eines i casos pràctics de conversió",
-          "href": "ut07/ut0706.html"
+          "label": "7.6 Herramientas y casos prácticos de conversión",
+          "href": "./ut07/ut0706.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 701: Activitat 1 - Anàlisi de casos d'ús",
-          "href": "ut07/act701.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD7)",
-          "href": "ut07/activitats.html"
+          "label": "✏️ ACT701 Ejercicios Conversión de documentos",
+          "href": "./ut07/act_act701.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX)",
+      "summary": "UD8: Almacenamiento y Consulta de Información — XQuery y SGBD Nativos XML (BaseX)",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD8",
-          "href": "ut08/index.html"
+          "label": "🧭 Portada e Índice UD8",
+          "href": "./ut08/index.html",
+          "class": ""
         },
         {
-          "label": "📋 8.0 Proposta Didàctica: Emmagatzematge d'informació",
-          "href": "ut08/ut0800.html"
+          "label": "📋 8.0 Propuesta Didáctica: Almacenamiento de información",
+          "href": "./ut08/ut0800.html",
+          "class": ""
         },
         {
-          "label": "8.1 Introducció a l'emmagatzematge d'informació",
-          "href": "ut08/ut0801.html"
+          "label": "8.1 Introducción al almacenamiento de información",
+          "href": "./ut08/ut0801.html",
+          "class": ""
         },
         {
-          "label": "8.2 Mètodes d'emmagatzematge de la informació",
-          "href": "ut08/ut0802.html"
+          "label": "8.2 Métodos de almacenamiento de la información",
+          "href": "./ut08/ut0802.html",
+          "class": ""
         },
         {
-          "label": "8.3 Emmagatzematge de XML en bases de dades relacionals",
-          "href": "ut08/ut0803.html"
+          "label": "8.3 Almacenamiento de XML en bases de datos relacionales",
+          "href": "./ut08/ut0803.html",
+          "class": ""
         },
         {
-          "label": "8.4 Bases de dades natives XML",
-          "href": "ut08/ut0804.html"
+          "label": "8.4 Bases de datos nativas XML",
+          "href": "./ut08/ut0804.html",
+          "class": ""
         },
         {
-          "label": "8.5 Llenguatges de consulta",
-          "href": "ut08/ut0805.html"
+          "label": "8.5 Lenguajes de consulta",
+          "href": "./ut08/ut0805.html",
+          "class": ""
         },
         {
-          "label": "8.6 Eines i casos pràctics",
-          "href": "ut08/ut0806.html"
+          "label": "8.6 Herramientas y casos prácticos",
+          "href": "./ut08/ut0806.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 801",
-          "href": "ut08/act801.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD8)",
-          "href": "ut08/activitats.html"
+          "label": "✏️ ACT801 Ejercicios Almacenamiento de información",
+          "href": "./ut08/act_act801.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD9: Sistemes de Gestió Empresarial — ERP (Odoo), CRM, CMS i Seguretat",
+      "summary": "UD9: Sistemas de Gestión Empresarial — ERP (Odoo), CRM, CMS y Seguridad",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD9",
-          "href": "ut09/index.html"
+          "label": "🧭 Portada e Índice UD9",
+          "href": "./ut09/index.html",
+          "class": ""
         },
         {
-          "label": "📋 9.0 Proposta Didàctica: Sistemes empresarials de gestió d'informació",
-          "href": "ut09/ut0900.html"
+          "label": "📋 9.0 Propuesta Didáctica: Sistemes empresarials de gestió d'informació",
+          "href": "./ut09/ut0900.html",
+          "class": ""
         },
         {
-          "label": "9.1.1 Introducció",
-          "href": "ut09/ut0911.html"
+          "label": "9.1.1 Introducción",
+          "href": "./ut09/ut0911.html",
+          "class": ""
         },
         {
-          "label": "9.2.1 Sistemes de gestió empresarial",
-          "href": "ut09/ut0921.html"
+          "label": "9.2.1 Sistemas de gestión empresarial",
+          "href": "./ut09/ut0921.html",
+          "class": ""
         },
         {
-          "label": "9.2.2 Instal·lació",
-          "href": "ut09/ut0922.html"
+          "label": "9.2.2 Instalación",
+          "href": "./ut09/ut0922.html",
+          "class": ""
         },
         {
-          "label": "9.2.3 Configuració d'un ERP",
-          "href": "ut09/ut0923.html"
+          "label": "9.2.3 Configuración de un ERP",
+          "href": "./ut09/ut0923.html",
+          "class": ""
         },
         {
           "label": "9.3.1 Odoo",
-          "href": "ut09/ut0931.html"
+          "href": "./ut09/ut0931.html",
+          "class": ""
         },
         {
-          "label": "9.3.2 Instal·lació",
-          "href": "ut09/ut0932.html"
+          "label": "9.3.2 Instalación",
+          "href": "./ut09/ut0932.html",
+          "class": ""
         },
         {
-          "label": "9.3.3 Mòduls",
-          "href": "ut09/ut0933.html"
+          "label": "9.3.3 Módulos",
+          "href": "./ut09/ut0933.html",
+          "class": ""
         },
         {
-          "label": "⚡ Activitat 901",
-          "href": "ut09/act901.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD9)",
-          "href": "ut09/activitats.html"
+          "label": "✏️ ACT901 901",
+          "href": "./ut09/act_act901.html",
+          "class": ""
         }
       ]
     }

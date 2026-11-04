@@ -1,253 +1,242 @@
 {
+  "title": "📚 Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials) — 2º FPB · Instalación y Mantenimiento de Redes (IMX / NE)",
   "home": {
-    "label": "🏠 Portada: Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)",
+    "label": "🏠 Portada: Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)",
     "href": "index.html"
   },
   "units": [
     {
-      "summary": "UD1: Fonaments de les Comunicacions, Representació Binària, Models OSI/TCP-IP i IP",
+      "summary": "UD1: Fundamentos de las Comunicaciones, Representación Binaria, Modelos OSI/TCP-IP e IP",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD1",
-          "href": "ut01/index.html"
+          "label": "🧭 Portada e Índice UD1",
+          "href": "./ut01/index.html",
+          "class": ""
         },
         {
-          "label": "📋 1.0 Proposta Didàctica: Comunicació i representació de la informació",
-          "href": "ut01/ut0100.html"
+          "label": "📋 1.0 Propuesta Didáctica: Comunicación y representación de la información",
+          "href": "./ut01/ut0100.html",
+          "class": ""
         },
         {
-          "label": "1.1 Elements d'un sistema de comunicació",
-          "href": "ut01/ut0101.html"
+          "label": "1.1 Elementos de un sistema de comunicación",
+          "href": "./ut01/ut0101.html",
+          "class": ""
         },
         {
-          "label": "1.2 Representació de la informació",
-          "href": "ut01/ut0102.html"
+          "label": "1.2 Representación de la información",
+          "href": "./ut01/ut0102.html",
+          "class": ""
         },
         {
-          "label": "1.3 Xarxes de comunicacions",
-          "href": "ut01/ut0103.html"
+          "label": "1.3 Redes de comunicaciones",
+          "href": "./ut01/ut0103.html",
+          "class": ""
         },
         {
-          "label": "1.4 Adreça IP",
-          "href": "ut01/ut0104.html"
+          "label": "1.4 Dirección IP",
+          "href": "./ut01/ut0104.html",
+          "class": ""
         },
         {
-          "label": "🖼️ 1.R2 Resum Visual",
-          "href": "ut01/resum_imatge.html"
+          "label": "🖼️ 1.R2 Resumen Visual",
+          "href": "./ut01/resumen_imagen.html",
+          "class": ""
         },
         {
-          "label": "📝 1.R1 Resum en Text",
-          "href": "ut01/resum_text.html"
+          "label": "📝 1.R1 Resumen en Texto",
+          "href": "./ut01/resumen_texto.html",
+          "class": ""
         },
         {
-          "label": "🛠️ FITXA 1.1 · Elements d'un sistema de comunicació",
-          "href": "ut01/ficha101.html"
+          "label": "🛠️ Ficha FICHA101: 1.1 · Elementos de un sistema de comunicación",
+          "href": "./ut01/act_ficha101.html",
+          "class": ""
         },
         {
-          "label": "🛠️ FITXA 1.2 · Representació de la informació",
-          "href": "ut01/ficha102.html"
+          "label": "🛠️ Ficha FICHA102: 1.2 · Representación de la información",
+          "href": "./ut01/act_ficha102.html",
+          "class": ""
         },
         {
-          "label": "🛠️ FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP",
-          "href": "ut01/ficha103.html"
+          "label": "🛠️ Ficha FICHA103: 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP",
+          "href": "./ut01/act_ficha103.html",
+          "class": ""
         },
         {
-          "label": "🛠️ FITXA 1.4 · L'adreça IP: IPv4 i IPv6",
-          "href": "ut01/ficha104.html"
+          "label": "🛠️ Ficha FICHA104: 1.4 · La dirección IP: IPv4 e IPv6",
+          "href": "./ut01/act_ficha104.html",
+          "class": ""
         },
         {
-          "label": "🔄 FITXA REPÀS 1.1 · Elements d'un sistema de comunicació",
-          "href": "ut01/rep101.html"
+          "label": "🔄 Repaso REP101: REPASO 1.1 · Elementos de un sistema de comunicación",
+          "href": "./ut01/act_rep101.html",
+          "class": ""
         },
         {
-          "label": "🔄 FITXA REPÀS 1.2 · Representació de la informació",
-          "href": "ut01/rep102.html"
+          "label": "🔄 Repaso REP102: REPASO 1.2 · Representación de la información",
+          "href": "./ut01/act_rep102.html",
+          "class": ""
         },
         {
-          "label": "🔄 FITXA REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP",
-          "href": "ut01/rep103.html"
+          "label": "🔄 Repaso REP103: REPASO 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP",
+          "href": "./ut01/act_rep103.html",
+          "class": ""
         },
         {
-          "label": "🔄 FITXA REPÀS 1.4 · L'adreça IP: IPv4 i IPv6",
-          "href": "ut01/rep104.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD1)",
-          "href": "ut01/activitats.html"
+          "label": "🔄 Repaso REP104: REPASO 1.4 · La dirección IP: IPv4 e IPv6",
+          "href": "./ut01/act_rep104.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD2: Xarxes de Dades — Tipus (LAN/MAN/WAN), Topologies i Arquitectures",
+      "summary": "UD2: Redes de Datos — Tipos (LAN/MAN/WAN), Topologías y Arquitecturas",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD2",
-          "href": "ut02/index.html"
+          "label": "🧭 Portada e Índice UD2",
+          "href": "./ut02/index.html",
+          "class": ""
         },
         {
-          "label": "📋 2.0 Proposta Didàctica: Tipus de xarxes, topologies i mitjans de transmissió",
-          "href": "ut02/ut0200.html"
+          "label": "📋 2.0 Propuesta Didáctica: Tipos de redes, topologías y medios de transmisión",
+          "href": "./ut02/ut0200.html",
+          "class": ""
         },
         {
-          "label": "2.1 Tipus de xarxes i estructures alternatives",
-          "href": "ut02/ut0201.html"
+          "label": "2.1 Tipos de redes y estructuras alternativas",
+          "href": "./ut02/ut0201.html",
+          "class": ""
         },
         {
-          "label": "2.2 Mitjans de transmissió",
-          "href": "ut02/ut0202.html"
+          "label": "2.2 Medios de transmisión",
+          "href": "./ut02/ut0202.html",
+          "class": ""
         },
         {
-          "label": "🛠️ FITXA 2.1 · Tipus de xarxes, abast i arquitectures",
-          "href": "ut02/ficha201.html"
+          "label": "🛠️ Ficha FICHA201: 2.1 · Tipos de redes, alcance y arquitecturas",
+          "href": "./ut02/act_ficha201.html",
+          "class": ""
         },
         {
-          "label": "🛠️ FITXA 2.2 · Mitjans de transmissió guiats i no guiats",
-          "href": "ut02/ficha202.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD2)",
-          "href": "ut02/activitats.html"
+          "label": "🛠️ Ficha FICHA202: 2.2 · Medios de transmisión guiados y no guiados",
+          "href": "./ut02/act_ficha202.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD3: Mitjans de Transmissió — Parell Trenat (UTP/STP), Coaxial, Fibra Òptica i Sense Fil",
+      "summary": "UD3: Medios de Transmisión — Par Trenzado (UTP/STP), Coaxial, Fibra Óptica e Inalámbrico",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD3",
-          "href": "ut03/index.html"
+          "label": "🧭 Portada e Índice UD3",
+          "href": "./ut03/index.html",
+          "class": ""
         },
         {
-          "label": "📋 3.0 Proposta Didàctica: Infraestructura i cablejat de xarxa",
-          "href": "ut03/ut0300.html"
+          "label": "📋 3.0 Propuesta Didáctica: Infraestructura y cableado de red",
+          "href": "./ut03/ut0300.html",
+          "class": ""
         },
         {
-          "label": "3.1 Tipus d'instal·lacions de xarxes de veu i dades",
-          "href": "ut03/ut0301.html"
+          "label": "3.1 Tipos de instalaciones de redes de voz y datos",
+          "href": "./ut03/ut0301.html",
+          "class": ""
         },
         {
-          "label": "3.2 Tipus de conductors: parell trenat de coure, cable coaxial, fibra òptica",
-          "href": "ut03/ut0302.html"
-        },
-        {
-          "label": "🛠️ Fitxa 3.1 · Comparativa de Mitjans de Transmissió Guiats i No Guiats",
-          "href": "ut03/ficha301.html"
-        },
-        {
-          "label": "🛠️ Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil",
-          "href": "ut03/ficha302.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD3)",
-          "href": "ut03/activitats.html"
+          "label": "3.2 Tipos de conductores: par trenzado de cobre, cable coaxial, fibra óptica",
+          "href": "./ut03/ut0302.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD4: Sistemes de Cablejat Estructurat i Subsistema Horitzontal/Vertical",
+      "summary": "UD4: Sistemas de Cableado Estructurado y Subsistema Horizontal/Vertical",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD4",
-          "href": "ut04/index.html"
+          "label": "🧭 Portada e Índice UD4",
+          "href": "./ut04/index.html",
+          "class": ""
         },
         {
-          "label": "📋 4.0 Proposta Didàctica: Elements d'una instal·lació de xarxa",
-          "href": "ut04/ut0400.html"
+          "label": "📋 4.0 Propuesta Didáctica: Elementos de una instalación de red",
+          "href": "./ut04/ut0400.html",
+          "class": ""
         },
         {
-          "label": "4.1 Elements d'una xarxa de transmissió de dades i tipología de caixes",
-          "href": "ut04/ut0401.html"
-        },
-        {
-          "label": "🛠️ Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat",
-          "href": "ut04/ficha401.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD4)",
-          "href": "ut04/activitats.html"
+          "label": "4.1 Elementos de una red de transmisión de datos y tipología de cajas",
+          "href": "./ut04/ut0401.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD5: Instal·lació Física — Canalitzacions, Armaris Rack, Patch Panels i Rosetes",
+      "summary": "UD5: Instalación Física — Canalizaciones, Armarios Rack, Patch Panels y Tomas de Red",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD5",
-          "href": "ut05/index.html"
+          "label": "🧭 Portada e Índice UD5",
+          "href": "./ut05/index.html",
+          "class": ""
         },
         {
-          "label": "📋 5.0 Proposta Didàctica: Canalitzacions i sistemes de fixació",
-          "href": "ut05/ut0500.html"
+          "label": "📋 5.0 Propuesta Didáctica: Canalizaciones y sistemas de fijación",
+          "href": "./ut05/ut0500.html",
+          "class": ""
         },
         {
-          "label": "5.1 Tipus de fixacions: tacs, brides, caragols, roscas, grapes",
-          "href": "ut05/ut0501.html"
+          "label": "5.1 Tipos de fijaciones: tacos, bridas, tornillos, roscas, grapas",
+          "href": "./ut05/ut0501.html",
+          "class": ""
         },
         {
-          "label": "5.2 Relació entre les fixacions i l'element a subjectar",
-          "href": "ut05/ut0502.html"
-        },
-        {
-          "label": "🛠️ Fitxa 5.1 · Disseny d'Armari Rack de 19 Polzades i Canalitzacions",
-          "href": "ut05/ficha501.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD5)",
-          "href": "ut05/activitats.html"
+          "label": "5.2 Relación entre las fijaciones y el elemento a sujetar",
+          "href": "./ut05/ut0502.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD6: Grimpat de Connectors RJ-45 (T568A/T568B), Latiguillos i Comprovació amb Tester",
+      "summary": "UD6: Crimpado de Conectores RJ-45 (T568A/T568B), Latiguillos y Comprobación con Tester",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD6",
-          "href": "ut06/index.html"
+          "label": "🧭 Portada e Índice UD6",
+          "href": "./ut06/index.html",
+          "class": ""
         },
         {
-          "label": "📋 6.0 Proposta Didàctica: Dispositius i interpretació de xarxes locals",
-          "href": "ut06/ut0600.html"
+          "label": "📋 6.0 Propuesta Didáctica: Dispositivos e interpretación de redes locales",
+          "href": "./ut06/ut0600.html",
+          "class": ""
         },
         {
-          "label": "6.1 Elements de la xarxa local i la seua funció",
-          "href": "ut06/ut0601.html"
+          "label": "6.1 Elementos de la red local y su función",
+          "href": "./ut06/ut0601.html",
+          "class": ""
         },
         {
-          "label": "6.2 El mapa físic de la xarxa local: interpretació i representació",
-          "href": "ut06/ut0602.html"
-        },
-        {
-          "label": "🛠️ Fitxa 6.1 · Taller de Grimpat RJ-45 (T568A / T568B) i Rosetes IDC",
-          "href": "ut06/ficha601.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD6)",
-          "href": "ut06/activitats.html"
+          "label": "6.2 El mapa físico de la red local: interpretación y representación",
+          "href": "./ut06/ut0602.html",
+          "class": ""
         }
       ]
     },
     {
-      "summary": "UD7: Dispositius d'Interconnexió de Xarxes — Switch, Router i Punt d'Accés Wi-Fi",
+      "summary": "UD7: Dispositivos de Interconexión de Redes — Switch, Router y Punto de Acceso Wi-Fi",
       "items": [
         {
-          "label": "🧭 Portada i Índex UD7",
-          "href": "ut07/index.html"
+          "label": "🧭 Portada e Índice UD7",
+          "href": "./ut07/index.html",
+          "class": ""
         },
         {
-          "label": "📋 7.0 Proposta Didàctica: Disseny i representació de xarxes locals",
-          "href": "ut07/ut0700.html"
+          "label": "📋 7.0 Propuesta Didáctica: Diseño y representación de redes locales",
+          "href": "./ut07/ut0700.html",
+          "class": ""
         },
         {
-          "label": "7.1 Aplicacions informàtiques per a representar el mapa físic de la xarxa local",
-          "href": "ut07/ut0701.html"
-        },
-        {
-          "label": "🛠️ Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés",
-          "href": "ut07/ficha701.html"
-        },
-        {
-          "label": "📓 Recull Complet d'Activitats (UD7)",
-          "href": "ut07/activitats.html"
+          "label": "7.1 Aplicaciones informáticas para representar el mapa físico de la red local",
+          "href": "./ut07/ut0701.html",
+          "class": ""
         }
       ]
     }

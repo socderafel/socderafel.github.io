@@ -1,121 +1,821 @@
 ---
-title: "UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)"
-unit: "3"
-module: "SEX"
-layout: "default"
+layout: default
+title: "UD 3 — Conexiones y Administración Remota (SSH, RDP, VNC, Telnet) — Servicios en Red"
 course_root: ".."
-badge: "2n SMX · Serveis en Xarxa · UT03"
+badge: "2n SMX · Servicios en Red · UT03"
+prev_url: "../ut02/index.html"
+prev_label: "⬅️ UT02"
+next_url: "../ut04/index.html"
+next_label: "UT04 ➡️"
 ---
 
-<div class="interactive-progress-tracker">
-  <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
-  </div>
-  <div class="tracker-bar">
-    <div class="tracker-fill" style="width: 0%;"></div>
-  </div>
-</div>
+# UD 3 — Conexiones y Administración Remota (SSH, RDP, VNC, Telnet)
 
-# 📘 UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)
+Bienvenido/a a la **UD 3 — Conexiones y Administración Remota (SSH, RDP, VNC, Telnet)** del módulo profesional de **Servicios en Red** (2º curso de Técnico en Sistemas Microinformáticos y Redes).
 
-> **📌 Resultat d'Aprenentatge i Objectius:** RA2. Instal·la serveis de resolució de noms (DNS), jerarquia de dominis, zones directes i inverses, registres (A, AAAA, CNAME, MX, PTR, SOA, NS) en Windows Server AD DS i Linux BIND9.
-
-## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
-
-| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
-| :--- | :--- | :--- |
-| **3.1** | **3.1 - Introducció** | [Obrir apartat ➡️](./ut0301.html) |
-| **3.2** | **3.2 - Protocol DNS** | [Obrir apartat ➡️](./ut0302.html) |
-| **3.3** | **3.3 - Mecanismes de comunicació DNS** | [Obrir apartat ➡️](./ut0303.html) |
-| **3.4** | **3.4 - Servidors DNS** | [Obrir apartat ➡️](./ut0304.html) |
-| **3.5** | **3.5 - Consultes al DNS** | [Obrir apartat ➡️](./ut0305.html) |
-| **3.6** | **3.6 - Funcionament del servei DNS** | [Obrir apartat ➡️](./ut0306.html) |
-| **3.7** | **3.7 - Jerarquia de noms DNS** | [Obrir apartat ➡️](./ut0307.html) |
-| **3.8** | **3.8 - Servidors DNS públics i privats** | [Obrir apartat ➡️](./ut0308.html) |
-| **3.9** | **3.9 - Evolució del protocol DNS i seguretat** | [Obrir apartat ➡️](./ut0309.html) |
-| **3.10** | **3.10 - Registres DNS** | [Obrir apartat ➡️](./ut0310.html) |
-| **3.11** | **3.11 - Eines de diagnóstic tècnic de registres DNS** | [Obrir apartat ➡️](./ut0311.html) |
-| **3.12** | **3.12 - Tasca RA2-CEb-1 - Resolució manual d'un domini** | [Obrir apartat ➡️](./ut0312.html) |
-| **3.13** | **3.13 - Tasca RA2-CEb-2 - Resolució manual d'un domini** | [Obrir apartat ➡️](./ut0313.html) |
-| **3.14** | **3.14 - Tasca RA2-CEde-1 - Instal·lació i configuració d'un servidor DNS amb Windows Server 2025** | [Obrir apartat ➡️](./ut0314.html) |
+Este temario contiene el desarrollo curricular completo, diagramas de arquitectura, capturas de pantalla de laboratorios reales y guías paso a paso desarrolladas por el profesor **Javier Egea Blasco** y el profesor **Pepe Cuenca**.
 
 ---
 
-## 🎯 Resum d'Aprenentatge i Metodologia
+### 📑 Índice de Apartados de la Unidad
 
-Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
-
-
+- [**Introducción y Conceptos**](./ut0301.html)
+- [**1 - Introducción**](./ut0302.html)
+- [**2 - Conceptos y definición**](./ut0303.html)
+- [**3 - Riesgos e inconvenientes asociados al control externo**](./ut0304.html)
+- [**4 - Buenas prácticas y medidas de seguridad**](./ut0305.html)
+- [**5 - Tarea RA6-CEa - Métodos de acceso y administración remota**](./ut0306.html)
+- [**6 Tarea RA6-CEbcd-1 - Instalación y conexión remota a Windows Server 2025 en AWS**](./ut0307.html)
+- [**7 Tarea RA6-CEbcd-2 - Instalación y conexión remota a Ubuntu Server 24.04 LTS en AWS**](./ut0308.html)
+- [**8 - Tarea RA6-CEf-1 - Conexión remota desde Ubuntu Server 24.04 LTS a SO Windows**](./ut0309.html)
+- [**9 - Administración remota segura con SSH (Secure Shell)**](./ut0310.html)
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+# 📖 Temario Completo de la Unidad (Lectura Continua)
 
-Comprova el teu domini sobre **UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)** superant aquests 4 reptes gamificats (+25 punts cadascun):
+![Descripción de la imagen](../img_3/img_3_1.png)
 
-<div class="interactive-mcq" data-answer="D" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin tipus de registre DNS permet crear un àlies que apunta un nom cap a un altre nom canònic?</div>
-  <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) SOA</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) NS</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) CNAME</button>
-  </div>
-  <div class="quiz-feedback"></div>
-</div>
+**Resultados de aprendizaje y criterios de evaluacion que se evaluarán en esta unidad.**  
 
-<div class="interactive-mcq" data-answer="C" data-hint="Comprova l'apartat corresponent de la unitat.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En la tasca de resolució manual d'un domini (com aules.edu.gva.es) amb nslookup o dig, quin és el primer servidor al qual s'ha de consultar si no tenim memòria cau?</div>
-  <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) El servidor de correu MX del domini.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) Cap de les anteriors és correcta.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) Un dels servidors arrel (Root Servers, de a.root-servers.net a m.root-servers.net).</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) El servidor DHCP de l'encaminador domèstic.</button>
-  </div>
-  <div class="quiz-feedback"></div>
-</div>
+| **Resultados de aprendizaje de la unidad didáctica:**|
+||
+|**RA6. Gestiona métodos de acceso remoto describiendo sus características e instalando los servicios correspondientes**|
 
-<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Un nom de domini totalment qualificat (FQDN) especifica la ubicació exacta de l'equip dins de la jerarquia DNS fins al punt arrel final.</div>
-  <div class="vf-buttons">
-    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
-    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
-  </div>
-  <div class="quiz-feedback" style="width: 100%;"></div>
-</div>
+|**Criterios de evaluación de la unidad didáctica:**|
+||
+|**a)** Se han descrito métodos de acceso y administración remota de sistemas.|
+|**b)** Se ha instalado un servicio de acceso remoto en línea de comandos.|
+|**c)** Se ha instalado un servicio de acceso remoto en modo gráfico.|
+|**d)** Se ha comprobado el funcionamiento de ambos métodos.|
+|**e) Se han identificado las principales ventajas y deficiencias de cada uno.**|
+|**f)** Se han realizado pruebas de acceso remoto entre sistemas de distinta naturaleza.|
+|**g) Se han realizado pruebas de administración remota entre sistemas de distinta naturaleza.**|
 
-<div class="interactive-quiz" data-answer="53" data-hint="És un número entre 50 i 55.">
-  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin número de port UDP i TCP utilitza per defecte el servei DNS estàndard?</div>
-  <div class="quiz-controls">
-    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
-    <button type="button" class="btn-quiz-check">Comprovar</button>
-  </div>
-  <div class="quiz-feedback"></div>
-</div>
+> ⚠️ **Nota:**
+>
+>     Los criterios de evaluación en negrita será evaluados durante la FCT.
+## 1 - Introducción
 
-### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+- **El acceso y administración remota** de dispositivos es **la capacidad de conectar, controlar y configurar ordenadores, servidores y dispositivos de red desde un lugar distinto**.
+- Esto ayuda a solucionar problemas y actualizar sistemas de manera rápida a través de internet o redes locales.
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)**):
+## 2 - Conceptos y definición
 
-- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
-- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
+### 2.1 Tipos de recursos accesibles
 
-<div class="aules-delivery-card">
-  <h3>📤 Comprovant de Lliurament per a Aules</h3>
-  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
-  <div class="aules-student-field">
-    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
-    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
-  </div>
-  <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
-  </div>
-  <div class="aules-actions">
-    <button type="button" class="btn-aules-dl" data-module="SEX" data-unit="UD03" data-activity="ut03_index">📥 Descarregar Comprovant PDF</button>
-    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
-  </div>
-  <div class="aules-toast"></div>
-</div>
+**Los recursos** a los que se accede de forma remota abarca todo tipo de servicios:
+
+- **Infraestructura de Red:**  
+Gestión y configuración de servidores, enrutadores y conmutadores por parte de administradores de TI.
+- **Escritorios:**  
+Acceso completo al sistema operativo de una máquina física o virtual para trabajar de forma íntegra.
+- **Archivos y Datos:**  
+Permite recuperar, cargar y administrar documentos almacenados en servidores o dispositivos remotos sin necesidad de enviarlos por correo electrónico.
+- **Aplicaciones:**  
+Ejecución de software específico (virtual o físico) alojado en un servidor central, lo cual es útil cuando el programa requiere mucha potencia de cálculo o licencias específicas.
+
+### 2.2 Tipos de accesos
+
+Los tipos de acceso remoto se pueden clasificar según el nivel de control y la finalidad del acceso:
+
+- **Acceso vs. Control remoto:**  
+Mientras que el **acceso remoto** significa conectarse a un sistema o red, el **control remoto** es un tipo específico de acceso donde el usuario toma el control total del dispositivo objetivo.
+- **Administración remota:** Se define específicamente como la gestión de servidores y servicios desde un equipo de escritorio remoto, configurando ajustes e instalando actualizaciones sin acceso físico a la sala de servidores.
+- **Componentes del acceso:** Para que este concepto se materialice, se requiere una combinación de **software** (que implementa protocolos), **hardware** (dispositivos físicos o virtuales) y una **red** de comunicación.
+
+### 2.3 Software de administración remota
+
+- El control de sistemas externos se materializa mediante software (y protocolos) que rigen la interacción entre el dispositivo del usuario y el sistema objetivo.
+
+- En este caso se hará una distinción entre **acceso remoto en línea de comandos** y **acceso remoto en modo gráfico**:
+
+    !!! tip "Acceso remoto en línea de comandos:"  
+        - **SSH (Secure Shell)** es un protocolo de red que permite a los usuarios conectarse de manera segura a un sistema remoto mediante una interfaz de línea de comandos.  
+        - **Telnet** es otro protocolo que permite la comunicación remota, pero carece de cifrado, lo que lo hace menos seguro que SSH.
+
+    > 💡 **Acceso remoto en modo gráfico:**
+>
+>         - **RDP (Remote Desktop Protocol)** es un protocolo desarrollado por Microsoft que permite a los usuarios conectarse a otro ordenador a través de una interfaz gráfica, proporcionando acceso completo al escritorio del sistema remoto.
+>         - **Remmina** es un cliente de escritorio remoto que soporta múltiples protocolos, incluyendo RDP, VNC y SSH, facilitando la conexión a diferentes sistemas desde una única aplicación.
+>         - **VNC (Virtual Network Computing)** permite controlar un ordenador remoto a través de una interfaz gráfica, transmitiendo la pantalla del sistema remoto al local y permitiendo la interacción con el mismo.
+!!! question "Comprobar si tenéis instalado el software RDP en windows"
+
+## 3 - Riesgos e inconvenientes asociados al control externo
+
+### 3.1 Riesgos de seguridad y malware
+
+- El acceso remoto a los recursos de red expone a las organizaciones a interceptación de datos, robo de credenciales, ataques de fuerza bruta en protocolos como RDP, infección por malware (troyano de acceso remoto, RAT) a través de redes domésticas no seguras y movimientos laterales de atacantes si una sesión queda abierta o mal configurada.
+
+### 3.2 Latencia en la comunicación
+
+- La latencia puede afectar el rendimiento y la experiencia del usuario al acceder a recursos remotos, lo que subraya la importancia de implementar soluciones de red optimizadas.
+- En el caso de la administración remota de servidores, la latencia y estabilidad de la red (internet) puede ser crítica, especialmente en entornos donde se requiere una respuesta rápida para la resolución de problemas.
+
+### 3.3 Complejidad en la gestión y mantenimiento
+
+- La gestión y el mantenimiento de sistemas remotos pueden ser más complejos que los sistemas locales, requiriendo conocimientos especializados y herramientas adicionales para su administración eficaz.
+
+## 4 - Buenas prácticas y medidas de seguridad
+
+1. **Autenticación multifactor (MFA)**
+
+    - Implementarla siempre que sea posible.
+
+1. **No exponer el puerto de administración (RDP) a internet**  
+
+    - Los atacantes escanean el puerto RDP (UDP 3389) constantemente.
+    - Una práctica recomendada es utilizar una VPN para acceder a la red interna de manera segura.
+
+1. **Usar firewalls y listas de control de acceso (ACL)**
+    - Implementar firewalls y listas de control de acceso (ACL) para restringir el acceso a los recursos remotos.
+
+1. **Configurar políticas de acceso y permisos**
+
+    - Configurar políticas de acceso y permisos adecuadas para limitar el acceso a los recursos remotos.
+    - Configurar políticas de bloqueo de cuentas después de varios intentos fallidos de inicio de sesión para prevenir ataques de fuerza bruta.
+    - Establecer tiempos de sesión y desconexión automática para minimizar el riesgo de acceso no autorizado.
+
+1. **Políticas de seguridad claras**
+
+    - Asegúrarse de que todo el mundo entiende las políticas de seguridad y de que se aplican correctamente.
+    - Un ejemplo sería la política de no compartir credenciales de acceso remoto con otros usuarios.
+
+1. **Política de contraseñas seguras**
+    - Asegúrarse de que todo el mundo utiliza contraseñas seguras y que se cambian regularmente.
+
+1. **Mantener los dispositivos actualizados**
+    - Es fundamental mantener los dispositivos y sistemas operativos actualizados con las últimas correcciones de seguridad.
+
+## 5 - Tarea RA6-CEa - Métodos de acceso y administración remota
+
+> ℹ️ **Trabajo a realizar.**
+>
+>     - Para esta evaluación, deberéis responder a preguntas tipo test.
+>     - Podéis descargar el archivo de texto desde la correspondiente tarea de aules (RA6CEa Nombre Apellidos).
+>     - Subrayar la respuesta que consideráis correcta.
+>     !!! warning "Entrega de la tarea"
+>         - Guardar el documento con RA6-CEa-NombreApellidos.
+>         - Una vez completada la tarea, subirla a la tarea RA6-CEa de Aules.
+>         - A partir de momento de apertura de la tarea, dispondréis de **20 minutos** para subir vuestros trabajos.
+>         - Pasado ese tiempo la tarea se cerrará y ya no será posible subir vuestras respuestas.
+## 6 Tarea RA6-CEbcd-1 - Instalación y conexión remota a Windows Server 2025 en AWS
+
+!!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
+
+### 6.1 Instalación de Windows Server 2025 en AWS
+
+- AWS (Amazon Web Services) es una plataforma de servicios en la nube que permite a los usuarios crear y gestionar servidores virtuales, conocidos como instancias EC2 (Elastic Compute Cloud).
+- Para instalar Windows Server 2025 en AWS, se deben seguir los siguientes pasos:
+
+#### 6.1.1 Primer acceso a AWS
+
+- Revisad vuestros correos electrónicos, ya que habréis recibido un correo de AWS con un enlace para crear vuestra cuenta.
+- Para la creación de la cuenta, debéis seguir los pasos indicados en el siguiente [enlace](https://javieregeablasco.github.io/Apuntes/DAW/DAW_2/AWS/UT.%203-AWS%20Academy/#2-learner-lab).
+- Una vez creada la cuenta accederemos al laboratorio de AWS (learner lab).
+
+#### 6.1.2 Acceder al curso
+
+- Para acceder al curso, debéis seguir los pasos indicados en el siguiente [enlace](https://javieregeablasco.github.io/Apuntes/DAW/DAW_2/AWS/UT.%203-AWS%20Academy/#23-acceso-al-curso).
+
+#### 6.1.3 Acceder al laboratorio
+
+- Para acceder al laboratorio, debéis seguir los pasos indicados en el siguiente [enlace](https://javieregeablasco.github.io/Apuntes/DAW/DAW_2/AWS/UT.%203-AWS%20Academy/#24-acceder-al-laboratorio).
+
+#### 6.1.4 Lanzar el laboratorio
+
+- Para lanzar el laboratorio, debéis seguir los pasos indicados en el siguiente [enlace](https://javieregeablasco.github.io/Apuntes/DAW/DAW_2/AWS/UT.%203-AWS%20Academy/#25-lanzar-el-laboratorio).
+
+#### 6.1.5 Acceder al panel del laboratorio
+
+- Para acceder al panel del laboratorio, debéis seguir los pasos indicados en el siguiente [enlace](https://javieregeablasco.github.io/Apuntes/DAW/DAW_2/AWS/UT.%203-AWS%20Academy/#26-panel-de-aws).
+
+#### 6.1.6 Creación de una instancia EC2
+
+1. Una instancia EC2 es un servidor virtual que se ejecuta en la infraestructura de AWS.
+
+1. Para crear una instancia EC2 con Windows Server 2025, haremos lo siguiente:
+
+    - Ir al panel de control de AWS y seleccionar el servicio EC2.
+    ![Descripción de la imagen](../img_3/img_3_2.png)
+    - Una vez en el menú de EC2, seleccionar "Lanzar instancia".
+    ![Descripción de la imagen](../img_3/img_3_4.png)
+    - Seleccionar la imagen de Windows Server 2025.
+    ![Descripción de la imagen](../img_3/img_3_3.png)
+    > ⚠️ **Para el tipo de instancia seleccionar m7i.large**
+>
+>     - Configurar las opciones de la instancia (tipo, par de claves).
+>     ![Descripción de la imagen](../img_3/img_3_5.png)
+>     - Configurar las opciones de red.
+>     ![Descripción de la imagen](../img_3/img_3_6.png)
+>     - Configurar el almacenamiento.
+>     ![Descripción de la imagen](../img_3/img_3_7.png)
+>     - Buscamos el botón de lanzar y lo pulsamos.
+>     ![Descripción de la imagen](../img_3/img_3_8.png)
+>     - Volvemos a la página de EC2 y supervisamos el estado de creación de nuestra instancia.  
+>     ==Realizar captura de pantalla==
+>     ![Descripción de la imagen](../img_3/img_3_9.png)
+### 6.2 Conexión remota a la instancia de Windows Server 2025 desde windows 10-11
+
+1. En este caso usaremos el protocolo RDP (Remote Desktop Protocol) para conectarnos a la instancia de Windows Server 2025. ese protocolo permite a los usuarios conectarse a otro ordenador a través de una interfaz gráfica, proporcionando acceso completo al escritorio del sistema remoto.
+
+1. AWS facilita la conexión remota a través de RDP proporcionando un archivo de conexión que contiene la dirección IP pública de la instancia y las credenciales necesarias para acceder.
+
+    - Seleccionamos la instancia a la que queremos acceder y accedemos al servicio de conexión remota en AWS.
+    ![Descripción de la imagen](../img_3/img_3_10.png)
+    - Seleccionamos RDP. Descargamos el archivo de conexión. De momento no lo abrimos ya que aún no tenemos las credenciales.
+    ![Descripción de la imagen](../img_3/img_3_11.png)
+    - Volvemos al learner lab pinchamos en AWS details y descargamos el archivo de la clave privada **labuser.pem** y lo guardamos en nuestro equipo.
+    ![Descripción de la imagen](../img_3/img_3_12.png)
+    - Volvemos a la página de EC2 y seleccionamos la instancia a la que queremos acceder. Pinchamos en **Conectar** y luego en **Obtener    contraseña**. Subimos el archivo **labuser.pem** y obtenemos la contraseña de acceso.
+    ![Descripción de la imagen](../img_3/img_3_13.png)
+    - Contraseña de acceso:  
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_3/img_3_14.png)
+    - Abrimos el archivo de conexión RDP que hemos descargado anteriormente y pegamos la contraseña generada por AWS.  
+    Acceso al escritorio remoto de Windows Server 2025.
+    ![Descripción de la imagen](../img_3/img_3_15.png)  
+    Pegamos la contraseña generada por AWS.
+    ![Descripción de la imagen](../img_3/img_3_16.png)
+    > ⚠️ **Solo para usuarios con nombre de equipo vinculado a un Sistema de Información y Control Empresarial (SICE).**
+>
+>         - Ir a `Usar otra cuenta`:  
+>         ![Descripción de la imagen](../img_3/img_3_80.png)
+>         - Introducir `.\Administrator` en vez de solamente Administrator.
+>         ![Descripción de la imagen](../img_3/img_3_81.png)
+> 
+>     - Aceptamos los riesgos de seguridad y nos conectamos al escritorio remoto de Windows Server 2025.  
+>     ![Descripción de la imagen](../img_3/img_3_17.png)
+>     - Una vez conectdos, podemos trabajar con el escritorio remoto de Windows Server 2025 como si estuviéramos físicamente frente a él.  
+>     ==Realizar captura de pantalla==
+>     ![Descripción de la imagen](../img_3/img_3_18.png)
+### 6.3 Configuraciones preliminares de Windows Server 2025
+
+!!! warning "¡Obligatorio!"
+Una vez conectados al escritorio remoto de Windows Server 2025, es recomendable realizar algunas configuraciones preliminares para asegurar el correcto funcionamiento del servidor y la seguridad del mismo.
+
+- Cambiar el nombre del equipo.
+![Descripción de la imagen](../img_3/img_3_19.png)
+Si cambiamos el nombre del equipo, debemos reiniciar el servidor para que los cambios tengan efecto.
+![Descripción de la imagen](../img_3/img_3_20.png)
+- Edición y versión del sistema operativo.
+![Descripción de la imagen](../img_3/img_3_21.png)
+- Configurar el widget.
+![Descripción de la imagen](../img_3/img_3_22.png)
+![Descripción de la imagen](../img_3/img_3_23.png)
+- ==Realizar captura de pantalla== del widget después de haber cambiado el nombre de la máquina.
+
+### 6.4 Desconexión de la instancia a Windows Server 2025
+
+Podemos hacerlo de varias formas:
+
+- Cerrar la ventana de conexión remota.
+- Cerrar sesión desde el menú de inicio de Windows Server 2025.
+- Ejecutar la aplicación **Run** y escribir el comando **logoff** para cerrar la sesión de forma inmediata.
+![Descripción de la imagen](../img_3/img_3_24.png)
+![Descripción de la imagen](../img_3/img_3_25.png)
+
+### 6.5 Cerrar el laboratorio
+
+- Tenemos que cerrar el laboratorio de AWS para liberar los recursos y evitar cargos innecesarios.
+- Para ello, simplemente finalizaremos el laboratorio, pinchando en **End Lab** en la consola del laboratory y esperaremos a que el testigo de AWS pase a **rojo**.  
+![Descripción de la imagen](../img_3/img_3_26.png)
+
+## 7 Tarea RA6-CEbcd-2 - Instalación y conexión remota a Ubuntu Server 24.04 LTS en AWS
+
+!!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
+
+### 7.1 Instalación de Ubuntu Server 24.04 LTS en AWS
+
+Repetiremos los pasos anteriores para crear una instancia EC2, pero esta vez seleccionaremos la imagen de Ubuntu Server 24.04 LTS.
+
+- Seleccionamos la imagen de Ubuntu Server 24.04 LTS.
+![Descripción de la imagen](../img_3/img_3_27.png)
+- Seleccionamos el tipo de instancia y el par de claves.
+![Descripción de la imagen](../img_3/img_3_28.png)
+- Configuramos la red donde se desplegará la instancia.
+![Descripción de la imagen](../img_3/img_3_29.png)
+!!! warning "Para el almacenamiento seleccionar 50GiB"
+- Configuramos el almacenamiento de la instancia.
+![Descripción de la imagen](../img_3/img_3_30.png)
+
+### 7.2 Conexión remota CLI a través del panel de control de AWS
+
+- Al igual que en el caso de Windows Server 2025, seleccionaremos la instancia en la consola de AWS y pulsaremos conectar.
+![Descripción de la imagen](../img_3/img_3_31.png)
+- AWS facilita la conexión remota a través de SSH de manera fácil e intuitiva.
+![Descripción de la imagen](../img_3/img_3_32.png)
+- Una vez establecida la conexión, se nos abrirá una ventana de terminal con la conexión SSH a la instancia de Ubuntu Server 24.04 LTS.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_33.png)
+
+### 7.3 Conexión remota desde SO Windows
+
+- Para conectarnos a la instancia de Ubuntu Server 24.04 LTS desde un sistema operativo Windows, podemos utilizar la aplicación de conexión a escritorio remoto **MSTSC**.
+- No obstante, tendremos que preparar la instancia para permitir conexiones así como instalar un cliente RDP y un entorno gráfico ligero en la instancia de Ubuntu Server 24.04 LTS.
+
+#### 7.3.1 Apertura de puertos en la instancia
+
+1. Al abrir los puertos necesarios en el firewall de la instancia de Ubuntu Server 24.04 LTS, podremos permitir conexiones remotas a través de RDP.
+
+1. Aunque no sea una buena práctica, para fines educativos, no solo abriremos el puerto 3389 para los protocolos **TCP** y **UDP** sino que abriremos todos los puertos.
+
+    - Vamos a la consola de AWS y seleccionamos la instancia de Ubuntu Server 24.04 LTS.
+    - En la sección de **Seguridad**, seleccionamos el grupo de seguridad asociado a la instancia.
+    ![Descripción de la imagen](../img_3/img_3_34.png)
+    - Editamos las reglas de entrada.
+    ![Descripción de la imagen](../img_3/img_3_35.png)
+    - Agregamos una regla de entrada para permitir **el tráfico entrante desde internet sobre cualquier puerto**.
+    ![Descripción de la imagen](../img_3/img_3_36.png)  
+    - Al final, obtendremos el siguiente resultado:  
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_3/img_3_37.png)
+
+#### 7.3.2 Preparación de la instancia de Ubuntu Server 24.04 LTS
+
+En la instancia de Ubuntu Server 24.04 LTS, instalaremos un servidor RDP para permitir conexiones remotas desde sistemas Windows.
+
+Para ello, primero nos conectaremos a la instancia a través de SSH y luego instalaremos el servidor RDP.
+
+- Actualizamos los repositorios y actualizamos el sistema operativo.
+
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+
+- De momento no disponemos de interfaz gráfica en la instancia de Ubuntu Server 24.04 LTS, por lo que instalaremos un entorno de escritorio ligero como **XFCE**.
+
+    ```bash
+    sudo apt install xfce4 xfce4-goodies -y
+    ```
+
+- Instalamos el servidor RDP **XRDP**.
+
+    ```bash
+    sudo apt install xrdp -y    
+    ```
+
+- Habilitamos el servicio xrdp para que se inicie automáticamente al arrancar el sistema.
+
+    ```bash
+    sudo systemctl enable xrdp
+    ```
+
+- Iniciamos el servicio xrdp.
+
+    ```bash
+    sudo systemctl start xrdp
+    ```
+
+- Verificamos que el servicio xrdp esté activo y en ejecución.
+
+    ```bash
+    sudo systemctl status xrdp
+    ```
+
+- Obtendremos un resultado similar al siguiente.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_38.png)
+
+- Cambiamos la contraseña del usuario para que pueda iniciar sesión a través de RDP.
+
+    ```bash
+    sudo passwd <nombre_de_usuario>
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_39.png)
+
+- Para evitar conflictos con la elección de la interfaz gráfica por parte de XFCE, figuramos el archivo de sesion.
+
+    ```bash
+    echo "startxfce4" > ~/.xsession
+    chmod +x ~/.xsession
+    ```
+
+- Nos aseguramos que la interfaz se aplica al servicio globalmente.
+
+    ```bash
+    sudo sed -i.bak 's/exec \/etc\/X11\/Xsession/exec startxfce4/' /etc/xrdp/startwm.sh
+    ```
+
+- Reiniciamos el servicio XFCE
+
+    ```bash
+    sudo systemctl restart xrdp
+    sudo systemctl status xrdp
+    ```
+
+#### 7.3.3 Conexión remota desde SO windows
+
+- Lanzamos la aplicación de conexión a escritorio remoto **MSTSC** en nuestro sistema operativo Windows.
+![Descripción de la imagen](../img_3/img_3_40.png)
+
+- Escribimos la **IP pública** de la instancia a la que no vamos a conectar.
+![Descripción de la imagen](../img_3/img_3_44.png)
+
+- Obviamos las advertencias de seguridad.
+![Descripción de la imagen](../img_3/img_3_41.png)
+
+- Una vez conectados introducimos las credenciales.
+![Descripción de la imagen](../img_3/img_3_42.png)
+
+- Si todo ha ido bien obtendremos una interfaz similar a la siguiente imagen.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_43.png)
+
+## 8 - Tarea RA6-CEf-1 - Conexión remota desde Ubuntu Server 24.04 LTS a SO Windows
+
+!!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
+
+Para poder conectarnos desde una distribución de Linux a Windows necesitaremos una aplicación de acceso a escritorio como **Remmina**.
+
+### 8.1 Comprobación e instalación de Remmina
+
+- Remmina no viene instalada en todas las distribuciones de Linux así que comprobaremos si la tenemos instalada.
+
+    ```bash
+    remmina --version
+    ```
+
+- Si nos devuelve un mensaje de error, instalaremos la aplicación.
+
+    ```bash
+    sudo apt install remmina -y
+    ```
+
+### 8.2 Conexión a la instancia de Windows Server 2025
+
+- Ejecutamos la aplicación
+
+    ```bash
+    remmina
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_45.png)
+
+- Introducimos los parámetros de la conexión
+![Descripción de la imagen](../img_3/img_3_46.png)
+
+- Guardamos los parametros de la conexión y lanzamos la conexión
+![Descripción de la imagen](../img_3/img_3_49.png)
+
+- Aceptamos el certificado.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_47.png)
+
+- Si todo ha ido bien, estaremos en el escritorio de nuestra máquina Windows Server.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_48.png)
+
+- ==Responder a la pregunta== Describir el flujo de conexiones remotas realizado anteriormente.
+
+### 8.3 Posibles problemas de conexión a la instancia de Windows Server 2025
+
+Como ya hemos visto ambas máquinas deben estar en condiciones de acceptar conexiones remotas por RDP.
+
+Así pues, verificaremos si Windows Server está configurado para aceptar conexiones remotas.
+
+- Vamos a **Settings**.
+![Descripción de la imagen](../img_3/img_3_50.png)
+
+- Abajo del todo seleccionamos **About**.
+![Descripción de la imagen](../img_3/img_3_51.png)
+
+- Buscamos Remote desktop.
+![Descripción de la imagen](../img_3/img_3_52.png)
+
+- Comprobamos la configuración del **Remote Desktop**
+![Descripción de la imagen](../img_3/img_3_53.png)
+
+!!! tip "Como podemos ver, la imagen de Windows Server usada en AWS acepta por defecto las conexiones RDP. De no ser así no podriamos habernos conectado a la instancia en una práctica anterior."
+
+## 9 - Administración remota segura con SSH (Secure Shell)
+
+![Descripción de la imagen](../img_3/img_3_83.png)
+
+1. El protocolo SSH (Secure Shell) es **un protocolo de red** diseñado para acceder, administrar y controlar dispositivos de forma remota a través de una conexión totalmente cifrada.
+
+1. Surgió como un reemplazo seguro para protocolos tradicionales como **Telnet** o **FTP**, que transmitían la información y las contraseñas en texto plano.
+
+1. SSH opera en la capa de aplicación del modelo TCP/IP y funciona de la siguiente manera:
+![Descripción de la imagen](../img_3/img_3_82.png)
+
+    - **Capa de Aplicación:** SSH proporciona servicios directos al usuario o administrador (como la ejecución remota de comandos, transferencia segura de archivos vía SFTP/SCP y túneles de puertos).
+    - **Capa de Transporte:** Se apoya directamente en el protocolo TCP (generalmente a través del puerto 22) para garantizar que los datos se entreguen de forma fiable y ordenada antes de establecer el cifrado.
+
+### 9.1 Uso básico de SSH
+
+1. Para conectar dos equipos mediante SSH se utiliza un modelo **cliente-servidor**:
+
+    - **Cliente:** La máquina local desde la que nos conectamos (CLI en Linux/macOS o GUI's como PuTTY/OpenSSH en Windows).  
+    - **Servidor:** Equipo o servidor remoto que escucha peticiones de conexión (normalmente en el puerto TCP 22).
+
+1. El comando básico en la terminal se compone de:  
+    ```bash
+    ssh usuario@direccion_ip_o_dominio
+    ```
+    - **ssh:** Indica al sistema que inicie una sesión cifrada Secure Shell.
+    - **usuario:** Cuenta a la que deseamos acceder (p.e. root).
+    - **direccion_ip_o_dominio:** Dirección del servidor al que nos conectamos (p.e. 192.168.1.1 o servidor.com).
+
+### 9.2 Mecanismos de cifrado en SSH
+
+SSH combina **3 métodos criptográficos distintos** para garantizar la privacidad, la autenticación y la integridad de los datos.
+
+```mermaid
+flowchart TB
+    A["<b>Protocolo SSH</b><hr><br/>Puerto 22"] --> C["<b>Cifrado simétrico</b><hr><br/><div style='text-align: left;'>• 1 clave compartida</div><div style='text-align: left;'>• Cifra toda la sesión</div><div style='text-align: left;'>• Algoritmos de cifrado: AES, Blowfish</div>"]
+    A --> D["<b>Cifrado asimétrico</b><hr><br/><div style='text-align: left;'>• Par de claves (pública y privada)</div><div style='text-align: left;'>• Intercambio de clave y autenticación</div><div style='text-align: left;'>• Algoritmos de cifrado: RSA, ECC o Diffie-Hellman</div>"]
+    A --> E["<b>Hashing</b><hr><br/><div style='text-align: left;'>• Función unidireccional</div><div style='text-align: left;'>• Verifica la integridad de los datos</div><div style='text-align: left;'>• Detecta alteraciones</div><div style='text-align: left;'>• Algoritmos de hash: SHA-3, KDF</div>"]
+```
+
+1. **Cifrado simétrico**  
+    1. El cifrado simétrico utiliza **una única clave secreta** tanto para **cifrar como para descifrar** la información en ambos lados.  
+    1. **Uso en SSH:** Cifra la totalidad del tráfico y los comandos enviados durante la sesión activa.
+    1. **Seguridad:** La clave no se transmite por la red. El cliente y el servidor la generan de manera independiente durante el saludo inicial mediante un algoritmo de intercambio de claves.
+
+1. **Cifrado Asimétrico**  
+    1. El cifrado asimétrico emplea **un par de claves matemáticamente enlazadas**.
+        - **Una clave pública** que se puede compartir libremente.
+        - **Una clave privada** que debe mantenerse secreta.  
+    1. Lo que se cifra con la clave pública solo puede descifrarse con la clave privada correspondiente.  
+    1. **Uso en SSH:** No se utiliza para cifrar toda la sesión (por ser computacionalmente más lento), sino para:
+        - **Autenticar** la identidad del cliente y del servidor.
+        - **Negociar** de forma segura la clave simétrica que se usará en la sesión.
+
+1. **Hashing (Verificación de Integridad)**  
+    1. **El hashing** transforma cualquier entrada de datos en un valor único de longitud fija de forma unidireccional. No es posible de revertir es decir, con el hash no es posible obtener la información original.  
+    1. **Uso en SSH:** SSH utiliza HMAC (Hash-based Message Authentication Codes) para asegurar que los comandos e información transmitidos no hayan sido interceptados o alterados por terceros en tránsito.
+
+### 9.3 Establecimiento de una conexión SSH
+
+En la siguiente imagen se muestran, de forma simplificada, las principales etapas que intervienen en el establecimiento de una conexión SSH.
+![Descripción de la imagen](../img_3/img_3_54.png)
+
+**1 - Inicio de la conexión TCP:**  
+
+- El cliente establece una conexión TCP con el servidor, normalmente a través del puerto (de escucha) 22.  
+
+**2 - Intercambio de versiones:**  
+
+- Cliente y servidor intercambian información sobre las versiones del protocolo SSH que admiten.
+- Negociación de algoritmos: Ambas partes acuerdan los algoritmos criptográficos que utilizarán para el intercambio de claves, el cifrado, la integridad (MAC) y, opcionalmente, la compresión de los datos.  
+
+**3-4-5 - Intercambio de claves y generación del secreto compartido:**
+
+- Mediante un protocolo de intercambio de claves, como Diffie-Hellman o ECDH, cliente y servidor generan un secreto compartido que permitirá establecer las claves de sesión utilizadas para cifrar la comunicación.
+
+**6 - Verificación de la identidad del servidor:**
+
+- El cliente verifica la identidad del servidor mediante su clave pública, que se compara con una clave previamente conocida o almacenada en el archivo known_hosts.  
+
+**7-8 - Configuración del cifrado:**
+
+- Una vez establecido el secreto compartido, se activan los mecanismos de cifrado e integridad para proteger las comunicaciones posteriores.  
+
+**9 - Autenticación del usuario:**
+
+- El cliente demuestra su identidad ante el servidor, normalmente mediante contraseña, clave pública/privada SSH u otros mecanismos de autenticación configurados en el servidor.  
+
+**10 - Establecimiento de la sesión:**
+
+- Una vez autenticado el usuario, se establece una sesión SSH y el cliente puede solicitar un shell remoto, ejecutar comandos o utilizar otros servicios proporcionados por SSH.  
+
+### 9.4 Funcionamineto de SSH
+
+Vamos a ver lo que ocurre cuando escribimos `ssh usuario@direccion_ip_o_dominio` y pulsamos Enter.
+
+> ℹ️ **Fase 1: Conexión TCP**
+>
+>     !!! tip "SSH funciona sobre TCP, normalmente en el puerto 22"
+>     !!! info "El cliente inicia el handshake TCP estándar:"
+>         1. Cliente → Servidor: SYN
+>         1. Servidor → Cliente: SYN-ACK
+>         1. Cliente → Servidor: ACK
+>     !!! success "Un vez que la conexión esta establecida, comienza el protocolo SSH.""
+> ℹ️ **Fase 2: Intercambio de versión del protocolo**
+>
+>     !!! info "Ambos lados anuncian su versión de SSH:"
+>         1. **Cliente:**  SSH-2.0-OpenSSH_8.9
+>         1. **Servidor:** SSH-2.0-OpenSSH_8.4
+>     !!! success "Acuerdan usar SSH-2.<br>Si alguno solo soporta SSH-1, los clientes modernos se negarán a conectar (y deben hacerlo)."
+!!! abstract "Fase 3: Intercambio de claves"  
+    1. Aquí empieza la criptografía.  
+    1. **Objetivo:** crear una clave secreta compartida que ningún espía pueda conocer.
+    1. El algoritmo más común es **Diffie-Hellman** de curva elíptica (ECDH):
+    > ⚠️ **Intercambio de claves (versión simplificada)**
+>
+>         1. Cliente y servidor acuerdan los parámetros matemáticos (la curva)
+>         1. El cliente genera:  valor privado (a), valor público (A)  
+>         1. El servidor genera: valor privado (b), valor público (B)
+>         1. Intercambian los valores públicos (A y B)
+>         1. **Un atacante puede ver A y B pero no lo servidrá de nada al no dsponer de a y b**.
+>         1. El cliente calcula:  secreto_compartido = a*B  
+>         1. El servidor calcula: secreto_compartido = b*A  
+>         1. **¡Ambos llegan al MISMO secreto!**.
+>         1. Este secreto compartido sirve para derivar las claves de cifrado de la sesión
+>     !!! warning "La clave de todo esto:"
+>         - **El secreto compartido nunca se transmite**.  
+>         - Un atacante que observe todos los paquetes sigue sin poder calcularlo.
+> ℹ️ **Fase 4: Autenticación del servidor (claves de host)**
+>
+>     1. Algo que muchos pasan por alto: antes de que nos autentiquemos ante el servidor, el servidor se autentica ante nosotros.
+>     1. Cuando nos conectemos a un servidor por primera vez, veremos esto:  
+>     > The authenticity of host 'server.com (192.168.1.100)' can't be established.  
+>     ED25519 key fingerprint is SHA256:AbCdEf1234567890...  
+>     Are you sure you want to continue connecting (yes/no/[fingerprint])?  
+>     1. Con esto, el servidor está demostrando su identidad mediante su clave de host.
+>         - Si escribimos `yes`, la huella (fingerprint) se guarda en `~/.ssh/known_hosts`  
+>         - En futuras conexiones se verifica que la clave del servidor coincida  
+>         - Si no coincide, SSH dirá:
+>         > @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+>         > @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @  
+>         > @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  
+>         > IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!  
+>     1. Esto protege contra ataques de intermediario (man-in-the-middle). Si un atacante intercepta la conexión y presenta su propio servidor, la huella no coincidirá.
+>         - **Consejo:** en la primera conexión, verificar la huella por un canal alternativo (proveedor de hosting, etc.).
+!!! abstract "Fase 5: Autenticación del usuario.<br>     En esta fase demostraremos quienes somos.<br>     SSH admite varios métodos"  
+    > 💡 **Método 1: Autenticación por contraseña**
+>
+>         ```bash
+>         ssh `user@server.com`  
+>         (luego se solicita la contraseña)
+>         ```
+>         Aunque simple, no se recomienda por varias razones:  
+> 
+>         - Las contraseñas pueden ser atacadas por fuerza bruta
+>         - Son vulnerables a keyloggers
+>         - Se debe escribir cada vez (sin automatización)
+> 
+>     !!! tip "Método 2: Autenticación por clave pública (preferido)"
+>         Se utiliza criptografía asimétrica, es decir, un par de claves:
+> 
+>         | Clave | Ubicación | Propósito |
+>         ||||
+>         | Clave privada | Nuestro ordenador (`~/.ssh/id_ed25519`) | Nunca sale de tu máquina. Demuestra nuestra identidad. |
+>         | Clave pública | Servidor (`~/.ssh/authorized_keys`) | Se puede compartir libremente. Verifica las firmas hechas con la clave privada. |
+>         
+>         La clave privada nunca sale de nuestra máquina. El servidor solo ve una prueba de que disponemos de ella.
+>     
+>     !!! tip "Método 3: Autenticación basada en certificados"  
+>         - Se usa en entornos empresariales. 
+>         - Una Autoridad de Certificación (CA) firma las claves de los usuarios, y los servidores confían en la CA en lugar de en claves individuales.
+> 💡 **Fase 6: Sesión cifrada**
+>
+>     1. Una vez completado el intercambio de claves, todo el tráfico se cifra con **cifrado simétrico** (AES-256, ChaCha20, etc.), incluida la propia autenticación del usuario.
+>     1. ¿Por qué pasar del cifrado asimétrico al simétrico?  
+>     **Por velocidad:** el cifrado simétrico es aproximadamente 1000 veces más rápido.
+>     1. Además, cada paquete incluye un MAC (Message Authentication Code, código de autenticación de mensaje): una suma de comprobación criptográfica que detecta cualquier manipulación. Con cifrados modernos como AES-GCM o ChaCha20-Poly1305, esta verificación va integrada en el propio cifrado (cifrado autenticado).
+### 9.5 Tarea RA6-CEf-2 - Conexión SSH desde SO windows con PuTTy  
+
+!!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
+
+![Descripción de la imagen](../img_3/img_3_70.png)
+
+- En esta tarea instalaremos PuTTY en nuestra **instancia de Windows Server** y no conectaremos por **SSH** a la instancia de **Unbuntu Server**.
+
+!!! warning "Antes de nada nos conectaremos a nuestra instancia de Windows Server"
+
+- Descargamos la aplicación desde [la página oficial](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) y la instalaremos **en nuestra instancia de Windows Server**.
+
+![Descripción de la imagen](../img_3/img_3_55.png)
+
+- Una vez instalado **PuTTy** consultaremos [la documentación de AWS](https://docs.aws.amazon.com/es_es/AWSEC2/latest/UserGuide/connect-linux-inst-from-windows.html) y la seguiremos paso a paso.
+
+#### 9.5.1 Convertir la clave privada con PuTTYgen
+
+- Ejecutamos PuTTYgen (instalado al mismo tiempo que PuTTy).  
+- En **Type of key to generate**, elegimos RSA.  
+- Si la versión de PuTTYGen no incluye esta opción, eligiremos SSH-2 RSA.
+![Descripción de la imagen](../img_3/img_3_59.png)
+
+- Elegimos Load.  
+- De forma predeterminada, PuTTYgen solo muestra archivos con **la extensión .ppk**.  
+- Para localizar el archivo .pem, seleccionamos la opción de mostrar todos los tipos de archivo.  
+- Seleccionamos **el archivo .pem** para el par de claves que se especificó cuando se lanzó la instancia y, a continuación, eligimos **Open (Abrir)**.
+![Descripción de la imagen](../img_3/img_3_60.png)
+
+- Si la importación se ha hecho correctamente, no aparecerá un aviso similar a la siguiente imagen.  
+![Descripción de la imagen](../img_3/img_3_61.png)  
+
+- Luego elegimos **Save private key** para guardar la clave en un formato que PuTTY pueda utilizar.
+!!! warning "Si no ponemos ninguna contraseña para el archivo de claves, PuTTYgen mostrará una advertencia (eligimos Yes si no queremos poner contraseña)."  
+    ![Descripción de la imagen](../img_3/img_3_62.png)
+
+- Especificaremos un nombre para el archivo de claves.  
+**PuTTY añadirá la extensión de archivo .ppk automáticamente**.
+![Descripción de la imagen](../img_3/img_3_63.png)
+
+#### 9.5.2 Conexión con la instancia de Linux
+
+- Ejecutamos PuTTY a vamos a **Connection** → **SSH** → **Auth** y en **Private key file** cargamos el archivo de claves que acabamos de crear.
+![Descripción de la imagen](../img_3/img_3_64.png)
+
+- En la pantalla principal, introducimos la IP de nuestra instancia de **Ubuntu Server** y lanzamos la conexión.  
+![Descripción de la imagen](../img_3/img_3_56.png)
+
+- Si hemos puesto contraseña a nuestro archivo de claves, lo introducimos.
+![Descripción de la imagen](../img_3/img_3_65.png)
+
+- Obviamos las advertencias de seguridad.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_57.png)
+
+- Si todo ha ido bien, tendremos acceso a la terminal de nuestra instancia.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_3/img_3_66.png)
+
+#### 9.5.3 Migración del archivo de claves
+
+!!! warning "Preparación de la siguiente tarea"
+
+- Para poder realizar la siguiente práctica, necesitaremos enviar el archivo con el par de claves de nuestras instancias (LabUser) a la intancia que usaremos de cliente para la conexión SSH.  
+
+- Ese tipo de proceder no es **una buena práctica, desde el punto de vista de la seguridad informática** pero, lo haremos para facilitar la conexión SSH entre instancias con distribuciones Linux en AWS.
+
+- Primero recuperaremos la IP pública de la instancia a la que enviaremos el archivo de claves.
+![Descripción de la imagen](../img_3/img_3_71.png)
+
+- Luego enviaremos el archivo de claves **archivo.pem** a la instancia cliente con la aplicación **pscp** del ecosistema PuTTy.  
+Para ello, usaremos la siguiente sintaxis.  
+
+    ```bash
+    pscp -i archivo.ppk archivo.pem ubuntu@IP-publica directorio
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_72.png)
+
+- Si nos conectamos por consola de AWS a la instancia cliente, podremos comprobar que el archivo se ha enviado correctamente.
+![Descripción de la imagen](../img_3/img_3_73.png)
+
+### 9.6 Tarea RA6-CEf-3 - Conexión SSH entre instancias Linux
+
+!!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
+
+#### 9.6.1 Preparación del entorno
+
+- Antes de nada, crearemos otra instancia de Ubuntu-server, dejando la configuración del tipo de instancia así como de la capacidad de almacenaje con los valores por defecto (t3.micro, 8GB).
+
+- Nos conectamos a la instancia de Ubuntu-Server **dónde hemos enviado el archivo.pem con el par de claves** y comprobaremos que el cliente SSH está instalado.
+
+    ```bash
+    ssh -V
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_68.png)
+
+- También haremos lo mismo con el servidor SSH y comprobaremos que está funcionando.
+
+    ```bash
+    sshd -V 2<&1
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_74.png)
+
+    ```bash
+    systemctl status ssh
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_75.png)
+
+#### 9.4.2 Primera conexión SSH entre máquinas Linux
+
+- Usaremos la sintáxis vista anteriormente pero, le añadiremos el archivo de claves:
+
+    ```bash
+    ssh -i archivo.pem usuario@direccion_ip_o_dominio
+    ```
+
+    Es probable que no salte un error al tener permisos de lectura del archivo demasiado permisivos.
+    ![Descripción de la imagen](../img_3/img_3_76.png)
+
+- Cambiamos los permisos a solo lectura por el propietario con:
+
+    ```bash
+    chmod 400 labsuser.pem
+    ```
+
+    Dónde:
+
+    ```bash
+         4         0      0
+         │         │      │
+         ▼         ▼      ▼
+    propietario  grupo  otros
+         │         │      │
+         ▼         ▼      ▼
+        leer      nada   nada
+    ```
+
+- Comprobamos los nuevos permisos del archivo de clave.
+
+    ```bash
+    ls -l labsuser.pem
+    ```
+
+    ![Descripción de la imagen](../img_3/img_3_77.png)
+
+- Nos volvemos a conectar a la máquina Ubuntu-Server servidor y esta vez, accedemos sin problemas.  
+==Realizar captura de pantalla==
+
+    ![Descripción de la imagen](../img_3/img_3_78.png)

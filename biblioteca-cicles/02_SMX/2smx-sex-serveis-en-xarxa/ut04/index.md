@@ -1,111 +1,1426 @@
 ---
-title: "UT4 — Interconnexió de Xarxes Privades amb Xarxes Públiques (RA8)"
-unit: "4"
-module: "SEX"
-layout: "default"
+layout: default
+title: "UD 4 — Servicio DHCP: Configuración Dinámica de Sistemas — Servicios en Red"
 course_root: ".."
-badge: "2n SMX · Serveis en Xarxa · UT04"
+badge: "2n SMX · Servicios en Red · UT04"
+prev_url: "../ut03/index.html"
+prev_label: "⬅️ UT03"
+next_url: "../ut05/index.html"
+next_label: "UT05 ➡️"
 ---
 
-<div class="interactive-progress-tracker">
-  <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
-  </div>
-  <div class="tracker-bar">
-    <div class="tracker-fill" style="width: 0%;"></div>
-  </div>
-</div>
+# UD 4 — Servicio DHCP: Configuración Dinámica de Sistemas
 
-# 📘 UT4 — Interconnexió de Xarxes Privades amb Xarxes Públiques (RA8)
+Bienvenido/a a la **UD 4 — Servicio DHCP: Configuración Dinámica de Sistemas** del módulo profesional de **Servicios en Red** (2º curso de Técnico en Sistemas Microinformáticos y Redes).
 
-> **📌 Resultat d'Aprenentatge i Objectius:** RA8. Estableix l'accés des de xarxes locals a xarxes públiques aplicant passarel·les Proxy (Squid), encaminament IP, NAT/PAT, redirecció de ports (DNAT) i VPN.
-
-## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
-
-| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
-| :--- | :--- | :--- |
-| **4.1** | **4.1 Arquitectura de Passarel·les, Encaminament IP (IP Forwarding) i NAT/PAT** | [Obrir apartat ➡️](./ut0401.html) |
-| **4.2** | **4.2 Servidors Proxy i Memòria Cau amb Squid: Control d'Accés i Acceleració (RA8-CEb..g)** | [Obrir apartat ➡️](./ut0402.html) |
-| **4.3** | **4.3 Xarxes Privades Virtuals (VPN) i Interconnexió Segura de Sedes** | [Obrir apartat ➡️](./ut0403.html) |
-| **4.4** | **4.4 Tasca RA8-CE (a–j): Implementació de Passarel·la NAT, Proxy Squid i Port Forwarding** | [Obrir apartat ➡️](./ut0404.html) |
+Este temario contiene el desarrollo curricular completo, diagramas de arquitectura, capturas de pantalla de laboratorios reales y guías paso a paso desarrolladas por el profesor **Javier Egea Blasco** y el profesor **Pepe Cuenca**.
 
 ---
 
-## 🎯 Resum d'Aprenentatge i Metodologia
+### 📑 Índice de Apartados de la Unidad
 
-Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
-
-
+- [**Introducción y Conceptos**](./ut0401.html)
+- [**1 - Introducción**](./ut0402.html)
+- [**2 - DHCP (Dynamic Host Configuration Protocol)**](./ut0403.html)
+- [**3 - Configuración de DHCP**](./ut0404.html)
+- [**4 - Tarea RA1-CEab - Funcionamiento de DHCP**](./ut0405.html)
+- [**5 - Tarea RA1-CEcd-1 - Instalación y configuración de un DHCP con Windows Server en AWS**](./ut0406.html)
+- [**6 - Tarea RA1-CEcd-2 - Instalación y configuración de un DHCP con Ubuntu Server en AWS**](./ut0407.html)
+- [**7 Tarea RA1-CEfgh-2 - Creación de VM con Virtual Machine Manager (libvirt)**](./ut0408.html)
+- [**🛠️ Práctica de Laboratorio DHCP en Windows Server sobre AWS**](./practica_dhcp_aws.html)
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+# 📖 Temario Completo de la Unidad (Lectura Continua)
 
-Comprova el teu domini sobre **UT4 — Interconnexió de Xarxes Privades amb Xarxes Públiques (RA8)** superant aquests 4 reptes gamificats (+25 punts cadascun):
+![Descripción de la imagen](../img_4/img_4_4.png)
 
-<div class="interactive-mcq" data-answer="A" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina és la funció principal d'un servidor Proxy web (com Squid) quan actua com a passarel·la a nivell d'aplicació entre la xarxa privada i la pública?</div>
-  <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Intermediar les peticions HTTP/HTTPS dels clients locals, aplicar llistes de control d'accés (ACLs) i emmagatzemar contingut en memòria cau.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) Assignar adreces MAC dinàmiques a les targetes Wi-Fi.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) Substituir el servidor d'impressió CUPS de la xarxa local.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) Cap de les anteriors és correcta.</button>
-  </div>
-  <div class="quiz-feedback"></div>
-</div>
+**Resultados de aprendizaje y criterios de evaluacion que se evaluarán en esta unidad.**  
 
-<div class="interactive-mcq" data-answer="D" data-hint="Comprova l'apartat corresponent de la unitat.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin mecanisme de xarxa permet que múltiples equips d'una xarxa privada (p. ex. 192.168.1.0/24) accedisquen a Internet compartint una única adreça IP pública?</div>
-  <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Spanning Tree Protocol (STP).</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) Transferència de zona AXFR.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) NAT / PAT (Network Address Translation / Masquerading).</button>
-  </div>
-  <div class="quiz-feedback"></div>
-</div>
+| **Resultados de aprendizaje de la unidad didáctica:**|
+||
+| **RA. 1:** Instala servicios de configuración dinámica, describiendo sus características y aplicaciones.|
 
-<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Perquè un servidor Linux puga reenviar trànsit entre dues interfícies de xarxa com a encaminador, cal activar el paràmetre del nucli net.ipv4.ip_forward=1.</div>
-  <div class="vf-buttons">
-    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
-    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
-  </div>
-  <div class="quiz-feedback" style="width: 100%;"></div>
-</div>
+|**Criterios de evaluación de la unidad didáctica:**|
+||
+|**a)** Se ha reconocido el funcionamiento de los mecanismos automatizados de configuración de los parámetros de red.|
+|**b)** Se han identificado las ventajas que proporcionan.|
+|**c)** Se han ilustrado los procedimientos y pautas que intervienen en una solicitud de configuración de los parámetros de red.|
+|**d)** Se ha instalado un servicio de configuración dinámica de los parámetros de red.|
+|**e) Se ha preparado el servicio para asignar la configuración básica a los sistemas de una red local.**|
+|**f)** Se han realizado asignaciones dinámicas y estáticas.|
+|**g)** Se han integrado en el servicio opciones adicionales de configuración.|
+|**h)** Se ha verificando la correcta asignación de los parámetros.|
 
-<div class="interactive-quiz" data-answer="3128" data-hint="Comença per 31 i acaba en 28.">
-  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin és el port TCP tradicional per defecte que utilitza el servidor proxy Squid?</div>
-  <div class="quiz-controls">
-    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
-    <button type="button" class="btn-quiz-check">Comprovar</button>
-  </div>
-  <div class="quiz-feedback"></div>
-</div>
+> ⚠️ **Nota:**
+>
+>     Los criterios de evaluación en negrita será evaluados durante la FCT.
+## 1 - Introducción
 
-### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+- Con el crecimiento de las redes locales (LAN) y la expansión de internet, surgió la necesidad de un sistema más dinámico y flexible para la asignación de direcciones IP.
+- Aquí es donde surge **DHCP**, que fue diseñado para superar las limitaciones de BOOTP, permitiendo la asignación automática, dinámica y más eficiente de las direcciones IP.
+- Los servicios **DNS** y **DHCP** son dos de los servicios más importantes en una red TCP/IP. Ambos permiten la **configuración automática de los parámetros de red** en los equipos clientes, lo que facilita la administración de redes y mejora la experiencia del usuario.
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT4 — Interconnexió de Xarxes Privades amb Xarxes Públiques (RA8)**):
+## 2 - DHCP (Dynamic Host Configuration Protocol)
 
-- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
-- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
+![img](../img_4/img_4_140.png)
 
-<div class="aules-delivery-card">
-  <h3>📤 Comprovant de Lliurament per a Aules</h3>
-  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
-  <div class="aules-student-field">
-    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
-    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
-  </div>
-  <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
-  </div>
-  <div class="aules-actions">
-    <button type="button" class="btn-aules-dl" data-module="SEX" data-unit="UD04" data-activity="ut04_index">📥 Descarregar Comprovant PDF</button>
-    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
-  </div>
-  <div class="aules-toast"></div>
-</div>
+1. El DHCP (Dynamic Host Configuration Protocol) es un protocolo de red que permite a los dispositivos obtener automáticamente una dirección IP y otros parámetros necesarios para conectarse a la red, como la **máscara de subred**, la **puerta de enlace predeterminada** y los **servidores DNS**.
+1. Esto elimina la necesidad de **configurar manualmente cada dispositivo**, facilitando enormemente la administración de redes grandes.
+1. Antes del DHCP, las redes dependían del protocolo BOOTP (Bootstrap Protocol), que proporcionaba configuraciones básicas, como la asignación de direcciones IP. Sin embargo, BOOTP presentaba varias limitaciones:
+    - **Configuración manual:** Los administradores debían asignar manualmente una IP a cada dispositivo, lo que era tedioso y poco práctico en redes grandes.
+    - **Asignación estática:** Las direcciones IP eran fijas, lo que significaba que cada dispositivo mantenía la misma dirección aunque se desconectara, lo que no permitía un uso eficiente de las direcciones disponibles.
+    - **Falta de flexibilidad:** No estaba diseñado para gestionar redes dinámicas o móviles, como dispositivos que se mueven entre diferentes áreas de cobertura o redes.
+
+### 2.1 Características principales de DHCP
+
+![img](../img_4/img_4_141.png)
+
+1. **Asignación automática de IPs:**  
+DHCP permite la asignación dinámica de direcciones IP a los dispositivos cuando se conectan a la red. Esto asegura que no haya conflictos de direcciones IP duplicadas.
+
+1. **Escalabilidad:**  
+Ideal para redes grandes, donde administrar direcciones IP de manera manual sería inviable. Con DHCP, se pueden gestionar cientos o miles de dispositivos de manera eficiente.
+
+1. **Facilidad de configuración:**  
+Al automatizar la asignación de IPs y otros parámetros de red, los administradores pueden reducir significativamente el tiempo y esfuerzo que implicaría configurar manualmente cada dispositivo.
+
+1. **Compatibilidad con diferentes tipos de asignación:**  
+    - **Asignación manual:** El administrador asigna una IP específica a un dispositivo, aunque este se conecte de manera dinámica.
+    - **Asignación automática:** El servidor DHCP asigna una IP de forma permanente a un dispositivo desde el momento de su primera conexión.
+    - **Asignación dinámica:** El servidor DHCP asigna una IP por un tiempo limitado (lease time), tras lo cual la IP puede ser reasignada si no se renueva el arrendamiento.
+
+1. **Administración centralizada:**  
+Con un servidor DHCP centralizado, los administradores pueden gestionar y actualizar las configuraciones de red desde un solo lugar, en lugar de acceder a cada dispositivo de manera individual.
+
+### 2.2 Componentes del funcionamiento de DHCP
+
+1. La arquitectura de DHCP está formada por tres elementos principales:
+    - **Los servidores DHCP**
+    - **Los clientes DHCP**
+    - **Los agentes de retransmisión DHCP (también llamados relés DHCP)**
+1. La comunicación entre cliente y servidor se realiza a través de un intercambio de mensajes DHCP, mediante el cual el cliente obtiene y renueva tanto la concesión de su dirección IP como el resto de parámetros de configuración de red.
+
+??? question "¿Qué parámetros de red puede asignar un servidor DHCP a un cliente?"
+    - Dirección IP
+    - Máscara de subred
+    - Puerta de enlace predeterminada
+    ??? tip "Y además..."
+        - Servidor DNS
+        - Dominio de búsqueda (search domain)
+        - Tiempo de concesión (lease time)
+        - Identificador de clase de proveedor (Vendor Class Identifier)
+        - Número de intentos de retransmisión
+        - Intervalo entre reintentos
+
+
+
+#### 2.2.1 Servidor DHCP
+
+1. El servidor DHCP constituye la pieza central de todo el protocolo. Su cometido es entregar direcciones IP y demás parámetros de red a los equipos que las solicitan. Para ello, mantiene un conjunto de direcciones disponibles (conocido como pool) y controla las concesiones que se van otorgando a cada cliente.
+
+1. Entre los parámetros que el servidor puede asignar a los clientes se encuentran:
+    - **Direcciones IP dinámicas** y temporales tomadas de un pool, asignadas a cualquier cliente dentro de una subred determinada (concesión dinámica).
+    - **Direcciones IP fijas** asociadas a un cliente concreto según su dirección MAC (concesión estática).
+    - **Máscara de subred**
+    - **Puerta de enlace predeterminada**
+    - **Servidor DNS**
+
+1. Asimismo, el servidor DHCP guarda de forma persistente la información de red entregada a los clientes. Puesto que DHCP nació como una evolución de BOOTP, los servidores DHCP también son capaces de atender solicitudes procedentes de este protocolo anterior.
+
+!!! tip "Ejemplo de configuración de un servidor DHCP de un router Asus rt-ax58u""
+    ![descripcion de la imagen](../img_4/img_4_6.png)
+
+#### 2.2.2 Cliente DHCP
+
+1. Se considera cliente DHCP a cualquier dispositivo IP de la red configurado para comportarse como host y solicitar a un servidor DHCP los parámetros necesarios para funcionar, entre ellos su dirección IP.
+
+1. Cuando un equipo actúa como cliente DHCP, obtiene su configuración TCP/IP (incluida la dirección IP) desde un servidor DHCP externo a través de cualquiera de sus interfaces físicas.
+
+1. Para habilitar este comportamiento es necesario configurar una interfaz lógica del dispositivo, de modo que solicite la dirección al servidor DHCP correspondiente. Además, deben definirse los siguientes parámetros:
+    - **El identificador de clase de proveedor** (Vendor Class Identifier, DHCP opción 60). Indica qué tipo de dispositivo, fabricante o modelo es.
+    - **El tiempo de concesión** (lease time). Es el periodo durante el cual el cliente puede usar la dirección IP que le asignó el servidor. Al acercarse el vencimiento (normalmente el 50%), el cliente intentará renovarla.
+    - **La dirección del servidor DHCP**. Es la IP del servidor al que el cliente dirigirá sus solicitudes. Normalmente el cliente descubre al servidor mediante un DISCOVER en broadcast, pero en algunos dispositivos se puede fijar la dirección concreta para enviar las peticiones en unicast.
+    - **El número de intentos de retransmisión**. DHCP funciona sobre UDP, que no garantiza la entrega, así que si el cliente no recibe respuesta a su DISCOVER o REQUEST, debe reenviarlo. Este parámetro define cuántas veces lo reintentará antes de darse por vencido. Si se agota sin éxito, el cliente considera que no hay servidor disponible y, según el equipo, puede dejar la interfaz sin dirección o usar una dirección link-local (169.254.x.x).
+    - **El intervalo entre reintentos**. Es el tiempo de espera entre un intento y el siguiente. Junto con el número de reintentos determina cuánto tarda el dispositivo en rendirse.
+
+1. Las concesiones obtenidas como cliente pueden renovarse posteriormente.
+
+> 💡 **En la siguiente imagen se muestra un fragmento del resultado de la ejecución del comando `ipconfig /all` en un equipo con Windows 11, donde se puede observar que la dirección IP ha sido asignada por un servidor DHCP**
+>
+> 
+>     ![Descripción de la imagen](../img_4/img_4_5.png)
+#### 2.2.3 Relé DHCP (DHCP relay agent)
+
+- El agente de retransmisión DHCP es un host TCP/IP cuya función consiste en **hacer de puente entre clientes y servidores DHCP** cuando ambos se encuentran en subredes distintas, reenviando los mensajes correspondientes entre ellos.
+- Gracias a este mecanismo, en redes de gran tamaño con múltiples subredes, basta con un único servidor DHCP para atender a todos los clientes, siempre que existan agentes de retransmisión situados en los routers que interconectan dichas subredes.
+- Un mismo dispositivo puede combinar ambos roles si gestiona distintas interfaces o subredes, pero no puede actuar simultáneamente como servidor DHCP y como agente de retransmisión DHCP para una misma interfaz o subred.
+- La diferencia entre ambos roles es clara: el servidor responde directamente al cliente entregándole una dirección IP de su propio rango, mientras que el agente de retransmisión se limita a reenviar los mensajes DHCP entre el cliente y el servidor configurado, incluso cuando ambos pertenecen a redes IP distintas.
+
+### 2.3 Modelo cliente servidor DHCP
+
+- Ya lo hemos mencionado varias veces. El protocolo **DHCP** sigue un modelo cliente-servidor, donde el servidor DHCP es responsable de asignar direcciones IP y otros parámetros de red a los clientes que lo solicitan.
+- El proceso de comunicación entre cliente y servidor se realiza mediante un intercambio de mensajes, que permite al cliente obtener su configuración de red de manera automática.
+
+![Descripción de la imagen](../img_4/img_4_2.png)
+
+El proceso de asignación de direcciones IP mediante DHCP sigue un ciclo de cuatro pasos, conocido como DORA:
+
+1. **Discover (Descubrimiento):**  
+Cuando un dispositivo (cliente) se conecta a la red, envía un mensaje de broadcast llamado "DHCP Discover" para encontrar servidores DHCP disponibles.
+1. **Offer (Oferta):**  
+Los servidores DHCP responden con un mensaje "DHCP Offer", que contiene una dirección IP disponible y otros parámetros de red.
+1. **Request (Solicitud):**  
+El cliente selecciona una oferta y responde con un "DHCP Request" para aceptar la IP ofrecida.
+1. **Acknowledge (Confirmación):**  
+El servidor DHCP responde con un mensaje "DHCP Acknowledge", confirmando que la IP ha sido asignada y que el dispositivo puede usarla.
+
+### 2.4 Ventajas y desventajas de DHCP
+
+> ✅ **Ventajas de DHCP**
+>
+>     - **Reducción de errores humanos:** Al automatizar el proceso, se minimizan los errores que pueden ocurrir durante la configuración manual de direcciones IP.
+>     - **Optimización de recursos:** La capacidad de reutilizar direcciones IP gracias al tiempo de arrendamiento ayuda a optimizar el uso del espacio de direcciones IP en la red.
+>     - **Configuración remota:** Los administradores pueden realizar cambios en la configuración de red sin necesidad de acceso físico a los dispositivos.
+> ℹ️ **Desventajas de DHCP**
+>
+>     - **Falta de control sobre la asignación de IPs:** Al usar DHCP, puede haber menos control directo sobre qué dispositivos reciben qué IPs, a menos que se configure la asignación manual.
+>     - **Punto único de fallo:** Si el servidor DHCP falla, los dispositivos nuevos o que necesitan renovar su dirección IP no podrán conectarse a la red correctamente.
+## 3 - Configuración de DHCP
+
+![Descripción de la imagen](../img_4/img_4_3.png)
+
+### 3.1 Configuración de un equipo a la red informática
+
+- Cualquier equipo que pertenece a una red requiere que se configure con unos parámetros mínimos, que son **la dirección IP, la máscara y la puerta de enlace por defecto**.  
+
+- La dirección IP identifica al equipo de manera única, y la máscara permite determinar la red o subred en la que se encuentra el equipo.
+
+- Con estos dos parámetros es suficiente para tener conectividad en la red. Si se quiere disponer de acceso fuera de la red propia (por ejemplo, a Internet o al resto de la red corporativa), es necesario definir también **la puerta de enlace predeterminada**.
+
+- Aparte de la configuración básica, los equipos pueden necesitar (y de hecho lo necesitan) más parámetros de configuración como, por ejemplo: el nombre del host, el servidor DNS, el archivo de inicio a descargar, etc.
+
+### 3.2 Asignación de IP
+
+- Todo equipo de red necesita disponer de una dirección IP que lo identifique de manera única en la red.
+
+- Ejemplo: La mayoría de los usuarios disponen en casa de un equipo (o más) conectados a un router que proporciona el acceso a Internet. Este equipo está configurado como cliente DHCP y, al iniciarse, recibe la configuración de red del router.
+
+#### 3.2.1 Dirección IP estática
+
+- Una dirección **IP estática** es una dirección que se asigna manualmente a un dispositivo y permanece fija a lo largo del tiempo.
+- A diferencia de una **IP dinámica** (asignada por DHCP), la dirección estática no cambia, lo que es útil en casos donde se necesita una IP constante, como en servidores o dispositivos críticos.
+
+> 💡 **Características de las direcciones IP estáticas:**
+>
+>     - **Permanencia:** La dirección no cambia, a menos que el administrador lo decida.
+>     - **Configuración manual:** Las direcciones deben asignarse manualmente en el dispositivo o servidor de red.
+>     - **Uso en dispositivos críticos:** Suelen asignarse a servidores, impresoras, routers, cámaras de seguridad y otros equipos que requieren estabilidad.
+> ✅ **Ventajas de las IP estáticas:**
+>
+>     - **Acceso remoto constante:** Es más sencillo acceder a dispositivos de forma remota sin preocuparse por cambios de IP.
+>     - **Estabilidad en servicios de red:** Es ideal para servicios que requieren una dirección IP fija, como servidores de correo, web o bases de datos.
+>     - **Configuración de reglas de red:** Facilita la creación de reglas para firewalls o VPN, ya que la dirección es predecible.
+!!! failure "Desventajas de las IP estáticas:"  
+    - **Conflictos de IP:** Si no se gestiona adecuadamente, puede haber conflictos cuando dos dispositivos intentan usar la misma dirección.
+    - **Mayor carga administrativa:** Requiere mayor trabajo manual, lo que aumenta la posibilidad de errores en redes grandes.
+    - **Menor flexibilidad:** En redes con muchos dispositivos que se conectan y desconectan, las direcciones estáticas son menos prácticas.
+
+#### 3.2.2 Dirección IP dinámica
+
+- Una dirección **IP dinámica** es una dirección que se asigna automáticamente a un dispositivo por un servidor DHCP y puede cambiar con el tiempo.
+- Esto permite una gestión más eficiente de las direcciones IP, especialmente en redes grandes o con muchos dispositivos que se conectan y desconectan.
+
+> 💡 **Características de las direcciones IP dinámicas:**
+>
+>     - **Asignación automática:** El servidor DHCP asigna la dirección IP sin intervención manual.
+>     - **Temporalidad:** La dirección puede cambiar después de un período de tiempo (lease time) o cuando el dispositivo se reconecta a la red.
+>     - **Uso eficiente del espacio de direcciones:** Permite reutilizar direcciones IP, optimizando su uso en redes con muchos dispositivos.
+> ✅ **Ventajas de las IP dinámicas:**
+>
+>     - **Facilidad de administración:** Reduce la carga administrativa al eliminar la necesidad de asignar direcciones manualmente.
+>     - **Flexibilidad:** Ideal para redes con dispositivos que se conectan y desconectan frecuentemente, como laptops, smartphones y tablets.
+>     - **Prevención de conflictos de IP:** El servidor DHCP gestiona las direcciones, minimizando el riesgo de conflictos.
+> ℹ️ **Desventajas de las IP dinámicas:**
+>
+>     - **Cambio de dirección:** La dirección IP puede cambiar, lo que puede ser problemático para servicios que requieren una IP constante.
+>     - **Dependencia del servidor DHCP:** Si el servidor falla, los dispositivos pueden no obtener una dirección IP válida.
+>     - **Menor control sobre la asignación:** Puede ser más difícil rastrear qué dispositivo tiene qué dirección IP en un momento dado.
+## 4 - Tarea RA1-CEab - Funcionamiento de DHCP
+
+> ℹ️ **Trabajo a realizar.**
+>
+>     - Para esta evaluación, deberéis responder a preguntas tipo test.
+>     - Podéis descargar el archivo de texto desde la correspondiente tarea de aules (RA1-CEab Nombre Apellidos).
+>     - Subrayar la respuesta que consideráis correcta.
+>     !!! warning "Entrega de la tarea"
+>         - Guardar el documento con RA1-CEab-NombreApellidos.
+>         - Una vez completada la tarea, subirla a la tarea RA1-CEab de Aules.
+>         - A partir de momento de apertura de la tarea, dispondréis de **20 minutos** para subir vuestros trabajos.
+>         - Pasado ese tiempo la tarea se cerrará y ya no será posible subir vuestras respuestas.
+## 5 - Tarea RA1-CEcd-1 - Instalación y configuración de un DHCP con Windows Server en AWS
+
+!!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
+
+### 5.1 Objetivo de la práctica
+
+- Desplegar un servidor DHCP en Windows Server sobre AWS con virtualización anidada.
+- En este primer paso instalaremos y configuraremos el rol **DHCP Server** en Windows Server, y observaremos en tiempo real cómo varios equipos cliente obtienen su configuración IP (DHCPDISCOVER → OFFER → REQUEST → ACK), reservas, exclusiones, ámbitos (scopes), opciones de ámbito (DNS, puerta de enlace, etc.).
+
+### 5.2 Limitaciones de AWS para el despliegue de un servicio DHCP
+
+- Dentro de **una VPC** (virtual private cloud) de AWS, **el tráfico broadcast/multicast no se propaga entre instancias**.
+
+- DHCP depende de broadcasts (`255.255.255.255`), así que un cliente en una instancia EC2 **nunca "verá" un DHCPOFFER** de otra instancia EC2 en la misma subred.  
+- Cada tarjeta de red ENI (Elastic Network Interface) recibe su IP exclusivamente **del DHCP interno de AWS, que no se puede sustituir**.
+
+- **Solución:** Montar toda la práctica **dentro** de una sola instancia EC2, usando un hipervisor anidado (Hyper-V) donde sí existe broadcast real entre las VMs virtuales.
+
+> ℹ️ **Novedad Feb 2026**
+>
+> 
+>     - Desde el **16 de febrero de 2026**, AWS soporta oficialmente virtualización anidada en instancias EC2 **normales** (no metal).  
+>     - Familias soportadas actualmente: `C8i`, `M8i`, `R8i`, `C8id`, `R8id`, `M8id`, `C8i-flex`, `R8i-flex`, `M8i-flex`, `X8i`, `C7i`, `R7i`, `M7i`, `C7id`, `R7id`, `M7id`, `C7i-flex`, `R7i-flex`, `M7i-flex`, `I7i`. 
+>     - Solo procesadores Intel (no Graviton). Hipervisores L1 soportados: **Hyper-V** y **KVM**.
+### 5.3 Arquitectura del laboratorio
+
+> ℹ️ **Diagrama de la infraestructura de red**
+>
+>     ![Descripción de la imagen](../img_4/img_4_9.png)
+
+
+- Dispondremos de una instancia EC2 con Windows Server 2025 Base (ver apuntes de `Acceso y control remoto`), sobre la que instalaremos el rol **DHCP Server**.
+- Configuraremos un **switch virtual interno** en Hyper-V, de modo que el tráfico broadcast/multicast quede confinado dentro del hipervisor.
+- Lanzaremos 2 clientes Linux Alpine, que obtendrán su configuración IP del servidor DHCP de Windows Server.
+- Observaremos en tiempo real cómo se produce el proceso de asignación de direcciones IP mediante DHCP (DORA: Discover → Offer → Request → Acknowledge) con el analizador de redes **Wireshark**.
+
+#### 5.3.1 Activar la virtualización de EC2 en AWS
+
+> ✅ **Activar la virtualización de la CPU por la consola de AWS**
+>
+> 
+>     - Abrimos el **cloudshell de AWS**.  
+>     ![Descripción de la imagen](../img_4/img_4_142.png)
+> 
+>     - Escribimos los siguientes comandos:  
+>     **Nota IMPORTANTE:** Cambiar la id del ejemplo por la **id de vuestra instancia**.
+>     ```powershell
+>     # 1. Parar la instancia (aunque la acabes de arrancar)
+>     aws ec2 stop-instances --instance-ids i-069fe851e6325d765
+> 
+>     # 2. Esperar a que quede realmente parada
+>     aws ec2 wait instance-stopped --instance-ids i-069fe851e6325d765
+> 
+>     # 3. Activar nested virtualization con el comando correcto
+>     aws ec2 modify-instance-cpu-options \
+>       --instance-id i-069fe851e6325d765 \
+>       --nested-virtualization enabled
+> 
+>     # 4. Arrancarla de nuevo
+>     aws ec2 start-instances --instance-ids i-069fe851e6325d765
+>     ```
+> 
+>     - Powershell de AWS una vez abierto.
+>     ![Descripción de la imagen](../img_4/img_4_48.png)
+>     - Comandos en ejecución.  
+>     ==Realizar captura de pantalla==  
+>     ![Descripción de la imagen](../img_4/img_4_46.png)
+#### 5.3.2 Comprobar el nested virtualization en una instancia
+
+Para ello, nos conectaremos a la instancia de Windows Server creada en prácticas anteriores.
+> ℹ️ **Comprobación del Nested Virtualization**
+>
+> 
+>     - Abrimos el Windows Powershell y escribimos el siguiente comando
+>     ```powershell
+>     Get-WindowsFeature -Name Hyper-V
+>     ```
+> 
+>     - Si Obtenemos el siguiente resultado ([ ] vacío + Available), significa que está **disponible por no instalado**.
+>     ![Descripción de la imagen](../img_4/img_4_8.png)
+> ✅ **Activación del Nested Vitualization**
+>
+> 
+>     - Activaremos la virtualización anidada con el siguiente comando.
+>     ```powershell
+>     Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
+>     ```
+>     ![Descripción de la imagen](../img_4/img_4_47.png)
+>     - Como hemos incluido la opción de reinicio del sistema (-Restart), perderemos la conexión con la instancia...
+>     > ℹ️ **Comprobación del Nested Virtualization por CLI**
+>
+> 
+>     - Nos conectamos de nuevo a la instancia.
+>     Abrimos el Windows Powershell y escribimos el siguiente comando
+>     ```powershell
+>     Get-WindowsFeature -Name Hyper-V
+>     ```
+>     - Si nos aparece [X] Hyper-V, significa que el servicio se ha instalado correctamente.  
+>     ==Realizar captura de pantalla==    
+>     ![Descripción de la imagen](../img_4/img_4_45.png)
+> ℹ️ **Comprobación del Nested Virtualization en la consola de Windows Server**
+>
+> 
+>     - Abrimos el **Server Manager**.
+>     ![Descripción de la imagen](../img_4/img_4_10.png)
+>     - Seleccionamos Local Server → Services → buscamos hyper-V  
+>     ==Realizar captura de pantalla==    
+>     ![Descripción de la imagen](../img_4/img_4_49.png)
+#### 5.3.3 Crear el switch virtual interno
+
+- Vamos a **Hyper-V Manager** → **Virtual Switch Manager**:
+![Descripción de la imagen](../img_4/img_4_50.png)
+
+- Luego seleccionamos → **New virtual network switch**
+![Descripción de la imagen](../img_4/img_4_51.png)
+
+- Tipo: **Internal**. Esto asegura que el tráfico DHCP nunca saldrá hacia la red de AWS ni a otras instancias de la VPC/subred.
+- También seleccionaremos **Enable virtual LAN id...**. De ese modo el adaptador de red virtual aparecerá como cualquier otro adaptador físico.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_4/img_4_41.png)
+Después de **ipconfig**
+![Descripción de la imagen](../img_4/img_4_53.png)
+
+- Si volvemos a **Hyper-V** → **SERVERS** → Refrescamos el estado del servidor veremos que tenemos una IP interna del servidor en nuestra red virtual privada, siendo la otra IP, la IP de la instancia dentro de **la VPC de AWS**.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_4/img_4_52.png)
+
+#### 5.3.4 Configurar los parámetros de red
+
+- Como podemos ver en las capturas anteriores, el servidor tiene asignada la IP 169.254.200.142.
+- Esto se debe a la falta de un servidor DHCP en la red virtual, lo que provoca la activación automática de una dirección APIPA (Automatic Private IP Addressing).
+- Hasta que no despleguemos el servidor DHCP, la asignación de IPs en la red privada no podrá realizarse de forma automática, por lo que configuraremos manualmente la IP del servidor que más adelante hará el ROL de servidor DHCP.
+
+- Nos dirigimos a **Local Server** → **Properties** → **vEthernet**
+![Descripción de la imagen](../img_4/img_4_54.png)
+
+- Una vez encontrado el adaptador, configuraremos **el protocolo TCP/IPv4**.
+![Descripción de la imagen](../img_4/img_4_55_1.png)
+
+- Refrescamos la información y ya tendremos la IP esperada para nuestro servidor.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_56_1.png)
+
+- Con esto ya tendremos montada la red virtual de Windows Server. El siguiente paso será montar el servicio DHCP sobre el servidor de Windows Server.
+![Descripción de la imagen](../img_4/img_4_57.png)
+
+### 5.4 Instalación y configuración del rol DHCP en el host (Windows Server anfitrión)
+
+#### 5.4.1 Instalar el rol DHCP
+
+- Nos dirigimos a la consola de Windows Server y seleccionamos **Add roles and features**.
+![Descripción de la imagen](../img_4/img_4_11.png)
+- En server roles seleccionamos el servicio que queremos implementar.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_4/img_4_12.png)
+- Confirmamos las caracteristicas necesarias para el servivio DHCP.
+![Descripción de la imagen](../img_4/img_4_13.png)
+- Recordatorios: De nada sirve lanzar un servicio sin un planteamiento previo.
+![Descripción de la imagen](../img_4/img_4_14.png)
+- La instalación del servicio DHCP **no requiere reinicio** pero, seleccionaremos la opción de todos modos.
+![Descripción de la imagen](../img_4/img_4_15.png)
+- Se inicia la instalación.
+![Descripción de la imagen](../img_4/img_4_16.png)
+- Al final el instalador dirá que el DHCP requiere configuración. Lo haremos en el siguiente paso. De momento cerramos el asistente.
+![Descripción de la imagen](../img_4/img_4_19.png)
+
+#### 5.4.2 Configurar el rol DHCP
+
+- Volvemos al panel de control dónde veremos que tenemos el servicio DHCP disponible.
+![Descripción de la imagen](../img_4/img_4_58.png)
+- Completamos la configuración del DHCP.
+![Descripción de la imagen](../img_4/img_4_17.png)
+- Hacemos un commit.
+![Descripción de la imagen](../img_4/img_4_18.png)
+- Vamos al panel de control del DHCP y comprobamos que el servicio sobre IPv4 y IPv6 está implementado.
+![Descripción de la imagen](../img_4/img_4_20.png)  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_4/img_4_23.png)
+
+#### 5.4.3 Crear el ámbito (scope)
+
+Una vez instalado el rol de servidor DHCP, el siguiente paso es crear un ámbito (scope), es decir, el rango de direcciones IP que el servidor podrá asignar automáticamente a los equipos de la red.
+
+En este apartado configuraremos dicho rango junto con los parámetros básicos necesarios (máscara de subred, puerta de enlace, duración de la concesión, etc.) para que los clientes de la red privada puedan obtener su configuración de red de forma automática.
+
+- Vamos a la consola de configuración de DHCP.
+![Descripción de la imagen](../img_4/img_4_61.png)
+- Seleccionamos **new scope** y damos un nombre al ámbito.
+![Descripción de la imagen](../img_4/img_4_62.png)
+- Estableceremos un rango de direcciones en función de nuestras necesidades. También tendremos en cuenta dejar fuera del rango DHCP las direcciones IP reservadas para los sistemas que requieren **IP estática** (switches, servidores de dominio, servidores DHCP, impresoras o sistemas de almacenamiento en red).
+- Por último, deberemos reservar otro rango de direcciones IP para los dispositivos no anclados a la red, como tabletas, ordenadores portátiles o teléfonos móviles.
+
+    > ⚠️ **¡Cuidado!**
+>
+>         Dejar fuera del rango DHCP al servidor DHCP y a la puerta de enlace predeterminada, ya que si no lo hacemos, el servidor DHCP podría asignar estas direcciones a otros clientes, provocando conflictos de IP y problemas de conectividad en la red.  ![Descripción de la imagen](../img_4/img_4_60.png)
+
+- Dejamos en blanco la pantalla de **Add Exclusions and Delay**.
+- Configurar la duración del lease (lease duration) es decir, el tiempo durante el cual un cliente mantendrá asignada una dirección IP antes de tener que renovarla. Este valor debe ajustarse según el tipo de red y de dispositivos que la componen: en redes estables con equipos fijos conviene establecer una duración larga (varios días), mientras que en redes con gran cantidad de dispositivos móviles o temporales resulta más adecuado un lease corto, ya que permite liberar y reutilizar las direcciones IP con mayor frecuencia.
+En nuestro caso, estableceremos una duración de lease de 8 días (valor por defecto).
+- En **Configure DHCP Options** seleccionamos la opción **No** para configurarlo más adelante.
+![Descripción de la imagen](../img_4/img_4_63.png)
+- En post installation no saldrá un aviso de reiniciar el servicio.
+![Descripción de la imagen](../img_4/img_4_21.png)
+- Reiniciamos el servicio.
+![Descripción de la imagen](../img_4/img_4_22.png)
+
+#### 5.4.4 Activar el scope
+
+- Vamos a la consola de DHCP y veremos nuestro scope en rojo (desactivado).
+![Descripción de la imagen](../img_4/img_4_64.png)
+- Haremos clic derecho y lo activaremos.  
+==Realizar captura de pantalla==
+![Descripción de la imagen](../img_4/img_4_65.png)
+
+#### 5.4.5 Configurar opciones del ámbito
+
+Las opciones de ámbito son parámetros de configuración adicionales que el servidor DHCP puede asignar a los clientes DHCP por ejemplo el DNS y la puerta de enlace (enrutador).
+
+- Vamos a scope y seleccionamos **Configure Options...**
+![Descripción de la imagen](../img_4/img_4_66.png)
+- Buscamos la opción **003 Enrutador**, que permitirá, **en un escenario real**, a las máquinas conectadas a la red acceder a Internet. **No configuraremos el DNS**, ya que lo veremos en otra unidad, ni definiremos un controlador de dominio, puesto que la implementación de **Active Directory** se tratará más adelante.  
+![Descripción de la imagen](../img_4/img_4_67.png)
+- Comprobamos que la opción se ha guardado correctamente.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_68.png)
+
+#### 5.4.6 Best Practices analyzer
+
+No es una herramienta especifica del servicio DHCP sino de todo el ecosistema de Windows Server.
+
+- Vamos a BPA → **TASKS** → Start BPA Scan
+![Descripción de la imagen](../img_4/img_4_69.png)
+
+!!! note "Nota"  
+    Algunos de los errores o advertencias que aparecen se deben a las limitaciones de nuestra infraestructura. No los tendremos en cuenta.
+
+#### 5.4.7 Comprobar el servicio por CLI
+
+```powershell
+Get-DhcpServerV4Scope
+Get-DhcpServerV4OptionValue -ScopeId 192.168.10.0
+```
+
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_70.png)
+
+```powershell
+ipconfig
+```
+
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_71.png)
+
+- Con esto ya tendremos montada la red virtual de Windows Server y el servidor DHCP. El siguiente paso será montar clientes con Alpine Linux y comprobar si las asignaciones de IP y el acceso a internet se hace correctamente.
+![Descripción de la imagen](../img_4/img_4_72.png)
+
+### 5.5 Creación de las máquinas virtuales cliente
+
+- Con RAM limitada (`m7i.large` con 8 GiB), lo más eficiente es que **el propio host Windows Server actúe como servidor DHCP** y usar Hyper-V solo para las VMs cliente.  
+- Como cliente, **Alpine Linux** es la opción más ligera (256–512 MB por VM) y perfectamente válida para ver el proceso DHCP completo.
+
+#### 5.5.1 Creación de las carpetas de trabajo
+
+Crearemos dos carpetas de trabajo: **ISOs** y **VMs**.
+
+- **ISO** contendrá los archivos .iso de los sistemas operativos que descargaremos.
+- **VM** contendrá los discos duros de las máquinas virtuales que lanzaremos.
+
+La creación de las carpetas se puede realizar tanto desde el explorador de archivos como en línea de comandos:
+
+```powershell
+New-Item -Path "C:\ISO" -ItemType Directory -Force
+New-Item -Path "C:\VM" -ItemType Directory -Force
+```
+
+#### 5.5.2 Descargar el ISO
+
+- Como ya hemos comentado, descargaremos [Alpine Linux](https://alpinelinux.org/downloads/) al ser una versión muy ligera de linux.
+- La versión elegida para nuestras prácticas será la versión optimizada para virtualización y arquitectura de 32 bits (Virtual + x86).
+- Al igual que para la creación de las carpetas, la imagen se puede descargar con la ayuda del navegador o por línea de comandos.
+
+```powershell
+Invoke-WebRequest -Uri "https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86/alpine-virt-3.24.1-x86.iso" -OutFile "C:\ISO\alpine.iso"
+```
+
+![Descripción de la imagen](../img_4/img_4_73.png)
+
+- Comprobamos que la descarga es correcta (debe rondar los 45-50 MB):
+
+```powershell
+Get-Item "C:\ISO\alpine.iso" | Select-Object Name, Length
+```
+
+![Descripción de la imagen](../img_4/img_4_74.png)
+
+#### 5.5.3 Crear la VM
+
+> 💡 **Podemos usar el asistente para la creación de la máquina virtual.**
+>
+> 
+>     - Para ello iremos a **Hyper-V Manager** → **New** → **Virtual Machine**"
+>     ![Descripción de la imagen](../img_4/img_4_75.png)
+>     - Damos un nombre a la máquina.
+>     ![Descripción de la imagen](../img_4/img_4_76.png)
+>     - Seleccionamos **Generation 1**.
+>     ![Descripción de la imagen](../img_4/img_4_77.png)
+>     - Asignamos 512MB de memoria RAM para la máquina.
+>     ![Descripción de la imagen](../img_4/img_4_78.png)
+>     - Conectamos la máquina a nuestro switch virtual.
+>     ![Descripción de la imagen](../img_4/img_4_79.png)
+>     - Disco duro virtual. Ubicaremos el disco duro en la carpeta **VM* creada anteriormente.
+>     ![Descripción de la imagen](../img_4/img_4_91.png)
+>     - Opciones de instalación del SO. En **Image file** ponemos la ubicación de nuestra imagen.iso.
+>     ![Descripción de la imagen](../img_4/img_4_92.png)
+>     - Finalizamos la creación de la máquina virtual.
+>     ![Descripción de la imagen](../img_4/img_4_93.png)
+> 💡 **Creación de la máquina virtual por línea de comando.**
+>
+> 
+>     - Declarar la máquina:
+>     ```powershell
+>     New-VM -Name "Cliente-1" `
+>     -MemoryStartupBytes 256MB `
+>     -Generation 1 `
+>     -NewVHDPath "C:\VM\Cliente-1.vhdx" `
+>     -NewVHDSizeBytes 4GB `
+>     -SwitchName "LAN-Práctica-DHCP"
+>     ```
+> 
+>     - Declarar la unidad de DVD  y montar el **ISO**.
+>     
+>         !!! warning "Las VMs Generation 1 traen una unidad de DVD por defecto (a diferencia de Generation 2, donde hay que añadirla explícitamente con Add-VMDvdDrive).<br>Por tanto, basta con usar Set-VMDvdDrive para montar la ISO en la unidad ya existente."
+> 
+>             ```powershell
+>             Set-VMDvdDrive -VMName "CLIENTE-1" -Path "C:\ISOs\alpine.iso"
+>             Get-VMDvdDrive -VMName "CLIENTE-1"   # debe mostrar el Path del ISO
+>             ```
+> 
+>     - Definir el orden de arranque (DVD antes que red)
+>     ```powershell
+>     Stop-VM -Name "Cliente-1" -TurnOff -Force
+>     Set-VMFirmware -VMName "Cliente-1" -FirstBootDevice (Get-VMDvdDrive -VMName "Cliente-1")
+>     Start-VM -Name "Cliente-1"
+>     ```
+#### 5.5.4 Arrancar la VM
+
+- Arrancamos la máquina virtual desde el **Hyper-V Manager**
+![Descripción de la imagen](../img_4/img_4_94.png)
+- Esperamos a que se cargue el SO.
+![Descripción de la imagen](../img_4/img_4_42.png)
+- La contraseña del login es **root**.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_95.png)
+
+#### 5.5.5 Verificar la conexión a la red a la asignación de la IP por parte del DHCP
+
+- Dentro de la consola de la VM confirmaremos el nombre real de la interfaz (eth0, enp0s3...):  
+    ``` shell
+    ip link show           
+    ```
+
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_4/img_4_96.png)
+
+- Si aparece "state DOWN", levantaremos la interfaz.
+    ```shell
+    ip link set eth0 up    
+    ```  
+
+    ![Descripción de la imagen](../img_4/img_4_97.png)
+
+- Solicitamos una dirección IP con:
+    ```shell
+    udhcpc -i eth0
+    ```
+
+    ==Realizar captura de pantalla==  
+    ![Descripción de la imagen](../img_4/img_4_98.png)
+
+- Como podemos ver, la solicitud no se realiza. Eso se puede deber a, al menos 2 causas.  
+:one: No hemos asociado el **Switch Virtual** a nuestra **máquina anfitrión**.
+![Descripción de la imagen](../img_4/img_4_99.png)
+:two: Cuando hemos creado el switch virtual hemos autorizado el VLAN ID → Lo deseleccionaremos.
+![Descripción de la imagen](../img_4/img_4_101.png)
+
+- Solicitamos de nuevo una dirección IP:
+    ```shell
+    udhcpc -i eth0
+    ```
+
+    ==Realizar captura de pantalla==  
+    ![Descripción de la imagen](../img_4/img_4_100.png)
+
+### 5.6 Supervisión del proceso de broadcast y asignación (DORA) con Wireshark
+
+- En esta parte supervisaremos la activida de red con **Wireshark** para ver el proceso DORA: DHCPDISCOVER → DHCPOFFER → DHCPREQUEST → DHCPACK.
+- Wireshark es un popular analizador de protocolos de red de código abierto.  
+- Permite capturar y examinar **en tiempo real** el tráfico de datos que pasa por una red de comunicaciones, mostrando los paquetes individuales de información.
+
+#### 5.6.1 Descargar e instalar Wireshark
+
+> 💡 **Por línea de comandos**
+>
+>     ```powershell
+>     Invoke-WebRequest -Uri "https://2.na.dl.wireshark.org/win64/Wireshark-latest-x64.exe" -OutFile "C:\Wireshark-installer.exe"
+>     Start-Process "C:\Wireshark-installer.exe"
+>     ```
+> 💡 **Descargar desde la página oficial**
+>
+>     ![Descripción de la imagen](../img_4/img_4_84.png)
+#### 5.6.2 Primeras capturas con Wireshark
+
+- Una vez en ejecución la aplicación nos mostrará todos los adaptadores de red disponibles.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_85.png)
+- Si no se detecta ninguna actividad de red, ponemos forzar tráfico haciendo ping desde la máquina virtual con Alpine Linux a otros dispositvos de la red (en nuestro caso, a la instancia de `Windows Server`).  
+De esa manera también nos aseguraremos que todo funciona correctamente.  
+- Si no conseguimos hacer ping pero si podemos hacer ping desde nuestro servidor DHCP, es posible que se deba a la configuración del **firewall de windows**.  
+Para ello ejecutaremos `wf.msc` y comprobaremos si tenemos restricciones sobre el tráfico `ICMP` de entrada a nuestra máquina `Windows-server`.
+![Descripción de la imagen](../img_4/img_4_143.png)
+- después de solucionar posibles problemas, generaremos tráfico de red para familiarizarnos con la interfaz de `Wireshark`.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_86.png)
+
+#### 5.6.3 Capturas del DORA entre MV y DHCP
+
+- Wireshark solo captura el tráfico a partir del momento en el cual se está ejecutando. Por ese motivo deberemos forzar el DORA entre MV y DHCP. Para ello forzaremos a la MV a devolver la IP asignada y negociaremos otra.
+- Primero comprobaremos que la MV está conectada a la red. Si no lo está levantaremos el servicio.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_87.png)
+- Si la MV estaba conectada, devolveremos la IP asignada.
+![Descripción de la imagen](../img_4/img_4_88.png)
+- Forzamos la negociación de una nueva IP con el servidor DHCP.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_89.png)
+- Aplicando filtros o simplemente ordenando los protocolos en orden alfabetico podremos ver las 4 fases del procesa DORA.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_90.png)
+
+### 5.7 Tarea RA1-CEfgh-1 - Creación de otra máquina virtual
+
+Para comprobar que los conocimientos han sido asimilados correctamente.
+
+1. Lanzar otra máquina virtual y comprobar con Wireshark el proceso DORA.  
+==Realizar captura de pantalla==  
+1. La máquina virtual podrá ser del mismo tipo que la MV anterior o estar montada con un SO de **Windows**.  
+==Realizar captura de pantalla==  
+1. Si elegís esta última opción, podreís descargar un SO de uso limitado desde [el centro de evaluación de Microsoft](https://www.microsoft.com/es-es/evalcenter/).
+
+> 💡 **Comandos para devolver IP y solicitarla de nuevo**
+>
+>     ```cmd
+>     ipconfig /release
+>     ipconfig /renew
+>     ipconfig /all
+>     ```
+## 6 - Tarea RA1-CEcd-2 - Instalación y configuración de un DHCP con Ubuntu Server en AWS
+
+### 6.1 Objetivo de la práctica
+
+- Desplegar un servidor DHCP en Ubuntu Server 26.04 LTS sobre AWS con virtualización anidada.
+- En este primer paso instalaremos y configuraremos el rol **DHCP Server** en Ubuntu Server, y observaremos en tiempo real cómo varios equipos cliente obtienen su configuración IP (DHCPDISCOVER → OFFER → REQUEST → ACK), reservas, exclusiones, ámbitos (scopes), opciones de ámbito (DNS, puerta de enlace, etc.).
+
+### 6.2 Arquitectura del laboratorio
+
+- Instancia EC2 (m7i.large, 60GB, Unbuntu Server 26.04 LTS
+- Virtualización KVM + QEMU + libvirt)
+
+![Descripción de la imagen](../img_4/img_4_122.png)
+
+> ℹ️ **Explicación de los elementos de la arquitectura**
+>
+> 
+>     - **KVM + QEMU + libvirt** es la pila de virtualización nativa de Linux y está pensada para virtualización de servidores. 
+>         - **KVM** → proporciona la virtualización mediante el kernel.
+>         - **QEMU** → ejecuta/emula el hardware de las máquinas virtuales.
+>         - **libvirt** → capa de administración de KVM/QEMU.
+>     - **virt-manager** → interfaz gráfica para administrar libvirt.
+!!! tip "Equivalencia con Windows Server"  
+    | Windows Server                    | Ubuntu Server                            |
+    | --------------------------------- | ---------------------------------------- |
+    | **Hyper-V**                       | **KVM + QEMU**                           |
+    | Hyper-V Manager                   | **virt-manager**                         |
+    | PowerShell / herramientas Hyper-V | **virsh / virt-install**                 |
+    | Virtual Switch                    | **Redes virtuales de libvirt / bridges** |
+    | VM                                | VM KVM/QEMU                              |
+    | VHDX                              | qcow2 / raw                              |
+    | Hyper-V NAT / switches            | NAT / bridge de libvirt                  |
+
+### 6.3 Instalación de escritorios en Ubuntu Server 26.04
+
+- Para facilitar algunas etapas de la configuración de esta práctica, instalaremos una interfaz gráfica sobre la instancia de Ubuntu Server que hemos creado anteriormente.
+- Instalar un escritorio gráfico no se suele recomendar en entornos de producción, por rendimiento y seguridad pero, dentro de un contexto de prácticas, puede estar plenamente justificado.
+- A continuación se dan los procedimientos de instalación de 2 escritorios: **Xfce Desktop Environment** y el muy conocido **GNOME**.
+
+> 💡 **Instalación de XFCE + Xrdp**
+>
+> 
+>     1. Nos conectamos a nuestra instancia desde la consola de AWS.
+> 
+>     1. Instalamos las actualizaciones disponibles en los repositorios.
+>     ```bash
+>     sudo apt update && sudo apt upgrade -y
+>     ```
+> 
+>     1. Instalamos XFCE y Xrdp
+>     ```bash
+>     # Instalamos el entorno gráfico, el servidor de escritorio remoto y el componente que permite a Xrdp utilizar Xorg.
+>     sudo apt install -y xfce4 xfce4-goodies xrdp xorgxrdp
+>     ```
+> 
+>     1. Configurar la sesión gráfica.
+>     ```bash
+>     echo "startxfce4" > ~/.xsession
+>     ```
+> 
+>     1. Crear un nuevo usuario
+>     ```bash
+>     sudo adduser NuevoUsuario
+>     ```
+> 
+>     1. Dar al nuevo usuario los mismos privilegios que los que tenemos con el usuario `ubuntu`
+>     ```bash
+>     sudo usermod -aG $(id -nG ubuntu | sed 's/ /,/g') NuevoUsuario
+>     echo 'NuevoUsuario ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/90-NuevoUsuario
+>     sudo chmod 440 /etc/sudoers.d/90-NuevoUsuario
+>     ```
+> 
+>     1. Comprobar que funciona:
+>     ```bash
+>     sudo visudo -c
+>     su - NuevoUsuario
+>     sudo whoami
+>     ```
+> 
+>     1. Configurar el servicio Xrdp
+>     ```bash
+>     sudo adduser xrdp ssl-cert
+>     sudo systemctl enable --now xrdp
+>     sudo systemctl restart xrdp
+>     ```
+> 💡 **Instalación de GNOME desde 0 sobre una máquina Ubuntu Server 26.04 recién lanzada**
+>
+> 
+>     1. Actualizar
+>     ```bash
+>     sudo apt update && sudo apt upgrade -y
+>     # Comprobar si es necesario hacer reboot
+>     ```
+> 
+>     1. Crear un nuevo usuario
+>     ```bash
+>     sudo adduser NuevoUsuario
+>     ```
+> 
+>     1. Dar al nuevo usuario los mismos privilegios que los que tenemos con el usuario `ubuntu`
+>     ```bash
+>     sudo usermod -aG $(id -nG ubuntu | sed 's/ /,/g') NuevoUsuario
+>     echo 'NuevoUsuario ALL=(ALL) NOPASSWD:ALL' | sudo tee /etc/sudoers.d/90-NuevoUsuario
+>     sudo chmod 440 /etc/sudoers.d/90-NuevoUsuario
+>     ```
+> 
+>     1. Comprobar que funciona:
+>     ```bash
+>     sudo visudo -c
+>     su - NuevoUsuario
+>     sudo whoami
+>     ```
+>     
+>     1. Instalar GNOME y RDP (kdump-tools: elegir "No")
+>     ```bash
+>     # Escritorio completo
+>     sudo apt install ubuntu-desktop gnome-remote-desktop pkexec openssl -y
+>     # Escritorio minimo (instalar este)
+>     sudo apt install ubuntu-desktop-minimal gnome-remote-desktop pkexec openssl -y
+>     ```
+>     Si durante la instalación aparece la pantalla siguiente, eligiremos **No** como opción.  
+>     ![img](../img_4/img_4_144.png)
+>         
+>         !!! note "¿Qué es kdump-tools"
+>             - **kdump-tools** es un mecanismo que, cuando el kernel sufre un fallo grave (kernel panic), arranca un segundo kernel pequeño para guardar un volcado de memoria (crash dump). Ese volcado sirve para que un desarrollador o administrador analice después por qué falló el sistema.
+>             - Es una herramienta de diagnóstico avanzado, pensada sobre todo para servidores en producción o depuración del kernel.
+>             - Reserva una parte de la RAM de forma permanente (el parámetro crashkernel), que no podrá usarse para otra cosa. En equipos con poca memoria, eso se nota.
+>             - Para un uso normal o de pruebas, no aporta nada.
+> 
+>     1. Generar un certificado TLS directamente en su ubicación final
+>     ```bash
+>     sudo mkdir -p /etc/gnome-remote-desktop
+>     sudo openssl req -new -newkey rsa:4096 -days 365 -nodes -x509 \
+>       -subj "/CN=ubuntu-server" \
+>       -out /etc/gnome-remote-desktop/rdp.crt \
+>       -keyout /etc/gnome-remote-desktop/rdp.key
+>     ```
+> 
+>     1. Cambiar permisos (antes de grdctl)
+>     ```bash
+>     sudo chown gnome-remote-desktop:gnome-remote-desktop /etc/gnome-remote-desktop/rdp.crt /etc/gnome-remote-desktop/rdp.key
+>     sudo chmod 644 /etc/gnome-remote-desktop/rdp.crt
+>     sudo chmod 600 /etc/gnome-remote-desktop/rdp.key
+>     ```
+> 
+>     1. Configurar RDP con grdctl (herramienta para configurar GNOME Remote desktop)
+>     ```bash
+>     sudo grdctl --system rdp set-tls-cert /etc/gnome-remote-desktop/rdp.crt
+>     sudo grdctl --system rdp set-tls-key /etc/gnome-remote-desktop/rdp.key
+>     sudo grdctl --system rdp set-credentials NuevoUsuario CONTRASEÑA
+>     sudo grdctl --system rdp enable
+>     ```
+> 
+>     1. Arranque gráfico y servicio 
+>     ```bash
+>     sudo systemctl set-default graphical.target
+>     sudo systemctl enable --now gnome-remote-desktop.service
+>     sudo grdctl --system status
+>     ```
+> 
+>     1. Reiniciar
+>     ```bash
+>     sudo reboot now
+>     ```
+> 
+>     1. Verificamos que el sistema arranca en modo gráfico con:
+>     ```bash
+>     systemctl get-default
+>     systemctl status gdm3
+>     systemctl status gnome-remote-desktop
+>     ```
+>     ### 6.4 Primera conexión por escritorio gráfico a Ubuntu Server (XFCE + Xrdp)
+
+- Lanzamos desde Windows la aplicación de conexión a escritorio remoto e introducimos la contraseña de nuestra máquina.  
+![Descripción de la imagen](../img_4/img_4_110.png)
+- Para la práctica, no tendremos en cuenta la advertencias de seguridad.
+- Introducimos nuestras credenciales en la pasarela (servidor Xrdp).
+![Descripción de la imagen](../img_4/img_4_111.png)
+
+
+- Un vez iniciada la sesión estaremos en el escritorio gráfico típico de XFCE.
+![Descripción de la imagen](../img_4/img_4_145.png)
+
+### 6.5 Activar la virtualización de la CPU por la consola de AWS
+
+> ✅ **Activar la virtualización de la CPU por la consola de AWS**
+>
+> 
+>     - Abrimos el cloudshell de AWS y escribimos los siguientes comandos:  
+>     !!! warning "Cambiar la id por la id de vuestra instancia"
+>     ```bash
+>     # 1. Parar la instancia. También se puede hacer desde la consola de AWS. 
+>     aws ec2 stop-instances --instance-ids i-069fe851e6325d765
+> 
+>     # 2. Esperar a que quede realmente parada
+>     aws ec2 wait instance-stopped --instance-ids i-069fe851e6325d765
+> 
+>     # 3. Activar nested virtualization con el comando correcto
+>     aws ec2 modify-instance-cpu-options \
+>       --instance-id i-069fe851e6325d765 \
+>       --nested-virtualization enabled
+> 
+>     # 4. Arrancarla de nuevo
+>     aws ec2 start-instances --instance-ids i-069fe851e6325d765
+>     ```
+> 💡 **Comprobar la virtualización de la instancia**
+>
+> 
+>     - Desde la consola de AWS ejecutamos el comando
+>     ```bash
+>     aws ec2 describe-instances --instance-ids i-069fe851e6325d765 \
+>     --query "Reservations[].Instances[].CpuOptions"
+>     ```
+>     ![Descripción de la imagen](../img_4/img_4_114.png)
+>     - También lo podemos comprobar desde la propia instancia con:
+>     ```bash
+>     egrep -c '(vmx|svm)' /proc/cpuinfo
+>     ```
+>     Si nos devuelve un valor mayor que 0, significa que la CPU expone las extensiones de virtualización (Intel VT-x/ AMD AMD-V).  
+>     ==Realizar captura de pantalla==  
+>     ![Descripción de la imagen](../img_4/img_4_115.png)
+>     - Otra manera sería usando la aplicación **cpu-checker**
+>     ```bash
+>     sudo apt update
+>     sudo apt install -y cpu-checker
+>     sudo kvm-ok
+>     ```
+>     ==Realizar captura de pantalla==
+>     ![Descripción de la imagen](../img_4/img_4_116.png)
+### 6.6 Instalación de KVM y herramientas relacionadas
+
+- Instalaremos KVM y las herramientas relacionadas con:
+
+    ```bash
+    sudo apt install -y qemu-system-x86 qemu-utils libvirt-daemon-system libvirt-clients bridge-utils virtinst virt-manager
+    ```
+
+    > ℹ️ **Explicación de las aplicaciones instaladas**
+>
+>         - **qemu-system-x86** → emulador QEMU para x86, que usa KVM como aceleración porhardware.
+>         - **libvirt-daemon-system / libvirt-clients** → capa de gestión (permite usar `virsh`,`virt-install`, etc.).
+>         - **qemu-utils** → utilidades para manejar discos virtuales (`qemu-img`).
+>         - **bridge-utils** → herramientas para crear redes puente entre las VMs.
+>         - **virtinst** → herramientas para crear VMs desde línea de comandos (`virt-install`).
+>         - **virt-manager** → interfaz gráfica de gestión (solo si disponemos de entorno gráfico).
+### 6.7 Añadir usuarios a los grupos necesarios
+
+- Para poder utilizar las opciones de virtualización deberemos añadir nuestro usuario **a los grupos `libvirt` y `kvm`**:
+
+    ```bash
+    sudo usermod -aG libvirt,kvm $USER
+    ```
+
+> ⚠️ **Cerrar sesión para aplicar los cambios**
+>
+>     Es necesario cerrar sesión y volver a iniciarla (o reiniciar) para que los nuevos grupos surtan efecto.
+### 6.8 Comprobar que el servicio libvirt está activo
+
+- Lo comprobaremos con:
+    ```bash
+    sudo systemctl status libvirtd
+    ```
+    ![Descripción de la imagen](../img_4/img_4_117.png)
+
+- Si, como en el caso de la imagen, nos muestra `inactive`, los activaremos con:
+
+    ```bash
+    sudo systemctl start libvirtd
+    sudo systemctl status libvirtd
+    ```
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_4/img_4_118.png)
+
+### 6.9 Verificar que /dev/kvm existe y comprobar los permisos de usuario del directorio
+
+- Lo verificaremos con:
+    ```bash
+    ls -l /dev/kvm
+    ```
+    ![Descripción de la imagen](../img_4/img_4_119.png)
+
+    > ℹ️ **Nota**
+>
+>         - **rw-rw----+** → El propietario **root** y el grupo **kvm** tienen permisos de lectura y escritura (rw-).
+>         - El símbolo + indica que tiene Listas de Control de Acceso (ACL) adicionales aplicadas.
+### 6.10 Listar el hipervisor detectado
+
+- Listaremos los servicios de virtualización con:
+
+    ```bash
+    virsh list --all
+    ```
+
+    ![Descripción de la imagen](../img_4/img_4_120.png)
+
+    > ℹ️ **Nota**
+>
+>         A esta altura de la práctica, que la lista esté vacía no es motivo de preocupación. Aún no hemos creado ninguna máquina virtual.
+> 
+>     !!! tip "De no devolver un error tipo *failed to connect to the hypervisor* confirma que:"
+> 
+>         - **libvirtd** se está ejecutando correctamente.
+>         - Nuestro usuario tiene permisos **para comunicarse con el hipervisor**.
+>         - **KVM/QEMU** están listos para usarse.
+### 6.11 Aplicación Virt-Manager
+
+- Si nos conectamos por escritorio remoto, también podremos ver que el asistente (gráfico) de virtualización (virt-manager) está instalado.
+![Descripción de la imagen](../img_4/img_4_121.png)
+- Escritorio de Virt-Manager
+![Descripción de la imagen](../img_4/img_4_123.png)
+
+### 6.12 Crear la red aislada y el switch virtual sin acceso al exterior
+
+- Como el la práctica anterior, crearemos una red privada para evitar conflictos con AWS a la hora de asignar IPs.
+
+    ```bash
+    cat > /home/ubuntu/Documents/RedPrivada.xml << 'EOF'
+    <network>
+        <name>RedPrivada-DHCP</name>
+        <bridge name='Switch-Virtual' stp='on' delay='0'/>
+    </network>
+    EOF
+
+    sudo virsh net-define /home/ubuntu/Documents/RedPrivada.xml
+    sudo virsh net-start RedPrivada-DHCP
+    sudo virsh net-autostart RedPrivada-DHCP
+    ```
+
+    > ⚠️ **Importante: Red en modo aislado**
+>
+>         - Al **no** incluir ningún bloque `<forward>` ni `<ip>`, esta red queda en modo *isolated*.
+>         - Libvirt no le asigna su propio servidor DHCP interno ni la conecta a internet.
+>         - Las VMs conectadas **no recibirán IP automáticamente**: De eso se encaragará el servidor DHCP que implementaremos más adelante.
+- Verificaremos que se ha creado switch virtual correctamente:  
+
+    ```bash
+    ip link show Switch-Virtual
+    virsh net-list --all
+    ```  
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_4/img_4_124.png)
+
+### 6.13 Configurar el switch virtual
+
+- A diferencia de la práctica de Windows Server, aquí sí que podemos / debemos asignar un IP al switch virtual.
+
+    ```bash
+    sudo ip addr add 192.168.50.1/24 dev Switch-Virtual
+    sudo ip link set Switch-Virtual up
+    ```
+
+    > ⚠️ **En estas condiciones, el switch virtual no es persistente. Eso quiere decir que lo tendremos que iniciar cada vez que retomemos la práctica.**
+>
+>         Por ejemplo si ejecutamos el comando:
+>         ```bash
+>         ip -br -4 addr show Switch-Virtual
+>         ```
+>         Obtendremos:  
+>         ![Descripción de la imagen](../img_4/img_4_147.png)  
+> 
+>         !!! warning "El <span style="color: red">DOWN</span> no significa un problema con nuestra red. Solo nos indica que, de momento, no hay ninguna máquina virtual conectada a la red"
+> 
+>         Si reiniciamos la máquina o el servicio veremos:
+>         ![Descripción de la imagen](../img_4/img_4_146.png)
+>         
+>         !!! question "¿Qué podemos interpretar acerca del servicio del switch virtual?"
+- Para evitar de tener que volver a asignar la IP al switch virtual y el posterior reinicio del servicio haremos lo siguiente:
+
+    > 💡 **Editar el archivo `RedPrivada.xml`**
+>
+>         Dentro del archivo creado justo antes añadiremos una línea que especificará la IP y la mascara de red del switch virtual.
+>         ```bash
+>         <network>
+>           <name>RedPrivada-DHCP</name>
+>           <bridge name='Switch-Virtual' stp='on' delay='0'/>
+>           <ip address='192.168.50.1' netmask='255.255.255.0'/>
+>         </network>
+>         ```
+> 
+>     !!! tip "Aplicar los cambios"
+>         ```bash
+>         sudo virsh net-destroy RedPrivada-DHCP
+>         sudo virsh net-undefine RedPrivada-DHCP
+>         sudo virsh net-define /home/ubuntu/Documents/RedPrivada.xml
+>         sudo virsh net-start RedPrivada-DHCP
+>         sudo virsh net-autostart RedPrivada-DHCP
+>         ```
+> 
+>         - Tras el reinicio, comprobar el estado del servicio del switch virtual.
+>         ```bash
+>         ip addr show Switch-Virtual
+>         
+>         ```
+> 
+>     !!! tip "Comandos útiles"
+>         1. ip -br link # Resumen de todas las interfaces
+>         1. ip -br addr # Interfaces con sus IPs
+>         1. ip link show type bridge # Solo bridges
+>         1. ip -d link show `<interfaz>` # Detalles de una interfaz
+>         1. bridge link # Interfaces conectadas a bridges
+>         1. bridge fdb show # Tabla de direcciones MAC
+>         1. ip route # Tabla de rutas
+
+
+
+
+### 6.14 Configurar la máquina anfitriona como servidor DHCP
+
+- Instalamos el servicio DHCP
+
+    ```bash
+    sudo apt install -y isc-dhcp-server
+    ```
+
+- Definiremos qué interfaz debe escuchar el servidor DHCP editando el archivo `/etc/default/isc-dhcp-server`
+
+    ```bash
+    sudo nano /etc/default/isc-dhcp-server
+    ```
+
+- Bajamos hasta la línea INTERFACESv4="" y ponemos el valor `Switch-Virtual`.
+
+    ```
+    INTERFACESv4="Switch-Virtual"
+    ```
+
+    ![Descripción de la imagen](../img_4/img_4_126.png)
+
+### 6.15 Configurar el ámbito de nuestro servidor DHCP
+
+- Para configurar el ámbito editaremos el archivo `/etc/dhcp/dhcpd.conf`
+
+    ```bash
+    sudo nano /etc/dhcp/dhcpd.conf
+    ```
+
+- Añadiremos al final:
+
+    ```
+    subnet 192.168.50.0 netmask 255.255.255.0 {
+      range 192.168.50.100 192.168.50.200;
+      option routers 192.168.50.1;
+      option domain-name-servers 8.8.8.8;
+      option subnet-mask 255.255.255.0;
+      default-lease-time 600;
+      max-lease-time 7200;
+    }
+    ```
+
+    ==Realizar captura de pantalla==  
+    ![Descripción de la imagen](../img_4/img_4_127.png)
+
+### 6.16 Arrancar el servicio DHCP
+
+- Para arrancar el servicio y comprobar que el servicio se ha levantado correctamente usaremos:
+
+    ```bash
+    sudo systemctl enable isc-dhcp-server
+    sudo systemctl restart isc-dhcp-server
+    sudo systemctl status isc-dhcp-server
+    ```
+
+    ==Realizar captura de pantalla==  
+    ![Descripción de la imagen](../img_4/img_4_128.png)
+
+> ⚠️ **Si falla al arrancar**
+>
+> 
+>     - Revisar si `INTERFACESv4` apunta a una interfaz que no existe todavía o el archivo `dhcpd.conf` contiene un error de sintaxis.
+>     - Si hay un error de sintaxis usar:
+>         ```bash
+>         sudo dhcpd -t -cf /etc/dhcp/dhcpd.conf
+>         ```
+### 6.17 Habilitar el servicio DHCP y ordenarlo después de libvirt
+
+- Por defecto, el servicio DHCP no se inicia solo: cada vez que arranquemos la instancia habría que lanzarlo manualmente.
+- Si lo habilitamos para el arranque, debemos asegurarnos de que se inicie **después** de que libvirtd haya creado el switch virtual. si no, fallará porque la interfaz aún no existe.
+
+- Primero habilitamos el servicio:
+
+    ```bash
+    sudo systemctl enable isc-dhcp-server
+    ```
+
+- Después creamos un *override* de la unidad de systemd:
+
+    ```bash
+    sudo systemctl edit isc-dhcp-server
+    ```
+
+- Dentro del editor escribiremos:
+
+    ```ini
+    [Unit]
+    After=libvirtd.service
+    Wants=libvirtd.service
+
+    [Service]
+    Restart=on-failure
+    RestartSec=5
+    ```
+
+    > ℹ️ **Nota**
+>
+>         - `After=` → isc-dhcp-server arranca después de libvirtd.
+>         - `Wants=` → al arrancar el DHCP, systemd intenta iniciar también libvirtd, pero si este falla o se reinicia, el DHCP no se detiene. (Con `Requires=` sí se detendría.)
+>         - `Restart=on-failure` → si el servicio termina con error, systemd lo reinicia automáticamente.
+>         - `RestartSec=5` → espera 5 segundos entre reintentos.
+- Guardamos, recargamos systemd y reiniciamos el servicio:
+
+    ```bash
+    sudo systemctl daemon-reload
+    sudo systemctl restart isc-dhcp-server
+    sudo systemctl status isc-dhcp-server
+    ```
+
+> ⚠️ **La red de libvirt debe tener IP al arrancar**
+>
+>     - `After=libvirtd.service` no garantiza que el switch virtual tenga ya su IP.
+>     - Para ello, la red debe estar en autostart (`sudo virsh net-autostart RedPrivada-DHCP`) y su XML debe incluir el bloque `<ip address='192.168.50.1' netmask='255.255.255.0'/>`.
+### 6.18 Descargar la imagen de las máquinas virtuales cliente
+
+Igual que en la práctica de Windows Server, usaremos **Alpine Linux** por su ligereza (256–512 MB por VM).
+
+- Podemos usar el escritorio gráfico para descargar la iso del SO de Alpine Linux pero, lo haremos por línea de comando.
+
+    ```bash
+    sudo mkdir -p /var/lib/libvirt/images
+    sudo mkdir -p /var/lib/libvirt/vm
+    sudo wget -O /var/lib/libvirt/images/alpine.iso https://dl-cdn.alpinelinux.org/alpine/v3.24/releases/x86/alpine-virt-3.24.1-x86.iso
+    sudo ls -lh /var/lib/libvirt/images/alpine.iso   
+    ```
+
+    ==Realizar captura de pantalla==  
+    Mostrar el contenido de la carpeta `/var/lib/libvirt/images/`.
+    
+
+> ℹ️ **¿Por qué `/lib/libvirt` y no cualquier otra carpeta?**
+>
+> 
+>     - El proceso QEMU que ejecuta la VM se lanza con el usuario libvirt-qemu (por aislamiento/seguridad). Ese usuario no tiene permiso para atravesar el directorio /home/ubuntu. 
+>     - Por ese motivo usaremos el directorio `/var/lib/libvirt/`. 
+### 6.19 Crear la VM con virt-install (consola de texto, sin necesidad de GUI)
+
+- Para crear nuestra primera VM usaremos el script:
+
+    ```bash
+    sudo virt-install \
+      --name Cliente-1 \
+      --memory 256 \
+      --vcpus 1 \
+      --disk path=/var/lib/libvirt/vm/Cliente-1.qcow2,size=2 \
+      --disk path=/var/lib/libvirt/images/alpine.iso,device=cdrom \
+      --boot cdrom,hd \
+      --import \
+      --network network=RedPrivada-DHCP \
+      --graphics none \
+      --console pty,target_type=serial \
+      --os-variant alpinelinux3.19
+    ```
+
+> ℹ️ **Notas**
+>
+>     - **La opción** `--console pty,target_type=serial` nos conectará automáticamente a la **consola serie** de la VM en la misma terminal SSH.
+>     - En el prompt `localhost login:` entraremos como `root` con la contraseña **root**.
+>     - Para salir de la consola serie sin apagar la VM, cerraremos la ventana con la que estamos loggeado.
+>     - Para apagar la VM desde la consola serie, teclearemos `poweroff` y pulsaremos **Enter**.
+### 6.20 Conectarse por consola serie a la VM y comprobar la interfaz de red
+
+- Para conectarnos de nuevo a la VM y configurar la interfaz de red usaremos:
+
+    ```bash
+    sudo virsh start Cliente-1
+    virsh console Cliente-1
+    ```
+
+    > ℹ️ **Nota**
+>
+>         El comando `sudo virsh start Cliente-1`solo es necesario si la VM está apagada.
+- Comprobaremos el estado de la interfaz con:
+
+    ```bash
+    ip link show
+    ```
+
+    ==Realizar captura de pantalla==  
+    ![Descripción de la imagen](../img_4/img_4_129.png)
+
+- Si tenemos el `eth0` en DOWN, lo levantaremos con:
+    ```bash
+    ip link set eth0 up
+    ip link show eth0
+    ```
+
+    ![Descripción de la imagen](../img_4/img_4_130.png)
+
+### 6.21 Solicitar la IP por DHCP
+
+- Solicitaremos un IP al DHCP con:
+    ```bash
+    udhcpc -i eth0
+    ```
+
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_4/img_4_131.png)
+
+### 6.22 Gestión de las máquinas virtuales por consola
+
+- Para acceder a la ayuda de virsh teclar:
+
+    ```bash
+    virsh
+    ```
+
+- Comandos más habituales
+
+    | Comando | Qué hace |
+    |||
+    |**Redes**||
+    |virsh start `<Cliente-1>` | Inicia la VM |
+    |virsh destroy `<Cliente-1>` | Apagado forzoso e inmediato |
+    |virsh shutdown `<Cliente-1>` | Apagado ordenado (envía señal ACPI, espera a que el SO se apague solo) |
+    |virsh reboot `<Cliente-1>` |Reinicio ordenado (equivalente ACPI) |
+    |virsh undefine `<Cliente-1>` | Elimina la definición de la VM (metadatos) |
+    |virsh undefine `<Cliente-1>` --remove-all-storage| Elimina la definición de la VM y del disco|
+    |virsh list --all| Lista todas las máquinas y su estado|
+    |virsh console `<Cliente-1>`| Conexión por consola a la MV|
+    |**Redes**||
+    |virsh net-list --all| Lista todas las redes virtuales y su estado|
+    |virsh net-define `<nombre-de-la-red>` | Definir una red virtual|
+    |virsh net-destroy `<nombre-de-la-red>` | Detener una red virtual|
+    |virsh net-autostart --disable `<nombre-de-la-red>` | Desactivar el inicio automático|
+    |virsh net-undefine `<nombre-de-la-red>` | Elimina la definición de la red|
+    |**Switch**||
+    |ip -br link | Resumen de todas las interfaces|
+    |ip -br addr | Interfaces con sus IPs|
+    |ip link show type bridge | Solo bridges|
+    |ip -d link show `<interfaz>` | Detalles de una interfaz|
+    |bridge link | Interfaces conectadas a bridges|
+    |bridge fdb show | Tabla de direcciones MAC|
+    |ip route | Tabla de rutas|
+
+### 6.23 Segundo cliente
+
+==Realizar captura de pantalla==  
+
+- Repetir los pasos anteriores y crear una segunda VM con nombre `Cliente-2`.
+
+### 6.24 Ver el proceso de broadcast y asignación DORA
+
+En este caso no usaremos wireshark sino el propio log del servicio DHCP.
+
+- Nos conectamos a nuestra instancia anfitrión y lanzamos el log.
+    ```bash
+    sudo journalctl -u isc-dhcp-server -f
+    ```
+
+    **No cerraremos la ventana, lo dejamos corriendo.**
+
+- Abrimos otra conexión con nuestra instancia y la usaremos para conectarnos a nuestra(s) MV.
+        - Levantamos la interfaz de red con:
+    ```bash
+    ip link set eth0 up
+    ```
+
+    - Iniciamos el proceso DORA:
+    ```
+    udhcpc -i eth0
+    ```
+    ![Descripción de la imagen](../img_4/img_4_134.png)
+
+- Volvemos al log dónde podremos ver el DORA.  
+==Realizar captura de pantalla==  
+![Descripción de la imagen](../img_4/img_4_135.png)
+
+### 6.25 Leases concedidos
+
+- Con el siguiente comando podemos consultar el registro de concesiones (leases) del servidor DHCP, donde se muestra qué dirección IP tiene asignada cada cliente, la duración de la concesión y su fecha de inicio y expiración.
+
+    ```bash
+    cat /var/lib/dhcp/dhcpd.leases
+    ```
+
+    ==Realizar captura de pantalla==
+    ![Descripción de la imagen](../img_4/img_4_136.png)
+
+## 7 Tarea RA1-CEfgh-2 - Creación de VM con Virtual Machine Manager (libvirt)
+
+!!! warning "Realizar una captura de pantalla para cada punto. Acordaros de comentar brevemente cada captura."
+
+1. Conectarse por **RDP** a la instancia y acceder a **VMM**.  
+1. Eliminar las 2 máquinas virtuales.
+1. Crear 1 máquina nueva usando la misma configuración que en la tarea anterior.
+1. Lanzar la máquina y acceder a la consola de la misma.
+1. Detener la máquina virtual y volver a lanzarla: ¿Qué ocurre entonces?
+1. Aportar la modificaciones necesarias a la configuración de la máquina virtual para que arranque sin problemas después de una parada.
+1. Eliminar la red virtual `RedPrivada-DHCP`.
+1. Crear una red virtual nueva `RedPrivada-Tarea` con **IP 192.168.100.0/24**. Acordaros de que deberá estar en modo `isolated`.  
+1. Realizar las modificaciones necesarias a nuestro servicio DHCP para que pueda funcionar sobre la red `RedPrivada-Tarea` y que asigne un scope desde `192.168.100.60` hasta `192.168.100.90`.
+1. Aportar la modificaciones necesarias a la configuración de la máquina virtual para que su interfaz de red se conecte a `RedPrivada-Tarea`.
+1. Levantar la interfaz de red de la máquina virtual y comprobar qué IP le ha asignado el servicio DHCP.
+
+> ⚠️ **Entrega de la tarea**
+>
+> 
+>     - Seguir las `Normas para la Presentación de Trabajos Escritos.
+>     - Comentar las capturas de pantalla explicando el trabajo realizado para llegar a ese punto y el resultado obtenido.
+>     - Guardar el documento con **RA1-CEfgh-2-NombreApellidos** y subirlo a la tarea correspondiente de Aules.
+>     - A partir de momento de apertura de la tarea, dispondréis de 2 semanas para subir vuestros trabajos.
+>     - Pasado ese tiempo la tarea se cerrará y ya no será posible subir vuestras respuestas.
