@@ -2,315 +2,133 @@
 layout: default
 title: "UD3: Disseny Orientat a Objectes i Diagrames de Classes UML — Entorns de Desenvolupament"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD3"
+badge: "1r DAW / DAM · Entorns de Desenvolupament · UD3"
 prev_url: "../ut02/index.html"
-prev_label: "⬅️ UD2: Entorns Integrats (IDE)"
-next_url: "../ut04/index.html"
-next_label: "UD4: Diagrames de Comportament UML ➡️"
+prev_label: "⬅️ UD2 IDEs i Depuració"
+next_url: "ut0301.html"
+next_label: "Començar 3.1 ➡️"
 ---
 
 # UD3: Disseny Orientat a Objectes i Diagrames de Classes UML
 
-<div style="text-align: center; margin: 1.5rem 0;">
-<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
-  <defs>
-    <linearGradient id="bg-grad-ed3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e293b"/>
-    </linearGradient>
-    <linearGradient id="g-class3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-assoc3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-comp3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-inh3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Background -->
-  <rect width="860" height="260" rx="12" fill="url(#bg-grad-ed3)"/>
-
-  <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">DISSENY ORIENTAT A OBJECTES I DIAGRAMES DE CLASSES UML</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Notació estàndard UML 2.5, visibilitat d'atributs i mètodes, multiplicitats i relacions estructurals</text>
-
-  <!-- Bloc 1: Notació de Classe -->
-  <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-class3)" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📦</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Notació de Classe</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Compartiments &amp; Rols</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Nom, Atributs, Mètodes</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Públic (+), Privat (-)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Protegit (#), Paquet (~)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Tipat &amp; Retorn de funcions</text>
-  </g>
-
-  <!-- Bloc 2: Associacions & Multiplicitat -->
-  <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-assoc3)" stroke="#818cf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔗</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Associacions</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Enllaços &amp; Rang</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Línies d'associació</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Multiplicitats: 1, 0..1, *</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Rols d'extrem d'enllaç</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Navegabilitat unidireccional</text>
-  </g>
-
-  <!-- Bloc 3: Agregació & Composició -->
-  <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-comp3)" stroke="#34d399" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">💎</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Relació Part-Tot</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Agregació vs Composició</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Agregació feble (◇ rombe buit)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Cicle de vida independent</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Composició forta (◆ rombe ple)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Destrucció coincident</text>
-  </g>
-
-  <!-- Bloc 4: Herència & Interfícies -->
-  <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-inh3)" stroke="#f59e0b" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🧬</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Herència &amp; Contractes</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Generalització</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Generalització (◁ triangle buit)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Classes abstractes en cursiva</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Realització d'interfícies (···▷)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Dependència funcional (&lt;--)</text>
-  </g>
-</svg>
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <span style="font-weight:700; color:var(--primary);">Progrés de la Unitat Didàctica 3</span>
+    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes superats (0%)</div>
+  </div>
+  <div style="width:120px; height:10px; background:var(--border); border-radius:5px; overflow:hidden;">
+    <div class="progress-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+  </div>
 </div>
 
-El **Llenguatge Unificat de Modelat (*Unified Modeling Language - UML*)** és l'estàndard internacional de facto (acceptat per l'OMG i ISO) per a especificar, visualitzar, construir i documentar els artefactes d'un sistema de programari orientat a objectes. Dins dels diagrames estructurals, el **Diagrama de Classes** és el pilar fonamental: descriu les classes del sistema, els seus atributs i operacions, i les relacions estàtiques que les connecten.
+Benvingut/da a la **UD3: Disseny Orientat a Objectes i Diagrames de Classes UML** del mòdul professional d'**Entorns de Desenvolupament**.
+
+El llenguatge **UML (Unified Modeling Language)** és l'estàndard gràfic universal utilitzat a la indústria del programari per visualitzar, especificar, construir i documentar els artefactes d'un sistema orientat a objectes. Dins d'UML, el **Diagrama de Classes** és el diagrama estructural per excel·lència: mostra les classes del sistema, els seus atributs, les seues operacions i les relacions estàtiques que existeixen entre elles (associacions, dependències, agregacions, composicions i jerarquies d'herència).
 
 ---
 
-## 3.1 Estructura i representació d'una classe en UML 2.5
+## 🎯 Objectius i Resultats d'Aprenentatge (RA5)
 
-Una classe es representa gràficament com un rectangle dividit en tres compartiments horitzontals:
-
-```
-┌──────────────────────────────────────────────┐
-│                  NomClasse                   │  <-- 1. Nom de la classe (o en cursiva si és abstracta)
-├──────────────────────────────────────────────┤
-│ - atributPrivat : TipusDada                  │  <-- 2. Atributs amb tipat i visibilitat
-│ # atributProtegit : TipusDada = valorDefecte │
-├──────────────────────────────────────────────┤
-│ + metodePublic(param : Tipus) : TipusRetorn  │  <-- 3. Mètodes / Operacions
-│ + metodeSenseRetorn() : void                 │
-└──────────────────────────────────────────────┘
-```
-
-### Modificadors de visibilitat (Encapsulament)
-- **`+` Públic (*Public*):** L'element és visible per qualsevol classe de l'aplicació.
-- **`-` Privat (*Private*):** L'element només és accessible des de dins de la mateixa classe. Garanteix l'encapsulament de dades.
-- **`#` Protegit (*Protected*):** L'element és accessible des de la pròpia classe i des de totes les seues subclasses derivades.
-- **`~` Paquet (*Package / Default*):** Visible només per les classes que comparteixen el mateix paquet de codi.
+Segons el currículum oficial (Reials Decrets 453/2010 i 686/2010):
+- **RA5:** Dissenya i representa l'estructura estàtica d'aplicacions orientades a objectes utilitzant diagrames de classes UML.
+  - Conèixer l'origen, propòsit i classificació dels diagrames UML de l'OMG.
+  - Dibuixar classes amb la seua estructura de tres compartiments i visibilitats (`+`, `-`, `#`, `~`).
+  - Representar relacions d'associació amb rols i multiplicitats.
+  - Distingir entre agregació feble (rombe buit) i composició forta (rombe ple).
+  - Modelar l'herència, classes abstractes i interfícies.
+  - Transformar sistemàticament diagrames de classes a codi font Java i viceversa (enginyeria directa i inversa).
 
 ---
 
-## 3.2 Relacions entre classes en UML
+## 📑 Apartats de la Unitat
 
-La potència d'UML rau en la seua capacitat de modelar amb precisió com col·laboren i es vinculen les diferents entitats del model.
-
-### 1. Dependència (*Dependency* `····>`)
-Una classe utilitza una altra de forma transitòria i puntual (per exemple, rebent-la com a paràmetre en un mètode o com a variable local temporal). Si la classe de destí canvia, la classe origen podria necessitar ajustos:
-```
-[ ImpressoraFactures ] ····> [ Factura ]
-```
-
-### 2. Associació (*Association* `────` o `───>`)
-Representa una relació estructural estable i duradora en el temps. S'indica amb una línia contínua, opcionalment amb nom de rol i fletxa de navegabilitat.
-- **Multiplicitats habituals:**
-  - `1`: Exactament un (obligatori).
-  - `0..1`: Zero o un (opcional).
-  - `*` o `0..*`: Zero, un o molts (col·lecció).
-  - `1..*`: Almenys un (col·lecció obligatòria).
-
-### 3. Agregació (*Aggregation* `◇────` - Rombe buit)
-Representa una relació "part-tot" feble (*"has-a"*). La part pertany al tot, però **pot continuar existint de forma independent** si el tot es destrueix:
-```
-[ Departament ] ◇────── 1..* [ Professor ]
-```
-> Si el Departament d'Informàtica es tanca, els professors continuen existint i poden reubicar-se en un altre departament.
-
-### 4. Composició (*Composition* `◆────` - Rombe ple)
-Representa una relació "part-tot" forta i d'estricta dependència existencial. La part no té sentit sense el tot; **si el contenidor pare es destrueix, totes les seues parts subordinades es destrueixen automàticament**:
-```
-[ Factura ] ◆────── 1..* [ LiniaFactura ]
-```
-> Si s'elimina una Factura del sistema, les seues línies de detall associades desapareixen completament de la base de dades.
-
-### 5. Generalització / Herència (*Generalization* `◁────` - Triangle buit)
-Representa la relació "és-un" (*"is-a"*). La subclasse hereta automàticament tots els atributs i operacions de la superclasse, i pot afegir nous camps o sobreescriure comportaments (*Polimorfisme*):
-```
-    [ Vehicle ] (Abstract)
-         △
-         │
-    ┌────┴────┐
-    │         │
-[ Cotxe ] [ Moto ]
-```
-
-### 6. Realització d'Interfície (*Realization* `◁····` - Fletxa discontínua amb triangle)
-Indica que una classe implementa tots els mètodes abstractes definits en una interfície de programació:
-```
-[ ServidorAuth ] ····▷ [ Autenticable ]
-```
+1. **[3.1 Fonaments d'UML (Unified Modeling Language)](ut0301.html)**
+   - Història, l'Object Management Group (OMG) i la classificació en diagrames estructurals i de comportament.
+2. **[3.2 Elements del Diagrama de Classes](ut0302.html)**
+   - Representació de classes, atributs, mètodes, modificadors d'accés i sintaxi formal de tipus.
+3. **[3.3 Relacions entre Classes: Associació, Agregació i Composició](ut0303.html)**
+   - Navegabilitat, multiplicitats, agregació (tot-part feble) vs. composició (vida dependent forta).
+4. **[3.4 Herència, Generalització i Interfícies](ut0304.html)**
+   - Fletxa de generalització, classes i mètodes abstractes, estereotips d'interfícies i polimorfisme.
+5. **[3.5 Traducció d'UML a Codi Java i Enginyeria Inversa](ut0305.html)**
+   - Correspondència amb camps, col·leccions `List<T>`, generació de codi i eines CASE integrades a l'IDE.
 
 ---
 
-## 3.3 Correspondència directa entre UML i Codi Java
+## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
 
-| Concepte UML | Representació en Codi Font Java |
-| :--- | :--- |
-| **Atribut privat (`- nom : String`)** | `private String nom;` |
-| **Mètode públic (`+ getNom() : String`)** | `public String getNom() { return this.nom; }` |
-| **Herència (`Cotxe` hereta de `Vehicle`)** | `public class Cotxe extends Vehicle { ... }` |
-| **Realització (`Usuari` implementa `Auditable`)** | `public class Usuari implements Auditable { ... }` |
-| **Associació / Agregació (`1` a `*`)** | `private List<Professor> professors = new ArrayList<>();` |
-| **Composició (`Comanda` conté `Linia`)** | Instanciació controlada dins del constructor de `Comanda`. |
+Posa a prova el teu rigor en modelat de classes UML resolent aquests 4 reptes de síntesi:
 
----
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 1: Agregació vs. Composició</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Quina és la diferència semàntica clau entre una relació d'Agregació (rombe buit) i una de Composició (rombe ple)?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) L'agregació és per a números i la composició per a text.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) En la composició, les parts tenen un cicle de vida totalment dependent del tot: si es destrueix l'objecte contenidor, es destrueixen automàticament les parts; en l'agregació, les parts tenen vida independent.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) L'agregació requereix utilitzar memòria RAM i la composició disc SSD.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) No hi ha cap diferència semàntica.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 2: Símbol de Visibilitat Protegida</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">En la notació estàndard d'UML, quin caràcter s'utilitza abans del nom d'un atribut per indicar que té visibilitat Protegida (Protected)?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) +</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) -</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) #</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) ~</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
 
-### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 3: Classes Abstractes en UML</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Com es representa visualment que una classe és Abstracta (no instanciable directament) en un diagrama de classes UML?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Escrivint el seu nom en lletra cursiva (itàlica) o utilitzant la propietat {{abstract}}.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Dibuixant la caixa en color vermell fluorescent.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Subratllant el nom de la classe amb tres línies.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Dibuixant un cercle en lloc d'un rectangle.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
 
-#### Exercici 1: Anàlisi de multiplicitats i instanciació d'objectes en memòria
-Considera el següent model de classes d'un centre d'estudis:
-- Una instància de `CicleFormatiu` conté en agregació (`◇`) entre $1$ i $4$ instàncies de `Curs`.
-- Cada `Curs` conté en composició (`◆`) entre $4$ i $8$ instàncies de `Modul`.
-- Cada `Modul` té associat exactament $1$ `Professor` titular. Un `Professor` pot impartir entre $1$ i $3$ mòduls diferents.
-- Cada `Curs` té matriculats entre $15$ i $30$ `Estudiants`.
+<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 4: Multiplicitat 0..*</span>
+    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+  </div>
+  <p style="margin-bottom:15px;">Com es tradueix a codi Java una relació d'associació cap a una classe 'Article' que té una multiplicitat de '0..*'?</p>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Com un camp primitiu simple 'Article a;'.</button>
+    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Com una estructura de col·lecció (ex: 'List<Article> articles = new ArrayList<>();').</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Com un comentari d'una sola línia.</button>
+    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Com una classe abstracta estretament acoblada.</button>
+  </div>
+  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+</div>
 
-1. Si un centre ofereix exactament $3$ cicles formatius de grau superior:
-   - Quin és el nombre mínim i màxim absolut d'objectes `Modul` que poden estar instanciats simultàniament a la memòria RAM del servidor?
-   - Quin és el nombre mínim de professors necessaris per a cobrir la docència en l'escenari de màxim nombre de mòduls?
-2. Si un usuari elimina un `Curs`, quins objectes de la memòria seran destruïts pel recol·lector de fem (*Garbage Collector*) per tractar-se de relacions de composició, i quins sobreviuran per tractar-se d'associacions o agregacions?
-
-#### Exercici 2: Detecció d'incoherències de disseny i violacions de principis OO
-Analitza el següent fragment de modelat UML descrit textualment:
-- Classe `CompteBancari` té els atributs `+ titular : String`, `+ saldo : double` i `+ pinSecret : int`.
-- La classe `CaixerAutomatic` hereta de `CompteBancari` mitjançant generalització (`◁────`).
-- Entre `CompteBancari` i `Banc` hi ha una composició `CompteBancari ◆──── Banc` amb multiplicitat `1` a `*` (un compte conté molts bancs).
-
-1. Identifica els **3 errors greus de disseny orientat a objectes** que conté aquest model.
-2. Explica per què la visibilitat pública dels atributs viola el principi d'encapsulament.
-3. Redissenya la relació entre `CaixerAutomatic`, `CompteBancari` i `Banc` utilitzant les relacions correctes (herència vs associació vs composició).
-
-#### Exercici 3: Càlcul de sobrecàrrega de referències d'objectes en memòria
-En un sistema Java de 64 bits amb punters comprimits (*Compressed OOPs*):
-- Cada referència d'objecte ocupa $4\text{ bytes}$.
-- Un objecte `ArrayList` té una capçalera de $24\text{ bytes}$ més el vector intern de referències.
-- Un model té una associació de `1` a `*` entre `Client` i `Comanda`.
-
-1. Si un sistema té $20.000$ clients i cadascun té una mitjana de $8$ comandes:
-   - Calcula la quantitat de memòria RAM consumida exclusivament per les estructures de referència (`List<Comanda>`) que connecten els clients amb les comandes.
-2. Si la relació es modela com a **bidireccional** (la `Comanda` també té una referència directa al seu `Client`), quanta memòria addicional de referències caldrà afegir en bytes i megabytes?
-
----
-
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
-
-#### Repte 1: Disseny d'un model de comerç electrònic en UML
-- **Objectiu:** Crear el diagrama de classes d'una botiga en línia aplicant relacions d'herència, composició i associació.
-- **Entitats a modelar:**
-  1. `Usuari` (abstracta): amb `id`, `nom`, `email`.
-  2. `Client` (hereta d'`Usuari`): afig `adreca` i `targetaCredit`.
-  3. `Administrador` (hereta d'`Usuari`): afig `nivellAcces`.
-  4. `Comanda`: amb `codi`, `data` i `estat`.
-  5. `LiniaComanda`: amb `quantitat` i `preuUnitari`.
-  6. `Producte`: amb `codi`, `nom`, `preuBase` i `estoc`.
-- **Relacions requerides:**
-  - `Client` té una associació $1 \rightarrow *$ amb `Comanda`.
-  - `Comanda` té una **composició** $1 \rightarrow 1..*$ amb `LiniaComanda`.
-  - Cada `LiniaComanda` s'associa a exactament $1$ `Producte`.
-
-#### Repte 2: Generació de codi Java a partir del diagrama UML
-- **Objectiu:** Implementar en Java pur el disseny obtingut al Repte 1 respectant estrictament els tipus i encapsulament.
-- **Instruccions:**
-  1. Escriu la classe abstracta `Usuari.java` amb atributs protegits (`protected`) i mètodes d'accés (*getters* i *setters*).
-  2. Implementa la classe `Comanda.java` gestionant la col·lecció interna de línies:
-     ```java
-     private final List<LiniaComanda> linies = new ArrayList<>();
-
-     public void afegirLinia(Producte producte, int quantitat) {
-         LiniaComanda novaLinia = new LiniaComanda(this, producte, quantitat);
-         this.linies.add(novaLinia);
-     }
-     ```
-  3. Implementa el mètode `calcularTotal(): double` recorrent la llista de línies.
-
-#### Repte 3: Diagrama de Classes en format Mermaid
-- **Objectiu:** Representar el diagrama directament mitjançant codi textual enriquit Mermaid.
-- **Exemple de codi:**
-  ```mermaid
-  classDiagram
-      class Usuari {
-          <<abstract>>
-          #int id
-          #String nom
-          #String email
-          +login() boolean
-      }
-      class Client {
-          -String targetaCredit
-          +realitzarComanda() Comanda
-      }
-      class Comanda {
-          -String codi
-          -Date data
-          +calcularTotal() double
-      }
-      class LiniaComanda {
-          -int quantitat
-          -double preuUnitari
-      }
-      class Producte {
-          -String codi
-          -double preu
-          -int estoc
-      }
-      Usuari <|-- Client
-      Client "1" --> "*" Comanda : realitza
-      Comanda "1" *-- "1..*" LiniaComanda : conte
-      LiniaComanda "*" --> "1" Producte : referencia
-  ```
-
----
-
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
-
-#### Llista de comprovació per a l'alumnat
-- [ ] He representat classes amb el rectangle estàndard de tres compartiments.
-- [ ] He utilitzat els símbols de visibilitat correctes (`+`, `-`, `#`, `~`).
-- [ ] He indicat multiplicitats precises en tots els extrems d'associació (`1`, `0..1`, `*`).
-- [ ] He distingit l'agregació feble (rombe buit) de la composició forta (rombe ple).
-- [ ] He utilitzat el triangle buit per a les relacions d'herència i generalització.
-- [ ] He traduït el model UML a codi font Java respectant les propietats de navegabilitat.
-- [ ] He comprovat que el model compleix amb el principi d'encapsulament.
-
-#### Rúbrica d'avaluació d'aprenentatge
-| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Notació de Classes i Encapsulament** | Modela classes complexes amb tipat exacte, operacions completes i una aplicació estricta de l'encapsulament. | Defineix classes correctes amb noms, atributs i visibilitats coherentment estructurades. | Dibuixa classes senzilles però omet tipus de retorn o confon atributs privats amb públics. | No utilitza la divisió en tres compartiments o exposa tots els atributs com a públics. |
-| **Associacions i Multiplicitats** | Defineix relacions d'associació precises amb rols, sentit de navegabilitat i multiplicitats rigoroses. | Utilitza multiplicitats estàndard (1, *, 0..1) adequades a les regles de negoci descrites. | Afegeix multiplicitats però confon els extrems origen i destí de la relació. | Omet les multiplicitats o connecta classes sense cap criteri estructural. |
-| **Agregació vs Composició** | Distingeix amb precisió la dependència existencial de la composició enfront de la independència de l'agregació. | Aplica rombes plens per a relacions part-tot fortes i rombes buits per a febles correctament. | Utilitza agregació i composició indistintament sense atendre a la destrucció d'objectes. | Desconeix el significat dels rombes i utilitza només línies simples d'associació. |
-| **Herència i Traducció a Codi** | Modela jerarquies d'herència elegants i genera codi Java equivalent sense cap pèrdua semàntica. | Empra el triangle buit d'herència i tradueix el model a classes Java funcionals. | Utilitza fletxes incorrectes per a l'herència o té dubtes al codificar col·leccions d'associació. | Confon la fletxa d'herència amb una dependència o genera codi que no reflecteix el diagrama. |
+<div class="aules-delivery-card" style="background:var(--bg-card); border:2px dashed var(--primary); border-radius:10px; padding:20px; margin-top:35px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
+    <div>
+      <h3 style="margin:0 0 5px 0; color:var(--primary); font-size:1.15rem;">📋 Lliurament d'Activitats a Aules</h3>
+      <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">
+        En acabar de resoldre els reptes interactius d'aquest apartat, descarrega el justificant en PDF i puja'l a la tasca corresponent d'Aules.
+      </p>
+    </div>
+    <button class="btn-aules-download" onclick="window.print()" style="background:var(--primary); color:#fff; border:none; padding:10px 20px; border-radius:6px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
+      📥 Descarregar Justificant PDF
+    </button>
+  </div>
+</div>

@@ -1,69 +1,158 @@
-{
-  "title": "⚙️ Entorns de Desenvolupament — 1r DAW / DAM · Grau Superior",
-  "home": {
-    "label": "🏠 Inici Entorns de Desenvolupament",
-    "href": "index.html"
+[
+  {
+    "title": "UT 01: Desenvolupament de Programari i Cicle de Vida",
+    "url": "ut01/index.md",
+    "children": [
+      {
+        "title": "1.1 Concepte de programari i enginyeria",
+        "url": "ut01/ut0101.md"
+      },
+      {
+        "title": "1.2 Fases del cicle de vida del programari",
+        "url": "ut01/ut0102.md"
+      },
+      {
+        "title": "1.3 Models de cicle de vida clàssics",
+        "url": "ut01/ut0103.md"
+      },
+      {
+        "title": "1.4 Metodologies àgils: Scrum i Kanban",
+        "url": "ut01/ut0104.md"
+      },
+      {
+        "title": "1.5 Gestió de projectes i qualitat ISO 25010",
+        "url": "ut01/ut0105.md"
+      }
+    ]
   },
-  "units": [
-    {
-      "summary": "UD1 — Desenvolupament de Programari (RA1)",
-      "items": [
-        {
-          "label": "📘 UD1: Cicle de Vida i Metodologies",
-          "href": "./ut01/index.html",
-          "class": "unit-full-link"
-        }
-      ]
-    },
-    {
-      "summary": "UD2 — Entorns Integrats i Depuració (RA2)",
-      "items": [
-        {
-          "label": "📘 UD2: IDEs, Eines de Build i Debugger",
-          "href": "./ut02/index.html",
-          "class": "unit-full-link"
-        }
-      ]
-    },
-    {
-      "summary": "UD3 — Modelat Estructural UML (RA3)",
-      "items": [
-        {
-          "label": "📘 UD3: Diagrames de Classes i Paquets",
-          "href": "./ut03/index.html",
-          "class": "unit-full-link"
-        }
-      ]
-    },
-    {
-      "summary": "UD4 — Modelat de Comportament UML (RA4)",
-      "items": [
-        {
-          "label": "📘 UD4: Casos d'Ús i Seqüència",
-          "href": "./ut04/index.html",
-          "class": "unit-full-link"
-        }
-      ]
-    },
-    {
-      "summary": "UD5 — Proves de Programari i JUnit 5 (RA5)",
-      "items": [
-        {
-          "label": "📘 UD5: QA, Caixa Blanca (McCabe) i JUnit",
-          "href": "./ut05/index.html",
-          "class": "unit-full-link"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — Refactorització, Git i Eines CASE (RA6)",
-      "items": [
-        {
-          "label": "📘 UD6: Qualitat, Git, Javadoc i CASE",
-          "href": "./ut06/index.html",
-          "class": "unit-full-link"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "title": "UT 02: Entorns Integrats de Desenvolupament (IDE) i Depuració",
+    "url": "ut02/index.md",
+    "children": [
+      {
+        "title": "2.1 Concepte d'IDE i components fonamentals",
+        "url": "ut02/ut0201.md"
+      },
+      {
+        "title": "2.2 Instal·lació, configuració del JDK i projectes",
+        "url": "ut02/ut0202.md"
+      },
+      {
+        "title": "2.3 Compilació, construcció i dependències",
+        "url": "ut02/ut0203.md"
+      },
+      {
+        "title": "2.4 Tècniques de depuració de programari",
+        "url": "ut02/ut0204.md"
+      },
+      {
+        "title": "2.5 Generació de documentació tècnica (Javadoc)",
+        "url": "ut02/ut0205.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 03: Disseny Orientat a Objectes i Classes UML",
+    "url": "ut03/index.md",
+    "children": [
+      {
+        "title": "3.1 Fonaments d'UML (Unified Modeling Language)",
+        "url": "ut03/ut0301.md"
+      },
+      {
+        "title": "3.2 Elements del diagrama de classes",
+        "url": "ut03/ut0302.md"
+      },
+      {
+        "title": "3.3 Relacions: Associació, agregació i composició",
+        "url": "ut03/ut0303.md"
+      },
+      {
+        "title": "3.4 Herència, generalització i interfícies",
+        "url": "ut03/ut0304.md"
+      },
+      {
+        "title": "3.5 Traducció d'UML a Java i enginyeria inversa",
+        "url": "ut03/ut0305.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 04: Modelat de Comportament amb Diagrames UML",
+    "url": "ut04/index.md",
+    "children": [
+      {
+        "title": "4.1 Diagrames de casos d'ús",
+        "url": "ut04/ut0401.md"
+      },
+      {
+        "title": "4.2 Especificació narrativa de casos d'ús",
+        "url": "ut04/ut0402.md"
+      },
+      {
+        "title": "4.3 Diagrames de seqüència",
+        "url": "ut04/ut0403.md"
+      },
+      {
+        "title": "4.4 Diagrames d'activitats i swimlanes",
+        "url": "ut04/ut0404.md"
+      },
+      {
+        "title": "4.5 Diagrames d'estats (State Machine)",
+        "url": "ut04/ut0405.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 05: Disseny i Realització de Proves de Programari",
+    "url": "ut05/index.md",
+    "children": [
+      {
+        "title": "5.1 Fonaments de les proves de programari",
+        "url": "ut05/ut0501.md"
+      },
+      {
+        "title": "5.2 Disseny de proves de caixa negra",
+        "url": "ut05/ut0502.md"
+      },
+      {
+        "title": "5.3 Proves de caixa blanca i mètrica de McCabe",
+        "url": "ut05/ut0503.md"
+      },
+      {
+        "title": "5.4 Automatització de proves unitàries amb JUnit 5",
+        "url": "ut05/ut0504.md"
+      },
+      {
+        "title": "5.5 Proves parametritzades i cobertura de codi",
+        "url": "ut05/ut0505.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 06: Optimització, Refactorització i Git",
+    "url": "ut06/index.md",
+    "children": [
+      {
+        "title": "6.1 Optimització i anàlisi estàtica de codi",
+        "url": "ut06/ut0601.md"
+      },
+      {
+        "title": "6.2 Refactorització de programari (Refactoring)",
+        "url": "ut06/ut0602.md"
+      },
+      {
+        "title": "6.3 Control de versions amb Git: Àrees de treball",
+        "url": "ut06/ut0603.md"
+      },
+      {
+        "title": "6.4 Gestió de branques i treball col·laboratiu a GitHub",
+        "url": "ut06/ut0604.md"
+      },
+      {
+        "title": "6.5 Eines CASE i Integració Contínua (CI/CD)",
+        "url": "ut06/ut0605.md"
+      }
+    ]
+  }
+]
