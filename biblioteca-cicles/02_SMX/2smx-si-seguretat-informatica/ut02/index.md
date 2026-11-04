@@ -1,211 +1,119 @@
 ---
 layout: default
-title: "Seguretat Informàtica — UT02 Principis de Seguretat i Gestió de Riscos"
-course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT02"
+title: "UT 02: Seguretat Passiva: Entorn Físic, CPD i Protecció Elèctrica (SAI) — Seguretat Informàtica"
+permalink: /02_SMX/2smx-si-seguretat-informatica/ut02/index.html
+prev_url: /02_SMX/2smx-si-seguretat-informatica/ut01/index.html
+prev_label: "UT 01: Fonaments de Seguretat"
+next_url: /02_SMX/2smx-si-seguretat-informatica/ut03/index.html
+next_label: "UT 03: Seguretat Lògica i Autenticació"
 ---
 
-# UT02 — Principis de Seguretat i Gestió de Riscos
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <span style="font-weight:700; color:var(--primary);">Progrés Global de la Unitat 2</span>
+    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes de síntesi superats (0%)</div>
+  </div>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <div class="tracker-pts" style="font-weight:700; color:var(--text-main);">⭐ 0 punts</div>
+    <div style="width:100px; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+      <div class="tracker-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+    </div>
+  </div>
+</div>
 
-La seguretat informàtica no és un estat binari de «segur o insegur», sinó un **procés continu de gestió del risc**. En aquesta unitat s'estudien els pilars fonamentals de la seguretat de la informació, els tipus d'amenaces que assetgen els sistemes i com avaluar matemàticament l'exposició d'una organització.
+# UT 02: Seguretat Passiva: Entorn Físic, CPD i Protecció Elèctrica (SAI)
 
----
-
-## 📌 1. La Tríada CIA i els Pilars de la Ciberseguretat
-
-El model canònic de seguretat de la informació es basa en tres principis indissolubles coneguts com la **Tríada CIA** (*Confidentiality, Integrity, Availability*):
-
-```mermaid
-graph TD
-    subgraph "🏛️ TRÍADA CIA & PILARS DE SEGURETAT"
-        C["🔒 Confidencialitat<br/>(Només personal autoritzat)"]
-        I["🛡️ Integritat<br/>(Dades no alterades ni corrompudes)"]
-        A["⚡ Disponibilitat<br/>(Accessibles quan calgui)"]
-    end
-    C --- I
-    I --- A
-    A --- C
-
-    subgraph "✨ Pilars Complementaris"
-        AU["👤 Autenticitat: Verificar qui diu que és"]
-        NR["✍️ No-repudi: Impossibilitat de negar l'autoria"]
-        TR["📋 Traçabilitat / Audibilitat: Registre temporal dels fets"]
-    end
-```
-
-### Definició detallada dels principis:
-1. **Confidencialitat (C):** Garanteix que la informació només és accessible a persones, processos o sistemes autoritzats. Es protegeix mitjançant:
-   - Xifratge de dades en repòs (*at rest*) i en trànsit (*in transit*).
-   - Llistes de control d'accés (ACL) i autenticació robusta.
-2. **Integritat (I):** Assegura que la informació i els mètodes de processament són exactes, complets i no han estat modificats sense autorització. Es protegeix mitjançant:
-   - Funcions resum criptogràfiques (Hash: SHA-256).
-   - Signatures digitals i sistemes de control de versions.
-3. **Disponibilitat (A):** Assegura que els usuaris autoritzats tenen accés a la informació i als serveis associats quan ho necessiten. Es protegeix mitjançant:
-   - Redundància de maquinari (RAID, fonts d'alimentació redundants).
-   - Sistemes d'alimentació ininterrompuda (SAI) i còpies de seguretat.
-   - Equilibradors de càrrega i protecció contra atacs de denegació de servei (DDoS).
-
-| Principi | Amenaça Típica | Mecanisme de Defensa |
-| :--- | :--- | :--- |
-| **Confidencialitat** | Sniffing, fugues de dades, espionatge industrial | Xifratge AES/TLS, permisos NTFS/POSIX |
-| **Integritat** | Modificació de bases de dades per injecció SQL, malware | Hashing SHA-256, signatures digitals, backups WORM |
-| **Disponibilitat** | Inundacions, atacs DoS/DDoS, fallades elèctriques, Ransomware | SAIs, rèpliques al núvol, clústers en alta disponibilitat (HA) |
-| **No-repudi** | Negació d'una transacció de comerç electrònic | Certificats digitals X.509 de signatura electrònica |
+La **Unitat Temàtica 02** desenvolupa de forma integral el **Resultat d'Aprenentatge 1 (RA1)** del currículum oficial de Seguretat Informàtica, centrat en la planificació i aplicació de mesures de **seguretat passiva** per a salvaguardar la infraestructura física, els equips de processament i les comunicacions davant d'avaries, desastres ambientals i anomalies elèctriques.
 
 ---
 
-## 📌 2. Amenaces, Vulnerabilitats i Vectors d'Atac
+## 🎯 Resultats d'Aprenentatge Curriculars (RA1)
 
-Per a defensar eficaçment un sistema cal distingir entre el concepte d'amenaça i el de vulnerabilitat:
-
-- **Actiu (Asset):** Tot recurs de valor per a l'empresa que cal protegir (bases de dades de clients, servidors de producció, personal, imatge de marca).
-- **Vulnerabilitat (Vulnerability):** Feblesa o defecte en el disseny, implementació o configuració d'un sistema que pot ser aprofitat per un atacant (per exemple, un port SSH amb contrasenya per defecte o un sistema operatiu sense pedaçar).
-- **Amenaça (Threat):** Qualsevol esdeveniment que pot causar dany als actius de l'organització mitjançant l'explotació d'una vulnerabilitat.
-- **Impacte (Impact):** Mesura del dany o pèrdua produïda a l'organització si l'amenaça es materialitza.
-
-```mermaid
-flowchart LR
-    A["👤 Atacant / Amenaça"] -->|Explota| V["🕳️ Vulnerabilitat (Fallada de programari)"]
-    V -->|Compromet| AC["💾 Actiu (Base de dades)"]
-    AC -->|Genera| I["💥 Impacte Negatiu (Econòmic / Reputacional)"]
-```
-
-### Classificació de les Amenaces segons l'Origen:
-1. **Humanes involuntàries (accidents):** Errors de configuració per part de l'administrador, esborrats accidentals de dades o pèrdua de dispositius portàtils no xifrats. Representen més del 60% dels incidents!
-2. **Humanes intencionades (atacs):** 
-   - Atacs interns (*Insider threats*): Empleats descontents o subornats que utilitzen els seus privilegis legítims per a robar o sabotejar dades.
-   - Atacs externs: Ciberdelinqüents, bandes de ransomware, espionatge d'alt nivell.
-3. **Amenaces ambientals i naturals:** Incendis en el CPD, terratrèmols, inundacions per canonades d'aigua superiors, llamps i sobretensions atmosfèriques.
-4. **Fallades tècniques:** Avaries de discs durs, sobreescalfament del processador, degradació de bateries o talls del subministrament elèctric de la xarxa pública.
+- **RA1:** Aplica mesures de seguretat passiva en sistemes informàtics, descrivint les característiques d'entorns d'instal·lació, protecció elèctrica i ambiental, i dimensionant sistemes d'alimentació ininterrompuda (SAI).
+- **Criteris d'Avaluació:**
+  - Identificació dels requisits d'instal·lació i condicionament ambiental del CPD.
+  - Caracterització de les pertorbacions elèctriques i els seus dispositius de protecció.
+  - Selecció i dimensionament de sistemes SAI/UPS calculant potències i autonomies.
+  - Implementació de controls d'accés físic i protocols d'extinció d'incendis sense aigua.
 
 ---
 
-## 📌 3. Anàlisi i Gestió de Riscos: Metodologia Quantitativa
+## 📚 Apartats Didàctics de la Unitat
 
-El risc és la probabilitat que una amenaça concreta exploti una vulnerabilitat existent i provoqui un impacte mesurable sobre l'organització:
-
-$$Risc = Probabilitat \times Impacte$$
-
-### La Matriu de Riscos $3 \times 3$:
-Classifiquem la **Probabilitat** (Baixa = 1, Mitjana = 2, Alta = 3) i l'**Impacte** (Baix = 1, Mitjà = 2, Alt = 3) per obtenir el Nivell de Risc resultant:
-
-| Probabilitat \ Impacte | Impacte Baix (1) | Impacte Mitjà (2) | Impacte Alt (3) |
-| :---: | :---: | :---: | :---: |
-| **Alta (3)** | Risc Mitjà (3) | 🟡 **Risc Alt (6)** | 🔴 **Risc Crític (9)** |
-| **Mitjana (2)** | Risc Baix (2) | Risc Mitjà (4) | 🟡 **Risc Alt (6)** |
-| **Baixa (1)** | 🟢 **Risc Negligible (1)** | Risc Baix (2) | Risc Mitjà (3) |
-
-```mermaid
-flowchart TD
-    subgraph "🔄 Cicle de Vida de la Gestió de Riscos (MAGERIT / ISO 27005)"
-        P1["1. Identificació d'Actius i Amenaces"] --> P2["2. Avaluació de Vulnerabilitats i Probabilitat"]
-        P2 --> P3["3. Càlcul del Nivell de Risc Inherent"]
-        P3 --> P4["4. Selecció i Aplicació de Controls de Seguretat"]
-        P4 --> P5["5. Avaluació del Risc Residual"]
-        P5 -->|Monitorització Contínua| P1
-    end
-```
-
-### Estratègies de Tractament del Risc:
-Davant d'un risc calculat, la direcció pot optar per 4 estratègies:
-- **Mitigar / Reduir:** Aplicar salvaguardes (p. ex., instal·lar un tallafoc, configurar un SAI) per a reduir la probabilitat o l'impacte a un nivell tolerable.
-- **Transferir:** Desplaçar el cost financer de l'impacte a un tercer mitjançant assegurances de ciberseguretat o contractant serveis al núvol amb SLA (Acord de Nivell de Servei).
-- **Evitar:** Eliminar l'activitat que genera el risc (p. ex., donar de baixa un servidor obsolet que ja no rep actualitzacions).
-- **Acceptar:** Assumir el **risc residual** quan el cost de la salvaguarda supera amb escreix el valor de l'actiu protegit.
+1. [**2.1 Ubicació, Disseny i Estructura del Centre de Processament de Dades (CPD)**](./ut0201.html)
+   - Criteris d'emplaçament, terra tècnic, fals sostre i armaris rack 19".
+   - Estàndard TIA-942 i nivells de resiliència TIER I a TIER IV.
+2. [**2.2 Condicions Ambientals i Climatització del CPD**](./ut0202.html)
+   - Rangs ASHRAE de temperatura (18-27 °C) i humitat relativa (40-60%).
+   - Riscos d'aire sec (ESD) i humit (condensació).
+   - Arquitectura de passadissos freds i calents (*Cold / Hot Aisle*).
+3. [**2.3 Seguretat Física i Protecció contra Incendis al CPD**](./ut0203.html)
+   - Control d'accés biomètric, targetes RFID i cambres *Man-trap*.
+   - Detecció precoç per làser (VESDA) i extinció per gasos nets (Novec 1230, FM-200, Inergen).
+4. [**2.4 Pertorbacions Elèctriques i Qualitat de Subministrament**](./ut0204.html)
+   - Blackouts, microtalls, sobretensions (*surges*), pics de tensió (*spikes*) i soroll EMI.
+   - Elements de protecció: preses de terra, diferencials i varistors MOV.
+5. [**2.5 Sistemes d'Alimentació Ininterrompuda (SAI/UPS) i Càlcul de Potència**](./ut0205.html)
+   - Tipologies: Off-line, Line-Interactive i On-line de doble conversió.
+   - Relació entre Watts (W) i Volt-Ampers (VA) amb el factor de potència ($F_p$).
+   - Fórmules de càlcul amb marge de seguretat i apagat controlat per xarxa (*Graceful Shutdown*).
 
 ---
 
-## 📌 4. Exercici Pràctic d'Aula: Avaluació d'un Servidor Web
+## 🏆 Reptes Globals de Síntesi de la Unitat 2 (4)
 
-**Supòsit:** Una empresa comercial disposa d'un servidor web local on els clients consulten catàlegs i fan comandes. No disposa de SAI i la contrasenya del panell d'administració és `admin123`.
+<div class="interactive-challenge-card" data-challenge-id="si_ut02_global_c1" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 1: Per què un CPD de nivell TIER III o IV utilitza terra tècnic sobreelevat amb rajoles perforades col·locades estratègicament als passadissos frontals dels servidors?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut02_global_c1" value="a"> A) Perquè el terra tècnic actua com a cambra de distribució d'aire fred (plenum), impulsant-lo a pressió directament cap a la cara frontal d'aspiració dels equips.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c1" value="b"> B) Perquè permet que els tècnics puguen netejar el terra amb aigua mentre els equips estan funcionant.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c1" value="c"> C) Per a evitar que els servidors siguen afectats per la gravetat terrestre.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c1" value="d"> D) Només s'utilitza per a passar els tubs de la calefacció central.</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! El terra tècnic combina dues funcions crítiques: ocultar i protegir el cablejat estructurat i servir de conducte de ventilació per a injectar aire fred directament als passadissos d'admissió dels servidors." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
+</div>
 
-1. **Actius implicats:** Servidor físic, base de dades de clients, reputació de l'empresa.
-2. **Vulnerabilitats identificades:** Contrasenya dèbil per defecte; absència de protecció contra talls elèctrics.
-3. **Amenaces:** Atac de força bruta per Internet (Probabilitat Alta, Impacte Alt = Risc 9); Tall de subministrament elèctric (Probabilitat Mitjana, Impacte Mitjà = Risc 4).
-4. **Pla de mitigació:** 
-   - Canviar la contrasenya per una clau de 16 caràcters amb autenticació de doble factor (MFA).
-   - Instal·lar un SAI On-line de 1500 VA amb connexió USB de gestió automàtica d'apagada.
+<div class="interactive-challenge-card" data-challenge-id="si_ut02_global_c2" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 2: En cas que es produïsca un incendi a l'interior d'un CPD, quin és el mecanisme d'acció del gas inert Inergen (IG-541)?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut02_global_c2" value="a"> A) Desplaça i redueix la concentració d'oxigen a l'aire fins al 12-14%, sufocant el foc sense ser letal per a les persones que es troben desallotjant la sala.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c2" value="b"> B) Congela la sala a -50 °C en dos segons.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c2" value="c"> C) Expulsa escuma sabonosa sobre els armaris rack.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c2" value="d"> D) Destrueix les plaques base per evitar que les flames arriben a la memòria.</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! El foc necessita més del 15% d'oxigen per a mantindre la combustió. Inergen redueix l'oxigen al 12-14% i afegeix un 8% de CO2 per a estimular la respiració humana durant l'evacuació." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
+</div>
 
----
+<div class="interactive-challenge-card" data-challenge-id="si_ut02_global_c3" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 3: Un tècnic compra un SAI barat de tipus Off-line (Standby) per a protegir el servidor principal de la base de dades. Durant una fallada de corrent elèctric, el servidor s'apaga sobtadament en lloc de continuar funcionant. Quina és la causa més probable?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut02_global_c3" value="a"> A) El temps de commutació del SAI Off-line (entre 6 i 10 ms) va ser superior al temps de reserva (hold-up time) de la font del servidor, provocant la seua caiguda abans que entraren les bateries.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c3" value="b"> B) El cable Ethernet no estava connectat al SAI.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c3" value="c"> C) Els servidors només funcionen amb corrent trifàsic de 400 V.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c3" value="d"> D) El sistema operatiu va rebutjar la bateria per no tindre llicència comercial.</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! Els SAIs Off-line tenen un retard de commutació mecànic que moltes fonts d'alimentació de servidors no toleren. Per això, als servidors és obligatori instal·lar SAIs On-line de doble conversió (temps 0 ms)." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
+</div>
 
-## 🎨 Infografia Tècnica: La Tríada CIA
-
-<div style="text-align: center; margin: 25px 0;">
-<svg viewBox="0 0 840 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="max-width: 840px; border-radius: 16px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); font-family: system-ui, sans-serif;">
-  <defs>
-    <linearGradient id="gradCIA" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#1e293b" />
-    </linearGradient>
-    <linearGradient id="cardConf" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#1d4ed8" />
-    </linearGradient>
-    <linearGradient id="cardInteg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="100%" stop-color="#047857" />
-    </linearGradient>
-    <linearGradient id="cardDisp" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" />
-      <stop offset="100%" stop-color="#b45309" />
-    </linearGradient>
-  </defs>
-  <rect width="840" height="260" rx="16" fill="url(#gradCIA)" />
-  <text x="420" y="38" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="bold" letter-spacing="1">🏛️ LA TRÍADA CIA EN SEGURETAT INFORMÀTICA</text>
-  <text x="420" y="60" text-anchor="middle" fill="#94a3b8" font-size="13">Els tres pilars essencials per a la gestió de riscos i la protecció d'actius TIC</text>
-
-  <!-- Card 1: Confidencialitat -->
-  <g transform="translate(30, 80)">
-    <rect width="240" height="150" rx="12" fill="url(#cardConf)" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2" />
-    <circle cx="120" cy="35" r="22" fill="#3b82f6" />
-    <text x="120" y="42" text-anchor="middle" font-size="20" fill="#ffffff">🔒</text>
-    <text x="120" y="75" text-anchor="middle" fill="#60a5fa" font-size="16" font-weight="bold">CONFIDENCIALITAT</text>
-    <text x="120" y="98" text-anchor="middle" fill="#e2e8f0" font-size="12">Només personal autoritzat</text>
-    <text x="120" y="118" text-anchor="middle" fill="#94a3b8" font-size="11">Xifratge AES-256 · TLS 1.3</text>
-    <text x="120" y="134" text-anchor="middle" fill="#94a3b8" font-size="11">Control d'Accés · ACLs</text>
-  </g>
-
-  <!-- Card 2: Integritat -->
-  <g transform="translate(300, 80)">
-    <rect width="240" height="150" rx="12" fill="url(#cardInteg)" fill-opacity="0.2" stroke="#10b981" stroke-width="2" />
-    <circle cx="120" cy="35" r="22" fill="#10b981" />
-    <text x="120" y="42" text-anchor="middle" font-size="20" fill="#ffffff">🛡️</text>
-    <text x="120" y="75" text-anchor="middle" fill="#34d399" font-size="16" font-weight="bold">INTEGRITAT</text>
-    <text x="120" y="98" text-anchor="middle" fill="#e2e8f0" font-size="12">Dades exactes sense alteració</text>
-    <text x="120" y="118" text-anchor="middle" fill="#94a3b8" font-size="11">Funcions Hash SHA-256</text>
-    <text x="120" y="134" text-anchor="middle" fill="#94a3b8" font-size="11">Signatures Digitals X.509</text>
-  </g>
-
-  <!-- Card 3: Disponibilitat -->
-  <g transform="translate(570, 80)">
-    <rect width="240" height="150" rx="12" fill="url(#cardDisp)" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
-    <circle cx="120" cy="35" r="22" fill="#f59e0b" />
-    <text x="120" y="42" text-anchor="middle" font-size="20" fill="#ffffff">⚡</text>
-    <text x="120" y="75" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="bold">DISPONIBILITAT</text>
-    <text x="120" y="98" text-anchor="middle" fill="#e2e8f0" font-size="12">Accés garantit quan calgui</text>
-    <text x="120" y="118" text-anchor="middle" fill="#94a3b8" font-size="11">Redundància RAID · SAIs</text>
-    <text x="120" y="134" text-anchor="middle" fill="#94a3b8" font-size="11">Clústers HA · Còpies 3-2-1</text>
-  </g>
-</svg>
+<div class="interactive-challenge-card" data-challenge-id="si_ut02_global_c4" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 4: Si disposem d'una càrrega total de servidors de 1.400 W amb un factor de potència mig de 0,8, quina és la potència en VA consumida i quin SAI de gamma professional haurem d'escollir tenint en compte un 25% de marge de seguretat?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut02_global_c4" value="a"> A) 1.400 W / 0,8 = 1.750 VA; amb el 25% addicional (x 1,25) = 2.187,5 VA. S'ha de seleccionar un SAI comercial de com a mínim 2.200 VA o 3.000 VA.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c4" value="b"> B) 1.400 VA exactes.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c4" value="c"> C) 500 VA amb 2 bateries.</label>
+    <label><input type="radio" name="opt_si_ut02_global_c4" value="d"> D) 10.000 VA perquè sempre s'ha de multiplicar per deu.</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! El càlcul correcte passa primer de Watts a VA dividint pel factor de potència ($1.400 / 0,8 = 1.750\text{ VA}$) i després aplica el coeficient de seguretat ($1.750 \times 1,25 = 2.187,5\text{ VA}$), recomanant un equip estàndard de 2.200 o 3.000 VA." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
 </div>
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-### Bloc A: Qüestions de Comprensió i Fonaments
-1. **Diferenciació de conceptes:** Explica amb un exemple de la vida real d'un taller informàtic la diferència entre un **actiu**, una **amenaça**, una **vulnerabilitat** i un **impacte**.
-2. **La paradoxa de la disponibilitat:** Per què augmentar la seguretat de vegades pot perjudicar la disponibilitat o usabilitat del sistema per als usuaris? Com pot un administrador trobar el punt d'equilibri?
-3. **Càlcul de Matriu de Riscos:** Un hospital té un servidor d'historials mèdics amb la vulnerabilitat que no està protegit contra ransomware. La probabilitat d'infecció és Alta (3) i l'impacte en la salut dels pacients és Alt (3).
-   - Quin és el nivell de risc inicial segons la fórmula $Risc = P \times I$?
-   - Si s'aplica una política de còpies de seguretat diàries aïllades en fred (*air-gapped*), com canvia l'impacte i el risc residual?
-
-### Bloc B: Repte Pràctic de Taller — Auditoria d'una Pime
-Una gestoria amb 8 ordinadors i 1 servidor local de dades et demana fer una avaluació de riscos bàsica:
-- Identifica **5 vulnerabilitats típiques** que solen trobar-se en aquests entorns (ex: contrasenyes en post-its, ús de comptes amb permisos d'administrador, sistemes operatius sense actualitzar, falta de còpies de seguretat fora de l'oficina, ús de xarxa Wi-Fi oberta sense segmentar).
-- Dissenya una taula d'actius, probabilitat, impacte i proposa **3 mesures de mitigació immediates a cost zero o molt baix**.
-
-### Bloc C: Llista d'Autoavaluació de l'Alumnat
-- [ ] Sé identificar quin pilar de la tríada CIA es veu afectat davant d'un incident concret.
-- [ ] Sé utilitzar la matriu de risc $3 \times 3$ per a calcular i prioritzar amenaces.
-- [ ] Sé redactar un pla d'acció amb mesures preventives de mitigació.
+<div class="aules-delivery-card" data-module="SI" data-activity="UT02_GLOBAL" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:16px 20px; margin-top:28px;">
+  <div style="font-weight:700; font-size:1.05rem; margin-bottom:8px; color:var(--text-main);">📋 Lliurament Global d'Unitat a Aules — UT 02</div>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:14px;">Completa els 4 reptes de síntesi d'aquesta unitat sobre seguretat passiva, climatització i SAIs i descarrega el certificat global de la UT 02 en PDF per a la seua qualificació a Aules.</p>
+  <button class="btn-aules-download" style="background:#10b981; color:#fff; border:none; padding:8px 18px; border-radius:6px; font-weight:600; cursor:pointer;">📥 Descarregar Justificant Global PDF per a Aules</button>
+</div>

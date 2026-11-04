@@ -1,193 +1,114 @@
 ---
 layout: default
-title: "Seguretat Informàtica — UT01 Presentació i Fonaments del Mòdul"
-course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT01"
+title: "UT 01: Fonaments de Seguretat Informàtica i Anàlisi de Riscos — Seguretat Informàtica"
+permalink: /02_SMX/2smx-si-seguretat-informatica/ut01/index.html
+prev_url: /02_SMX/2smx-si-seguretat-informatica/index.html
+prev_label: "Tornar a la Portada del Mòdul"
+next_url: /02_SMX/2smx-si-seguretat-informatica/ut02/index.html
+next_label: "UT 02: Seguretat Passiva i CPD"
 ---
 
-# UT01 — Presentació i Fonaments del Mòdul Professional
-
-Benvingut/da a la **Unitat de Treball 01: Presentació i Fonaments de la Seguretat Informàtica**.
-
-Aquesta unitat introductòria estableix les bases teòriques, normatives i metodològiques del mòdul professional, definint el rol de l'administrador de sistemes en la protecció de la informació corporativa.
-
----
-
-## 📌 1. Objectius i Resultats d'Aprenentatge (RAs)
-
-En el cicle de Sistemes Microinformàtics i Xarxes (SMX), la seguretat no és una eina aïllada, sinó una **disciplina transversal** que condiciona el muntatge d'equips, el cablejat de xarxes, la instal·lació de sistemes operatius i la configuració de serveis web.
-
-```mermaid
-graph TD
-    A["🛡️ Seguretat Informàtica (0228)"] --> B["RA1: Seguretat Passiva i Física"]
-    A --> C["RA2: Seguretat Activa i Malware"]
-    A --> D["RA3: Criptografia i Xarxes"]
-    A --> E["RA4: Legislació i RGPD"]
-    A --> F["RA5: Emmagatzematge i Còpies"]
-
-    B --> B1["CPD, Climatització, SAIs, DRP"]
-    C --> C1["Antivirus, Heurística, Ransomware"]
-    D --> D1["AES/RSA, PKI, Tallafocs UFW, Wi-Fi"]
-    E --> E1["RGPD, LOPD-GDD, Bretxes 72h, ENS"]
-    F --> F1["Regla 3-2-1, rsync, Esborrat Segur"]
-```
-
----
-
-## 📌 2. Perfil Professional i Hacking Ètic
-
-Un tècnic de grau mitjà en SMX té una responsabilitat directa sobre la custòdia física i lògica dels equips dels usuaris i servidors departamentals:
-
-> [!IMPORTANT]
-> **El codi ètic del professional de ciberseguretat:**  
-> Les tècniques d'escaneig de ports, anàlisi de vulnerabilitats i auditories de contrasenyes que s'estudien en aquest mòdul s'han d'aplicar **exclusivament en entorns de laboratori autoritzats**. L'ús d'aquestes eines contra sistemes de tercers sense consentiment exprés és un delicte tipificat en el Codi Penal (articles 197 i 264).
-
-### Funcions del Tècnic de Sistemes en Ciberseguretat:
-1. **Prevenció:** Instal·lació de sistemes d'alimentació ininterrompuda (SAI), protecció contra sobretensions i manteniment de les condicions ambientals de servidors.
-2. **Defensa activa:** Configuració i actualització de bases de firmes antivirus, desplegament de regles de tallafocs en estacions de treball i servidors.
-3. **Custòdia de dades:** Automatització i verificació de còpies de seguretat periòdiques (test de restauració).
-4. **Compliment normatiu:** Aplicació dels drets de la LOPD-GDD/RGPD i protocols de confidencialitat.
-
----
-
-## 📌 3. Entorn de Treball i Laboratori Virtualitzat
-
-Totes les pràctiques d'aquest mòdul es desenvolupen en un entorn controlat per garantir que el tràfic d'auditoria no interfereixi amb la xarxa del centre educatiu:
-
-| Element de Laboratori | Rol Didàctic | Configuració de Xarxa |
-| :--- | :--- | :--- |
-| **VirtualBox / VMware Workstation** | Hipervisor tipus 2 d'amfitrió | Xarxa interna (*Host-Only* o *Internal Network*) |
-| **Ubuntu Server 24.04 LTS** | Servidor de fitxers, tallafoc UFW, còpies `rsync` | IP estàtica en segment de laboratori |
-| **Windows Server 2022** | Controlador de domini, directives GPO de contrasenyes | Segment corporatiu aïllat |
-| **Windows 10/11 Client** | Client corporatiu per a proves d'autenticació i permisos | Domini de laboratori |
-
----
-
-<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
-  <div style="text-align: center; margin-bottom: 15px;">
-    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
-    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Els Quatre Quadrants de la Ciberseguretat</h3>
-    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Classificació metodològica de les mesures de protecció en entorns corporatius</p>
+<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <span style="font-weight:700; color:var(--primary);">Progrés Global de la Unitat 1</span>
+    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes de síntesi superats (0%)</div>
   </div>
-  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
-    <defs>
-      <linearGradient id="activaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0284c7" stop-opacity="0.3"/>
-        <stop offset="100%" stop-color="#0369a1" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="passivaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
-        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="fisicaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
-        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
-      </linearGradient>
-      <linearGradient id="logicaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.3"/>
-        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
-      </linearGradient>
-      <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
-        <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
-      </filter>
-    </defs>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <div class="tracker-pts" style="font-weight:700; color:var(--text-main);">⭐ 0 punts</div>
+    <div style="width:100px; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+      <div class="tracker-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+    </div>
+  </div>
+</div>
 
-    <!-- Quadrant 1: Seguretat Activa Lògica -->
-    <rect x="20" y="20" width="395" height="120" rx="8" fill="url(#activaGrad)" stroke="#38bdf8" stroke-width="1.5" filter="url(#cardShadow)"/>
-    <circle cx="50" cy="50" r="18" fill="#0284c7"/>
-    <text x="50" y="55" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">⚡</text>
-    <text x="80" y="46" fill="#38bdf8" font-size="14" font-weight="bold">SEGURETAT ACTIVA · LÒGICA</text>
-    <text x="80" y="65" fill="#e2e8f0" font-size="11">Prevé i bloqueja amenaces de dades en temps real</text>
-    <line x1="40" y1="80" x2="395" y2="80" stroke="#334155" stroke-dasharray="2,2"/>
-    <text x="40" y="98" fill="#94a3b8" font-size="10">• Antivirus heurístic i EDR en endpoints</text>
-    <text x="40" y="115" fill="#94a3b8" font-size="10">• Regles de tallafocs (UFW / iptables / GPO)</text>
-    <text x="40" y="130" fill="#94a3b8" font-size="10">• Autenticació multifactor (MFA / 2FA)</text>
+# UT 01: Fonaments de Seguretat Informàtica i Anàlisi de Riscos
 
-    <!-- Quadrant 2: Seguretat Activa Física -->
-    <rect x="445" y="20" width="395" height="120" rx="8" fill="url(#fisicaGrad)" stroke="#fbbf24" stroke-width="1.5" filter="url(#cardShadow)"/>
-    <circle cx="475" cy="50" r="18" fill="#d97706"/>
-    <text x="475" y="55" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">🚪</text>
-    <text x="505" y="46" fill="#fbbf24" font-size="14" font-weight="bold">SEGURETAT ACTIVA · FÍSICA</text>
-    <text x="505" y="65" fill="#e2e8f0" font-size="11">Controla l'accés presencial a les instal·lacions</text>
-    <line x1="465" y1="80" x2="820" y2="80" stroke="#334155" stroke-dasharray="2,2"/>
-    <text x="465" y="98" fill="#94a3b8" font-size="10">• Control biomètric i targetes RFID d'accés</text>
-    <text x="465" y="115" fill="#94a3b8" font-size="10">• Cambres de videovigilància CCTV amb gravador</text>
-    <text x="465" y="130" fill="#94a3b8" font-size="10">• Guàrdies de seguretat i arcs detectors de metalls</text>
+La **Unitat Temàtica 01** estableix les bases teòriques, conceptuals i metodològiques del mòdul de Seguretat Informàtica. S'introdueixen els principis fonamentals de protecció de la informació, la caracterització dels diferents tipus d'amenaces i atacants, els enganys psicològics basats en enginyeria social i el marc formal d'anàlisi i gestió de riscos segons l'estàndard MAGERIT.
 
-    <!-- Quadrant 3: Seguretat Passiva Lògica -->
-    <rect x="20" y="160" width="395" height="120" rx="8" fill="url(#logicaGrad)" stroke="#a78bfa" stroke-width="1.5" filter="url(#cardShadow)"/>
-    <circle cx="50" cy="190" r="18" fill="#7c3aed"/>
-    <text x="50" y="195" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">💾</text>
-    <text x="80" y="186" fill="#a78bfa" font-size="14" font-weight="bold">SEGURETAT PASSIVA · LÒGICA</text>
-    <text x="80" y="205" fill="#e2e8f0" font-size="11">Minimitza l'impacte quan l'incident ja ha ocorregut</text>
-    <line x1="40" y1="220" x2="395" y2="220" stroke="#334155" stroke-dasharray="2,2"/>
-    <text x="40" y="238" fill="#94a3b8" font-size="10">• Còpies de seguretat immutables (Regla 3-2-1)</text>
-    <text x="40" y="255" fill="#94a3b8" font-size="10">• Instantànies (Snapshots ZFS/LVM) i RAID</text>
-    <text x="40" y="270" fill="#94a3b8" font-size="10">• Plans de recuperació davant desastres (DRP)</text>
+---
 
-    <!-- Quadrant 4: Seguretat Passiva Física -->
-    <rect x="445" y="160" width="395" height="120" rx="8" fill="url(#passivaGrad)" stroke="#34d399" stroke-width="1.5" filter="url(#cardShadow)"/>
-    <circle cx="475" cy="190" r="18" fill="#059669"/>
-    <text x="475" y="195" fill="#ffffff" font-size="16" text-anchor="middle" font-weight="bold">🔋</text>
-    <text x="505" y="186" fill="#34d399" font-size="14" font-weight="bold">SEGURETAT PASSIVA · FÍSICA</text>
-    <text x="505" y="205" fill="#e2e8f0" font-size="11">Protegeix el maquinari davant fallades ambientals</text>
-    <line x1="465" y1="220" x2="820" y2="220" stroke="#334155" stroke-dasharray="2,2"/>
-    <text x="465" y="238" fill="#94a3b8" font-size="10">• Sistemes d'Alimentació Ininterrompuda (SAI/UPS)</text>
-    <text x="465" y="255" fill="#94a3b8" font-size="10">• Extinció automàtica d'incendis amb gas net (Novec/Inergen)</text>
-    <text x="465" y="270" fill="#94a3b8" font-size="10">• Climatització redundant i passadissos fred/calent</text>
-  </svg>
+## 🎯 Resultats d'Aprenentatge Curriculars
+
+- **RA Introductori:** Caracteritza els principis de seguretat de la informació, avaluant l'impacte de les amenaces lògiques, humanes i ambientals sobre els actius d'una organització.
+- **Alineació Curricular:** RD 1691/2007 i Decret 81/2010 CV.
+
+---
+
+## 📚 Apartats Didàctics de la Unitat
+
+1. [**1.1 La Tríada CIA, Autenticitat i No-Repudi**](./ut0101.html)
+   - Confidencialitat, Integritat i Disponibilitat com a pilars indestructibles.
+   - Autenticitat i no-repudi d'origen i de destinació.
+2. [**1.2 Tipologies d'Amenaces en Sistemes Informàtics**](./ut0102.html)
+   - Amenaces humanes (accidentals vs intencionades), lògiques (malware) i ambientals.
+   - Diferència clau entre actiu, amenaça, vulnerabilitat i risc.
+3. [**1.3 Perfils d'Atacants i Motivacions**](./ut0103.html)
+   - Script Kiddies, ciberdelinqüents, hacktivistes, amenaces internes (*insiders*) i grups APT.
+   - La taxonomia de colors: White Hat, Black Hat i Grey Hat.
+4. [**1.4 Tècniques d'Enginyeria Social**](./ut0104.html)
+   - Phishing, Spear Phishing, Whaling, Vishing, Smishing i Baiting.
+   - Biaixos psicològics utilitzats: autoritat, urgència i por.
+5. [**1.5 Metodologies d'Anàlisi i Gestió de Riscos**](./ut0105.html)
+   - Metodologia MAGERIT del CCN-CERT.
+   - Matrius de probabilitat i impacte (5x5).
+   - Estratègies: mitigar, transferir, evitar i acceptar el risc residual.
+
+---
+
+## 🏆 Reptes Globals de Síntesi de la Unitat 1 (4)
+
+<div class="interactive-challenge-card" data-challenge-id="si_ut01_global_c1" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 1: Un banc pateix una incidència: el seu portal web permet a qualsevol usuari registrat veure el saldo i moviments d'altres clients canviant un número en l'adreça URL. Quin pilar de la tríada CIA s'ha trencat de manera greu?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut01_global_c1" value="a"> A) Confidencialitat</label>
+    <label><input type="radio" name="opt_si_ut01_global_c1" value="b"> B) Disponibilitat</label>
+    <label><input type="radio" name="opt_si_ut01_global_c1" value="c"> C) Eficiència energètica</label>
+    <label><input type="radio" name="opt_si_ut01_global_c1" value="d"> D) No-repudi de recepció</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! La confidencialitat impedeix que persones no autoritzades tinguen accés a dades privades de tercers." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-challenge-id="si_ut01_global_c2" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 2: Un ciberdelinqüent envia un SMS a tots els telèfons d'un barri simulant ser l'Agència Tributària i demanant fer clic per a cobrar una devolució de 240 €. Quin tipus d'enginyeria social és?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut01_global_c2" value="a"> A) Smishing (SMS Phishing)</label>
+    <label><input type="radio" name="opt_si_ut01_global_c2" value="b"> B) Vishing</label>
+    <label><input type="radio" name="opt_si_ut01_global_c2" value="c"> C) Shoulder Surfing</label>
+    <label><input type="radio" name="opt_si_ut01_global_c2" value="d"> D) Dumpster Diving</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Molt bé! El Smishing és la variant de pesca que utilitza la missatgeria mòbil SMS per a enganyar les víctimes." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-challenge-id="si_ut01_global_c3" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 3: Quin és el motiu pel qual les amenaces internes (*insider threats*) solen tindre un impacte molt més destructiu que els atacs procedents d'intrusos externs desconeguts?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut01_global_c3" value="a"> A) Perquè els empleats interns ja disposen de credencials vàlides, coneixen l'estructura de la xarxa i estan situats darrere del tallafocs perimetral.</label>
+    <label><input type="radio" name="opt_si_ut0103_global_c3" value="b"> B) Perquè utilitzen virus creats per ells mateixos.</label>
+    <label><input type="radio" name="opt_si_ut0103_global_c3" value="c"> C) Perquè la llei no permet sancionar treballadors d'una empresa.</label>
+    <label><input type="radio" name="opt_si_ut0103_global_c3" value="d"> D) Perquè no utilitzen sistemes operatius convencionals.</label>
+  </div>
+  <button class="btn-check" data-correct="a" data-feedback="Correcte! En trobar-se ja a l'interior del perímetre defensiu i comptar amb privilegis assignats legítimament, un empleat descontent pot causar un dany massiu sense fer sonar les alarmes perimetrals." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
+</div>
+
+<div class="interactive-challenge-card" data-challenge-id="si_ut01_global_c4" data-points="25">
+  <div style="font-weight:700; margin-bottom:8px;">Repte de Síntesi 4: En una matriu de risc, una amenaça té una probabilitat molt baixa de succeir (1 vegada cada 100 anys), però si ocorreguera l'impacte seria la fallida total de l'empresa. Com ha de classificar-se aquest risc segons MAGERIT?</div>
+  <div class="challenge-options" style="display:flex; flex-direction:column; gap:6px;">
+    <label><input type="radio" name="opt_si_ut01_global_c4" value="a"> A) Risc Menor o Despreciable</label>
+    <label><input type="radio" name="opt_si_ut01_global_c4" value="b"> B) Risc Significatiu o Mitjà/Alt que requereix mesures de continuïtat o transferència (assegurança)</label>
+    <label><input type="radio" name="opt_si_ut01_global_c4" value="c"> C) No és un risc perquè la probabilitat és quasi zero.</label>
+    <label><input type="radio" name="opt_si_ut01_global_c4" value="d"> D) Risc que només afecta els tècnics de manteniment.</label>
+  </div>
+  <button class="btn-check" data-correct="b" data-feedback="Molt bé! Els esdeveniments de baixa freqüència però impacte catastròfic no poden ser ignorats: requereixen plans de recuperació davant desastres (DRP) o assegurances de danys." style="margin-top:10px; padding:6px 14px; background:var(--primary); color:#fff; border:none; border-radius:4px; cursor:pointer;">Comprova la resposta</button>
+  <div class="feedback-msg" style="margin-top:8px; font-weight:600; display:none;"></div>
 </div>
 
 ---
 
-## 📌 4. Autoavaluació de la Unitat 01
-
-1. **Quina diferència conceptual hi ha entre la seguretat activa i la seguretat passiva?**
-   - *Solució:* La seguretat activa actua de forma proactiva per prevenir o aturar atacs en temps real (antivirus, tallafocs, contrasenyes robustes), mentre que la seguretat passiva minimitza l'impacte i els danys quan l'incident ja s'ha produït o manté la continuïtat del servei (SAIs, còpies de seguretat, plans de recuperació davant desastres).
-2. **Per què és imprescindible fer proves de restauració periòdiques de les còpies de seguretat?**
-   - *Solució:* Perquè una còpia de seguretat no té cap valor si en el moment d'un desastre el fitxer està corromput, la clau de desencriptació no funciona o el procediment de restauració supera el temps màxim admès per l'organització (RTO).
-
----
-
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
-
-### 📋 Bloc A: Qüestions Tècniques de Classificació i Fonaments
-1. **Classificació de Mesures de Seguretat:** Ubica cadascun dels següents elements en un dels quatre quadrants (Activa/Passiva i Física/Lògica):
-   - Generador elèctric dièsel d'emergència en cas de tall prolongat de llum.
-   - Restricció de tràfic al port 22 (SSH) mitjançant regles `iptables`.
-   - Sistema de refrigeració redundant HVAC configurat a 21 °C al CPD.
-   - Auditoria de canvis de permisos en Active Directory mitjançant registres SIEM.
-2. **Triada CIA:** Explica mitjançant un exemple real com un atac d'alteració no autoritzada d'una comanda bancària ataca la **Integritat** sense comprometre necessàriament la **Disponibilitat**.
-3. **Codi Penal Espanyol:** Revisa els articles 197 (descobriment i revelació de secrets) i 264 (danys informàtics). Quines penes de presó s'estableixen per accedir sense autorització a un sistema protegit i quines circumstàncies agreugen la pena?
-
-### 💻 Bloc B: Repte Pràctic de Laboratori (Virtualització Segura)
-En aquesta pràctica inicial configurarem l'entorn aïllat de laboratori per garantir que cap paquet d'auditoria escape cap a la xarxa externa:
-
-1. **Pas 1: Creació del commutador virtual aïllat:**
-   - A VirtualBox, ves a **Arxiu $\rightarrow$ Eines $\rightarrow$ Gestor de Xarxes Virtuals**.
-   - Crea una nova xarxa de tipus **Només d'amfitrió (*Host-Only*)** amb l'adreça `192.168.56.1/24` o una xarxa **Interna (*Internal Network*)** anomenada `xarxa-lab-seguretat`.
-   - Desactiva el servidor DHCP intern de VirtualBox per aprendre a configurar adreçament estàtic manual als servidors.
-2. **Pas 2: Comprovació d'aïllament:**
-   - Connecta la màquina Ubuntu Server de laboratori a la xarxa interna.
-   - Comprova amb `ping 8.8.8.8` que la màquina no pot eixir a Internet (ha de donar error de xarxa inabastable).
-   - Executa `ip a` per confirmar que la interfície té assignada la IP estàtica de laboratori `192.168.56.10/24`.
-
-```bash
-# Exemple de configuració de netplan per al laboratori aïllat (/etc/netplan/01-netcfg.yaml)
-network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    enp0s3:
-      dhcp4: no
-      addresses:
-        - 192.168.56.10/24
-```
-
-### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
-
-| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
-| :--- | :--- | :--- | :--- |
-| **Distingir mesures actives i passives** | Classifica el 100% de les mesures sense errors i justifica l'impacte en la continuïtat. | Classifica correctament la majoria de mesures amb dubtes menors en SAIs o RAID. | Confon mesures preventives amb mesures reactives o de recuperació. |
-| **Coneixement legal i ètic** | Identifica els riscos penals de les auditories no autoritzades i cita els articles aplicables. | Reconeix la il·legalitat d'atacar xarxes alienes sense citar el Codi Penal. | Té una noció vaga sobre els límits legals de l'escaneig de xarxes. |
-| **Configuració de xarxa aïllada** | Configura la xarxa host-only/interna i demostra l'aïllament sense filtracions a l'exterior. | Munta la màquina virtual però manté el mode NAT obert per defecte. | Requereix assistència per a configurar les interfícies de xarxa a l'hipervisor. |
+<div class="aules-delivery-card" data-module="SI" data-activity="UT01_GLOBAL" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:16px 20px; margin-top:28px;">
+  <div style="font-weight:700; font-size:1.05rem; margin-bottom:8px; color:var(--text-main);">📋 Lliurament Global d'Unitat a Aules — UT 01</div>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:14px;">Completa els 4 reptes de síntesi d'aquesta unitat sobre fonaments de seguretat i descarrega el certificat global de la UT 01 en PDF per a la seua qualificació a Aules.</p>
+  <button class="btn-aules-download" style="background:#10b981; color:#fff; border:none; padding:8px 18px; border-radius:6px; font-weight:600; cursor:pointer;">📥 Descarregar Justificant Global PDF per a Aules</button>
+</div>
