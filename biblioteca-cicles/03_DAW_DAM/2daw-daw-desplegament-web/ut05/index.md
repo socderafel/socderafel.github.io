@@ -1,146 +1,104 @@
----
-layout: default
-title: "Desplegament d'Aplicacions Web — UD5 UP4. Documentación, control de versiones y sistemas de integración continua - RA6"
-course_root: ".."
-badge: "2n DAW · Grau Superior · UD5"
----
+# UT 05: Serveis de Xarxa i Infraestructura per al Desplegament Web
 
-# UD5 — UP4. Documentación, control de versiones y sistemas de integración continua - RA6
+<div class="interactive-progress-tracker" data-unit="ut05" data-total-points="100">
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+  </div>
+  <div class="progress-stats">
+    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 100 XP</span>
+    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 4</span>
+  </div>
+</div>
 
+## Descripció del Mòdul i Unitat Didàctica
 
+Una aplicació web moderna no opera aïllada en un únic servidor, sinó que s'insereix en una complexa xarxa de serveis auxiliars d'infraestructura que en garanteixen la resolució de noms, la disponibilitat, el balanceig de trànsit massiu i la tolerància a fallades (Resultat d'Aprenentatge 5 - RA5).
 
----
-
-## 📌 5.1 Teoría
-
-Teoría 📚
-
----
-
-## 📌 5.2 UP4.1. Herramientas para generar documentación - CE6.a)
-
-Continguts i activitats didàctiques de **UP4.1. Herramientas para generar documentación - CE6.a)**.
+En aquesta unitat didàctica aprofundiràs en el funcionament del **Sistema de Noms de Domini (DNS)**, la jerarquia global d'arrels, TLDs i servidors autoritatius, així com la instal·lació i configuració d'un servidor DNS complet amb **BIND9** (`named`) en Linux. Aprendràs a definir zones directes i inverses, gestionar la totalitat dels registres essencials (A, AAAA, CNAME, MX, TXT, SPF, DKIM) i diagnosticar incidències de propagació amb eines com `dig`, `nslookup` i `host`. A més, estudiaràs el rol decisiu dels **proxies inversos (*Reverse Proxies*) i balancejadors de càrrega** mitjançant **Nginx i HAProxy**, dominant algorismes de distribució (Round-Robin, Least Connections, IP Hash), estratègies de memòria cau (*caching*) HTTP per a descàrrega de servidors i esquemes d'alta disponibilitat.
 
 ---
 
-## 📌 5.3 UP4.2. Documentación de PHP - CE6.b)
+## Continguts i Subtemes
 
-Continguts i activitats didàctiques de **UP4.2. Documentación de PHP - CE6.b)**.
-
----
-
-## 📌 5.4 UP4.3. Documentación del proyecto - CE6.c) y CE6.d)
-
-Continguts i activitats didàctiques de **UP4.3. Documentación del proyecto - CE6.c) y CE6.d)**.
-
----
-
-## 📌 5.5 UP4.4. Control de versiones con Git - CE6.e) y CE6.g)
-
-Continguts i activitats didàctiques de **UP4.4. Control de versiones con Git - CE6.e) y CE6.g)**.
+| Codi | Títol del Subtema | Descripció | Punts XP |
+| :--- | :--- | :--- | :--- |
+| **[UT 05.01](ut0501.md)** | **Arquitectura del Servei de Noms de Domini (DNS)** | Estructura jeràrquica en arbre, servidors arrel, TLDs, servidors autoritatius vs recursius, i procés de resolució completa. | +75 XP |
+| **[UT 05.02](ut0502.md)** | **Configuració de Servidors DNS amb BIND9** | Fitxers `/etc/bind/named.conf.*`, definició de zones mestres directes, gestió de registres SOA, NS, A, CNAME, MX i TXT. | +75 XP |
+| **[UT 05.03](ut0503.md)** | **Zones Inverses, Reenviadors (*Forwarders*) i Diagnòstic** | Zona inversa `in-addr.arpa` (registres PTR), reenviament condicional de consultes i depuració de xarxa amb `dig`, `nslookup` i `named-checkzone`. | +75 XP |
+| **[UT 05.04](ut0504.md)** | **Proxies Inversos (*Reverse Proxies*) amb Nginx i HAProxy** | Concepte de proxy directe vs invers, terminació TLS, capçaleres `X-Forwarded-*`, seguretat perimetral i ocultació d'infraestructura interna. | +75 XP |
+| **[UT 05.05](ut0505.md)** | **Balanceig de Càrrega, Memòria Cau (*Caching*) i Alta Disponibilitat** | Directiva `upstream`, algorismes de balanceig (Round-Robin, Least Connections, IP Hash), sondejos de salut (*health checks*) i memòria cau FastCGI/Proxy. | +75 XP |
 
 ---
 
-## 📌 5.6 UP4.5. Accesibilidad y seguridad del control de versiones - CE6.f)
+## Reptes Globals de Síntesi (+100 XP)
 
-Continguts i activitats didàctiques de **UP4.5. Accesibilidad y seguridad del control de versiones - CE6.f)**.
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="daw-ut05-repte-01">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 1: Jerarquia i Resolució DNS</h4>
+  </div>
+  <p class="challenge-prompt">Durant una resolució recursiva completa d'un nom de domini com `app.portal.es`, a quin tipus de servidor acudeix en primera instància el resolutor si la seua memòria cau està buida?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Al servidor de correu MX del domini.</button>
+    <button class="btn-check" data-correct="true">A un dels servidors arrel mundials (Root Servers, representats per un punt final `.`).</button>
+    <button class="btn-check" data-correct="false">Directament a la base de dades local de l'amfitrió.</button>
+    <button class="btn-check" data-correct="false">Al servidor DHCP de la xarxa local de l'usuari.</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
----
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="daw-ut05-repte-02">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 2: Tipus de Registres en BIND9</h4>
+  </div>
+  <p class="challenge-prompt">Quin registre DNS de zona utilitzem obligatòriament quan volem crear un àlies de nom que apunte a un altre nom de domini canònic prèviament definit?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Registre A</button>
+    <button class="btn-check" data-correct="true">Registre CNAME (*Canonical Name*)</button>
+    <button class="btn-check" data-correct="false">Registre PTR</button>
+    <button class="btn-check" data-correct="false">Registre SOA</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
-## 📌 5.7 UP4.6. Repositorio GitHub - CE6.h)
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="daw-ut05-repte-03">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 3: Conservació de la IP Real en Proxy Invers</h4>
+  </div>
+  <p class="challenge-prompt">Quan un proxy invers Nginx rep una petició d'un client extern i la reenvia cap a un servidor d'aplicacions intern (backend), per quina raó és obligatori configurar la directiva `proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;`?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Perquè altrament Nginx tancarà immediatament la connexió HTTP per error de protocol.</button>
+    <button class="btn-check" data-correct="true">Perquè sense eixa capçalera el servidor d'aplicacions intern veuria com a IP origen la IP local del mateix proxy invers en comptes de la IP real del client extern.</button>
+    <button class="btn-check" data-correct="false">Per a comprimir les imatges PNG en format WebP al vol.</button>
+    <button class="btn-check" data-correct="false">Perquè ho exigeix el protocol FTP per a transferir dades en mode actiu.</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
-Continguts i activitats didàctiques de **UP4.6. Repositorio GitHub - CE6.h)**.
-
----
-
-## 📌 5.8 Actividades y tests
-
-Actividades y tests 📝
-
----
-
-## 📌 5.9 📚TEST📚 UP4.1. Herramientas para generar documentación - CE6.a)
-
-Continguts i activitats didàctiques de **📚TEST📚 UP4.1. Herramientas para generar documentación - CE6.a)**.
-
----
-
-## 📌 5.10 📎ENTREGA PROYECTO📎 Actividad UP4.2. Documentación PHP - CE6.b)
-
-La documentación del código PHP se subirá al repositorio de GitHub.
-
-Al finalizar, los estudiantes escribirán
-
-"Realizado"
-
-en la entrega para que se puedan realizar correcciones. Se debe incluir qué archivos PHP has documentado.
-
-En el caso de no cursar el módulo de Proyecto Intermodular de 2º de DAW, el alumnado documentará el código Java, usando
-
-javadoc
-
-, del Proyecto Intermodular de los módulos de Programación de 1º de DAW y Despliegue de Aplicaciones Web de 2º de DAW.
-
----
-
-## 📌 5.11 📎ENTREGA PROYECTO📎 Actividad UP4.3. Documentación del proyecto - CE6.c) y CE6.d)
-
-La documentación del proyecto se subirá al repositorio de Github.
-
-Al finalizar, los estudiantes escribirán
-
-"Realizado"
-
-en la entrega para que se puedan realizar correcciones. Se debe incluir qué documentación del proyecto has realizado. Es adecuado que cada integrante documente un sprint en la memoria del proyecto.
-
-En el caso de no cursar el módulo de Proyecto Intermodular de 2º de DAW, el alumnado realizará la documentación del Proyecto Intermodular de los módulos de Programación de 1º de DAW y Despliegue de Aplicaciones Web de 2º de DAW.
-
----
-
-## 📌 5.12 📈CALIFICACIÓN📈 Documentación del proyecto - CE6.d)
-
-Continguts i activitats didàctiques de **📈CALIFICACIÓN📈 Documentación del proyecto - CE6.d)**.
-
----
-
-## 📌 5.13 📎ENTREGA PROYECTO📎 Actividad UP4.4. Control de versiones de Git - CE6.e) y CE6.g)
-
-En el caso de no cursar el módulo de Proyecto Intermodular, el alumnado utilizará una rama
-
-main
-
-para cambios definitivos y una rama
-
-nombreapellido
-
-para pruebas y cambios provisionales.
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="daw-ut05-repte-04">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 4: Persistència de Sessió en Balanceig de Càrrega</h4>
+  </div>
+  <p class="challenge-prompt">Si tenim una aplicació web desplegada sobre un clúster de servidors amb sessions emmagatzemades en memòria local de cada instància, quin mètode de balanceig en Nginx assegura que un mateix client siga redirigit sempre al mateix node backend?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Round-Robin pur</button>
+    <button class="btn-check" data-correct="true">`ip_hash`</button>
+    <button class="btn-check" data-correct="false">Random select</button>
+    <button class="btn-check" data-correct="false">Least connected amb timeout 0</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
 ---
 
-## 📌 5.14 📈CALIFICACIÓN📈 Control de versiones de Git - CE6.g)
-
-Continguts i activitats didàctiques de **📈CALIFICACIÓN📈 Control de versiones de Git - CE6.g)**.
-
----
-
-## 📌 5.15 📎ENTREGA PROYECTO📎 Actividad UP4.5. Control de versiones, accesibilidad y seguridad - CE6.f)
-
-Continguts i activitats didàctiques de **📎ENTREGA PROYECTO📎 Actividad UP4.5. Control de versiones, accesibilidad y seguridad - CE6.f)**.
-
----
-
-## 📌 5.16 📎ENTREGA PROYECTO📎 Actividad UP4.6. Repositorio de GitHub - CE6.h)
-
-En el caso de no cursar el módulo de Proyecto Intermodular de 2º de DAW, el alumnado compartirá el repositorio de GitHub con el profesorado del Proyecto Intermodular de los módulos de Programación de 1º de DAW y Despliegue de Aplicaciones Web de 2º de DAW.
-
----
-
-## 📌 5.17 Recursos
-
-Recursos 💻
-
----
-
-## 📌 5.18 Learn Git Branching
-
-Continguts i activitats didàctiques de **Learn Git Branching**.
+<div class="aules-delivery-card">
+  <div class="card-header">
+    <span class="badge-aules">Aules GVA</span>
+    <h4>Lliurament de la Unitat Didàctica 05 a la plataforma docent</h4>
+  </div>
+  <p>Un cop completats els reptes interactius i les activitats d'aquesta unitat didàctica, descarrega el resum d'evidències en format d'informe per a adjuntar-lo a la tasca corresponent d'Aules.</p>
+  <button class="btn-aules-download" onclick="generateAulesReport('ut05')">Descarregar Informe d'Evidències (Aules)</button>
+</div>
