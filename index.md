@@ -92,7 +92,7 @@ is_landing: true
             <span class="course-tag">Reptes Gamificats</span>
           </div>
         </div>
-        <a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/" class="course-btn">
+        <a href="/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/" class="course-btn">
           <span>Accedir a Ciències Aplicades 1</span>
           <span class="course-btn-arrow">→</span>
         </a>
@@ -184,7 +184,7 @@ is_landing: true
           </ul>
         </div>
         <div class="cycle-card-footer">
-          <a href="./biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina">
+          <a href="/biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina">
             <span>Consultar Mòduls de Bàsica</span>
             <span>→</span>
           </a>
@@ -214,7 +214,7 @@ is_landing: true
           </ul>
         </div>
         <div class="cycle-card-footer">
-          <a href="./biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes">
+          <a href="/biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes">
             <span>Consultar Mòduls de SMX</span>
             <span>→</span>
           </a>
@@ -246,7 +246,7 @@ is_landing: true
           </ul>
         </div>
         <div class="cycle-card-footer">
-          <a href="./biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions">
+          <a href="/biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions">
             <span>Consultar Mòduls DAW / DAM</span>
             <span>→</span>
           </a>
@@ -271,7 +271,7 @@ is_landing: true
           </ul>
         </div>
         <div class="cycle-card-footer">
-          <a href="./biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes">
+          <a href="/biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes">
             <span>Consultar Mòduls ASIX</span>
             <span>→</span>
           </a>
@@ -295,7 +295,7 @@ is_landing: true
           </ul>
         </div>
         <div class="cycle-card-footer">
-          <a href="./biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat">
+          <a href="/biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat">
             <span>Consultar Cursos d'Especialització</span>
             <span>→</span>
           </a>
@@ -320,7 +320,7 @@ is_landing: true
           </ul>
         </div>
         <div class="cycle-card-footer">
-          <a href="./biblioteca-cicles/#-secundària-eso-i-batxillerat">
+          <a href="/biblioteca-cicles/#-secundària-eso-i-batxillerat">
             <span>Consultar Secundària i Batxillerat</span>
             <span>→</span>
           </a>
@@ -547,7 +547,7 @@ is_landing: true
         <div class="footer-col-title">Mòduls & Eines</div>
         <ul class="footer-links">
           <li><a href="./eines/" style="font-weight:700; color:#3b82f6 !important;">🛠️ Caixa d'Eines Web</a></li>
-          <li><a href="./biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/">Ciències Aplicades 1</a></li>
+          <li><a href="/biblioteca-cicles/01_FP_Basica/1fpb-ciencies-aplicades/">Ciències Aplicades 1</a></li>
           <li><a href="./programacio/">Programació en Java</a></li>
           <li><a href="./projecte-intermodular/">Projecte Intermodular</a></li>
         </ul>
@@ -556,11 +556,11 @@ is_landing: true
       <div class="footer-col">
         <div class="footer-col-title">Biblioteca de Cicles</div>
         <ul class="footer-links">
-          <li><a href="./biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina">FP Grau Bàsic (CFGB)</a></li>
-          <li><a href="./biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes">FP Grau Mitjà (SMX)</a></li>
-          <li><a href="./biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions">DAW / DAM Superior</a></li>
-          <li><a href="./biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes">ASIX Superior</a></li>
-          <li><a href="./biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat">Cursos d'Especialització</a></li>
+          <li><a href="/biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina">FP Grau Bàsic (CFGB)</a></li>
+          <li><a href="/biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes">FP Grau Mitjà (SMX)</a></li>
+          <li><a href="/biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions">DAW / DAM Superior</a></li>
+          <li><a href="/biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes">ASIX Superior</a></li>
+          <li><a href="/biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat">Cursos d'Especialització</a></li>
         </ul>
       </div>
 

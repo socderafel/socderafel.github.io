@@ -114,6 +114,10 @@
     }
 
     (function() {
+      if (window.location.pathname === '/biblioteca-cicles') {
+        window.location.replace('/biblioteca-cicles/' + window.location.search + window.location.hash);
+        return;
+      }
       try {
         const saved = localStorage.getItem('portal-theme-palette') || localStorage.getItem('portal-theme') || 'navy';
         document.documentElement.setAttribute('data-theme', saved);
@@ -3838,7 +3842,8 @@
               let itemsHtml = '';
 
               (unit.items || []).forEach(item => {
-                const cleanHref = toHtmlHref(item.href.replace(/^\.\//, ''));
+                const rawHref = item.href || item.url || '';
+                const cleanHref = toHtmlHref(rawHref.replace(/^\.\//, ''));
                 const itemHref = toHtmlHref(prefix + cleanHref);
                 const isItemActive = currentPath.endsWith('/' + cleanHref) ||
                   (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, ''))) ||
