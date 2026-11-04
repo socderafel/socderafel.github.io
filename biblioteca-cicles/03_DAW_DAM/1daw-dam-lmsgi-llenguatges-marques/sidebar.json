@@ -1,289 +1,210 @@
-{
-  "title": "🏷️ Llenguatges de Marques i Sistemes de Gestió d'Informació — 1r DAW / DAM / ASIX · Grau Superior",
-  "home": {
-    "label": "🏠 Inici Llenguatges de Marques",
-    "href": "index.html"
+[
+  {
+    "title": "UT 01: Introducció als Llenguatges de Marques i Tecnologies XML",
+    "url": "ut01/index.md",
+    "children": [
+      {
+        "title": "01.01: Origen i evolució dels llenguatges de marques",
+        "url": "ut01/ut0101.md"
+      },
+      {
+        "title": "01.02: Taxonomia i classificació dels llenguatges de marques",
+        "url": "ut01/ut0102.md"
+      },
+      {
+        "title": "01.03: Sintaxi i regles estructurals dels documents XML",
+        "url": "ut01/ut0103.md"
+      },
+      {
+        "title": "01.04: Espais de noms (Namespaces) en XML",
+        "url": "ut01/ut0104.md"
+      },
+      {
+        "title": "01.05: Llenguatges alternatius de serialització (JSON i YAML)",
+        "url": "ut01/ut0105.md"
+      }
+    ]
   },
-  "units": [
-    {
-      "summary": "UD1 — Introducció als LLMM i XML",
-      "items": [
-        {
-          "label": "📘 UT01 Completa (1 pàgina)",
-          "href": "./ut01/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "1.1 Introducció als llenguatges de marques",
-          "href": "./ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Classificació dels llenguatges de marques",
-          "href": "./ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 Llenguatges de marques de propòsit general",
-          "href": "./ut01/ut0103.html"
-        },
-        {
-          "label": "1.4 Estructura i sintaxi de documents XML",
-          "href": "./ut01/ut0104.html"
-        },
-        {
-          "label": "1.5 Espais de noms (Namespaces en XML)",
-          "href": "./ut01/ut0105.html"
-        },
-        {
-          "label": "1.6 Quadern d'Activitats Pràctiques XML",
-          "href": "./ut01/ut0106.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD2 — HTML5 i Sindicació de Continguts",
-      "items": [
-        {
-          "label": "📘 UT02 Completa (1 pàgina)",
-          "href": "./ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "2.1 Història, versions i estructura d'un document HTML5",
-          "href": "./ut02/ut0201.html"
-        },
-        {
-          "label": "2.2 Sintaxi d'etiquetes, atributs i semàntica web",
-          "href": "./ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 Elements HTML: Text, llistes, taules i enllaços",
-          "href": "./ut02/ut0203.html"
-        },
-        {
-          "label": "2.4 Formularis web i controls d'entrada de dades",
-          "href": "./ut02/ut0204.html"
-        },
-        {
-          "label": "2.5 Elements multimèdia, àudio, vídeo i iframes",
-          "href": "./ut02/ut0205.html"
-        },
-        {
-          "label": "2.6 Sindicació de contingut: Canals RSS 2.0 i Atom",
-          "href": "./ut02/ut0206.html"
-        },
-        {
-          "label": "2.7 Eines d'edició i validació W3C",
-          "href": "./ut02/ut0207.html"
-        },
-        {
-          "label": "2.8 Quadern d'Activitats Pràctiques HTML5",
-          "href": "./ut02/ut0208.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD3 — Fulls d'Estil en Cascada (CSS3)",
-      "items": [
-        {
-          "label": "📘 UT03 Completa (1 pàgina)",
-          "href": "./ut03/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "3.1 Introducció a CSS, sintaxi i fulls d'estil",
-          "href": "./ut03/ut0301.html"
-        },
-        {
-          "label": "3.2 Selectors CSS, pseudoclasses i pseudoelements",
-          "href": "./ut03/ut0302.html"
-        },
-        {
-          "label": "3.3 El Model de Caixa (Box Model) i posicionament",
-          "href": "./ut03/ut0303.html"
-        },
-        {
-          "label": "3.4 Propietats de color, fons, tipografia i unitats",
-          "href": "./ut03/ut0304.html"
-        },
-        {
-          "label": "3.5 Maquetació moderna amb Flexbox",
-          "href": "./ut03/ut0305.html"
-        },
-        {
-          "label": "3.6 Maquetació bidimensional amb CSS Grid",
-          "href": "./ut03/ut0306.html"
-        },
-        {
-          "label": "3.7 Disseny web adaptatiu (Responsive Web Design i Media Queries)",
-          "href": "./ut03/ut0307.html"
-        },
-        {
-          "label": "3.8 Quadern d'Activitats i Projectes CSS3",
-          "href": "./ut03/ut0308.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD4 — Fonaments i Sintaxi de JavaScript",
-      "items": [
-        {
-          "label": "📘 UT04 Completa (1 pàgina)",
-          "href": "./ut04/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "4.1 Introducció a JavaScript, consola i entorn",
-          "href": "./ut04/ut0401.html"
-        },
-        {
-          "label": "4.2 Conceptes bàsics, tipus de dades i variables",
-          "href": "./ut04/ut0402.html"
-        },
-        {
-          "label": "4.3 Estructures de control de flux i bucles",
-          "href": "./ut04/ut0403.html"
-        },
-        {
-          "label": "4.4 Funcions en JavaScript (declaració, expressió i funcions fletxa)",
-          "href": "./ut04/ut0404.html"
-        },
-        {
-          "label": "4.5 Gestió de nombres i cadenes de text",
-          "href": "./ut04/ut0405.html"
-        },
-        {
-          "label": "4.6 Arrays i mètodes d'iteració (map, filter, reduce)",
-          "href": "./ut04/ut0406.html"
-        },
-        {
-          "label": "4.7 Objectes en JavaScript i format d'intercanvi JSON",
-          "href": "./ut04/ut0407.html"
-        },
-        {
-          "label": "4.8 Quadern de Reptes Pràctics de JavaScript (Activitats 01 a 25)",
-          "href": "./ut04/ut0408.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD5 — Manipulació del DOM i Asincronia",
-      "items": [
-        {
-          "label": "📘 UT05 Completa (1 pàgina)",
-          "href": "./ut05/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "5.1 Introducció al DOM (Document Object Model) i accés a nodes",
-          "href": "./ut05/ut0501.html"
-        },
-        {
-          "label": "5.2 Modificació de continguts i atributs en el DOM",
-          "href": "./ut05/ut0502.html"
-        },
-        {
-          "label": "5.3 Creació i eliminació dinàmica d'elements",
-          "href": "./ut05/ut0503.html"
-        },
-        {
-          "label": "5.4 Modificació d'estils i classes CSS des de JavaScript",
-          "href": "./ut05/ut0504.html"
-        },
-        {
-          "label": "5.5 Programació asíncrona: Callbacks, Promeses, async/await i Fetch API",
-          "href": "./ut05/ut0505.html"
-        },
-        {
-          "label": "5.6 Quadern d'Activitats de Manipulació del DOM (DOM Local i Dinàmic)",
-          "href": "./ut05/ut0506.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — Sistemes Empresarials ERP / CRM / CMS",
-      "items": [
-        {
-          "label": "📘 UT06 Completa (1 pàgina)",
-          "href": "./ut06/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "6.1 Sistemes empresarials de gestió d'informació",
-          "href": "./ut06/ut0601.html"
-        },
-        {
-          "label": "6.2 Sistemes ERP i CRM: Odoo, instal·lació i configuració",
-          "href": "./ut06/ut0602.html"
-        },
-        {
-          "label": "6.3 Gestors de Continguts Web (CMS): WordPress, mòduls i administració",
-          "href": "./ut06/ut0603.html"
-        },
-        {
-          "label": "6.4 Quadern d'Activitats Empresarials (Activitats 901)",
-          "href": "./ut06/ut0604.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — Validació XML (DTD i XSD)",
-      "items": [
-        {
-          "label": "📘 UT07 Completa (1 pàgina)",
-          "href": "./ut07/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "7.1 Descripció i definició d'estructures de dades",
-          "href": "./ut07/ut0701.html"
-        },
-        {
-          "label": "7.2 Definició de documents mitjançant DTD",
-          "href": "./ut07/ut0702.html"
-        },
-        {
-          "label": "7.3 Esquemes XML (XML Schema / XSD): tipus simples i complexos",
-          "href": "./ut07/ut0703.html"
-        },
-        {
-          "label": "7.4 Validació de documents, eines i casos pràctics",
-          "href": "./ut07/ut0704.html"
-        },
-        {
-          "label": "7.5 Quadern d'Activitats de Validació DTD i XSD",
-          "href": "./ut07/ut0705.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD8 — Transformació i Consulta (XPath, XSLT, XQuery)",
-      "items": [
-        {
-          "label": "📘 UT08 Completa (1 pàgina)",
-          "href": "./ut08/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "8.1 Llenguatges de navegació i localització de dades: sintaxi XPath",
-          "href": "./ut08/ut0801.html"
-        },
-        {
-          "label": "8.2 Transformació de documents mitjançant XSLT",
-          "href": "./ut08/ut0802.html"
-        },
-        {
-          "label": "8.3 Mètodes d'emmagatzematge de la informació i BBDD XML",
-          "href": "./ut08/ut0803.html"
-        },
-        {
-          "label": "8.4 Llenguatges de consulta: sintaxi XQuery",
-          "href": "./ut08/ut0804.html"
-        },
-        {
-          "label": "8.5 Quadern d'Activitats de Transformació i Consulta",
-          "href": "./ut08/ut0805.html"
-        }
-      ]
-    }
-  ]
-}
+  {
+    "title": "UT 02: Llenguatges de Marques per a la Web: HTML5 i Sindicació de Continguts",
+    "url": "ut02/index.md",
+    "children": [
+      {
+        "title": "02.01: Estructura semàntica i metadades en HTML5",
+        "url": "ut02/ut0201.md"
+      },
+      {
+        "title": "02.02: Jerarquia textual, hipervincles, llistes i rutes",
+        "url": "ut02/ut0202.md"
+      },
+      {
+        "title": "02.03: Taules de dades complexes i maquetació accessible",
+        "url": "ut02/ut0203.md"
+      },
+      {
+        "title": "02.04: Formularis web moderns i validació nativa",
+        "url": "ut02/ut0204.md"
+      },
+      {
+        "title": "02.05: Multimèdia natiu i sindicació de continguts (RSS i Atom)",
+        "url": "ut02/ut0205.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 03: Fulls d'Estil en Cascada (CSS3) i Disseny Web Adaptatiu",
+    "url": "ut03/index.md",
+    "children": [
+      {
+        "title": "03.01: Fonaments de CSS3, cascada, herència i especificitat",
+        "url": "ut03/ut0301.md"
+      },
+      {
+        "title": "03.02: Model de caixes (Box Model) i gestió de flux visual",
+        "url": "ut03/ut0302.md"
+      },
+      {
+        "title": "03.03: Tipografia web, colors moderns i variables CSS",
+        "url": "ut03/ut0303.md"
+      },
+      {
+        "title": "03.04: Sistemes de maquetació: CSS Flexbox i CSS Grid Layout",
+        "url": "ut03/ut0304.md"
+      },
+      {
+        "title": "03.05: Disseny web adaptatiu (Responsive Design) i Mobile First",
+        "url": "ut03/ut0305.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 04: Fonaments i Sintaxi de JavaScript en el Costat Client",
+    "url": "ut04/index.md",
+    "children": [
+      {
+        "title": "04.01: Integració de JavaScript en la web i depuració en consola",
+        "url": "ut04/ut0401.md"
+      },
+      {
+        "title": "04.02: Variables, àmbits de bloc i tipus de dades",
+        "url": "ut04/ut0402.md"
+      },
+      {
+        "title": "04.03: Operadors, coerció de tipus i estructures de control",
+        "url": "ut04/ut0403.md"
+      },
+      {
+        "title": "04.04: Funcions en JavaScript: declaracions, expressions i funcions fletxa",
+        "url": "ut04/ut0404.md"
+      },
+      {
+        "title": "04.05: Arrays moderns, objectes literals i desestructuració",
+        "url": "ut04/ut0405.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 05: Manipulació del DOM i Gestió d'Esdeveniments en Client",
+    "url": "ut05/index.md",
+    "children": [
+      {
+        "title": "05.01: L'arbre DOM i mètodes de selecció de nodes",
+        "url": "ut05/ut0501.md"
+      },
+      {
+        "title": "05.02: Manipulació de contingut textual, atributs i classes CSS",
+        "url": "ut05/ut0502.md"
+      },
+      {
+        "title": "05.03: Creació, clonació i inserció de nodes (DocumentFragment)",
+        "url": "ut05/ut0503.md"
+      },
+      {
+        "title": "05.04: El model d'esdeveniments W3C, propagació i delegació",
+        "url": "ut05/ut0504.md"
+      },
+      {
+        "title": "05.05: Comunicació asíncrona amb la Fetch API, async/await i JSON",
+        "url": "ut05/ut0505.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 06: Sistemes Empresarials de Gestió d'Informació i Continguts (CMS)",
+    "url": "ut06/index.md",
+    "children": [
+      {
+        "title": "06.01: Fonaments i arquitectura dels CMS: monolítics vs Headless",
+        "url": "ut06/ut0601.md"
+      },
+      {
+        "title": "06.02: Instal·lació, desplegament i configuració de servidors",
+        "url": "ut06/ut0602.md"
+      },
+      {
+        "title": "06.03: Gestió d'usuaris, rols, permisos (RBAC) i cicle editorial",
+        "url": "ut06/ut0603.md"
+      },
+      {
+        "title": "06.04: Personalització avançada: plantilles, connectors i taxonomies",
+        "url": "ut06/ut0604.md"
+      },
+      {
+        "title": "06.05: Seguretat, optimització WPO, còpies de seguretat i e-Commerce",
+        "url": "ut06/ut0605.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 07: Definició i Validació d'Estructures XML (DTD i XML Schema / XSD)",
+    "url": "ut07/index.md",
+    "children": [
+      {
+        "title": "07.01: Fonaments de validació XML: ben formats vs vàlids",
+        "url": "ut07/ut0701.md"
+      },
+      {
+        "title": "07.02: Definició de Tipus de Document (DTD)",
+        "url": "ut07/ut0702.md"
+      },
+      {
+        "title": "07.03: Introducció a XML Schema (XSD) i espais de noms",
+        "url": "ut07/ut0703.md"
+      },
+      {
+        "title": "07.04: Tipus simples en XSD: predefinits, restriccions i patrons",
+        "url": "ut07/ut0704.md"
+      },
+      {
+        "title": "07.05: Tipus complexos en XSD: sequence, choice, all i ocurrències",
+        "url": "ut07/ut0705.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 08: Transformació i Consulta de Documents XML (XPath, XSLT i XQuery)",
+    "url": "ut08/index.md",
+    "children": [
+      {
+        "title": "08.01: Fonaments de XPath: model de nodes, rutes i predicats",
+        "url": "ut08/ut0801.md"
+      },
+      {
+        "title": "08.02: Funcions estàndard i operadors avançats en XPath",
+        "url": "ut08/ut0802.md"
+      },
+      {
+        "title": "08.03: Arquitectura de transformació amb XSLT",
+        "url": "ut08/ut0803.md"
+      },
+      {
+        "title": "08.04: Regles i elements clau en XSLT: templates, for-each i condicions",
+        "url": "ut08/ut0804.md"
+      },
+      {
+        "title": "08.05: Introducció a XQuery: consultes XML i expressions FLWOR",
+        "url": "ut08/ut0805.md"
+      }
+    ]
+  }
+]
