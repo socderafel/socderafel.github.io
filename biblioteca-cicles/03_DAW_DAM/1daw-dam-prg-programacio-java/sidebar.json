@@ -1,218 +1,314 @@
-{
-  "title": "☕ Programació en Java (1r DAW / DAM) — 1r DAW / DAM · Grau Superior",
-  "home": {
-    "label": "🏠 Inici Programació en Java (1r DAW / DAM)",
-    "href": "index.html"
+[
+  {
+    "title": "UT 01: Introducció a la Programació i a l'Ecosistema Java",
+    "url": "ut01/index.md",
+    "children": [
+      {
+        "title": "01.01: Introducció a la programació: ordinogrames, pseudocodi i algorísmica bàsica",
+        "url": "ut01/ut0101.md"
+      },
+      {
+        "title": "01.02: L'ecosistema Java: JVM, JRE, JDK, bytecode i compilació multiplataforma",
+        "url": "ut01/ut0102.md"
+      },
+      {
+        "title": "01.03: Estructura d'un programa en Java: classes, mètode main i anatomia del codi",
+        "url": "ut01/ut0103.md"
+      },
+      {
+        "title": "01.04: Bones pràctiques, convencions d'estil i comentaris de documentació (Javadoc)",
+        "url": "ut01/ut0104.md"
+      },
+      {
+        "title": "01.05: Entorns de desenvolupament integrats (IDE): creació, execució i depuració inicial",
+        "url": "ut01/ut0105.md"
+      }
+    ]
   },
-  "units": [
-    {
-      "summary": "UD1 — Introducción a la programación con Java",
-      "items": [
-        {
-          "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
-        },
-        {
-          "label": "1.1 Introducción a la Programacion",
-          "href": "./ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Algoritmos",
-          "href": "./ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 Introduccion a Java",
-          "href": "./ut01/ut0103.html"
-        },
-        {
-          "label": "1.4 Estilo de codificacion",
-          "href": "./ut01/ut0104.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD2 — Entrada y salida de información",
-      "items": [
-        {
-          "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
-        },
-        {
-          "label": "2.1 Entrada y salida de información",
-          "href": "./ut02/ut0201.html"
-        },
-        {
-          "label": "2.2 Colores",
-          "href": "./ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 ClasePrintf",
-          "href": "./ut02/ut0203.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD3 — Estructuras de control",
-      "items": [
-        {
-          "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
-        },
-        {
-          "label": "3.1 Uso de estructuras de control",
-          "href": "./ut03/ut0301.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD4 — Programación Estructurada y Modular",
-      "items": [
-        {
-          "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
-        },
-        {
-          "label": "4.1 Programación estructurada y modular",
-          "href": "./ut04/ut0401.html"
-        },
-        {
-          "label": "4.2 Programación estructurada y modular",
-          "href": "./ut04/ut0402.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD5 — Estructuras datos estáticas",
-      "items": [
-        {
-          "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
-        },
-        {
-          "label": "5.1 Estructuras de datos estáticas",
-          "href": "./ut05/ut0501.html"
-        },
-        {
-          "label": "5.2 Estructuras de datos estaticas",
-          "href": "./ut05/ut0502.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — Estructuras de datos dinámicas",
-      "items": [
-        {
-          "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html"
-        },
-        {
-          "label": "6.1 Estructuras de datos dinámicas",
-          "href": "./ut06/ut0601.html"
-        },
-        {
-          "label": "6.2 Estructuras de datos dinamicas",
-          "href": "./ut06/ut0602.html"
-        },
-        {
-          "label": "6.3 Recursividad",
-          "href": "./ut06/ut0603.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — Programación orientada a objetos",
-      "items": [
-        {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html"
-        },
-        {
-          "label": "7.1 Programación Orientada a Objetos",
-          "href": "./ut07/ut0701.html"
-        },
-        {
-          "label": "7.2 EstructuraClase",
-          "href": "./ut07/ut0702.html"
-        },
-        {
-          "label": "7.3 Programación orientada a objetos (versión extend",
-          "href": "./ut07/ut0703.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD8 — Utilización avanzada de clases",
-      "items": [
-        {
-          "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html"
-        },
-        {
-          "label": "8.1 Utilizacion avanzada de clases",
-          "href": "./ut08/ut0801.html"
-        },
-        {
-          "label": "8.2 Utilización avanzada de clases (Versión ex",
-          "href": "./ut08/ut0802.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD9 — Gestión de excepciones",
-      "items": [
-        {
-          "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.html"
-        },
-        {
-          "label": "9.1 Gestión de excepciones",
-          "href": "./ut09/ut0901.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD10 — Lectura y escritura de ficheros",
-      "items": [
-        {
-          "label": "📘 UD10 Completa (1 pàgina)",
-          "href": "./ut10/index.html"
-        },
-        {
-          "label": "10.1 Lectura y escritura de información en ficheros",
-          "href": "./ut10/ut1001.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD11 — Interacción con bases de datos",
-      "items": [
-        {
-          "label": "📘 UD11 Completa (1 pàgina)",
-          "href": "./ut11/index.html"
-        },
-        {
-          "label": "11.1 Interacción con bases de datos",
-          "href": "./ut11/ut1101.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD12 — Interfaces gráficas de usuario",
-      "items": [
-        {
-          "label": "📘 UD12 Completa (1 pàgina)",
-          "href": "./ut12/index.html"
-        },
-        {
-          "label": "12.1 JavaFX",
-          "href": "./ut12/ut1201.html"
-        },
-        {
-          "label": "12.2 JavaFX",
-          "href": "./ut12/ut1202.html"
-        }
-      ]
-    }
-  ],
-  "footer": []
-}
+  {
+    "title": "UT 02: Entrada i Eixida de Dades, Tipus Primitius i Operadors en Java",
+    "url": "ut02/index.md",
+    "children": [
+      {
+        "title": "02.01: Tipus de dades primitius, literals, rangs de memòria i declaració de variables",
+        "url": "ut02/ut0201.md"
+      },
+      {
+        "title": "02.02: Operadors aritmètics, relacionals, lògics, d'assignació i precedència",
+        "url": "ut02/ut0202.md"
+      },
+      {
+        "title": "02.03: Entrada de dades per consola: la classe java.util.Scanner i gestió del buffer",
+        "url": "ut02/ut0203.md"
+      },
+      {
+        "title": "02.04: Eixida de dades formatada: System.out.printf, especificadors i la classe PrintStream",
+        "url": "ut02/ut0204.md"
+      },
+      {
+        "title": "02.05: Formulació de colors, estils i seqüències d'escapament ANSI en consola de terminal",
+        "url": "ut02/ut0205.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 03: Estructures de Control de Flux Condicionals i Iteratives",
+    "url": "ut03/index.md",
+    "children": [
+      {
+        "title": "03.01: Estructures de selecció simple i doble: blocs if, else if i else",
+        "url": "ut03/ut0301.md"
+      },
+      {
+        "title": "03.02: Estructures de selecció múltiple: switch clàssic vs Switch Expressions modernes",
+        "url": "ut03/ut0302.md"
+      },
+      {
+        "title": "03.03: Bucles precondicionals i postcondicionals: estructures while i do-while",
+        "url": "ut03/ut0303.md"
+      },
+      {
+        "title": "03.04: Bucles de recompte determinat: el bucle for clàssic i el bucle for-each millorat",
+        "url": "ut03/ut0304.md"
+      },
+      {
+        "title": "03.05: Control de flux avançat: sentències break, continue i disseny d'algorismes iteratius",
+        "url": "ut03/ut0305.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 04: Programació Estructurada i Disseny Modular: Mètodes i Àmbit",
+    "url": "ut04/index.md",
+    "children": [
+      {
+        "title": "04.01: Principis de modularitat, cohesió, acoblament i disseny funcional descendent",
+        "url": "ut04/ut0401.md"
+      },
+      {
+        "title": "04.02: Definició i invocació de mètodes: modificadors, tipus de retorn i signatura",
+        "url": "ut04/ut0402.md"
+      },
+      {
+        "title": "04.03: Mecanismes de pas de paràmetres: pas estrictament per valor en Java",
+        "url": "ut04/ut0403.md"
+      },
+      {
+        "title": "04.04: Sobrecàrrega de mètodes (Method Overloading) i resolució polimòrfica estàtica",
+        "url": "ut04/ut0404.md"
+      },
+      {
+        "title": "04.05: Àmbit de variables (Scope), cicle de vida a la pila i mètodes recursius bàsics",
+        "url": "ut04/ut0405.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 05: Estructures de Dades Estàtiques: Vectors i Matrius Multidimensionals",
+    "url": "ut05/index.md",
+    "children": [
+      {
+        "title": "05.01: Concepte d'array: memòria contigua, declaració, instanciació i mida immutable",
+        "url": "ut05/ut0501.md"
+      },
+      {
+        "title": "05.02: Recorregut, cerca seqüencial, màxims, mínims i càlculs sobre vectors",
+        "url": "ut05/ut0502.md"
+      },
+      {
+        "title": "05.03: Matrius bidimensionals i multidimensionals: taules, coordenades i matrius irregulars",
+        "url": "ut05/ut0503.md"
+      },
+      {
+        "title": "05.04: La classe d'utilitats java.util.Arrays: ordenació, cerca binària, còpia i ompliment",
+        "url": "ut05/ut0504.md"
+      },
+      {
+        "title": "05.05: Algorismes clàssics sobre arrays: ordenació per bombolla, inserció i selecció directa",
+        "url": "ut05/ut0505.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 06: Estructures de Dades Dinàmiques i Recursivitat en Java",
+    "url": "ut06/index.md",
+    "children": [
+      {
+        "title": "06.01: Arquitectura del Java Collections Framework i tipus genèrics (Generics)",
+        "url": "ut06/ut0601.md"
+      },
+      {
+        "title": "06.02: Llistes dinàmiques indexades: ArrayList vs LinkedList",
+        "url": "ut06/ut0602.md"
+      },
+      {
+        "title": "06.03: Conjunts sense duplicats: HashSet vs TreeSet i classes embolcalladores",
+        "url": "ut06/ut0603.md"
+      },
+      {
+        "title": "06.04: Diccionaris clau-valor: HashMap i TreeMap (keySet, values, entrySet)",
+        "url": "ut06/ut0604.md"
+      },
+      {
+        "title": "06.05: Fonaments de la recursivitat: cas base, descomposició i gestió de la pila",
+        "url": "ut06/ut0605.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 07: Fonaments de la Programació Orientada a Objectes (POO) en Java",
+    "url": "ut07/index.md",
+    "children": [
+      {
+        "title": "07.01: El paradigma orientat a objectes: classes, objectes, atributs i mètodes",
+        "url": "ut07/ut0701.md"
+      },
+      {
+        "title": "07.02: Constructors d'objectes, inicialització, sobrecàrrega i la paraula clau this",
+        "url": "ut07/ut0702.md"
+      },
+      {
+        "title": "07.03: Encapsulament, ocultació d'informació i modificadors d'accés",
+        "url": "ut07/ut0703.md"
+      },
+      {
+        "title": "07.04: Membres de classe estàtics (static): variables, mètodes i constants",
+        "url": "ut07/ut0704.md"
+      },
+      {
+        "title": "07.05: Cicle de vida dels objectes, memòria Stack vs Heap i el mètode toString()",
+        "url": "ut07/ut0705.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 08: Programació Orientada a Objectes Avançada: Herència, Polimorfisme i Interfícies",
+    "url": "ut08/index.md",
+    "children": [
+      {
+        "title": "08.01: Herència en Java: reutilització de codi amb extends, super i @Override",
+        "url": "ut08/ut0801.md"
+      },
+      {
+        "title": "08.02: Classes i mètodes abstractes: la paraula clau abstract i jerarquies",
+        "url": "ut08/ut0802.md"
+      },
+      {
+        "title": "08.03: Interfícies (interface): contractes de disseny, mètodes default i static",
+        "url": "ut08/ut0803.md"
+      },
+      {
+        "title": "08.04: Polimorfisme dinàmic, late binding, càstings i pattern matching amb instanceof",
+        "url": "ut08/ut0804.md"
+      },
+      {
+        "title": "08.05: La classe arrel Object: equals(), hashCode() i ordenació amb Comparable i Comparator",
+        "url": "ut08/ut0805.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 09: Gestió d'Errors i Control d'Excepcions en Temps d'Execució",
+    "url": "ut09/index.md",
+    "children": [
+      {
+        "title": "09.01: Jerarquia d'errors i excepcions: Throwable, Error, Exception i RuntimeException",
+        "url": "ut09/ut0901.md"
+      },
+      {
+        "title": "09.02: Tractament estructurat: blocs try, catch, multi-catch i finally",
+        "url": "ut09/ut0902.md"
+      },
+      {
+        "title": "09.03: Gestió automàtica de recursos: try-with-resources i la interfície AutoCloseable",
+        "url": "ut09/ut0903.md"
+      },
+      {
+        "title": "09.04: Propagació i llançament: les paraules clau throw, throws i encadenament",
+        "url": "ut09/ut0904.md"
+      },
+      {
+        "title": "09.05: Creació d'excepcions personalitzades i bones pràctiques d'enginyeria",
+        "url": "ut09/ut0905.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 10: Persistència en Fitxers i Entrada/Eixida de Fluxos (Java I/O i NIO.2)",
+    "url": "ut10/index.md",
+    "children": [
+      {
+        "title": "10.01: Arquitectura de fluxos (Streams): bytes vs caràcters (I/O clàssic)",
+        "url": "ut10/ut1001.md"
+      },
+      {
+        "title": "10.02: Lectura i escriptura eficient de text: BufferedReader, BufferedWriter i PrintWriter",
+        "url": "ut10/ut1002.md"
+      },
+      {
+        "title": "10.03: Java NIO.2: gestió moderna del sistema de fitxers amb Path i Files",
+        "url": "ut10/ut1003.md"
+      },
+      {
+        "title": "10.04: Dades binàries i accés directe: DataStreams i RandomAccessFile",
+        "url": "ut10/ut1004.md"
+      },
+      {
+        "title": "10.05: Serialització d'objectes: Serializable, serialVersionUID i transient",
+        "url": "ut10/ut1005.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 11: Accés a Bases de Dades Relacionals amb JDBC i el Patró DAO",
+    "url": "ut11/index.md",
+    "children": [
+      {
+        "title": "11.01: Arquitectura JDBC: controladors (Drivers), URLs de connexió i DriverManager",
+        "url": "ut11/ut1101.md"
+      },
+      {
+        "title": "11.02: Sentències SQL segures: perills de Statement i protecció amb PreparedStatement",
+        "url": "ut11/ut1102.md"
+      },
+      {
+        "title": "11.03: Consulta i mapatge de dades: la interfície ResultSet i tancament de cursors",
+        "url": "ut11/ut1103.md"
+      },
+      {
+        "title": "11.04: Gestió de transaccions ACID: control d'autocommit, commit i rollback",
+        "url": "ut11/ut1104.md"
+      },
+      {
+        "title": "11.05: Arquitectura per capes i el patró de disseny DAO (Data Access Object)",
+        "url": "ut11/ut1105.md"
+      }
+    ]
+  },
+  {
+    "title": "UT 12: Desenvolupament d'Interfícies Gràfiques d'Usuari (GUI) amb JavaFX",
+    "url": "ut12/index.md",
+    "children": [
+      {
+        "title": "12.01: Arquitectura de JavaFX: Application, fil d'execució gràfic, Stage i Scene",
+        "url": "ut12/ut1201.md"
+      },
+      {
+        "title": "12.02: Arbre de nodes (Scene Graph) i contenidors de disseny (Layouts)",
+        "url": "ut12/ut1202.md"
+      },
+      {
+        "title": "12.03: Controls gràfics d'usuari: formularis i taules amb TableView",
+        "url": "ut12/ut1203.md"
+      },
+      {
+        "title": "12.04: Gestió d'esdeveniments amb lambda i propietats reactives (Binding)",
+        "url": "ut12/ut1204.md"
+      },
+      {
+        "title": "12.05: Arquitectura MVC amb FXML, SceneBuilder i classes controladores",
+        "url": "ut12/ut1205.md"
+      }
+    ]
+  }
+]
