@@ -1,116 +1,116 @@
-# UT 06: Sistemes Empresarials de Gestió d'Informació i Continguts (CMS)
+---
+layout: default
+title: "UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD) — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD6"
+prev_url: "../ut05/index.html"
+prev_label: "⬅️ UD5"
+next_url: "ut0600.html"
+next_label: "📋 6.0 Proposta Didàctica: Validació de documents ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut06" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa capacita l'alumnat en la selecció, implantació, personalització i administració de **Sistemes de Gestió de Continguts** (*Content Management Systems* - CMS) en entorns corporatius. Els CMS constitueixen la infraestructura sobre la qual descansa més del 60% dels llocs web i portals empresarials mundials.
-
-S'analitzen en profunditat:
-- **Models Arquitectònics:** Des de l'enfocament monolític acoblat (com WordPress o Drupal en una pila LAMP/LEMP) fins als moderns paradigmes **Headless CMS** i arquitectures desacoblades JAMstack (JavaScript, APIs, Markup).
-- **Desplegament i Configuració de Servidor:** Infraestructura d'execució (Apache/Nginx, PHP, MariaDB/MySQL), permisos del sistema de fitxers i connexió amb motors de bases de dades.
-- **Govern de la Informació:** Control d'accés basat en rols (**RBAC** - Role-Based Access Control), moderació editorial, taxonomies i sindicació automatitzada.
-- **Desenvolupament i Extensibilitat:** Creació i adaptació de plantilles visuals (*themes*) combinant HTML5, CSS3 i llenguatges de plantilla (com Blade o Twig), hooks i desenvolupament de connectors (*plugins*).
-- **Manteniment Tècnic:** Estratègies d'optimització de rendiment web (**WPO** - Web Performance Optimization), sistemes de memòria cau (*caching*), seguretat defensiva (mitigació d'injeccions SQL i atacs de força bruta) i integració de mòduls d'e-Commerce corporatiu.
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA6 (DAW / DAM / ASIX):** Gestiona informació en sistemes empresarials utilitzant sistemes de gestió de continguts i eines de gestió empresarial.
-  - **CA 6.a:** S'han identificat els components i funcionalitats dels sistemes de gestió d'informació empresarial.
-  - **CA 6.b:** S'han instal·lat i configurat gestors de continguts en entorns de servidor locals o remots.
-  - **CA 6.c:** S'han establit mecanismes de seguretat, gestió d'usuaris, rols i perfils d'accés.
-  - **CA 6.d:** S'han personalitzat aspectes visuals i funcionals adaptant plantilles i instal·lant extensions o mòduls.
-  - **CA 6.e:** S'han definit estratègies de còpia de seguretat, restauració i migració de continguts.
-  - **CA 6.f:** S'han integrat mecanismes de publicació, catalogació i comerç electrònic.
+Benvingut/da a la **Unitat Didàctica 6** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 06.01: Fonaments i arquitectura dels CMS: models monolítics vs Headless CMS](./ut0601.md)
-2. [UT 06.02: Instal·lació, desplegament i configuració de servidors (LAMP/LEMP, BD i permisos)](./ut0602.md)
-3. [UT 06.03: Gestió d'usuaris, rols, permisos (RBAC) i cicle de publicació de continguts](./ut0603.md)
-4. [UT 06.04: Personalització avançada: plantilles (Themes), connectors (Plugins) i taxonomies](./ut0604.md)
-5. [UT 06.05: Seguretat, optimització WPO, còpies de seguretat i integració de comerç electrònic](./ut0605.md)
+1. **[📋 6.0 Proposta Didàctica: Validació de documents](ut0600.html)**
+1. **[6.1 Descripció de la informació i les seues regles](ut0601.html)**
+1. **[6.2 Tecnologies per a definir documents](ut0602.html)**
+1. **[6.3 Estructura i Sintaxi de les descripcions](ut0603.html)**
+1. **[6.4 Creació de descripcions de documents](ut0604.html)**
+1. **[6.5 Ús de descripcions per a validar documents](ut0605.html)**
+1. **[6.6 Eines específiques per a la validació](ut0606.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut06-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Arquitectura Monolítica vs Headless CMS</h4>
+- **[⚡ Activitat 601: DTD](act601.html)**
+- **[📓 Recull Complet d'Activitats (UD6)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="Els elements amb atributs o subelements es defineixen amb xs:complexType.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En un esquema XSD, com es denomina un element que conté altres subelements fills o atributs?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Tipus complex (<code>xs:complexType</code>).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Tipus simple (<code>xs:simpleType</code>).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Comentari DTD.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Atribut buit.</button>
   </div>
-  <p class="challenge-question">Quina és la diferència arquitectònica essencial entre un CMS monolític clàssic (com WordPress estàndard) i un Headless CMS (com Strapi o Contentful)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) El Headless CMS no disposa de base de dades i emmagatzema tot en fitxers plans TXT.</button>
-    <button class="btn-check" data-correct="true">B) El CMS monolític manté acoblats estretament el panell de gestió de continguts (backend) i la capa de presentació visual (frontend), mentre que un Headless CMS desacobla per complet la presentació i exposa els continguts exclusivament mitjançant una API REST o GraphQL per a ser consumits per qualsevol client (web, mòbil, IoT).</button>
-    <button class="btn-check" data-correct="false">C) El CMS monolític només s'executa en sistemes Windows Server.</button>
-    <button class="btn-check" data-correct="false">D) El Headless CMS impedeix la creació de rols d'usuari.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut06-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Permisos de Fitxers en Servidors Web (Linux POSIX)</h4>
+<div class="interactive-mcq" data-answer="A" data-hint="xs:pattern valida el valor mitjançant una expressió regular.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quina faceta (restricció) d'XML Schema permet obligar que un text complisca una expressió regular (com un DNI <code>\d{8}[A-Z]</code>)?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) xs:pattern</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) xs:minInclusive</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) xs:totalDigits</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) xs:sequence</button>
   </div>
-  <p class="challenge-question">Per quina raó tècnica de seguretat s'ha d'evitar taxativament assignar el permís 777 (rwxrwxrwx) als directoris arrel d'un CMS en un servidor de producció?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Perquè impedeix que els visitants de la web puguen llegir les imatges PNG.</button>
-    <button class="btn-check" data-correct="true">B) Perquè atorga privilegis universals d'escriptura i execució a qualsevol usuari del sistema, permetent que si un atacant descobreix una vulnerabilitat de pujada de fitxers puga executar scripts maliciosos de shell inversa i prendre el control complet del servidor.</button>
-    <button class="btn-check" data-correct="false">C) Perquè augmenta el consum d'energia elèctrica de la CPU.</button>
-    <button class="btn-check" data-correct="false">D) Perquè el motor MariaDB bloqueja les consultes SELECT en carpetes amb permís 777.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut06-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Control d'Accés Basat en Rols (RBAC)</h4>
+<div class="interactive-vf" data-answer="V" data-hint="Per defecte minOccurs i maxOccurs valen 1; per a il·limitat s'utilitza maxOccurs="unbounded".">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> En XML Schema (XSD), els atributs <code>minOccurs</code> i <code>maxOccurs</code> permeten definir el nombre mínim i màxim d'aparicions d'un element.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">En l'administració d'un gestor de continguts corporatiu, quin principi de seguretat exigeix assignar el rol d'«Editor» o «Autor» en comptes d'«Administrador» a les persones encarregades de redactar notícies?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) El principi d'amplitud funcional.</button>
-    <button class="btn-check" data-correct="true">B) El principi del Mínim Privilegi (Least Privilege), que garanteix que cada perfil només dispose dels drets estrictament necessaris per a desenvolupar la seua tasca, protegint la configuració de connectors, base de dades i actualitzacions de seguretat.</button>
-    <button class="btn-check" data-correct="false">C) El principi de paritat dev/prod.</button>
-    <button class="btn-check" data-correct="false">D) El principi de compatibilitat de versions.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut06-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Estratègies d'Optimització WPO: Memòria Cau de Pàgina</h4>
+<div class="interactive-quiz" data-answer="dtd" data-hint="Són les sigles DTD (Document Type Definition).">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quines són les sigles de Definició de Tipus de Document (<code>&lt;!DOCTYPE ...&gt;</code>) utilitzada clàssicament per a validar XML?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Com redueix la càrrega del servidor d'un CMS la implementació d'un sistema de memòria cau de pàgina completa (*Full Page Caching*)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Eliminant la base de dades i obligant els usuaris a descarregar el codi font en format ZIP.</button>
-    <button class="btn-check" data-correct="true">B) Generant una còpia estàtica en HTML pla de les pàgines visitades amb freqüència, servint-la directament al client sense haver d'executar el runtime de PHP ni realitzar desenes de consultes SQL a la base de dades en cada petició.</button>
-    <button class="btn-check" data-correct="false">C) Reduint la resolució de pantalla dels clients connectats.</button>
-    <button class="btn-check" data-correct="false">D) Desactivant el xifratge TLS/HTTPS.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 6 LMSGI</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 6</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD06" data-activity="ut06_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

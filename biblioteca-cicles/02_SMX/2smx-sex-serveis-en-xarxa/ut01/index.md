@@ -1,135 +1,116 @@
 ---
-layout: default
-title: "UT 01: Serveis de Xarxa i Assignació Dinàmica d'Adreces (DHCP)"
-parent: "2n SMX · Serveis en Xarxa"
-has_children: true
-nav_order: 1
+title: "UT1 — Mètodes d'Accés i Administració Remota (RA6)"
+unit: "1"
+module: "SEX"
+layout: "default"
+course_root: ".."
+badge: "2n SMX · Serveis en Xarxa · UT01"
 ---
 
-# 🌐 Unitat Temàtica 01: Serveis de Xarxa i Assignació Dinàmica d'Adreces (DHCP)
-
-<div class="interactive-progress-tracker" data-module="SEX" data-unit="1" data-topic="0">
-  <div class="progress-bar-container">
-    <div class="progress-fill"></div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span class="progress-text">Progrés global de la unitat: 0%</span>
-    <span class="points-badge">0 / 475 punts</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-Benvingut/da a la **Unitat Temàtica 01** de **Serveis en Xarxa (SEX)**. En aquesta primera unitat establirem els fonaments de l'arquitectura client-servidor i dominarem l'estudi, desplegament, gestió i diagnosi del servei d'assignació dinàmica d'adreces IP mitjançant el protocol **DHCP** tant a entorns Linux (ISC-DHCP Server) com a servidors Windows Server 2022.
+# 📘 UT1 — Mètodes d'Accés i Administració Remota (RA6)
+
+> **📌 Resultat d'Aprenentatge i Objectius:** RA6. Gestiona mètodes d'accés remot descrivint les seues característiques i instal·lant els serveis corresponents (SSH, RDP, Remmina, PuTTY en Windows Server i Ubuntu Server sobre AWS).
+
+## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
+
+| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
+| :--- | :--- | :--- |
+| **1.1** | **1.1 - Introducció** | [Obrir apartat ➡️](./ut0101.html) |
+| **1.2** | **1.2 - Conceptes i definició** | [Obrir apartat ➡️](./ut0102.html) |
+| **1.3** | **1.3 - Riscos i inconvenients associats al control extern** | [Obrir apartat ➡️](./ut0103.html) |
+| **1.4** | **1.4 - Bones pràctiques i mesures de seguretat** | [Obrir apartat ➡️](./ut0104.html) |
+| **1.5** | **1.5 - Tasca RA6-CEa - Mètodes d'accés i administració remota** | [Obrir apartat ➡️](./ut0105.html) |
+| **1.6** | **1.6 Tasca RA6-CEbcd-1 - Instal·lació i connexió remota a Windows Server 2025 en AWS** | [Obrir apartat ➡️](./ut0106.html) |
+| **1.7** | **1.7 Tasca RA6-CEbcd-2 - Instal·lació i connexió remota a Ubuntu Server 24.04 LTS en AWS** | [Obrir apartat ➡️](./ut0107.html) |
+| **1.8** | **1.8 - Tasca RA6-CEf-1 - Connexió remota des de Ubuntu Server 24.04 LTS a SO Windows** | [Obrir apartat ➡️](./ut0108.html) |
+| **1.9** | **1.9 - Administració remota segura amb SSH (Secure Shell)** | [Obrir apartat ➡️](./ut0109.html) |
 
 ---
 
-## 🎯 Resultats d'Aprenentatge i Criteris d'Avaluació (RA1)
+## 🎯 Resum d'Aprenentatge i Metodologia
 
-D'acord amb el currículum oficial (Reial Decret 1691/2007 i Decret 81/2010 CV), aquesta unitat desenvolupa el **Resultat d'Aprenentatge 1 (RA1)**: *Instal·la serveis de configuració dinàmica d'adreces, descrivint les seues característiques i verificant l'assignació correcta de paràmetres de xarxa a clients heterogenis*:
+Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
 
-- **a)** S'han identificat els avantatges de la configuració automàtica d'adreces enfront de la manual.
-- **b)** S'ha descrit el funcionament del protocol DHCP i el cicle de negociació DORA mitjançant ports UDP 67 i 68.
-- **c)** S'ha instal·lat i configurat un servidor DHCP a Linux definint rangs, exclusions, opcions de xarxa i temps de concessió.
-- **d)** S'han assignat reserves d'adreces IP estàtiques vinculades a l'adreça física MAC.
-- **e)** S'ha desplegat el rol DHCP a Windows Server 2022 i gestionat la seua autorització a l'Active Directory.
-- **f)** S'ha descrit la necessitat d'agents de retransmissió (DHCP Relay) en xarxes segmentades en múltiples subxarxes o VLANs.
-- **g)** S'han aplicat comandes de diagnosi i analitzat concessions mitjançant eines de xarxa i Wireshark.
+
 
 ---
 
-## 🗺️ Mapa de Continguts de la Unitat
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-| Subtema | Títol | Descripció i Objectius Clau | Punts XP |
-| :---: | :--- | :--- | :---: |
-| **1.1** | [Arquitectura Client-Servidor i el Protocol DHCP](ut0101.md) | Adreçament estàtic vs dinàmic, ports UDP 67/68, cicle DORA (Discover, Offer, Request, ACK) i temporitzadors T1/T2. | **75 XP** |
-| **1.2** | [Instal·lació i Configuració del Servidor DHCP a Linux](ut0102.md) | ISC-DHCP Server, IP estàtica prèvia, sintaxi de `dhcpd.conf`, directives `subnet`, `range`, `option routers` i `domain-name-servers`. | **75 XP** |
-| **1.3** | [Reserves d'IP per MAC i Gestió de Concessions](ut0103.md) | Blocs `host` amb `hardware ethernet` i `fixed-address`, registre de concessions `dhcpd.leases` i eina `dhcp-lease-list`. | **75 XP** |
-| **1.4** | [Servidor DHCP a Windows Server 2022](ut0104.md) | Rol DHCP, autorització a Active Directory, àmbits IPv4, exclusions, opcions de servidor vs àmbit i cmdlets de PowerShell. | **75 XP** |
-| **1.5** | [Diagnosi, DHCP Relay i Alta Disponibilitat (Failover)](ut0105.md) | Dominis de difusió, agent DHCP Relay (ip helper-address), models de Failover (Load Balancing vs Hot Standby) i comandes `dhclient`/`ipconfig`. | **75 XP** |
+Comprova el teu domini sobre **UT1 — Mètodes d'Accés i Administració Remota (RA6)** superant aquests 4 reptes gamificats (+25 punts cadascun):
 
----
-
-## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
-
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 1 · Comunicació DORA</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-mcq" data-answer="D" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Per a connectar-se des de Windows amb PuTTY a una instància Ubuntu Server en AWS que proporciona una clau privada en format .pem, quina eina s'ha d'utilitzar prèviament?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Wireshark, per a desencriptar la clau .pem en la xarxa.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) FileZilla Server, per a compilar el fitxer .pem.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) PuTTYgen, per a convertir el fitxer .pem al format natiu .ppk de PuTTY.</button>
   </div>
-  <p class="challenge-question">Quina adreça IP utilitza un client DHCP com a IP d'origen en el paquet inicial DHCPDISCOVER quan encara no té assignada cap adreça de xarxa?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s1" value="0"> <code>127.0.0.1</code></label>
-    <label><input type="radio" name="s1" value="1" data-correct="true"> <code>0.0.0.0</code></label>
-    <label><input type="radio" name="s2" value="2"> <code>255.255.255.255</code></label>
-    <label><input type="radio" name="s3" value="3"> <code>192.168.1.1</code></label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 2 · Linux isc-dhcp</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-mcq" data-answer="C" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En quin fitxer del directori ~/.ssh/ d'un servidor Linux s'emmagatzemen les claus públiques autoritzades per a l'accés SSH sense contrasenya?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) id_rsa.priv</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) authorized_keys</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) known_hosts</button>
   </div>
-  <p class="challenge-question">Quina directiva de configuració s'ha d'afegir a `/etc/default/isc-dhcp-server` per indicar que el servei només responga a les peticions que entren per la targeta 'eth1'?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s2" value="0"> <code>LISTEN_PORT="eth1"</code></label>
-    <label><input type="radio" name="s2" value="1" data-correct="true"> <code>INTERFACESv4="eth1"</code></label>
-    <label><input type="radio" name="s2" value="2"> <code>BIND_DEVICE="eth1"</code></label>
-    <label><input type="radio" name="s2" value="3"> <code>CARD="eth1"</code></label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 3 · Segmentació</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> En acabar una pràctica en AWS Academy Learner Lab, cal aturar (Stop) les instàncies EC2 per a evitar consumir el pressupost de crèdits del laboratori.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Si una empresa té tres plantes cadascuna amb la seua pròpia VLAN i un únic servidor DHCP centralitzat a la sala de servidors, quin servei cal habilitar a l'encaminador de cada planta?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s3" value="0"> Un servidor FTP</label>
-    <label><input type="radio" name="s3" value="1" data-correct="true"> Un agent de retransmissió DHCP (DHCP Relay Agent / ip helper-address)</label>
-    <label><input type="radio" name="s3" value="2"> Un certificat SSL</label>
-    <label><input type="radio" name="s3" value="3"> Un servidor Web Apache</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 4 · Resiliència</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-quiz" data-answer="ssh" data-hint="Les 3 lletres de Secure Shell.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina ordre de consola s'utilitza en Linux i Windows PowerShell per a iniciar una connexió segura de terminal remot cap a un servidor?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Com es denomina la tecnologia que permet que dos servidors DHCP sincronitzen les seues concessions perquè la xarxa no caiga si un d'ells s'apaga?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s4" value="0"> DHCP Tunneling</label>
-    <label><input type="radio" name="s4" value="1" data-correct="true"> DHCP Failover</label>
-    <label><input type="radio" name="s4" value="2"> DHCP Snooping</label>
-    <label><input type="radio" name="s4" value="3"> DHCP Poisoning</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
----
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT1 — Mètodes d'Accés i Administració Remota (RA6)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-header">
-    <span class="delivery-icon">📬</span>
-    <div>
-      <h3 class="delivery-title">Projecte de Síntesi Aules: Desplegament Integral de Servidor DHCP Multiplataforma</h3>
-      <p class="delivery-subtitle">Memòria tècnica de disseny d'àmbits, reserves per a servidors i anàlisi de concessions.</p>
-    </div>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <div class="delivery-instructions">
-    <p>Presenta un document tècnic complet sobre la implementació d'un servei DHCP per a una pime fictícia de 50 equips: defineix l'esquema d'adreçament, les exclusions d'adreces per a routers, 2 reserves per a impressores departamentals, la configuració del temps de concessió i una captura d'un client obtenint tots els paràmetres de xarxa.</p>
-    <div class="delivery-meta">
-      <span class="badge-format">Format: PDF institucional complet</span>
-      <span class="badge-deadline">Pes: Projecte Pràctic de la UD01</span>
-    </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
   </div>
-  <button class="btn-aules-download" data-module="SEX" data-unit="1" data-topic="0">📥 Descarrega Especificació del Projecte (PDF)</button>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="SEX" data-unit="UD01" data-activity="ut01_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

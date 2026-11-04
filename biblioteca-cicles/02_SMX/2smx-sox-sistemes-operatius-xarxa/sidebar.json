@@ -1,164 +1,219 @@
-[
-  {
-    "title": "Sistemes Operatius en Xarxa",
-    "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/index.html",
-    "children": [
-      {
-        "title": "UT 01: Introducció i Instal·lació de SOX",
-        "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut01/index.html",
-        "children": [
-          {
-            "title": "1.1 Arquitectura Client-Servidor i NOS",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut01/ut0101.html"
-          },
-          {
-            "title": "1.2 Planificació de la Instal·lació i Requisits",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut01/ut0102.html"
-          },
-          {
-            "title": "1.3 Instal·lació de Windows Server",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut01/ut0103.html"
-          },
-          {
-            "title": "1.4 Instal·lació de Linux Server",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut01/ut0104.html"
-          },
-          {
-            "title": "1.5 Virtualització i Rols en Laboratori",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut01/ut0105.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 02: Administració i Gestió de Dominis",
-        "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut02/index.html",
-        "children": [
-          {
-            "title": "2.1 Conceptes d'Active Directory i LDAP",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut02/ut0201.html"
-          },
-          {
-            "title": "2.2 Promoció a Controlador de Domini",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut02/ut0202.html"
-          },
-          {
-            "title": "2.3 Gestió d'Unitats Organitzatives",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut02/ut0203.html"
-          },
-          {
-            "title": "2.4 Vinculació d'Equips Client",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut02/ut0204.html"
-          },
-          {
-            "title": "2.5 Replicació i Rols FSMO",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut02/ut0205.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 03: Usuaris, Grups i Directives GPO",
-        "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/index.html",
-        "children": [
-          {
-            "title": "3.1 Gestió de Comptes d'Usuari",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/ut0301.html"
-          },
-          {
-            "title": "3.2 Estratègia de Grups i Metodologia AGDLP",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/ut0302.html"
-          },
-          {
-            "title": "3.3 Arquitectura de GPO",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/ut0303.html"
-          },
-          {
-            "title": "3.4 Desplegament de Polítiques Corporatives",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/ut0304.html"
-          },
-          {
-            "title": "3.5 Usuaris i Grups en Linux Server",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/ut0305.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 04: Recursos Compartits en Xarxa",
-        "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut04/index.html",
-        "children": [
-          {
-            "title": "4.1 Protocols de Compartició (SMB i NFS)",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut04/ut0401.html"
-          },
-          {
-            "title": "4.2 Permisos de Compartició vs. NTFS",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut04/ut0402.html"
-          },
-          {
-            "title": "4.3 Carpetes Personals i Redirecció",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut04/ut0403.html"
-          },
-          {
-            "title": "4.4 Quotes de Disc i FSRM",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut04/ut0404.html"
-          },
-          {
-            "title": "4.5 Servidor d'Arxius en Linux (NFS)",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut04/ut0405.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 05: Monitorització, Rendiment i Manteniment",
-        "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut05/index.html",
-        "children": [
-          {
-            "title": "5.1 Eines de Monitorització",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut05/ut0501.html"
-          },
-          {
-            "title": "5.2 Registres d'Esdeveniments i Logs",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut05/ut0502.html"
-          },
-          {
-            "title": "5.3 Automatització de Tasques",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut05/ut0503.html"
-          },
-          {
-            "title": "5.4 Actualitzacions i Parxejat",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut05/ut0504.html"
-          },
-          {
-            "title": "5.5 Monitorització Centralitzada (SNMP/Zabbix)",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut05/ut0505.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 06: Integració de Sistemes Lliures i Propietaris",
-        "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut06/index.html",
-        "children": [
-          {
-            "title": "6.1 Fonaments d'Interoperabilitat",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut06/ut0601.html"
-          },
-          {
-            "title": "6.2 Desplegament de Servidors Samba",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut06/ut0602.html"
-          },
-          {
-            "title": "6.3 Samba com a Membre d'AD",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut06/ut0603.html"
-          },
-          {
-            "title": "6.4 Samba 4 com a DC",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut06/ut0604.html"
-          },
-          {
-            "title": "6.5 Accés Remot Segur i Multiplataforma",
-            "url": "/02_SMX/2smx-sox-sistemes-operatius-xarxa/ut06/ut0605.html"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "title": "🌐 Sistemes Operatius en Xarxa — 2n SMX · Grau Mitjà",
+  "home": {
+    "label": "🏠 Portada del Mòdul",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT 01: Introducció i Instal·lació de Sistemes Operatius en Xarxa",
+      "items": [
+        {
+          "label": "📘 UT01 Completa (1 pàgina)",
+          "href": "./ut01/index.html",
+          "class": ""
+        },
+        {
+          "label": "1.1 Arquitectura Client-Servidor i Sistemes Operatius en Xarxa",
+          "href": "./ut01/ut0101.html",
+          "class": ""
+        },
+        {
+          "label": "1.2 Planificació de la Instal·lació i Requisits de Maquinari",
+          "href": "./ut01/ut0102.html",
+          "class": ""
+        },
+        {
+          "label": "1.3 Instal·lació de Windows Server: Interfície Gràfica vs. Server Core",
+          "href": "./ut01/ut0103.html",
+          "class": ""
+        },
+        {
+          "label": "1.4 Instal·lació i Configuració Base de Linux Server",
+          "href": "./ut01/ut0104.html",
+          "class": ""
+        },
+        {
+          "label": "1.5 Virtualització de Servidors i Rols Bàsics en Laboratori",
+          "href": "./ut01/ut0105.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 02: Administració i Gestió de Dominis (Active Directory)",
+      "items": [
+        {
+          "label": "📘 UT02 Completa (1 pàgina)",
+          "href": "./ut02/index.html",
+          "class": ""
+        },
+        {
+          "label": "2.1 Conceptes de Directori i Arquitectura d'Active Directory",
+          "href": "./ut02/ut0201.html",
+          "class": ""
+        },
+        {
+          "label": "2.2 Promoció d'un Servidor a Controlador de Domini",
+          "href": "./ut02/ut0202.html",
+          "class": ""
+        },
+        {
+          "label": "2.3 Gestió d'Unitats Organitzatives (OUs) i Estructuració del Domini",
+          "href": "./ut02/ut0203.html",
+          "class": ""
+        },
+        {
+          "label": "2.4 Vinculació d'Equips Client al Domini",
+          "href": "./ut02/ut0204.html",
+          "class": ""
+        },
+        {
+          "label": "2.5 Replicació de Dominis, Controladors Secundaris i Rols FSMO",
+          "href": "./ut02/ut0205.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 03: Administració d'Usuaris, Grups i Directives GPO",
+      "items": [
+        {
+          "label": "📘 UT03 Completa (1 pàgina)",
+          "href": "./ut03/index.html",
+          "class": ""
+        },
+        {
+          "label": "3.1 Gestió de Comptes d'Usuari en Sistemes en Xarxa",
+          "href": "./ut03/ut0301.html",
+          "class": ""
+        },
+        {
+          "label": "3.2 Estratègia i Administració de Grups (Metodologia AGDLP)",
+          "href": "./ut03/ut0302.html",
+          "class": ""
+        },
+        {
+          "label": "3.3 Introducció i Arquitectura dels Objectes de Directiva de Grup (GPO)",
+          "href": "./ut03/ut0303.html",
+          "class": ""
+        },
+        {
+          "label": "3.4 Desplegament de Polítiques Corporatives amb GPO",
+          "href": "./ut03/ut0304.html",
+          "class": ""
+        },
+        {
+          "label": "3.5 Administració d'Usuaris i Grups en Linux Server",
+          "href": "./ut03/ut0305.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 04: Gestió i Protecció de Recursos Compartits en Xarxa",
+      "items": [
+        {
+          "label": "📘 UT04 Completa (1 pàgina)",
+          "href": "./ut04/index.html",
+          "class": ""
+        },
+        {
+          "label": "4.1 Protocols de Compartició de Fitxers (SMB/CIFS i NFS)",
+          "href": "./ut04/ut0401.html",
+          "class": ""
+        },
+        {
+          "label": "4.2 Permisos de Compartició vs. Permisos de Seguretat NTFS",
+          "href": "./ut04/ut0402.html",
+          "class": ""
+        },
+        {
+          "label": "4.3 Carpetes Personals d'Usuari i Redirecció de Carpetes per GPO",
+          "href": "./ut04/ut0403.html",
+          "class": ""
+        },
+        {
+          "label": "4.4 Quotes de Disc i Filtració de Fitxers amb FSRM",
+          "href": "./ut04/ut0404.html",
+          "class": ""
+        },
+        {
+          "label": "4.5 Servidor d'Arxius en Linux: Servidors NFS i Exportació",
+          "href": "./ut04/ut0405.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 05: Monitorització, Rendiment i Manteniment de SOX",
+      "items": [
+        {
+          "label": "📘 UT05 Completa (1 pàgina)",
+          "href": "./ut05/index.html",
+          "class": ""
+        },
+        {
+          "label": "5.1 Eines de Monitorització del Sistema i Mètriques Clau",
+          "href": "./ut05/ut0501.html",
+          "class": ""
+        },
+        {
+          "label": "5.2 Registres d'Esdeveniments (Logs) i Diagnòstic",
+          "href": "./ut05/ut0502.html",
+          "class": ""
+        },
+        {
+          "label": "5.3 Automatització de Tasques i Programació",
+          "href": "./ut05/ut0503.html",
+          "class": ""
+        },
+        {
+          "label": "5.4 Gestió d'Actualitzacions i Pegats de Seguretat",
+          "href": "./ut05/ut0504.html",
+          "class": ""
+        },
+        {
+          "label": "5.5 Servidors de Monitorització Centralitzada (SNMP, Zabbix)",
+          "href": "./ut05/ut0505.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 06: Integració i Interoperabilitat de Sistemes Lliures i Propietaris",
+      "items": [
+        {
+          "label": "📘 UT06 Completa (1 pàgina)",
+          "href": "./ut06/index.html",
+          "class": ""
+        },
+        {
+          "label": "6.1 Fonaments d'Interoperabilitat entre Windows i Linux",
+          "href": "./ut06/ut0601.html",
+          "class": ""
+        },
+        {
+          "label": "6.2 Desplegament i Configuració d'un Servidor Samba en Linux",
+          "href": "./ut06/ut0602.html",
+          "class": ""
+        },
+        {
+          "label": "6.3 Integració de Samba com a Servidor Membre d'Active Directory",
+          "href": "./ut06/ut0603.html",
+          "class": ""
+        },
+        {
+          "label": "6.4 Samba 4 com a Controlador de Domini AD DS",
+          "href": "./ut06/ut0604.html",
+          "class": ""
+        },
+        {
+          "label": "6.5 Accés Remot Segur i Administració Multiplataforma",
+          "href": "./ut06/ut0605.html",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

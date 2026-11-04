@@ -1,190 +1,254 @@
-[
-  {
-    "title": "Seguretat Informàtica",
-    "url": "/02_SMX/2smx-si-seguretat-informatica/index.html",
-    "children": [
-      {
-        "title": "UT 01: Fonaments de Seguretat i Riscos",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut01/index.html",
-        "children": [
-          {
-            "title": "1.1 Concepte de Seguretat i Tríada CIA",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut01/ut0101.html"
-          },
-          {
-            "title": "1.2 Vulnerabilitats, Amenaces i Atacs",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut01/ut0102.html"
-          },
-          {
-            "title": "1.3 Gestió del Risc i Metodologia Magerit",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut01/ut0103.html"
-          },
-          {
-            "title": "1.4 Mecanismes de Seguretat i Polítiques",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut01/ut0104.html"
-          },
-          {
-            "title": "1.5 Classificació i Auditoria de la Informació",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut01/ut0105.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 02: Seguretat Passiva, CPD i SAI",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut02/index.html",
-        "children": [
-          {
-            "title": "2.1 Ubicació i Disseny Físic del CPD",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut02/ut0201.html"
-          },
-          {
-            "title": "2.2 Control d'Accés Físic i Biometria",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut02/ut0202.html"
-          },
-          {
-            "title": "2.3 Sistemes d'Alimentació Ininterrompuda (SAI)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut02/ut0203.html"
-          },
-          {
-            "title": "2.4 Climatització i Protecció contra Incendis",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut02/ut0204.html"
-          },
-          {
-            "title": "2.5 Cablejat Estructurat i Seguretat Ambiental",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut02/ut0205.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 03: Seguretat Lògica i Control d'Accés",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut03/index.html",
-        "children": [
-          {
-            "title": "3.1 Identificació, Autenticació i Autorització",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut03/ut0301.html"
-          },
-          {
-            "title": "3.2 Polítiques de Contrasenyes i MFA (2FA)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut03/ut0302.html"
-          },
-          {
-            "title": "3.3 Permisos de Fitxers i Sistemes Segurs",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut03/ut0303.html"
-          },
-          {
-            "title": "3.4 Models de Control: DAC, RBAC i MAC",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut03/ut0304.html"
-          },
-          {
-            "title": "3.5 Directori Actiu i Gestió Centralitzada",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut03/ut0305.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 04: Emmagatzematge Segur, RAID i Backup",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut04/index.html",
-        "children": [
-          {
-            "title": "4.1 Tecnologies d'Emmagatzematge i RAID",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut04/ut0401.html"
-          },
-          {
-            "title": "4.2 Estratègia de Còpies de Seguretat: Regla 3-2-1",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut04/ut0402.html"
-          },
-          {
-            "title": "4.3 Tipus de Còpies: Completa, Diferencial i Incremental",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut04/ut0403.html"
-          },
-          {
-            "title": "4.4 Sistemes i Eines de Backup (Rsync, Veeam)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut04/ut0404.html"
-          },
-          {
-            "title": "4.5 Plans de Continuïtat de Negoci i DRP",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut04/ut0405.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 05: Seguretat Activa, Malware i Hardening",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut05/index.html",
-        "children": [
-          {
-            "title": "5.1 Tipologia de Programari Maliciós (Malware)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut05/ut0501.html"
-          },
-          {
-            "title": "5.2 Antivirus, EDR i Anàlisi Heurística",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut05/ut0502.html"
-          },
-          {
-            "title": "5.3 Bastionat de Sistemes (Hardening)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut05/ut0503.html"
-          },
-          {
-            "title": "5.4 Eines de Diagnòstic i Vulnerabilitats",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut05/ut0504.html"
-          },
-          {
-            "title": "5.5 Bones Pràctiques i Conscienciació",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut05/ut0505.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 06: Criptografia, PKI i Xarxes Segures",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut06/index.html",
-        "children": [
-          {
-            "title": "6.1 Criptografia Simètrica i Xifratge de Disc",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut06/ut0601.html"
-          },
-          {
-            "title": "6.2 Criptografia Asimètrica de Clau Pública",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut06/ut0602.html"
-          },
-          {
-            "title": "6.3 Funcions Hash i Signatura Digital",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut06/ut0603.html"
-          },
-          {
-            "title": "6.4 Infraestructura PKI i Certificats SSL/TLS",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut06/ut0604.html"
-          },
-          {
-            "title": "6.5 Tallafocs (Firewalls) i Filtració de Trànsit",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut06/ut0605.html"
-          }
-        ]
-      },
-      {
-        "title": "UT 07: Normativa, RGPD i Incidents",
-        "url": "/02_SMX/2smx-si-seguretat-informatica/ut07/index.html",
-        "children": [
-          {
-            "title": "7.1 Marc Legal de Protecció de Dades (RGPD)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut07/ut0701.html"
-          },
-          {
-            "title": "7.2 Principis del Tractament i Drets Digitals",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut07/ut0702.html"
-          },
-          {
-            "title": "7.3 Esquema Nacional de Seguretat (ENS)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut07/ut0703.html"
-          },
-          {
-            "title": "7.4 Gestió d'Incidents i Notificació AEPD (72h)",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut07/ut0704.html"
-          },
-          {
-            "title": "7.5 Codi Deontològic i Responsabilitat Tècnica",
-            "url": "/02_SMX/2smx-si-seguretat-informatica/ut07/ut0705.html"
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "title": "🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà",
+  "home": {
+    "label": "🏠 Portada del Mòdul",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT 01: Fonaments de Seguretat Informàtica i Anàlisi de Riscos",
+      "items": [
+        {
+          "label": "📘 UT01 Completa (1 pàgina)",
+          "href": "./ut01/index.html",
+          "class": ""
+        },
+        {
+          "label": "1.1 La Tríada CIA, Autenticitat i No-Repudi",
+          "href": "./ut01/ut0101.html",
+          "class": ""
+        },
+        {
+          "label": "1.2 Tipologies d'Amenaces en Sistemes Informàtics",
+          "href": "./ut01/ut0102.html",
+          "class": ""
+        },
+        {
+          "label": "1.3 Perfils d'Atacants i Motivacions",
+          "href": "./ut01/ut0103.html",
+          "class": ""
+        },
+        {
+          "label": "1.4 Tècniques d'Enginyeria Social",
+          "href": "./ut01/ut0104.html",
+          "class": ""
+        },
+        {
+          "label": "1.5 Metodologies d'Anàlisi i Gestió de Riscos",
+          "href": "./ut01/ut0105.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 02: Seguretat Passiva: Entorn Físic, CPD i Protecció Elèctrica (SAI)",
+      "items": [
+        {
+          "label": "📘 UT02 Completa (1 pàgina)",
+          "href": "./ut02/index.html",
+          "class": ""
+        },
+        {
+          "label": "2.1 Ubicació, Disseny i Estructura del Centre de Processament de Dades (CPD)",
+          "href": "./ut02/ut0201.html",
+          "class": ""
+        },
+        {
+          "label": "2.2 Condicions Ambientals i Climatització del CPD",
+          "href": "./ut02/ut0202.html",
+          "class": ""
+        },
+        {
+          "label": "2.3 Seguretat Física i Protecció contra Incendis al CPD",
+          "href": "./ut02/ut0203.html",
+          "class": ""
+        },
+        {
+          "label": "2.4 Pertorbacions Elèctriques i Qualitat de Subministrament",
+          "href": "./ut02/ut0204.html",
+          "class": ""
+        },
+        {
+          "label": "2.5 Sistemes d'Alimentació Ininterrompuda (SAI/UPS) i Càlcul de Potència",
+          "href": "./ut02/ut0205.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 03: Seguretat Lògica, Autenticació i Control d'Accés",
+      "items": [
+        {
+          "label": "📘 UT03 Completa (1 pàgina)",
+          "href": "./ut03/index.html",
+          "class": ""
+        },
+        {
+          "label": "3.1 Factors d'Autenticació en Sistemes Informàtics",
+          "href": "./ut03/ut0301.html",
+          "class": ""
+        },
+        {
+          "label": "3.2 Polítiques de Contrasenyes Corporatives i GPO",
+          "href": "./ut03/ut0302.html",
+          "class": ""
+        },
+        {
+          "label": "3.3 Autenticació Multifactor (MFA/2FA) i FIDO2",
+          "href": "./ut03/ut0303.html",
+          "class": ""
+        },
+        {
+          "label": "3.4 Models de Control d'Accés i Autorització (DAC, MAC, RBAC)",
+          "href": "./ut03/ut0304.html",
+          "class": ""
+        },
+        {
+          "label": "3.5 Permisos en Sistemes de Fitxers: NTFS vs. POSIX/ACLs",
+          "href": "./ut03/ut0305.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 04: Emmagatzematge Segur, Còpies de Seguretat i Recuperació de Dades",
+      "items": [
+        {
+          "label": "📘 UT04 Completa (1 pàgina)",
+          "href": "./ut04/index.html",
+          "class": ""
+        },
+        {
+          "label": "4.1 Sistemes d'Emmagatzematge Redundant (RAID)",
+          "href": "./ut04/ut0401.html",
+          "class": ""
+        },
+        {
+          "label": "4.2 Polítiques de Còpies de Seguretat i la Regla 3-2-1",
+          "href": "./ut04/ut0402.html",
+          "class": ""
+        },
+        {
+          "label": "4.3 Automatització de Còpies de Seguretat amb rsync i cron",
+          "href": "./ut04/ut0403.html",
+          "class": ""
+        },
+        {
+          "label": "4.4 Imatges de Sistema i Recuperació davant Desastres (DRP)",
+          "href": "./ut04/ut0404.html",
+          "class": ""
+        },
+        {
+          "label": "4.5 Destrucció Segura i Esborrament Certificat de Dades",
+          "href": "./ut04/ut0405.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 05: Seguretat Activa, Malware i Eines de Protecció",
+      "items": [
+        {
+          "label": "📘 UT05 Completa (1 pàgina)",
+          "href": "./ut05/index.html",
+          "class": ""
+        },
+        {
+          "label": "5.1 Taxonomia del Programari Maliciós (Malware)",
+          "href": "./ut05/ut0501.html",
+          "class": ""
+        },
+        {
+          "label": "5.2 Amenaces Avançades: Ransomware i Xarxes Botnet",
+          "href": "./ut05/ut0502.html",
+          "class": ""
+        },
+        {
+          "label": "5.3 Mecanismes de Detecció Antivirus i Solucions EDR",
+          "href": "./ut05/ut0503.html",
+          "class": ""
+        },
+        {
+          "label": "5.4 Desplegament d'Antivirus en Linux amb ClamAV",
+          "href": "./ut05/ut0504.html",
+          "class": ""
+        },
+        {
+          "label": "5.5 Bastionat del Sistema Operatiu (OS Hardening)",
+          "href": "./ut05/ut0505.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 06: Criptografia, Certificats Digitals i Xarxes Segures",
+      "items": [
+        {
+          "label": "📘 UT06 Completa (1 pàgina)",
+          "href": "./ut06/index.html",
+          "class": ""
+        },
+        {
+          "label": "6.1 Fonaments de Criptografia Simètrica i Xifratge de Disc",
+          "href": "./ut06/ut0601.html",
+          "class": ""
+        },
+        {
+          "label": "6.2 Criptografia Asimètrica de Clau Pública (RSA i ECC)",
+          "href": "./ut06/ut0602.html",
+          "class": ""
+        },
+        {
+          "label": "6.3 Funcions Resum Criptogràfiques (Hash)",
+          "href": "./ut06/ut0603.html",
+          "class": ""
+        },
+        {
+          "label": "6.4 Signatura Digital i Infraestructura de Clau Pública (PKI)",
+          "href": "./ut06/ut0604.html",
+          "class": ""
+        },
+        {
+          "label": "6.5 Seguretat Perimetral i Tallafocs (UFW i Wireshark)",
+          "href": "./ut06/ut0605.html",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 07: Normativa, Protecció de Dades (RGPD) i Gestió d'Incidents",
+      "items": [
+        {
+          "label": "📘 UT07 Completa (1 pàgina)",
+          "href": "./ut07/index.html",
+          "class": ""
+        },
+        {
+          "label": "7.1 Marc Legal de Protecció de Dades: RGPD i LOPD-GDD",
+          "href": "./ut07/ut0701.html",
+          "class": ""
+        },
+        {
+          "label": "7.2 Principis Fonamentals del Tractament de Dades",
+          "href": "./ut07/ut0702.html",
+          "class": ""
+        },
+        {
+          "label": "7.3 Drets de la Ciutadania (Drets ARCO-POL)",
+          "href": "./ut07/ut0703.html",
+          "class": ""
+        },
+        {
+          "label": "7.4 L'Esquema Nacional de Seguretat (ENS) i ISO/IEC 27001",
+          "href": "./ut07/ut0704.html",
+          "class": ""
+        },
+        {
+          "label": "7.5 Gestió d'Incidents de Seguretat i Notificació Obligatòria en 72h",
+          "href": "./ut07/ut0705.html",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

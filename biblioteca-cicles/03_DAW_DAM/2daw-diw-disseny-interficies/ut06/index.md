@@ -1,238 +1,104 @@
----
-layout: default
-title: "Disseny d'Interfícies Web — UD6 UT. 4 - Contenido multimedia"
-course_root: ".."
-badge: "2n DAW · Grau Superior · UD6"
----
+# UT 06: Usabilitat, Rendiment Web i Proves entre Navegadors
 
-# UT. 4 - Contenido multimedia
+<div class="interactive-progress-tracker" data-unit="ut06" data-total-points="100">
+  <div class="progress-bar-container">
+    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+  </div>
+  <div class="progress-stats">
+    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 100 XP</span>
+    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 4</span>
+  </div>
+</div>
 
+## Descripció del Mòdul i Unitat Didàctica
 
+L'èxit definitiu d'una aplicació web no només depèn de la seua estètica visual o de la seua accessibilitat normativa; requereix que la interfície siga intuïtiva d'utilitzar, extremadament ràpida en qualsevol xarxa mòbil i 100% compatible i resilient en tots els navegadors del mercat (Resultat d'Aprenentatge 6 - RA6).
 
----
-
-## 📌 6.1 Nota Examen Multimedia
-
-Continguts i activitats didàctiques de **Nota Examen Multimedia**.
-
----
-
-## 📌 6.2 contenidos (còpia)
-
-Contenidos
+En aquesta última unitat didàctica dominaràs les metodologies professionals d'**avaluació de la usabilitat**, aprofundint en les **10 heurístiques d'usabilitat de Jakob Nielsen** per a inspeccions expertes i en el disseny i execució de **tests amb usuaris reals mitjançant el protocol de pensament en veu alta (*Think-Aloud Protocol*)**. Estudiaràs en detall la disciplina de l'**Optimització del Rendiment Web (*Web Performance Optimization* - WPO)** i les noves mètriques oficials de Google: les **Core Web Vitals (LCP, INP, CLS)**, comprenent el seu impacte directe en el posicionament SEO i en les taxes de conversió. Aprendràs tècniques avançades de descàrrega: minificació de codi font, compressió moderna amb **Brotli**, càrrega mandrosa (*lazy loading*), preconnexió i memòria cau eficient mitjançant capçaleres HTTP. Finalment, abordaràs les **proves de compatibilitat entre navegadors (*Cross-Browser Testing*)**, l'ús de *polyfills* i la inspecció avançada amb les **eines de desenvolupador (DevTools)** de Google Chrome i Mozilla Firefox per a analitzar el consum de memòria, la cascada de xarxa (*waterfall*) i les fuites de rendiment en el renderitzat.
 
 ---
 
-## 📌 6.3 presentacions (còpia) (còpia)
+## Continguts i Subtemes
 
-Presentaciones
-
----
-
-## 📌 6.4 rejilla
-
-Continguts i activitats didàctiques de **rejilla**.
-
----
-
-## 📌 6.5 UT. 4.1 - Licencias y derechos del autor
-
-Continguts i activitats didàctiques de **UT. 4.1 - Licencias y derechos del autor**.
+| Codi | Títol del Subtema | Descripció | Punts XP |
+| :--- | :--- | :--- | :--- |
+| **[UT 06.01](ut0601.md)** | **Metodologies d'Avaluació de la Usabilitat** | Concepte d'usabilitat (ISO 9241-11), les 10 heurístiques de Nielsen, inspecció d'experts vs proves amb usuaris (*Think-Aloud*). | +75 XP |
+| **[UT 06.02](ut0602.md)** | **Rendiment Web (WPO) i Mètriques Google Core Web Vitals** | Importància del rendiment, mètriques LCP (*Largest Contentful Paint*), INP (*Interaction to Next Paint*) i CLS (*Cumulative Layout Shift*). | +75 XP |
+| **[UT 06.03](ut0603.md)** | **Tècniques d'Optimització de Càrrega i Renderitzat** | Minificació (CSS/JS), compressió GZIP/Brotli, optimització del camí crític de renderitzat (CRP), `defer`/`async` i memòria cau HTTP. | +75 XP |
+| **[UT 06.04](ut0604.md)** | **Proves de Compatibilitat entre Navegadors (*Cross-Browser*)** | Diferències entre motors de renderització (Blink, Gecko, WebKit), ús del servei *Can I Use*, prefixos de fabricants (*Autoprefixer*) i polifills (*polyfills*). | +75 XP |
+| **[UT 06.05](ut0605.md)** | **Eines de Depuració en Navegadors (DevTools)** | Dominar els panells Elements, Network (anàlisi del waterfall), Performance (gravació de frames i colls d'ampolla) i auditories amb Lighthouse. | +75 XP |
 
 ---
 
-## 📌 6.6 UT. 4.2 - Formatos de imagen audio y vídeo
+## Reptes Globals de Síntesi (+100 XP)
 
-Continguts i activitats didàctiques de **UT. 4.2 - Formatos de imagen audio y vídeo**.
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="diw-ut06-repte-01">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 1: La Mètrica INP (Interaction to Next Paint)</h4>
+  </div>
+  <p class="challenge-prompt">Què mesura la mètrica oficial de Google Core Web Vitals anomenada INP (*Interaction to Next Paint*), introduïda per a substituir l'antiga FID?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">La quantitat de tinta que gasta la impressora en imprimir la pàgina.</button>
+    <button class="btn-check" data-correct="true">La capacitat de resposta global de la pàgina davant totes les interaccions de l'usuari (clics, tocs tàctils, pulsacions de teclat) durant tota la sessió, mesurant el temps que tarda la interfície a presentar el següent fotograma visual.</button>
+    <button class="btn-check" data-correct="false">El temps de resolució del servidor DNS en mil·lisegons.</button>
+    <button class="btn-check" data-correct="false">El nombre total d'imatges amb format PNG.</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
----
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="diw-ut06-repte-02">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 2: Desplaçament Acumulat del Disseny (CLS)</h4>
+  </div>
+  <p class="challenge-prompt">Quina acció de disseny i maquetació web és la principal causant d'una mala puntuació en la mètrica CLS (*Cumulative Layout Shift*)?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Utilitzar colors amb alt contrast.</button>
+    <button class="btn-check" data-correct="true">Inserir imatges, anuncis o iframes sense atributs d'amplada i alçada (`width` i `height`), la qual cosa provoca que la pàgina es moga sobtadament cap avall quan la imatge s'acaba de descarregar mentre l'usuari està llegint.</button>
+    <button class="btn-check" data-correct="false">Utilitzar fitxers SVG per al logotip.</button>
+    <button class="btn-check" data-correct="false">Escrivint codi HTML semàntic amb l'etiqueta `<main>`.</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
-## 📌 6.7 presentacions (còpia)
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="diw-ut06-repte-03">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 3: Diferència entre defer i async a Scripts</h4>
+  </div>
+  <p class="challenge-prompt">Per què l'atribut `defer` és el més recomanat per a carregar fitxers JavaScript d'interfície en comparació amb `async`?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Perquè `defer` elimina el codi JavaScript del navegador.</button>
+    <button class="btn-check" data-correct="true">Perquè `defer` descarrega el fitxer en paral·lel sense bloquejar la construcció del document HTML i garanteix que s'executarà respectant l'ordre exacte de declaració un cop finalitzat el parseig complet del DOM.</button>
+    <button class="btn-check" data-correct="false">Perquè `async` només funciona a telèfons intel·ligents de gamma alta.</button>
+    <button class="btn-check" data-correct="false">Perquè `defer` tradueix el codi a llenguatge C.</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
-Contenidos
-
----
-
-## 📌 6.8 info 1
-
-Continguts i activitats didàctiques de **info 1**.
-
----
-
-## 📌 6.9 Derechos de Autor para Creadores Digitales
-
-Continguts i activitats didàctiques de **Derechos de Autor para Creadores Digitales**.
-
----
-
-## 📌 6.10 UT. 4.1 - Licencias y derechos de autor en el uso de material multimedia
-
-Continguts i activitats didàctiques de **UT. 4.1 - Licencias y derechos de autor en el uso de material multimedia**.
-
----
-
-## 📌 6.11 info 2
-
-Continguts i activitats didàctiques de **info 2**.
-
----
-
-## 📌 6.12 Kit Multimedia Diseño Web
-
-Continguts i activitats didàctiques de **Kit Multimedia Diseño Web**.
-
----
-
-## 📌 6.13 UT. 4.2 - Formatos de imagen, audio y vídeo
-
-Continguts i activitats didàctiques de **UT. 4.2 - Formatos de imagen, audio y vídeo**.
-
----
-
-## 📌 6.14 info 3
-
-Continguts i activitats didàctiques de **info 3**.
-
----
-
-## 📌 6.15 Dominando SVG Forma y Animación
-
-Continguts i activitats didàctiques de **Dominando SVG Forma y Animación**.
-
----
-
-## 📌 6.16 UT. 4.3 - Imágenes SVG
-
-Continguts i activitats didàctiques de **UT. 4.3 - Imágenes SVG**.
+<div class="interactive-challenge-card" data-points="25" data-challenge-id="diw-ut06-repte-04">
+  <div class="challenge-header">
+    <span class="badge-xp">+25 XP</span>
+    <h4>Repte 4: La Primera Heurística d'Usabilitat de Nielsen</h4>
+  </div>
+  <p class="challenge-prompt">Què estableix la primera heurística d'usabilitat de Jakob Nielsen: "Visibilitat de l'estat del sistema"?</p>
+  <div class="challenge-options">
+    <button class="btn-check" data-correct="false">Que el sistema operatiu ha de mostrar la seua llicència de pagament a la portada.</button>
+    <button class="btn-check" data-correct="true">El sistema ha de mantindre sempre informats els usuaris sobre el que està succeint, proporcionant retroacció visual o informativa adequada i oportuna en un temps raonable (com barres de progrés en pujar un fitxer o missatges de confirmació).</button>
+    <button class="btn-check" data-correct="false">Que la pantalla no es pot apagar mai.</button>
+    <button class="btn-check" data-correct="false">Que cal mostrar la llista de tots els processos de Linux que corren al servidor.</button>
+  </div>
+  <div class="feedback-msg"></div>
+</div>
 
 ---
 
-## 📌 6.17 Àrea de text i multimèdia (còpia)
-
-Ejemplos de las diapositivas
-
----
-
-## 📌 6.18 Tareas (còpia)
-
-Tareas
-
----
-
-## 📌 6.19 Tarea 1
-
-Continguts i activitats didàctiques de **Tarea 1**.
-
----
-
-## 📌 6.20 Tarea 2
-
-Continguts i activitats didàctiques de **Tarea 2**.
-
----
-
-## 📌 6.21 Tarea 3
-
-Continguts i activitats didàctiques de **Tarea 3**.
-
----
-
-## 📌 6.22 Tarea 4
-
-Ejercicio Guiado: Sol Animado con SVG
-
----
-
-## 📌 6.23 Tarea 4 - RA3-CEd
-
-Subir la tarea del spinner hecho en clase.
-
-Os dejo una nueva versión del spinner donde se ha incorporado un gradiente.
-
-El archivo está en versión completa (para editar con inkscape) y en versión optimizada para usarlo directamente dentro de un documento HTML y hacer la animación.
-
----
-
-## 📌 6.24 Tarea 5 - RA3-CEf
-
-Subir la tarea del loader explicado en clase.
-
-Para los más despistados:
-
-El valor de trazo es "0 33; 33 0; 0 33"
-
-El valor de offset es "0;0; -32.9"
-
-Para los valores anteriores, se ha tomado un radio de 16 y un stroke-width de 3 como base para la animación.
-
----
-
-## 📌 6.25 Enlaces de interes
-
-Enlaces de interés
-
----
-
-## 📌 6.26 Enlaces de interés 2
-
-SVG - Scalar Vector Grafics
-
----
-
-## 📌 6.27 SVG - Documentación oficial
-
-Continguts i activitats didàctiques de **SVG - Documentación oficial**.
-
----
-
-## 📌 6.28 Tutoriales SVG
-
-Continguts i activitats didàctiques de **Tutoriales SVG**.
-
----
-
-## 📌 6.29 Diseño gráfico en SVG
-
-Continguts i activitats didàctiques de **Diseño gráfico en SVG**.
-
----
-
-## 📌 6.30 Enlaces de interés 1
-
-Tratamiento de imágenes, audio y video
-
----
-
-## 📌 6.31 Formatos de imágenes: Guía para optimizar imágenes
-
-Continguts i activitats didàctiques de **Formatos de imágenes: Guía para optimizar imágenes**.
-
----
-
-## 📌 6.32 Formatos de imágenes: Guía para reducir imágenes
-
-Continguts i activitats didàctiques de **Formatos de imágenes: Guía para reducir imágenes**.
-
----
-
-## 📌 6.33 Formatos de audio: Todo lo que deberías saber
-
-Continguts i activitats didàctiques de **Formatos de audio: Todo lo que deberías saber**.
-
----
-
-## 📌 6.34 Formatos de audio: Guía de optimización
-
-Continguts i activitats didàctiques de **Formatos de audio: Guía de optimización**.
-
----
-
-## 📌 6.35 Formatos de video: Todo lo que deberías saber
-
-Continguts i activitats didàctiques de **Formatos de video: Todo lo que deberías saber**.
-
----
-
-## 📌 6.36 Formatos de video: Guía de optimización
-
-Continguts i activitats didàctiques de **Formatos de video: Guía de optimización**.
+<div class="aules-delivery-card">
+  <div class="card-header">
+    <span class="badge-aules">Aules GVA</span>
+    <h4>Lliurament de la Unitat Didàctica 06 a la plataforma docent</h4>
+  </div>
+  <p>Un cop completats els reptes interactius i les activitats d'aquesta unitat didàctica, descarrega el resum d'evidències en format d'informe per a adjuntar-lo a la tasca corresponent d'Aules.</p>
+  <button class="btn-aules-download" onclick="generateAulesReport('ut06')">Descarregar Informe d'Evidències (Aules)</button>
+</div>

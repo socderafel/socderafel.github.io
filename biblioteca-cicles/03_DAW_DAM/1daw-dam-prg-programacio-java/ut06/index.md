@@ -1,113 +1,116 @@
-# UT 06: Estructures de Dades Dinàmiques i Recursivitat en Java
+---
+title: "UT6 — Lectura i escriptura d'informació"
+unit: "6"
+module: "PRG"
+layout: "default"
+course_root: ".."
+badge: "1r DAW / DAM · Programació · UT06"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut06" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
+# 📘 UT6 — Lectura i escriptura d'informació
 
-Aquesta unitat formativa capacita l'alumnat en l'ús d'estructures de dades amb capacitat de creixement i reducció dinàmica en temps d'execució mitjançant el **Java Collections Framework (JCF)**, integrat en el paquet `java.util`. Es resol la rigidesa de mida dels arrays estàndards, oferint estructures complexes altament optimitzades:
-- **Arquitectura d'Interfícies del JCF:** Comprensió del disseny orientat a interfícies (`Collection<E>`, `List<E>`, `Set<E>`, `Queue<E>`, `Map<K, V>`) i la programació amb **Genèrics (*Generics: `<T>`*)**, que garanteix seguretat de tipus en temps de compilació (*type-safety*) eliminant càstings perillosos.
-- **Llistes Dinàmiques:** Anàlisi comparativa d'enginyeria entre `ArrayList` (basat en array dinàmic redimensionable amb accés aleatori en temps constant $O(1)$) i `LinkedList` (llista doblement enllaçada eficient en insercions i esborrats als extrems).
-- **Conjunts i Integritat:** Ús de conjunts (`Set`) que impedeixen duplicats; diferenciació entre `HashSet` (basat en taula hash i el contracte `hashCode()` / `equals()`) i `TreeSet` (conjunt ordenat automàticament mitjançant arbres roig-negre basat en `Comparable`).
-- **Mapes Clau-Valor:** Emmagatzematge associatiu mitjançant `HashMap` i `TreeMap`, i navegació avançada d'entrades mitjançant `entrySet()`.
-- **Recursivitat i Pila d'Execució:** Disseny d'algorismes recursius rigorosos, delimitació de casos base, anàlisi de profunditat i prevenció de desbordaments de pila.
+> **📌 Resultat d'Aprenentatge i Objectius:** Continguts oficials, exemples guiats, activitats pràctiques, reptes i traces d'execució de UT6 — Lectura i escriptura d'informació.
 
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
+## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
 
-- **RA5 (DAW / DAM):** Utilitza de forma avançada classes de biblioteques de l'entorn de desenvolupament (col·leccions, estructures dinàmiques, genèrics).
-  - **CA 5.a:** S'han identificat les interfícies i classes fonamentals del marc de col·leccions de Java.
-  - **CA 5.b:** S'han utilitzat estructures de llista dinàmica (ArrayList, LinkedList) seleccionant la més eficient segons el cas d'ús.
-  - **CA 5.c:** S'han gestionat conjunts d'elements únics (HashSet, TreeSet) implementant criteris d'ordenació.
-  - **CA 5.d:** S'han utilitzat estructures de mapa (HashMap, TreeMap) per a l'emmagatzematge i recuperació ràpida de dades clau-valor.
-  - **CA 5.e:** S'han aplicat tècniques de recursivitat per a resoldre problemes algorítmics autoreferencials.
+| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
+| :--- | :--- | :--- |
+| **6.1** | **6.0 RA i Criteris d'avaluació** | [Obrir apartat ➡️](./ut06ras.html) |
+| **6.2** | **6.1 Streams (Fluxos d'entrada i eixida)** | [Obrir apartat ➡️](./ut0601.html) |
+| **6.3** | **6.2 Lectura i escriptura de fitxers** | [Obrir apartat ➡️](./ut0602.html) |
+| **6.4** | **6.3 Serialització d'objectes** | [Obrir apartat ➡️](./ut0603.html) |
+| **6.5** | **6.4 Comunicació per xarxa: Sockets** | [Obrir apartat ➡️](./ut0604.html) |
+| **6.6** | **6.5 Maneig del sistema de fitxers i carpetes (File / NIO)** | [Obrir apartat ➡️](./ut0605.html) |
+| **6.7** | **Activitats pràctiques UT6** | [Obrir apartat ➡️](./ut06actividades.html) |
+| **6.8** | **Reptes de programació UT6** | [Obrir apartat ➡️](./ut06retos.html) |
+| **6.9** | **Vídeos de reforç UT6 (Píndoles Informàtiques)** | [Obrir apartat ➡️](./ut06pi.html) |
 
 ---
 
-## Estructura de la Unitat de Treball
+## 🎯 Resum d'Aprenentatge i Metodologia
 
-1. [UT 06.01: Arquitectura del Java Collections Framework i tipus genèrics (Generics: <T>)](./ut0601.md)
-2. [UT 06.02: Llistes dinàmiques indexades: ArrayList vs LinkedList](./ut0602.md)
-3. [UT 06.03: Conjunts sense duplicats: HashSet vs TreeSet i classes embolcalladores (Wrappers)](./ut0603.md)
-4. [UT 06.04: Diccionaris clau-valor: HashMap i TreeMap (keySet, values, entrySet)](./ut0604.md)
-5. [UT 06.05: Fonaments de la recursivitat: cas base, descomposició i gestió de la pila](./ut0605.md)
+Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
+
+
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut06-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Seguretat de Tipus amb Genèrics (Generics)</h4>
+Comprova el teu domini sobre **UT6 — Lectura i escriptura d'informació** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina classe de Java I/O s'utilitza habitualment per a llegir fitxers de text línia per línia de forma eficient mitjançant un buffer?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) BufferedReader (embolicant un FileReader).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) ObjectOutputStream.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) ServerSocket.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Cap de les anteriors és correcta.</button>
   </div>
-  <p class="challenge-question">Quin gran avantatge d'enginyeria va aportar la introducció dels Genèrics (com List&lt;String&gt; en lloc del tipus cru List) en Java 5?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Que les col·leccions només ocupen 1 byte a la memòria RAM.</button>
-    <button class="btn-check" data-correct="true">B) Proporciona comprovació estricta de tipus en temps de compilació (type-safety), eliminant la necessitat de fer càstings explícits continus i evitant errors fatals de ClassCastException en temps d'execució.</button>
-    <button class="btn-check" data-correct="false">C) Que impedeix que el programa puga guardar més de 100 elements.</button>
-    <button class="btn-check" data-correct="false">D) Que permet guardar tipus primitius com int directament sense autoboxing.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut06-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>ArrayList vs LinkedList: Criteri de Selecció</h4>
+<div class="interactive-mcq" data-answer="D" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quina interfície ha d'implementar una classe en Java perquè els seus objectes es puguen convertir en una seqüència de bytes i guardar-se en un fitxer binari amb ObjectOutputStream?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) java.lang.Runnable</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) java.util.Comparator</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) java.io.Serializable</button>
   </div>
-  <p class="challenge-question">Quan és tècnicament superior utilitzar ArrayList en comptes de LinkedList?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Quan necessitem inserir o eliminar constantment elements al principi de la llista.</button>
-    <button class="btn-check" data-correct="true">B) Quan l'operació predominant és la lectura o accés aleatori a elements per la seua posició numèrica (mètode get(i)), ja que ArrayList ofereix accés directe en temps constant O(1) gràcies al seu array intern contigu.</button>
-    <button class="btn-check" data-correct="false">C) Quan volem evitar que es produïsquen duplicats en la col·lecció.</button>
-    <button class="btn-check" data-correct="false">D) Quan treballem sense connexió a internet.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut06-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>El Contracte de HashSet: hashCode() i equals()</h4>
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> En la comunicació per xarxa amb Sockets TCP en Java, el servidor espera connexions amb ServerSocket.accept() i el client s'hi connecta amb la classe Socket.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Com determina una instància de HashSet&lt;E&gt; si un nou objecte que intentem afegir és un duplicat que ha de ser rebutjat?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Comparant les seues referències de memòria amb l'operador ==.</button>
-    <button class="btn-check" data-correct="true">B) Calcula primer el codi hash de l'objecte mitjançant hashCode() per a trobar el recipient (bucket) i, si hi ha coincidència, crida al mètode equals() per a confirmar si són idèntics.</button>
-    <button class="btn-check" data-correct="false">C) Ordenant tots els elements alfabèticament de la A a la Z.</button>
-    <button class="btn-check" data-correct="false">D) Preguntant al sistema operatiu.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut06-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>El Paper del Cas Base en la Recursivitat</h4>
+<div class="interactive-quiz" data-answer="transient" data-hint="Comença per 'trans' i acaba en 'ient'.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin modificador s'aplica a un atribut d'una classe Serializable si NO volem que eixe atribut es guarde durant la serialització?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina conseqüència crítica té dissenyar un mètode recursiu que manca d'un «cas base» correctament delimitat?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) El mètode retorna 0 de forma immediata.</button>
-    <button class="btn-check" data-correct="true">B) El mètode es crida a si mateix de forma infinita, acumulant marcs de pila a la memòria Stack fins a esgotar-la i llançar un error fatal irrecuperable: java.lang.StackOverflowError.</button>
-    <button class="btn-check" data-correct="false">C) El codi es recompila en un arxiu JAR executable.</button>
-    <button class="btn-check" data-correct="false">D) El sistema activa automàticament el Garbage Collector per a reiniciar el bucle.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT6 — Lectura i escriptura d'informació**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 6 PRG</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 6</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="PRG" data-unit="UD06" data-activity="ut06_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

@@ -1,134 +1,145 @@
 ---
 layout: default
-title: "Instal·lació i Manteniment de Xarxes per a Transmissió de Dades — 2n FPB · Grau Bàsic"
+title: "Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials) — Portal Docent FP"
 course_root: "."
-badge: "2n FPB · Grau Bàsic · IMX"
+badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE)"
+prev_url: "../../index.html"
+prev_label: "⬅️ Biblioteca de Cicles"
+next_url: "ut01/index.html"
+next_label: "Començar UD1 ➡️"
 ---
 
-# 🔌 Instal·lació i Manteniment de Xarxes per a Transmissió de Dades
+# Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)
 
-Benvingut/da al portal del mòdul d'**Instal·lació i Manteniment de Xarxes per a Transmissió de Dades**, mòdul clau de **2n curs de Formació Professional Bàsica (Grau Bàsic)** en Informàtica i Comunicacions / Informàtica d'Oficina.
-
-Aquest curs està estructurat en **9 unitats didàctiques progressives**, enriquides amb el temari oficial i el quadern de fitxes pràctiques de taller adaptades de *Networking Essentials* (RA1 i RA5 de Flexibilització Curricular), comptant amb **zones d'entrenament interactives amb autocorrecció**, **progress trackers** i **comprovants de lliurament per a Aules**.
-
-<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
-<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
-  <defs>
-    <linearGradient id="g-m-fon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-m-cab" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-m-rck" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="g-m-ipv" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-
-  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">INSTAL·LACIÓ I MANTENIMENT DE XARXES DE DADES (2N FP BÀSICA)</text>
-  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">De la infraestructura física i el bastidor rack fins a la configuració lògica IP i diagnòstic</text>
-
-  <!-- Bloc 1 -->
-  <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-m-fon)" stroke="#38bdf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🌐</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Fonaments</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">UD1 i UD4</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Abast: PAN, LAN, WAN</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Topologia Estrella</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Models OSI i TCP/IP</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Switches, Routers i MAC</text>
-  </g>
-
-  <!-- Bloc 2 -->
-  <g transform="translate(235, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-m-cab)" stroke="#818cf8" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔌</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Medis i Conectors</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">UD2 i UD3</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Coure UTP/STP Cat 6</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Codi T568B i crimpat</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Fibra monomode/multimode</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Wi-Fi (2.4/5GHz) i WPA3</text>
-  </g>
-
-  <!-- Bloc 3 -->
-  <g transform="translate(445, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-m-rck)" stroke="#34d399" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🗄️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Infraestructura</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">UD5</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Armaris Rack de 19" (U)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Canaletes i safates Cabofil</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Tacs, cargoleria M6</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Rosetes i Patch Panels</text>
-  </g>
-
-  <!-- Bloc 4 -->
-  <g transform="translate(655, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-m-ipv)" stroke="#f59e0b" stroke-width="1.5"/>
-    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">💻</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Configuració</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">UD6 a UD9</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Adreçament IPv4 i màscares</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Serveis DHCP i DNS</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Diagnòstic per comandes CLI</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Projecte Final d'Oficina</text>
-  </g>
-</svg>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+  </div>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
+  </div>
 </div>
 
----
-
-## Taula de les 9 Unitats Didàctiques del Curs
-
-| Unitat Didàctica | Títol del Bloc Temàtic | Continguts Clau i Fitxes de Taller | Enllaç Directe |
-| :---: | :--- | :--- | :---: |
-| **UD1** | **Fonaments de les Xarxes de Dades i Comunicació** | Concepte de xarxa, elements de comunicació (emissor, receptor, missatge, canal, soroll, protocol), topologies físiques (bus, estrella, anell, arbre, malla), modes de transmissió (simplex, half-duplex, full-duplex), models OSI (7 capes) i TCP/IP (4 capes), codificació binària, decimal, hexadecimal i càlculs de capacitat de descàrrega. **Fitxes 1.01, 1.02 i 1.03**. | [**📘 Entrar a la UD1 →**](./ut01/index.html) |
-| **UD2** | **Medis de Transmissió: Cablejat de Parell Trenat** | Cables UTP, FTP, STP, categories Cat 5e a Cat 8, cobertes LSZH contra incendis (Euroclasses CPR), connectors RJ-45, codis de colors T568A i T568B, cables directes vs creuats, Auto-MDIX, eines de taller (pelacables rotatiu, grimpadora, punxadora Krone, tester) i diagnòstic d'avaries (circuit obert, curtcircuit, miswire, split pairs). **Fitxes 2.01 i 2.02**. | [**📘 Entrar a la UD2 →**](./ut02/index.html) |
-| **UD3** | **Fibra Òptica i Comunicacions Sense Fil (Wi-Fi)** | Estructura de la fibra, reflexió total interna, comparativa monomode (SMF 9/125) vs multimode (MMF 50/125), connectors LC, SC, ST i mòduls SFP. Prevenció de Riscos Laborals (PRL): làser infraroig invisible i fragments microscòpics de vidre. Xarxes Wi-Fi (802.11 b/g/n/ac/ax), bandes 2.4 GHz, 5 GHz i 6 GHz, canals no solapats 1-6-11, potència en dBm i seguretat WEP, WPA2-PSK i WPA3-SAE. | [**📘 Entrar a la UD3 →**](./ut03/index.html) |
-| **UD4** | **Dispositius d'Interconnexió de Xarxa** | Targetes de xarxa (NIC: integrades, PCIe, USB, Wi-Fi), adreça física MAC de 48 bits (OUI del fabricant + sèrie). Concentradors (Hub) vs Commutadors (Switch), aprenentatge de la taula CAM/MAC i reenviament selectiu sense col·lisions. Encaminadors (Routers), funció de Porta d'Enllaç (*Gateway*) i traducció NAT. Tecnologia PoE (*Power over Ethernet* 802.3af/at/bt) i adaptadors PLC. | [**📘 Entrar a la UD4 →**](./ut04/index.html) |
-| **UD5** | **Cablejat Estructurat i Infraestructura Física** | Normativa TIA/EIA-568 i ISO/IEC 11801, els 6 subsistemes (MDF, IDF, Backbone, cablejat horitzontal màxim 90 m i àrea de treball). L'armari Rack de 19" i la unitat d'alçada U (44,45 mm), patch panels de 24 ports, guies de cables, safates i regletes PDU. Canaletes de PVC de paret i de sòl, safates metàl·liques de reixa Cabofil. Tipus de tacs (niló, expansió, pladur, químics), cargoleria M6 amb femella gàbia i ús exclusiu de bridetes de velcro reutilitzables. | [**📘 Entrar a la UD5 →**](./ut05/index.html) |
-| **UD6** | **Configuració d'Equips i Adreçament IPv4** | L'adreça IPv4 de 32 bits en 4 octets decimals (0-255), Net ID vs Host ID, classes històriques (A, B, C), rangs d'adreces privades RFC 1918 (10.x, 172.16-31.x, 192.168.x). Màscara de subxarxa /24 (255.255.255.0), adreça de xarxa (.0), adreça de broadcast (.255) i els 254 equips útils. Serveis automàtics DHCP (procés DORA) i DNS (traducció de dominis). Comandes de diagnòstic CLI: `ipconfig /all`, `ping`, `tracert`, `nslookup`. **Fitxa 1.04**. | [**📘 Entrar a la UD6 →**](./ut06/index.html) |
-| **UD7** | **Compartició de Recursos i Serveis Locals** | Compartició de carpetes i fitxers a la xarxa local: permisos de recurs compartit SMB vs permisos de seguretat NTFS (la regla del permís més restrictiu). Mapejat d'unitats de xarxa en Windows amb lletra de disc local (`Z:`) i rutes UNC (`\\servidor\dades`). Instal·lació d'impressores autònomes de xarxa amb port RAW 9100. Xarxes heterogènies Windows/Linux mitjançant el programari lliure Samba (`/etc/samba/smb.conf`) i aules LliureX. | [**📘 Entrar a la UD7 →**](./ut07/index.html) |
-| **UD8** | **Manteniment, Diagnòstic i Seguretat en Xarxa** | Classificació d'avaries físiques (maquinari) vs lògiques (programari). Metodologia ascendent Bottom-Up del model OSI (començar sempre per la Capa 1 Física, bucle local 127.0.0.1, IP, gateway i DNS). Seguretat perimetral amb el tallafocs (Firewall), ports de servei (80, 443, 53, 22) i protecció contra bucles catastròfics amb Spanning Tree (STP). Manteniment preventiu: neteja amb aire comprimit sec, etiquetatge normalitzat ANSI/TIA-606 i còpies de seguretat de configuració. | [**📘 Entrar a la UD8 →**](./ut08/index.html) |
-| **UD9** | **Projecte Integrador: Muntatge d'una Xarxa per a Petita Oficina** | Cas real d'empresa: instal·lació completa per a una oficina comercial de 12 empleats (26 preses Keystone RJ-45 Cat 6 dobles). Disseny de plànol de distribució amb Draw.io (diagrams.net), elaboració del pressupost i llista de materials (canaletes, bobina 305m UTP Cat 6 LSZH, rack mural 9U, switch 24p Gigabit PoE, caragols M6 i mà d'obra), desplegament físic, connexió al rack, configuració de la subxarxa 192.168.10.0/24 amb DHCP, certificació del 100% de les preses amb tester i memòria tècnica final. | [**📘 Entrar a la UD9 →**](./ut09/index.html) |
+Benvingut/da al mòdul professional de **Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)** (2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE)), alineat íntegrament amb la programació didàctica del departament d'Informàtica (temari i activitats de Manuel Alonso Argente adaptats al valencià i enriquits amb reptes interactius d'autoavaluació i generació de comprovants PDF per a **Aules**).
 
 ---
 
-### 🛠️ Eines i Recursos per a l'Alumnat
-- **Zona d'Entrenament FPB:** Cada apartat incorpora entre 2 i 4 reptes interactius amb comprovació automàtica i pistes pedagògiques.
-- **Quadern de Taller:** Fitxes d'activitats pràctiques amb solucions desplegables pas a pas per a l'autoavaluació de l'alumnat.
-- **Comprovant de Lliurament per a Aules:** En acabar cada unitat o pràctica, l'alumne o alumna pot generar el seu informe oficial en format text o copiar-lo al porta-retalls amb un sol clic per enganxar-lo a la plataforma Aules.
+## 🗺️ Estructura Completa d'Unitats de Programació i Activitats
+
+### 📌 [UD1: Fonaments de les Comunicacions, Representació Binària, Models OSI/TCP-IP i IP](ut01/index.html)
+
+- **Apartats teòrics (7):** [📋 1.0 Proposta Didàctica: Comunicació i representació de la informació](ut01/ut0100.html) · [1.1 Elements d'un sistema de comunicació](ut01/ut0101.html) · [1.2 Representació de la informació](ut01/ut0102.html) · [1.3 Xarxes de comunicacions](ut01/ut0103.html) · [1.4 Adreça IP](ut01/ut0104.html) · [🖼️ 1.R2 Resum Visual](ut01/resum_imatge.html) · [📝 1.R1 Resum en Text](ut01/resum_text.html)
+- **Activitats pràctiques (8):** [🛠️ FITXA 1.1 · Elements d'un sistema de comunicació](ut01/ficha101.html) · [🛠️ FITXA 1.2 · Representació de la informació](ut01/ficha102.html) · [🛠️ FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP](ut01/ficha103.html) · [🛠️ FITXA 1.4 · L'adreça IP: IPv4 i IPv6](ut01/ficha104.html) · [🔄 FITXA REPÀS 1.1 · Elements d'un sistema de comunicació](ut01/rep101.html) · [🔄 FITXA REPÀS 1.2 · Representació de la informació](ut01/rep102.html) · [🔄 FITXA REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP](ut01/rep103.html) · [🔄 FITXA REPÀS 1.4 · L'adreça IP: IPv4 i IPv6](ut01/rep104.html)
+- **[🚀 Obrir Unitat 1](ut01/index.html)** | **[📓 Quadern d'Activitats UD1](ut01/activitats.html)**
+
+### 📌 [UD2: Xarxes de Dades — Tipus (LAN/MAN/WAN), Topologies i Arquitectures](ut02/index.html)
+
+- **Apartats teòrics (3):** [📋 2.0 Proposta Didàctica: Tipus de xarxes, topologies i mitjans de transmissió](ut02/ut0200.html) · [2.1 Tipus de xarxes i estructures alternatives](ut02/ut0201.html) · [2.2 Mitjans de transmissió](ut02/ut0202.html)
+- **Activitats pràctiques (2):** [🛠️ FITXA 2.1 · Tipus de xarxes, abast i arquitectures](ut02/ficha201.html) · [🛠️ FITXA 2.2 · Mitjans de transmissió guiats i no guiats](ut02/ficha202.html)
+- **[🚀 Obrir Unitat 2](ut02/index.html)** | **[📓 Quadern d'Activitats UD2](ut02/activitats.html)**
+
+### 📌 [UD3: Mitjans de Transmissió — Parell Trenat (UTP/STP), Coaxial, Fibra Òptica i Sense Fil](ut03/index.html)
+
+- **Apartats teòrics (3):** [📋 3.0 Proposta Didàctica: Infraestructura i cablejat de xarxa](ut03/ut0300.html) · [3.1 Tipus d'instal·lacions de xarxes de veu i dades](ut03/ut0301.html) · [3.2 Tipus de conductors: parell trenat de coure, cable coaxial, fibra òptica](ut03/ut0302.html)
+- **Activitats pràctiques (2):** [🛠️ Fitxa 3.1 · Comparativa de Mitjans de Transmissió Guiats i No Guiats](ut03/ficha301.html) · [🛠️ Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil](ut03/ficha302.html)
+- **[🚀 Obrir Unitat 3](ut03/index.html)** | **[📓 Quadern d'Activitats UD3](ut03/activitats.html)**
+
+### 📌 [UD4: Sistemes de Cablejat Estructurat i Subsistema Horitzontal/Vertical](ut04/index.html)
+
+- **Apartats teòrics (2):** [📋 4.0 Proposta Didàctica: Elements d'una instal·lació de xarxa](ut04/ut0400.html) · [4.1 Elements d'una xarxa de transmissió de dades i tipología de caixes](ut04/ut0401.html)
+- **Activitats pràctiques (1):** [🛠️ Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat](ut04/ficha401.html)
+- **[🚀 Obrir Unitat 4](ut04/index.html)** | **[📓 Quadern d'Activitats UD4](ut04/activitats.html)**
+
+### 📌 [UD5: Instal·lació Física — Canalitzacions, Armaris Rack, Patch Panels i Rosetes](ut05/index.html)
+
+- **Apartats teòrics (3):** [📋 5.0 Proposta Didàctica: Canalitzacions i sistemes de fixació](ut05/ut0500.html) · [5.1 Tipus de fixacions: tacs, brides, caragols, roscas, grapes](ut05/ut0501.html) · [5.2 Relació entre les fixacions i l'element a subjectar](ut05/ut0502.html)
+- **Activitats pràctiques (1):** [🛠️ Fitxa 5.1 · Disseny d'Armari Rack de 19 Polzades i Canalitzacions](ut05/ficha501.html)
+- **[🚀 Obrir Unitat 5](ut05/index.html)** | **[📓 Quadern d'Activitats UD5](ut05/activitats.html)**
+
+### 📌 [UD6: Grimpat de Connectors RJ-45 (T568A/T568B), Latiguillos i Comprovació amb Tester](ut06/index.html)
+
+- **Apartats teòrics (3):** [📋 6.0 Proposta Didàctica: Dispositius i interpretació de xarxes locals](ut06/ut0600.html) · [6.1 Elements de la xarxa local i la seua funció](ut06/ut0601.html) · [6.2 El mapa físic de la xarxa local: interpretació i representació](ut06/ut0602.html)
+- **Activitats pràctiques (1):** [🛠️ Fitxa 6.1 · Taller de Grimpat RJ-45 (T568A / T568B) i Rosetes IDC](ut06/ficha601.html)
+- **[🚀 Obrir Unitat 6](ut06/index.html)** | **[📓 Quadern d'Activitats UD6](ut06/activitats.html)**
+
+### 📌 [UD7: Dispositius d'Interconnexió de Xarxes — Switch, Router i Punt d'Accés Wi-Fi](ut07/index.html)
+
+- **Apartats teòrics (2):** [📋 7.0 Proposta Didàctica: Disseny i representació de xarxes locals](ut07/ut0700.html) · [7.1 Aplicacions informàtiques per a representar el mapa físic de la xarxa local](ut07/ut0701.html)
+- **Activitats pràctiques (1):** [🛠️ Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés](ut07/ficha701.html)
+- **[🚀 Obrir Unitat 7](ut07/index.html)** | **[📓 Quadern d'Activitats UD7](ut07/activitats.html)**
+
+
+
 
 ---
 
-## 📋 Comprovant de Lliurament per a Aules
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="L'emissor envia el missatge al receptor a través d'un canal utilitzant un codi comú.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quins són els cinc elements fonamentals que intervenen en tot sistema de comunicació?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, missatge, canal i codi.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Teclat, ratolí, impressora, altaveu i taula.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Paret, sostre, porta, finestra i armari.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Cobre, plàstic, vidre, paper i fusta.</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-mcq" data-answer="B" data-hint="La Capa 1 del model OSI és la Capa Física.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En el model de referència OSI de 7 capes, quina és la capa 1 encarregada de transmetre els bits com a senyals elèctrics, òptics o d'ones per el mitjà?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Capa d'Aplicació (Capa 7).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Capa Física (Capa 1).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Capa de Sessió (Capa 5).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Capa de Presentació (Capa 6).</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-vf" data-answer="V" data-hint="4 octets × 8 bits = 32 bits en total per a una adreça IPv4.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per punts, com <code>192.168.1.10</code>).</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
+  </div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
+</div>
+
+<div class="interactive-quiz" data-answer="8|vuit|8 bits" data-hint="Un byte o octet equival a 8 bits.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quants bits formen un byte (o octet) en els sistemes digitals i de comunicacions?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <h3>📋 Comprovant de Lliurament per a Aules</h3>
-  <p>En acabar els reptes interactius d'aquest tema, genera el teu informe oficial per adjuntar-lo al lliurament de la tasca d'Aules:</p>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
   <div class="aules-student-field">
-    <label for="aules-student-name">Nom i Cognoms de l'alumne/a:</label>
-    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Pere Martí Soler">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">Calculant resultats dels reptes...</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
-    <button type="button" class="btn-aules-copy">📋 Copiar Resum per a Aules</button>
-    <button type="button" class="btn-aules-dl">📄 Descarregar Comprovant (.pdf)</button>
+    <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD01" data-activity="modul_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
   </div>
   <div class="aules-toast"></div>
 </div>

@@ -1,117 +1,116 @@
-# UT 07: Definició i Validació d'Estructures XML (DTD i XML Schema / XSD)
+---
+layout: default
+title: "UD7: Conversió i Adaptació de Documents — XPath, JSONPath, XSLT i RSS/Atom — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD7"
+prev_url: "../ut06/index.html"
+prev_label: "⬅️ UD6"
+next_url: "ut0700.html"
+next_label: "📋 7.0 Proposta Didàctica: Conversió de documents ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut07" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD7: Conversió i Adaptació de Documents — XPath, JSONPath, XSLT i RSS/Atom
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa aprofundeix en els mecanismes formals de definició d'estructures i garantia d'integritat per a documents XML. En l'intercanvi de dades corporatives (B2B, sistemes financers, facturació electrònica com Facturae o missatgeria d'assegurances), no n'hi ha prou amb el fet que un document siga «ben format» des del punt de vista sintàctic; cal que complisca un contracte de dades estricte o **esquema formal**.
-
-S'estudien en profunditat:
-- **Validació Semàntica:** La distinció fonamental entre *Well-Formed XML* (document ben format) i *Valid XML* (document vàlid segons esquema).
-- **Definició de Tipus de Document (DTD):** L'estàndard clàssic heretat de SGML, analitzant la declaració d'elements, operadors de cardinalitat (`?`, `*`, `+`), tipus d'atributs (`CDATA`, `ID`, `IDREF`, `#REQUIRED`, `#IMPLIED`) i entitats generals i de paràmetre.
-- **XML Schema Definition (XSD / W3C XML Schema):** L'estàndard modern basat en la mateixa sintaxi XML, espais de noms (*XML Namespaces*), tipus de dades forts i extensibilitat orientada a objectes.
-- **Tipus Simples i Facetes de Restricció:** Creació de tipus de dades personalitzats mitjançant expressions regulars (`pattern`), intervals numèrics (`minInclusive`, `maxInclusive`), enumeracions i llistes.
-- **Tipus Complexos i Control d'Ocurrències:** Maquetació de nodes compostos amb `xs:sequence`, `xs:choice`, `xs:all` i límits d'aparició amb `minOccurs` i `maxOccurs`.
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA4 (DAW / DAM / ASIX):** Defineix i valida l'estructura de documents XML utilitzant DTD i esquemes XML (XSD).
-  - **CA 4.a:** S'han establit les diferències entre documents XML ben formats i documents vàlids.
-  - **CA 4.b:** S'han identificat les capacitats, limitacions i camps d'aplicació dels DTD i dels esquemes XML.
-  - **CA 4.c:** S'han creat definicions de tipus de document (DTD) internes i externes.
-  - **CA 4.d:** S'han definit elements, atributs i entitats en esquemes DTD.
-  - **CA 4.e:** S'han creat esquemes XML (XSD) utilitzant espais de noms.
-  - **CA 4.f:** S'han definit tipus simples i complexos en esquemes XSD aplicant restriccions i facetes.
-  - **CA 4.g:** S'han validat documents XML respecte als seus corresponents DTDs i esquemes XSD.
+Benvingut/da a la **Unitat Didàctica 7** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 07.01: Fonaments de validació XML: documents ben formats vs documents vàlids](./ut0701.md)
-2. [UT 07.02: Definició de Tipus de Document (DTD): elements, atributs, entitats i cardinalitat](./ut0702.md)
-3. [UT 07.03: Introducció a XML Schema (XSD): espais de noms (Namespaces) i arquitectura W3C](./ut0703.md)
-4. [UT 07.04: Tipus simples en XSD: tipus predefinits, restriccions, facetes i patrons RegEx](./ut0704.md)
-5. [UT 07.05: Tipus complexos en XSD: sequence, choice, all, ocurrències i atributs](./ut0705.md)
+1. **[📋 7.0 Proposta Didàctica: Conversió de documents](ut0700.html)**
+1. **[7.1 Introducció a la conversió de documents](ut0701.html)**
+1. **[7.2 Tecnologies de processament de documents](ut0702.html)**
+1. **[7.3 Sintaxi de localització de dades: XPath i JSONPath](ut0703.html)**
+1. **[7.4 Sintaxi i regles de les especificacions de conversió](ut0704.html)**
+1. **[7.5 Creació d'especificacions de conversió](ut0705.html)**
+1. **[7.6 Eines i casos pràctics de conversió](ut0706.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut07-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Document Ben Format vs Document Vàlid</h4>
+- **[⚡ Activitat 701: Activitat 1 - Anàlisi de casos d'ús](act701.html)**
+- **[📓 Recull Complet d'Activitats (UD7)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD7: Conversió i Adaptació de Documents — XPath, JSONPath, XSLT i RSS/Atom** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="B" data-hint="En XPath, el símbol '@' fa referència a un atribut i els claudàtors '[...]' defineixen un filtre o predicat.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En una expressió XPath com <code>/biblioteca/llibre[@categoria='web']/titol</code>, què selecciona el predicat <code>[@categoria='web']</code>?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Selecciona un element fill anomenat categoria.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Filtra únicament els elements <code>&lt;llibre&gt;</code> que tenen un atribut <code>categoria</code> amb el valor <code>'web'</code>.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Esborra tots els llibres de la biblioteca.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Selecciona el peu de pàgina del document.</button>
   </div>
-  <p class="challenge-question">Quina diferència conceptual existeix entre un document XML «ben format» (Well-Formed) i un document XML «vàlid» (Valid)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Són termes sinònims que descriuen exactament la mateixa propietat en XML.</button>
-    <button class="btn-check" data-correct="true">B) Un document ben format compleix únicament les regles sintàctiques generals d'XML (un sol element arrel, etiquetes correctament tancades i aniuades, caràcters escapats), mentre que un document vàlid a més compleix fidelment les regles estructurals, tipus de dades i restriccions declarades en el seu DTD o XML Schema associat.</button>
-    <button class="btn-check" data-correct="false">C) Un document ben format està xifrat amb HTTPS mentre que el document vàlid està signat amb certificat digital.</button>
-    <button class="btn-check" data-correct="false">D) Un document vàlid no pot contindre atributs.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut07-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Integritat Referencial en DTD: Atributs ID i IDREF</h4>
+<div class="interactive-mcq" data-answer="A" data-hint="<xsl:for-each> recorre tots els nodes que coincideixen amb l'expressió XPath de l'atribut select.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En un full d'estils XSLT, quina instrucció s'utilitza per a iterar sobre un conjunt de nodes XML seleccionats per una expressió XPath?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) &lt;xsl:for-each select='...'&gt;</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) &lt;xsl:variable&gt;</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) &lt;xsl:output&gt;</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) &lt;xsl:import&gt;</button>
   </div>
-  <p class="challenge-question">Quina regla d'integritat garanteix un analitzador XML quan un atribut es defineix com a tipus ID en un DTD?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Que el valor de l'atribut siga obligatòriament un nombre enter positiu.</button>
-    <button class="btn-check" data-correct="true">B) Que el valor de l'atribut siga un identificador únic en tot el document (no pot repetir-se en cap altre element) i que comence obligatòriament per una lletra o guió baix.</button>
-    <button class="btn-check" data-correct="false">C) Que el valor de l'atribut s'emmagatzeme en un fitxer de text separat.</button>
-    <button class="btn-check" data-correct="false">D) Que l'element continga com a mínim tres fills directes.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut07-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Limitacions de DTD que van motivar el Desenvolupament de XSD</h4>
+<div class="interactive-vf" data-answer="V" data-hint="XPath s'aplica sobre arbres XML i JSONPath aplica la mateixa filosofia sobre objectes i arrays JSON.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> XPath i JSONPath permeten navegar i extreure informació d'estructures jeràrquiques XML i JSON respectivament mitjançant expressions de ruta.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Quins dos motius tècnics fonamentals van dur al W3C a desenvolupar XML Schema (XSD) per a superar les mancances de DTD?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) DTD era massa ràpid de processar i consumia massa poca memòria RAM.</button>
-    <button class="btn-check" data-correct="true">B) DTD utilitza una sintaxi pròpia no basada en XML (requerint analitzadors específics) i manca d'un sistema ric de tipus de dades forts (no pot validar si un camp és un enter, una data o compleix una expressió regular, admetent pràcticament només text pla CDATA/#PCDATA).</button>
-    <button class="btn-check" data-correct="false">C) DTD no permet documents de més de 10 línies de text.</button>
-    <button class="btn-check" data-correct="false">D) DTD va ser comprat per una empresa privada que en va prohibir l'ús lliure.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut07-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Indicadors d'Ordre en XSD: xs:sequence vs xs:choice vs xs:all</h4>
+<div class="interactive-quiz" data-answer="xslt|xsl" data-hint="Són les sigles XSLT.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina tecnologia de l'ecosistema XML (Extensible Stylesheet Language Transformations) permet transformar un document XML en un document HTML, text o un altre XML?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina diferència d'ordenació estableix l'indicador xs:sequence respecte a xs:all en un tipus complex d'XML Schema?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) xs:sequence permet que els elements fills apareguen en qualsevol ordre arbitrari.</button>
-    <button class="btn-check" data-correct="true">B) xs:sequence exigeix que els elements fills apareguen exactament en el mateix ordre estricte en què han estat declarats en l'esquema, mentre que xs:all permet que els elements fills declarats apareguen en qualsevol ordre (amb ocurrència màxima d'1).</button>
-    <button class="btn-check" data-correct="false">C) xs:all obliga a duplicar cadascun dels elements fills.</button>
-    <button class="btn-check" data-correct="false">D) xs:choice només permet carregar arxius binaris.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD7: Conversió i Adaptació de Documents — XPath, JSONPath, XSLT i RSS/Atom**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 7 LMSGI</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 7</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD07" data-activity="ut07_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

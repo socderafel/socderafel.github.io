@@ -2,7 +2,7 @@
 
 # 📚 Biblioteca de Cicles i Mòduls Formatius
 
-Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb barra lateral d'unitats didàctiques `UD`, vista d'unitat completa en 1 pàgina, apartats teòrics desenvolupats, caixes de codi i mode fosc/clar):
+Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb barra lateral d'unitats didàctiques `UD`, vista d'unitat completa en 1 pàgina, apartats teòrics desenvolupats, caixes de codi, gamificació interactiva i mode fosc/clar):
 
 ---
 
@@ -13,7 +13,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 | **FP Grau Bàsic (1r Curs)** | 🔬 Ciències Aplicades I | `9 UD` | `50 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-ciencies-aplicades/) |
 | **FP Grau Bàsic (1r Curs)** | 🛠️ Muntatge i Manteniment de Sistemes i Components (MMSCI) | `9 UD` | `58 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-mmsci-muntatge-sistemes/) |
 | **FP Grau Bàsic (1r Curs)** | 📄 Ofimàtica i Arxiu de Documents (OAD) | `9 UD` | `56 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-oad-ofimatica/) |
-| **FP Grau Bàsic (2n Curs)** | 🔌 Instal·lació i Manteniment de Xarxes (IMX) | `9 UD` | `56 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-imx-instal-lacio-xarxes/) |
+| **FP Grau Bàsic (2n Curs)** | 🔌 Instal·lació i Manteniment de Xarxes (IMX / Networking Essentials) | `7 UD` | `46 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-imx-instal-lacio-xarxes/) |
 | **FP Grau Bàsic (2n Curs)** | 💻 Operacions Auxiliars de Configuració i Explotació (OACE) | `9 UD` | `56 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-oace-operacions-auxiliars/) |
 | **FP Grau Bàsic (2n Curs)** | 🚀 Projecte Intermodular (Empresa Informàtica i Fira) | `8 UP` | `35 pàgs` | [**📘 Entrar al Projecte →**](../projecte-intermodular/) |
 
@@ -26,7 +26,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 | **FP Grau Mitjà** | 💽 Sistemes Operatius Monolloc | `5 UD` | `87 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/1smx-som-sistemes-operatius-monolloc/) |
 | **FP Grau Mitjà** | 🖧 Xarxes Locals | `4 UD` | `103 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/1smx-xal-xarxes-locals/) |
 | **FP Grau Mitjà** | 💻 Aplicacions Web | `5 UD` | `78 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/2smx-awe-aplicacions-web/) |
-| **FP Grau Mitjà** | 🌐 Serveis en Xarxa | `9 UD` | `61 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/2smx-sex-serveis-en-xarxa/) |
+| **FP Grau Mitjà** | 🌐 Serveis en Xarxa | `9 UD` | `76 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/2smx-sex-serveis-en-xarxa/) |
 | **FP Grau Mitjà** | 🛡️ Seguretat Informàtica | `9 UD` | `117 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/2smx-si-seguretat-informatica/) |
 | **FP Grau Mitjà** | 🌐 Sistemes Operatius en Xarxa | `6 UD` | `112 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/2smx-sox-sistemes-operatius-xarxa/) |
 | **FP Grau Mitjà** | 🌱 Sostenibilitat Aplicada als Sectors Productius | `5 UD` | `24 pàgs` | [**📘 Entrar al Curs →**](./02_SMX/lomloe-sostenibilitat-aplicada/) |
@@ -35,10 +35,10 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 | Cicle / Nivell | Mòdul Professional | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
-| **FP Grau Superior** | 🗄️ Bases de Dades (SQL i Model E/R) | `9 UD` | `63 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-bbdd-bases-dades/) |
+| **FP Grau Superior** | 🗄️ Bases de Dades (SQL i Model E/R) | `8 UD` | `113 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-bbdd-bases-dades/) |
 | **FP Grau Superior** | ⚙️ Entorns de Desenvolupament | `20 UD` | `280 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-ed-entorns-desenvolupament/) |
-| **FP Grau Superior** | 🏷️ Llenguatges de Marques i Sistemes de Gestió d'Informació | `6 UD` | `37 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-lmsgi-llenguatges-marques/) |
-| **FP Grau Superior** | ☕ Programació en Java (1r DAW / DAM) | `12 UD` | `38 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-prg-programacio-java/) |
+| **FP Grau Superior** | 🏷️ Llenguatges de Marques i Sistemes de Gestió d'Informació | `9 UD` | `167 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-lmsgi-llenguatges-marques/) |
+| **FP Grau Superior** | ☕ Programació en Java (1r DAW / DAM) | `8 UD` | `105 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-prg-programacio-java/) |
 | **FP Grau Superior** | 🖥️ Sistemes Informàtics | `7 UD` | `97 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/1daw-dam-si-sistemes-informatics/) |
 | **FP Grau Superior** | ☁️ Cloud Computing i Desplegament en AWS | `9 UD` | `49 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/2daw-aws-cloud/) |
 | **FP Grau Superior** | 🚀 Desplegament d'Aplicacions Web | `9 UD` | `145 pàgs` | [**📘 Entrar al Curs →**](./03_DAW_DAM/2daw-daw-desplegament-web/) |

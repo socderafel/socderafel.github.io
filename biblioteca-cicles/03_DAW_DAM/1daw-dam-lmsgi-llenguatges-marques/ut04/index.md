@@ -1,113 +1,133 @@
-# UT 04: Fonaments i Sintaxi de JavaScript en el Costat Client
+---
+layout: default
+title: "UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD4"
+prev_url: "../ut03/index.html"
+prev_label: "⬅️ UD3"
+next_url: "ut0400.html"
+next_label: "📋 4.0 Proposta Didàctica: Sintaxi de JavaScript ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut04" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa introdueix el llenguatge de programació estàndard que governa el comportament dinàmic en la web: **JavaScript** (estandarditzat sota l'especificació oficial **ECMAScript** per ECMA International TC39). Després d'haver dominat l'estructura semàntica (HTML5) i el disseny visual (CSS3), s'aborda la tercera capa fonamental del client web:
-- **Cicle de Vida d'Execució:** El motor JavaScript V8 / SpiderMonkey, el procés d'anàlisi de codi HTML i la càrrega no bloquejant mitjançant atributs `async` i `defer`.
-- **Ecosistema ECMAScript Modern (ES6+):** Gestió estricta de memòria i àmbits de bloc amb `let` i `const`, superant el comportament imprecís de `var` i el fenomen d'elevació (*hoisting*).
-- **Tipus de Dades i Coerció:** Comparacions estrictes (`===` vs `==`) i sistemes de tipatge dinàmic feble.
-- **Paradigma Funcional i Funcions de Primera Classe:** Funcions fletxa (*arrow functions*), àmbit lèxic de `this` i funcions d'ordre superior.
-- **Estructures de Dades Compostes:** Manipulació immutable d'arrays amb mètodes funcionals (`map`, `filter`, `reduce`), objectes literals i desestructuració avançada (*destructuring assignment*).
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA3 (DAW / DAM / ASIX):** Desenvolupa documents web interactius utilitzant llenguatges de guió (scripts) de client, analitzant la seua estructura i sintaxi.
-  - **CA 3.a:** S'han identificat les capacitats i àmbits d'aplicació dels llenguatges de guió en el client web.
-  - **CA 3.b:** S'han inserit scripts en documents web utilitzant mecanismes eficients de càrrega.
-  - **CA 3.c:** S'han utilitzat les estructures de control, tipus de dades i operadors propis del llenguatge.
-  - **CA 3.d:** S'han definit i invocat funcions gestionant el pas de paràmetres i el retorn de valors.
-  - **CA 3.e:** S'han manipulat estructures de dades compostes (llistes, vectors i objectes).
+Benvingut/da a la **Unitat Didàctica 4** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 04.01: Integració de JavaScript en la web: càrrega no bloquejant (async, defer) i depuració en consola](./ut0401.md)
-2. [UT 04.02: Variables, àmbits de bloc i tipus de dades (let, const, hoisting, typeof)](./ut0402.md)
-3. [UT 04.03: Operadors, coerció de tipus i estructures de control de flux iteratives i condicionals](./ut0403.md)
-4. [UT 04.04: Funcions en JavaScript: declaracions, expressions, funcions fletxa i pas de paràmetres](./ut0404.md)
-5. [UT 04.05: Arrays moderns (map, filter, reduce), objectes literals i desestructuració](./ut0405.md)
+1. **[📋 4.0 Proposta Didàctica: Sintaxi de JavaScript](ut0400.html)**
+1. **[4.1.1 Introducció](ut0411.html)**
+1. **[4.1.2 Àmbits](ut0412.html)**
+1. **[4.1.3 La consola Javascript](ut0413.html)**
+1. **[4.1.4 Com funciona Javascript?](ut0414.html)**
+1. **[4.1.5 L'especificació ECMAScript](ut0415.html)**
+1. **[4.2.1 Conceptes Bàsics](ut0421.html)**
+1. **[4.3.1 Tipus de dades](ut0431.html)**
+1. **[4.3.2 Variables i Constants](ut0432.html)**
+1. **[4.3.3 Estructures de control](ut0433.html)**
+1. **[4.3.4 Bucles i iteracions](ut0434.html)**
+1. **[4.3.5 Funcions](ut0435.html)**
+1. **[4.4.1 Numbers](ut0441.html)**
+1. **[4.4.2 Strings](ut0442.html)**
+1. **[4.5.1 Arrays](ut0451.html)**
+1. **[4.5.2 Array Functions](ut0452.html)**
+1. **[4.6.1 Objectes](ut0461.html)**
+1. **[4.6.2 Format JSON](ut0462.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut04-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Càrrega de Scripts: async vs defer</h4>
+- **[⚡ Activitat 400: Instruccions](act400.html)**
+- **[⚡ Activitat 401: Activitat 01 - El meu primer programa](act401.html)**
+- **[⚡ Activitat 402: Activitat 06 - suma total](act402.html)**
+- **[⚡ Activitat 403: Activitat 11](act403.html)**
+- **[⚡ Activitat 404: Activitat 16](act404.html)**
+- **[⚡ Activitat 405: Activitat 21](act405.html)**
+- **[⚡ Activitat 406: 1. Creació d'arrays i accés a elements](act406.html)**
+- **[📓 Recull Complet d'Activitats (UD4)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="map() projecta cada element a un nou valor i retorna el nou array resultant.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin mètode funcional dels Arrays en JavaScript transforma cada element aplicant una funció i retorna un nou array de la mateixa longitud?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) map()</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) shift()</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) splice()</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) indexOf()</button>
   </div>
-  <p class="challenge-question">Per quina raó tècnica s'utilitza l'atribut defer en la càrrega d'un fitxer JavaScript situat en la capçalera (&lt;script defer src="app.js"&gt;) quan el codi depèn d'elements de l'arbre DOM de la pàgina?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Perquè comprimeix el codi JavaScript en format binari abans d'executar-lo.</button>
-    <button class="btn-check" data-correct="true">B) Perquè descarrega el fitxer de guió en paral·lel en segon pla sense aturar l'analitzador HTML del navegador i en posposa l'execució fins que el document HTML s'ha analitzat completament (respectant a més l'ordre de declaració).</button>
-    <button class="btn-check" data-correct="false">C) Perquè impedeix que altres dominis externs puguen llegir les variables globals del script.</button>
-    <button class="btn-check" data-correct="false">D) Perquè converteix automàticament tot el codi asíncron en codi síncron bloquejant.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut04-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Diferències d'Àmbit: let vs const vs var</h4>
+<div class="interactive-mcq" data-answer="A" data-hint="Les funcions fletxa (=>) proporcionen una sintaxi concisa i lèxica.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Com s'anomena la sintaxi abreujada <code>(a, b) =&gt; a + b</code> per a escriure funcions en JavaScript ES6?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Funció fletxa (Arrow function).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Bucle infinit.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C)  Variable global.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Comentari de bloc.</button>
   </div>
-  <p class="challenge-question">Quina de les següents afirmacions sobre la gestió de variables en ECMAScript modern és estrictament correcta?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Les variables declarades amb var tenen àmbit de bloc delimitat per claus { }.</button>
-    <button class="btn-check" data-correct="true">B) let i const tenen àmbit de bloc (block scope) i romanen en la «Zona Morta Temporal» (TDZ) abans de la seua inicialització, impedint el seu ús previ i evitant errors silenciosos per elevació (hoisting).</button>
-    <button class="btn-check" data-correct="false">C) const congela completament les propietats internes d'un objecte, fent-lo 100% immutable sense possibilitat de canviar cap camp.</button>
-    <button class="btn-check" data-correct="false">D) let permet tornar a redeclarar la mateixa variable amb el mateix nom dins del mateix bloc de codi.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut04-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Coerció de Tipus i Operador d'Igualtat Estricta</h4>
+<div class="interactive-vf" data-answer="V" data-hint="JSON.stringify serialitza a text JSON, i JSON.parse fa el pas invers.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> El mètode <code>JSON.stringify(obj)</code> converteix un objecte de JavaScript en una cadena de text en format JSON.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Quin és el resultat d'avaluar les expressions: 5 == "5" i 5 === "5" en el motor de JavaScript, i quina és la recomanació estàndard de desenvolupament?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Ambdues retornen true, i es recomana usar sempre == per flexibilitat de tipus.</button>
-    <button class="btn-check" data-correct="false">B) Ambdues retornen false, perquè una és enter i l'altra és cadena.</button>
-    <button class="btn-check" data-correct="true">C) 5 == "5" avalua a true per coerció implícita de tipus, mentre que 5 === "5" avalua a false; es recomana emprar sempre === per a garantir integritat estricta de valor i tipus.</button>
-    <button class="btn-check" data-correct="false">D) La segona llança una excepció de tipus TypeError en consola.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut04-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Programació Funcional amb Arrays: map, filter, reduce</h4>
+<div class="interactive-quiz" data-answer="log|console.log" data-hint="És console.log().">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin mètode de l'objecte <code>console</code> (<code>console.____()</code>) s'utilitza habitualment per a imprimir missatges de depuració en les eines del navegador?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Donat l'array const notes = [4, 7, 8, 3, 9, 5];, quina cadena de mètodes d'array obté la mitjana exacta només dels alumnes que han aprovat (nota &gt;= 5)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) notes.forEach(n => n >= 5).sum() / notes.length</button>
-    <button class="btn-check" data-correct="true">B) const aprovats = notes.filter(n => n >= 5); const mitjana = aprovats.reduce((acc, curr) => acc + curr, 0) / aprovats.length;</button>
-    <button class="btn-check" data-correct="false">C) notes.map(n => n >= 5 ? n : null).reduce((a, b) => a + b)</button>
-    <button class="btn-check" data-correct="false">D) notes.find(n => n >= 5).calculateAverage()</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 4 LMSGI</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 4</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD04" data-activity="ut04_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

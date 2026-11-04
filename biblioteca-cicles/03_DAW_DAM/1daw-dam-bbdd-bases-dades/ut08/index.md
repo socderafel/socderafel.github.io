@@ -1,135 +1,116 @@
 ---
-layout: default
-title: "UD8: Bases de Dades NoSQL i Tendències: MongoDB — Bases de Dades"
+title: "UD8: Bases de Dades No Relacionals (NoSQL) — MongoDB — Bases de Dades"
+layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UD8"
+badge: "1r DAW / DAM / ASIX · Bases de Dades · UT08"
 prev_url: "../ut07/index.html"
-prev_label: "⬅️ UD7 Programació Servidor"
-next_url: "ut0801.html"
-next_label: "Començar 8.1 ➡️"
+prev_label: "⬅️ UD7"
+next_url: "ut0800.html"
+next_label: "📋 8.0 Proposta Didàctica: Bases de dades no relacionals (NoSQL) ➡️"
+module: "BBDD"
 ---
 
-# UD8: Bases de Dades NoSQL i Tendències: MongoDB
+# UD8: Bases de Dades No Relacionals (NoSQL) — MongoDB
 
-<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
-  <div>
-    <span style="font-weight:700; color:var(--primary);">Progrés de la Unitat Didàctica 8</span>
-    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes superats (0%)</div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div style="width:120px; height:10px; background:var(--border); border-radius:5px; overflow:hidden;">
-    <div class="progress-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-Benvingut/da a la **UD8: Bases de Dades NoSQL i Tendències: MongoDB** del mòdul professional de **Bases de Dades**.
-
-Durant dècades, el model relacional va monopolitzar el panorama de la gestió de dades. No obstant això, l'explosió de la Web 2.0, les xarxes socials, els dispositius IoT i els volums immensos de dades desestructurades van impulsar l'aparició del moviment **NoSQL (Not Only SQL)**. En aquesta darrera unitat explorarem els fonaments teòrics dels sistemes distribuïts (**Teorema CAP**, consistència **BASE**) i ens endinsarem pràcticament en el motor documental líder del sector: **MongoDB**.
-
----
-
-## 🎯 Objectius i Resultats d'Aprenentatge (RA7)
-
-Segons el currículum oficial (Reials Decrets 453/2010 i 686/2010):
-- **RA7:** Reconeix les característiques de les bases de dades no relacionals i gestiona la informació en sistemes NoSQL orientats a documents.
-  - Comprendre les limitacions dels sistemes relacionals en entorns d'escalabilitat horitzontal massiva.
-  - Analitzar el Teorema CAP i el paradigma de consistència eventual BASE.
-  - Classificar els tipus de bases de dades NoSQL (clau-valor, columnars, grafs i documentals).
-  - Identificar l'estructura de dades de MongoDB (bases de dades, col·leccions, documents JSON/BSON, `ObjectId`).
-  - Executar operacions CRUD bàsiques i avançades mitjançant la consola `mongosh`.
-  - Aplicar operadors de consulta (`$gt`, `$in`, `$regex`) i modificació atòmica (`$set`, `$inc`, `$push`).
-  - Construir canonades d'agregació (*pipelines*) amb `$match`, `$group`, `$project` i `$sort`.
+Benvingut/da a la **Unitat Didàctica 8** del mòdul de **Bases de Dades**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## 📑 Apartats de la Unitat
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. **[8.1 El Paradigma NoSQL i el Teorema CAP](ut0801.html)**
-   - Limitacions del model relacional per a Big Data. Teorema CAP de Brewer (Consistència, Disponibilitat, Tolerància a Particions) i filosofia BASE.
-2. **[8.2 Famílies de Bases de Dades NoSQL](ut0802.html)**
-   - Clau-valor (Redis), Columnars (Cassandra), Grafs (Neo4j) i Documentals (MongoDB). Casos d'ús recomanats.
-3. **[8.3 MongoDB: Arquitectura i Model de Dades JSON/BSON](ut0803.html)**
-   - Documents BSON, col·leccions, camps `_id` i disseny documental: embeure (*embedding*) vs. referenciar (*referencing*).
-4. **[8.4 Operacions CRUD a MongoDB](ut0804.html)**
-   - Ordres a `mongosh`: `insertOne`, `insertMany`, `find`, `updateOne`, `updateMany`, `deleteOne`, `deleteMany` i operadors de filtre.
-5. **[8.5 Agregacions i Indexació a MongoDB](ut0805.html)**
-   - El marc d'agregacions (*Aggregation Framework*), etapes de la canonada (`$match`, `$group`, `$project`), creació d'índexs i optimització.
+1. **[📋 8.0 Proposta Didàctica: Bases de dades no relacionals (NoSQL)](ut0800.html)**
+1. **[8.1 Bases de dades no relacionals (NoSQL)](ut0801.html)**
+1. **[8.2 MongoDB](ut0802.html)**
+1. **[8.3 Configuració entorn MongoDB](ut0803.html)**
 
 ---
 
-## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-Posa a prova la teua visió moderna sobre sistemes NoSQL resolent aquests 4 reptes de síntesi:
+- **[⚡ Activitat 801](act801.html)**
+- **[⚡ Activitat 802: Activitat 1](act802.html)**
+- **[⚡ Activitat 803](act803.html)**
+- **[📓 Recull Complet d'Activitats (UD8)](activitats.html)**
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 1: El Teorema CAP</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD8: Bases de Dades No Relacionals (NoSQL) — MongoDB** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="B" data-hint="MongoDB utilitza BSON (Binary JSON), que estén JSON amb tipus com ObjectId, Date o BinData.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En les bases de dades NoSQL documentals com MongoDB, quin format binari s'utilitza internament per a emmagatzemar els documents amb suport de tipus de dades estès?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) CSV delimitat per punt i coma.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) BSON (Binary JSON).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) HTML4 transicional.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Taules relacionals planes.</button>
   </div>
-  <p style="margin-bottom:15px;">Segons el Teorema CAP d'Eric Brewer, en un sistema de base de dades distribuït a través d'una xarxa subjecta a fallades de comunicació (Partition Tolerance), quina elecció obligatòria s'ha de fer?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Es pot tindre Consistència estricta i Disponibilitat alhora sense cap sacrifici.</button>
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Cal triar entre Consistència (rebutjar lectures/escriptures si no es garanteix la dada exacta) o Disponibilitat (retornar sempre resposta encara que continga dades velles).</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Cal canviar els discs durs per cintes magnètiques.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) S'eliminen totes les particions de xarxa mitjançant un commutador.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 2: Filosofia BASE vs. ACID</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+<div class="interactive-mcq" data-answer="A" data-hint="En MongoDB, les col·leccions agrupen documents JSON/BSON.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> A què equival una 'taula' i una 'fila/tupla' del model relacional dins de la terminologia de MongoDB?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) A una 'col·lecció' (collection) i un 'document' (document) respectivament.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) A un 'trigger' i una 'vista'.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) A un 'full de càlcul' i una 'macro'.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) A un 'arbre DTD' i un 'atribut XML'.</button>
   </div>
-  <p style="margin-bottom:15px;">Què signifiquen les sigles de la filosofia BASE en sistemes NoSQL distribuïts?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Basically Available, Soft state, Eventual consistency.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Binary Access, Secure Encryption, Data Engine.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Backup Automated, System Error, Disk Controller.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Big Array, Storage Element, Database.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 3: Disseny Embed vs. Reference a MongoDB</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+<div class="interactive-vf" data-answer="V" data-hint="Si no s'especifica el camp _id en inserir un document, MongoDB genera automàticament un ObjectId únic.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> En MongoDB, tot document emmagatzemat dins d'una col·lecció posseeix un camp clau <code>_id</code> que l'identifica de manera única.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p style="margin-bottom:15px;">En dissenyar una col·lecció de factures a MongoDB, quin és el motiu principal per embeure directament les línies de factura com un array de subdocuments dins de la pròpia factura?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Permet recuperar tota la factura i els seus articles en una única lectura ultra ràpida de disc sense necessitat de fer costosos joins.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Perquè MongoDB prohibeix tenir més d'una col·lecció per base de dades.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Perquè els arrays de JSON ocupen menys memòria RAM que els números.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Perquè el llenguatge JavaScript només sap llegir fitxers niats.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 4: Pipeline d'Agregació</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+<div class="interactive-quiz" data-answer="find|findone|db.collection.find" data-hint="És el mètode find (o findOne).">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin mètode de <code>mongosh</code> s'utilitza sobre una col·lecció (<code>db.colleccio.____()</code>) per a cercar i recuperar documents que compleixen un filtre?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p style="margin-bottom:15px;">Quina és la funció de l'etapa '$group' dins d'una canonada d'agregació (Aggregation Pipeline) a MongoDB?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Esborrar els usuaris que pertanyen al mateix departament.</button>
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Agrupar documents segons un camp clau (`_id`) i aplicar càlculs d'acumulació com `$sum` o `$avg` de manera anàloga al GROUP BY d'SQL.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Tancar la connexió amb el servidor MongoDB.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Ordenar els documents alfabèticament.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="aules-delivery-card" style="background:var(--bg-card); border:2px dashed var(--primary); border-radius:10px; padding:20px; margin-top:35px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
-    <div>
-      <h3 style="margin:0 0 5px 0; color:var(--primary); font-size:1.15rem;">📋 Lliurament d'Activitats a Aules</h3>
-      <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">
-        En acabar de resoldre els reptes interactius d'aquest apartat, descarrega el justificant en PDF i puja'l a la tasca corresponent d'Aules.
-      </p>
-    </div>
-    <button class="btn-aules-download" onclick="window.print()" style="background:var(--primary); color:#fff; border:none; padding:10px 20px; border-radius:6px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
-      📥 Descarregar Justificant PDF
-    </button>
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD8: Bases de Dades No Relacionals (NoSQL) — MongoDB**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD08" data-activity="ut08_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

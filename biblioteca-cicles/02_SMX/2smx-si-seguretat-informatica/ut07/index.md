@@ -1,11 +1,13 @@
 ---
-layout: default
 title: "UT 07: Normativa, Protecció de Dades (RGPD) i Gestió d'Incidents — Seguretat Informàtica"
-permalink: /02_SMX/2smx-si-seguretat-informatica/ut07/index.html
-prev_url: /02_SMX/2smx-si-seguretat-informatica/ut06/index.html
+layout: "default"
+prev_url: "/02_SMX/2smx-si-seguretat-informatica/ut06/index.html"
 prev_label: "UT 06: Criptografia i Xarxes Segures"
-next_url: /02_SMX/2smx-si-seguretat-informatica/index.html
+next_url: "/02_SMX/2smx-si-seguretat-informatica/index.html"
 next_label: "Tornar a l'Índex General del Mòdul"
+course_root: ".."
+badge: "2n SMX · Seguretat Informàtica · UT07"
+module: "SI"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

@@ -1,210 +1,557 @@
-[
-  {
-    "title": "UT 01: Sistemes d'Emmagatzematge i SGBD",
-    "url": "ut01/index.md",
-    "children": [
-      {
-        "title": "1.1 Evolució: Fitxers tradicionals vs. BD",
-        "url": "ut01/ut0101.md"
-      },
-      {
-        "title": "1.2 El Sistema de Gestió de Bases de Dades (SGBD)",
-        "url": "ut01/ut0102.md"
-      },
-      {
-        "title": "1.3 Arquitectura ANSI-SPARC i independència",
-        "url": "ut01/ut0103.md"
-      },
-      {
-        "title": "1.4 Classificació i models de bases de dades",
-        "url": "ut01/ut0104.md"
-      },
-      {
-        "title": "1.5 Instal·lació, configuració i administració",
-        "url": "ut01/ut0105.md"
-      }
-    ]
+{
+  "home": {
+    "label": "🏠 Portada: Bases de Dades",
+    "href": "index.html"
   },
-  {
-    "title": "UT 02: Disseny Conceptual: Model E/R",
-    "url": "ut02/index.md",
-    "children": [
-      {
-        "title": "2.1 Fonaments i cicle de vida de les BD",
-        "url": "ut02/ut0201.md"
-      },
-      {
-        "title": "2.2 Entitats, atributs i tipus de claus",
-        "url": "ut02/ut0202.md"
-      },
-      {
-        "title": "2.3 Relacions, correspondència i cardinalitats",
-        "url": "ut02/ut0203.md"
-      },
-      {
-        "title": "2.4 Model EER Estès: Jerarquies d'herència",
-        "url": "ut02/ut0204.md"
-      },
-      {
-        "title": "2.5 Resolució de casos pràctics i diagrames reals",
-        "url": "ut02/ut0205.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 03: Disseny Lògic: Model Relacional i Normalització",
-    "url": "ut03/index.md",
-    "children": [
-      {
-        "title": "3.1 El Model Relacional: Estructura i conceptes",
-        "url": "ut03/ut0301.md"
-      },
-      {
-        "title": "3.2 Regles d'integritat en el model relacional",
-        "url": "ut03/ut0302.md"
-      },
-      {
-        "title": "3.3 Regles de transformació d'E/R a relacional",
-        "url": "ut03/ut0303.md"
-      },
-      {
-        "title": "3.4 Teoria de la normalització: Dependències",
-        "url": "ut03/ut0304.md"
-      },
-      {
-        "title": "3.5 Formes normals (1FN-BCNF) i desnormalització",
-        "url": "ut03/ut0305.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 04: Disseny Físic: SQL DDL i DCL",
-    "url": "ut04/index.md",
-    "children": [
-      {
-        "title": "4.1 Introducció a SQL i subllenguatges",
-        "url": "ut04/ut0401.md"
-      },
-      {
-        "title": "4.2 SQL DDL: Creació i gestió de taules",
-        "url": "ut04/ut0402.md"
-      },
-      {
-        "title": "4.3 Definició de restriccions d'integritat",
-        "url": "ut04/ut0403.md"
-      },
-      {
-        "title": "4.4 Gestió d'índexs, vistes i seqüències",
-        "url": "ut04/ut0404.md"
-      },
-      {
-        "title": "4.5 SQL DCL: Seguretat, usuaris, rols i permisos",
-        "url": "ut04/ut0405.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 05: Manipulació de Dades: SQL DML i Transaccions TCL",
-    "url": "ut05/index.md",
-    "children": [
-      {
-        "title": "5.1 SQL DML: Inserció de dades (INSERT)",
-        "url": "ut05/ut0501.md"
-      },
-      {
-        "title": "5.2 SQL DML: Modificació de registres (UPDATE)",
-        "url": "ut05/ut0502.md"
-      },
-      {
-        "title": "5.3 SQL DML: Esborrament de dades (DELETE)",
-        "url": "ut05/ut0503.md"
-      },
-      {
-        "title": "5.4 Concepte de transacció i propietats ACID",
-        "url": "ut05/ut0504.md"
-      },
-      {
-        "title": "5.5 SQL TCL: Control i nivells d'aïllament",
-        "url": "ut05/ut0505.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 06: Consultes a Bases de Dades: SQL DQL",
-    "url": "ut06/index.md",
-    "children": [
-      {
-        "title": "6.1 Estructura bàsica de consultes DQL (SELECT)",
-        "url": "ut06/ut0601.md"
-      },
-      {
-        "title": "6.2 Funcions d'agregació i GROUP BY / HAVING",
-        "url": "ut06/ut0602.md"
-      },
-      {
-        "title": "6.3 Combinació de taules: Joins relacionals",
-        "url": "ut06/ut0603.md"
-      },
-      {
-        "title": "6.4 Subconsultes i CTEs (WITH)",
-        "url": "ut06/ut0604.md"
-      },
-      {
-        "title": "6.5 Operadors de conjunts i EXPLAIN ANALYZE",
-        "url": "ut06/ut0605.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 07: Programació en Servidor: Procediments, Triggers i Cursors",
-    "url": "ut07/index.md",
-    "children": [
-      {
-        "title": "7.1 Introducció a la programació procedural en SGBD",
-        "url": "ut07/ut0701.md"
-      },
-      {
-        "title": "7.2 Funcions emmagatzemades (FUNCTION)",
-        "url": "ut07/ut0702.md"
-      },
-      {
-        "title": "7.3 Procediments emmagatzemats (PROCEDURE)",
-        "url": "ut07/ut0703.md"
-      },
-      {
-        "title": "7.4 Disparadors o Triggers (BEFORE / AFTER)",
-        "url": "ut07/ut0704.md"
-      },
-      {
-        "title": "7.5 Cursors i tractament fila a fila",
-        "url": "ut07/ut0705.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 08: Bases de Dades NoSQL i Tendències: MongoDB",
-    "url": "ut08/index.md",
-    "children": [
-      {
-        "title": "8.1 El paradigma NoSQL i el Teorema CAP",
-        "url": "ut08/ut0801.md"
-      },
-      {
-        "title": "8.2 Famílies NoSQL: Clau-valor, columnars, grafs",
-        "url": "ut08/ut0802.md"
-      },
-      {
-        "title": "8.3 MongoDB: Model documental JSON/BSON",
-        "url": "ut08/ut0803.md"
-      },
-      {
-        "title": "8.4 Operacions CRUD a MongoDB (mongosh)",
-        "url": "ut08/ut0804.md"
-      },
-      {
-        "title": "8.5 Agregacions i indexació a MongoDB",
-        "url": "ut08/ut0805.md"
-      }
-    ]
-  }
-]
+  "units": [
+    {
+      "summary": "UD1: Introducció a les Bases de Dades i Emmagatzematge de la Informació",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD1",
+          "href": "./ut01/index.html"
+        },
+        {
+          "label": "📋 1.0 Proposta Didàctica: Introducció a les BBDD. Emmagatzematge de la Informació",
+          "href": "./ut01/ut0100.html"
+        },
+        {
+          "label": "1.1 Introducció. Tipus de fitxers i accés a dades",
+          "href": "./ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 Introducció a les BBDD",
+          "href": "./ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 Sistemes gestors de base de dades SGBD",
+          "href": "./ut01/ut0103.html"
+        },
+        {
+          "label": "1.4 Bases de dades centralitzades i Distribuïdes",
+          "href": "./ut01/ut0104.html"
+        },
+        {
+          "label": "1.5 Fragmentació",
+          "href": "./ut01/ut0105.html"
+        },
+        {
+          "label": "1.6 Protecció de dades i normativa LOPD",
+          "href": "./ut01/ut0106.html"
+        },
+        {
+          "label": "1.7 Big Data i Intel·ligència de negocis",
+          "href": "./ut01/ut0107.html"
+        },
+        {
+          "label": "⚡ Activitat 101",
+          "href": "./ut01/act101.html"
+        },
+        {
+          "label": "⚡ Activitat 102",
+          "href": "./ut01/act102.html"
+        },
+        {
+          "label": "⚡ Activitat 103",
+          "href": "./ut01/act103.html"
+        },
+        {
+          "label": "⚡ Activitat 104",
+          "href": "./ut01/act104.html"
+        },
+        {
+          "label": "⚡ Activitat 105",
+          "href": "./ut01/act105.html"
+        },
+        {
+          "label": "⚡ Activitat 106",
+          "href": "./ut01/act106.html"
+        },
+        {
+          "label": "⚡ Activitat 107",
+          "href": "./ut01/act107.html"
+        },
+        {
+          "label": "⚡ Activitat 108",
+          "href": "./ut01/act108.html"
+        },
+        {
+          "label": "⚡ Activitat 109",
+          "href": "./ut01/act109.html"
+        },
+        {
+          "label": "⚡ Activitat 110",
+          "href": "./ut01/act110.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD1)",
+          "href": "./ut01/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD2: Disseny Conceptual — Model Entitat-Relació (E/R i EER)",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD2",
+          "href": "./ut02/index.html"
+        },
+        {
+          "label": "📋 2.0 Proposta Didàctica: Disseny Conceptual. Model entitat/relació",
+          "href": "./ut02/ut0200.html"
+        },
+        {
+          "label": "2.1 Disseny de Bases de dades",
+          "href": "./ut02/ut0201.html"
+        },
+        {
+          "label": "2.2 Components del Model E/R",
+          "href": "./ut02/ut0202.html"
+        },
+        {
+          "label": "2.3 Semàntica de les relacions",
+          "href": "./ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Eines gràfiques per al disseny lògic de bases de dades",
+          "href": "./ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Restriccions sobre relacions",
+          "href": "./ut02/ut0205.html"
+        },
+        {
+          "label": "2.6 El model Entitat Relació Estès",
+          "href": "./ut02/ut0206.html"
+        },
+        {
+          "label": "⚡ Activitat 201: Activitat 1",
+          "href": "./ut02/act201.html"
+        },
+        {
+          "label": "⚡ Activitat 202: Entitats",
+          "href": "./ut02/act202.html"
+        },
+        {
+          "label": "⚡ Activitat 203: Grau i Correspondència",
+          "href": "./ut02/act203.html"
+        },
+        {
+          "label": "⚡ Activitat 204",
+          "href": "./ut02/act204.html"
+        },
+        {
+          "label": "⚡ Activitat 205: Generalització i Especialització",
+          "href": "./ut02/act205.html"
+        },
+        {
+          "label": "⚡ Activitat 206",
+          "href": "./ut02/act206.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD2)",
+          "href": "./ut02/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD3: Disseny Lògic — Model Relacional i Normalització",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD3",
+          "href": "./ut03/index.html"
+        },
+        {
+          "label": "📋 3.0 Proposta Didàctica: Disseny Lògic. Model relacional. Normalització",
+          "href": "./ut03/ut0300.html"
+        },
+        {
+          "label": "3.1 El model relacional",
+          "href": "./ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 Transformació al model relacional (I)",
+          "href": "./ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 Transformació al model relacional (II)",
+          "href": "./ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 Especialització",
+          "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 Dependències i restriccions",
+          "href": "./ut03/ut0305.html"
+        },
+        {
+          "label": "3.6 Introducció a la normalització. 1ª Forma normal",
+          "href": "./ut03/ut0306.html"
+        },
+        {
+          "label": "3.7 ª i 3ª Forma normal",
+          "href": "./ut03/ut0307.html"
+        },
+        {
+          "label": "3.8 Altres formes normals: FNBC, 4FN i 5FN",
+          "href": "./ut03/ut0308.html"
+        },
+        {
+          "label": "⚡ Activitat 301",
+          "href": "./ut03/act301.html"
+        },
+        {
+          "label": "⚡ Activitat 302",
+          "href": "./ut03/act302.html"
+        },
+        {
+          "label": "⚡ Activitat 303",
+          "href": "./ut03/act303.html"
+        },
+        {
+          "label": "⚡ Activitat 304: Activitat 01",
+          "href": "./ut03/act304.html"
+        },
+        {
+          "label": "⚡ Activitat 305",
+          "href": "./ut03/act305.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD3)",
+          "href": "./ut03/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD4: Disseny Físic — Llenguatge SQL: DDL i DCL",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD4",
+          "href": "./ut04/index.html"
+        },
+        {
+          "label": "📋 4.0 Proposta Didàctica: Disseny Físic. Model Físic. (DDL i DCL)",
+          "href": "./ut04/ut0400.html"
+        },
+        {
+          "label": "4.1 Introducció",
+          "href": "./ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Emmagatzematge de la informació",
+          "href": "./ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Tipus de dades (Dominis)",
+          "href": "./ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 DDL (Data Definition Language)",
+          "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 DCL (Data Control Language)",
+          "href": "./ut04/ut0405.html"
+        },
+        {
+          "label": "⚡ Activitat 401",
+          "href": "./ut04/act401.html"
+        },
+        {
+          "label": "⚡ Activitat 402: Disseny físic - Jardineria",
+          "href": "./ut04/act402.html"
+        },
+        {
+          "label": "⚡ Activitat 403: Disseny físic - Universitat",
+          "href": "./ut04/act403.html"
+        },
+        {
+          "label": "⚡ Activitat 404: Llenguatge de Control de Dades (DCL)",
+          "href": "./ut04/act404.html"
+        },
+        {
+          "label": "⚡ Activitat 405: Disseny físic - Películas",
+          "href": "./ut04/act405.html"
+        },
+        {
+          "label": "⚡ Activitat 406: Disseny físic - Clients",
+          "href": "./ut04/act406.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD4)",
+          "href": "./ut04/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD5: Manipulació de Dades i Transaccions — SQL DML i TCL",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD5",
+          "href": "./ut05/index.html"
+        },
+        {
+          "label": "📋 5.0 Proposta Didàctica: Tractament de dades (DML i TCL)",
+          "href": "./ut05/ut0500.html"
+        },
+        {
+          "label": "5.1 Introducció al SQL. DML",
+          "href": "./ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Creació de registres. INSERT",
+          "href": "./ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Esborrat de registres. DELETE",
+          "href": "./ut05/ut0503.html"
+        },
+        {
+          "label": "5.4 Modificació de registres. UPDATE",
+          "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Transaccions (TCL)",
+          "href": "./ut05/ut0505.html"
+        },
+        {
+          "label": "⚡ Activitat 501: Gestió de dades - Jardineria",
+          "href": "./ut05/act501.html"
+        },
+        {
+          "label": "⚡ Activitat 502: Hospitals",
+          "href": "./ut05/act502.html"
+        },
+        {
+          "label": "⚡ Activitat 503: Botiga",
+          "href": "./ut05/act503.html"
+        },
+        {
+          "label": "⚡ Activitat 504: Transaccions",
+          "href": "./ut05/act504.html"
+        },
+        {
+          "label": "⚡ Activitat 505: Activitat de classe: botiga",
+          "href": "./ut05/act505.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD5)",
+          "href": "./ut05/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD6: Consultes sobre Bases de Dades — SQL DQL (SELECT)",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD6",
+          "href": "./ut06/index.html"
+        },
+        {
+          "label": "📋 6.0 Proposta Didàctica: Consultes BBDD. (DQL)",
+          "href": "./ut06/ut0600.html"
+        },
+        {
+          "label": "6.1 Introducció. El llenguatge SQL",
+          "href": "./ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Consultes Simples. SELECT",
+          "href": "./ut06/ut0602.html"
+        },
+        {
+          "label": "6.3 Consultes Simples. Tipus d'operadors",
+          "href": "./ut06/ut0603.html"
+        },
+        {
+          "label": "6.4 Consultes Simples. Camps calculats, ordenades i capçalera",
+          "href": "./ut06/ut0604.html"
+        },
+        {
+          "label": "6.5 Consultes complexes. Resum o agregat",
+          "href": "./ut06/ut0605.html"
+        },
+        {
+          "label": "6.6 Consultes complexes. Subconsultes",
+          "href": "./ut06/ut0606.html"
+        },
+        {
+          "label": "6.7 Consultes complexes. Múltiples seleccions",
+          "href": "./ut06/ut0607.html"
+        },
+        {
+          "label": "6.8 Consultes complexes. Consultes multitaula",
+          "href": "./ut06/ut0608.html"
+        },
+        {
+          "label": "6.9 Optimització de consultes",
+          "href": "./ut06/ut0609.html"
+        },
+        {
+          "label": "6.10 Vistes",
+          "href": "./ut06/ut0610.html"
+        },
+        {
+          "label": "⚡ Activitat 601: 1. Consultes simples",
+          "href": "./ut06/act601.html"
+        },
+        {
+          "label": "⚡ Activitat 602: 1. Consultes simples",
+          "href": "./ut06/act602.html"
+        },
+        {
+          "label": "⚡ Activitat 603: Consultes a Jardineria 2",
+          "href": "./ut06/act603.html"
+        },
+        {
+          "label": "⚡ Activitat 604: 1. Base de dades: Empresa",
+          "href": "./ut06/act604.html"
+        },
+        {
+          "label": "⚡ Activitat 605: Optimització de consultes",
+          "href": "./ut06/act605.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD6)",
+          "href": "./ut06/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD7: Programació de Bases de Dades — Procediments, Funcions, Triggers i Cursors",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD7",
+          "href": "./ut07/index.html"
+        },
+        {
+          "label": "📋 7.0 Proposta Didàctica: Programació de BBDD",
+          "href": "./ut07/ut0700.html"
+        },
+        {
+          "label": "7.1 Guions",
+          "href": "./ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 Variables",
+          "href": "./ut07/ut0702.html"
+        },
+        {
+          "label": "7.3 Procediments emmagatzemats",
+          "href": "./ut07/ut0703.html"
+        },
+        {
+          "label": "7.4 Sentències Prepared",
+          "href": "./ut07/ut0704.html"
+        },
+        {
+          "label": "7.5 Control de fluxos",
+          "href": "./ut07/ut0705.html"
+        },
+        {
+          "label": "7.6 Esdeveniments",
+          "href": "./ut07/ut0706.html"
+        },
+        {
+          "label": "7.7 Triggers",
+          "href": "./ut07/ut0707.html"
+        },
+        {
+          "label": "7.8 Cursors",
+          "href": "./ut07/ut0708.html"
+        },
+        {
+          "label": "7.9 Funcions",
+          "href": "./ut07/ut0709.html"
+        },
+        {
+          "label": "7.10 Gestió d'excepcions",
+          "href": "./ut07/ut0710.html"
+        },
+        {
+          "label": "⚡ Activitat 701: Procediments - CIRC",
+          "href": "./ut07/act701.html"
+        },
+        {
+          "label": "⚡ Activitat 702: Procediments amb paràmetres - CIRC",
+          "href": "./ut07/act702.html"
+        },
+        {
+          "label": "⚡ Activitat 703: Sentències Prepared - CIRC",
+          "href": "./ut07/act703.html"
+        },
+        {
+          "label": "⚡ Activitat 704: Fluxos de Control - CIRC",
+          "href": "./ut07/act704.html"
+        },
+        {
+          "label": "⚡ Activitat 705: Esdeveniments",
+          "href": "./ut07/act705.html"
+        },
+        {
+          "label": "⚡ Activitat 706: Triggers - CIRC",
+          "href": "./ut07/act706.html"
+        },
+        {
+          "label": "⚡ Activitat 707: Cursors - CIRC",
+          "href": "./ut07/act707.html"
+        },
+        {
+          "label": "⚡ Activitat 708: Funcions d'usuari - CIRC",
+          "href": "./ut07/act708.html"
+        },
+        {
+          "label": "⚡ Activitat 709: Excepcions - CIRC",
+          "href": "./ut07/act709.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD7)",
+          "href": "./ut07/activitats.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD8: Bases de Dades No Relacionals (NoSQL) — MongoDB",
+      "items": [
+        {
+          "label": "🧭 Portada i Índex UD8",
+          "href": "./ut08/index.html"
+        },
+        {
+          "label": "📋 8.0 Proposta Didàctica: Bases de dades no relacionals (NoSQL)",
+          "href": "./ut08/ut0800.html"
+        },
+        {
+          "label": "8.1 Bases de dades no relacionals (NoSQL)",
+          "href": "./ut08/ut0801.html"
+        },
+        {
+          "label": "8.2 MongoDB",
+          "href": "./ut08/ut0802.html"
+        },
+        {
+          "label": "8.3 Configuració entorn MongoDB",
+          "href": "./ut08/ut0803.html"
+        },
+        {
+          "label": "⚡ Activitat 801",
+          "href": "./ut08/act801.html"
+        },
+        {
+          "label": "⚡ Activitat 802: Activitat 1",
+          "href": "./ut08/act802.html"
+        },
+        {
+          "label": "⚡ Activitat 803",
+          "href": "./ut08/act803.html"
+        },
+        {
+          "label": "📓 Recull Complet d'Activitats (UD8)",
+          "href": "./ut08/activitats.html"
+        }
+      ]
+    }
+  ],
+  "title": "🗄️ Bases de Dades — 1r DAW / DAM / ASIX"
+}

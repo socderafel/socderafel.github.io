@@ -1,113 +1,121 @@
-# UT 05: Manipulació del DOM i Gestió d'Esdeveniments en Client
+---
+layout: default
+title: "UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD5"
+prev_url: "../ut04/index.html"
+prev_label: "⬅️ UD4"
+next_url: "ut0500.html"
+next_label: "📋 5.0 Proposta Didàctica: Manipulació de documents web JavaScript - DOM ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut05" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa constitueix el nucli de la interactivitat en el costat client en el desenvolupament web contemporani. El **DOM** (Document Object Model), estandarditzat pel W3C i el WHATWG, proporciona una representació en arbre en memòria dels documents HTML5 i XML, permetent a JavaScript llegir, afegir, modificar i eliminar elements i estils en temps real.
-
-Es tracten amb profunditat tècnica:
-- **Navegació i Selecció de Nodes:** Els selectors canònics `querySelector()` i `querySelectorAll()`, distingint col·leccions estàtiques de col·leccions vives (*NodeList* vs *HTMLCollection*).
-- **Mutació Segura del DOM:** Prevenció d'atacs de Cross-Site Scripting (XSS) mitjançant l'ús estricte de `textContent` en lloc d'`innerHTML` per a continguts no verificats, i optimització de rendiment mitjançant `DocumentFragment`.
-- **Arquitectura d'Esdeveniments W3C:** Registre desacoblat mitjançant `addEventListener()`, gestió de fases de captura i propagació (*bubbling*), mètodes `stopPropagation()` i `preventDefault()`, i el patró de disseny de **Delegació d'Esdeveniments**.
-- **Comunicació Asíncrona:** Consum de serveis web i APIs REST mitjançant la **Fetch API**, estructuració de respostes en format **JSON** (JavaScript Object Notation) i resolució declarativa mitjançant `async` i `await`.
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA3 (DAW / DAM / ASIX):** Desenvolupa documents web interactius utilitzant llenguatges de guió (scripts) de client, analitzant la seua estructura i sintaxi.
-  - **CA 3.b:** S'han utilitzat mètodes per a seleccionar i manipular elements del document web a través de l'arbre d'objectes (DOM).
-  - **CA 3.f:** S'han capturat i gestionat esdeveniments d'usuari i de document en diferents controls.
-  - **CA 3.g:** S'han modificat de forma dinàmica les propietats i estils dels elements d'un document web.
-  - **CA 3.h:** S'han realitzat peticions asíncrones per a recuperar i mostrar dades en format JSON sense recarregar la pàgina.
+Benvingut/da a la **Unitat Didàctica 5** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 05.01: L'arbre DOM (Document Object Model) i mètodes de selecció de nodes](./ut0501.md)
-2. [UT 05.02: Manipulació de contingut textual, atributs i classes CSS (classList)](./ut0502.md)
-3. [UT 05.03: Creació, clonació i inserció de nodes en el DOM (DocumentFragment)](./ut0503.md)
-4. [UT 05.04: El model d'esdeveniments W3C, propagació i delegació d'esdeveniments](./ut0504.md)
-5. [UT 05.05: Comunicació asíncrona amb la Fetch API, async/await i format JSON](./ut0505.md)
+1. **[📋 5.0 Proposta Didàctica: Manipulació de documents web JavaScript - DOM](ut0500.html)**
+1. **[5.1 Introducció al DOM](ut0510.html)**
+1. **[5.2 Accés al DOM](ut0520.html)**
+1. **[5.3 Modificar el DOM](ut0530.html)**
+1. **[5.4 Crear i Eliminar en el DOM](ut0540.html)**
+1. **[5.5 Modificar estils i CSS del DOM amb JavaScript.](ut0550.html)**
+1. **[5.6.1 Asincronia en Javascript](ut0561.html)**
+1. **[5.6.2 Callbacks](ut0562.html)**
+1. **[5.6.3 Promeses](ut0563.html)**
+1. **[5.6.4 Async/await](ut0564.html)**
+1. **[5.6.5 Ús de fetch](ut0565.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut05-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Seguretat Web i XSS: textContent vs innerHTML</h4>
+- **[⚡ Activitat 501: 1 Introducció al DOM](act501.html)**
+- **[⚡ Activitat 502: Bloc 1. Callback](act502.html)**
+- **[📓 Recull Complet d'Activitats (UD5)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="B" data-hint="document.querySelector('.classe #id') utilitza la sintaxi de selectors CSS.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin mètode de l'objecte <code>document</code> (DOM) permet seleccionar el primer element HTML que coincidisca amb qualsevol selector CSS vàlid?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) document.getElementsByTagName()</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) document.querySelector()</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) window.alert()</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) console.log()</button>
   </div>
-  <p class="challenge-question">Per quina raó de seguretat informàtica està terminantment prohibit assignar entrades provinents d'usuaris a través de la propietat innerHTML en comptes d'utilitzar textContent?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Perquè innerHTML redueix la velocitat de càrrega de les imatges JPEG.</button>
-    <button class="btn-check" data-correct="true">B) Perquè innerHTML analitza el contingut com a marques HTML, permetent que atacants injecten codi JavaScript maliciós a través d'elements &lt;img onerror="..."&gt; provocant vulnerabilitats d'atacs de Cross-Site Scripting (XSS).</button>
-    <button class="btn-check" data-correct="false">C) Perquè textContent només funciona si s'ha carregat prèviament la biblioteca jQuery.</button>
-    <button class="btn-check" data-correct="false">D) Perquè innerHTML buida la memòria cau de navegació de l'usuari.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut05-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Rendiment de Mutació del DOM: DocumentFragment</h4>
+<div class="interactive-mcq" data-answer="B" data-hint="response.json() retorna una Promesa que es resol amb l'objecte JavaScript resultant de parsejar el JSON.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En consumir una API REST amb <code>fetch()</code> en JavaScript utilitzant <code>async / await</code>, per a què serveix <code>await resposta.json()</code>?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Per a tancar la connexió de xarxa sense llegir les dades.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Per a llegir el cos de la resposta HTTP i convertir-lo (parsejar-lo) de text JSON a un objecte o array natiu de JavaScript.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Per a esborrar el DOM de la pàgina.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Per a recarregar la pestanya del navegador.</button>
   </div>
-  <p class="challenge-question">Quin benefici de rendiment clau s'obté en utilitzar un DocumentFragment en inserir 1.000 nous elements &lt;li&gt; en una llista &lt;ul&gt; existent?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Converteix la llista en un fitxer JSON que es guarda a la base de dades del navegador.</button>
-    <button class="btn-check" data-correct="true">B) Els elements s'afegeixen en memòria fora de l'arbre principal, provocant una única operació de reflux i repintat (*reflow & repaint*) en el document quan el fragment s'adjunta finalment a la llista, en comptes de mil repintats successius.</button>
-    <button class="btn-check" data-correct="false">C) Elimina automàticament els elements duplicats mitjançant un algorisme de hashing.</button>
-    <button class="btn-check" data-correct="false">D) Força la renderització per GPU mitjançant WebGL.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut05-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Patró d'Arquitectura: Delegació d'Esdeveniments</h4>
+<div class="interactive-vf" data-answer="V" data-hint="addEventListener és la forma estàndard i recomanada de gestionar esdeveniments en el DOM.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> El mètode <code>element.addEventListener('click', funcio)</code> permet associar múltiples manejadors d'esdeveniments a un mateix element del DOM sense sobreescriure'ls.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">En què consisteix el patró de «Delegació d'Esdeveniments» (Event Delegation) en JavaScript?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) En assignar un addEventListener a cadascun dels centenars de botons individuals de la interfície.</button>
-    <button class="btn-check" data-correct="true">B) En aprofitar la fase de propagació d'esdeveniments (bubbling) registrant un únic controlador en el contenidor pare comú i utilitzant e.target.closest() per a detectar quin fill concret ha disparat l'acció, suportant fins i tot elements afegits dinàmicament en el futur.</button>
-    <button class="btn-check" data-correct="false">C) En delegar la gestió d'esdeveniments d'usuari a un servidor remot mitjançant WebSockets.</button>
-    <button class="btn-check" data-correct="false">D) En emprar la funció eval() per a interpretar codi extern.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut05-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Gestió d'Errors en Peticions Asíncrones amb Fetch API</h4>
+<div class="interactive-quiz" data-answer="dom" data-hint="Són les sigles DOM.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quines són les sigles de la interfície que representa el document HTML com un arbre d'objectes manipulable des de JavaScript (Document Object Model)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina particularitat presenta la Fetch API en relació amb els errors de resposta HTTP (com codis d'estat 404 Not Found o 500 Internal Server Error)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) La promesa de fetch() es rebutja (rejection) automàticament davant qualsevol codi d'estat diferent de 200.</button>
-    <button class="btn-check" data-correct="true">B) La promesa de fetch() es resol amb èxit davant de codis 404 o 500; només es rebutja davant de fallades greus de xarxa o bloquejos de CORS. Per tant, cal verificar explícitament if (!response.ok) en el codi.</button>
-    <button class="btn-check" data-correct="false">C) fetch() reintenta automàticament la petició 5 vegades abans de finalitzar.</button>
-    <button class="btn-check" data-correct="false">D) La Fetch API requereix instal·lar connectors externs per a processar respostes JSON.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 5 LMSGI</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 5</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD05" data-activity="ut05_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

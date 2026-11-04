@@ -1,113 +1,119 @@
-# UT 02: Entrada i Eixida de Dades, Tipus Primitius i Operadors en Java
+---
+title: "UT2 — Estructures de control"
+unit: "2"
+module: "PRG"
+layout: "default"
+course_root: ".."
+badge: "1r DAW / DAM · Programació · UT02"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut02" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
+# 📘 UT2 — Estructures de control
 
-Aquesta unitat formativa aprofundeix en la manipulació de dades a baix nivell i la interacció amb l'usuari a través de la consola estàndard del sistema. En Java, el sistema de tipus és fort i estàtic, exigint una comprensió rigorosa del rang i precisió de cadascun dels tipus de dades primitius i de la gestió de memòria Stack:
-- **Els 8 Tipus Primitius de Java:** Enters (`byte`, `short`, `int`, `long`), coma flotant IEEE 754 (`float`, `double`), caràcter Unicode UTF-16 (`char`) i lògic (`boolean`), juntament amb la inferència de tipus local mitjançant la paraula clau `var` (introduïda en Java 10).
-- **Operadors i Precedència:** Expressions aritmètiques, operadors relacionals, operadors lògics de curtcircuit (`&&`, `||`, `!`) i l'operador condicional ternari.
-- **Conversions de Tipus (Càsting):** Promoció automàtica (*widening*) vs càsting explícit estret (*narrowing*) i riscs de desbordament (*overflow/underflow*).
-- **Entrada Estàndard d'Informació:** Ús avançat de `java.util.Scanner`, gestió del caràcter de retorn de carro pendents en el buffer de teclat (`nextLine()`) i adaptació a configuracions regionals (*Locale.US* vs *Locale.GERMAN*).
-- **Formatatge Professional d'Eixida:** Impressió formatada mitjançant `System.out.printf()`, especificadors de conversió, delimitació de decimals i estilització de la consola amb codis d'escapament **ANSI**.
+> **📌 Resultat d'Aprenentatge i Objectius:** Continguts oficials, exemples guiats, activitats pràctiques, reptes i traces d'execució de UT2 — Estructures de control.
 
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
+## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
 
-- **RA1 (DAW / DAM):** Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.
-  - **CA 1.f:** S'han utilitzat els diferents tipus de dades i s'han definit constants i variables.
-  - **CA 1.g:** S'han emprat operadors per a la construcció d'expressions d'acord amb la seua precedència.
-  - **CA 1.h:** S'han realitzat conversions de tipus de dades tant implícites com explícites.
-  - **CA 1.i:** S'han utilitzat operacions d'entrada i sortida per consola amb el format requerit.
+| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
+| :--- | :--- | :--- |
+| **2.1** | **2.0 RA i Criteris d'avaluació** | [Obrir apartat ➡️](./ut02ras.html) |
+| **2.2** | **2.1 Introducció a les estructures de control** | [Obrir apartat ➡️](./ut0201.html) |
+| **2.3** | **2.2 Sentències i blocs** | [Obrir apartat ➡️](./ut0202.html) |
+| **2.4** | **2.3 Estructures de selecció (if-else, switch)** | [Obrir apartat ➡️](./ut0203.html) |
+| **2.5** | **2.4 Estructures de repetició (while, do-while, for)** | [Obrir apartat ➡️](./ut0204.html) |
+| **2.6** | **2.5 Sentències de salt (break, continue, return)** | [Obrir apartat ➡️](./ut0205.html) |
+| **2.7** | **2.6 Validació de dades i gestió bàsica d'errors (Scanner i try-catch)** | [Obrir apartat ➡️](./ut0206.html) |
+| **2.8** | **Exemples guiats UT2** | [Obrir apartat ➡️](./ut0207.html) |
+| **2.9** | **Activitats pràctiques UT2** | [Obrir apartat ➡️](./ut02actividades.html) |
+| **2.10** | **Reptes de programació UT2** | [Obrir apartat ➡️](./ut02retos.html) |
+| **2.11** | **Traces d'ejecució UT2** | [Obrir apartat ➡️](./ut02trazas.html) |
+| **2.12** | **Vídeos de reforç UT2 (Píndoles Informàtiques)** | [Obrir apartat ➡️](./ut02pi.html) |
 
 ---
 
-## Estructura de la Unitat de Treball
+## 🎯 Resum d'Aprenentatge i Metodologia
 
-1. [UT 02.01: Tipus de dades primitius, literals i inferència de tipus local (var)](./ut0201.md)
-2. [UT 02.02: Operadors aritmètics, relacionals, lògics de curtcircuit i operador ternari](./ut0202.md)
-3. [UT 02.03: Conversió de tipus (Càsting implícit i explícit) i control de desbordament](./ut0203.md)
-4. [UT 02.04: Captura de dades per teclat amb java.util.Scanner i gestió del buffer](./ut0204.md)
-5. [UT 02.05: Format d'eixida professional amb System.out.printf i colors ANSI](./ut0205.md)
+Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
+
+
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut02-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Rangs Numèrics i Desbordament en Tipus Primitius</h4>
+Comprova el teu domini sobre **UT2 — Estructures de control** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina diferència fonamental hi ha entre un bucle 'while' i un bucle 'do-while' en Java?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) El bucle 'while' avalua la condició abans d'entrar (pot executar-se 0 vegades), mentre que 'do-while' l'avalua al final (s'executa com a mínim 1 vegada).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El bucle 'do-while' no necessita punt i coma final ni condició booleana.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) El bucle 'while' només funciona amb variables de tipus String.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Cap de les anteriors és correcta.</button>
   </div>
-  <p class="challenge-question">En Java, quin valor exacte s'emmagatzema en la variable resultat si executem: byte valor = 127; valor++; ?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) 128 (es produeix una conversió automàtica a int)</button>
-    <button class="btn-check" data-correct="true">B) -128 (es produeix un desbordament cíclic o overflow per la representació en complement a dos de 8 bits: el rang és de -128 a 127)</button>
-    <button class="btn-check" data-correct="false">C) 0</button>
-    <button class="btn-check" data-correct="false">D) Es llança una excepció de tipus ArithmeticException.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut02-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Inferència de Tipus Local (var): Regles i Àmbits</h4>
+<div class="interactive-mcq" data-answer="D" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin bloc d'estructura s'utilitza en Java per a capturar i gestionar possibles errors en temps d'execució (com InputMismatchException en llegir amb Scanner)?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) switch - case</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) if - else</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) try - catch</button>
   </div>
-  <p class="challenge-question">Quina de les següents declaracions amb la paraula clau var és vàlida en Java modern (Java 10+)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) public var edatGlobal = 25;  (Com a atribut de classe)</button>
-    <button class="btn-check" data-correct="false">B) var dades; dades = "Hola";  (Sense inicialitzador immediat)</button>
-    <button class="btn-check" data-correct="true">C) var scanner = new Scanner(System.in);  (Com a variable local dins d'un mètode amb inicialitzador explícit)</button>
-    <button class="btn-check" data-correct="false">D) public void proces(var dada) { }  (Com a tipus de paràmetre de mètode)</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut02-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>El Problema del Salt de Línia en el Buffer de Scanner</h4>
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> La sentència 'break' dins d'un bucle finalitza immediatament l'execució del bucle, mentre que 'continue' salta a la següent iteració.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Què ocorre si executem int edat = scanner.nextInt(); i immediatament després fem String nom = scanner.nextLine(); sense haver netejat el buffer de teclat?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) El programa demana el nom de forma normal.</button>
-    <button class="btn-check" data-correct="true">B) nextLine() consumeix immediatament el caràcter de salt de línia (
-) que havia quedat residual en el buffer després de llegir l'enter, assignant una cadena buida "" a nom sense donar oportunitat a l'usuari d'escriure res.</button>
-    <button class="btn-check" data-correct="false">C) El teclat es bloqueja físicament.</button>
-    <button class="btn-check" data-correct="false">D) Es genera un error de tipus InputMismatchException.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut02-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Formatat de Dades: System.out.printf</h4>
+<div class="interactive-quiz" data-answer="finally" data-hint="Comença per 'final' i acaba en 'ly'.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina paraula clau de Java permet executar un bloc de codi al final d'un try-catch tant si s'ha produït una excepció com si no?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Què imprimirà exactament per consola la línia: System.out.printf("Total: %06.2f EUR%n", 7.5); ?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Total: 7.50 EUR</button>
-    <button class="btn-check" data-correct="true">B) Total: 007,50 EUR (o 007.50 segons Locale), ocupant un mínim de 6 caràcters complets amb zeros a l'esquerra i 2 decimals, seguit d'un salt de línia independent del SO (%n).</button>
-    <button class="btn-check" data-correct="false">C) Total: 7 EUR</button>
-    <button class="btn-check" data-correct="false">D) Total: %06.2f EUR</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT2 — Estructures de control**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 2 PRG</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 2</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="PRG" data-unit="UD02" data-activity="ut02_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

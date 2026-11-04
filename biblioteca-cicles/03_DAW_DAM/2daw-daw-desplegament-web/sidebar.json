@@ -1,158 +1,189 @@
-[
-  {
-    "title": "UT 01: Implantació d'Arquitectures Web",
-    "url": "ut01/index.md",
-    "children": [
-      {
-        "title": "01.01: Arquitectures Web i Models Client-Servidor: Evolució de Monòlits a Microserveis",
-        "url": "ut01/ut0101.md"
-      },
-      {
-        "title": "01.02: Components d'Infraestructura Web: Servidors Web, d'Aplicacions i de Bases de Dades",
-        "url": "ut01/ut0102.md"
-      },
-      {
-        "title": "01.03: El Protocol HTTP/HTTPS: Mètodes, Capçaleres, Codis d'Estat i Versions (HTTP/1.1, HTTP/2, HTTP/3)",
-        "url": "ut01/ut0103.md"
-      },
-      {
-        "title": "01.04: Paràmetres de Rendiment, Escalabilitat i Disponibilitat en Aplicacions Web",
-        "url": "ut01/ut0104.md"
-      },
-      {
-        "title": "01.05: Metodologia de Desplegament: Entorns de Desenvolupament, Staging i Producció",
-        "url": "ut01/ut0105.md"
-      }
-    ]
+{
+  "title": "2daw-daw-desplegament-web",
+  "home": {
+    "label": "🏠 Portada del Mòdul",
+    "href": "index.html"
   },
-  {
-    "title": "UT 02: Administració i Configuració de Servidors Web",
-    "url": "ut02/index.md",
-    "children": [
-      {
-        "title": "02.01: El Servidor Web Apache: Arquitectura MPM i Configuració Base",
-        "url": "ut02/ut0201.md"
-      },
-      {
-        "title": "02.02: Amfitrions Virtuals (Virtual Hosts) en Apache",
-        "url": "ut02/ut0202.md"
-      },
-      {
-        "title": "02.03: El Servidor Web Nginx: Arquitectura Asíncrona i Blocs server",
-        "url": "ut02/ut0203.md"
-      },
-      {
-        "title": "02.04: Seguretat en Servidors Web: Autenticació, Control d'Accés i .htaccess",
-        "url": "ut02/ut0204.md"
-      },
-      {
-        "title": "02.05: Desplegament Segur amb HTTPS, Let's Encrypt i Certbot",
-        "url": "ut02/ut0205.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 03: Administració de Servidors d'Aplicacions Web",
-    "url": "ut03/index.md",
-    "children": [
-      {
-        "title": "03.01: Fonaments dels Servidors d'Aplicacions Web i Rols en l'Arquitectura Multicapa",
-        "url": "ut03/ut0301.md"
-      },
-      {
-        "title": "03.02: Entorn d'Execució PHP: Integració de PHP-FPM amb Apache i Nginx",
-        "url": "ut03/ut0302.md"
-      },
-      {
-        "title": "03.03: Servidors d'Aplicacions Java: Apache Tomcat, Desplegament de WARs i Estructura",
-        "url": "ut03/ut0303.md"
-      },
-      {
-        "title": "03.04: Aplicacions Node.js en Producció: Gestor de Processos PM2 i Cicle de Vida",
-        "url": "ut03/ut0304.md"
-      },
-      {
-        "title": "03.05: Entorns d'Execució Python: Especificacions WSGI/ASGI, Gunicorn i Uvicorn",
-        "url": "ut03/ut0305.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 04: Servidors de Transferència de Fitxers i Accés Remot Segur",
-    "url": "ut04/index.md",
-    "children": [
-      {
-        "title": "04.01: Protocols de Transferència de Fitxers i Models de Connexió (FTP, FTPS, SFTP)",
-        "url": "ut04/ut0401.md"
-      },
-      {
-        "title": "04.02: Instal·lació i Configuració de Servidors FTP/FTPS Segurs (vsftpd)",
-        "url": "ut04/ut0402.md"
-      },
-      {
-        "title": "04.03: Seguretat, Autenticació, Usuaris Virtuals i Enjaulament (Chroot)",
-        "url": "ut04/ut0403.md"
-      },
-      {
-        "title": "04.04: Gestió d'Accés Remot Segur mitjançant SSH i Claus Asimètriques",
-        "url": "ut04/ut0404.md"
-      },
-      {
-        "title": "04.05: Automatització i Monitoratge de Transferències amb Rsync i SCP",
-        "url": "ut04/ut0405.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 05: Serveis de Xarxa i Infraestructura per al Desplegament Web",
-    "url": "ut05/index.md",
-    "children": [
-      {
-        "title": "05.01: Arquitectura del Servei de Noms de Domini (DNS)",
-        "url": "ut05/ut0501.md"
-      },
-      {
-        "title": "05.02: Configuració de Servidors DNS amb BIND9",
-        "url": "ut05/ut0502.md"
-      },
-      {
-        "title": "05.03: Zones Inverses, Reenviadors (Forwarders) i Diagnòstic de Resolució",
-        "url": "ut05/ut0503.md"
-      },
-      {
-        "title": "05.04: Proxies Inversos (Reverse Proxies) amb Nginx i HAProxy",
-        "url": "ut05/ut0504.md"
-      },
-      {
-        "title": "05.05: Balanceig de Càrrega, Memòria Cau (Caching) i Alta Disponibilitat",
-        "url": "ut05/ut0505.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 06: Control de Versions, Integració Contínua i Desplegament Web (CI/CD)",
-    "url": "ut06/index.md",
-    "children": [
-      {
-        "title": "06.01: Control de Versions amb Git i Models de Flux de Treball",
-        "url": "ut06/ut0601.md"
-      },
-      {
-        "title": "06.02: Estratègies de Desplegament i Llançament sense Caiguda (Zero-Downtime)",
-        "url": "ut06/ut0602.md"
-      },
-      {
-        "title": "06.03: Automatització CI/CD amb GitHub Actions i GitLab CI",
-        "url": "ut06/ut0603.md"
-      },
-      {
-        "title": "06.04: Contenització d'Arquitectures Web amb Docker i Compose",
-        "url": "ut06/ut0604.md"
-      },
-      {
-        "title": "06.05: Monitoratge, Agregació de Logs i Seguretat en Producció",
-        "url": "ut06/ut0605.md"
-      }
-    ]
-  }
-]
+  "units": [
+    {
+      "summary": "UT 01: Implantació d'Arquitectures Web",
+      "items": [
+        {
+          "label": "01.01: Arquitectures Web i Models Client-Servidor: Evolució de Monòlits a Microserveis",
+          "href": "./ut01/ut0101.md",
+          "class": ""
+        },
+        {
+          "label": "01.02: Components d'Infraestructura Web: Servidors Web, d'Aplicacions i de Bases de Dades",
+          "href": "./ut01/ut0102.md",
+          "class": ""
+        },
+        {
+          "label": "01.03: El Protocol HTTP/HTTPS: Mètodes, Capçaleres, Codis d'Estat i Versions (HTTP/1.1, HTTP/2, HTTP/3)",
+          "href": "./ut01/ut0103.md",
+          "class": ""
+        },
+        {
+          "label": "01.04: Paràmetres de Rendiment, Escalabilitat i Disponibilitat en Aplicacions Web",
+          "href": "./ut01/ut0104.md",
+          "class": ""
+        },
+        {
+          "label": "01.05: Metodologia de Desplegament: Entorns de Desenvolupament, Staging i Producció",
+          "href": "./ut01/ut0105.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 02: Administració i Configuració de Servidors Web",
+      "items": [
+        {
+          "label": "02.01: El Servidor Web Apache: Arquitectura MPM i Configuració Base",
+          "href": "./ut02/ut0201.md",
+          "class": ""
+        },
+        {
+          "label": "02.02: Amfitrions Virtuals (Virtual Hosts) en Apache",
+          "href": "./ut02/ut0202.md",
+          "class": ""
+        },
+        {
+          "label": "02.03: El Servidor Web Nginx: Arquitectura Asíncrona i Blocs server",
+          "href": "./ut02/ut0203.md",
+          "class": ""
+        },
+        {
+          "label": "02.04: Seguretat en Servidors Web: Autenticació, Control d'Accés i .htaccess",
+          "href": "./ut02/ut0204.md",
+          "class": ""
+        },
+        {
+          "label": "02.05: Desplegament Segur amb HTTPS, Let's Encrypt i Certbot",
+          "href": "./ut02/ut0205.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 03: Administració de Servidors d'Aplicacions Web",
+      "items": [
+        {
+          "label": "03.01: Fonaments dels Servidors d'Aplicacions Web i Rols en l'Arquitectura Multicapa",
+          "href": "./ut03/ut0301.md",
+          "class": ""
+        },
+        {
+          "label": "03.02: Entorn d'Execució PHP: Integració de PHP-FPM amb Apache i Nginx",
+          "href": "./ut03/ut0302.md",
+          "class": ""
+        },
+        {
+          "label": "03.03: Servidors d'Aplicacions Java: Apache Tomcat, Desplegament de WARs i Estructura",
+          "href": "./ut03/ut0303.md",
+          "class": ""
+        },
+        {
+          "label": "03.04: Aplicacions Node.js en Producció: Gestor de Processos PM2 i Cicle de Vida",
+          "href": "./ut03/ut0304.md",
+          "class": ""
+        },
+        {
+          "label": "03.05: Entorns d'Execució Python: Especificacions WSGI/ASGI, Gunicorn i Uvicorn",
+          "href": "./ut03/ut0305.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 04: Servidors de Transferència de Fitxers i Accés Remot Segur",
+      "items": [
+        {
+          "label": "04.01: Protocols de Transferència de Fitxers i Models de Connexió (FTP, FTPS, SFTP)",
+          "href": "./ut04/ut0401.md",
+          "class": ""
+        },
+        {
+          "label": "04.02: Instal·lació i Configuració de Servidors FTP/FTPS Segurs (vsftpd)",
+          "href": "./ut04/ut0402.md",
+          "class": ""
+        },
+        {
+          "label": "04.03: Seguretat, Autenticació, Usuaris Virtuals i Enjaulament (Chroot)",
+          "href": "./ut04/ut0403.md",
+          "class": ""
+        },
+        {
+          "label": "04.04: Gestió d'Accés Remot Segur mitjançant SSH i Claus Asimètriques",
+          "href": "./ut04/ut0404.md",
+          "class": ""
+        },
+        {
+          "label": "04.05: Automatització i Monitoratge de Transferències amb Rsync i SCP",
+          "href": "./ut04/ut0405.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 05: Serveis de Xarxa i Infraestructura per al Desplegament Web",
+      "items": [
+        {
+          "label": "05.01: Arquitectura del Servei de Noms de Domini (DNS)",
+          "href": "./ut05/ut0501.md",
+          "class": ""
+        },
+        {
+          "label": "05.02: Configuració de Servidors DNS amb BIND9",
+          "href": "./ut05/ut0502.md",
+          "class": ""
+        },
+        {
+          "label": "05.03: Zones Inverses, Reenviadors (Forwarders) i Diagnòstic de Resolució",
+          "href": "./ut05/ut0503.md",
+          "class": ""
+        },
+        {
+          "label": "05.04: Proxies Inversos (Reverse Proxies) amb Nginx i HAProxy",
+          "href": "./ut05/ut0504.md",
+          "class": ""
+        },
+        {
+          "label": "05.05: Balanceig de Càrrega, Memòria Cau (Caching) i Alta Disponibilitat",
+          "href": "./ut05/ut0505.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 06: Control de Versions, Integració Contínua i Desplegament Web (CI/CD)",
+      "items": [
+        {
+          "label": "06.01: Control de Versions amb Git i Models de Flux de Treball",
+          "href": "./ut06/ut0601.md",
+          "class": ""
+        },
+        {
+          "label": "06.02: Estratègies de Desplegament i Llançament sense Caiguda (Zero-Downtime)",
+          "href": "./ut06/ut0602.md",
+          "class": ""
+        },
+        {
+          "label": "06.03: Automatització CI/CD amb GitHub Actions i GitLab CI",
+          "href": "./ut06/ut0603.md",
+          "class": ""
+        },
+        {
+          "label": "06.04: Contenització d'Arquitectures Web amb Docker i Compose",
+          "href": "./ut06/ut0604.md",
+          "class": ""
+        },
+        {
+          "label": "06.05: Monitoratge, Agregació de Logs i Seguretat en Producció",
+          "href": "./ut06/ut0605.md",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

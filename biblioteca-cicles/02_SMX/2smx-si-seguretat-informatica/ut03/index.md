@@ -1,11 +1,13 @@
 ---
-layout: default
 title: "UT 03: Seguretat Lògica, Autenticació i Control d'Accés — Seguretat Informàtica"
-permalink: /02_SMX/2smx-si-seguretat-informatica/ut03/index.html
-prev_url: /02_SMX/2smx-si-seguretat-informatica/ut02/index.html
+layout: "default"
+prev_url: "/02_SMX/2smx-si-seguretat-informatica/ut02/index.html"
 prev_label: "UT 02: Seguretat Passiva i CPD"
-next_url: /02_SMX/2smx-si-seguretat-informatica/ut04/index.html
+next_url: "/02_SMX/2smx-si-seguretat-informatica/ut04/index.html"
 next_label: "UT 04: Emmagatzematge Segur i Còpies de Seguretat"
+course_root: ".."
+badge: "2n SMX · Seguretat Informàtica · UT03"
+module: "SI"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

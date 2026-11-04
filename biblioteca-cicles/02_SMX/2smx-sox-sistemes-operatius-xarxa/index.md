@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "Sistemes Operatius en Xarxa — 2n Curs SMX"
-permalink: /02_SMX/2smx-sox-sistemes-operatius-xarxa/index.html
+layout: "default"
+course_root: "."
+badge: "2n SMX · Sistemes Operatius en Xarxa"
+module: "SOX"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

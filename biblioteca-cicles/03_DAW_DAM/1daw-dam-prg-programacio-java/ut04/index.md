@@ -1,115 +1,120 @@
-# UT 04: Programació Estructurada i Disseny Modular en Java
+---
+title: "UT4 — Programació Orientada a Objectes (POO)"
+unit: "4"
+module: "PRG"
+layout: "default"
+course_root: ".."
+badge: "1r DAW / DAM · Programació · UT04"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut04" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
+# 📘 UT4 — Programació Orientada a Objectes (POO)
 
-Aquesta unitat formativa aborda la descomposició modular d'algorismes i l'arquitectura de funcions i subprogrames en Java. La programació modular constitueix el primer pilar cap a la mantenibilitat de sistemes de gran escala, aplicant el principi clàssic de «Divideix i Venceràs» (*Divide and Conquer*).
+> **📌 Resultat d'Aprenentatge i Objectius:** Continguts oficials, exemples guiats, activitats pràctiques, reptes i traces d'execució de UT4 — Programació Orientada a Objectes (POO).
 
-S'analitzen en profunditat:
-- **Anatomia del Mètode:** Definició de capçaleres, modificadors d'accés, modificador `static`, tipus de retorn (`void` vs tipus primitius/objectes) i la sentència `return`.
-- **El Model de Memòria de la Pila (Call Stack):** El cicle de vida dels marcs de pila (*Stack Frames*), la reserva de memòria local per a variables temporals i el desapilament automàtic en finalitzar la invocació.
-- **El Gran Mite del Pas de Paràmetres:** La demostració tècnica que en Java **tot pas de paràmetres és estrictament i unívocament PER VALOR**. Es clarifica la diferència crucial entre passar una còpia d'un valor primitiu i passar una còpia d'una referència a un objecte en la memòria Heap.
-- **Sobrecàrrega de Mètodes (Method Overloading):** Creació de múltiples mètodes amb el mateix nom diferenciats per la seua signatura (llista de paràmetres), resolució estàtica en temps de compilació i perills d'ambigüitat amb ampliacions numèriques automàtiques.
-- **Paràmetres Variables (Varargs):** Sintaxi moderna amb elipsis (`double... notes`), tractament intern com a array i regles de posició.
+## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
 
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA1 (DAW / DAM):** Reconeix l'estructura d'un programa informàtic, identificant i relacionant els elements propis del llenguatge de programació utilitzat.
-  - **CA 1.a:** S'han identificat els blocs funcionals i mètodes que componen l'estructura d'un programa.
-  - **CA 1.e:** S'han documentat les signatures dels mètodes utilitzant comentaris Javadoc amb @param i @return.
-- **RA3 (DAW / DAM):** Escriu i depura codi, analitzant i utilitzant les estructures de control del llenguatge.
-  - **CA 3.f:** S'han modularitzat programes dividint-los en mètodes independents d'alta cohesió.
-  - **CA 3.g:** S'ha comprovat la integritat del pas de paràmetres i el control de l'àmbit de les variables.
+| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
+| :--- | :--- | :--- |
+| **4.1** | **4.0 RA i Criteris d'avaluació** | [Obrir apartat ➡️](./ut04ras.html) |
+| **4.2** | **4.1 Introducció al paradigma orientat a objectes** | [Obrir apartat ➡️](./ut0401.html) |
+| **4.3** | **4.2 Principis fonamentals de la POO** | [Obrir apartat ➡️](./ut0402.html) |
+| **4.4** | **4.3 Objectes i classes** | [Obrir apartat ➡️](./ut0403.html) |
+| **4.5** | **4.4.1 Estructura i miembros d'una classe** | [Obrir apartat ➡️](./ut0404.html) |
+| **4.6** | **4.4.2 Atributs i constants** | [Obrir apartat ➡️](./ut0405.html) |
+| **4.7** | **4.4.3 Mètodes, paràmetres i sobrecàrrega** | [Obrir apartat ➡️](./ut0406.html) |
+| **4.8** | **4.4.4 Constructors i paraula clau this** | [Obrir apartat ➡️](./ut0407.html) |
+| **4.9** | **4.4.5 Encapsulació i modificadors de visibilitat** | [Obrir apartat ➡️](./ut0408.html) |
+| **4.10** | **4.5 Instanciació i cicle de vida dels objectes** | [Obrir apartat ➡️](./ut0409.html) |
+| **4.11** | **4.6 Empaquetado de classes i llibreries (packages)** | [Obrir apartat ➡️](./ut0410.html) |
+| **4.12** | **Activitats pràctiques UT4** | [Obrir apartat ➡️](./ut04actividades.html) |
+| **4.13** | **Reptes de programació UT4** | [Obrir apartat ➡️](./ut04retos.html) |
 
 ---
 
-## Estructura de la Unitat de Treball
+## 🎯 Resum d'Aprenentatge i Metodologia
 
-1. [UT 04.01: Fonaments del disseny modular: mètodes, signatura, tipus de retorn i invocació](./ut0401.md)
-2. [UT 04.02: Pas de paràmetres per valor en Java: primitius vs referències a objectes](./ut0402.md)
-3. [UT 04.03: Sobrecàrrega de mètodes (Method Overloading) i resolució de signatures](./ut0403.md)
-4. [UT 04.04: Àmbit de variables (Scope) i funcionament de la pila de crides (Call Stack)](./ut0404.md)
-5. [UT 04.05: Mètodes amb nombre variable d'arguments (Varargs: Tipus... nom)](./ut0405.md)
+Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
+
+
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut04-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>El Model de Pas de Paràmetres en Java</h4>
+Comprova el teu domini sobre **UT4 — Programació Orientada a Objectes (POO)** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin principi de la Programació Orientada a Objectes consisteix a declarar els atributs d'una classe com a 'private' i proporcionar mètodes públics controlats (getters i setters)?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Encapsulament (Encapsulation).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Herència múltiple.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Recursivitat lineal.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Cap de les anteriors és correcta.</button>
   </div>
-  <p class="challenge-question">Com es transmeten els paràmetres als mètodes en el llenguatge de programació Java?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Els tipus primitius es passen per valor i els objectes es passen obligatòriament per referència nativa (com en C++ amb &).</button>
-    <button class="btn-check" data-correct="true">B) TOTS els paràmetres en Java es transmeten estrictament i exclusivament PER VALOR: es crea sempre una còpia exacta del valor emmagatzemat a la pila (si és un tipus primitiu es copia el número; si és un objecte es copia la direcció de memòria de la referència).</button>
-    <button class="btn-check" data-correct="false">C) Depèn de si el mètode és declarat com a public o private.</button>
-    <button class="btn-check" data-correct="false">D) Tots els paràmetres es passen per referència per defecte.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut04-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Criteri de Sobrecàrrega de Mètodes (Overloading)</h4>
+<div class="interactive-mcq" data-answer="D" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quina és la funció de la paraula clau 'this' dins d'un mètode o constructor d'una classe en Java?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Destrueix l'objecte actual de la memòria RAM.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Importa tots els paquets de la llibreria java.util.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Fa referència a la instància (objecte) actual sobre la qual s'està executant el mètode o constructor.</button>
   </div>
-  <p class="challenge-question">Quins dos elements defineixen de forma exclusiva la signatura d'un mètode a efectes de sobrecàrrega en Java?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) El tipus de retorn i el modificador d'accés (public/private).</button>
-    <button class="btn-check" data-correct="true">B) El nom del mètode i la llista ordenada de tipus dels seus paràmetres d'entrada (la signatura NO inclou el tipus de retorn).</button>
-    <button class="btn-check" data-correct="false">C) El nom de les variables utilitzades en el cos.</button>
-    <button class="btn-check" data-correct="false">D) El nombre de línies de codi.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut04-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Comportament de la Pila de Crides (Call Stack)</h4>
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Un membre declarat amb el modificador 'static' pertany a la pròpia classe i és compartit per totes les instàncies d'eixa classe.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Què ocorre amb les variables locals declarades a l'interior d'un mètode quan aquest executa la seua sentència return final?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Es guarden permanentment al disc dur per a la propera execució.</button>
-    <button class="btn-check" data-correct="true">B) El marc de pila (Stack Frame) del mètode es destrueix (es desapila) immediatament, alliberant de forma instantània la memòria que ocupaven totes les seues variables locals.</button>
-    <button class="btn-check" data-correct="false">C) Es mouen a l'espai de memòria Heap fins que actue el Garbage Collector.</button>
-    <button class="btn-check" data-correct="false">D) Es converteixen en variables globals de la classe.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="prg-ut04-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Regles de Sintaxi per a Paràmetres Varargs</h4>
+<div class="interactive-quiz" data-answer="new" data-hint="Nou en anglès (3 lletres).">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin operador reservat de Java s'utilitza per a invocar un constructor i reservar memòria per a un nou objecte?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina restricció sintàctica imposa el compilador de Java quan declarem un mètode amb paràmetres variables Varargs (com public void imprimir(int codi, String... textos))?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Un mètode pot tindre fins a tres paràmetres Varargs diferents.</button>
-    <button class="btn-check" data-correct="true">B) Només pot existir com a màxim un únic paràmetre Varargs per mètode i ha de ser obligatòriament l'últim argument de la llista de paràmetres.</button>
-    <button class="btn-check" data-correct="false">C) El paràmetre Varargs ha de situar-se sempre en primer lloc abans dels paràmetres ordinaris.</button>
-    <button class="btn-check" data-correct="false">D) Els mètodes amb Varargs no poden tindre tipus de retorn.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT4 — Programació Orientada a Objectes (POO)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 4 PRG</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 4</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="PRG" data-unit="UD04" data-activity="ut04_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

@@ -1,11 +1,13 @@
 ---
-layout: default
 title: "UT 06: Criptografia, Certificats Digitals i Xarxes Segures — Seguretat Informàtica"
-permalink: /02_SMX/2smx-si-seguretat-informatica/ut06/index.html
-prev_url: /02_SMX/2smx-si-seguretat-informatica/ut05/index.html
+layout: "default"
+prev_url: "/02_SMX/2smx-si-seguretat-informatica/ut05/index.html"
 prev_label: "UT 05: Seguretat Activa i Malware"
-next_url: /02_SMX/2smx-si-seguretat-informatica/ut07/index.html
+next_url: "/02_SMX/2smx-si-seguretat-informatica/ut07/index.html"
 next_label: "UT 07: Normativa, RGPD i Incidents"
+course_root: ".."
+badge: "2n SMX · Seguretat Informàtica · UT06"
+module: "SI"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

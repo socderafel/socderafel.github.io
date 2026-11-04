@@ -1,111 +1,155 @@
-# UT 03: Fulls d'Estil en Cascada (CSS3) i Disseny Web Adaptatiu
+---
+layout: default
+title: "UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD3"
+prev_url: "../ut02/index.html"
+prev_label: "⬅️ UD2"
+next_url: "ut0300.html"
+next_label: "📋 3.0 Proposta Didàctica: Aparença i disseny dels documents WEB - CSS. ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut03" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa aprofundeix en el llenguatge de fulls d'estil estàndard de la web: **CSS3** (Cascading Style Sheets 3), coordinat pel W3C CSS Working Group. S'estudia la separació estricta entre estructura de continguts (HTML5) i presentació visual (CSS), aprofundint en els mecanismes interns del motor de renderitzat:
-- **Resolució de la Cascada:** Origen de la regla, especificitat numèrica de selectors i ordre de declaració.
-- **Model de Caixes (Box Model):** Dimensionament estàndard vs `box-sizing: border-box`.
-- **Ecosistema de Selectors Moderns:** Pseudo-classes estructurals, pseudo-elements i variables natives de CSS (*Custom Properties*).
-- **Sistemes de Maquetació Avançats:** CSS Flexible Box Layout (*Flexbox*) per a components unidimensionals i CSS Grid Layout per a estructures bidimensionals complexes.
-- **Disseny Web Adaptatiu (Responsive Web Design):** Filosofia *Mobile First*, punts de ruptura (*breakpoints*), *Media Queries* i unitats relatives d'escalat (`rem`, `em`, `clamp()`, `vw`, `vh`).
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA2 (DAW / DAM / ASIX):** Desenvolupa documents web utilitzant llenguatges de marques, analitzant la seua estructura i aplicant fulls d'estil.
-  - **CA 2.c:** S'han aplicat fulls d'estil en cascada a documents web, garantint la separació entre contingut i disseny.
-  - **CA 2.g:** S'ha comprovat l'accessibilitat i la interoperabilitat dels documents en diferents navegadors i dispositius (disseny adaptatiu).
-  - **CA 2.h:** S'han utilitzat selectors avançats, models de caixes i tècniques modernes de maquetació (Flexbox i Grid).
+Benvingut/da a la **Unitat Didàctica 3** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 03.01: Fonaments de CSS3, cascada, herència i especificitat de selectors](./ut0301.md)
-2. [UT 03.02: Model de caixes (Box Model) i gestió de flux visual (box-sizing, display, overflow)](./ut0302.md)
-3. [UT 03.03: Tipografia web, colors moderns i variables CSS (Custom Properties)](./ut0303.md)
-4. [UT 03.04: Sistemes de maquetació: CSS Flexbox i CSS Grid Layout](./ut0304.md)
-5. [UT 03.05: Disseny web adaptatiu (Responsive Design), Media Queries i enfocament Mobile First](./ut0305.md)
+1. **[📋 3.0 Proposta Didàctica: Aparença i disseny dels documents WEB - CSS.](ut0300.html)**
+1. **[3.1.1 Introducció](ut0311.html)**
+1. **[3.1.2 Versions](ut0312.html)**
+1. **[3.1.3 Com aplicar estils CSS](ut0313.html)**
+1. **[3.1.4 Full d'estils](ut0314.html)**
+1. **[3.1.5 Sintaxi d'una full d'estils.](ut0315.html)**
+1. **[3.2 Tipus de selectors.](ut0320.html)**
+1. **[3.3 Pseudo-classes i pseudo elements](ut0330.html)**
+1. **[3.4 Estils en Cascada](ut0340.html)**
+1. **[3.5.1 Propietats Principals](ut0351.html)**
+1. **[3.5.2 Propietats de color i fons](ut0352.html)**
+1. **[3.5.3 Propietats de font](ut0353.html)**
+1. **[3.5.4 Propietats de text](ut0354.html)**
+1. **[3.5.5 Propietats de llista](ut0355.html)**
+1. **[3.5.6 Propietat display](ut0356.html)**
+1. **[3.5.7 Propietat overflow](ut0357.html)**
+1. **[3.6.1 Introducció](ut0361.html)**
+1. **[3.6.2 Parts d'una caixa](ut0362.html)**
+1. **[3.6.3 Unitats de mida](ut0363.html)**
+1. **[3.6.4 Mida de caixa](ut0364.html)**
+1. **[3.6.5 Exemples del box model](ut0365.html)**
+1. **[3.6.6 Posicionament](ut0366.html)**
+1. **[3.7.1 Què és Responsive Design?](ut0371.html)**
+1. **[3.7.2 Bases del Responsive Design](ut0372.html)**
+1. **[3.7.3 CSS Mitjana Queries](ut0373.html)**
+1. **[3.8.1 Flexbox](ut0381.html)**
+1. **[3.8.2 Propietats Flexbox](ut0382.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut03-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Algorisme d'Especificitat en la Cascada CSS</h4>
+- **[⚡ Activitat 301](act301.html)**
+- **[⚡ Activitat 302](act302.html)**
+- **[⚡ Activitat 303](act303.html)**
+- **[⚡ Activitat 304](act304.html)**
+- **[⚡ Activitat 305](act305.html)**
+- **[⚡ Activitat 306](act306.html)**
+- **[⚡ Activitat 307](act307.html)**
+- **[⚡ Activitat 308](act308.html)**
+- **[⚡ Activitat 309](act309.html)**
+- **[⚡ Activitat 310](act310.html)**
+- **[⚡ Activitat 311](act311.html)**
+- **[⚡ Activitat 312](act312.html)**
+- **[⚡ Activitat 313](act313.html)**
+- **[⚡ Activitat 314](act314.html)**
+- **[⚡ Activitat 315](act315.html)**
+- **[⚡ Activitat 316](act316.html)**
+- **[⚡ Activitat 317](act317.html)**
+- **[⚡ Activitat 318](act318.html)**
+- **[⚡ Activitat 319](act319.html)**
+- **[💻 Pràctica de Classe UD3](pract_classe.html)**
+- **[📓 Recull Complet d'Activitats (UD3)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="B" data-hint="Amb box-sizing: border-box la mida total de la caixa no creix en afegir padding o border.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin valor de la propietat <code>box-sizing</code> fa que el <code>width</code> d'una caixa incloga també el <code>padding</code> i el <code>border</code>?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) content-box</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) border-box</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) flex-box</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) inline-block</button>
   </div>
-  <p class="challenge-question">Donades les següents quatre regles CSS que apunten a un mateix botó d'enviament, quina s'aplicarà finalment per tindre major especificitat (sense considerar !important)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) form button.btn-principal { color: blue; }  (Especificitat: 0, 1, 2)</button>
-    <button class="btn-check" data-correct="true">B) #formulari-login .btn-principal:hover { color: red; }  (Especificitat: 1, 2, 0)</button>
-    <button class="btn-check" data-correct="false">C) body main section form button { color: green; }  (Especificitat: 0, 0, 5)</button>
-    <button class="btn-check" data-correct="false">D) .contenidor .formulari .boto { color: yellow; }  (Especificitat: 0, 3, 0)</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut03-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Comportament del Model de Caixes: box-sizing: border-box</h4>
+<div class="interactive-mcq" data-answer="B" data-hint="La unitat 'fr' (fraction) reparteix l'espai disponible en `grid-template-columns`.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En CSS Grid (<code>display: grid</code>), quina unitat flexible permet repartir proporcionalment les fraccions d'espai lliure del contenidor?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) px</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) fr</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) pt</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) cm</button>
   </div>
-  <p class="challenge-question">Què fa exactament la declaració universal * { box-sizing: border-box; } en la configuració d'un full d'estil professional?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Fa que els marges externs (margin) es comptabilitzen dins de l'amplada i alçada de la caixa de l'element.</button>
-    <button class="btn-check" data-correct="true">B) Fa que les propietats width i height incloguen el contingut, el farciment interior (padding) i la vora (border), evitant que la caixa cresca cap a fora i trenque la maquetació en afegir espaiat.</button>
-    <button class="btn-check" data-correct="false">C) Elimina automàticament totes les vores i línies divisòries de les taules HTML.</button>
-    <button class="btn-check" data-correct="false">D) Converteix tots els elements en línia com &lt;span&gt; en elements de bloc flotants.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut03-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Flexbox vs CSS Grid: Criteri de Selecció Arquitectònica</h4>
+<div class="interactive-vf" data-answer="V" data-hint=":hover és una pseudo-classe d'estat dinàmic molt usada en botons i enllaços.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> La pseudo-classe <code>:hover</code> en CSS s'activa quan l'usuari passa el punter del ratolí per damunt de l'element.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Quan és tècnicament recomanable emprar CSS Grid Layout en comptes de CSS Flexbox per a dissenyar una interfície web?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Únicament quan la pàgina web es visualitza en dispositius de pantalla xicoteta com smartphones.</button>
-    <button class="btn-check" data-correct="false">B) Flexbox està obsolet i CSS Grid l'ha reemplaçat per a qualsevol classe de component.</button>
-    <button class="btn-check" data-correct="true">C) Quan cal controlar simultàniament la disposició de la interfície en dues dimensions (files i columnes en una graella global), mentre que Flexbox és ideal per a distribucions en una sola dimensió (un eix principal o fila o columna).</button>
-    <button class="btn-check" data-correct="false">D) Només quan es treballa amb formularis que contenen elements &lt;datalist&gt;.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut03-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Metodologia Mobile First i Punts de Ruptura (Breakpoints)</h4>
+<div class="interactive-quiz" data-answer="link|<link>" data-hint="És l'etiqueta <link>.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina etiqueta HTML (<code>&lt;____ rel="stylesheet" href="estils.css"&gt;</code>) s'utilitza dins del <code>&lt;head&gt;</code> per a enllaçar un fitxer CSS extern?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina estratègia defineix la metodologia de disseny «Mobile First» mitjançant Media Queries en CSS?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Escriure primer els estils per a monitors d'escriptori 4K i després aplicar consultes @media (max-width: ...) per a anar restant components.</button>
-    <button class="btn-check" data-correct="true">B) Escriure el CSS base sense consultes per a dispositius mòbils de pantalla reduïda i afegir complexitat progressiva mitjançant consultes @media (min-width: ...) a mesura que l'amplada de pantalla augmenta.</button>
-    <button class="btn-check" data-correct="false">C) Crear dos dominis web separats físicament (com m.domini.com i www.domini.com) amb codis HTML diferents.</button>
-    <button class="btn-check" data-correct="false">D) Desactivar completament les imatges i vídeos en pantalles amb amplada inferior a 768px.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 3 LMSGI</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 3</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD03" data-activity="ut03_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

@@ -1,210 +1,223 @@
 ---
-layout: default
-title: "Programació en Java (1r DAW / DAM) | Biblioteca de Cicles"
+title: "Programació en Java — 1r DAW / DAM (Codi 0485)"
+module: "PRG"
+layout: "default"
 course_root: "."
-badge: "1r DAW / DAM · Grau Superior · FP Informàtica i Comunicacions"
-next_url: "./ut01/index.md"
-next_label: "Començar UT 01: Introducció a la Programació i Java →"
+badge: "1r DAW / DAM · Programació"
 ---
 
-# Programació en Java (1r DAW / DAM)
-
-Temari oficial complet, material didàctic interactiu i reptes d'aprenentatge del mòdul professional de **Programació en Java** per als cicles formatius de grau superior de **Desenvolupament d'Aplicacions Web (DAW)** i **Desenvolupament d'Aplicacions Multiplataforma (DAM)**.
-
-<div class="interactive-progress-tracker" data-unit="prg-global" data-total-points="5700">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Puntuació Global del Mòdul: <strong class="points-earned">0</strong> / 5.700 XP</span>
-    <span>Reptes Interactius Totals: <strong class="challenges-completed">0</strong> / 228</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
----
+# ☕ Programació en Java — 1r DAW / DAM (Codi 0485)
 
-## Marc Curricular i Càrrega Lectiva Oficial
+Benvinguts al repositori central d'apunts, exemples guiats, reptes, traces d'execució i activitats pràctiques del mòdul de **Programació (Codi 0485)** de 1r curs dels Cicles Formatius de Grau Superior **DAW i DAM**.
 
-Segons el currículum oficial establit pel **Reial Decret 453/2010 (DAM)** i el **Reial Decret 686/2010 (DAW)** de la Conselleria d'Educació:
-- **Codi del Mòdul:** MP0485 / 0485.
-- **Durada Lectiva Oficial:** **256 hores anuals** (8 hores setmanals de setembre a juny).
-- **Equivalència en Crèdits Europeus:** **14 crèdits ECTS**.
-- **Perfil Professional:** Capacita en el disseny d'algorismes estructurats, el desenvolupament orientat a objectes empresarial robust, l'accés resilient a bases de dades relacionals i la creació d'interfícies gràfiques d'usuari interactives d'alt nivell.
-
----
-
-## Taula Resum de les 12 Unitats Didàctiques (UD1 a UD12)
-
-| Unitat | Resultat d'Aprenentatge | Continguts Principals | Apartats | Reptes i XP | Accés Directe |
-| :---: | :---: | :--- | :---: | :---: | :---: |
-| **UT 01** | **RA1** | Ecosistema Java, JVM, Bytecode, Estructura de Classes i Estil | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 01](./ut01/index.md) |
-| **UT 02** | **RA1** | Entrada/Eixida de Consola, Scanner, printf, ANSI i Tipus Primitius | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 02](./ut02/index.md) |
-| **UT 03** | **RA3** | Control de Flux: if/else, Switch Expressions, Bucles while i for | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 03](./ut03/index.md) |
-| **UT 04** | **RA1, RA3** | Disseny Modular, Mètodes, Pas per Valor, Sobrecàrrega i Àmbit | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 04](./ut04/index.md) |
-| **UT 05** | **RA1, RA3** | Estructures Estàtiques: Vectors, Matrius i la Classe Arrays | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 05](./ut05/index.md) |
-| **UT 06** | **RA5** | Col·leccions JCF: Llistes, Conjunts, Mapes clau-valor i Recursivitat | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 06](./ut06/index.md) |
-| **UT 07** | **RA2, RA4** | Fonaments POO: Classes, Objectes, Constructors, Encapsulament i static | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 07](./ut07/index.md) |
-| **UT 08** | **RA4** | POO Avançada: Herència, Classes Abstractes, Interfícies i Polimorfisme | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 08](./ut08/index.md) |
-| **UT 09** | **RA6** | Control d'Excepcions: try-catch-finally, try-with-resources i Custom Errors | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 09](./ut09/index.md) |
-| **UT 10** | **RA7** | Persistència: Java I/O Streams, Java NIO.2, Fitxers Binaris i Serialització | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 10](./ut10/index.md) |
-| **UT 11** | **RA8** | Bases de Dades: JDBC, PreparedStatement, ResultSet, Transaccions i DAO | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 11](./ut11/index.md) |
-| **UT 12** | **RA9** | Interfícies Gràfiques: JavaFX, Layouts, Controls, Lambdas i MVC amb FXML | 5 subtemes | 19 reptes · 475 XP | [Obrir UT 12](./ut12/index.md) |
+| Unitat | Resultats d'Aprenentatge (RA) | Continguts Principals | Accés Directe |
+| :--- | :--- | :--- | :--- |
+| **UT0** | Configuració d'eines professionals | **Prerequisits i Configuració:** Git, GitHub, VS Code i GitHub Desktop | [📘 Obrir UT0](./ut00/index.html) |
+| **UT1** | **RA1.** Reconoce l'estructura d'un programa informàtic | **Estructura de programes informàtics:** Algoritmes, tipus primitius, operadors, casting, Math/Random/Scanner, Wrappers/String, Java 25 i Mètodes | [📘 Obrir UT1](./ut01/index.html) |
+| **UT2** | **RA3.** Escriu i depura codi amb estructures de control | **Estructures de control:** Condicionals (`if-else`, `switch`), bucles (`while`, `do-while`, `for`), salts i validació amb `try-catch` | [📘 Obrir UT2](./ut02/index.html) |
+| **UT3** | **RA6.** Utilitza tipus avançats de dades | **Tipus avançats de dades:** Arrays, matrius, `Arrays`, `ArrayList`, `HashMap`, Recursivitat i Java Collections Framework (JCF) | [📘 Obrir UT3](./ut03/index.html) |
+| **UT4** | **RA2 i RA4.** Fonaments de la POO i desenvolupament de classes | **Programació Orientada a Objectes (POO):** Classes, objectes, atributs, mètodes, sobrecàrrega, constructors (`this`), encapsulació i paquets | [📘 Obrir UT4](./ut04/index.html) |
+| **UT5** | **RA7.** Característiques avançades de POO | **Composició, Herència i Polimorfisme:** Associació, agregació, composició, `extends`/`super`, classes abstractes, interfícies, polimorfisme i excepcions avançades | [📘 Obrir UT5](./ut05/index.html) |
+| **UT6** | **RA5.** Operacions d'entrada i eixida d'informació | **Lectura i escriptura d'informació:** Streams (fluxos), fitxers de text i binaris, serialització d'objectes, Sockets de xarxa i `File`/NIO | [📘 Obrir UT6](./ut06/index.html) |
+| **UT7** | **RA8 i RA9.** Gestió d'informació en bases de dades | **Accés a bases de dades (JDBC):** Connectivitat JDBC, `ResultSet`, `SELECT`/`INSERT`/`UPDATE`/`DELETE`, `PreparedStatement`, SQLite i Patró DAO | [📘 Obrir UT7](./ut07/index.html) |
 
 ---
 
-## Navegació Ràpida per Unitats de Treball
+## 📑 Índex Complet d'Apartats, Activitats, Reptes i Traces
 
-### [UT 01: Introducció a la Programació i a l'Ecosistema Java](./ut01/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA1`
+### [UT0 — Prerrequisitos i Configuració](./ut00/index.html)
+- [0.1 Introducció](./ut00/ut0001.html)
+- [0.2 GitHub](./ut00/ut0002.html)
+- [0.3 Git](./ut00/ut0003.html)
+- [0.4 Visual Studio Code](./ut00/ut0004.html)
+- [0.5 GitHub Desktop](./ut00/ut0005.html)
 
-Algorismes, pseudocodi, ordinogrames, arquitectura JVM/JRE/JDK, bytecode, estructura de classes i bones pràctiques d'estil.
+### [UT1 — Estructura de programes informàtics](./ut01/index.html)
+- [1.0 RA i Criteris d'avaluació](./ut01/ut01ras.html)
+- [1.1 Pensa com un programador i dissenya algoritmes](./ut01/ut0101.html)
+- [1.2 El llenguatge Java](./ut01/ut0102.html)
+- [1.3 Variables, identificadors i convencions (Clean Code)](./ut01/ut0103.html)
+- [1.4 Tipus de dades primitius](./ut01/ut0104.html)
+- [1.5 Operadors i expressions (incl. Operador Ternario ? :)](./ut01/ut0105.html)
+- [1.6 Conversions de tipus (Casting)](./ut01/ut0106.html)
+- [1.7 Comentaris i documentació](./ut01/ut0107.html)
+- [1.8 Eines útils (Math, Random i Scanner)](./ut01/ut0108.html)
+- [1.9 Classes Embolcall (Wrappers), Character i String](./ut01/ut01wrappers.html)
+- [1.10 Novetats de Java 25](./ut01/ut0109.html)
+- [1.11 Creació i ús de mètodes](./ut01/ut0110_metodos.html)
+- [Exemples guiats UT1](./ut01/ut01ejemplos.html)
+- [Activitats pràctiques UT1](./ut01/ut01actividades.html)
+- [Reptes de programació UT1](./ut01/ut01retos.html)
+- [Traces d'ejecució UT1](./ut01/ut01trazas.html)
+- [Vídeos de reforç UT1 (Píndoles Informàtiques)](./ut01/ut01pi.html)
 
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut01/index.md)
-- [01.01: Introducció a la programació: ordinogrames, pseudocodi i algorísmica bàsica](./ut01/ut0101.md)
-- [01.02: L'ecosistema Java: JVM, JRE, JDK, bytecode i compilació multiplataforma](./ut01/ut0102.md)
-- [01.03: Estructura d'un programa en Java: classes, mètode main i anatomia del codi](./ut01/ut0103.md)
-- [01.04: Bones pràctiques, convencions d'estil i comentaris de documentació (Javadoc)](./ut01/ut0104.md)
-- [01.05: Entorns de desenvolupament integrats (IDE): creació, execució i depuració inicial](./ut01/ut0105.md)
+### [UT2 — Estructures de control](./ut02/index.html)
+- [2.0 RA i Criteris d'avaluació](./ut02/ut02ras.html)
+- [2.1 Introducció a les estructures de control](./ut02/ut0201.html)
+- [2.2 Sentències i blocs](./ut02/ut0202.html)
+- [2.3 Estructures de selecció (if-else, switch)](./ut02/ut0203.html)
+- [2.4 Estructures de repetició (while, do-while, for)](./ut02/ut0204.html)
+- [2.5 Sentències de salt (break, continue, return)](./ut02/ut0205.html)
+- [2.6 Validació de dades i gestió bàsica d'errors (Scanner i try-catch)](./ut02/ut0206.html)
+- [Exemples guiats UT2](./ut02/ut0207.html)
+- [Activitats pràctiques UT2](./ut02/ut02actividades.html)
+- [Reptes de programació UT2](./ut02/ut02retos.html)
+- [Traces d'ejecució UT2](./ut02/ut02trazas.html)
+- [Vídeos de reforç UT2 (Píndoles Informàtiques)](./ut02/ut02pi.html)
 
-### [UT 02: Entrada i Eixida de Dades, Tipus Primitius i Operadors en Java](./ut02/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA1`
+### [UT3 — Tipus avançats de dades](./ut03/index.html)
+- [3.0 RA i Criteris d'avaluació](./ut03/ut03ras.html)
+- [3.1 Introducció a les estructures de dades](./ut03/ut0306.html)
+- [3.2.1 Ús d'arrays unidimensionals](./ut03/ut0301.html)
+- [3.2.2 Recorregut, cerca i ordenació en arrays](./ut03/ut0303.html)
+- [3.2.3 Arrays bidimensionals i multidimensionals (Matrius)](./ut03/ut0304.html)
+- [3.2.4 La classe java.util.Arrays](./ut03/ut0302.html)
+- [3.2.5 Col·leccions dinàmiques: ArrayList](./ut03/ut0307.html)
+- [3.3 Diccionarios i Mapes (HashMap)](./ut03/ut0308.html)
+- [3.4 Algoritmes recursivos (Recursivitat)](./ut03/ut0305.html)
+- [3.5 Estructures dinàmiques de dades: List, Set, Queue, Deque i Map (JCF)](./ut03/ut03colecciones.html)
+- [Activitats pràctiques UT3](./ut03/ut03actividades.html)
+- [Reptes de programació UT3](./ut03/ut03retos.html)
 
-Interacció per consola amb Scanner, impressió formatada amb printf, codis ANSI, tipus de dades primitius i operadors.
+### [UT4 — Programació Orientada a Objectes (POO)](./ut04/index.html)
+- [4.0 RA i Criteris d'avaluació](./ut04/ut04ras.html)
+- [4.1 Introducció al paradigma orientat a objectes](./ut04/ut0401.html)
+- [4.2 Principis fonamentals de la POO](./ut04/ut0402.html)
+- [4.3 Objectes i classes](./ut04/ut0403.html)
+- [4.4.1 Estructura i miembros d'una classe](./ut04/ut0404.html)
+- [4.4.2 Atributs i constants](./ut04/ut0405.html)
+- [4.4.3 Mètodes, paràmetres i sobrecàrrega](./ut04/ut0406.html)
+- [4.4.4 Constructors i paraula clau this](./ut04/ut0407.html)
+- [4.4.5 Encapsulació i modificadors de visibilitat](./ut04/ut0408.html)
+- [4.5 Instanciació i cicle de vida dels objectes](./ut04/ut0409.html)
+- [4.6 Empaquetado de classes i llibreries (packages)](./ut04/ut0410.html)
+- [Activitats pràctiques UT4](./ut04/ut04actividades.html)
+- [Reptes de programació UT4](./ut04/ut04retos.html)
 
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut02/index.md)
-- [02.01: Tipus de dades primitius, literals, rangs de memòria i declaració de variables](./ut02/ut0201.md)
-- [02.02: Operadors aritmètics, relacionals, lògics, d'assignació i precedència](./ut02/ut0202.md)
-- [02.03: Entrada de dades per consola: la classe java.util.Scanner i gestió del buffer](./ut02/ut0203.md)
-- [02.04: Eixida de dades formatada: System.out.printf, especificadors i la classe PrintStream](./ut02/ut0204.md)
-- [02.05: Formulació de colors, estils i seqüències d'escapament ANSI en consola de terminal](./ut02/ut0205.md)
+### [UT5 — Composició, Herència i Polimorfisme](./ut05/index.html)
+- [5.0 RA i Criteris d'avaluació](./ut05/ut05ras.html)
+- [5.1 Relacions entre classes (Associació, Agregació, Herència)](./ut05/ut0501.html)
+- [5.2 Composició de classes](./ut05/ut0502.html)
+- [5.3 Herència i jerarquías de classes (extends, super)](./ut05/ut0503.html)
+- [5.4 Classes i mètodes abstractes (abstract)](./ut05/ut0504.html)
+- [5.5 Interfícies (interface, implements)](./ut05/ut0505.html)
+- [5.6 Polimorfisme i lligadura dinàmica](./ut05/ut0506.html)
+- [5.7 Gestió avançada d'excepcions i excepcions personalitzades](./ut05/ut0507.html)
+- [Activitats pràctiques UT5](./ut05/ut05actividades.html)
+- [Reptes de programació UT5](./ut05/ut05retos.html)
+- [Simulacre pràctic UT5](./ut05/ut05acSimulacro.html)
+- [Vídeos de reforç UT5 (Píndoles Informàtiques)](./ut05/ut05pi.html)
 
-### [UT 03: Estructures de Control de Flux Condicionals i Iteratives](./ut03/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA3`
+### [UT6 — Lectura i escriptura d'informació](./ut06/index.html)
+- [6.0 RA i Criteris d'avaluació](./ut06/ut06ras.html)
+- [6.1 Streams (Fluxos d'entrada i eixida)](./ut06/ut0601.html)
+- [6.2 Lectura i escriptura de fitxers](./ut06/ut0602.html)
+- [6.3 Serialització d'objectes](./ut06/ut0603.html)
+- [6.4 Comunicació per xarxa: Sockets](./ut06/ut0604.html)
+- [6.5 Maneig del sistema de fitxers i carpetes (File / NIO)](./ut06/ut0605.html)
+- [Activitats pràctiques UT6](./ut06/ut06actividades.html)
+- [Reptes de programació UT6](./ut06/ut06retos.html)
+- [Vídeos de reforç UT6 (Píndoles Informàtiques)](./ut06/ut06pi.html)
 
-Bifurcacions condicionals (if/else), switch modern d'expressions, bucles while, do-while, bucle for tradicional i for-each.
+### [UT7 — Accés a bases de dades](./ut07/index.html)
+- [7.0 RA i Criteris d'avaluació](./ut07/ut07ras.html)
+- [7.1 Introducció a la persistència en bases de dades](./ut07/ut0701.html)
+- [7.2 Arquitectura i connectors JDBC](./ut07/ut0702.html)
+- [7.3 Connexió a bases de dades des de Java](./ut07/ut0703.html)
+- [7.4 ResultSet: Navegabilitat i concurrencia](./ut07/ut0704.html)
+- [7.5 Consultes de selecció (SELECT / executeQuery)](./ut07/ut0705.html)
+- [7.6 Modificació de registres (UPDATE)](./ut07/ut0706.html)
+- [7.7 Inserció de registres (INSERT)](./ut07/ut0707.html)
+- [7.8 Esborrat de registres (DELETE)](./ut07/ut0708.html)
+- [7.9 Sentències precompilades (PreparedStatement)](./ut07/ut0709.html)
+- [7.10 Treballar amb SQLite en Java](./ut07/ut0710.html)
+- [7.11 Patró de disseny DAO (Data Access Object)](./ut07/ut0711.html)
+- [7.12 Repàs global d'accés a dades](./ut07/ut0712.html)
+- [Activitats pràctiques UT7](./ut07/ut07actividades.html)
+- [Reptes de programació UT7](./ut07/ut07retos.html)
+- [Vídeos de reforç UT7 (Píndoles Informàtiques)](./ut07/ut07pi.html)
+- [📚 Fonts d'informació i Bibliografia](./ut07/references.html)
 
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut03/index.md)
-- [03.01: Estructures de selecció simple i doble: blocs if, else if i else](./ut03/ut0301.md)
-- [03.02: Estructures de selecció múltiple: switch clàssic vs Switch Expressions modernes](./ut03/ut0302.md)
-- [03.03: Bucles precondicionals i postcondicionals: estructures while i do-while](./ut03/ut0303.md)
-- [03.04: Bucles de recompte determinat: el bucle for clàssic i el bucle for-each millorat](./ut03/ut0304.md)
-- [03.05: Control de flux avançat: sentències break, continue i disseny d'algorismes iteratius](./ut03/ut0305.md)
 
-### [UT 04: Programació Estructurada i Disseny Modular: Mètodes i Àmbit](./ut04/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA1, RA3`
-
-Modularitat funcional, definició de mètodes, pas de paràmetres estrictament per valor, tipus de retorn, sobrecàrrega i àmbit.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut04/index.md)
-- [04.01: Principis de modularitat, cohesió, acoblament i disseny funcional descendent](./ut04/ut0401.md)
-- [04.02: Definició i invocació de mètodes: modificadors, tipus de retorn i signatura](./ut04/ut0402.md)
-- [04.03: Mecanismes de pas de paràmetres: pas estrictament per valor en Java](./ut04/ut0403.md)
-- [04.04: Sobrecàrrega de mètodes (Method Overloading) i resolució polimòrfica estàtica](./ut04/ut0404.md)
-- [04.05: Àmbit de variables (Scope), cicle de vida a la pila i mètodes recursius bàsics](./ut04/ut0405.md)
-
-### [UT 05: Estructures de Dades Estàtiques: Vectors i Matrius Multidimensionals](./ut05/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA1, RA3`
-
-Vectors unidimensionals, indexació, gestió d'arrays multidimensionals, la utilitat java.util.Arrays i algorismes clàssics.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut05/index.md)
-- [05.01: Concepte d'array: memòria contigua, declaració, instanciació i mida immutable](./ut05/ut0501.md)
-- [05.02: Recorregut, cerca seqüencial, màxims, mínims i càlculs sobre vectors](./ut05/ut0502.md)
-- [05.03: Matrius bidimensionals i multidimensionals: taules, coordenades i matrius irregulars](./ut05/ut0503.md)
-- [05.04: La classe d'utilitats java.util.Arrays: ordenació, cerca binària, còpia i ompliment](./ut05/ut0504.md)
-- [05.05: Algorismes clàssics sobre arrays: ordenació per bombolla, inserció i selecció directa](./ut05/ut0505.md)
-
-### [UT 06: Estructures de Dades Dinàmiques i Recursivitat en Java](./ut06/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA5`
-
-El marc de col·leccions JCF, genèrics, llistes ArrayList/LinkedList, conjunts HashSet/TreeSet, diccionaris HashMap i recursivitat.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut06/index.md)
-- [06.01: Arquitectura del Java Collections Framework i tipus genèrics (Generics)](./ut06/ut0601.md)
-- [06.02: Llistes dinàmiques indexades: ArrayList vs LinkedList](./ut06/ut0602.md)
-- [06.03: Conjunts sense duplicats: HashSet vs TreeSet i classes embolcalladores](./ut06/ut0603.md)
-- [06.04: Diccionaris clau-valor: HashMap i TreeMap (keySet, values, entrySet)](./ut06/ut0604.md)
-- [06.05: Fonaments de la recursivitat: cas base, descomposició i gestió de la pila](./ut06/ut0605.md)
-
-### [UT 07: Fonaments de la Programació Orientada a Objectes (POO) en Java](./ut07/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA2, RA4`
-
-Paradigma d'objectes, modelat de classes, constructors sobrecarregats, paraula clau this, encapsulament, static i cicle de vida.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut07/index.md)
-- [07.01: El paradigma orientat a objectes: classes, objectes, atributs i mètodes](./ut07/ut0701.md)
-- [07.02: Constructors d'objectes, inicialització, sobrecàrrega i la paraula clau this](./ut07/ut0702.md)
-- [07.03: Encapsulament, ocultació d'informació i modificadors d'accés](./ut07/ut0703.md)
-- [07.04: Membres de classe estàtics (static): variables, mètodes i constants](./ut07/ut0704.md)
-- [07.05: Cicle de vida dels objectes, memòria Stack vs Heap i el mètode toString()](./ut07/ut0705.md)
-
-### [UT 08: Programació Orientada a Objectes Avançada: Herència, Polimorfisme i Interfícies](./ut08/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA4`
-
-Herència amb extends i super, classes abstractes, interfícies modernes amb default, polimorfisme d'assignació, late binding i Object.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut08/index.md)
-- [08.01: Herència en Java: reutilització de codi amb extends, super i @Override](./ut08/ut0801.md)
-- [08.02: Classes i mètodes abstractes: la paraula clau abstract i jerarquies](./ut08/ut0802.md)
-- [08.03: Interfícies (interface): contractes de disseny, mètodes default i static](./ut08/ut0803.md)
-- [08.04: Polimorfisme dinàmic, late binding, càstings i pattern matching amb instanceof](./ut08/ut0804.md)
-- [08.05: La classe arrel Object: equals(), hashCode() i ordenació amb Comparable i Comparator](./ut08/ut0805.md)
-
-### [UT 09: Gestió d'Errors i Control d'Excepcions en Temps d'Execució](./ut09/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA6`
-
-Jerarquia Throwable, checked vs unchecked, blocs try-catch-finally, try-with-resources amb AutoCloseable, throws i custom exceptions.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut09/index.md)
-- [09.01: Jerarquia d'errors i excepcions: Throwable, Error, Exception i RuntimeException](./ut09/ut0901.md)
-- [09.02: Tractament estructurat: blocs try, catch, multi-catch i finally](./ut09/ut0902.md)
-- [09.03: Gestió automàtica de recursos: try-with-resources i la interfície AutoCloseable](./ut09/ut0903.md)
-- [09.04: Propagació i llançament: les paraules clau throw, throws i encadenament](./ut09/ut0904.md)
-- [09.05: Creació d'excepcions personalitzades i bones pràctiques d'enginyeria](./ut09/ut0905.md)
-
-### [UT 10: Persistència en Fitxers i Entrada/Eixida de Fluxos (Java I/O i NIO.2)](./ut10/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA7`
-
-Canonades I/O de bytes i caràcters, BufferedReader/Writer, el marc modern Java NIO.2 amb Path i Files, DataStreams i serialització.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut10/index.md)
-- [10.01: Arquitectura de fluxos (Streams): bytes vs caràcters (I/O clàssic)](./ut10/ut1001.md)
-- [10.02: Lectura i escriptura eficient de text: BufferedReader, BufferedWriter i PrintWriter](./ut10/ut1002.md)
-- [10.03: Java NIO.2: gestió moderna del sistema de fitxers amb Path i Files](./ut10/ut1003.md)
-- [10.04: Dades binàries i accés directe: DataStreams i RandomAccessFile](./ut10/ut1004.md)
-- [10.05: Serialització d'objectes: Serializable, serialVersionUID i transient](./ut10/ut1005.md)
-
-### [UT 11: Accés a Bases de Dades Relacionals amb JDBC i el Patró DAO](./ut11/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA8`
-
-Arquitectura JDBC, connexions, protecció contra injecció SQL amb PreparedStatement, navegació ResultSet, transaccions ACID i DAO.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut11/index.md)
-- [11.01: Arquitectura JDBC: controladors (Drivers), URLs de connexió i DriverManager](./ut11/ut1101.md)
-- [11.02: Sentències SQL segures: perills de Statement i protecció amb PreparedStatement](./ut11/ut1102.md)
-- [11.03: Consulta i mapatge de dades: la interfície ResultSet i tancament de cursors](./ut11/ut1103.md)
-- [11.04: Gestió de transaccions ACID: control d'autocommit, commit i rollback](./ut11/ut1104.md)
-- [11.05: Arquitectura per capes i el patró de disseny DAO (Data Access Object)](./ut11/ut1105.md)
-
-### [UT 12: Desenvolupament d'Interfícies Gràfiques d'Usuari (GUI) amb JavaFX](./ut12/index.md)
-`1r DAW / DAM · 5 apartats · 19 reptes (+475 XP) · RA9`
-
-Model teatral Stage/Scene, layouts VBox/HBox/BorderPane/GridPane, controls TableView, esdeveniments lambda, reactivitat i MVC amb FXML.
-
-- [**Guia i Reptes Globals de Síntesi de la Unitat**](./ut12/index.md)
-- [12.01: Arquitectura de JavaFX: Application, fil d'execució gràfic, Stage i Scene](./ut12/ut1201.md)
-- [12.02: Arbre de nodes (Scene Graph) i contenidors de disseny (Layouts)](./ut12/ut1202.md)
-- [12.03: Controls gràfics d'usuari: formularis i taules amb TableView](./ut12/ut1203.md)
-- [12.04: Gestió d'esdeveniments amb lambda i propietats reactives (Binding)](./ut12/ut1204.md)
-- [12.05: Arquitectura MVC amb FXML, SceneBuilder i classes controladores](./ut12/ut1205.md)
 
 ---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **Programació en Java — Visió Global del Mòdul** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina és la diferència principal entre Git i GitHub?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Git és el sistema de control de versions distribuït instal·lat localment, mentre que GitHub és la plataforma al núvol per a allotjar repositoris Git i col·laborar.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Git és un compilador de Java i GitHub és l'entorn Visual Studio Code.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Són exactament el mateix programa amb dos noms comercials.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Cap de les anteriors és correcta.</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-mcq" data-answer="D" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quina extensió oficial s'instal·la en Visual Studio Code per a programar, compilar i depurar projectes en Java?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Live Server CSS</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) SQLite Viewer</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Extension Pack for Java</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> L'ordre 'git commit -m "missatge"' registra una instantània dels canvis preparats (staged) a l'historial del repositori local.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
+  </div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
+</div>
+
+<div class="interactive-quiz" data-answer="push" data-hint="És el contrari de pull (4 lletres).">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina ordre de Git s'utilitza per a enviar els commits del repositori local cap al repositori remot en GitHub (git ...)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Programació en Java — Visió Global del Mòdul**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="aules-header">
-    <span class="aules-badge">Avaluació Contínua i Qualificació</span>
-    <h4>Projecte Integrador de Programació en Java</h4>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <p>Al llarg del curs acadèmic, l'alumnat desenvoluparà un projecte integral que combinarà de forma acumulativa totes les competències adquirides: gestió d'estructures de dades avançades (JCF), jerarquies polimòrfiques d'objectes, blindatge contra fallades amb excepcions, persistència dades mitjançant JDBC i una interfície gràfica d'escriptori completa en JavaFX seguint el patró MVC.</p>
-  <button class="btn-aules-download" onclick="window.print()">Imprimir / Guardar Temari Complet en PDF</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="PRG" data-unit="UD00" data-activity="prg_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

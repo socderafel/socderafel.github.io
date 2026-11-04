@@ -1,11 +1,13 @@
 ---
-layout: default
 title: "UT 01: Fonaments de Seguretat Informàtica i Anàlisi de Riscos — Seguretat Informàtica"
-permalink: /02_SMX/2smx-si-seguretat-informatica/ut01/index.html
-prev_url: /02_SMX/2smx-si-seguretat-informatica/index.html
+layout: "default"
+prev_url: "/02_SMX/2smx-si-seguretat-informatica/index.html"
 prev_label: "Tornar a la Portada del Mòdul"
-next_url: /02_SMX/2smx-si-seguretat-informatica/ut02/index.html
+next_url: "/02_SMX/2smx-si-seguretat-informatica/ut02/index.html"
 next_label: "UT 02: Seguretat Passiva i CPD"
+course_root: ".."
+badge: "2n SMX · Seguretat Informàtica · UT01"
+module: "SI"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

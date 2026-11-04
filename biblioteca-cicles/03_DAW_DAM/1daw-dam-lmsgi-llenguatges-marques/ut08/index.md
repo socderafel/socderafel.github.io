@@ -1,113 +1,116 @@
-# UT 08: Transformació i Consulta de Documents XML (XPath, XSLT i XQuery)
+---
+layout: default
+title: "UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX) — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD8"
+prev_url: "../ut07/index.html"
+prev_label: "⬅️ UD7"
+next_url: "ut0800.html"
+next_label: "📋 8.0 Proposta Didàctica: Emmagatzematge d'informació ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut08" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX)
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa tanca el cicle de tractament avançat de la informació en format XML abordant les tres tecnologies troncals d'extracció, navegació, consulta i transformació recomanades pel W3C: **XPath**, **XSLT** i **XQuery**.
-
-En un entorn empresarial connectat, les dades persisteixen o viatgen en estructures XML molt denses que necessiten ser:
-1. **Navegades i filtrades amb precisió quirúrgica:** Mitjançant **XPath** (XML Path Language), utilitzant rutes d'ubicació, eixos de parentesc i predicats condicionals.
-2. **Transformades en altres formats de sortida:** Mitjançant **XSLT** (Extensible Stylesheet Language Transformations), transformant documents XML purs en pàgines HTML5 interactives, documents de text pla CSV, fitxers JSON o dialectes XML alternatius sense alterar l'arbre font original.
-3. **Consultades com si foren una base de dades relacional:** Mitjançant **XQuery**, aplicant el paradigma funcional d'expressions **FLWOR** (*For, Let, Where, Order by, Return*) per a creuar, agrupar i projectar col·leccions documentals massives.
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA5 (DAW / DAM / ASIX):** Converteix i publica informació continguda en documents XML utilitzant eines de transformació i tecnologies de consulta (XPath, XSLT, XQuery).
-  - **CA 5.a:** S'han identificat les capacitats i àmbits d'aplicació dels llenguatges de consulta i transformació XML.
-  - **CA 5.b:** S'han utilitzat expressions i eixos de navegació XPath per a localitzar nodes i extreure informació de documents XML.
-  - **CA 5.c:** S'han creat fulls d'estil de transformació XSLT utilitzant plantilles, estructures de control, bucles i ordenació.
-  - **CA 5.d:** S'han aplicat transformacions XSLT per a generar diferents formats d'eixida (HTML, XML, text pla/CSV).
-  - **CA 5.e:** S'han dissenyat i executat consultes XQuery emprant expressions FLWOR per a explotar col·leccions de dades XML.
+Benvingut/da a la **Unitat Didàctica 8** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 08.01: Fonaments de XPath: model de nodes, rutes d'ubicació, eixos i predicats](./ut0801.md)
-2. [UT 08.02: Funcions estàndard i operadors avançats en XPath (cadenes, números, seqüències)](./ut0802.md)
-3. [UT 08.03: Arquitectura de transformació amb XSLT: processadors, plantilles i arbre resultat](./ut0803.md)
-4. [UT 08.04: Regles i elements clau en XSLT: template, apply-templates, value-of, for-each, if/choose](./ut0804.md)
-5. [UT 08.05: Introducció a XQuery: el llenguatge de consulta per a XML i expressions FLWOR](./ut0805.md)
+1. **[📋 8.0 Proposta Didàctica: Emmagatzematge d'informació](ut0800.html)**
+1. **[8.1 Introducció a l'emmagatzematge d'informació](ut0801.html)**
+1. **[8.2 Mètodes d'emmagatzematge de la informació](ut0802.html)**
+1. **[8.3 Emmagatzematge de XML en bases de dades relacionals](ut0803.html)**
+1. **[8.4 Bases de dades natives XML](ut0804.html)**
+1. **[8.5 Llenguatges de consulta](ut0805.html)**
+1. **[8.6 Eines i casos pràctics](ut0806.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut08-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Navegació amb Eixos XPath: // vs /</h4>
+- **[⚡ Activitat 801](act801.html)**
+- **[📓 Recull Complet d'Activitats (UD8)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX)** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="L'acrònim FLWOR correspon a For, Let, Where, Order by i Return.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En una expressió FLWOR de XQuery, quina és la funció de les clàusules <code>for</code>, <code>let</code>, <code>where</code>, <code>order by</code> i <code>return</code>?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) <code>for</code> itera sobre una seqüència de nodes, <code>let</code> assigna variables, <code>where</code> filtra, <code>order by</code> ordena i <code>return</code> construeix l'eixida.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Serveixen únicament per a donar estil CSS als paràgrafs.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Configuren la targeta de xarxa del servidor.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Creen usuaris en el sistema operatiu Linux.</button>
   </div>
-  <p class="challenge-question">Quina diferència d'abast de cerca existeix entre l'expressió XPath /biblioteca/llibre i l'expressió //llibre?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Són exactament idèntiques en qualsevol document.</button>
-    <button class="btn-check" data-correct="true">B) /biblioteca/llibre només selecciona els elements llibre que siguen fills directes immediats de l'arrel biblioteca, mentre que //llibre cerca recursivament i selecciona tots els elements llibre de tot el document sense importar el seu nivell d'aniuament en l'arbre.</button>
-    <button class="btn-check" data-correct="false">C) //llibre només cerca en fitxers externs al document.</button>
-    <button class="btn-check" data-correct="false">D) /biblioteca/llibre elimina els llibres trobats.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut08-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>El Model de Processament de XSLT: Declaratiu basat en Patrons</h4>
+<div class="interactive-mcq" data-answer="A" data-hint="En XQuery totes les variables comencen amb el símbol '$' (per exemple: for $b in //book).">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin caràcter precedeix sempre el nom de qualsevol variable (<code>$x</code>) dins d'una consulta XQuery?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) El símbol dòlar ($).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El símbol coixinet (#).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) El símbol percentatge (%).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) El punt i coma (;).</button>
   </div>
-  <p class="challenge-question">Quin paradigma de programació governa el funcionament d'un processador XSLT quan aplica un full d'estil de transformació sobre un arbre font XML?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Paradigma imperatiu seqüencial estrictament procedimental basat en instruccions GOTO.</button>
-    <button class="btn-check" data-correct="true">B) Paradigma declaratiu i funcional orientat a patrons (Template-Driven / Pattern Matching), on el processador recorre els nodes del document font i dispara automàticament les plantilles (&lt;xsl:template match="..."&gt;) que coincideixen amb els nodes trobats.</button>
-    <button class="btn-check" data-correct="false">C) Programació reactiva basada exclusivament en l'objecte window del navegador.</button>
-    <button class="btn-check" data-correct="false">D) Programació lògica en Prolog.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut08-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>xsl:apply-templates vs xsl:for-each</h4>
+<div class="interactive-vf" data-answer="V" data-hint="BaseX i eXist-db indexen documents XML nadius i implementen l'estàndard XQuery i XQuery Update.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> BaseX i eXist-db són exemples de Sistemes Gestors de Bases de Dades Nadius XML que permeten executar consultes i actualitzacions XQuery sobre col·leccions de documents.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Per què en disseny de fulls d'estil XSLT complexos es recomana l'ús de xsl:apply-templates en comptes d'abusar de bucles rígids xsl:for-each?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Perquè xsl:for-each no admet més de 10 iteracions.</button>
-    <button class="btn-check" data-correct="true">B) Perquè xsl:apply-templates fomenta el desacoblament modular i el polimorfisme de transformació, permetent gestionar elements aniuats de forma recursiva i adaptar-se a canvis en l'estructura del document font sense haver de reescriure bucles manuals.</button>
-    <button class="btn-check" data-correct="false">C) Perquè xsl:apply-templates només genera fitxers binaris.</button>
-    <button class="btn-check" data-correct="false">D) Perquè xsl:for-each és una directiva exclusiva de CSS3.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut08-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>L'Estructura de la Clàusula FLWOR en XQuery</h4>
+<div class="interactive-quiz" data-answer="flwor" data-hint="És l'acrònim FLWOR.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Com s'anomena l'acrònim de les 5 clàusules principals d'una consulta XQuery (For, Let, Where, Order by, Return)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina funció compleix la clàusula let en una expressió FLWOR de XQuery?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Itera un a un sobre cadascun dels ítems d'una seqüència (equivalent a un for).</button>
-    <button class="btn-check" data-correct="true">B) Associa un valor calculat o una seqüència completa a una variable local d'una sola vegada (sense iterar), facilitant el càlcul d'agregacions, sumes o estructures intermediàries.</button>
-    <button class="btn-check" data-correct="false">C) Filtra els resultats segons una condició booleana.</button>
-    <button class="btn-check" data-correct="false">D) Ordena els nodes en sentit descendent.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 8 LMSGI</h4>
-    <p>En completar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 8</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD08" data-activity="ut08_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

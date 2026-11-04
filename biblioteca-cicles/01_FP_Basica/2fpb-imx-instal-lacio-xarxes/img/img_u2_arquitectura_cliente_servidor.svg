@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Verdana, Arial, sans-serif">
+<style>
+.box { fill:#fff; stroke:#e67e22; stroke-width:2; }
+.srv { fill:#fff; stroke:#c0392b; stroke-width:2.5; }
+.title { fill:#c0392b; font-weight:bold; }
+.text { fill:#222; font-size:14px; }
+.small { fill:#555; font-size:11px; }
+.arrow { stroke:#e67e22; stroke-width:2; fill:none; marker-end:url(#arr); }
+.arrow2 { stroke:#e67e22; stroke-width:2; fill:none; marker-start:url(#arrs); }
+</style>
+<defs>
+<marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L7,3 L0,6 Z" fill="#e67e22"/></marker>
+<marker id="arrs" markerWidth="8" markerHeight="8" refX="1" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M7,0 L0,3 L7,6 Z" fill="#e67e22"/></marker>
+</defs>
+
+<rect x="30" y="30" width="840" height="560" rx="10" fill="#fff5ea"/>
+<text x="60" y="70" class="title" style="font-size:20px">Arquitectura cliente-servidor</text>
+
+<rect x="350" y="110" width="200" height="120" rx="8" class="srv"/>
+<text x="375" y="150" class="title">SERVIDOR</text>
+<text x="375" y="180" class="small">Proporciona recursos y servicios</text>
+<text x="375" y="200" class="small">(web, correo, archivos, BD)</text>
+
+<rect x="60" y="300" width="170" height="90" rx="8" class="box"/>
+<text x="85" y="335" class="title" style="fill:#e67e22">CLIENTE 1</text>
+<text x="85" y="360" class="small">Pide recursos y servicios</text>
+<text x="85" y="378" class="small">(PC, port&#225;til, m&#243;vil)</text>
+
+<rect x="365" y="430" width="170" height="90" rx="8" class="box"/>
+<text x="390" y="465" class="title" style="fill:#e67e22">CLIENTE 2</text>
+<text x="390" y="490" class="small">Pide recursos y servicios</text>
+<text x="390" y="508" class="small">(PC, port&#225;til, m&#243;vil)</text>
+
+<rect x="670" y="300" width="170" height="90" rx="8" class="box"/>
+<text x="695" y="335" class="title" style="fill:#e67e22">CLIENTE 3</text>
+<text x="695" y="360" class="small">Pide recursos y servicios</text>
+<text x="695" y="378" class="small">(PC, port&#225;til, m&#243;vil)</text>
+
+<path d="M 235 340 L 355 210" class="arrow"/>
+<path d="M 450 425 L 450 235" class="arrow"/>
+<path d="M 665 340 L 545 210" class="arrow"/>
+
+<text x="60" y="560" class="small" font-style="italic">Un servidor central atiende a muchos clientes a la vez; los clientes piden servicios y el servidor responde.</text>
+</svg>

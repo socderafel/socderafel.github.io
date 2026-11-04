@@ -13,7 +13,22 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="window.renderMathPortal && window.renderMathPortal()"></script>
+  <!-- Mermaid per a diagrames de flux i esquemes tècnics -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js" onload="window.initMermaidPortal && window.initMermaidPortal()"></script>
   <script>
+    function initMermaidPortal() {
+      if (window.mermaid && document.body) {
+        document.querySelectorAll('pre > code.language-mermaid').forEach(codeEl => {
+          const pre = codeEl.parentElement;
+          const div = document.createElement('div');
+          div.className = 'mermaid';
+          div.textContent = codeEl.textContent;
+          pre.replaceWith(div);
+        });
+        window.mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+        window.mermaid.run({ querySelector: '.mermaid' }).catch(() => {});
+      }
+    }
     function renderMathPortal() {
       if (window.renderMathInElement && document.body) {
         window.renderMathInElement(document.body, {
@@ -26,8 +41,8 @@
         });
       }
     }
-    document.addEventListener('DOMContentLoaded', renderMathPortal);
-    window.addEventListener('load', renderMathPortal);
+    document.addEventListener('DOMContentLoaded', function() { renderMathPortal(); initMermaidPortal(); });
+    window.addEventListener('load', function() { renderMathPortal(); initMermaidPortal(); });
 
     function setThemePalette(themeKey) {
       document.documentElement.setAttribute('data-theme', themeKey);
@@ -3221,11 +3236,15 @@
             if (forcedModule) {
               moduleCode = forcedModule.toUpperCase();
               if (moduleCode === 'OAD') moduleFullName = 'Ofimàtica i Arxiu de Documents (1r FPB)';
-              else if (moduleCode === 'IMX') moduleFullName = 'Instal·lació de Xarxes (2n FPB)';
+              else if (moduleCode === 'IMX' || moduleCode === 'NE') moduleFullName = 'Instal·lació i Manteniment de Xarxes — Networking Essentials (2n FPB)';
               else if (moduleCode === 'OACE') moduleFullName = 'Operacions Auxiliars de Configuració i Explotació (2n FPB)';
               else if (moduleCode === 'MMSCI') moduleFullName = 'Muntatge i Manteniment de Sistemes (1r FPB)';
               else if (moduleCode === 'CA1') moduleFullName = 'Ciències Aplicades I (1r FPB)';
               else if (moduleCode === 'PROJECTE') moduleFullName = 'Projecte Intermodular (2n FPB)';
+              else if (moduleCode === 'BBDD') moduleFullName = 'Bases de Dades (1r DAW / DAM / ASIX)';
+              else if (moduleCode === 'LMSGI') moduleFullName = 'Llenguatges de Marques i Sistemes de Gestió d\'Informació (1r DAW / DAM / ASIX)';
+              else if (moduleCode === 'SEX') moduleFullName = 'Serveis en Xarxa (2n SMX)';
+              else if (moduleCode === 'PROG') moduleFullName = 'Programació en Java (1r DAW / DAM)';
             } else if (path.includes('ciencies-aplicades') || pageTitle.includes('Ciències') || badgeText.includes('Ciències')) {
               moduleCode = 'CA1';
               moduleFullName = 'Ciències Aplicades I (1r FPB)';
@@ -3771,41 +3790,89 @@
             if (!r.ok) throw new Error('HTTP ' + r.status);
             return r.json();
           })
-          .then(data => {
+          .then(raw => {
             const container = document.getElementById('sidebar-nav-content');
             if (!container) return;
-            const currentPath = window.location.pathname;
-            let html = '';
-            if (data.home) {
-              const homeHref = toHtmlHref(prefix + data.home.href);
-              const isHome = currentPath.endsWith('/') || (currentPath.endsWith('/index.html') && root === '.');
-              html += '<ul><li><a href="' + homeHref + '"' + (isHome ? ' class="active"' : '') + '>' + data.home.label + '</a></li></ul>';
+            const currentPath = window.location.pathname.replace(/\\/g, '/');
+
+            // Normalitzar dades tant si sidebar.json és un Array com si és un Objecte
+            let homeObj = null;
+            let unitsList = [];
+            let footerList = [];
+
+            if (Array.isArray(raw)) {
+              homeObj = { label: '🏠 Portada del Mòdul', href: 'index.html' };
+              unitsList = raw.map(u => ({
+                summary: u.summary || u.title || 'Unitat',
+                items: (u.items || u.children || []).map(it => ({
+                  label: it.label || it.title || '',
+                  href: (it.href || it.url || '').replace(/\\.md(#|$)/, '.html$1'),
+                  class: it.class || ''
+                }))
+              }));
+            } else if (raw && typeof raw === 'object') {
+              if (raw.home) homeObj = raw.home;
+              else homeObj = { label: '🏠 Portada del Mòdul', href: 'index.html' };
+
+              unitsList = (raw.units || []).map(u => ({
+                summary: u.summary || u.title || 'Unitat',
+                items: (u.items || u.children || []).map(it => ({
+                  label: it.label || it.title || '',
+                  href: (it.href || it.url || '').replace(/\\.md(#|$)/, '.html$1'),
+                  class: it.class || ''
+                }))
+              }));
+              footerList = raw.footer || [];
             }
-            (data.units || []).forEach(unit => {
+
+            let html = '';
+            if (homeObj) {
+              const homeClean = (homeObj.href || 'index.html').replace(/^\.\//, '');
+              const homeHref = toHtmlHref(prefix + homeClean);
+              const isHome = currentPath.endsWith('/') || (currentPath.endsWith('/index.html') && root === '.');
+              html += '<ul><li><a href="' + homeHref + '"' + (isHome ? ' class="active"' : '') + '>' + (homeObj.label || '🏠 Portada del Mòdul') + '</a></li></ul>';
+            }
+
+            unitsList.forEach((unit, uIdx) => {
               let unitActive = false;
               let itemsHtml = '';
+
               (unit.items || []).forEach(item => {
                 const cleanHref = toHtmlHref(item.href.replace(/^\.\//, ''));
                 const itemHref = toHtmlHref(prefix + cleanHref);
                 const isItemActive = currentPath.endsWith('/' + cleanHref) ||
-                  (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, '')));
+                  (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, ''))) ||
+                  (currentPath.endsWith(cleanHref));
                 if (isItemActive) unitActive = true;
                 const cls = [item.class || '', isItemActive ? 'active' : ''].filter(Boolean).join(' ');
                 itemsHtml += '<li><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a></li>';
               });
-              const openAttr = unitActive ? ' open' : (root === '.' && unit.summary.startsWith('UD1') ? ' open' : '');
+
+              // Detectar si estem en alguna pàgina d'aquesta unitat pel nom de carpeta (ex. /ut01/, /ud01/, /up01/)
+              if (!unitActive) {
+                const folderMatch = unit.items && unit.items.some(it => {
+                  const m = (it.href || '').match(/^(?:\.\/)?([a-zA-Z0-9_-]+)\//);
+                  return m && currentPath.includes('/' + m[1] + '/');
+                });
+                if (folderMatch) unitActive = true;
+              }
+
+              // Obertura: oberta si està activa, o si és la primera unitat estant a la portada
+              const openAttr = unitActive ? ' open' : (root === '.' && uIdx === 0 ? ' open' : '');
               html += '<details class="nav-unit"' + openAttr + '><summary><span class="unit-title">' + unit.summary + '</span><span class="unit-chevron">▾</span></summary><ul>' + itemsHtml + '</ul></details>';
             });
-            if (data.footer && data.footer.length) {
+
+            if (footerList && footerList.length) {
               html += '<ul>';
-              data.footer.forEach(f => {
-                const cleanFHref = toHtmlHref(f.href.replace(/^\.\//, ''));
+              footerList.forEach(f => {
+                const cleanFHref = toHtmlHref((f.href || f.url || '').replace(/^\.\//, ''));
                 const fHref = toHtmlHref(prefix + cleanFHref);
                 const isFActive = currentPath.endsWith('/' + cleanFHref);
-                html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + f.label + '</a></li>';
+                html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + (f.label || f.title || '') + '</a></li>';
               });
               html += '</ul>';
             }
+
             container.innerHTML = html;
           })
           .catch(err => {

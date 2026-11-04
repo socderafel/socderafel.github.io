@@ -1,135 +1,121 @@
 ---
-layout: default
-title: "UT 03: Serveis de Transferència de Fitxers (FTP, FTPS, SFTP)"
-parent: "2n SMX · Serveis en Xarxa"
-has_children: true
-nav_order: 3
+title: "UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)"
+unit: "3"
+module: "SEX"
+layout: "default"
+course_root: ".."
+badge: "2n SMX · Serveis en Xarxa · UT03"
 ---
 
-# 📁 Unitat Temàtica 03: Serveis de Transferència de Fitxers (FTP, FTPS, SFTP)
-
-<div class="interactive-progress-tracker" data-module="SEX" data-unit="3" data-topic="0">
-  <div class="progress-bar-container">
-    <div class="progress-fill"></div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span class="progress-text">Progrés global de la unitat: 0%</span>
-    <span class="points-badge">0 / 475 punts</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-Benvingut/da a la **Unitat Temàtica 03** de **Serveis en Xarxa (SEX)**. En aquesta unitat abordarem la teoria, implementació, seguretat i administració de serveis de transferència de fitxers en xarxa: l'arquitectura de doble canal FTP, els modes actiu i passiu, el desplegament d'un servidor segur **vsftpd** a Linux, el confinament d'usuaris mitjançant gàbies **chroot**, el xifratge **FTPS** i **SFTP** i el rol IIS FTP a Windows Server 2022.
+# 📘 UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)
+
+> **📌 Resultat d'Aprenentatge i Objectius:** RA2. Instal·la serveis de resolució de noms (DNS), jerarquia de dominis, zones directes i inverses, registres (A, AAAA, CNAME, MX, PTR, SOA, NS) en Windows Server AD DS i Linux BIND9.
+
+## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
+
+| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
+| :--- | :--- | :--- |
+| **3.1** | **3.1 - Introducció** | [Obrir apartat ➡️](./ut0301.html) |
+| **3.2** | **3.2 - Protocol DNS** | [Obrir apartat ➡️](./ut0302.html) |
+| **3.3** | **3.3 - Mecanismes de comunicació DNS** | [Obrir apartat ➡️](./ut0303.html) |
+| **3.4** | **3.4 - Servidors DNS** | [Obrir apartat ➡️](./ut0304.html) |
+| **3.5** | **3.5 - Consultes al DNS** | [Obrir apartat ➡️](./ut0305.html) |
+| **3.6** | **3.6 - Funcionament del servei DNS** | [Obrir apartat ➡️](./ut0306.html) |
+| **3.7** | **3.7 - Jerarquia de noms DNS** | [Obrir apartat ➡️](./ut0307.html) |
+| **3.8** | **3.8 - Servidors DNS públics i privats** | [Obrir apartat ➡️](./ut0308.html) |
+| **3.9** | **3.9 - Evolució del protocol DNS i seguretat** | [Obrir apartat ➡️](./ut0309.html) |
+| **3.10** | **3.10 - Registres DNS** | [Obrir apartat ➡️](./ut0310.html) |
+| **3.11** | **3.11 - Eines de diagnóstic tècnic de registres DNS** | [Obrir apartat ➡️](./ut0311.html) |
+| **3.12** | **3.12 - Tasca RA2-CEb-1 - Resolució manual d'un domini** | [Obrir apartat ➡️](./ut0312.html) |
+| **3.13** | **3.13 - Tasca RA2-CEb-2 - Resolució manual d'un domini** | [Obrir apartat ➡️](./ut0313.html) |
+| **3.14** | **3.14 - Tasca RA2-CEde-1 - Instal·lació i configuració d'un servidor DNS amb Windows Server 2025** | [Obrir apartat ➡️](./ut0314.html) |
 
 ---
 
-## 🎯 Resultats d'Aprenentatge i Criteris d'Avaluació (RA3)
+## 🎯 Resum d'Aprenentatge i Metodologia
 
-D'acord amb el currículum oficial (Reial Decret 1691/2007 i Decret 81/2010 CV), aquesta unitat desenvolupa el **Resultat d'Aprenentatge 3 (RA3)**: *Gestiona serveis de transferència de fitxers, descrivint la seua arquitectura, configurant permisos d'accés, aïllament d'usuaris i canals xifrats*:
+Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
 
-- **a)** S'ha descrit l'arquitectura de doble canal del protocol FTP (control port 21 i dades) i diferenciat entre els modes actiu i passiu.
-- **b)** S'ha instal·lat i configurat el servei `vsftpd` a Linux habilitant usuaris locals i definint el rang de ports passius.
-- **c)** S'ha implementat el confinament d'usuaris (`chroot`) protegint el sistema contra fugides de directori.
-- **d)** S'ha resolt la incidència d'arrel d'escriptura mitjançant directrius de seguretat o estructures de subdirectori.
-- **e)** S'ha protegit la transferència contra intercepció de credencials mitjançant certificats TLS (FTPS) i comparat amb SFTP (SSH).
-- **f)** S'ha desplegat el rol de servidor FTP sota IIS a Windows Server 2022 configurant aïllament d'usuaris.
-- **g)** S'han emprat clients gràfics (FileZilla) per a verificar la transferència de fitxers i auditar permisos.
+
 
 ---
 
-## 🗺️ Mapa de Continguts de la Unitat
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-| Subtema | Títol | Descripció i Objectius Clau | Punts XP |
-| :---: | :--- | :--- | :---: |
-| **3.1** | [Arquitectura del Protocol FTP: Modes Actiu i Passiu](ut0301.md) | Doble canal (Port 21 control vs dades), mode Actiu PORT vs mode Passiu PASV, impacte de tallafocs i NAT. | **75 XP** |
-| **3.2** | [Desplegament de vsftpd a Linux](ut0302.md) | Instal·lació de `vsftpd`, usuaris anònims vs locals, directives `write_enable`, màscara `local_umask` i ports UFW. | **75 XP** |
-| **3.3** | [Confinament d'Usuaris (Chroot) i Seguretat](ut0303.md) | Gàbia `chroot_local_user`, llistes d'excepcions `chroot_list`, error 500 OOPS i solucions amb `allow_writeable_chroot`. | **75 XP** |
-| **3.4** | [Xifratge: FTPS vs SFTP (SSH Subsystem)](ut0304.md) | Vulnerabilitat de text pla, FTPS explícit amb certificats OpenSSL a vsftpd, comparativa amb SFTP sobre port 22. | **75 XP** |
-| **3.5** | [Servidor FTP a Windows Server (IIS) i Clients](ut0305.md) | Rol FTP a IIS, aïllament d'usuaris a Windows, permisos NTFS i administració de connexions amb FileZilla Client. | **75 XP** |
+Comprova el teu domini sobre **UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)** superant aquests 4 reptes gamificats (+25 punts cadascun):
 
----
-
-## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
-
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 1 · Canals</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-mcq" data-answer="D" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin tipus de registre DNS permet crear un àlies que apunta un nom cap a un altre nom canònic?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) SOA</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) NS</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) CNAME</button>
   </div>
-  <p class="challenge-question">Quina funció té el canal de control sobre el port TCP 21 en una sessió FTP?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s1" value="0"> Descarregar els blocs binaris dels fitxers</label>
-    <label><input type="radio" name="s1" value="1" data-correct="true"> Enviar comandes de text d'autenticació, navegació i peticions de transferència</label>
-    <label><input type="radio" name="s2" value="2"> Xifrar el correu electrònic</label>
-    <label><input type="radio" name="s3" value="3"> Assignar adreces IP dinàmiques</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 2 · Confinament</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-mcq" data-answer="C" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En la tasca de resolució manual d'un domini (com aules.edu.gva.es) amb nslookup o dig, quin és el primer servidor al qual s'ha de consultar si no tenim memòria cau?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) El servidor de correu MX del domini.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Un dels servidors arrel (Root Servers, de a.root-servers.net a m.root-servers.net).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) El servidor DHCP de l'encaminador domèstic.</button>
   </div>
-  <p class="challenge-question">Què evita la configuració de 'chroot' en un servidor FTP corporatiu?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s2" value="0"> Que els usuaris puguen apagar el router</label>
-    <label><input type="radio" name="s2" value="1" data-correct="true"> Que els usuaris puguen escapar del seu directori personal i explorar arxius del sistema operatiu o d'altres companys</label>
-    <label><input type="radio" name="s2" value="2"> Que s'utilitzen navegadors web</label>
-    <label><input type="radio" name="s3" value="3"> Que el servidor es quede sense memòria RAM</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 3 · Criptografia</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Un nom de domini totalment qualificat (FQDN) especifica la ubicació exacta de l'equip dins de la jerarquia DNS fins al punt arrel final.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Quin port de xarxa utilitza el protocol segur SFTP basat en el servei OpenSSH?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s3" value="0"> Port 21</label>
-    <label><input type="radio" name="s3" value="1" data-correct="true"> Port 22</label>
-    <label><input type="radio" name="s3" value="2"> Port 80</label>
-    <label><input type="radio" name="s3" value="3"> Port 443</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 4 · NAT i Tallafocs</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-quiz" data-answer="53" data-hint="És un número entre 50 i 55.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin número de port UDP i TCP utilitza per defecte el servei DNS estàndard?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Per què una connexió FTP en mode Passiu requereix obrir un rang de ports efímers al tallafocs del servidor?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s4" value="0"> Perquè el port 21 s'espatlla si s'usa molt</label>
-    <label><input type="radio" name="s4" value="1" data-correct="true"> Perquè el servidor assigna un port diferent d'eixe interval a cada client que sol·licita obrir un canal de dades entrant</label>
-    <label><input type="radio" name="s4" value="2"> Perquè el sistema operatiu només admet 1 usuari per port</label>
-    <label><input type="radio" name="s4" value="3"> Perquè el protocol TCP no admet difusió</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
----
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT3 — Serveis de Resolució de Noms: Protocol DNS (RA2)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-header">
-    <span class="delivery-icon">📬</span>
-    <div>
-      <h3 class="delivery-title">Projecte de Síntesi Aules: Desplegament de Servidor de Fitxers Xifrat (FTPS/SFTP)</h3>
-      <p class="delivery-subtitle">Memòria tècnica d'instal·lació, gàbies chroot i transferència segura amb FileZilla.</p>
-    </div>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <div class="delivery-instructions">
-    <p>Presenta un document tècnic complet sobre la posada en marxa d'un servei de transferència de fitxers segur a Linux o Windows: configuració de chroot per a dos comptes d'alumnat, certificat TLS per a FTPS o aïllament amb SFTP, i captures de pantalla verificant la connexió xifrada des de FileZilla.</p>
-    <div class="delivery-meta">
-      <span class="badge-format">Format: PDF institucional complet</span>
-      <span class="badge-deadline">Pes: Projecte Pràctic de la UD03</span>
-    </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
   </div>
-  <button class="btn-aules-download" data-module="SEX" data-unit="3" data-topic="0">📥 Descarrega Especificació del Projecte (PDF)</button>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="SEX" data-unit="UD03" data-activity="ut03_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

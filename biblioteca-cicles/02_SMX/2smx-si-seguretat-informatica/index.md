@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "Seguretat Informàtica — 2n Curs SMX"
-permalink: /02_SMX/2smx-si-seguretat-informatica/index.html
+layout: "default"
+course_root: "."
+badge: "2n SMX · Seguretat Informàtica"
+module: "SI"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

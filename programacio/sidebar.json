@@ -1,0 +1,477 @@
+{
+  "title": "☕ Programació en Java — 1r DAW / DAM",
+  "home": {
+    "label": "🏠 Portada del Mòdul",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Prerrequisitos i Configuració",
+      "items": [
+        {
+          "label": "📘 UT00 Completa (Índex i Síntesi)",
+          "href": "./ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Introducció",
+          "href": "./ut00/ut0001.html"
+        },
+        {
+          "label": "0.2 GitHub",
+          "href": "./ut00/ut0002.html"
+        },
+        {
+          "label": "0.3 Git",
+          "href": "./ut00/ut0003.html"
+        },
+        {
+          "label": "0.4 Visual Studio Code",
+          "href": "./ut00/ut0004.html"
+        },
+        {
+          "label": "0.5 GitHub Desktop",
+          "href": "./ut00/ut0005.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT1 — Estructura de programes informàtics",
+      "items": [
+        {
+          "label": "📘 UT01 Completa (Índex i Síntesi)",
+          "href": "./ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.0 RA i Criteris d'avaluació",
+          "href": "./ut01/ut01ras.html"
+        },
+        {
+          "label": "1.1 Pensa com un programador i dissenya algoritmes",
+          "href": "./ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 El llenguatge Java",
+          "href": "./ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 Variables, identificadors i convencions (Clean Code)",
+          "href": "./ut01/ut0103.html"
+        },
+        {
+          "label": "1.4 Tipus de dades primitius",
+          "href": "./ut01/ut0104.html"
+        },
+        {
+          "label": "1.5 Operadors i expressions (incl. Operador Ternario ? :)",
+          "href": "./ut01/ut0105.html"
+        },
+        {
+          "label": "1.6 Conversions de tipus (Casting)",
+          "href": "./ut01/ut0106.html"
+        },
+        {
+          "label": "1.7 Comentaris i documentació",
+          "href": "./ut01/ut0107.html"
+        },
+        {
+          "label": "1.8 Eines útils (Math, Random i Scanner)",
+          "href": "./ut01/ut0108.html"
+        },
+        {
+          "label": "1.9 Classes Embolcall (Wrappers), Character i String",
+          "href": "./ut01/ut01wrappers.html"
+        },
+        {
+          "label": "1.10 Novetats de Java 25",
+          "href": "./ut01/ut0109.html"
+        },
+        {
+          "label": "1.11 Creació i ús de mètodes",
+          "href": "./ut01/ut0110_metodos.html"
+        },
+        {
+          "label": "Exemples guiats UT1",
+          "href": "./ut01/ut01ejemplos.html"
+        },
+        {
+          "label": "Activitats pràctiques UT1",
+          "href": "./ut01/ut01actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT1",
+          "href": "./ut01/ut01retos.html"
+        },
+        {
+          "label": "Traces d'ejecució UT1",
+          "href": "./ut01/ut01trazas.html"
+        },
+        {
+          "label": "Vídeos de reforç UT1 (Píndoles Informàtiques)",
+          "href": "./ut01/ut01pi.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Estructures de control",
+      "items": [
+        {
+          "label": "📘 UT02 Completa (Índex i Síntesi)",
+          "href": "./ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.0 RA i Criteris d'avaluació",
+          "href": "./ut02/ut02ras.html"
+        },
+        {
+          "label": "2.1 Introducció a les estructures de control",
+          "href": "./ut02/ut0201.html"
+        },
+        {
+          "label": "2.2 Sentències i blocs",
+          "href": "./ut02/ut0202.html"
+        },
+        {
+          "label": "2.3 Estructures de selecció (if-else, switch)",
+          "href": "./ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Estructures de repetició (while, do-while, for)",
+          "href": "./ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Sentències de salt (break, continue, return)",
+          "href": "./ut02/ut0205.html"
+        },
+        {
+          "label": "2.6 Validació de dades i gestió bàsica d'errors (Scanner i try-catch)",
+          "href": "./ut02/ut0206.html"
+        },
+        {
+          "label": "Exemples guiats UT2",
+          "href": "./ut02/ut0207.html"
+        },
+        {
+          "label": "Activitats pràctiques UT2",
+          "href": "./ut02/ut02actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT2",
+          "href": "./ut02/ut02retos.html"
+        },
+        {
+          "label": "Traces d'ejecució UT2",
+          "href": "./ut02/ut02trazas.html"
+        },
+        {
+          "label": "Vídeos de reforç UT2 (Píndoles Informàtiques)",
+          "href": "./ut02/ut02pi.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — Tipus avançats de dades",
+      "items": [
+        {
+          "label": "📘 UT03 Completa (Índex i Síntesi)",
+          "href": "./ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.0 RA i Criteris d'avaluació",
+          "href": "./ut03/ut03ras.html"
+        },
+        {
+          "label": "3.1 Introducció a les estructures de dades",
+          "href": "./ut03/ut0306.html"
+        },
+        {
+          "label": "3.2.1 Ús d'arrays unidimensionals",
+          "href": "./ut03/ut0301.html"
+        },
+        {
+          "label": "3.2.2 Recorregut, cerca i ordenació en arrays",
+          "href": "./ut03/ut0303.html"
+        },
+        {
+          "label": "3.2.3 Arrays bidimensionals i multidimensionals (Matrius)",
+          "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "3.2.4 La classe java.util.Arrays",
+          "href": "./ut03/ut0302.html"
+        },
+        {
+          "label": "3.2.5 Col·leccions dinàmiques: ArrayList",
+          "href": "./ut03/ut0307.html"
+        },
+        {
+          "label": "3.3 Diccionarios i Mapes (HashMap)",
+          "href": "./ut03/ut0308.html"
+        },
+        {
+          "label": "3.4 Algoritmes recursivos (Recursivitat)",
+          "href": "./ut03/ut0305.html"
+        },
+        {
+          "label": "3.5 Estructures dinàmiques de dades: List, Set, Queue, Deque i Map (JCF)",
+          "href": "./ut03/ut03colecciones.html"
+        },
+        {
+          "label": "Activitats pràctiques UT3",
+          "href": "./ut03/ut03actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT3",
+          "href": "./ut03/ut03retos.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — Programació Orientada a Objectes (POO)",
+      "items": [
+        {
+          "label": "📘 UT04 Completa (Índex i Síntesi)",
+          "href": "./ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.0 RA i Criteris d'avaluació",
+          "href": "./ut04/ut04ras.html"
+        },
+        {
+          "label": "4.1 Introducció al paradigma orientat a objectes",
+          "href": "./ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Principis fonamentals de la POO",
+          "href": "./ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Objectes i classes",
+          "href": "./ut04/ut0403.html"
+        },
+        {
+          "label": "4.4.1 Estructura i miembros d'una classe",
+          "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.4.2 Atributs i constants",
+          "href": "./ut04/ut0405.html"
+        },
+        {
+          "label": "4.4.3 Mètodes, paràmetres i sobrecàrrega",
+          "href": "./ut04/ut0406.html"
+        },
+        {
+          "label": "4.4.4 Constructors i paraula clau this",
+          "href": "./ut04/ut0407.html"
+        },
+        {
+          "label": "4.4.5 Encapsulació i modificadors de visibilitat",
+          "href": "./ut04/ut0408.html"
+        },
+        {
+          "label": "4.5 Instanciació i cicle de vida dels objectes",
+          "href": "./ut04/ut0409.html"
+        },
+        {
+          "label": "4.6 Empaquetado de classes i llibreries (packages)",
+          "href": "./ut04/ut0410.html"
+        },
+        {
+          "label": "Activitats pràctiques UT4",
+          "href": "./ut04/ut04actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT4",
+          "href": "./ut04/ut04retos.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — Composició, Herència i Polimorfisme",
+      "items": [
+        {
+          "label": "📘 UT05 Completa (Índex i Síntesi)",
+          "href": "./ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.0 RA i Criteris d'avaluació",
+          "href": "./ut05/ut05ras.html"
+        },
+        {
+          "label": "5.1 Relacions entre classes (Associació, Agregació, Herència)",
+          "href": "./ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Composició de classes",
+          "href": "./ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Herència i jerarquías de classes (extends, super)",
+          "href": "./ut05/ut0503.html"
+        },
+        {
+          "label": "5.4 Classes i mètodes abstractes (abstract)",
+          "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Interfícies (interface, implements)",
+          "href": "./ut05/ut0505.html"
+        },
+        {
+          "label": "5.6 Polimorfisme i lligadura dinàmica",
+          "href": "./ut05/ut0506.html"
+        },
+        {
+          "label": "5.7 Gestió avançada d'excepcions i excepcions personalitzades",
+          "href": "./ut05/ut0507.html"
+        },
+        {
+          "label": "Activitats pràctiques UT5",
+          "href": "./ut05/ut05actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT5",
+          "href": "./ut05/ut05retos.html"
+        },
+        {
+          "label": "Simulacre pràctic UT5",
+          "href": "./ut05/ut05acSimulacro.html"
+        },
+        {
+          "label": "Vídeos de reforç UT5 (Píndoles Informàtiques)",
+          "href": "./ut05/ut05pi.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — Lectura i escriptura d'informació",
+      "items": [
+        {
+          "label": "📘 UT06 Completa (Índex i Síntesi)",
+          "href": "./ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.0 RA i Criteris d'avaluació",
+          "href": "./ut06/ut06ras.html"
+        },
+        {
+          "label": "6.1 Streams (Fluxos d'entrada i eixida)",
+          "href": "./ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Lectura i escriptura de fitxers",
+          "href": "./ut06/ut0602.html"
+        },
+        {
+          "label": "6.3 Serialització d'objectes",
+          "href": "./ut06/ut0603.html"
+        },
+        {
+          "label": "6.4 Comunicació per xarxa: Sockets",
+          "href": "./ut06/ut0604.html"
+        },
+        {
+          "label": "6.5 Maneig del sistema de fitxers i carpetes (File / NIO)",
+          "href": "./ut06/ut0605.html"
+        },
+        {
+          "label": "Activitats pràctiques UT6",
+          "href": "./ut06/ut06actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT6",
+          "href": "./ut06/ut06retos.html"
+        },
+        {
+          "label": "Vídeos de reforç UT6 (Píndoles Informàtiques)",
+          "href": "./ut06/ut06pi.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — Accés a bases de dades",
+      "items": [
+        {
+          "label": "📘 UT07 Completa (Índex i Síntesi)",
+          "href": "./ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.0 RA i Criteris d'avaluació",
+          "href": "./ut07/ut07ras.html"
+        },
+        {
+          "label": "7.1 Introducció a la persistència en bases de dades",
+          "href": "./ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 Arquitectura i connectors JDBC",
+          "href": "./ut07/ut0702.html"
+        },
+        {
+          "label": "7.3 Connexió a bases de dades des de Java",
+          "href": "./ut07/ut0703.html"
+        },
+        {
+          "label": "7.4 ResultSet: Navegabilitat i concurrencia",
+          "href": "./ut07/ut0704.html"
+        },
+        {
+          "label": "7.5 Consultes de selecció (SELECT / executeQuery)",
+          "href": "./ut07/ut0705.html"
+        },
+        {
+          "label": "7.6 Modificació de registres (UPDATE)",
+          "href": "./ut07/ut0706.html"
+        },
+        {
+          "label": "7.7 Inserció de registres (INSERT)",
+          "href": "./ut07/ut0707.html"
+        },
+        {
+          "label": "7.8 Esborrat de registres (DELETE)",
+          "href": "./ut07/ut0708.html"
+        },
+        {
+          "label": "7.9 Sentències precompilades (PreparedStatement)",
+          "href": "./ut07/ut0709.html"
+        },
+        {
+          "label": "7.10 Treballar amb SQLite en Java",
+          "href": "./ut07/ut0710.html"
+        },
+        {
+          "label": "7.11 Patró de disseny DAO (Data Access Object)",
+          "href": "./ut07/ut0711.html"
+        },
+        {
+          "label": "7.12 Repàs global d'accés a dades",
+          "href": "./ut07/ut0712.html"
+        },
+        {
+          "label": "Activitats pràctiques UT7",
+          "href": "./ut07/ut07actividades.html"
+        },
+        {
+          "label": "Reptes de programació UT7",
+          "href": "./ut07/ut07retos.html"
+        },
+        {
+          "label": "Vídeos de reforç UT7 (Píndoles Informàtiques)",
+          "href": "./ut07/ut07pi.html"
+        },
+        {
+          "label": "📚 Fonts d'informació i Bibliografia",
+          "href": "./ut07/references.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,184 +1,219 @@
-[
-  {
-    "title": "UT 01: Elaboració de Documentació Tècnica i Ofimàtica",
-    "url": "ut01/index.md",
-    "children": [
-      {
-        "title": "01.01: Processadors de Text Avançats per a Documentació d'Enginyeria",
-        "url": "ut01/ut0101.md"
-      },
-      {
-        "title": "01.02: Fulls de Màquines de Càlcul: Fórmules, Funcions i Models",
-        "url": "ut01/ut0102.md"
-      },
-      {
-        "title": "01.03: Disseny de Presentacions Tècniques Multimèdia i Comunicació",
-        "url": "ut01/ut0103.md"
-      },
-      {
-        "title": "01.04: Gestió de Formularis Digitals i Captura Estructurada de Dades",
-        "url": "ut01/ut0104.md"
-      },
-      {
-        "title": "01.05: Protocols de Transferència Segura de Fitxers: SFTP, FTPS i SCP",
-        "url": "ut01/ut0105.md"
-      }
-    ]
+{
+  "title": "1daw-dam-si-sistemes-informatics",
+  "home": {
+    "label": "🏠 Portada del Mòdul",
+    "href": "index.html"
   },
-  {
-    "title": "UT 02: Arquitectura del Maquinari i Sistemes Informàtics",
-    "url": "ut02/index.md",
-    "children": [
-      {
-        "title": "02.01: Arquitectura de Von Neumann i el Model Modern de Computació",
-        "url": "ut02/ut0201.md"
-      },
-      {
-        "title": "02.02: La Unitat Central de Processament (CPU) i Jerarquia de Memòria",
-        "url": "ut02/ut0202.md"
-      },
-      {
-        "title": "02.03: Placa Base, Chipset, Busos d'Expansió i Fonts d'Alimentació",
-        "url": "ut02/ut0203.md"
-      },
-      {
-        "title": "02.04: Perifèrics d'E/S, Controladors i Interfícies de Connexió",
-        "url": "ut02/ut0204.md"
-      },
-      {
-        "title": "02.05: Seqüència d'Arrencada del Sistema: Del Firmware UEFI/POST al Bootloader",
-        "url": "ut02/ut0205.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 03: Instal·lació i Configuració de Sistemes Operatius i Virtualització",
-    "url": "ut03/index.md",
-    "children": [
-      {
-        "title": "03.01: Fonaments i Funcions del Sistema Operatiu Modern",
-        "url": "ut03/ut0301.md"
-      },
-      {
-        "title": "03.02: Tecnologies de Virtualització: Hipervisors de Tipus 1 i Tipus 2",
-        "url": "ut03/ut0302.md"
-      },
-      {
-        "title": "03.03: Esquemes de Particionament de Disc: MBR clàssic vs GPT modern",
-        "url": "ut03/ut0303.md"
-      },
-      {
-        "title": "03.04: Instal·lació Guiada i Desatesa de Distribucions GNU/Linux i Windows",
-        "url": "ut03/ut0304.md"
-      },
-      {
-        "title": "03.05: Configuració Post-instal·lació, Controladors i Gestors d'Arrencada (GRUB)",
-        "url": "ut03/ut0305.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 04: Gestió de l'Emmagatzematge, Sistemes de Fitxers i Seguretat de Dades",
-    "url": "ut04/index.md",
-    "children": [
-      {
-        "title": "04.01: Arquitectura dels Sistemes de Fitxers: NTFS, ext4, XFS i Btrfs",
-        "url": "ut04/ut0401.md"
-      },
-      {
-        "title": "04.02: Gestió Avançada de Volums Lògics amb LVM a Linux",
-        "url": "ut04/ut0402.md"
-      },
-      {
-        "title": "04.03: Tecnologies de Tolerància a Fallades: Sistemes RAID per Maquinari i Programari",
-        "url": "ut04/ut0403.md"
-      },
-      {
-        "title": "04.04: Còpies de Seguretat (Backups) i Estratègies de Recuperació de Desastres",
-        "url": "ut04/ut0404.md"
-      },
-      {
-        "title": "04.05: Xifratge de Discs, Volums i Dades en Repòs (LUKS i BitLocker)",
-        "url": "ut04/ut0405.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 05: Xarxes Locals, Direccionament IP i Comunicacions",
-    "url": "ut05/index.md",
-    "children": [
-      {
-        "title": "05.01: Models de Referència en Xarxes: Arquitectures OSI i TCP/IP",
-        "url": "ut05/ut0501.md"
-      },
-      {
-        "title": "05.02: Cablejat Estructurat, Mitjans de Transmissió i Topologies Físiques",
-        "url": "ut05/ut0502.md"
-      },
-      {
-        "title": "05.03: Direccionament IPv4, Classes, Màscares i Subnetting (VLSM / CIDR)",
-        "url": "ut05/ut0503.md"
-      },
-      {
-        "title": "05.04: Dispositius d'Interconnexió de Nivell 2 i 3: Commutadors (Switches) i Encaminadors (Routers)",
-        "url": "ut05/ut0504.md"
-      },
-      {
-        "title": "05.05: Xarxes Sense Fils (Wi-Fi 6 / 7), Seguretat WPA3 i Protocols Bàsics d'Accés",
-        "url": "ut05/ut0505.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 06: Sistemes Operatius en Xarxa: Dominis, Usuaris i Recursos Compartits",
-    "url": "ut06/index.md",
-    "children": [
-      {
-        "title": "06.01: Arquitectures de Treball en Xarxa: Models Grup de Treball vs Domini Centralitzat",
-        "url": "ut06/ut0601.md"
-      },
-      {
-        "title": "06.02: Serveis de Directori Actiu: Active Directory (AD DS) i Samba 4",
-        "url": "ut06/ut0602.md"
-      },
-      {
-        "title": "06.03: Gestió Centralitzada d'Usuaris, Grups, Unitats Organitzatives i Perfils Mòbils",
-        "url": "ut06/ut0603.md"
-      },
-      {
-        "title": "06.04: Compartició Segura de Recursos en Xarxa: Protocols SMB/CIFS i NFS",
-        "url": "ut06/ut0604.md"
-      },
-      {
-        "title": "06.05: Directrius de Seguretat de Grup (GPO) i Polítiques Corporatives",
-        "url": "ut06/ut0605.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 07: Administració de Sistemes Operatius mitjançant Comandes i Scripts",
-    "url": "ut07/index.md",
-    "children": [
-      {
-        "title": "07.01: Entorns d'Ordres (CLI): Intèrprets de Comandes Bash i PowerShell",
-        "url": "ut07/ut0701.md"
-      },
-      {
-        "title": "07.02: Gestió Avançada de Fitxers, Directoris i Permisos per Consola",
-        "url": "ut07/ut0702.md"
-      },
-      {
-        "title": "07.03: Control i Monitorització de Processos del Sistema",
-        "url": "ut07/ut0703.md"
-      },
-      {
-        "title": "07.04: Programació d'Scripts en Bash: Sintaxi, Variables i Control de Flux",
-        "url": "ut07/ut0704.md"
-      },
-      {
-        "title": "07.05: Automatització de Tasques Planificades i Gestió de Registres (Logs)",
-        "url": "ut07/ut0705.md"
-      }
-    ]
-  }
-]
+  "units": [
+    {
+      "summary": "UT 01: Elaboració de Documentació Tècnica i Ofimàtica",
+      "items": [
+        {
+          "label": "01.01: Processadors de Text Avançats per a Documentació d'Enginyeria",
+          "href": "./ut01/ut0101.md",
+          "class": ""
+        },
+        {
+          "label": "01.02: Fulls de Màquines de Càlcul: Fórmules, Funcions i Models",
+          "href": "./ut01/ut0102.md",
+          "class": ""
+        },
+        {
+          "label": "01.03: Disseny de Presentacions Tècniques Multimèdia i Comunicació",
+          "href": "./ut01/ut0103.md",
+          "class": ""
+        },
+        {
+          "label": "01.04: Gestió de Formularis Digitals i Captura Estructurada de Dades",
+          "href": "./ut01/ut0104.md",
+          "class": ""
+        },
+        {
+          "label": "01.05: Protocols de Transferència Segura de Fitxers: SFTP, FTPS i SCP",
+          "href": "./ut01/ut0105.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 02: Arquitectura del Maquinari i Sistemes Informàtics",
+      "items": [
+        {
+          "label": "02.01: Arquitectura de Von Neumann i el Model Modern de Computació",
+          "href": "./ut02/ut0201.md",
+          "class": ""
+        },
+        {
+          "label": "02.02: La Unitat Central de Processament (CPU) i Jerarquia de Memòria",
+          "href": "./ut02/ut0202.md",
+          "class": ""
+        },
+        {
+          "label": "02.03: Placa Base, Chipset, Busos d'Expansió i Fonts d'Alimentació",
+          "href": "./ut02/ut0203.md",
+          "class": ""
+        },
+        {
+          "label": "02.04: Perifèrics d'E/S, Controladors i Interfícies de Connexió",
+          "href": "./ut02/ut0204.md",
+          "class": ""
+        },
+        {
+          "label": "02.05: Seqüència d'Arrencada del Sistema: Del Firmware UEFI/POST al Bootloader",
+          "href": "./ut02/ut0205.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 03: Instal·lació i Configuració de Sistemes Operatius i Virtualització",
+      "items": [
+        {
+          "label": "03.01: Fonaments i Funcions del Sistema Operatiu Modern",
+          "href": "./ut03/ut0301.md",
+          "class": ""
+        },
+        {
+          "label": "03.02: Tecnologies de Virtualització: Hipervisors de Tipus 1 i Tipus 2",
+          "href": "./ut03/ut0302.md",
+          "class": ""
+        },
+        {
+          "label": "03.03: Esquemes de Particionament de Disc: MBR clàssic vs GPT modern",
+          "href": "./ut03/ut0303.md",
+          "class": ""
+        },
+        {
+          "label": "03.04: Instal·lació Guiada i Desatesa de Distribucions GNU/Linux i Windows",
+          "href": "./ut03/ut0304.md",
+          "class": ""
+        },
+        {
+          "label": "03.05: Configuració Post-instal·lació, Controladors i Gestors d'Arrencada (GRUB)",
+          "href": "./ut03/ut0305.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 04: Gestió de l'Emmagatzematge, Sistemes de Fitxers i Seguretat de Dades",
+      "items": [
+        {
+          "label": "04.01: Arquitectura dels Sistemes de Fitxers: NTFS, ext4, XFS i Btrfs",
+          "href": "./ut04/ut0401.md",
+          "class": ""
+        },
+        {
+          "label": "04.02: Gestió Avançada de Volums Lògics amb LVM a Linux",
+          "href": "./ut04/ut0402.md",
+          "class": ""
+        },
+        {
+          "label": "04.03: Tecnologies de Tolerància a Fallades: Sistemes RAID per Maquinari i Programari",
+          "href": "./ut04/ut0403.md",
+          "class": ""
+        },
+        {
+          "label": "04.04: Còpies de Seguretat (Backups) i Estratègies de Recuperació de Desastres",
+          "href": "./ut04/ut0404.md",
+          "class": ""
+        },
+        {
+          "label": "04.05: Xifratge de Discs, Volums i Dades en Repòs (LUKS i BitLocker)",
+          "href": "./ut04/ut0405.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 05: Xarxes Locals, Direccionament IP i Comunicacions",
+      "items": [
+        {
+          "label": "05.01: Models de Referència en Xarxes: Arquitectures OSI i TCP/IP",
+          "href": "./ut05/ut0501.md",
+          "class": ""
+        },
+        {
+          "label": "05.02: Cablejat Estructurat, Mitjans de Transmissió i Topologies Físiques",
+          "href": "./ut05/ut0502.md",
+          "class": ""
+        },
+        {
+          "label": "05.03: Direccionament IPv4, Classes, Màscares i Subnetting (VLSM / CIDR)",
+          "href": "./ut05/ut0503.md",
+          "class": ""
+        },
+        {
+          "label": "05.04: Dispositius d'Interconnexió de Nivell 2 i 3: Commutadors (Switches) i Encaminadors (Routers)",
+          "href": "./ut05/ut0504.md",
+          "class": ""
+        },
+        {
+          "label": "05.05: Xarxes Sense Fils (Wi-Fi 6 / 7), Seguretat WPA3 i Protocols Bàsics d'Accés",
+          "href": "./ut05/ut0505.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 06: Sistemes Operatius en Xarxa: Dominis, Usuaris i Recursos Compartits",
+      "items": [
+        {
+          "label": "06.01: Arquitectures de Treball en Xarxa: Models Grup de Treball vs Domini Centralitzat",
+          "href": "./ut06/ut0601.md",
+          "class": ""
+        },
+        {
+          "label": "06.02: Serveis de Directori Actiu: Active Directory (AD DS) i Samba 4",
+          "href": "./ut06/ut0602.md",
+          "class": ""
+        },
+        {
+          "label": "06.03: Gestió Centralitzada d'Usuaris, Grups, Unitats Organitzatives i Perfils Mòbils",
+          "href": "./ut06/ut0603.md",
+          "class": ""
+        },
+        {
+          "label": "06.04: Compartició Segura de Recursos en Xarxa: Protocols SMB/CIFS i NFS",
+          "href": "./ut06/ut0604.md",
+          "class": ""
+        },
+        {
+          "label": "06.05: Directrius de Seguretat de Grup (GPO) i Polítiques Corporatives",
+          "href": "./ut06/ut0605.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 07: Administració de Sistemes Operatius mitjançant Comandes i Scripts",
+      "items": [
+        {
+          "label": "07.01: Entorns d'Ordres (CLI): Intèrprets de Comandes Bash i PowerShell",
+          "href": "./ut07/ut0701.md",
+          "class": ""
+        },
+        {
+          "label": "07.02: Gestió Avançada de Fitxers, Directoris i Permisos per Consola",
+          "href": "./ut07/ut0702.md",
+          "class": ""
+        },
+        {
+          "label": "07.03: Control i Monitorització de Processos del Sistema",
+          "href": "./ut07/ut0703.md",
+          "class": ""
+        },
+        {
+          "label": "07.04: Programació d'Scripts en Bash: Sintaxi, Variables i Control de Flux",
+          "href": "./ut07/ut0704.md",
+          "class": ""
+        },
+        {
+          "label": "07.05: Automatització de Tasques Planificades i Gestió de Registres (Logs)",
+          "href": "./ut07/ut0705.md",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

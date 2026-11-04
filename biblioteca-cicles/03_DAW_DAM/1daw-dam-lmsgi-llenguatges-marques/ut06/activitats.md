@@ -1,0 +1,1053 @@
+---
+layout: default
+title: "Quadern Complet d'Activitats — UD6 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD6"
+prev_url: "act601.html"
+prev_label: "⬅️ ⚡ Activitat 601: DTD"
+next_url: "../ut07/index.html"
+next_label: "Següent Unitat (UD7) ➡️"
+---
+
+# Quadern Pràctic d'Activitats — UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+  </div>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
+  </div>
+</div>
+
+En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+
+## 🗂️ Índex d'Activitats de la Unitat
+
+- **[⚡ Activitat 601: DTD](act601.html)**
+
+---
+
+## Activitat 601: DTD
+
+👉 *[Obrir aquesta activitat en pàgina individual](act601.html)*
+
+# **Exercicis Validació de documents**
+
+## **DTD**
+
+### **Exercici 1 - DTD**
+
+> **📌 Enunciat**
+> 
+
+> A partir del XML sobre recetas, que tenim a continuació, cal crear un DTD que valide si és correcte.
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+    <recetas>
+        <!-- El tiempo está en minutos -->
+        <receta id="r01" nombre="ensalada" preparacion="5">
+            <ingrediente nombre="tomate" unidad="pieza" cantidad="2" />
+            <ingrediente nombre="cebolla" unidad="pieza" cantidad=".25" />
+            <ingrediente nombre="lechuga" unidad="gramo" cantidad="150" />
+            <ingrediente nombre="sal" unidad="gramo" cantidad="2" />
+            <ingrediente nombre="vinagre" unidad="cc" cantidad="3" />
+            <ingrediente nombre="aceite" unidad="cc" cantidad="6" />
+        </receta>
+
+        <receta id="r02" nombre="bocadillo de anchoas" preparacion="4">
+            <ingrediente nombre="pan" unidad="pieza" cantidad="1" />
+            <ingrediente nombre="anchoa" unidad="pieza" cantidad="3" />
+        </receta>
+
+        <!-- Más recetas -->
+    </recetas>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 DTD**
+> 
+
+```html
+<!ELEMENT recetas (receta+)>
+
+<!ELEMENT receta (ingrediente+)>
+<!ATTLIST receta id              ID                #REQUIRED
+                nombre          CDATA             #REQUIRED
+                preparacion     CDATA             #IMPLIED>
+
+<!ELEMENT ingrediente EMPTY>
+<!ATTLIST ingrediente nombre     CDATA             #REQUIRED
+                    unidad     (pieza|gramo|cc)  #REQUIRED
+                    cantidad   NMTOKEN           #REQUIRED>
+```
+
+</details>
+
+### **Exercici 2 - DTD**
+
+> **📌 Enunciat**
+> 
+
+> A partir del XML sobre recetas, que tenim a continuació, cal crear un DTD que valide si és correcte.
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<cadena nombre="Burriquín">
+
+<recetas>
+    <!-- El tiempo está en minutos -->
+    <receta id="r01" nombre="ensalada" preparacion="5">
+        <ingrediente nombre="tomate" unidad="pieza" cantidad="2" />
+        <ingrediente nombre="cebolla" unidad="pieza" cantidad=".25" />
+        <ingrediente nombre="lechuga" unidad="gramo" cantidad="350" />
+        <ingrediente nombre="sal" unidad="gramo" cantidad="2" />
+        <ingrediente nombre="vinagre" unidad="cc" cantidad="3" />
+        <ingrediente nombre="aceite" unidad="cc" cantidad="6" />
+    </receta>
+
+    <receta id="r02" nombre="bocadillo de anchoas" preparacion="4">
+        <ingrediente nombre="pan" unidad="pieza" cantidad="1" />
+        <ingrediente nombre="anchoa" unidad="pieza" cantidad="lata" />
+    </receta>
+
+    <!-- Más recetas -->
+</recetas>
+
+<restaurante id="re01" nombre="El tragón feliz">
+    <domicilio>
+        <direccion>c/ Callo, nº 25. Bajo.</direccion>
+        <municipio>Vallecito frondoso</municipio>
+        <cp>12345</cp>
+    </domicilio>
+    <carta>
+        <!-- Este plato se sirve como ración o como media o como tapa -->
+        <plato ref="r01">
+            <tipo>racion</tipo>
+            <tipo>media</tipo>
+            <tipo>tapa</tipo>
+        </plato>
+        <plato ref="r02">
+            <tipo>media</tipo>
+        </plato>
+        <!-- Más platos -->
+    </carta>
+</restaurante>
+<!-- Más restaurantes de la cadena -->
+</cadena>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 DTD**
+> 
+
+```html
+<!ENTITY % recetas SYSTEM "recetas.dtd">
+%recetas;
+
+<!ELEMENT cadena (recetas, restaurante+)>
+<!ATTLIST cadena nombre       CDATA          #REQUIRED>
+
+<!ELEMENT restaurante (domicilio, carta)>
+<!ATTLIST restaurante id      ID             #REQUIRED
+                    nombre  CDATA          #IMPLIED>
+
+<!ELEMENT domicilio (direccion, municipio, cp)>
+
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT municipio (#PCDATA)>
+<!ELEMENT cp        (#PCDATA)>
+
+<!ELEMENT carta (plato+)>
+
+<!ELEMENT plato EMPTY>
+<!ATTLIST plato ref           IDREF          #REQUIRED
+                tipo          NMTOKENS       #REQUIRED>
+```
+
+</details>
+
+### **Exercici 3 - DTD**
+
+> **📌 Enunciat**
+> 
+
+> 1. Dissenya un DTD que valide:
+
+>   - un element arrel usuaris.
+
+>   - un o més elements usuari.
+
+>   - cada usuari ha de tindre nom i correu.
+
+> 1. Associa el DTD al document XML.
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<usuarios>
+<usuario>
+    <nombre>Ana</nombre>
+    <correo>ana@email.com</correo>
+</usuario>
+<usuario>
+    <nombre>Carlos</nombre>
+    <correo>carlos@email.com</correo>
+</usuario>
+</usuarios>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 DTD**
+> 
+
+```html
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (nombre, correo)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT correo (#PCDATA)>
+```
+
+</details>
+
+### **Exercici 4 - DTD**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear un DTD que:
+
+>   - obligue a l'atribut isbn
+
+>   - valide que llibre continga titulo i autor
+
+> 1. Indicar si l'ordre dels elements és obligatori..
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<biblioteca>
+<libro isbn="1234">
+    <titulo>Java Básico</titulo>
+    <autor>Juan Pérez</autor>
+</libro>
+</biblioteca>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 DTD**
+> 
+
+```html
+<!ELEMENT biblioteca (libro+)>
+<!ELEMENT libro (titulo, autor)>
+<!ATTLIST libro isbn CDATA #REQUIRED>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+```
+
+</details>
+
+### **Exercici 5 - DTD**
+
+> **📌 Enunciat**
+> 
+
+> Crear un DTD i comprovar si el següent XML seria vàlid:
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<curso>
+    <horas>120</horas>
+    <nombre>Lenguajes de Marcas</nombre>
+</curso>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 DTD**
+> 
+
+```html
+<!ELEMENT curso (nombre, horas)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT horas (#PCDATA)>
+```
+
+</details>
+
+## **XSD**
+
+### **Exercici 1 - XSD**
+
+> **📌 Enunciat**
+> 
+
+> A partir del XML sobre recetas, que tenim a continuació, cal crear un XSD que valide si és correcte.
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+    <recetas>
+        <!-- El tiempo está en minutos -->
+        <receta id="r01" nombre="ensalada" preparacion="5">
+            <ingrediente nombre="tomate" unidad="pieza" cantidad="2" />
+            <ingrediente nombre="cebolla" unidad="pieza" cantidad=".25" />
+            <ingrediente nombre="lechuga" unidad="gramo" cantidad="150" />
+            <ingrediente nombre="sal" unidad="gramo" cantidad="2" />
+            <ingrediente nombre="vinagre" unidad="cc" cantidad="3" />
+            <ingrediente nombre="aceite" unidad="cc" cantidad="6" />
+        </receta>
+
+        <receta id="r02" nombre="bocadillo de anchoas" preparacion="4">
+            <ingrediente nombre="pan" unidad="pieza" cantidad="1" />
+            <ingrediente nombre="anchoa" unidad="pieza" cantidad="3" />
+        </receta>
+
+        <!-- Más recetas -->
+    </recetas>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 XSD**
+> 
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="recetas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="receta" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ingrediente" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    <xs:attribute name="unidad" type="xs:string" use="required"/>
+                                    <xs:attribute name="cantidad" type="xs:decimal" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:string" use="required"/>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                        <xs:attribute name="preparacion" type="xs:integer" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+```
+
+</details>
+
+### **Exercici 2 - XSD**
+
+> **📌 Enunciat**
+> 
+
+> A partir del XML sobre un restaurant, que tenim a continuació, cal crear un XSD que valide si és correcte.
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<cadena nombre="Burriquín">
+
+<recetas>
+    <!-- El tiempo está en minutos -->
+    <receta id="r01" nombre="ensalada" preparacion="5">
+        <ingrediente nombre="tomate" unidad="pieza" cantidad="2" />
+        <ingrediente nombre="cebolla" unidad="pieza" cantidad=".25" />
+        <ingrediente nombre="lechuga" unidad="gramo" cantidad="350" />
+        <ingrediente nombre="sal" unidad="gramo" cantidad="2" />
+        <ingrediente nombre="vinagre" unidad="cc" cantidad="3" />
+        <ingrediente nombre="aceite" unidad="cc" cantidad="6" />
+    </receta>
+
+    <receta id="r02" nombre="bocadillo de anchoas" preparacion="4">
+        <ingrediente nombre="pan" unidad="pieza" cantidad="1" />
+        <ingrediente nombre="anchoa" unidad="lata" cantidad="1" />
+    </receta>
+
+    <!-- Más recetas -->
+</recetas>
+
+<restaurante id="re01" nombre="El tragón feliz">
+    <domicilio>
+        <direccion>c/ Callo, nº 25. Bajo.</direccion>
+        <municipio>Vallecito frondoso</municipio>
+        <cp>12345</cp>
+    </domicilio>
+    <carta>
+        <!-- Este plato se sirve como ración o como media o como tapa -->
+        <plato ref="r01">
+            <tipo>racion</tipo>
+            <tipo>media</tipo>
+            <tipo>tapa</tipo>
+        </plato>
+        <plato ref="r02">
+            <tipo>media</tipo>
+        </plato>
+        <!-- Más platos -->
+    </carta>
+</restaurante>
+<!-- Más restaurantes de la cadena -->
+</cadena>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 XSD**
+> 
+
+```html
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Tipos simples -->
+
+    <xs:simpleType name="tipoIdReceta">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="r[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoIdRestaurante">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="re[0-9]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoUnidad">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="pieza"/>
+            <xs:enumeration value="gramo"/>
+            <xs:enumeration value="cc"/>
+            <xs:enumeration value="lata"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCantidad">
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoPreparacion">
+        <xs:restriction base="xs:positiveInteger"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCP">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoServicio">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="racion"/>
+            <xs:enumeration value="media"/>
+            <xs:enumeration value="tapa"/>
+            <xs:enumeration value="racion media tapa"/>
+            <xs:enumeration value="racion media"/>
+            <xs:enumeration value="racion tapa"/>
+            <xs:enumeration value="media tapa"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elemento raíz -->
+
+    <xs:element name="cadena">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="recetas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="receta" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingrediente" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                                <xs:attribute name="unidad" type="tipoUnidad" use="required"/>
+                                                <xs:attribute name="cantidad" type="tipoCantidad" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="tipoIdReceta" use="required"/>
+                                    <xs:attribute name="nombre" type="xs:string" use="required"/>
+                                    <xs:attribute name="preparacion" type="tipoPreparacion" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="restaurante" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="domicilio">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="direccion" type="xs:string"/>
+                                        <xs:element name="municipio" type="xs:string"/>
+                                        <xs:element name="cp" type="tipoCP"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="carta">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="plato" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:attribute name="ref" type="tipoIdReceta" use="required"/>
+                                                <xs:attribute name="tipo" type="tipoServicio" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="tipoIdRestaurante" use="required"/>
+                        <xs:attribute name="nombre" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
+```
+
+</details>
+
+### **Exercici 3 - XSD**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear un XSD que:
+
+>   - obligue a que l'edat siga ≥ 18
+
+>   - defina tipus de dades adequats
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<empleado>
+    <nombre>María</nombre>
+    <edad>30</edad>
+</empleado>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 XSD**
+> 
+
+```html
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="empleado">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="edad">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+            <xs:minInclusive value="18"/>
+            </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
+```
+
+</details>
+
+### **Exercici 4 - XSD**
+
+> **📌 Enunciat**
+> 
+
+> 1. Preu decimal positiu
+
+> 1. Stock enter ≥ 0
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<producto>
+    <nombre>Monitor</nombre>
+    <precio>199.99</precio>
+    <stock>10</stock>
+</producto>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 XSD**
+> 
+
+```html
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="producto">
+    <xs:complexType>
+    <xs:sequence>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="precio" type="xs:decimal"/>
+        <xs:element name="stock">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
+```
+
+</details>
+
+### **Exercici 5 - XSD**
+
+> **📌 Enunciat**
+> 
+
+> 1. Definir tipus complexos
+
+> 1. Permetre un o més empleats
+
+<details markdown="1">
+
+<summary>💡 XML</summary>
+
+```html
+<empresa>
+    <nombre>Tech S.L.</nombre>
+    <empleados>
+        <empleado>Ana</empleado>
+        <empleado>Carlos</empleado>
+    </empleados>
+</empresa>
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 XSD**
+> 
+
+```html
+<xs:element name="empresa">
+<xs:complexType>
+    <xs:sequence>
+    <xs:element name="nombre" type="xs:string"/>
+    <xs:element name="empleados">
+        <xs:complexType>
+        <xs:sequence>
+            <xs:element name="empleado" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    </xs:sequence>
+</xs:complexType>
+</xs:element>
+```
+
+</details>
+
+## **JSON Schema**
+
+### **Exercici 1 - JSON-Schema**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear JSON Schema.
+
+> 1. Edat ≥ 18.
+
+> 1. Tots dos camps obligatoris.
+
+<details markdown="1">
+
+<summary>💡 JSON</summary>
+
+```html
+{
+"nombre": "Ana",
+"edad": 25
+}
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 JSON Schema**
+> 
+
+```html
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"type": "object",
+"properties": {
+    "nombre": { "type": "string" },
+    "edad": { "type": "integer", "minimum": 18 }
+},
+"required": ["nombre", "edad"]
+}
+```
+
+</details>
+
+### **Exercici 2 - JSON-Schema**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear JSON Schema.
+
+> 1. Preu positiu.
+
+> 1. No permetre propietats extra.
+
+<details markdown="1">
+
+<summary>💡 JSON</summary>
+
+```html
+{
+"nombre": "Teclado",
+"precio": 49.9,
+"disponible": true
+}
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 JSON Schema**
+> 
+
+```html
+{
+"type": "object",
+"properties": {
+    "nombre": { "type": "string" },
+    "precio": { "type": "number", "exclusiveMinimum": 0 },
+    "disponible": { "type": "boolean" }
+},
+"required": ["nombre", "precio"],
+"additionalProperties": false
+}
+```
+
+</details>
+
+### **Exercici 3 - JSON-Schema**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear JSON Schema.
+
+> 1. Validar tipus.
+
+> 1. Total > 0.
+
+<details markdown="1">
+
+<summary>💡 JSON</summary>
+
+```html
+{
+"id": 1001,
+"total": 250.5
+}
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 JSON Schema**
+> 
+
+```html
+{
+"type": "object",
+"properties": {
+    "id": { "type": "integer" },
+    "total": { "type": "number", "exclusiveMinimum": 0 }
+},
+"required": ["id", "total"]
+}
+```
+
+</details>
+
+### **Exercici 4 - JSON-Schema**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear JSON Schema.
+
+> 1. Validar format email.
+
+> 1. Password mínim 6 caràcters.
+
+<details markdown="1">
+
+<summary>💡 JSON</summary>
+
+```html
+{
+"email": "usuario@email.com",
+"password": "abc123"
+}
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 JSON Schema**
+> 
+
+```html
+{
+"type": "object",
+"properties": {
+    "email": { "type": "string", "format": "email" },
+    "password": { "type": "string", "minLength": 6 }
+},
+"required": ["email", "password"]
+}
+```
+
+</details>
+
+### **Exercici 5 - JSON-Schema**
+
+> **📌 Enunciat**
+> 
+
+> 1. Crear JSON Schema.
+
+> 1. Si rol = admin → permisos obligatoris
+
+> 1. Si rol ≠ admin → permisos opcionals
+
+<details markdown="1">
+
+<summary>💡 JSON</summary>
+
+```html
+{
+"rol": "admin",
+"email": "admin@email.com",
+"permisos": ["crear", "editar"]
+}
+```
+
+</details>
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+> **📌 JSON Schema**
+> 
+
+```html
+{
+"type": "object",
+"properties": {
+    "rol": { "enum": ["admin", "usuario"] },
+    "email": { "type": "string", "format": "email" },
+    "permisos": {
+    "type": "array",
+    "items": { "type": "string" }
+    }
+},
+"required": ["rol", "email"],
+"if": {
+    "properties": {
+    "rol": { "const": "admin" }
+    }
+},
+"then": {
+    "required": ["permisos"]
+}
+}
+```
+
+</details>
+
+---
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="XML Schema (XSD) usa sintaxi XML i incorpora tipus de dades rics i restriccions (facets).">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En la validació de documents XML, quin avantatge clau ofereix XML Schema (XSD) respecte a les antigues DTD?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) XSD s'escriu en sintaxi XML i permet definir tipus de dades precisos (enters, dates, patrons regex, rangs numèrics).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Les DTD permeten validar fitxers MP4 i XSD no.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) XSD no requereix tancar cap etiqueta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Les DTD s'executen com a consultes SQL.</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-mcq" data-answer="A" data-hint="En DTD: '?' = 0 o 1 vegada; '+' = 1 o més vegades; '*' = 0 o més vegades.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En una declaració DTD <code>&lt;!ELEMENT llibre (titol, autor+, resum?)&gt;</code>, què signifiquen els símbols <code>+</code> i <code>?</code>?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) <code>+</code> significa un o més autors; <code>?</code> significa zero o un resum (opcional).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Tots dos signifiquen exactament tres ocurrències.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Indiquen comentaris ocults.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Són operadors matemàtics de suma i divisió.</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-vf" data-answer="V" data-hint="Tot document vàlid ha d'estar prèviament ben format i superar la validació contra el seu esquema.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Un document XML és 'vàlid' si, a més d'estar 'ben format', compleix totes les regles d'estructura i tipus definides en la seua DTD o XML Schema (XSD).</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
+  </div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
+</div>
+
+<div class="interactive-quiz" data-answer="xsd|.xsd" data-hint="L'extensió és .xsd (XML Schema Definition).">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina és l'extensió habitual dels fitxers d'esquema XML Schema (XML Schema Definition)?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD6**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD06" data-activity="activitats">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>

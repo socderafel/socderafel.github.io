@@ -1,115 +1,142 @@
-# UT 02: Llenguatges de Marques per a la Web: HTML5 i Sindicació de Continguts
+---
+layout: default
+title: "UD2: Utilització de Llenguatges de Marques en Entorns Web — HTML5 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD2"
+prev_url: "../ut01/index.html"
+prev_label: "⬅️ UD1"
+next_url: "ut0200.html"
+next_label: "📋 2.0 Proposta Didàctica: HTML i Sindicació de contingut. ➡️"
+---
 
-<div class="interactive-progress-tracker" data-unit="ut02" data-total-points="175">
-  <div class="progress-bar-container">
-    <div class="progress-bar-fill" style="width: 0%;">0%</div>
+# UD2: Utilització de Llenguatges de Marques en Entorns Web — HTML5
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span>Punts aconseguits: <strong class="points-earned">0</strong> / 175 XP</span>
-    <span>Reptes superats: <strong class="challenges-completed">0</strong> / 7</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-## Descripció del Mòdul i Resultats d'Aprenentatge
-
-Aquesta unitat formativa aborda en profunditat el llenguatge de marques troncal de la World Wide Web: **HTML5** (HyperText Markup Language 5), estandarditzat pel W3C i el WHATWG. S'analitza l'evolució històrica des del primitiu HTML 1.0 fins a la separació canònica de responsabilitats en la web moderna:
-- **Estructura i Semàntica:** HTML5.
-- **Presentació i Disseny Visual:** CSS3.
-- **Comportament i Dinamisme:** JavaScript (ECMAScript).
-
-S'incideix de manera rigorosa en el disseny semàntic per a motors de cerca (SEO tècnic) i accessibilitat web (especificació WAI-ARIA i directrius WCAG 2.2), l'arquitectura de formularis d'alt rendiment amb validació nativa en client, la integració de continguts multimèdia sense connectors externs propietaris i la sindicació de notícies mitjançant dialectes XML com ara **RSS 2.0** i **Atom 1.0**.
-
-### Resultats d'Aprenentatge i Criteris d'Avaluació associats (Reial Decret 453/2010 i RD 686/2010)
-
-- **RA2 (DAW / DAM / ASIX):** Desenvolupa documents web utilitzant llenguatges de marques, analitzant la seua estructura i aplicant mecanismes de sindicació de continguts.
-  - **CA 2.a:** S'han identificat les etiquetes i atributs propis del llenguatge de marques HTML5.
-  - **CA 2.b:** S'han emprat eines d'edició de codi i entorns de desenvolupament web.
-  - **CA 2.c:** S'han creat documents web amb una estructura semàntica òptima, garantint la separació entre contingut i disseny.
-  - **CA 2.d:** S'han inserit elements multimèdia i hipervincles garantint la integritat referencial.
-  - **CA 2.e:** S'han definit formularis de captura de dades especificant mètodes d'enviament, camps d'entrada i regles de validació.
-  - **CA 2.f:** S'han creat i configurat canals de sindicació web (RSS/Atom) per a la distribució d'informació dinàmica.
-  - **CA 2.g:** S'ha comprovat l'accessibilitat i la interoperabilitat dels documents en diferents navegadors i dispositius.
+Benvingut/da a la **Unitat Didàctica 2** del mòdul de **Llenguatges de Marques i Sistemes de Gestió d'Informació**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## Estructura de la Unitat de Treball
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. [UT 02.01: Estructura semàntica i metadades en HTML5 (DOCTYPE, html, head, meta, header, nav, main, article, section, aside, footer)](./ut0201.md)
-2. [UT 02.02: Jerarquia textual, hipervincles, llistes i rutes relatives/absolutes](./ut0202.md)
-3. [UT 02.03: Taules de dades complexes i maquetació semàntica accessible](./ut0203.md)
-4. [UT 02.04: Formularis web moderns i validació nativa de controls d'entrada](./ut0204.md)
-5. [UT 02.05: Multimèdia natiu (àudio, vídeo) i sindicació de continguts (RSS 2.0 i Atom)](./ut0205.md)
+1. **[📋 2.0 Proposta Didàctica: HTML i Sindicació de contingut.](ut0200.html)**
+1. **[2.1.1 Introducció als llenguatges web](ut0211.html)**
+1. **[2.1.2 Versions de HTML](ut0212.html)**
+1. **[2.2.1 Estructura i sintaxi de documents HTML](ut0221.html)**
+1. **[2.2.2 Sintaxi: etiquetes i atributs](ut0222.html)**
+1. **[2.2.3 Tipus d'atributs](ut0223.html)**
+1. **[2.2.4 XHTML](ut0224.html)**
+1. **[2.2.5 Estructura d'un document HTML](ut0225.html)**
+1. **[2.3.1 Elements HTML](ut0231.html)**
+1. **[2.3.2 Seccions](ut0232.html)**
+1. **[2.4.1 Text](ut0241.html)**
+1. **[2.4.2 Llistes](ut0242.html)**
+1. **[2.4.3 Taules](ut0243.html)**
+1. **[2.4.4 Formularis](ut0244.html)**
+1. **[2.4.5 Multimèdia i iframe](ut0245.html)**
+1. **[2.5 Eines per a la creació i edició](ut0250.html)**
+1. **[2.6 Validació de documents HTML](ut0260.html)**
+1. **[2.7.1 Introducció i avantatges de la sindicació de continguts](ut0271.html)**
+1. **[2.7.2 Estàndards RSS, Atom i JSON Feed](ut0272.html)**
+1. **[2.7.3 Publicació i àmbits d'aplicació](ut0273.html)**
+1. **[2.7.4 Estructura d'un document RSS](ut0274.html)**
+1. **[2.7.5 Validació i agregadors](ut0275.html)**
 
 ---
 
-## Reptes Globals de Síntesi de la Unitat (100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut02-sintesi-01">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 1 · +25 XP</span>
-    <h4>Semàntica HTML5 i Separació de Responsabilitats</h4>
+- **[⚡ Activitat 201](act201.html)**
+- **[⚡ Activitat 202](act202.html)**
+- **[⚡ Activitat 203](act203.html)**
+- **[⚡ Activitat 204](act204.html)**
+- **[⚡ Activitat 205](act205.html)**
+- **[⚡ Activitat 206](act206.html)**
+- **[⚡ Activitat 207](act207.html)**
+- **[⚡ Activitat 208](act208.html)**
+- **[⚡ Activitat 209](act209.html)**
+- **[⚡ Activitat 210](act210.html)**
+- **[⚡ Activitat 211](act211.html)**
+- **[🏆 Simulacre d'Examen UD2](simulacre_examen.html)**
+- **[📓 Recull Complet d'Activitats (UD2)](activitats.html)**
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD2: Utilització de Llenguatges de Marques en Entorns Web — HTML5** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="B" data-hint="colspan fusiona columnes horitzontalment i rowspan fusiona files verticalment.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En una taula HTML, quin atribut permet fusionar diverses columnes en una mateixa cel·la horitzontalment?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) rowspan</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) colspan</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) cellpadding</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) border</button>
   </div>
-  <p class="challenge-question">Quina és la raó tècnica fonamental per la qual l'especificació HTML5 va introduir etiquetes semàntiques estructurals com &lt;header&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;article&gt; i &lt;section&gt; en substitució de la proliferació massiva de blocs genèrics &lt;div id="..."&gt;?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Perquè els navegadors antics no podien renderitzar els blocs &lt;div&gt; sense extensions de programari privatives com Flash Player.</button>
-    <button class="btn-check" data-correct="true">B) Perquè doten al document d'un significat inequívoc comprensible per a lectors de pantalla d'accessibilitat (tecnologies assistives) i aranyes de motors de cerca (SEO), creant fites estructurals (landmarks) natives.</button>
-    <button class="btn-check" data-correct="false">C) Perquè les noves etiquetes apliquen automàticament regles de disseny visual amb Flexbox i CSS Grid sense necessitat de fulls d'estil.</button>
-    <button class="btn-check" data-correct="false">D) Perquè redueixen el pes binari dels paquets TCP en la capa de transport en suprimir els atributs class del document.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut02-sintesi-02">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 2 · +25 XP</span>
-    <h4>Metadades d'Àmbit de Visió (Viewport) i Disseny Adaptatiu</h4>
+<div class="interactive-mcq" data-answer="B" data-hint="L'atribut booleà 'required' activa la validació nativa de camp obligatori en el navegador.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin atribut d'un camp <code>&lt;input&gt;</code> d'HTML5 impedeix que el formulari s'envie si l'usuari el deixa buit?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) readonly</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) required</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) placeholder</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) disabled</button>
   </div>
-  <p class="challenge-question">En la capçalera &lt;head&gt; d'un document HTML5 modern, quin és l'objectiu fonamental de declarar l'etiqueta &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Forçar una resolució estàtica de pantalla de 1920x1080 píxels per a tots els dispositius que visiten la pàgina web.</button>
-    <button class="btn-check" data-correct="true">B) Indicar al navegador mòbil que adapte l'amplada de l'àrea d'enquadrament (viewport) a l'amplada física del dispositiu i establisca el nivell de zoom inicial al 100%, evitant que simule un escriptori panoràmic reduït.</button>
-    <button class="btn-check" data-correct="false">C) Activar automàticament la codificació de caràcters UTF-8 i impedir atacs de seguretat XSS en terminals Android i iOS.</button>
-    <button class="btn-check" data-correct="false">D) Permetre que el motor de renderitzat compile codi JavaScript en paral·lel utilitzant Web Workers.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut02-sintesi-03">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 3 · +25 XP</span>
-    <h4>Arquitectura de Formularis: Mètodes HTTP i Codificació MIME</h4>
+<div class="interactive-vf" data-answer="V" data-hint="El contingut visible de la pàgina s'ubica dins de l'element <body>.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> L'etiqueta <code>&lt;head&gt;</code> d'un document HTML conté les metadades (<code>&lt;meta&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code>) que no es renderitzen directament com a contingut visible de la pàgina.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Quan dissenyem un formulari HTML5 per a carregar fitxers binaris des del client (com ara imatges o documents PDF mitjançant &lt;input type="file"&gt;), quina combinació d'atributs en l'etiqueta &lt;form&gt; és tècnicament obligatòria?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) method="GET" i enctype="application/x-www-form-urlencoded".</button>
-    <button class="btn-check" data-correct="false">B) method="POST" i enctype="text/plain".</button>
-    <button class="btn-check" data-correct="true">C) method="POST" i enctype="multipart/form-data".</button>
-    <button class="btn-check" data-correct="false">D) method="PUT" i enctype="application/json".</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" data-challenge-id="ut02-sintesi-04">
-  <div class="challenge-header">
-    <span class="challenge-badge">Repte Global 4 · +25 XP</span>
-    <h4>Sindicació Web: Arquitectura de Feeds RSS i Atom</h4>
+<div class="interactive-quiz" data-answer="a|<a>" data-hint="És l'etiqueta <a> (anchor).">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina etiqueta HTML s'utilitza per a crear un hipervincle o enllaç mitjançant l'atribut <code>href</code>?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quina afirmació descriu amb màxima precisió tècnica el funcionament dels canals de sindicació de continguts web (RSS 2.0 i Atom 1.0)?</p>
-  <div class="challenge-options">
-    <button class="btn-check" data-correct="false">A) Són protocols binaris propietaris que requereixen un túnel VPN dedicat entre el servidor web i el lector de correu electrònic.</button>
-    <button class="btn-check" data-correct="true">B) Són formats basats en XML que publiquen metadades estructurades (titular, enllaç, descripció, data) d'articles o recursos, permeses perquè agregadors de continguts (feed readers) consumisquen actualitzacions periòdiques de forma automatitzada.</button>
-    <button class="btn-check" data-correct="false">C) Són scripts JavaScript que s'executen en el navegador per a injectar anuncis dinàmics en pàgines d'inici.</button>
-    <button class="btn-check" data-correct="false">D) Són fulls d'estil CSS dissenyats específicament per a optimitzar la impressió de documents en paper.</button>
-  </div>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD2: Utilització de Llenguatges de Marques en Entorns Web — HTML5**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-icon">📥</div>
-  <div class="delivery-details">
-    <h4>Lliurament Aules · Unitat 2 LMSGI</h4>
-    <p>En finalitzar les 5 sessions pràctiques d'aquesta unitat, descarrega el resum d'activitats en PDF i adjunta'l a la tasca d'Aules corresponent.</p>
-    <span class="delivery-deadline">Termini: Final del període de la Unitat 2</span>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <button class="btn-aules-download" onclick="window.print()">Descarregar PDF de la Unitat</button>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD02" data-activity="ut02_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

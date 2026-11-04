@@ -1,134 +1,123 @@
 ---
-layout: default
-title: "UD3: Disseny Lògic: Model Relacional i Normalització — Bases de Dades"
+title: "UD3: Disseny Lògic — Model Relacional i Normalització — Bases de Dades"
+layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UD3"
+badge: "1r DAW / DAM / ASIX · Bases de Dades · UT03"
 prev_url: "../ut02/index.html"
-prev_label: "⬅️ UD2 Model E/R"
-next_url: "ut0301.html"
-next_label: "Començar 3.1 ➡️"
+prev_label: "⬅️ UD2"
+next_url: "ut0300.html"
+next_label: "📋 3.0 Proposta Didàctica: Disseny Lògic. Model relacional. Normalització ➡️"
+module: "BBDD"
 ---
 
-# UD3: Disseny Lògic: Model Relacional i Normalització
+# UD3: Disseny Lògic — Model Relacional i Normalització
 
-<div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
-  <div>
-    <span style="font-weight:700; color:var(--primary);">Progrés de la Unitat Didàctica 3</span>
-    <div style="font-size:0.85rem; color:var(--text-muted);" class="tracker-count">0 de 4 reptes superats (0%)</div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div style="width:120px; height:10px; background:var(--border); border-radius:5px; overflow:hidden;">
-    <div class="progress-bar" style="width:0%; height:100%; background:var(--primary); transition:width 0.3s ease;"></div>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-Benvingut/da a la **UD3: Disseny Lògic: Model Relacional i Normalització** del mòdul professional de **Bases de Dades**.
-
-Una vegada dissenyat l'esquema conceptual mitjançant diagrames E/R, cal traduir-lo a una estructura comprensible pels motors de bases de dades relacionals: el **Model Relacional**. A més, és imprescindible validar la qualitat d'aquestes taules mitjançant la **Teoria de la Normalització**, un procediment matemàtic rigorós que garanteix l'absència d'anomalies de modificació, redundàncies perjudicials i pèrdues d'informació.
-
----
-
-## 🎯 Objectius i Resultats d'Aprenentatge (RA6)
-
-Segons el currículum oficial (Reials Decrets 453/2010 i 686/2010):
-- **RA6:** Dissenya bases de dades relacionals identificant els elements que les componen i aplicant tècniques de modelització conceptual i lògica.
-  - Dominar la terminologia formal del model relacional (relació, tupla, atribut, domini, grau, cardinalitat).
-  - Aplicar les regles d'integritat bàsiques (integritat d'entitat i integritat referencial).
-  - Transformar sistemàticament diagrames E/R a esquemes de taules relacionals.
-  - Identificar dependències funcionals entre conjunts d'atributs.
-  - Aplicar el procés de normalització fins a 3a Forma Normal (3FN) i Boyce-Codd (BCNF).
-  - Avaluar quan és convenient aplicar una desnormalització controlada per motius de rendiment.
+Benvingut/da a la **Unitat Didàctica 3** del mòdul de **Bases de Dades**. A continuació trobaràs tots els apartats teòrics, esquemes conceptuals, exemples de codi i el llistat complet d'activitats pràctiques i fitxes de treball traduïts al valencià i amb gamificació interactiva per al seu lliurament en **Aules**.
 
 ---
 
-## 📑 Apartats de la Unitat
+## 📚 Apartats Teòrics i Continguts de la Unitat
 
-1. **[3.1 El Model Relacional: Estructura, Conceptes i Terminologia](ut0301.html)**
-   - Taules, files, columnes, dominis, graus i cardinalitats. Esquemes relacionals.
-2. **[3.2 Regles d'Integritat en el Model Relacional](ut0302.html)**
-   - Integritat d'entitat (clau primària no nul·la), integritat referencial (claus foranes) i regles de domini.
-3. **[3.3 Regles de Transformació del Model E/R al Model Relacional](ut0303.html)**
-   - Transformació d'entitats, relacions 1:1, 1:N, M:N, atributs multivalorats i jerarquies d'herència.
-4. **[3.4 Teoria de la Normalització: Dependències Funcionals](ut0304.html)**
-   - Concepte de dependència funcional, dependències completes, dependències transitives i anomalies d'actualització.
-5. **[3.5 Formes Normals (1FN, 2FN, 3FN i BCNF) i Desnormalització](ut0305.html)**
-   - Criteris estrictes de descomposició sense pèrdua, anàlisi de formes normals i trade-offs de rendiment en lectures.
+1. **[📋 3.0 Proposta Didàctica: Disseny Lògic. Model relacional. Normalització](ut0300.html)**
+1. **[3.1 El model relacional](ut0301.html)**
+1. **[3.2 Transformació al model relacional (I)](ut0302.html)**
+1. **[3.3 Transformació al model relacional (II)](ut0303.html)**
+1. **[3.4 Especialització](ut0304.html)**
+1. **[3.5 Dependències i restriccions](ut0305.html)**
+1. **[3.6 Introducció a la normalització. 1ª Forma normal](ut0306.html)**
+1. **[3.7 ª i 3ª Forma normal](ut0307.html)**
+1. **[3.8 Altres formes normals: FNBC, 4FN i 5FN](ut0308.html)**
 
 ---
 
-## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
+## 🛠️ Activitats Pràctiques i Fitxes de Treball
 
-Demostra la teua capacitat de transformació i normalització lògica resolent aquests 4 reptes de síntesi:
+- **[⚡ Activitat 301](act301.html)**
+- **[⚡ Activitat 302](act302.html)**
+- **[⚡ Activitat 303](act303.html)**
+- **[⚡ Activitat 304: Activitat 01](act304.html)**
+- **[⚡ Activitat 305](act305.html)**
+- **[📓 Recull Complet d'Activitats (UD3)](activitats.html)**
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 1: Transformació d'una Relació M:N</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **UD3: Disseny Lògic — Model Relacional i Normalització** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="A" data-hint="La 1FN exigeix que tots els dominis siguen atòmics (sense atributs multivaluats ni compostos dins d'una columna).">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina condició ha de complir una taula per a trobar-se en Primera Forma Normal (1FN)?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Tots els seus atributs han de contenir valors atòmics (indivisibles), sense grups repetitius ni llistes en una mateixa cel·la.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Ha de tenir exactament 10 columnes.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) No pot tenir clau primària.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Ha d'estar emmagatzemada en MongoDB.</button>
   </div>
-  <p style="margin-bottom:15px;">Com es transforma obligatòriament una relació molts a molts (M:N) entre dues entitats 'ALUMNE' i 'ASSIGNATURA' al passar al model relacional?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Es col·loca la clau primària d'Alumne dins de la taula Assignatura com a clau forana.</button>
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Es crea una nova taula intermèdia que té com a clau primària composta la combinació de les claus primàries de les dues entitats.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) S'elimina una de les dues taules perquè és redundant.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Es concatenen els dos noms en una sola columna de text.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 2: Integritat Referencial</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+<div class="interactive-mcq" data-answer="A" data-hint="En una relació 1:N, la taula del costat 'molts' (N) incorpora com a clau forana la clau primària del costat '1'.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En transformar una relació binària 1:N on el costat N té participació obligatòria (1,1), on es propaga la clau forana?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) La clau primària del costat '1' passa com a clau forana a la taula del costat 'N'.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) La clau del costat 'N' passa al costat '1' creant columnes infinites.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Sempre es creen 4 taules noves.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) No es posa cap clau forana.</button>
   </div>
-  <p style="margin-bottom:15px;">Què garanteix la regla d'integritat referencial en una base de dades relacional?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Que cap taula no puga contindre més d'un milió de registres.</button>
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Que el valor d'una clau forana ha de coincidir obligatòriament amb una clau primària existent a la taula referenciada o ser nul.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Que totes les columnes de text s'emmagatzemen en majúscules.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Que no es puguen fer consultes de tipus SELECT en diumenge.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 3: Tercera Forma Normal (3FN)</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+<div class="interactive-vf" data-answer="V" data-hint="La 2FN elimina les dependències funcionals parcials respecte a una part d'una clau primària composta.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> La Segona Forma Normal (2FN) exigeix que la taula estiga en 1FN i que tots els atributs que no són clau depenguen de forma completa (total) de tota la clau primària composta.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p style="margin-bottom:15px;">Una taula està en Segona Forma Normal (2FN). Què exigeix la Tercera Forma Normal (3FN) per a considerar-se complida?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Que cap atribut no primari tinga una dependència funcional transitiva respecte a la clau primària.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) Que la taula continga exactament tres claus foranes.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Que tots els atributs siguen de tipus numèric enter.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Que no existisca cap fila repetida al disc dur físic.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:20px; margin:20px 0;">
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-    <span style="font-weight:700; color:var(--primary); font-size:1.05rem;">🎯 Repte Global 4: Desnormalització Controlada</span>
-    <span style="background:var(--primary); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.8rem; font-weight:700;">+25 punts</span>
+<div class="interactive-quiz" data-answer="tupla|tuples" data-hint="En el model relacional formal, les files s'anomenen tuples.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Com s'anomena cada fila o registre d'una relació (taula) en la terminologia formal del model relacional?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p style="margin-bottom:15px;">En quin context professional està plenament justificat aplicar una desnormalització controlada d'una base de dades?</p>
-  <div class="challenge-options" style="display:flex; flex-direction:column; gap:8px;">
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">A) Quan l'equip de programació no vol aprendre a escriure claus foranes.</button>
-    <button class="btn-check" data-correct="true" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">B) En magatzems de dades analítics (Data Warehouses / OLAP) per a optimitzar el temps de resposta en lectures massives i reduir joins costosos.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">C) Quan el disc dur és massa gran i cal omplir-lo de dades redundants.</button>
-    <button class="btn-check" data-correct="false" style="text-align:left; padding:10px 14px; border:1px solid var(--border); border-radius:6px; background:var(--bg-main); cursor:pointer;">D) Per a evitar haver de pagar la quota mensual d'electricitat del servidor.</button>
-  </div>
-  <div class="feedback-msg" style="margin-top:12px; font-weight:600; display:none;"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="aules-delivery-card" style="background:var(--bg-card); border:2px dashed var(--primary); border-radius:10px; padding:20px; margin-top:35px;">
-  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
-    <div>
-      <h3 style="margin:0 0 5px 0; color:var(--primary); font-size:1.15rem;">📋 Lliurament d'Activitats a Aules</h3>
-      <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">
-        En acabar de resoldre els reptes interactius d'aquest apartat, descarrega el justificant en PDF i puja'l a la tasca corresponent d'Aules.
-      </p>
-    </div>
-    <button class="btn-aules-download" onclick="window.print()" style="background:var(--primary); color:#fff; border:none; padding:10px 20px; border-radius:6px; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:8px;">
-      📥 Descarregar Justificant PDF
-    </button>
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UD3: Disseny Lògic — Model Relacional i Normalització**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD03" data-activity="ut03_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

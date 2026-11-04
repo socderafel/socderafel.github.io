@@ -1,7 +1,9 @@
 ---
-layout: default
 title: "UT 03: Administració d'Usuaris, Grups i Directives GPO — SOX"
-permalink: /02_SMX/2smx-sox-sistemes-operatius-xarxa/ut03/index.html
+layout: "default"
+course_root: ".."
+badge: "2n SMX · Sistemes Operatius en Xarxa · UT03"
+module: "SOX"
 ---
 
 <div class="interactive-progress-tracker" style="background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:12px 18px; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">

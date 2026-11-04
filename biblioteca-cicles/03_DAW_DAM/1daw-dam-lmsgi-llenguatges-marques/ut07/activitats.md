@@ -1,0 +1,363 @@
+---
+layout: default
+title: "Quadern Complet d'Activitats — UD7 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD7"
+prev_url: "act701.html"
+prev_label: "⬅️ ⚡ Activitat 701: Activitat 1 - Anàlisi"
+next_url: "../ut08/index.html"
+next_label: "Següent Unitat (UD8) ➡️"
+---
+
+# Quadern Pràctic d'Activitats — UD7: Conversió i Adaptació de Documents — XPath, JSONPath, XSLT i RSS/Atom
+
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+  </div>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
+  </div>
+</div>
+
+En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+
+## 🗂️ Índex d'Activitats de la Unitat
+
+- **[⚡ Activitat 701: Activitat 1 - Anàlisi de casos d'ús](act701.html)**
+
+---
+
+## Activitat 701: Activitat 1 - Anàlisi de casos d'ús
+
+👉 *[Obrir aquesta activitat en pàgina individual](act701.html)*
+
+# **Exercicis Conversió de documents**
+
+## **Activitat 1 - Anàlisi de casos d'ús**
+
+> **📌 Enunciat**
+> 
+
+> 1. Llegix l'apartat 7.1 Introducció a la conversió de documents.
+
+> 1. Identifica en cada cas d'ús (integració B2B, consumo de APIs REST, presentació web, publicació multicanal) el **format d'origen**, el **format de destí** i la **tecnologia de conversió** que usarías.    3. Escriu dos exemples reals més (del teu entorn o de notícies d'actualitat) en els que siga necessària una conversió de documents.
+
+<details markdown="1">
+
+<summary>💡 Solució orientativa</summary>
+
+- **B2B:** origen XML (catàleg del proveïdor) → destí JSON/CSV (programari del taller) → script o eina d'integració.
+
+- **APIs REST:** origen JSON (resposta de la API) → destí JSON reducido → jq o script.
+
+- **Presentació web:** origen XML (factura) → destí HTML → XSLT.
+
+- **Publicació multicanal:** origen XML neutro → destinos HTML, JSON i text → XSLT + scripts.
+
+</details>
+
+## **Activitat 2 - Primera conversió amb XSLT i jq**
+
+> **📌 Enunciat**
+> 
+
+> 1. Instal·l'el processador `xsltproc` (o Saxon) i l'eina `jq` en el teu equip.
+
+> 1. Crea l'arxiu `catalogo.xml` amb dos productes.
+
+> 1. Crea una full d'estils `catalogo.xsl` que genere un HTML amb una llista.
+
+> 1. Executa la conversió i obri el resultat en el navegador.
+
+> 1. Amb jq, mostra els noms dels productes del JSON de l'apartat 7.2 i guarda l'eixida en un arxiu.
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+```html
+xsltproc catalogo.xsl catalogo.xml > catalogo.html
+jq '.empleados[].nombre' empleados.json > nombres.txt
+```
+
+</details>
+
+## **Activitat 3 - Comparativa de tecnologies**
+
+> **📌 Enunciat**
+> 
+
+> Realitza una comparativa razonada entre **XSLT** i **jq** respondent a les següents qüestions:
+
+> 1. Què format d'origen processa cada una?
+
+> 1. Quin és més adequat per a transformar un XML en HTML?
+
+> 1. Quin és més adequat per a processar la resposta d'una API REST?
+
+> 1. En què situacions usarías un script de Python o Node.js en lloc de tots dos?
+
+> Justifica cada resposta amb un argument.
+
+<details markdown="1">
+
+<summary>💡 Solució orientativa</summary>
+
+- XSLT processa XML; jq processa JSON.
+
+- XSLT és l'adequat per a XML → HTML (és el seu cas clàssic).
+
+- jq és l'adequat per a les respostes JSON d'una API REST.
+
+- Un script és útil quan la conversió requereix lògica de negoci, múltiples fonts o passos que no són expresables de forma declarativa.
+
+</details>
+
+## **Activitat 4 - Gymkhana XPath i JSONPath**
+
+> **📌 Enunciat**
+> 
+
+> Donat el catàleg de l'apartat 7.3, escriu les expressions que permitan:
+
+> 1. Seleccionar tots els productes amb XPath.
+
+> 1. Seleccionar el preu del segon producte amb XPath.
+
+> 1. Seleccionar els productes de la categoria `perifericos` amb XPath.
+
+> 1. Seleccionar tots els noms dels productes amb JSONPath.
+
+> 1. Seleccionar els productes amb preu superior a 15 amb JSONPath.
+
+> 1. Seleccionar el producte amb `id` igual a `p2` amb JSONPath.
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+```html
+1. /catalogo/producto
+2. /catalogo/producto[2]/precio
+3. /catalogo/producto[@categoria='perifericos']
+4. $.catalogo.producto[*].nombre
+5. $.catalogo.producto[?(@.precio > 15)]
+6. $.catalogo.producto[?(@.id == 'p2')]
+```
+
+</details>
+
+## **Activitat 5 - Especificació amb condicionals i iteracions**
+
+> **📌 Enunciat**
+> 
+
+> A partir del catàleg de productes, crea una especificació XSLT que genere un document HTML amb les següents condicions:
+
+> 1. Una taula amb una fila per producte (iteració amb `for-each`).
+
+> 1. El preu es mostra en negreta si és superior a 100 € (`choose`/`when`).
+
+> 1. Els productes de la categoria `monitores` porten la cel·la de categoria amb un color de fons distint (`if`).
+
+> Crea el XML de prova amb almenys tres productes que cubran tots els casos.
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+```html
+<xsl:for-each select="catalogo/producto">
+    <tr>
+        <td><xsl:value-of select="@id"/></td>
+        <td><xsl:value-of select="nombre"/></td>
+        <td>
+            <xsl:if test="@categoria = 'monitores'">
+                <xsl:attribute name="style">background-color: #ffe0b2;</xsl:attribute>
+            </xsl:if>
+            <xsl:value-of select="@categoria"/>
+        </td>
+        <td>
+            <xsl:choose>
+                <xsl:when test="precio &gt; 100">
+                    <b><xsl:value-of select="precio"/> €</b>
+                </xsl:when>
+                <xsl:otherwise><xsl:value-of select="precio"/> €</xsl:otherwise>
+            </xsl:choose>
+        </td>
+    </tr>
+</xsl:for-each>
+```
+
+</details>
+
+## **Activitat 6 - XML masivo a HTML**
+
+> **📌 Enunciat**
+> 
+
+> 1. Genera un arxiu `factura.xml` amb almenys **deu línies** de factura (cada una amb concepte, quantitat i preu).
+
+> 1. Crea la full XSLT que genere una pàgina HTML amb:
+
+>   - la capçalera de la factura (número, data, client),
+
+>   - una taula amb les línies,
+
+>   - el total de la factura calculat (pots usar `sum` o un script extern).
+
+> 1. Executa la conversió amb `xsltproc` i valida que el HTML es visualitza correctament.
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+```html
+xsltproc factura.xsl factura.xml > factura.html
+open factura.html
+```
+
+Amb XSLT 1.0 el total pot calcular-se mitjançant la funció `sum()` sobre una variable:
+
+```html
+<xsl:variable name="total" select="sum(factura/linea/precio * factura/linea/cantidad)"/>
+```
+
+</details>
+
+## **Activitat 7 - JSON a CSV**
+
+> **📌 Enunciat**
+> 
+
+> Donat l'arxiu `ventas.json` amb almenys cinc vendes (producte, unitats, preu):
+
+> 1. Escriu un filtre jq que genere un CSV amb les columnes `producto`, `unidades`, `precio` i `total`.
+
+> 1. Afegeix un segon filtre que només incloga les vendes del qual total siga major que 50 €.
+
+> 1. Guarda el resultat en `ventas_filtradas.csv` i comprova el contingut.
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+```html
+jq -r '
+  ["producto", "unidades", "precio", "total"],
+  (.ventas[] | select((.unidades * .precio) > 50)
+             | [.producto, .unidades, .precio, (.unidades * .precio)])
+  | @csv
+' ventas.json > ventas_filtradas.csv
+```
+
+</details>
+
+## **Activitat 8 - Pràctica final: múltiples conversions**
+
+> **📌 Enunciat**
+> 
+
+> Partint d'un **mateix document d'origen** (`catalogo.xml` amb almenys cinc productes), dissenya i executa **tres conversions distintes**:
+
+> 1. **XML → HTML:** pàgina web amb la taula de productes (presentació).
+
+> 1. **XML → JSON:** document JSON equivalent per a consumir des d'una App (interoperabilitat).
+
+> 1. **XML → CSV:** fitxer plànol amb els camps principals per a importar en una full de càlcul (exportació plana).
+
+> Documenta en un xicotet informe cada especificació creada, el comanda utilitzat i l'eixida obtenida.
+
+<details markdown="1">
+
+<summary>💡 Solució</summary>
+
+```html
+# 1. XML → HTML
+xsltproc catalogo_html.xsl catalogo.xml > catalogo.html
+
+# 2. XML → JSON
+xsltproc catalogo_json.xsl catalogo.xml > catalogo.json
+
+# 3. XML → CSV (mediante XSLT de salida de texto o con Python)
+python3 convertir_csv.py catalogo.xml catalogo.csv
+```
+
+</details>
+
+---
+
+
+---
+
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+
+Comprova el teu domini sobre **Quadern Complet d'Activitats — UD7** superant aquests 4 reptes gamificats (+25 punts cadascun):
+
+<div class="interactive-mcq" data-answer="B" data-hint="En XPath, el símbol '@' fa referència a un atribut i els claudàtors '[...]' defineixen un filtre o predicat.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En una expressió XPath com <code>/biblioteca/llibre[@categoria='web']/titol</code>, què selecciona el predicat <code>[@categoria='web']</code>?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Selecciona un element fill anomenat categoria.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Filtra únicament els elements <code>&lt;llibre&gt;</code> que tenen un atribut <code>categoria</code> amb el valor <code>'web'</code>.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Esborra tots els llibres de la biblioteca.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Selecciona el peu de pàgina del document.</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-mcq" data-answer="A" data-hint="<xsl:for-each> recorre tots els nodes que coincideixen amb l'expressió XPath de l'atribut select.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En un full d'estils XSLT, quina instrucció s'utilitza per a iterar sobre un conjunt de nodes XML seleccionats per una expressió XPath?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) &lt;xsl:for-each select='...'&gt;</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) &lt;xsl:variable&gt;</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) &lt;xsl:output&gt;</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) &lt;xsl:import&gt;</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-vf" data-answer="V" data-hint="XPath s'aplica sobre arbres XML i JSONPath aplica la mateixa filosofia sobre objectes i arrays JSON.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> XPath i JSONPath permeten navegar i extreure informació d'estructures jeràrquiques XML i JSON respectivament mitjançant expressions de ruta.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
+  </div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
+</div>
+
+<div class="interactive-quiz" data-answer="xslt|xsl" data-hint="Són les sigles XSLT.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quina tecnologia de l'ecosistema XML (Extensible Stylesheet Language Transformations) permet transformar un document XML en un document HTML, text o un altre XML?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
+  </div>
+  <div class="quiz-feedback"></div>
+</div>
+
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD7**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
+
+<div class="aules-delivery-card">
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
+  </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+  </div>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD07" data-activity="activitats">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
+</div>

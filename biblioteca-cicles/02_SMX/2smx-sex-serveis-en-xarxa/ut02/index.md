@@ -1,135 +1,114 @@
 ---
-layout: default
-title: "UT 02: Resolució de Noms de Domini (DNS)"
-parent: "2n SMX · Serveis en Xarxa"
-has_children: true
-nav_order: 2
+title: "UT2 — Serveis de Configuració Dinàmica: Protocol DHCP (RA1)"
+unit: "2"
+module: "SEX"
+layout: "default"
+course_root: ".."
+badge: "2n SMX · Serveis en Xarxa · UT02"
 ---
 
-# 🌐 Unitat Temàtica 02: Resolució de Noms de Domini (DNS)
-
-<div class="interactive-progress-tracker" data-module="SEX" data-unit="2" data-topic="0">
-  <div class="progress-bar-container">
-    <div class="progress-fill"></div>
+<div class="interactive-progress-tracker">
+  <div class="tracker-header">
+    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
   </div>
-  <div class="progress-stats">
-    <span class="progress-text">Progrés global de la unitat: 0%</span>
-    <span class="points-badge">0 / 475 punts</span>
+  <div class="tracker-bar">
+    <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-Benvingut/da a la **Unitat Temàtica 02** de **Serveis en Xarxa (SEX)**. En aquesta unitat aprofundirem en el funcionament, arquitectura, desplegament i manteniment del servei de resolució de noms de domini (**DNS**), implementant zones directes i inverses amb el programari lliure **Bind9** a Linux i analitzant la seua integració a Windows Server 2022.
+# 📘 UT2 — Serveis de Configuració Dinàmica: Protocol DHCP (RA1)
+
+> **📌 Resultat d'Aprenentatge i Objectius:** RA1. Instal·la serveis de configuració dinàmica (DHCP), descrivint les seues característiques, procés DORA, àmbits, reserves i desplegament en Windows Server i Ubuntu Server amb KVM/libvirt.
+
+## 🗂️ Índex d'Apartats i Tasques Avaluables de la Unitat
+
+| Apartat | Títol de la Secció / Tasca Pràctica | Accés Directe |
+| :--- | :--- | :--- |
+| **2.1** | **2.1 - Introducció** | [Obrir apartat ➡️](./ut0201.html) |
+| **2.2** | **2.2 - DHCP (Dynamic Host Configuration Protocol)** | [Obrir apartat ➡️](./ut0202.html) |
+| **2.3** | **2.3 - Configuració de DHCP** | [Obrir apartat ➡️](./ut0203.html) |
+| **2.4** | **2.4 - Tasca RA1-CEab - Funcionament de DHCP** | [Obrir apartat ➡️](./ut0204.html) |
+| **2.5** | **2.5 - Tasca RA1-CEcd-1 - Instal·lació i configuració d'un DHCP amb Windows Server en AWS** | [Obrir apartat ➡️](./ut0205.html) |
+| **2.6** | **2.6 - Tasca RA1-CEcd-2 - Instal·lació i configuració d'un DHCP amb Ubuntu Server en AWS** | [Obrir apartat ➡️](./ut0206.html) |
+| **2.7** | **2.7 Tasca RA1-CEfgh-2 - Creació de VM amb Virtual Machine Manager (libvirt)** | [Obrir apartat ➡️](./ut0207.html) |
 
 ---
 
-## 🎯 Resultats d'Aprenentatge i Criteris d'Avaluació (RA2)
+## 🎯 Resum d'Aprenentatge i Metodologia
 
-D'acord amb el currículum oficial (Reial Decret 1691/2007 i Decret 81/2010 CV), aquesta unitat desenvolupa el **Resultat d'Aprenentatge 2 (RA2)**: *Instal·la serveis de resolució de noms (DNS), descrivint l'estructura jeràrquica de l'espai de noms i verificant el funcionament de les consultes directes i inverses*:
+Completa cadascun dels apartats teòrics i les **Tasques Pràctiques (RA-CE)** d'aquesta unitat. Recorda que en finalitzar cada pàgina pots resoldre els **4 reptes interactius (+100 XP)** i descarregar el **Comprovant de Lliurament PDF** per a Aules.
 
-- **a)** S'ha descrit l'arbre jeràrquic d'Internet (Root, TLD, dominis de segon nivell, FQDN).
-- **b)** S'ha distingit entre consultes recursives i iteratives i analitzat l'ús dels ports UDP/TCP 53.
-- **c)** S'ha instal·lat i configurat el servidor Bind9 creant zones directes amb registres SOA i NS.
-- **d)** S'han definit registres A, AAAA, àlies CNAME, registres de correu MX amb prioritat i registres TXT (SPF).
-- **e)** S'han creat zones inverses utilitzant el domini especial `.in-addr.arpa` i registres de punter PTR.
-- **f)** S'ha configurat un servidor DNS secundari (esclau) i autoritzat transferències de zona AXFR.
-- **g)** S'han aplicat eines avançades de diagnosi (`dig`, `nslookup`, `host`) i buidat de memòria cau local.
+
 
 ---
 
-## 🗺️ Mapa de Continguts de la Unitat
+## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-| Subtema | Títol | Descripció i Objectius Clau | Punts XP |
-| :---: | :--- | :--- | :---: |
-| **2.1** | [L'Espai de Noms Jeràrquic d'Internet i el Protocol DNS](ut0201.md) | Arbre de noms, TLDs gTLD/ccTLD, tipus de servidors (Mestre, Esclau, Memòria cau), consultes recursives vs iteratives i ports UDP/TCP 53. | **75 XP** |
-| **2.2** | [Desplegament de Bind9 i Zones Directes a Linux](ut0202.md) | Fitxers de Bind9 (`named.conf.*`), reenviadors forwarders, registre SOA (Serial, Refresh, TTL), importància del punt final i `named-checkzone`. | **75 XP** |
-| **2.3** | [Tipus de Registres DNS Fonamentals](ut0203.md) | Registres A/AAAA, gestió d'àlies CNAME, prioritat de servidors de correu MX i cadenes de seguretat antispam TXT (SPF). | **75 XP** |
-| **2.4** | [Zones de Resolució Inversa i Servidors Secundaris](ut0204.md) | Domini invers `.in-addr.arpa`, registres PTR, servidors esclaus (`type slave`), notificacions DNS NOTIFY i transferències AXFR. | **75 XP** |
-| **2.5** | [DNS a Windows Server 2022 i Diagnosi](ut0205.md) | Zones integrades a Active Directory, resolució multimestre, bateria de diagnosi amb `dig`, `nslookup`, `host` i `ipconfig /flushdns`. | **75 XP** |
+Comprova el teu domini sobre **UT2 — Serveis de Configuració Dinàmica: Protocol DHCP (RA1)** superant aquests 4 reptes gamificats (+25 punts cadascun):
 
----
-
-## 🏆 Reptes Globals de Síntesi de la Unitat (+100 XP)
-
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 1 · Jerarquia DNS</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-mcq" data-answer="D" data-hint="Revisa els conceptes teòrics i pràctics d'aquesta secció.">
+  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En Ubuntu Server amb KVM/libvirt, quin dispositiu del sistema hem de comprovar que existeix per a verificar que la virtualització imbricada (Nested Virtualization) està activa?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) /etc/fstab</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) /var/log/syslog</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) /dev/kvm</button>
   </div>
-  <p class="challenge-question">A quina categoria de dominis de primer nivell pertanyen les extensions territorials d'estat com .es, .fr o .de?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s1" value="0"> gTLD (Genèrics)</label>
-    <label><input type="radio" name="s1" value="1" data-correct="true"> ccTLD (Country Code Top Level Domain)</label>
-    <label><input type="radio" name="s2" value="2"> FQDN arrel</label>
-    <label><input type="radio" name="s3" value="3"> TLD d'infraestructura</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 2 · Mestre i Esclau</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-mcq" data-answer="C" data-hint="Comprova l'apartat corresponent de la unitat.">
+  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Com s'anomena el període de temps durant el qual un servidor DHCP cedeix l'ús d'una adreça IP a un client abans que haja de renovar-la?</div>
+  <div class="mcq-options">
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Temps de vida útil del paquet (TTL ICMP).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Cap de les anteriors és correcta.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) Concessió o lloguer (Lease time).</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) Zona d'exclusió permanent.</button>
   </div>
-  <p class="challenge-question">Com s'anomena el procés mitjançant el qual un servidor DNS esclau descarrega una còpia completa de la base de dades d'una zona des del servidor mestre?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s2" value="0"> Descàrrega HTTP GET</label>
-    <label><input type="radio" name="s2" value="1" data-correct="true"> Transferència de zona (Zone Transfer - AXFR)</label>
-    <label><input type="radio" name="s2" value="2"> Sincronització DHCP DORA</label>
-    <label><input type="radio" name="s2" value="3"> Túnel SSH</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 3 · Registres</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-vf" data-answer="V" data-hint="Verifica l'afirmació amb els apunts de la unitat.">
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> El missatge inicial DHCPDISCOVER s'envia des del client amb adreça IP d'origen 0.0.0.0 i adreça IP de destinació de broadcast 255.255.255.255.</div>
+  <div class="vf-buttons">
+    <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
+    <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
   </div>
-  <p class="challenge-question">Si volem que l'adreça 'ftp.iesrafael.local' apunte automàticament a la mateixa màquina que 'server.iesrafael.local' sense haver de reescriure l'adreça IP, quin registre hem de crear?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s3" value="0"> Un registre MX</label>
-    <label><input type="radio" name="s3" value="1" data-correct="true"> Un registre CNAME (Canonical Name)</label>
-    <label><input type="radio" name="s3" value="2"> Un registre PTR</label>
-    <label><input type="radio" name="s3" value="3"> Un registre SOA</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback" style="width: 100%;"></div>
 </div>
 
-<div class="interactive-challenge-card" data-points="25">
-  <div class="challenge-header">
-    <span class="challenge-badge">Síntesi 4 · Resolució Inversa</span>
-    <span class="points-val">+25 XP</span>
+<div class="interactive-quiz" data-answer="dora" data-hint="Discover, Offer, Request, Acknowledge.">
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quin és l'acrònim de 4 lletres que resumeix les quatre fases d'assignació d'adreça IP en DHCP?</div>
+  <div class="quiz-controls">
+    <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
+    <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
-  <p class="challenge-question">Quin tipus de registre DNS és l'únic que s'utilitza dins d'una zona inversa per traduir una adreça IP al seu nom d'amfitrió FQDN?</p>
-  <div class="challenge-options">
-    <label><input type="radio" name="s4" value="0"> Registre A</label>
-    <label><input type="radio" name="s4" value="1" data-correct="true"> Registre PTR (Pointer)</label>
-    <label><input type="radio" name="s4" value="2"> Registre AAAA</label>
-    <label><input type="radio" name="s4" value="3"> Registre SRV</label>
-  </div>
-  <button class="btn-check">Comprova</button>
-  <div class="feedback-msg"></div>
+  <div class="quiz-feedback"></div>
 </div>
 
----
+### 📋 Llista de Comprovació i Rúbrica d'Assoliment
+
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UT2 — Serveis de Configuració Dinàmica: Protocol DHCP (RA1)**):
+
+- [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
+- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
-  <div class="delivery-header">
-    <span class="delivery-icon">📬</span>
-    <div>
-      <h3 class="delivery-title">Projecte de Síntesi Aules: Desplegament de Servidor DNS Redundant (Mestre/Esclau)</h3>
-      <p class="delivery-subtitle">Memòria tècnica de disseny de zones directes, inverses i replicació amb Bind9.</p>
-    </div>
+  <h3>📤 Comprovant de Lliurament per a Aules</h3>
+  <p>Quan hages completat els reptes interactius i la llista d'autoavaluació d'aquesta pàgina, introdueix el teu nom i descarrega el teu certificat oficial en PDF per a adjuntar-lo a la tasca d'<strong>Aules</strong>.</p>
+  <div class="aules-student-field">
+    <label for="aules-student-name">👤 Nom i Cognoms de l'Alumne/a:</label>
+    <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
-  <div class="delivery-instructions">
-    <p>Presenta un projecte tècnic complet on desplegues una arquitectura DNS redundant amb Bind9: servidor mestre amb zona directa i inversa per a la teua xarxa local, configuració del servidor esclau amb recepció de notificacions NOTIFY i transferències AXFR, i captures de comprovació de resolució amb la comanda <code>dig</code>.</p>
-    <div class="delivery-meta">
-      <span class="badge-format">Format: PDF institucional complet</span>
-      <span class="badge-deadline">Pes: Projecte Pràctic de la UD02</span>
-    </div>
+  <div class="aules-score-badge">
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
   </div>
-  <button class="btn-aules-download" data-module="SEX" data-unit="2" data-topic="0">📥 Descarrega Especificació del Projecte (PDF)</button>
+  <div class="aules-actions">
+    <button type="button" class="btn-aules-dl" data-module="SEX" data-unit="UD02" data-activity="ut02_index">📥 Descarregar Comprovant PDF</button>
+    <button type="button" class="btn-aules-copy">📋 Copiar Resum al Porta-retalls</button>
+  </div>
+  <div class="aules-toast"></div>
 </div>

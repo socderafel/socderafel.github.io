@@ -1,158 +1,189 @@
-[
-  {
-    "title": "UT 01: Fonaments del Cloud Computing i Economia del Núvol",
-    "url": "ut01/index.md",
-    "children": [
-      {
-        "title": "01.01: Introducció al Model de Cloud Computing: Característiques Essencials (NIST)",
-        "url": "ut01/ut0101.md"
-      },
-      {
-        "title": "01.02: Models de Servei al Núvol: IaaS, PaaS i SaaS",
-        "url": "ut01/ut0102.md"
-      },
-      {
-        "title": "01.03: Models de Desplegament: Públic, Privat, Híbrid i Multicloud",
-        "url": "ut01/ut0103.md"
-      },
-      {
-        "title": "01.04: El Model de Responsabilitat Compartida d'AWS",
-        "url": "ut01/ut0104.md"
-      },
-      {
-        "title": "01.05: Economia del Núvol: CapEx vs OpEx, TCO i AWS Pricing Calculator",
-        "url": "ut01/ut0105.md"
-      }
-    ]
+{
+  "title": "2daw-aws-cloud",
+  "home": {
+    "label": "🏠 Portada del Mòdul",
+    "href": "index.html"
   },
-  {
-    "title": "UT 02: Infraestructura Global d'AWS, Comptes i Seguretat IAM",
-    "url": "ut02/index.md",
-    "children": [
-      {
-        "title": "02.01: La Infraestructura Global d'AWS: Regions, Zones de Disponibilitat i Punts de Presència",
-        "url": "ut02/ut0201.md"
-      },
-      {
-        "title": "02.02: Gestió d'Identitat i Accessos (AWS IAM): Usuaris, Grups i Rols",
-        "url": "ut02/ut0202.md"
-      },
-      {
-        "title": "02.03: Polítiques de Seguretat IAM (Documents JSON) i Principi del Menor Privilegi",
-        "url": "ut02/ut0203.md"
-      },
-      {
-        "title": "02.04: Seguretat del Compte Root, Autenticació Multifactor (MFA) i Credencials Temporals",
-        "url": "ut02/ut0204.md"
-      },
-      {
-        "title": "02.05: Governança de Comptes Múltiples: AWS Organizations i Polítiques SCP",
-        "url": "ut02/ut0205.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 03: Xarxes Virtuals al Núvol: Amazon VPC i Seguretat Perimetral",
-    "url": "ut03/index.md",
-    "children": [
-      {
-        "title": "03.01: Amazon Virtual Private Cloud (VPC): Fonaments i Blocs CIDR",
-        "url": "ut03/ut0301.md"
-      },
-      {
-        "title": "03.02: Subxarxes Públiques i Privades en Múltiples Zones de Disponibilitat",
-        "url": "ut03/ut0302.md"
-      },
-      {
-        "title": "03.03: Taules d'Encaminament, Internet Gateways (IGW) i NAT Gateways",
-        "url": "ut03/ut0303.md"
-      },
-      {
-        "title": "03.04: Seguretat a la Xarxa: Security Groups vs Network ACLs (NACLs)",
-        "url": "ut03/ut0304.md"
-      },
-      {
-        "title": "03.05: Arquitectura d'Accés Remot Segur: Bastion Hosts i AWS Systems Manager (SSM)",
-        "url": "ut03/ut0305.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 04: Computació Elàstica: Amazon EC2 i Automatització de Servidors",
-    "url": "ut04/index.md",
-    "children": [
-      {
-        "title": "04.01: Amazon EC2: Arquitectura, Cicle de Vida i Imatges AMI",
-        "url": "ut04/ut0401.md"
-      },
-      {
-        "title": "04.02: Tipus i Famílies d'Instàncies EC2 (Computació, Memòria, Emmagatzematge, GPU)",
-        "url": "ut04/ut0402.md"
-      },
-      {
-        "title": "04.03: Models de Compra i Facturació: On-Demand, Savings Plans, Reserved i Spot",
-        "url": "ut04/ut0403.md"
-      },
-      {
-        "title": "04.04: Connexió Segura, Claus Criptogràfiques SSH (KeyPair) i Metadades d'Instància (IMDSv2)",
-        "url": "ut04/ut0404.md"
-      },
-      {
-        "title": "04.05: Automatització de l'Aprovisionament: User Data i AMIs Personalitzades",
-        "url": "ut04/ut0405.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 05: Alta Disponibilitat: Elastic Load Balancing (ALB) i Auto Scaling",
-    "url": "ut05/index.md",
-    "children": [
-      {
-        "title": "05.01: Fonaments d'Alta Disponibilitat (HA) i Tolerància a Fallades al Núvol",
-        "url": "ut05/ut0501.md"
-      },
-      {
-        "title": "05.02: Tipus de Balancejadors d'AWS: Application Load Balancer (ALB) vs Network Load Balancer (NLB)",
-        "url": "ut05/ut0502.md"
-      },
-      {
-        "title": "05.03: Target Groups, Health Checks i Encaminament Basat en Ruta",
-        "url": "ut05/ut0503.md"
-      },
-      {
-        "title": "05.04: Amazon EC2 Auto Scaling: Launch Templates i Grups d'Auto Scaling",
-        "url": "ut05/ut0504.md"
-      },
-      {
-        "title": "05.05: Polítiques d'Escalat Dinàmic i Mètriques de CloudWatch",
-        "url": "ut05/ut0505.md"
-      }
-    ]
-  },
-  {
-    "title": "UT 06: Sistemes d'Emmagatzematge i Bases de Dades al Núvol",
-    "url": "ut06/index.md",
-    "children": [
-      {
-        "title": "06.01: Emmagatzematge en Blocs: Amazon Elastic Block Store (EBS) i Instantànies (Snapshots)",
-        "url": "ut06/ut0601.md"
-      },
-      {
-        "title": "06.02: Emmagatzematge d'Objectes: Amazon Simple Storage Service (S3) i Allotjament Web Estàtic",
-        "url": "ut06/ut0602.md"
-      },
-      {
-        "title": "06.03: Classes d'Emmagatzematge a S3 (Standard, IA, Glacier) i Polítiques de Cicle de Vida",
-        "url": "ut06/ut0603.md"
-      },
-      {
-        "title": "06.04: Sistemes de Fitxers Compartits al Núvol: Amazon Elastic File System (EFS)",
-        "url": "ut06/ut0604.md"
-      },
-      {
-        "title": "06.05: Bases de Dades Relacionals Gestionades: Amazon RDS en Multi-AZ i Rèpliques de Lectura",
-        "url": "ut06/ut0605.md"
-      }
-    ]
-  }
-]
+  "units": [
+    {
+      "summary": "UT 01: Fonaments del Cloud Computing i Economia del Núvol",
+      "items": [
+        {
+          "label": "01.01: Introducció al Model de Cloud Computing: Característiques Essencials (NIST)",
+          "href": "./ut01/ut0101.md",
+          "class": ""
+        },
+        {
+          "label": "01.02: Models de Servei al Núvol: IaaS, PaaS i SaaS",
+          "href": "./ut01/ut0102.md",
+          "class": ""
+        },
+        {
+          "label": "01.03: Models de Desplegament: Públic, Privat, Híbrid i Multicloud",
+          "href": "./ut01/ut0103.md",
+          "class": ""
+        },
+        {
+          "label": "01.04: El Model de Responsabilitat Compartida d'AWS",
+          "href": "./ut01/ut0104.md",
+          "class": ""
+        },
+        {
+          "label": "01.05: Economia del Núvol: CapEx vs OpEx, TCO i AWS Pricing Calculator",
+          "href": "./ut01/ut0105.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 02: Infraestructura Global d'AWS, Comptes i Seguretat IAM",
+      "items": [
+        {
+          "label": "02.01: La Infraestructura Global d'AWS: Regions, Zones de Disponibilitat i Punts de Presència",
+          "href": "./ut02/ut0201.md",
+          "class": ""
+        },
+        {
+          "label": "02.02: Gestió d'Identitat i Accessos (AWS IAM): Usuaris, Grups i Rols",
+          "href": "./ut02/ut0202.md",
+          "class": ""
+        },
+        {
+          "label": "02.03: Polítiques de Seguretat IAM (Documents JSON) i Principi del Menor Privilegi",
+          "href": "./ut02/ut0203.md",
+          "class": ""
+        },
+        {
+          "label": "02.04: Seguretat del Compte Root, Autenticació Multifactor (MFA) i Credencials Temporals",
+          "href": "./ut02/ut0204.md",
+          "class": ""
+        },
+        {
+          "label": "02.05: Governança de Comptes Múltiples: AWS Organizations i Polítiques SCP",
+          "href": "./ut02/ut0205.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 03: Xarxes Virtuals al Núvol: Amazon VPC i Seguretat Perimetral",
+      "items": [
+        {
+          "label": "03.01: Amazon Virtual Private Cloud (VPC): Fonaments i Blocs CIDR",
+          "href": "./ut03/ut0301.md",
+          "class": ""
+        },
+        {
+          "label": "03.02: Subxarxes Públiques i Privades en Múltiples Zones de Disponibilitat",
+          "href": "./ut03/ut0302.md",
+          "class": ""
+        },
+        {
+          "label": "03.03: Taules d'Encaminament, Internet Gateways (IGW) i NAT Gateways",
+          "href": "./ut03/ut0303.md",
+          "class": ""
+        },
+        {
+          "label": "03.04: Seguretat a la Xarxa: Security Groups vs Network ACLs (NACLs)",
+          "href": "./ut03/ut0304.md",
+          "class": ""
+        },
+        {
+          "label": "03.05: Arquitectura d'Accés Remot Segur: Bastion Hosts i AWS Systems Manager (SSM)",
+          "href": "./ut03/ut0305.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 04: Computació Elàstica: Amazon EC2 i Automatització de Servidors",
+      "items": [
+        {
+          "label": "04.01: Amazon EC2: Arquitectura, Cicle de Vida i Imatges AMI",
+          "href": "./ut04/ut0401.md",
+          "class": ""
+        },
+        {
+          "label": "04.02: Tipus i Famílies d'Instàncies EC2 (Computació, Memòria, Emmagatzematge, GPU)",
+          "href": "./ut04/ut0402.md",
+          "class": ""
+        },
+        {
+          "label": "04.03: Models de Compra i Facturació: On-Demand, Savings Plans, Reserved i Spot",
+          "href": "./ut04/ut0403.md",
+          "class": ""
+        },
+        {
+          "label": "04.04: Connexió Segura, Claus Criptogràfiques SSH (KeyPair) i Metadades d'Instància (IMDSv2)",
+          "href": "./ut04/ut0404.md",
+          "class": ""
+        },
+        {
+          "label": "04.05: Automatització de l'Aprovisionament: User Data i AMIs Personalitzades",
+          "href": "./ut04/ut0405.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 05: Alta Disponibilitat: Elastic Load Balancing (ALB) i Auto Scaling",
+      "items": [
+        {
+          "label": "05.01: Fonaments d'Alta Disponibilitat (HA) i Tolerància a Fallades al Núvol",
+          "href": "./ut05/ut0501.md",
+          "class": ""
+        },
+        {
+          "label": "05.02: Tipus de Balancejadors d'AWS: Application Load Balancer (ALB) vs Network Load Balancer (NLB)",
+          "href": "./ut05/ut0502.md",
+          "class": ""
+        },
+        {
+          "label": "05.03: Target Groups, Health Checks i Encaminament Basat en Ruta",
+          "href": "./ut05/ut0503.md",
+          "class": ""
+        },
+        {
+          "label": "05.04: Amazon EC2 Auto Scaling: Launch Templates i Grups d'Auto Scaling",
+          "href": "./ut05/ut0504.md",
+          "class": ""
+        },
+        {
+          "label": "05.05: Polítiques d'Escalat Dinàmic i Mètriques de CloudWatch",
+          "href": "./ut05/ut0505.md",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "summary": "UT 06: Sistemes d'Emmagatzematge i Bases de Dades al Núvol",
+      "items": [
+        {
+          "label": "06.01: Emmagatzematge en Blocs: Amazon Elastic Block Store (EBS) i Instantànies (Snapshots)",
+          "href": "./ut06/ut0601.md",
+          "class": ""
+        },
+        {
+          "label": "06.02: Emmagatzematge d'Objectes: Amazon Simple Storage Service (S3) i Allotjament Web Estàtic",
+          "href": "./ut06/ut0602.md",
+          "class": ""
+        },
+        {
+          "label": "06.03: Classes d'Emmagatzematge a S3 (Standard, IA, Glacier) i Polítiques de Cicle de Vida",
+          "href": "./ut06/ut0603.md",
+          "class": ""
+        },
+        {
+          "label": "06.04: Sistemes de Fitxers Compartits al Núvol: Amazon Elastic File System (EFS)",
+          "href": "./ut06/ut0604.md",
+          "class": ""
+        },
+        {
+          "label": "06.05: Bases de Dades Relacionals Gestionades: Amazon RDS en Multi-AZ i Rèpliques de Lectura",
+          "href": "./ut06/ut0605.md",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

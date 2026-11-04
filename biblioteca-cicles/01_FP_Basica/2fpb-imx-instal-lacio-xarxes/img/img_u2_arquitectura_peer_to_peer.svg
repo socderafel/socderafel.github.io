@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" font-family="Verdana, Arial, sans-serif">
+<style>
+.box { fill:#fff; stroke:#2980b9; stroke-width:2; }
+.title { fill:#2980b9; font-weight:bold; }
+.text { fill:#222; font-size:14px; }
+.small { fill:#555; font-size:11px; }
+.link { stroke:#2980b9; stroke-width:2; fill:none; }
+</style>
+
+<rect x="30" y="30" width="840" height="640" rx="10" fill="#eef5fb"/>
+<text x="60" y="70" class="title" style="font-size:20px">Arquitectura peer-to-peer (P2P)</text>
+<text x="60" y="98" class="small">Todos los equipos tienen la misma categor&#237;a: cada uno act&#250;a a la vez como cliente y como servidor.</text>
+
+<path d="M 200 220 L 450 160 L 700 220 L 700 440 L 450 500 L 200 440 Z" class="link"/>
+<path d="M 200 220 L 700 220" class="link"/>
+<path d="M 200 220 L 450 500" class="link"/>
+<path d="M 700 220 L 450 500" class="link"/>
+<path d="M 450 160 L 200 440" class="link"/>
+<path d="M 450 160 L 700 440" class="link"/>
+<path d="M 200 440 L 700 440" class="link"/>
+
+<rect x="125" y="175" width="150" height="90" rx="8" class="box"/>
+<text x="150" y="210" class="title" style="font-size:13px">EQUIPO A</text>
+<text x="150" y="235" class="small">Cliente + servidor</text>
+
+<rect x="375" y="115" width="150" height="90" rx="8" class="box"/>
+<text x="400" y="150" class="title" style="font-size:13px">EQUIPO B</text>
+<text x="400" y="175" class="small">Cliente + servidor</text>
+
+<rect x="625" y="175" width="150" height="90" rx="8" class="box"/>
+<text x="650" y="210" class="title" style="font-size:13px">EQUIPO C</text>
+<text x="650" y="235" class="small">Cliente + servidor</text>
+
+<rect x="625" y="395" width="150" height="90" rx="8" class="box"/>
+<text x="650" y="430" class="title" style="font-size:13px">EQUIPO D</text>
+<text x="650" y="455" class="small">Cliente + servidor</text>
+
+<rect x="375" y="455" width="150" height="90" rx="8" class="box"/>
+<text x="400" y="490" class="title" style="font-size:13px">EQUIPO E</text>
+<text x="400" y="515" class="small">Cliente + servidor</text>
+
+<rect x="125" y="395" width="150" height="90" rx="8" class="box"/>
+<text x="150" y="430" class="title" style="font-size:13px">EQUIPO F</text>
+<text x="150" y="455" class="small">Cliente + servidor</text>
+
+<text x="60" y="620" class="small" font-style="italic">No hay servidor dedicado: todos los equipos comparten y consumen recursos entre s&#237;.</text>
+</svg>
