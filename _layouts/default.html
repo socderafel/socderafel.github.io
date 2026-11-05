@@ -3310,7 +3310,21 @@
             // 5. Nom del fitxer PDF segons el format requerit: Aules_[Modul]_[Unitat]_[Activitat]_[NomAlumne].pdf
             const filename = `Aules_${moduleCode}_${unitCode}_${activityCode}_${studentFilePart}.pdf`;
 
-            // 6. Recopilar activitats interactives
+            // 6. Recopilar activitats interactives amb neteja de caràcters per a PDF
+            function cleanPdfText(str) {
+              if (!str) return '';
+              return String(str)
+                .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F000}-\u{1F2FF}\u{FE00}-\u{FE0F}]/gu, '')
+                .replace(/[—–]/g, '-')
+                .replace(/[“”]/g, '"')
+                .replace(/[‘’]/g, "'")
+                .replace(/×/g, 'x')
+                .replace(/·/g, '.')
+                .replace(/\u00A0/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+            }
+
             const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
             let solvedCount = 0;
             let quizDetails = [];
@@ -3323,26 +3337,26 @@
 
               if (el.classList.contains('interactive-quiz')) {
                 const qText = el.querySelector('.quiz-question');
-                if (qText) qTitle = qText.innerText.trim();
+                if (qText) qTitle = cleanPdfText(qText.innerText);
                 const inp = el.querySelector('.quiz-input');
-                if (inp) userVal = inp.value.trim() || '(buit)';
+                if (inp) userVal = cleanPdfText(inp.value) || '(buit)';
               } else if (el.classList.contains('interactive-mcq')) {
                 const qText = el.querySelector('.mcq-question');
-                if (qText) qTitle = qText.innerText.trim();
+                if (qText) qTitle = cleanPdfText(qText.innerText);
                 const sel = el.querySelector('.btn-mcq-opt.selected-correct, .btn-mcq-opt.selected-incorrect');
-                if (sel) userVal = sel.innerText.trim();
+                if (sel) userVal = cleanPdfText(sel.innerText);
               } else if (el.classList.contains('interactive-vf')) {
                 const qText = el.querySelector('.vf-statement');
-                if (qText) qTitle = qText.innerText.trim();
+                if (qText) qTitle = cleanPdfText(qText.innerText);
                 const sel = el.querySelector('.btn-vf.selected-correct, .btn-vf.selected-incorrect');
-                if (sel) userVal = sel.innerText.trim();
+                if (sel) userVal = cleanPdfText(sel.innerText);
               } else if (el.classList.contains('interactive-challenge-card')) {
                 const qText = el.querySelector('span[style*="font-weight:700"], span[style*="font-weight: 700"]');
-                if (qText) qTitle = qText.innerText.trim();
+                if (qText) qTitle = cleanPdfText(qText.innerText);
                 const rad = el.querySelector('input[type="radio"]:checked');
                 if (rad) {
                   const parentLabel = rad.closest('label');
-                  userVal = parentLabel ? parentLabel.innerText.trim() : rad.value;
+                  userVal = cleanPdfText(parentLabel ? parentLabel.innerText : rad.value);
                 }
               }
 
@@ -3373,6 +3387,9 @@
                 format: 'a4'
               });
 
+              // Codi d'autenticitat únic per a tot el document
+              const authCode = Math.random().toString(36).substring(2, 10).toUpperCase();
+
               // Capçalera corporativa blau marí
               doc.setFillColor(15, 32, 66); // #0f2042 Navy
               doc.rect(14, 14, 182, 22, 'F');
@@ -3380,12 +3397,12 @@
               doc.setTextColor(255, 255, 255);
               doc.setFont("helvetica", "bold");
               doc.setFontSize(13);
-              doc.text("COMPROVANT DE LLIURAMENT D'ACTIVITATS — AULES GVA", 20, 23);
+              doc.text("COMPROVANT DE LLIURAMENT D'ACTIVITATS - AULES GVA", 20, 23);
 
               doc.setFont("helvetica", "normal");
               doc.setFontSize(8.5);
               doc.setTextColor(203, 213, 225);
-              doc.text("Portal Docent de Pepe Cuenca · Formació Professional · Curs 2026/2027", 20, 30);
+              doc.text("Portal Docent de Pepe Cuenca | Formació Professional | Curs 2026/2027", 20, 30);
 
               // Targeta dades de l'alumne i de la tasca
               doc.setFillColor(248, 250, 252);
@@ -3418,7 +3435,9 @@
               doc.text("Unitat i Secció: ", 20, 69);
               doc.setFont("helvetica", "bold");
               doc.setTextColor(15, 23, 42);
-              doc.text(`${unitCode} — ${pageTitle}`, 46, 69);
+              const cleanSecTitle = cleanPdfText(`${unitCode} - ${pageTitle}`);
+              const secTitleLines = doc.splitTextToSize(cleanSecTitle, 142);
+              doc.text(secTitleLines[0], 46, 69);
 
               doc.setFont("helvetica", "normal");
               doc.setTextColor(71, 85, 105);
@@ -3436,7 +3455,7 @@
               doc.text("PUNTUACIÓ DELS REPTES", 18, 95);
               doc.setFontSize(13);
               doc.setTextColor(29, 78, 216);
-              doc.text(`${totalPts} punts (${solvedCount}/${allItems.length} · ${pct}%)`, 18, 104);
+              doc.text(`${totalPts} punts (${solvedCount}/${allItems.length} - ${pct}%)`, 18, 104);
 
               doc.setFillColor(236, 253, 245);
               doc.setDrawColor(167, 243, 208);
@@ -3451,15 +3470,17 @@
               doc.text(`${checkedCount}/${checks.length} criteris completats`, 112, 104);
 
               // Detall activitats
-              let y = 120;
+              let y = 118;
               doc.setFont("helvetica", "bold");
-              doc.setFontSize(10.5);
+              doc.setFontSize(10);
               doc.setTextColor(15, 32, 66);
               doc.text("REGISTRE DETALLAT DE LES ACTIVITATS PRÀCTIQUES:", 14, y);
-              y += 7;
+              y += 4;
 
-              doc.setDrawColor(226, 232, 240);
-              doc.line(14, y - 2, 196, y - 2);
+              doc.setDrawColor(203, 213, 225);
+              doc.setLineWidth(0.4);
+              doc.line(14, y, 196, y);
+              y += 5;
 
               if (quizDetails.length === 0) {
                 doc.setFont("helvetica", "italic");
@@ -3469,45 +3490,98 @@
                 y += 12;
               } else {
                 quizDetails.forEach((q) => {
-                  if (y > 265) {
+                  const cleanTitle = cleanPdfText(q.title);
+                  const cleanAnswer = cleanPdfText(q.answer);
+
+                  // 1. Calcular línies i altures requerides
+                  doc.setFont("helvetica", "bold");
+                  doc.setFontSize(8.5);
+                  const titleLines = doc.splitTextToSize(cleanTitle, 172);
+                  const titleHeight = titleLines.length * 4.2;
+
+                  doc.setFont("helvetica", "normal");
+                  doc.setFontSize(8);
+                  const ansPrefix = "Resposta de l'alumne/a: ";
+                  const ansLines = doc.splitTextToSize(ansPrefix + cleanAnswer, 172);
+                  const ansHeight = ansLines.length * 3.8;
+
+                  // Altura total de la targeta: capçalera (8mm) + pregunta + resposta + marges interns
+                  const cardHeight = 8 + titleHeight + ansHeight + 5;
+
+                  // Salt de pàgina net si la targeta no cap a la pàgina actual
+                  if (y + cardHeight > 275) {
                     doc.addPage();
                     y = 20;
                   }
 
-                  doc.setFont("helvetica", "bold");
-                  doc.setFontSize(9);
-                  doc.setTextColor(15, 23, 42);
-                  const titleLines = doc.splitTextToSize(`${q.num}. ${q.title}`, 135);
-                  doc.text(titleLines, 14, y);
-
+                  // Fons i vora de la targeta d'activitat
                   if (q.solved) {
-                    doc.setTextColor(5, 150, 105);
-                    doc.text("[ CORRECTE +25 pts ]", 152, y);
+                    doc.setFillColor(248, 253, 250); // verd molt suau
+                    doc.setDrawColor(187, 247, 208); // vora verda
                   } else {
-                    doc.setTextColor(220, 38, 38);
-                    doc.text("[ PENDENT ]", 168, y);
+                    doc.setFillColor(254, 254, 255); // fons net
+                    doc.setDrawColor(226, 232, 240); // vora gris clara
+                  }
+                  doc.setLineWidth(0.3);
+                  doc.roundedRect(14, y, 182, cardHeight, 2, 2, 'FD');
+
+                  // Capçalera interna de la targeta: títol a l'esquerra
+                  doc.setFont("helvetica", "bold");
+                  doc.setFontSize(8.5);
+                  doc.setTextColor(15, 32, 66);
+                  doc.text(`ACTIVITAT ${q.num}`, 18, y + 5.5);
+
+                  // Badge / Insígnia en càpsula pròpia a la dreta (sense cap superposició)
+                  if (q.solved) {
+                    doc.setFillColor(220, 252, 231);
+                    doc.setDrawColor(134, 239, 172);
+                    doc.roundedRect(144, y + 1.8, 48, 5.2, 1.2, 1.2, 'FD');
+                    doc.setFont("helvetica", "bold");
+                    doc.setFontSize(7.5);
+                    doc.setTextColor(21, 128, 61);
+                    doc.text("CORRECTE (+25 pts)", 168, y + 5.4, { align: 'center' });
+                  } else {
+                    doc.setFillColor(254, 226, 226);
+                    doc.setDrawColor(252, 165, 165);
+                    doc.roundedRect(162, y + 1.8, 30, 5.2, 1.2, 1.2, 'FD');
+                    doc.setFont("helvetica", "bold");
+                    doc.setFontSize(7.5);
+                    doc.setTextColor(185, 28, 28);
+                    doc.text("PENDENT", 177, y + 5.4, { align: 'center' });
                   }
 
-                  y += (titleLines.length * 4.5);
+                  // Línia separadora subtil interna
+                  doc.setDrawColor(q.solved ? 220, 252, 231 : 241, 245, 249);
+                  doc.setLineWidth(0.2);
+                  doc.line(18, y + 8, 192, y + 8);
 
-                  doc.setFont("helvetica", "normal");
+                  // Text complet de la pregunta a l'ample total
+                  doc.setFont("helvetica", "bold");
                   doc.setFontSize(8.5);
+                  doc.setTextColor(30, 41, 59);
+                  doc.text(titleLines, 18, y + 12.5);
+
+                  // Resposta de l'alumne/a
+                  const ansY = y + 12.5 + titleHeight + 0.5;
+                  doc.setFont("helvetica", "normal");
+                  doc.setFontSize(8);
                   doc.setTextColor(71, 85, 105);
-                  const ansLines = doc.splitTextToSize(`Resposta de l'alumne/a: ${q.answer}`, 180);
-                  doc.text(ansLines, 14, y);
-                  y += (ansLines.length * 4) + 4;
+                  doc.text(ansLines, 18, ansY);
+
+                  // Avançar coordenades per a la següent targeta
+                  y += cardHeight + 3.5;
                 });
               }
 
-              // Peu de pàgina del certificat
+              // Peu de pàgina del certificat amb codi únic compartit
               const totalPages = doc.internal.getNumberOfPages();
               for (let p = 1; p <= totalPages; p++) {
                 doc.setPage(p);
                 doc.setFont("helvetica", "normal");
-                doc.setFontSize(8);
+                doc.setFontSize(7.5);
                 doc.setTextColor(148, 163, 184);
-                doc.text(`Document generat automàticament des de socderafel.github.io · Codi d'autenticitat: ${Math.random().toString(36).substring(2, 10).toUpperCase()}`, 14, 287);
-                doc.text(`Pàgina ${p} de ${totalPages}`, 180, 287);
+                doc.text(`Document generat automàticament des de socderafel.github.io | Codi d'autenticitat: ${authCode}`, 14, 287);
+                doc.text(`Pàgina ${p} de ${totalPages}`, 196, 287, { align: 'right' });
               }
 
               doc.save(filename);
