@@ -253,18 +253,8 @@ La **Lluna** és l'únic satèl·lit natural de la Terra. Situada a una distànc
 
 A mesura que la Lluna es desplaça al voltant de la Terra, la porció de la seua cara visible il·luminada pel Sol va variant contínuament, donant lloc a les **quatre fases lunars**:
 
-```
-        [ Lluna Nova ]  (Entre el Sol i la Terra; no es veu)
-              │
-              ▼
-      [ Quart Creixent ] (Forma de "D"; creix la llum)
-              │
-              ▼
-        [ Lluna Plena ]  (Terra entre el Sol i la Lluna; 100% visible)
-              │
-              ▼
-      [ Quart Minvant ]  (Forma de "C"; minva la llum)
-```
+![Fases de la Lluna: Lluna Nova, Quart Creixent, Lluna Plena i Quart Minvant](../img/fases_de_la_lluna.jpg)
+*Figura: Les quatre fases lunars principals en el seu cicle complet d'il·luminació vista des de la Terra.*
 
 1. **Lluna Nova:** La Lluna se situa entre la Terra i el Sol. La seua cara il·luminada mira cap a l'espai, de manera que des de la Terra queda a les fosques i no es veu.
 2. **Quart Creixent:** La cara visible es va il·luminant progressivament d'est a oest, adoptant la forma d'una lletra **"D"**.
