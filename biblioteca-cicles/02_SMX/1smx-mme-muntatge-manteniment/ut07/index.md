@@ -1,6 +1,7 @@
 ---
 title: "Muntatge i Manteniment d'Equips — UD7 Desplegament de Programari amb Imatges de Disc"
 layout: default
+course_root: ".."
 ---
 
 # UD7 Desplegament de Programari amb Imatges de Disc

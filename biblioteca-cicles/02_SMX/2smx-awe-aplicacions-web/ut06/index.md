@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "UT 06: Seguretat, Còpies de Seguretat i Manteniment Web"
 parent: "2n SMX · Aplicacions Web"
 has_children: true

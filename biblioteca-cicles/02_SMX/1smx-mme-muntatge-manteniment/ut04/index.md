@@ -1,6 +1,7 @@
 ---
 title: "Muntatge i Manteniment d'Equips — UD4 La Placa Base, el Processador i la Memòria RAM"
 layout: default
+course_root: ".."
 ---
 
 # UD4 La Placa Base, el Processador i la Memòria RAM

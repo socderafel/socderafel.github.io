@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "Unitat 5: Edició d'Imatge Digital i Disseny Multimèdia: GIMP i Inkscape — Aplicacions Ofimàtiques"
 parent: "1r SMX · Aplicacions Ofimàtiques"
 has_children: true

@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "UT 04: Serveis de Núvol Privat i Gestió d'Arxius: Nextcloud"
 parent: "2n SMX · Aplicacions Web"
 has_children: true

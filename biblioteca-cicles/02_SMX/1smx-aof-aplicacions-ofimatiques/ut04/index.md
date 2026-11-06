@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "Unitat 4: Disseny i Gestió de Bases de Dades: Base i Access — Aplicacions Ofimàtiques"
 parent: "1r SMX · Aplicacions Ofimàtiques"
 has_children: true

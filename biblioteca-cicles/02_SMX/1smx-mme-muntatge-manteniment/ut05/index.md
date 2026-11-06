@@ -1,6 +1,7 @@
 ---
 title: "Muntatge i Manteniment d'Equips — UD5 Manteniment d'Equips i Taller de Muntatge"
 layout: default
+course_root: ".."
 ---
 
 # UD5 Manteniment d'Equips i Taller de Muntatge

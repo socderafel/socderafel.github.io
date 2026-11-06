@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "UT 05: Ofimàtica Col·laborativa i Comunicació Web"
 parent: "2n SMX · Aplicacions Web"
 has_children: true

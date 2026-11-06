@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "UT 02: Gestors de Continguts Web (CMS): WordPress"
 parent: "2n SMX · Aplicacions Web"
 has_children: true

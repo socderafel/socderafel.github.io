@@ -1,6 +1,7 @@
 ---
 title: "Muntatge i Manteniment d'Equips — UD6 Manteniment de Perifèrics: Pantalles i Impressores"
 layout: default
+course_root: ".."
 ---
 
 # UD6 Manteniment de Perifèrics: Pantalles i Impressores

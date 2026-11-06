@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "UT 03: Plataformes d'E-learning (LMS): Moodle"
 parent: "2n SMX · Aplicacions Web"
 has_children: true

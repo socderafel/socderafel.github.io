@@ -1,5 +1,6 @@
 ---
 layout: default
+course_root: ".."
 title: "Unitat 3: Fulls de Càlcul i Anàlisi de Dades: Calc i Excel — Aplicacions Ofimàtiques"
 parent: "1r SMX · Aplicacions Ofimàtiques"
 has_children: true

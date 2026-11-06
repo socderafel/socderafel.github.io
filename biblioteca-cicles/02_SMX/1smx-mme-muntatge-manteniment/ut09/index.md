@@ -1,6 +1,7 @@
 ---
 title: "Muntatge i Manteniment d'Equips — UD9 Projecte Integrador de Muntatge"
 layout: default
+course_root: ".."
 ---
 
 # UD9 Projecte Integrador de Muntatge i Control de Qualitat

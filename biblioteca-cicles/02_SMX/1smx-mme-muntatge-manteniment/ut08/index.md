@@ -1,6 +1,7 @@
 ---
 title: "Muntatge i Manteniment d'Equips — UD8 Noves Tendències Tecnològiques"
 layout: default
+course_root: ".."
 ---
 
 # UD8 Noves Tendències en Arquitectura i Maquinari Microinformàtic
