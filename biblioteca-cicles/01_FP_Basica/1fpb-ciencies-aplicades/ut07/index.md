@@ -262,7 +262,7 @@ A mesura que la Lluna es desplaça al voltant de la Terra, la porció de la seua
 4. **Quart Minvant:** La zona il·luminada comença a decréixer progressivament, adoptant la forma d'una lletra **"C"**.
 
 > [!TIP]
-> ### Regla Mnemotècnica
+> **Regla Mnemotècnica**
 > La Lluna és "mentidera": quan té forma de **"C"** no creix sinó que **minva** (decreix), i quan té forma de **"D"** no decreix sinó que **creix**!
 
 ---
@@ -501,6 +501,12 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 2. Converteix el resultat a atmosferes ($1\text{ atm} \approx 101.325\text{ Pa}$) o a barres ($1\text{ bar} = 10^5\text{ Pa}$).
 3. Explica per què a temperatures superiors a $5.000\text{ °C}$ el nucli intern de la Terra roman sòlid malgrat superar àmpliament el punt de fusió teòric del ferro.
 
+
+<div class="interactive-open-response" data-question-id="ca1_u7_5_open_ex3">
+  <div class="open-question">✍️ <strong>Exercici 3.3 (Estat Físic del Nucli Intern Terrestre):</strong> Explica per què a temperatures superiors a 5.000 °C el nucli intern terrestre és sòlid mentre que el nucli extern és líquid, detallant el paper que juga la immensa pressió litostàtica:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Escriu la justificació sobre el punt de fusió del ferro i níquel sota pressions extremes..."></textarea>
+</div>
+
 ---
 
 #### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
@@ -536,11 +542,6 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 
 <div class="interactive-quiz" data-quiz-id="ca1_u7_5_rep1" data-answer="86400" data-hint="24 × 3.600 = 86.400 segons al dia.">
   <div class="quiz-question">✍️ Repte 1: Quants segons exactes té un dia complet de 24 hores (24 × 60 × 60) en el comptador de temps POSIX?</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u7_5_open_ex3_3">
-  <div class="open-question">✍️ <strong>Exercici 3.3 (Estat Físic del Nucli Terrestre):</strong> Explica per què a temperatures superiors a 5.000 °C el nucli intern de la Terra roman en estat sòlid mentre que el nucli extern és fluid. Quin paper juga la pressió litostàtica i com genera el camp magnètic protector?</div>
-  <textarea class="open-response-input" rows="3" placeholder="Raona l'efecte de la pressió sobre el punt de fusió i la geodinamo del nucli extern..."></textarea>
-</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -573,6 +574,12 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
   2. Quines mesures mecàniques de subjecció s'han d'aplicar a un armari rack de $42\text{U}$ per evitar que bolque durant un terratrèmol de magnitud $5{,}5$ en l'escala Richter?
   3. Què són els sistemes de protecció per terra tècnic amb aïllament sísmic de base (suports amortidors amb molles o polímers viscoelàstics)?
   4. Si un sensor acceleròmetre detecta la primera ona $P$ a l'armari rack, quina ordre immediata pot executar automàticament l'script de protecció per evitar danys als discs durs mecànics (HDD) abans que arribe l'ona $S$?
+
+
+<div class="interactive-open-response" data-question-id="ca1_u7_5_open_rep2">
+  <div class="open-question">✍️ <strong>Repte 2 (Minerals Crítics en Maquinari Informàtic):</strong> Completa la investigació associant almenys tres components informàtics essencials (CPU, bateries de portàtil, cablejat) amb els minerals i elements geològics dels quals s'extreuen (quars/silici, liti/cobalt, calcopirita/coure):</div>
+  <textarea class="open-response-input" rows="3" placeholder="Component -> Mineral -> Propietat física que el fa indispensable..."></textarea>
+</div>
 
 ---
 

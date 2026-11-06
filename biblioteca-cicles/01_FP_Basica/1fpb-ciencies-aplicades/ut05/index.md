@@ -631,17 +631,18 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_5_ex1" data-answer="4/5|0.8|0,8" data-hint="Divideix numerador i denominador entre MCD(48, 60) = 12 -> 4/5 (o 0,8).">
   <div class="quiz-question">✍️ Exercici 1: Simplifica la fracció 48/60 fins a fracció irreductible (escriu '4/5' o '0.8'):</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex1_1">
-  <div class="open-question">✍️ <strong>Exercici 1.1 (Productes Creuats i Fracció Irreductible):</strong> Comprova mitjançant productes creuats si 18/24 i 15/20 són equivalents. A continuació, troba la fracció irreductible dividint pel seu MCD:</div>
-  <textarea class="open-response-input" rows="3" placeholder="Escriu la multiplicació creuada i el procediment de simplificació..."></textarea>
-</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
   <div class="quiz-feedback"></div>
 </div>
+
+<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex1_irred">
+  <div class="open-question">✍️ <strong>Exercici 1 (Fraccions Equivalents i Fracció Irreductible):</strong> Comprova mitjançant productes creuats si les fraccions 18/24 i 15/20 són equivalents, i obtén la seua fracció irreductible dividint numerador i denominador per l'MCD:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Producte creuat: 18 · 20 = ... i 24 · 15 = ... Fracció irreductible: ..."></textarea>
+</div>
+
 
 
 ##### Exercici 2: Suma i resta de fraccions amb mínim comú denominador
@@ -661,6 +662,12 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
    $$B = \left(2 - \frac{1}{4}\right) : \left(\frac{3}{5} + \frac{1}{2}\right) - \frac{4}{11}$$
 3. **Expressió C:**
    $$C = \frac{5}{6} - \left[\frac{2}{3} \cdot \left(\frac{9}{4} - \frac{3}{2}\right) + \frac{1}{8}\right]$$
+
+
+<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex2">
+  <div class="open-question">✍️ <strong>Exercici 2 (Procediment de Suma i Resta de Fraccions):</strong> Desenvolupa pas a pas la suma 3/4 + 5/6 - 7/12 calculant l'mcm dels denominadors i reduint a comú denominador abans d'operar:</div>
+  <textarea class="open-response-input" rows="3" placeholder="mcm(4, 6, 12) = ... Fraccions equivalents reduïdes: ... Resultat final irreductible: ..."></textarea>
+</div>
 
 ---
 
@@ -704,16 +711,6 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_5_rep1_dades" data-answer="250" data-hint="500 × 1/2 = 250 GB.">
   <div class="quiz-question">✍️ Repte 1: En un disc SSD de 500 GB, quants GB ocupa la partició de dades si representa 1/2 de la capacitat?</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex3_1">
-  <div class="open-question">✍️ <strong>Exercici 3.1 (Jerarquia amb Fraccions):</strong> Resol l'operació combinada [2/3 - 1/4 · (4/5)] : (7/10) mostrant la multiplicació prèvia del parèntesi, la resta i la divisió final:</div>
-  <textarea class="open-response-input" rows="3" placeholder="Escriu els passos intermedis i la fracció irreductible final..."></textarea>
-</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex2_1">
-  <div class="open-question">✍️ <strong>Exercici 2.1 (Procediment de Comú Denominador):</strong> Desenvolupa la suma i resta de fraccions 5/12 + 7/18 - 1/6 calculant prèviament l'MCM dels denominadors (12, 18, 6):</div>
-  <textarea class="open-response-input" rows="3" placeholder="Indica el denominador comú i les fraccions equivalents resultants..."></textarea>
-</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -773,6 +770,12 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
   2. Quants connectors es consumeixen durant el segon trimestre?
   3. Quina fracció **respecte del total inicial** representa el consum del segon trimestre? ($\frac{2}{5} \cdot \text{part restant}$).
   4. Quants connectors queden disponibles exactament per al projecte de final de curs? Quina fracció del total inicial representen?
+
+
+<div class="interactive-open-response" data-question-id="ca1_u5_5_open_rep3">
+  <div class="open-question">✍️ <strong>Repte 3 (Gestió d'Inventari amb Fraccions):</strong> D'una caixa de 500 connectors RJ45, el dilluns se'n gasta 1/5 del total, i el dimarts 2/3 dels que quedaven. Quants connectors s'han consumit en total i quants en queden a la caixa?</div>
+  <textarea class="open-response-input" rows="3" placeholder="Mostra el càlcul de cada fracció i el nombre d'unitats físiques que queden..."></textarea>
+</div>
 
 ---
 

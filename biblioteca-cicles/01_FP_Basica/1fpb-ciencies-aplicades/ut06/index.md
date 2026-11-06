@@ -504,11 +504,6 @@ Aplica la fórmula fonamental del moviment rectilini uniforme $t = \dfrac{d}{c}$
 
 <div class="interactive-quiz" data-quiz-id="ca1_u6_5_ex1_s" data-answer="750" data-hint="225.000.000 km : 300.000 km/s = 750 segons.">
   <div class="quiz-question">✍️ Exercici 1: Quants segons triga un senyal de ràdio a viatjar a Mart situat a 225 milions de km (225.000.000 : 300.000)?</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u6_5_open_ex1_4">
-  <div class="open-question">✍️ <strong>Exercici 1.4 (Retard de Senyal Còsmic a Mart):</strong> Explica amb les teues paraules per què un operador des de la Terra no pot conduir un ròver a Mart en temps real mitjançant telemetria o comandament de ràdio. Quina solució tecnològica incorporen els ròvers actuals?</div>
-  <textarea class="open-response-input" rows="3" placeholder="Justifica el temps d'anada i tornada del senyal (ping còsmic) i l'ús de sistemes autònoms amb IA..."></textarea>
-</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -527,6 +522,12 @@ Aplica la fórmula fonamental del moviment rectilini uniforme $t = \dfrac{d}{c}$
   <div class="quiz-feedback"></div>
 </div>
 
+<div class="interactive-open-response" data-question-id="ca1_u6_5_open_ex1_retard">
+  <div class="open-question">✍️ <strong>Exercici 1.3 i 1.4 (Retard de Senyals en Telecomunicacions Espacials):</strong> Si una sonda espacial a Mart es troba a 225.000.000 km de la Terra, quant triga un senyal de ràdio (velocitat c = 300.000 km/s) a arribar? Quin és el temps mínim d'espera per rebre la confirmació d'una comanda bidireccional?</div>
+  <textarea class="open-response-input" rows="3" placeholder="Càlcul de t = d/v en segons i minuts d'anada, i temps total d'anada i tornada (RTT)..."></textarea>
+</div>
+
+
 
 ##### Exercici 2: Conversió d'unitats astronòmiques i notació científica
 1. L'estel més proper al Sistema Solar és **Pròxima Centauri**, situat a una distància de $4{,}24\text{ anys llum}$. Converteix aquesta distància física a quilòmetres reals expressant el resultat en notació científica:
@@ -537,11 +538,6 @@ Aplica la fórmula fonamental del moviment rectilini uniforme $t = \dfrac{d}{c}$
 
 <div class="interactive-quiz" data-quiz-id="ca1_u6_5_ex2" data-answer="780" data-hint="5,2 × 150 = 780 milions de km.">
   <div class="quiz-question">✍️ Exercici 2: Si Júpiter està a 5,2 UA del Sol, quina és la seua distància en milions de km (5,2 × 150)?</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u6_5_open_ex2_1">
-  <div class="open-question">✍️ <strong>Exercici 2.1 (Distàncies Estel·lars en Notació Científica):</strong> Pròxima Centauri està a 4,24 anys llum de la Terra. Sabent que 1 any llum equival a 9,46 · 10¹² km, calcula la distància en quilòmetres expressada en notació científica:</div>
-  <textarea class="open-response-input" rows="3" placeholder="Desenvolupa la multiplicació i expressa el resultat amb mantissa entre 1 i 10..."></textarea>
-</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -564,6 +560,12 @@ Analitza les dades de la següent taula i respon a les preguntes:
 1. Per què els planetes rocosos tenen una densitat unes $4$ a $8$ vegades superior a la dels planetes gegants gasosos, malgrat ser molt més menuts?
 2. Quina particularitat física única té Saturn respecte a la densitat de l'aigua dolça ($\rho_{\text{aigua}} = 1{,}00\text{ g/cm}^3$)?
 3. Quins dos elements químics constitueixen més del 90% de la matèria dels planetes jovians?
+
+
+<div class="interactive-open-response" data-question-id="ca1_u6_5_open_ex3">
+  <div class="open-question">✍️ <strong>Exercici 3 (Planetes Rocosos vs. Gasosos i Densitat):</strong> Compara la composició i densitat mitjana dels planetes terrestres o rocosos (Mercuri, Venus, Terra, Mart) respecte als gegants gasosos (Júpiter, Saturn). Per què Saturn suraria en una banyera prou gran d'aigua?</div>
+  <textarea class="open-response-input" rows="3" placeholder="Explica la diferència de densitat (d = m/V), la composició de silicats/ferro vs. H/He i la densitat de Saturn (0,69 g/cm³ < 1 g/cm³)..."></textarea>
+</div>
 
 ---
 
@@ -603,11 +605,6 @@ Analitza les dades de la següent taula i respon a les preguntes:
 
 <div class="interactive-quiz" data-quiz-id="ca1_u6_5_rep1" data-answer="240" data-hint="0,24 segons = 240 mil·lisegons de latència.">
   <div class="quiz-question">✍️ Repte 1: Quin és el retard d'anada i tornada (72.000 km : 300.000 km/s) d'un satèl·lit GEO expressat en mil·lisegons (ms)?</div>
-
-<div class="interactive-open-response" data-question-id="ca1_u6_5_open_ex3_1">
-  <div class="open-question">✍️ <strong>Exercici 3.1 (Densitat i Formació Planetària):</strong> Justifica per què els planetes rocosos interiors tenen densitats molt superiors (4-5,5 g/cm³) a la dels gegants gasosos exteriors (0,7-1,6 g/cm³), relacionant-ho amb la temperatura de condensació en la nebulosa solar primitiva:</div>
-  <textarea class="open-response-input" rows="3" placeholder="Explica la composició de silicats/ferro enfront d'hidrogen/heli..."></textarea>
-</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -639,6 +636,12 @@ Analitza les dades de la següent taula i respon a les preguntes:
      - Júpiter ($5{,}20\text{ UA}$)
      - Saturn ($9{,}58\text{ UA}$)
   3. Reflexiona sobre la distribució espacial: Per què els quatre primers planetes queden amuntegats en els primers $3\text{ metres}$ i la resta queden molt dispersos?
+
+
+<div class="interactive-open-response" data-question-id="ca1_u6_5_open_rep2">
+  <div class="open-question">✍️ <strong>Repte 2 (Alineació d'Antena Parabòlica: Azimut i Elevació):</strong> Explica els dos angles fonamentals (azimut i elevació) per orientar una antena parabòlica cap a un satèl·lit geoestacionari com Astra 19.2°E des de València, i per què un satèl·lit GEO sembla immòbil al cel:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Defineix azimut, elevació i el període orbital de 24 hores sincrònic amb la rotació terrestre..."></textarea>
+</div>
 
 ---
 

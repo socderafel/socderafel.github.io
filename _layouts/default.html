@@ -30,15 +30,29 @@
       }
     }
     function renderMathPortal() {
+      if (window.katex) {
+        document.querySelectorAll('script[type^="math/tex"]').forEach(el => {
+          const display = el.type.includes("mode=display");
+          const span = document.createElement(display ? "div" : "span");
+          span.className = display ? "katex-display" : "katex-inline";
+          try {
+            window.katex.render(el.textContent, span, { displayMode: display, throwOnError: false });
+            el.replaceWith(span);
+          } catch (e) {
+            span.textContent = el.textContent;
+            el.replaceWith(span);
+          }
+        });
+      }
       if (window.renderMathInElement && document.body) {
         window.renderMathInElement(document.body, {
           delimiters: [
-            { left: '$$', right: '$$', display: true },
-            { left: '$', right: '$', display: false },
-            { left: '\\(', right: '\\)', display: false },
-            { left: '\\[', right: '\\]', display: true }
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "\\[", right: "\\]", display: true }
           ],
-          ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+          ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
           throwOnError: false
         });
       }
