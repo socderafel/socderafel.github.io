@@ -2231,6 +2231,97 @@
     [data-theme="dark"] .admonition.important .admonition-title { background-color: #2e1065; color: #e9d5ff; }
     [data-theme="dark"] .admonition.note .admonition-title { background-color: #172554; color: #bfdbfe; }
 
+    
+    /* Targetes de Resposta Oberta (Open Response / Pregunta de Desenvolupament) */
+    .interactive-open-response {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #8b5cf6;
+      border-radius: 8px;
+      padding: 1.1rem 1.3rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .interactive-open-response:focus-within {
+      border-left-color: #7c3aed;
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.12);
+    }
+    .interactive-open-response .open-question {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+    .interactive-open-response textarea.open-response-input {
+      width: 100%;
+      min-height: 85px;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text);
+      background: #f8fafc;
+      resize: vertical;
+      transition: background 0.2s, border-color 0.2s;
+      box-sizing: border-box;
+      display: block;
+    }
+    .interactive-open-response textarea.open-response-input:focus {
+      background: #ffffff;
+      border-color: #8b5cf6;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+    }
+    .interactive-open-response .open-response-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.55rem;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+    .interactive-open-response .open-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .interactive-open-response .open-status.saved {
+      color: #059669;
+      font-weight: 500;
+    }
+    .interactive-open-response .open-badge {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      background: #f3e8ff;
+      color: #6b21a8;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    [data-theme="dark"] .interactive-open-response {
+      background: #1e293b;
+      border-color: #334155;
+      border-left-color: #a78bfa;
+    }
+    [data-theme="dark"] .interactive-open-response textarea.open-response-input {
+      background: #0f172a;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+    [data-theme="dark"] .interactive-open-response textarea.open-response-input:focus {
+      border-color: #a78bfa;
+      background: #1e293b;
+    }
+    [data-theme="dark"] .interactive-open-response .open-badge {
+      background: #2e1065;
+      color: #e9d5ff;
+    }
+
     /* Código y Cajas de Terminal */
     code {
       font-family: var(--md-code-font);
@@ -2855,7 +2946,9 @@
         important: { kind: 'important', icon: '📌', title: 'Important' },
         warning: { kind: 'warning', icon: '⚠️', title: 'Atenció' },
         caution: { kind: 'caution', icon: '🚨', title: 'Precaució' },
-        danger: { kind: 'danger', icon: '🚨', title: 'Perill' }
+        danger: { kind: 'danger', icon: '🚨', title: 'Perill' },
+        question: { kind: 'question', icon: '✍️', title: 'Activitat / Pregunta' },
+        exercise: { kind: 'question', icon: '✍️', title: 'Exercici Pràctic' }
       };
 
       // 3.1. Transformar blockquotes de Markdown
@@ -2868,7 +2961,7 @@
         let titleText = null;
 
         const textContent = firstEl.textContent || '';
-        const tagMatch = textContent.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
+        const tagMatch = textContent.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION|QUESTION|EXERCISE)\]/i);
 
         if (tagMatch) {
           const typeKey = tagMatch[1].toLowerCase();
@@ -2877,7 +2970,7 @@
           icon = meta.icon;
 
           // Netejar la marca [!TAG] del contingut HTML de firstEl
-          firstEl.innerHTML = firstEl.innerHTML.replace(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(<br\s*\/?>)?/i, '').trim();
+          firstEl.innerHTML = firstEl.innerHTML.replace(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION|QUESTION|EXERCISE)\]\s*(<br\s*\/?>)?/i, '').trim();
 
           // Si el primer element ha quedat buit (com en <p>[!TIP]</p>)
           if (!firstEl.innerText.trim() && !firstEl.querySelector('img, code, a')) {
@@ -2931,6 +3024,23 @@
           }
         }
 
+        if (kind === 'question') {
+          // Generar directament una targeta de resposta oberta (.interactive-open-response)
+          const openCard = document.createElement('div');
+          openCard.className = 'interactive-open-response';
+          const qEl = document.createElement('div');
+          qEl.className = 'open-question';
+          const hasEmoji = /^(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/.test(titleText);
+          qEl.textContent = (icon && !hasEmoji ? icon + ' ' : '') + titleText;
+          openCard.appendChild(qEl);
+
+          while (bq.firstChild) {
+            openCard.appendChild(bq.firstChild);
+          }
+          bq.parentNode.replaceChild(openCard, bq);
+          return;
+        }
+
         if (kind && titleText) {
           const adm = document.createElement('div');
           adm.className = 'admonition ' + kind;
@@ -2951,7 +3061,7 @@
       document.querySelectorAll('main p').forEach(p => {
         if (p.closest('.admonition, blockquote')) return;
         const html = p.innerHTML;
-        const m = html.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(.*)$/i);
+        const m = html.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION|QUESTION|EXERCISE)\]\s*(.*)$/i);
         if (m) {
           const typeKey = m[1].toLowerCase();
           const meta = alertTypeMap[typeKey] || alertTypeMap.note;
@@ -3078,9 +3188,9 @@
       // 3.6. Manejador de Quizzes Interactius, MCQ, V/F, Calculadores i Lliurament Aules
       (function initInteractiveLearning() {
         const updateAllTrackers = () => {
-          const allInteractive = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
+          const allInteractive = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card, .interactive-open-response');
           const totalInteractive = allInteractive.length;
-          const solvedInteractive = document.querySelectorAll('.interactive-quiz.is-solved, .interactive-mcq.is-solved, .interactive-vf.is-solved, .interactive-challenge-card.is-solved').length;
+          const solvedInteractive = document.querySelectorAll('.interactive-quiz.is-solved, .interactive-mcq.is-solved, .interactive-vf.is-solved, .interactive-challenge-card.is-solved, .interactive-open-response.is-solved').length;
           const totalChecks = document.querySelectorAll('li.task-list-item').length;
           const solvedChecks = document.querySelectorAll('li.task-list-item.is-checked').length;
           const pct = totalInteractive > 0 ? Math.round((solvedInteractive / totalInteractive) * 100) : 100;
@@ -3360,6 +3470,68 @@
           }
         });
 
+        // 3.6. Inicialitzar Targetes de Resposta Oberta (.interactive-open-response)
+        document.querySelectorAll('.interactive-open-response').forEach((card, oIdx) => {
+          let textarea = card.querySelector('.open-response-input, textarea');
+          if (!textarea) {
+            textarea = document.createElement('textarea');
+            textarea.className = 'open-response-input';
+            textarea.rows = 3;
+            textarea.placeholder = 'Escriu ací la teua resposta, procediment o justificació...';
+            card.appendChild(textarea);
+          }
+
+          let meta = card.querySelector('.open-response-meta');
+          if (!meta) {
+            meta = document.createElement('div');
+            meta.className = 'open-response-meta';
+            meta.innerHTML = '<span class="open-status">⚪ Buit</span><span class="open-badge">Resposta Oberta · Correcció Docent 👨‍🏫</span>';
+            card.appendChild(meta);
+          }
+
+          const statusEl = meta.querySelector('.open-status');
+          const cardId = card.getAttribute('data-question-id') || ('open_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + oIdx);
+
+          try {
+            const savedVal = localStorage.getItem(cardId);
+            if (savedVal !== null) {
+              textarea.value = savedVal;
+            }
+            if (textarea.value.trim().length > 0) {
+              card.classList.add('is-solved');
+              if (statusEl) {
+                statusEl.classList.add('saved');
+                statusEl.innerHTML = '💾 Resposta desada';
+              }
+            }
+          } catch(e) {}
+
+          let saveTimeout = null;
+          textarea.addEventListener('input', () => {
+            const val = textarea.value;
+            if (val.trim().length > 0) {
+              card.classList.add('is-solved');
+            } else {
+              card.classList.remove('is-solved');
+            }
+            if (statusEl) {
+              statusEl.classList.remove('saved');
+              statusEl.innerHTML = '✏️ Editant...';
+            }
+            clearTimeout(saveTimeout);
+            saveTimeout = setTimeout(() => {
+              try {
+                localStorage.setItem(cardId, val);
+                if (statusEl) {
+                  statusEl.classList.add('saved');
+                  statusEl.innerHTML = val.trim().length > 0 ? '💾 Resposta desada' : '⚪ Buit';
+                }
+              } catch(e) {}
+              updateAllTrackers();
+            }, 300);
+          });
+        });
+
         // 4. Manejador del Lliurament per a Aules
         const nameInputs = document.querySelectorAll('#aules-student-name, .aules-student-name');
         const copyBtns = document.querySelectorAll('.btn-aules-copy');
@@ -3383,7 +3555,7 @@
           const pageTitle = document.title.split('—')[0].trim();
           const dateStr = new Date().toLocaleString('ca-ES', { dateStyle: 'long', timeStyle: 'short' });
 
-          const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
+          const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card, .interactive-open-response');
           let solvedCount = 0;
           let quizDetails = [];
           allItems.forEach((el, idx) => {
@@ -3416,9 +3588,18 @@
                 const parentLabel = rad.closest('label');
                 userVal = parentLabel ? parentLabel.innerText.trim() : rad.value;
               }
+            } else if (el.classList.contains('interactive-open-response')) {
+              const qText = el.querySelector('.open-question, .quiz-question') || el.querySelector('strong, p');
+              if (qText) qTitle = qText.innerText.trim();
+              const ta = el.querySelector('.open-response-input, textarea');
+              if (ta) userVal = ta.value.trim() || '(buit)';
             }
 
-            quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta: ${userVal}  -->  [${isSolved ? 'CORRECTE ✅ (+25 pts)' : 'PENDENT ❌'}]`);
+            if (el.classList.contains('interactive-open-response')) {
+              quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta redactada: ${userVal}\n     Estat: [${isSolved ? 'LLIURAT 📝 (Pendent de revisió docent)' : 'PENDENT (BUIT) ❌'}]`);
+            } else {
+              quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta: ${userVal}  -->  [${isSolved ? 'CORRECTE ✅ (+25 pts)' : 'PENDENT ❌'}]`);
+            }
           });
 
           const checks = document.querySelectorAll('li.task-list-item');
@@ -3587,7 +3768,7 @@
                 .trim();
             }
 
-            const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card');
+            const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card, .interactive-open-response');
             let solvedCount = 0;
             let quizDetails = [];
             allItems.forEach((el, idx) => {
@@ -3620,13 +3801,19 @@
                   const parentLabel = rad.closest('label');
                   userVal = cleanPdfText(parentLabel ? parentLabel.innerText : rad.value);
                 }
+              } else if (el.classList.contains('interactive-open-response')) {
+                const qText = el.querySelector('.open-question, .quiz-question') || el.querySelector('strong, p');
+                if (qText) qTitle = cleanPdfText(qText.innerText);
+                const ta = el.querySelector('.open-response-input, textarea');
+                if (ta) userVal = cleanPdfText(ta.value) || '(Buit - sense resposta)';
               }
 
               quizDetails.push({
                 num: idx + 1,
                 title: qTitle,
                 answer: userVal,
-                solved: isSolved
+                solved: isSolved,
+                isOpen: el.classList.contains('interactive-open-response')
               });
             });
 
@@ -3767,8 +3954,9 @@
                   const ansLines = doc.splitTextToSize(ansPrefix + cleanAnswer, 172);
                   const ansHeight = ansLines.length * 3.8;
 
-                  // Altura total de la targeta: capçalera (8mm) + pregunta + resposta + marges interns
-                  const cardHeight = 8 + titleHeight + ansHeight + 5;
+                  // Altura total de la targeta: capçalera (8mm) + pregunta + resposta + avaluació docent + marges interns
+                  const evalHeight = q.isOpen ? 7 : 0;
+                  const cardHeight = 8 + titleHeight + ansHeight + evalHeight + 5;
 
                   // Salt de pàgina net si la targeta no cap a la pàgina actual
                   if (y + cardHeight > 275) {
@@ -3777,7 +3965,15 @@
                   }
 
                   // Fons i vora de la targeta d'activitat
-                  if (q.solved) {
+                  if (q.isOpen) {
+                    if (q.solved) {
+                      doc.setFillColor(250, 248, 255); // fons morat molt clar #faf8ff
+                      doc.setDrawColor(216, 180, 254); // vora lila #d8b4fe
+                    } else {
+                      doc.setFillColor(254, 254, 255);
+                      doc.setDrawColor(226, 232, 240);
+                    }
+                  } else if (q.solved) {
                     doc.setFillColor(248, 253, 250); // verd molt suau
                     doc.setDrawColor(187, 247, 208); // vora verda
                   } else {
@@ -3791,10 +3987,28 @@
                   doc.setFont("helvetica", "bold");
                   doc.setFontSize(8.5);
                   doc.setTextColor(15, 32, 66);
-                  doc.text(`ACTIVITAT ${q.num}`, 18, y + 5.5);
+                  doc.text(q.isOpen ? `ACTIVITAT ${q.num} (RESPOSTA OBERTA)` : `ACTIVITAT ${q.num}`, 18, y + 5.5);
 
-                  // Badge / Insígnia en càpsula pròpia a la dreta (sense cap superposició)
-                  if (q.solved) {
+                  // Badge / Insígnia en càpsula pròpia a la dreta
+                  if (q.isOpen) {
+                    if (q.solved) {
+                      doc.setFillColor(237, 233, 254);
+                      doc.setDrawColor(196, 181, 253);
+                      doc.roundedRect(132, y + 1.8, 60, 5.2, 1.2, 1.2, 'FD');
+                      doc.setFont("helvetica", "bold");
+                      doc.setFontSize(7);
+                      doc.setTextColor(109, 40, 217);
+                      doc.text("LLIURAT · PER CORREGIR 📝", 162, y + 5.4, { align: 'center' });
+                    } else {
+                      doc.setFillColor(254, 226, 226);
+                      doc.setDrawColor(252, 165, 165);
+                      doc.roundedRect(162, y + 1.8, 30, 5.2, 1.2, 1.2, 'FD');
+                      doc.setFont("helvetica", "bold");
+                      doc.setFontSize(7.5);
+                      doc.setTextColor(185, 28, 28);
+                      doc.text("PENDENT", 177, y + 5.4, { align: 'center' });
+                    }
+                  } else if (q.solved) {
                     doc.setFillColor(220, 252, 231);
                     doc.setDrawColor(134, 239, 172);
                     doc.roundedRect(144, y + 1.8, 48, 5.2, 1.2, 1.2, 'FD');
@@ -3829,6 +4043,17 @@
                   doc.setFontSize(8);
                   doc.setTextColor(71, 85, 105);
                   doc.text(ansLines, 18, ansY);
+
+                  // Espai d'avaluació i rúbrica docent per a preguntes obertes
+                  if (q.isOpen) {
+                    const evalY = ansY + ansHeight + 2;
+                    doc.setFont("helvetica", "bold");
+                    doc.setFontSize(7.5);
+                    doc.setTextColor(100, 116, 139);
+                    doc.text("Avaluació del docent:", 18, evalY);
+                    doc.setFont("helvetica", "normal");
+                    doc.text("[  ] Excel·lent    [  ] Notable    [  ] Aprovat    [  ] A millorar     |  Notes: ____________________________________", 49, evalY);
+                  }
 
                   // Avançar coordenades per a la següent targeta
                   y += cardHeight + 3.5;

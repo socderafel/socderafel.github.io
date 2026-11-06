@@ -461,6 +461,11 @@ $$\omega = \frac{360^\circ}{24\text{ h}} = 15^\circ \text{ per cada hora de temp
   <div class="quiz-feedback"></div>
 </div>
 
+<div class="interactive-open-response" data-question-id="ca1_u7_5_ex1_2">
+  <div class="open-question">✍️ <strong>Exercici 1.2 (Raonament i Procediment):</strong> La seu de València està a longitud 0° (UTC) i Califòrnia a 120° Oest. Si a València són les 15:00 h, quina hora és a Califòrnia i quin és el desfasament horari solar? Justifica el teu càlcul:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Escriu ací el teu raonament o procediment per a que el professor puga revisar-lo al PDF..."></textarea>
+</div>
+
 
 ##### Exercici 2: Propagació d'ones sísmiques i distància a l'epicentre
 Quan es produeix un sisme, es generen dos tipus principals d'ones internes:
@@ -480,6 +485,11 @@ Quan es produeix un sisme, es generen dos tipus principals d'ones internes:
     <button type="button" class="btn-quiz-check">Comprovar</button>
   </div>
   <div class="quiz-feedback"></div>
+</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u7_5_ex2_3">
+  <div class="open-question">✍️ <strong>Exercici 2.3 (Justificació geomètrica):</strong> Quantes estacions sismològiques independents calen com a mínim per determinar mitjançant triangulació la ubicació exacta d'un epicentre sobre un mapa? Justifica-ho geomètricament:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Explica la intersecció de circumferències des de diferents sismògrafs..."></textarea>
 </div>
 
 
