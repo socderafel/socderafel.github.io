@@ -198,15 +198,25 @@ Les dues són eucariotes, però presenten adaptacions i orgànuls exclusius sego
 
 Els **virus** (terme llatí que significa "verí" o "toxina") són estructures microscòpiques que se situen en la frontera del que considerem viu. 
 
-```
-Estructura bàsica d'un virus:
-┌─────────────────────────────────┐
-│     Envoltura / Càpside         │  (coberta externa de proteïnes)
-│     ┌─────────────────────┐     │
-│     │   Genoma víric      │     │  (ADN o ARN amb la informació)
-│     └─────────────────────┘     │
-└─────────────────────────────────┘
-```
+<div style="background:var(--card-bg, #ffffff);border:1px solid #8b5cf6;border-radius:10px;padding:18px;margin:20px 0;">
+  <div style="font-weight:700;font-size:1.05rem;color:#7c3aed;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+    <span>🦠</span> Anatomia Funcional d'un Virus
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px;font-size:0.88rem;">
+    <div style="background:#f5f3ff;border:1px solid #ddd6fe;padding:12px;border-radius:8px;">
+      <strong style="color:#6d28d9;">1. Càpside / Envoltura:</strong><br>
+      <span style="color:var(--text-muted);">Capa externa de proteïnes que protegeix el material genètic i li dóna forma geomètrica.</span>
+    </div>
+    <div style="background:#f5f3ff;border:1px solid #ddd6fe;padding:12px;border-radius:8px;">
+      <strong style="color:#6d28d9;">2. Genoma Víric:</strong><br>
+      <span style="color:var(--text-muted);">Àcid nucleic que conté les instruccions (ADN o ARN, mai tots dos alhora).</span>
+    </div>
+    <div style="background:#f5f3ff;border:1px solid #ddd6fe;padding:12px;border-radius:8px;">
+      <strong style="color:#6d28d9;">3. Espícules d'Adhesió:</strong><br>
+      <span style="color:var(--text-muted);">Glicoproteïnes que actuen com a claus per reconèixer i infectar la cèl·lula hoste.</span>
+    </div>
+  </div>
+</div>
 
 > [!WARNING]
 > ### Per què els virus no són cèl·lules ni es consideren éssers vius complets?
@@ -291,11 +301,29 @@ La **funció de nutrició** és el conjunt de processos biològics mitjançant e
 
 L'aparell digestiu humà està format per dues parts fonamentals: el **tub digestiu** i les **glàndules annexes**.
 
-```
-Boca ➔ Faringe ➔ Esòfag ➔ Estómac ➔ Intestí Prim ➔ Intestí Gros ➔ Recte/Anus
-  ▲                         ▲             ▲
-Glàndules Salivals          Fetge      Pàncrees
-```
+<div style="background:var(--card-bg, #ffffff);border:1px solid var(--border-color, #e2e8f0);border-radius:10px;padding:16px;margin:20px 0;">
+  <div style="font-weight:700;font-size:1rem;color:var(--primary);margin-bottom:10px;display:flex;align-items:center;gap:8px;">
+    <span>🍽️</span> Recorregut Seqüencial del Tub Digestiu i Òrgans Annexos
+  </div>
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:0.88rem;font-weight:600;">
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Boca</span>
+    <span>➔</span>
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Faringe</span>
+    <span>➔</span>
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Esòfag</span>
+    <span>➔</span>
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Estómac</span>
+    <span>➔</span>
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Intestí Prim</span>
+    <span>➔</span>
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Intestí Gros</span>
+    <span>➔</span>
+    <span style="background:#e0f2fe;color:#0369a1;padding:6px 12px;border-radius:6px;">Recte / Anus</span>
+  </div>
+  <p style="margin:10px 0 0 0;font-size:0.84rem;color:var(--text-muted);">
+    <em>Glàndules annexes que aboquen sucs:</em> <strong>Glàndules Salivals</strong> (a la boca), <strong>Fetge</strong> (bilis) i <strong>Pàncrees</strong> (suc pancreàtic a l'intestí prim).
+  </p>
+</div>
 
 #### A) El Tub Digestiu
 És un conducte musculós continu d'uns 10 metres de longitud que s'estén des de l'orifici d'entrada (boca) fins a l'orifici d'eixida (anus):
@@ -575,17 +603,21 @@ La digestió, la respiració cel·lular i les reaccions metabòliques produeixen
 
 L'aparell urinari és el principal responsable de filtrar la sang i generar l'orina. Està format pels **dos ronyons** i les **vies urinàries**.
 
-```
-Sang bruta (Artèria renal) ➔ Ronyons [Filtratge a les Nefrones] ➔ Sang neta (Vena renal)
-                                 │
-                               Orina
-                                 ▼
-                              Urèters
-                                 ▼
-                          Bufeta urinària
-                                 ▼
-                              Uretra ➔ Exterior (Micció)
-```
+<div style="background:var(--card-bg, #ffffff);border:1px solid #10b981;border-radius:10px;padding:16px;margin:20px 0;">
+  <div style="font-weight:700;font-size:1rem;color:#047857;margin-bottom:10px;display:flex;align-items:center;gap:8px;">
+    <span>🩸</span> Procés de Filtratge Renal i Excreció d'Orina
+  </div>
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:0.86rem;font-weight:600;">
+    <span style="background:#fee2e2;color:#b91c1c;padding:6px 10px;border-radius:6px;">Sang amb deixalles (Artèria renal)</span>
+    <span>➔</span>
+    <span style="background:#d1fae5;color:#065f46;padding:6px 10px;border-radius:6px;">Ronyons (Nefrones: filtratge)</span>
+    <span>➔</span>
+    <span style="background:#dbeafe;color:#1e40af;padding:6px 10px;border-radius:6px;">Sang neta (Vena renal)</span>
+  </div>
+  <div style="margin-top:12px;padding:10px;background:#f0fdf4;border-radius:6px;font-size:0.85rem;color:#166534;">
+    <strong>Trajecte d'evacuació de l'orina:</strong> Ronyons ➔ <strong>Urèters</strong> (conductes) ➔ <strong>Bufeta urinària</strong> (dipòsit) ➔ <strong>Uretra</strong> ➔ Exterior (micció).
+  </div>
+</div>
 
 #### A) Els Ronyons
 - Dues estructures de color rogenc fosc amb forma de fesol d'uns 10 a 12 cm de longitud, situades a la part posterior de l'abdomen a banda i banda de la columna vertebral.

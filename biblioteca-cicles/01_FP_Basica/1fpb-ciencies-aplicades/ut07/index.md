@@ -318,13 +318,7 @@ Com que el pou més profund mai excavat per la humanitat (el pou de Kola a Rúss
 
 Segons la composició dels materials, la geosfera es divideix en tres capes concèntriques:
 
-```
-  [ ESCORÇA ]  ➔ 5 a 70 km (Continental: granit / Oceànica: basalt)
-       │
-  [ MANTELL ]  ➔ 2.900 km  (Superior i Inferior: peridotites i magma fluid)
-       │
-   [ NUCLI ]   ➔ 6.371 km  (Extern: líquid / Intern: sòlid; Ferro i Níquel)
-```
+
 
 | Capa | Gruix / Profunditat | Composició i Característiques |
 | :--- | :--- | :--- |

@@ -133,19 +133,29 @@ Fa aproximadament **4.500 milions d'anys**, la Terra era una bola incandescent d
 
 La Terra és coneguda com el "planeta blau" perquè l'aigua cobreix el **$71\%$ de la seua superfície**. No obstant això, la gran majoria no és directament aprofitable per al consum humà:
 
-```
-TOTA L'AIGUA DE LA TERRA (100%)
-┌──────────────────────────────────────────────────┐
-│  AIGUA SALADA: 97% (Oceans i Mars)               │
-└──────────────────────────────────────────────────┘
-┌────────────────────────┐
-│  AIGUA DOLÇA: NOMÉS 3% │
-└────────────────────────┘
-          │
-          ├── 79% Glaceres i casquets polars (gel sòlid inaccessible)
-          ├── 20% Aigües subterrànies (aqüífers)
-          └──  1% Aigües dolces superficials (rius, llacs, atmosfera i éssers vius)
-```
+<div style="background:var(--card-bg, #ffffff);border:1px solid var(--border-color, #e2e8f0);border-radius:10px;padding:18px;margin:20px 0;">
+  <div style="font-weight:700;font-size:1.05rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+    <span>🌍</span> Distribució Global de l'Aigua a la Terra (100%)
+  </div>
+  <div style="display:flex;height:28px;border-radius:6px;overflow:hidden;margin-bottom:12px;font-weight:700;font-size:0.82rem;color:#ffffff;text-align:center;line-height:28px;">
+    <div style="background:#0284c7;width:97%;" title="Aigua Salada: 97%">🌊 97% Aigua Salada (Oceans i Mars)</div>
+    <div style="background:#10b981;width:3%;" title="Aigua Dolça: 3%">💧 3%</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:12px;font-size:0.88rem;">
+    <div style="background:#f0fdf4;border-left:4px solid #10b981;padding:10px;border-radius:4px;">
+      <strong style="color:#047857;">❄️ 79% Glaceres i Pols</strong><br>
+      <span style="color:var(--text-muted);">Gel sòlid inaccessible a l'Antàrtida i Grenlàndia.</span>
+    </div>
+    <div style="background:#f0fdf4;border-left:4px solid #059669;padding:10px;border-radius:4px;">
+      <strong style="color:#047857;">🕳️ 20% Aigües Subterrànies</strong><br>
+      <span style="color:var(--text-muted);">Aqüífers i pous subterranis.</span>
+    </div>
+    <div style="background:#f0fdf4;border-left:4px solid #047857;padding:10px;border-radius:4px;">
+      <strong style="color:#047857;">🏞️ 1% Aigües Superficials</strong><br>
+      <span style="color:var(--text-muted);">Rius, llacs, atmosfera i éssers vius (aigua accessible).</span>
+    </div>
+  </div>
+</div>
 
 > [!WARNING]
 > ### L'Aigua Dolça Accessible és un Recurs Menut i Fràgil
@@ -191,12 +201,8 @@ Ocupen el $97\%$ de la hidrosfera i es caracteritzen per la seua elevada concent
 
 Tenen una salinitat molt baixa (menys de $0{,}5\text{ g/L}$) i són la base del proveïment d'aigua de les societats humanes i dels ecosistemes terrestres:
 
-```
-                            ELS TRAMS D'UN RIU
-Curs Alt (Muntanya)      Curs Mitjà (Vall)           Curs Baix (Plana i Desembocadura)
-Pendent forta ─────────> Pendent suau ─────────────> Pendent mínima
-EROSIÓ (gorges en V)     TRANSPORT (meandres)        SEDIMENTACIÓ (deltes o estuaris)
-```
+![Els Trams d'un Riu: Curs Alt, Curs Mitjà i Curs Baix](../img/trams_de_un_riu.jpg)
+*Figura: Perfil longitudinal d'un curs fluvial des de la capçalera a l'alta muntanya (Curs Alt, forta erosió), el tram intermedi de vall oberta amb meandres (Curs Mitjà, transport) i la plana al·luvial de desembocadura (Curs Baix, sedimentació).*
 
 #### A) Els Rius
 Corrents naturals continus d'aigua dolça que desemboquen en un altre riu (com a afluent), en un llac o a la mar. En el seu recorregut es distingeixen tres trams:
@@ -232,16 +238,8 @@ Quan plou, part de l'aigua s'infiltra a través dels porus de les roques permeab
 
 L'aigua del nostre planeta no roman immòbil ni es perd a l'espai: es troba en un **procés continu de circulació i canvi d'estat** conegut com el **cicle de l'aigua** o cicle hidrològic.
 
-```
-                         CONDENSACIÓ (Núvols)
-                               ▲       │
-             EVAPORACIÓ        │       ▼  PRECIPITACIÓ
-          EVAPOTRANSPIRACIÓ    │          (Pluja, Neu)
-                               │       │
-      Oceans, Mars i Plantes ──┘       ├──> ESCOLAMENT SUPERFICIAL (Rius) ──┐
-                                       │                                    ▼
-                                       └──> INFILTRACIÓ (Aqüífers) ───> [ MAR ]
-```
+![El Cicle Natural de l'Aigua](../img/cicle_de_aigua.jpg)
+*Figura: El Cicle Hidrològic Natural de la Terra: evaporació marítima i transpiració vegetal, condensació en núvols, precipitació en forma de pluja i neu, infiltració freàtica i retorn continu al mar.*
 
 ---
 
@@ -295,13 +293,8 @@ L'aigua dolça neta és un recurs natural essencial, fràgil i limitat. El creix
 
 L'aigua que utilitzem cada dia a les nostres cases passa per un complex recorregut tecnològic conegut com el **cicle integral de l'aigua**:
 
-```
-[ Medi Natural ] ➔ (1) CAPTACIÓ ➔ (2) POTABILITZACIÓ (ETAP) ➔ (3) XARXA D'AIXETES
-                                                                       │
-                                                                   (4) CONSUM
-                                                                       │
-[ Medi Natural ] ◄── (6) DEPURACIÓ (EDAR) ◄── (5) CLAVEGUERAM ◄────────┘
-```
+![El Cicle Integral Urbà de l'Aigua](../img/cicle_urba_aigua.jpg)
+*Figura: El cicle de l'aigua en les societats humanes: captació des del medi natural, tractament de potabilització (ETAP), xarxa de distribució domèstica i industrial, xarxa de clavegueram, estació depuradora (EDAR) i retorn d'aigua depurada al riu o mar.*
 
 1. **Captació:** L'aigua s'extrau de rius, embassaments, aqüífers subterranis o directament del mar mitjançant plantes dessaladores.
 2. **Potabilització (a la planta ETAP):** L'**Estació de Tractament d'Aigua Potable (ETAP)** transforma l'aigua bruta natural en aigua apta per al consum humà sense cap risc per a la salut:

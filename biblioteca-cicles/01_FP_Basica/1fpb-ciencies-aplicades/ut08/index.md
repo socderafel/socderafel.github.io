@@ -163,18 +163,7 @@ L'**aire** és una barreja homogènia de diversos gasos que no es veuen ni fan o
 
 L'atmosfera no és una massa de gas uniforme: a mesura que pugem en altura, la densitat de l'aire i la pressió disminueixen ràpidament. Atenent a com varia la **temperatura amb l'altitud**, distingim cinc capes principals:
 
-```
-  Altitud (km)
-     500 km + ────────────────────── EXOSFERA (Frontera amb l'espai exterior)
-              ▲
-      80 km + ────────────────────── TERMOSFERA / IONOSFERA (Aurores polars, >1.000 ºC)
-              ▲
-      50 km + ────────────────────── MESOSFERA (La més freda: -90 ºC, estels fugaços)
-              ▲
-      12 km + ────────────────────── ESTRATOSFERA (Capa d'ozó O₃, calma sense núvols)
-              ▲
-       0 km + ────────────────────── TROPOSFERA (On vivim: núvols, pluja, aire)
-```
+
 
 ![Capes de l'atmosfera terrestre](../img/capes_de_atmosfera.jpg)
 *Figura 8.1: Distribució en altitud de les cinc capes de l'atmosfera terrestre: **(1)** Troposfera (vida, fenòmens meteorològics i navegació aèria), **(2)** Estratosfera (capa d'ozó $\text{O}_3$ absorbent de raigs UV), **(3)** Mesosfera (desintegració de meteoroides i estels fugaços), **(4)** Termosfera / Ionosfera (aurores boreals i satèl·lits artificials), **(5)** Exosfera (transició cap a l'espai exterior).*
@@ -273,14 +262,30 @@ L'aire pesa: una columna d'aire d'$1\text{ metre quadrat}$ de base que va des de
 #### Mapes del Temps: Anticiclons i Borrasques
 En els mapes de previsió meteorològica, les línies que uneixen punts amb la mateixa pressió atmosfèrica s'anomenen **isòbares**:
 
-```
-           ANTICICLÓ (A)                             BORRASCA (B)
-        (Alta Pressió > 1013 hPa)               (Baixa Pressió < 1013 hPa)
-        L'aire descendeix i s'asseca            L'aire calent puja i es refreda
-                 │                                       │
-                 ▼                                       ▼
-        Temps ESTABLE i ASSELELLAT              Temps INESTABLE, NÚVOLS i PLUJA
-```
+<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:16px;margin:20px 0;">
+  <div style="background:var(--card-bg, #ffffff);border:1px solid #3b82f6;border-radius:10px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+      <span style="font-size:1.5rem;">☀️</span>
+      <strong style="font-size:1.1rem;color:#2563eb;">ANTICICLÓ (A) — Alta Pressió</strong>
+    </div>
+    <p style="margin:0 0 6px 0;font-size:0.9rem;"><strong>Pressió:</strong> Superior a <code>1013 hPa</code> (l'aire és dens i pesat).</p>
+    <p style="margin:0 0 6px 0;font-size:0.9rem;"><strong>Moviment de l'aire:</strong> L'aire fred <strong>descendeix</strong> (subsidiència) i s'asseca.</p>
+    <div style="background:#eff6ff;padding:8px 12px;border-radius:6px;font-size:0.86rem;color:#1e40af;font-weight:600;">
+      🌤️ Temps: <strong>Estable, sec, assolellat i sense núvols ni pluges</strong>.
+    </div>
+  </div>
+  <div style="background:var(--card-bg, #ffffff);border:1px solid #ef4444;border-radius:10px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+      <span style="font-size:1.5rem;">🌧️</span>
+      <strong style="font-size:1.1rem;color:#dc2626;">BORRASCA (B) — Baixa Pressió</strong>
+    </div>
+    <p style="margin:0 0 6px 0;font-size:0.9rem;"><strong>Pressió:</strong> Inferior a <code>1013 hPa</code> (l'aire és calent i lleuger).</p>
+    <p style="margin:0 0 6px 0;font-size:0.9rem;"><strong>Moviment de l'aire:</strong> L'aire calent i humit <strong>puja</strong> i es refreda.</p>
+    <div style="background:#fef2f2;padding:8px 12px;border-radius:6px;font-size:0.86rem;color:#991b1b;font-weight:600;">
+      ⛈️ Temps: <strong>Inestable, formació de núvols, precipitacions i vent</strong>.
+    </div>
+  </div>
+</div>
 
 - **Anticicló (A o H):** Centres d'alta pressió ($> 1.013\text{ hPa}$). L'aire fred i pesant baixa cap a terra impedint que es formen núvols. Produeix temps **estable, seré i assolellat** (sense pluja), tant a l'estiu com a l'hivern.
 - **Borrasca o Depressió (B o L):** Centres de baixa pressió ($< 1.013\text{ hPa}$). L'aire càlid i humit ascendeix lliurement. En pujar, es refreda, el vapor d'aigua es condensa formant núvols espessos, provocant **temps inestable, cels coberts, tempestes i vents forts**.

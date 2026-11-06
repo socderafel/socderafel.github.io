@@ -206,13 +206,8 @@ Dins de les galàxies hi trobem una gran diversitat de cossos celestes o **astre
 
 Molt sovint es confonen aquests tres conceptes:
 
-```
-A l'espai exterior:          Entrant a l'atmosfera:            A la superfície terrestre:
-┌─────────────────┐          ┌───────────────────────┐         ┌────────────────────────┐
-│   METEOROIDE    │  ─────>  │  METEOR / ESTEL FUGAÇ │ ─────>  │       METEORIT         │
-│ (roca orbitant) │          │(s'encén per fricció)  │         │ (resta que impacta)    │
-└─────────────────┘          └───────────────────────┘         └────────────────────────┘
-```
+![Diferències entre Meteoroide, Meteor i Meteorit](../img/meteoroide_meteor_meteorit.jpg)
+*Figura: Les tres etapes d'un cos celeste rocós: (1) Meteoroide a l'espai profund, (2) Meteor o estel fugaç desintegrant-se brillantment a l'alta atmosfera per fricció, i (3) Meteorit arribant com a roca sòlida a la superfície terrestre.*
 
 1. **Meteoroide:** Xicotet fragment de roca o pols que vaga per l'espai interplanetari.
 2. **Meteor (o Estel Fugaç):** Quan un meteoroide xoca contra l'atmosfera terrestre a gran velocitat ($10-70\text{ km/s}$), la fricció amb l'aire l'escalfa fins a vaporitzar-lo a la mesosfera, deixant un traç de llum fugaç en el cel nocturn. Les pluges d'estels més famoses són els Perseids (Les llàgrimes de Sant Llorenç a l'agost).
