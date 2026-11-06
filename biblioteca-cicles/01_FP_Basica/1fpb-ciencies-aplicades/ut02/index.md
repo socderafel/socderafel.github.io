@@ -909,6 +909,11 @@ $$\text{TMB (Noies)} = (12{,}2 \cdot m) + 746 \quad (\text{kcal/dia})$$
 
 <div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex1_2" data-answer="2833.6|2834|2833,6" data-hint="1.771 × 1,6 = 2.833,6 kcal/dia (aprox. 2.834 kcal).">
   <div class="quiz-question">✍️ Exercici 1.2: Si té activitat moderada (FA = 1,6), quina és la seua despesa energètica total diària (GET = 1.771 × 1,6)?</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u2_5_open_ex1_3">
+  <div class="open-question">✍️ <strong>Exercici 1.3 (Distribució de Nutrients):</strong> Segons la piràmide nutricional equilibrada, com s'han de repartir percentualment les calories diàries entre glúcids, lípids i proteïnes? Justifica per què els glúcids són la font d'energia principal:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Escriu els percentatges recomanats i la seua funció energètica..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -943,6 +948,11 @@ $$Q_c = V_s \cdot FC \quad (\text{en L/min})$$
 
 <div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex2_2" data-answer="7257.6|7258|7257,6" data-hint="5,04 × 60 × 24 = 7.257,6 litres al dia.">
   <div class="quiz-question">✍️ Exercici 2.2: Quants litres de sang bombeja el cor en un dia complet de 24 hores (5,04 L/min × 60 min × 24 h)?</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u2_5_open_ex2_3">
+  <div class="open-question">✍️ <strong>Exercici 2.3 (Resposta Fisiològica a l'Exercici):</strong> Durant una sessió d'exercici intens, la freqüència cardíaca s'eleva a 150 bpm i el volum sistòlic augmenta a 100 ml per batec. Calcula el nou cabal cardíac en L/min i explica per què el cos requereix aquest increment:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Calcula el cabal en L/min i justifica la necessitat d'oxigen als músculs..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -967,6 +977,11 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 
 <div class="interactive-quiz" data-quiz-id="ca1_u2_5_ex3_1" data-answer="1.8|1,8" data-hint="180 L × 0,01 = 1,8 litres d'orina al dia.">
   <div class="quiz-question">✍️ Exercici 3.1: Quants litres d'orina produeix el cos en condicions normals (180 L filtrats × 0,01 fracció no reabsorbida)?</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u2_5_open_ex3_3">
+  <div class="open-question">✍️ <strong>Exercici 3.3 (Fisiologia i Diagnòstic Renal):</strong> Per què la presència de glucosa o proteïnes a una anàlisi d'orina és un indicador de patologia renal o metabòlica (com la diabetis)? Justifica el paper de la reabsorció tubular:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Explica com actua la càpsula de Bowman i els túbuls en condicions normals..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>

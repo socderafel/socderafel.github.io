@@ -631,6 +631,11 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_5_ex1" data-answer="4/5|0.8|0,8" data-hint="Divideix numerador i denominador entre MCD(48, 60) = 12 -> 4/5 (o 0,8).">
   <div class="quiz-question">✍️ Exercici 1: Simplifica la fracció 48/60 fins a fracció irreductible (escriu '4/5' o '0.8'):</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex1_1">
+  <div class="open-question">✍️ <strong>Exercici 1.1 (Productes Creuats i Fracció Irreductible):</strong> Comprova mitjançant productes creuats si 18/24 i 15/20 són equivalents. A continuació, troba la fracció irreductible dividint pel seu MCD:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Escriu la multiplicació creuada i el procediment de simplificació..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -699,6 +704,16 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_5_rep1_dades" data-answer="250" data-hint="500 × 1/2 = 250 GB.">
   <div class="quiz-question">✍️ Repte 1: En un disc SSD de 500 GB, quants GB ocupa la partició de dades si representa 1/2 de la capacitat?</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex3_1">
+  <div class="open-question">✍️ <strong>Exercici 3.1 (Jerarquia amb Fraccions):</strong> Resol l'operació combinada [2/3 - 1/4 · (4/5)] : (7/10) mostrant la multiplicació prèvia del parèntesi, la resta i la divisió final:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Escriu els passos intermedis i la fracció irreductible final..."></textarea>
+</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u5_5_open_ex2_1">
+  <div class="open-question">✍️ <strong>Exercici 2.1 (Procediment de Comú Denominador):</strong> Desenvolupa la suma i resta de fraccions 5/12 + 7/18 - 1/6 calculant prèviament l'MCM dels denominadors (12, 18, 6):</div>
+  <textarea class="open-response-input" rows="3" placeholder="Indica el denominador comú i les fraccions equivalents resultants..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>

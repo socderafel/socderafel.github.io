@@ -717,6 +717,11 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 
 <div class="interactive-quiz" data-quiz-id="ca1_u4_5_ex1_mcd" data-answer="24" data-hint="MCD(48, 72) = 2³ · 3 = 24.">
   <div class="quiz-question">✍️ Exercici 1: Quin és el Màxim Comú Divisor de 48 i 72: MCD(48, 72) ?</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u4_5_open_ex1_1">
+  <div class="open-question">✍️ <strong>Exercici 1.1 (Justificació de Criteris):</strong> Justifica per què el nombre 1.716 és divisible entre 2, 3, 4, 6 i 11 utilitzant els criteris oficials de divisibilitat (suma de xifres, última xifra, diferència de posicions parelles/imparelles):</div>
+  <textarea class="open-response-input" rows="3" placeholder="Aplica cada criteri pas a pas demostrant la divisibilitat..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -793,6 +798,16 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 
 <div class="interactive-quiz" data-quiz-id="ca1_u4_5_rep1" data-answer="16" data-hint="MCD(48, 64) = 16 caixes (amb 3 SSD i 4 RAM cadascuna).">
   <div class="quiz-question">✍️ Repte 1: Quin és el nombre màxim de caixes idèntiques que es poden preparar amb 48 SSD i 64 RAM sense que sobre cap component (MCD)?</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u4_5_open_ex3_2">
+  <div class="open-question">✍️ <strong>Exercici 3.2 (Comprovació Experimental de l'MCD i MCM):</strong> Comprova experimentalment que per als nombres 72 i 108 es compleix la propietat fonamental: MCD(72, 108) · MCM(72, 108) = 72 · 108:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Escriu les multiplicacions d'ambdós costats de la igualtat per comprovar que coincideixen..."></textarea>
+</div>
+
+<div class="interactive-open-response" data-question-id="ca1_u4_5_open_ex2_3">
+  <div class="open-question">✍️ <strong>Exercici 2.3 (Càlcul del Nombre de Divisors):</strong> A partir de la descomposició factorial de 360 = 2³ · 3² · 5¹, aplica la fórmula N_div = (a₁ + 1)(a₂ + 1)(a₃ + 1) per calcular quants divisors té en total i enumera'n 5 d'ells:</div>
+  <textarea class="open-response-input" rows="3" placeholder="Mostra el càlcul algebraic de la quantitat de divisors..."></textarea>
+</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="El teu resultat...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
