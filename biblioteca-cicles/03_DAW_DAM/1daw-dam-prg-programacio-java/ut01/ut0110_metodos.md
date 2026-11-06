@@ -98,8 +98,9 @@ En Java existeixen dos tipus de mètodes:
 
 El mètode `main` és estàtic (`static`). En Java existeix una regla estricta:
 
-[!IMPORTANT] Regla del context estàtic
-Un mètode `static` només pot anomenar directament a **altres mètodes que també siguen `static`** dins de la mateixa classe.
+> [!IMPORTANT]
+> ### Regla del context estàtic
+> Un mètode `static` només pot anomenar directament a **altres mètodes que també siguen `static`** dins de la mateixa classe.
 
 Si intentas anomenar a un mètode normal (no estàtic) des de `main` sense haver creat un objecte, el compilador mostrarà el clàssic error:
 

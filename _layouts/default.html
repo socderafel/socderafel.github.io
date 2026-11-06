@@ -2208,18 +2208,28 @@
     .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
     .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
     .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
-    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
-    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    .admonition.danger, .admonition.caution { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title, .admonition.caution .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    .admonition.important { border-left-color: #8b5cf6; background-color: #faf5ff; }
+    .admonition.important .admonition-title { color: #6b21a8; background-color: #f3e8ff; }
+    .admonition.note { border-left-color: #3b82f6; background-color: #eff6ff; }
+    .admonition.note .admonition-title { color: #1e40af; background-color: #dbeafe; }
 
     [data-theme="dark"] .admonition.warning,
     [data-theme="dark"] .admonition.tip,
     [data-theme="dark"] .admonition.exercise,
-    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.danger,
+    [data-theme="dark"] .admonition.caution,
+    [data-theme="dark"] .admonition.important,
+    [data-theme="dark"] .admonition.note { background-color: #0f172a; }
 
-    [data-theme="dark"] .admonition.warning .admonition-title,
-    [data-theme="dark"] .admonition.tip .admonition-title,
-    [data-theme="dark"] .admonition.exercise .admonition-title,
-    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    [data-theme="dark"] .admonition.warning .admonition-title { background-color: #2e1d05; color: #fed7aa; }
+    [data-theme="dark"] .admonition.tip .admonition-title { background-color: #042f2e; color: #99f6e4; }
+    [data-theme="dark"] .admonition.exercise .admonition-title { background-color: #052e16; color: #bbf7d0; }
+    [data-theme="dark"] .admonition.danger .admonition-title,
+    [data-theme="dark"] .admonition.caution .admonition-title { background-color: #38080f; color: #fecdd3; }
+    [data-theme="dark"] .admonition.important .admonition-title { background-color: #2e1065; color: #e9d5ff; }
+    [data-theme="dark"] .admonition.note .admonition-title { background-color: #172554; color: #bfdbfe; }
 
     /* Código y Cajas de Terminal */
     code {
@@ -2838,36 +2848,131 @@
         if (target !== pre && target.parentNode) target.parentNode.removeChild(target);
       });
 
-      // 3. Transformar blockquotes amb títol en negreta en caixes .admonition
+      // 3. Transformar alertes Markdown (GFM [!NOTE], [!TIP], etc.) i blockquotes en caixes .admonition
+      const alertTypeMap = {
+        tip: { kind: 'tip', icon: '💡', title: 'Consell' },
+        note: { kind: 'note', icon: 'ℹ️', title: 'Nota' },
+        important: { kind: 'important', icon: '📌', title: 'Important' },
+        warning: { kind: 'warning', icon: '⚠️', title: 'Atenció' },
+        caution: { kind: 'caution', icon: '🚨', title: 'Precaució' },
+        danger: { kind: 'danger', icon: '🚨', title: 'Perill' }
+      };
+
+      // 3.1. Transformar blockquotes de Markdown
       document.querySelectorAll('main blockquote').forEach(bq => {
-        const firstP = bq.querySelector('p:first-child');
-        if (!firstP) return;
-        const firstStrong = firstP.querySelector('strong:first-child');
-        if (!firstStrong) return;
-        const titleText = firstStrong.innerText.trim();
-        let kind = 'note';
-        if (/^(💡|🛠️|✅)/.test(titleText)) kind = 'tip';
-        else if (/^(⚠️|⏳|📌)/.test(titleText)) kind = 'warning';
-        else if (/^(✍️|📝|🚀)/.test(titleText)) kind = 'exercise';
-        else if (/^(🚨|❌|🛑)/.test(titleText)) kind = 'danger';
+        let firstEl = bq.firstElementChild;
+        if (!firstEl) return;
 
-        const adm = document.createElement('div');
-        adm.className = 'admonition ' + kind;
-        const titleEl = document.createElement('p');
-        titleEl.className = 'admonition-title';
-        titleEl.textContent = titleText;
-        adm.appendChild(titleEl);
+        let kind = null;
+        let icon = '';
+        let titleText = null;
 
-        // Si el primer paràgraf només tenia el títol o un salt de línia després del títol
-        firstStrong.remove();
-        firstP.innerHTML = firstP.innerHTML.replace(/^\s*<br\s*\/?>\s*/i, '').trim();
-        if (!firstP.innerText.trim() && !firstP.querySelector('a, code, img')) {
-          firstP.remove();
+        const textContent = firstEl.textContent || '';
+        const tagMatch = textContent.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
+
+        if (tagMatch) {
+          const typeKey = tagMatch[1].toLowerCase();
+          const meta = alertTypeMap[typeKey] || alertTypeMap.note;
+          kind = meta.kind;
+          icon = meta.icon;
+
+          // Netejar la marca [!TAG] del contingut HTML de firstEl
+          firstEl.innerHTML = firstEl.innerHTML.replace(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(<br\s*\/?>)?/i, '').trim();
+
+          // Si el primer element ha quedat buit (com en <p>[!TIP]</p>)
+          if (!firstEl.innerText.trim() && !firstEl.querySelector('img, code, a')) {
+            const nextEl = firstEl.nextElementSibling;
+            firstEl.remove();
+            firstEl = nextEl;
+          }
+
+          // Buscar si hi ha un títol explícit
+          if (firstEl) {
+            if (/^H[1-6]$/i.test(firstEl.tagName)) {
+              titleText = firstEl.innerText.trim();
+              const nextEl = firstEl.nextElementSibling;
+              firstEl.remove();
+              firstEl = nextEl;
+            } else {
+              const strong = firstEl.querySelector('strong');
+              if (strong && firstEl.textContent.trim().startsWith(strong.textContent.trim())) {
+                titleText = strong.innerText.trim();
+                strong.remove();
+                firstEl.innerHTML = firstEl.innerHTML.replace(/^\s*(<br\s*\/?>|:|-)?\s*/i, '').trim();
+                if (!firstEl.innerText.trim() && !firstEl.querySelector('img, code, a')) {
+                  firstEl.remove();
+                }
+              }
+            }
+          }
+
+          if (!titleText) {
+            titleText = meta.title;
+          }
+        } else {
+          // Format clàssic: <strong> al principi de blockquote
+          const firstP = bq.querySelector('p:first-child');
+          if (firstP) {
+            const firstStrong = firstP.querySelector('strong:first-child');
+            if (firstStrong && firstP.textContent.trim().startsWith(firstStrong.textContent.trim())) {
+              titleText = firstStrong.innerText.trim();
+              kind = 'note';
+              if (/^(💡|🛠️|✅)/.test(titleText)) kind = 'tip';
+              else if (/^(⚠️|⏳|📌)/.test(titleText)) kind = 'warning';
+              else if (/^(✍️|📝|🚀)/.test(titleText)) kind = 'exercise';
+              else if (/^(🚨|❌|🛑)/.test(titleText)) kind = 'danger';
+
+              firstStrong.remove();
+              firstP.innerHTML = firstP.innerHTML.replace(/^\s*(<br\s*\/?>|:|-)?\s*/i, '').trim();
+              if (!firstP.innerText.trim() && !firstP.querySelector('a, code, img')) {
+                firstP.remove();
+              }
+            }
+          }
         }
-        while (bq.firstChild) {
-          adm.appendChild(bq.firstChild);
+
+        if (kind && titleText) {
+          const adm = document.createElement('div');
+          adm.className = 'admonition ' + kind;
+          const titleEl = document.createElement('p');
+          titleEl.className = 'admonition-title';
+          const hasEmoji = /^(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/.test(titleText);
+          titleEl.textContent = (icon && !hasEmoji ? icon + ' ' : '') + titleText;
+          adm.appendChild(titleEl);
+
+          while (bq.firstChild) {
+            adm.appendChild(bq.firstChild);
+          }
+          bq.parentNode.replaceChild(adm, bq);
         }
-        bq.parentNode.replaceChild(adm, bq);
+      });
+
+      // 3.2. Transformar alertes [!TAG] fora de blockquotes (paràgrafs solts)
+      document.querySelectorAll('main p').forEach(p => {
+        if (p.closest('.admonition, blockquote')) return;
+        const html = p.innerHTML;
+        const m = html.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(.*)$/i);
+        if (m) {
+          const typeKey = m[1].toLowerCase();
+          const meta = alertTypeMap[typeKey] || alertTypeMap.note;
+          const parts = m[2].split(/<br\s*\/?>/i);
+          const customTitle = parts[0].replace(/<[^>]+>/g, '').trim();
+          const remainingHtml = parts.slice(1).join('<br>').trim();
+
+          const adm = document.createElement('div');
+          adm.className = 'admonition ' + meta.kind;
+          const titleEl = document.createElement('p');
+          titleEl.className = 'admonition-title';
+          titleEl.textContent = meta.icon + ' ' + (customTitle || meta.title);
+          adm.appendChild(titleEl);
+
+          if (remainingHtml) {
+            const bodyP = document.createElement('p');
+            bodyP.innerHTML = remainingHtml;
+            adm.appendChild(bodyP);
+          }
+          p.parentNode.replaceChild(adm, p);
+        }
       });
 
       // 3.5. Fer interactives les llistes de tasques / cotejo (- [ ])
