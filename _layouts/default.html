@@ -3753,19 +3753,39 @@
             // 5. Nom del fitxer PDF segons el format requerit: Aules_[Modul]_[Unitat]_[Activitat]_[NomAlumne].pdf
             const filename = `Aules_${moduleCode}_${unitCode}_${activityCode}_${studentFilePart}.pdf`;
 
-            // 6. Recopilar activitats interactives amb neteja de caràcters per a PDF
+            // 6. Recopilar activitats interactives amb neteja de caràcters per a PDF (WinAnsiEncoding compliant)
             function cleanPdfText(str) {
               if (!str) return '';
-              return String(str)
+              let s = String(str)
+                // Eliminar emojis
                 .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F000}-\u{1F2FF}\u{FE00}-\u{FE0F}]/gu, '')
-                .replace(/[—–]/g, '-')
-                .replace(/[“”]/g, '"')
-                .replace(/[‘’]/g, "'")
-                .replace(/×/g, 'x')
-                .replace(/·/g, '.')
-                .replace(/\u00A0/g, ' ')
-                .replace(/\s+/g, ' ')
-                .trim();
+                // Subíndexs i Superíndexs numèrics
+                .replace(/₀/g, '0').replace(/₁/g, '1').replace(/₂/g, '2').replace(/₃/g, '3').replace(/₄/g, '4')
+                .replace(/₅/g, '5').replace(/₆/g, '6').replace(/₇/g, '7').replace(/₈/g, '8').replace(/₉/g, '9')
+                .replace(/⁰/g, '0').replace(/¹/g, '1').replace(/²/g, '2').replace(/³/g, '3').replace(/⁴/g, '4')
+                .replace(/⁵/g, '5').replace(/⁶/g, '6').replace(/⁷/g, '7').replace(/⁸/g, '8').replace(/⁹/g, '9')
+                // Lletres gregues i símbols científics comuns
+                .replace(/[Δ]/g, 'Delta').replace(/[λ]/g, 'lambda').replace(/[ω]/g, 'omega').replace(/[ρ]/g, 'rho')
+                .replace(/[πΠ]/g, 'pi').replace(/[μ]/g, 'u').replace(/[Ω]/g, 'Ohm')
+                // Símbols matemàtics
+                .replace(/≈/g, '~').replace(/≠/g, '!=').replace(/≤/g, '<=').replace(/≥/g, '>=')
+                .replace(/√/g, 'sqrt').replace(/ℤ/g, 'Z').replace(/∈/g, 'en')
+                // Puntuació i cometes
+                .replace(/[—–]/g, '-').replace(/[“”«»]/g, '"').replace(/[‘’]/g, "'")
+                .replace(/×/g, 'x').replace(/·/g, '.').replace(/\u00A0/g, ' ');
+
+              // Garantir que no queda cap caràcter > 255 que force a jsPDF a activar UTF-16BE (espais entre lletres)
+              let clean = '';
+              for (let i = 0; i < s.length; i++) {
+                const code = s.charCodeAt(i);
+                if (code <= 255) {
+                  clean += s[i];
+                } else {
+                  const norm = s[i].normalize('NFKD').replace(/[^\x00-\xFF]/g, '');
+                  clean += norm;
+                }
+              }
+              return clean.replace(/\s+/g, ' ').trim();
             }
 
             const allItems = document.querySelectorAll('.interactive-quiz, .interactive-mcq, .interactive-vf, .interactive-challenge-card, .interactive-open-response');
