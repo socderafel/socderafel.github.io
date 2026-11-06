@@ -142,12 +142,11 @@ El conjunt dels **nombres enters** es representa amb la lletra **$\mathbb{Z}$** 
 
 $$\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, +1, +2, +3, +4, \dots\}$$
 
-```
-               ┌── Positius (+1, +2, +3, ...) = Nombres Naturals (ℕ)
-               │
-Nombres Enters ├── Zero (0)
-     (ℤ)       │
-               └── Negatius (-1, -2, -3, ...)
+```mermaid
+flowchart TD
+  Z["ℤ Nombres Enters"] --> POS["➕ Enters Positius (+1, +2, +3, ...) = Naturals (ℕ)"]
+  Z --> ZERO["0️⃣ Zero (Element neutre, sense signe)"]
+  Z --> NEG["➖ Enters Negatius (-1, -2, -3, ...)"]
 ```
 
 Com si fóra una **nina russa (matrioixka)**, el conjunt dels naturals està totalment contingut dins dels enters: $\mathbb{N} \subset \mathbb{Z}$.
@@ -161,11 +160,7 @@ Els nombres enters es representen ordenadament sobre una recta horitzontal:
 2. A la **dreta del zero** col·loquem els nombres positius en ordre creixent ($+1, +2, +3, \dots$).
 3. A l'**esquerra del zero** col·loquem els nombres negatius en sentit decreixent ($-1, -2, -3, \dots$).
 
-```
- ───┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼───
-   -4    -3    -2    -1     0    +1    +2    +3    +4    +5   -->
-   <────── Menors ───────       ─────── Majors ──────>
-```
+$$\longleftarrow \text{Menors } (\mathbb{Z}^-) \quad -4 \quad -3 \quad -2 \quad -1 \quad \mathbf{0} \quad +1 \quad +2 \quad +3 \quad +4 \quad +5 \quad (\mathbb{Z}^+) \text{ Majors} \longrightarrow$$
 
 #### Criteri d'Ordenació
 Un nombre enter és **més gran que un altre** si està situat més a la **dreta** en la recta numèrica:
@@ -506,11 +501,13 @@ $$(-5) \cdot 6 + (-5) \cdot 4 = (-5) \cdot (6 + 4) = (-5) \cdot 10 = -50$$
 
 Quan una expressió matemàtica combina sumes, restes, multiplicacions, divisions i parèntesis, hem de seguir estrictament aquest ordre:
 
-```
-1r ➔ Parèntesis i Claudàtors [ ( ) ] (sempre de dins cap a fora)
-2n ➔ Potències i Arrels quadrades
-3r ➔ Multiplicacions (·) i Divisions (:) (d'esquerra a dreta)
-4t ➔ Sumes (+) i Restes (-) (d'esquerra a dreta o agrupant)
+```mermaid
+flowchart TD
+  P1["1️⃣ [ ( ) ] Parèntesis i Claudàtors (sempre de dins cap a fora)"]
+  P2["2️⃣ aⁿ √ Potències i Arrels quadrades"]
+  P3["3️⃣ · : Multiplicacions i Divisions (d'esquerra a dreta)"]
+  P4["4️⃣ + - Sumes i Restes (d'esquerra a dreta o agrupant)"]
+  P1 --> P2 --> P3 --> P4
 ```
 
 ---

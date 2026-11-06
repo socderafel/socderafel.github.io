@@ -264,9 +264,12 @@ El **garbell d'Eratòstenes** és un mètode clàssic ideat en l'antiga Grècia 
 5. El següent és el **$7$** (primer); tatxem els seus múltiples ($14, 21, 28, 35, 49$).
 6. Tots els nombres que queden sense tatxar són els **nombres primers**:
 
-```
-2,  3,  5,  7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
-```
+<div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin: 16px 0; text-align: center;">
+  <strong style="color: var(--accent);">Nombres primers menors que 50 (exactament 15 primers):</strong><br>
+  <p style="font-size: 1.15rem; font-family: monospace; font-weight: 700; margin: 8px 0 0; color: var(--text-color); letter-spacing: 2px;">
+    2 &nbsp;·&nbsp; 3 &nbsp;·&nbsp; 5 &nbsp;·&nbsp; 7 &nbsp;·&nbsp; 11 &nbsp;·&nbsp; 13 &nbsp;·&nbsp; 17 &nbsp;·&nbsp; 19 &nbsp;·&nbsp; 23 &nbsp;·&nbsp; 29 &nbsp;·&nbsp; 31 &nbsp;·&nbsp; 37 &nbsp;·&nbsp; 41 &nbsp;·&nbsp; 43 &nbsp;·&nbsp; 47
+  </p>
+</div>
 
 ---
 

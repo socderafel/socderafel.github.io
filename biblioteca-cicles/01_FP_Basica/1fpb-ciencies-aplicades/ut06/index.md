@@ -140,11 +140,11 @@ Segons la seua forma geomètrica, les galàxies es classifiquen en:
 - **El·líptiques:** Tenen forma ovalada o esfèrica, sense braços, i solen estar formades per estels vells.
 - **Irregulars:** No tenen una forma definida; solen ser galàxies xicotetes o deformades per col·lisions gravitatòries amb altres galàxies.
 
-```
-Tipus de galàxies:
-  [ Espirals ]       [ El·líptiques ]      [ Irregulars ]
-  Braços corbats        Forma oval        Sense simetria
-```
+| Tipus de Galàxia | Morfologia i Forma | Dinàmica i Components | Exemples Reals |
+| :--- | :--- | :--- | :--- |
+| 🌀 **Espirals** | Disc pla giratori amb braços corbats | Gas dens, pols i estrelles joves en formació contínua | **Via Làctia**, Andròmeda (M31) |
+| 🥚 **El·líptiques** | Esferoide o oval homogeni lluminós | Estrelles velles, molt poc gas i pols interestel·lar | **M87** (constel·lació de la Verge) |
+| 💫 **Irregulars** | Sense eix de simetria ni forma definida | Nuvols densos de gas i brots estel·lars violents | **Núvols de Magalhães** |
 
 ---
 
@@ -297,8 +297,17 @@ $$1 \text{ Any Llum} = 300.000\text{ km/s} \times 31.536.000\text{ s} \approx \m
 
 El nostre **Sistema Solar** es va formar fa uns **4.600 milions d'anys** a partir d'un núvol gegant de pols i gas interestel·lar. Està format pel **Sol**, que conté el $99{,}8\%$ de tota la massa, i tots els astres que orbiten atrapats pel seu camp gravitatori.
 
-```
-[ SOL ] ➔ Mercuri ➔ Venus ➔ Terra ➔ Mart ➔ [CINTURÓ D'ASTEROIDES] ➔ Júpiter ➔ Saturn ➔ Urà ➔ Neptú ➔ [CINTURÓ DE KUIPER]
+<div class="science-figure" style="text-align: center; margin: 24px 0;">
+  <img src="../img/meteoroide_meteor_meteorit.jpg" alt="Meteoroide, Meteor i Meteorit" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;"><em>Figura 6.2: Cossos menors del Sistema Solar: diferència física entre meteoroide (espai), meteor (fregament atmosfèric) i meteorit (impacte en superfície)</em></p>
+</div>
+
+```mermaid
+flowchart LR
+  S["☀️ SOL"] --> M1["Mercuri"] --> V["Venus"] --> T["🌍 Terra"] --> M2["Mart"]
+  M2 --> AB["☄️ Cinturó d'Asteroides"]
+  AB --> J["🪐 Júpiter"] --> S2["Saturn"] --> U["Urà"] --> N["Neptú"]
+  N --> KB["❄️ Cinturó de Kuiper"]
 ```
 
 ---

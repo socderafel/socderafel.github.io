@@ -119,8 +119,22 @@ La matèria que forma el nostre univers i tots els éssers vius està organitzad
 
 Podem dividir els nivells d'organització en dos grans blocs: **nivells abiòtics** (sense vida pròpia) i **nivells biòtics** (a partir dels quals comença la vida).
 
-```
-Subatòmic ➔ Atòmic ➔ Molecular ➔ Cel·lular ➔ Tissular ➔ Òrgans ➔ Sistemes ➔ Organisme ➔ Població ➔ Comunitat ➔ Ecosistema ➔ Biosfera
+<div class="science-figure" style="text-align: center; margin: 24px 0;">
+  <img src="../img/cos_huma_organs.jpg" alt="Òrgans i Sistemes del Cos Humà" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;"><em>Figura 2.1: Nivells d'organització biològica i integració dels principals sistemes del cos humà</em></p>
+</div>
+
+```mermaid
+flowchart LR
+  A["🔬 Subatòmic / Atòmic"] --> B["🧬 Molecular"]
+  B --> C["🧫 Cel·lular"]
+  C --> D["🥩 Tissular (Teixits)"]
+  D --> E["🫀 Òrgans"]
+  E --> F["🫁 Sistemes i Aparells"]
+  F --> G["🧍 Organisme"]
+  G --> H["👥 Població"]
+  H --> I["🌲 Comunitat / Ecosistema"]
+  I --> J["🌍 Biosfera"]
 ```
 
 #### Nivells Abiòtics (Inerts)
@@ -438,8 +452,9 @@ Per tal que els nutrients arribats pel sistema digestiu puguen ser aprofitats pe
 
 L'aparell respiratori és l'encarregat de captar l'oxigen de l'aire atmosfèric i transportar-lo fins a la sang, alhora que recull el **diòxid de carboni ($\text{CO}_2$)** residual de les cèl·lules i l'expulsa a l'exterior.
 
-```
-Aire exterior ➔ Fosses nasals ➔ Faringe ➔ Laringe ➔ Tràquea ➔ Bronquis ➔ Bronquíols ➔ Alvèols Pulmonars ➔ [Sang]
+```mermaid
+flowchart LR
+  A["🌬️ Aire Exterior"] --> B["👃 Fosses Nasals"] --> C["Faringe"] --> D["Laringe"] --> E["Tràquea"] --> F["Bronquis"] --> G["Bronquíols"] --> H["🫁 Alvèols Pulmonars"] --> I["🩸 Sang (Intercanvi O₂/CO₂)"]
 ```
 
 #### Anatomia de les Vies Respiratòries i Pulmons
@@ -483,8 +498,14 @@ La sang és un teixit connectiu líquid fonamental (un adult té uns 5 litres de
 
 #### B) Els Vasos Sanguinis: Artèries, Venes i Capil·lars
 
-```
-Cor ➔ Artèries ➔ Arteríoles ➔ Capil·lars [Intercanvi cel·lular] ➔ Vènules ➔ Venes ➔ Cor
+```mermaid
+flowchart LR
+  A["❤️ Cor (Ventricle)"] --> B["Artèries"]
+  B --> C["Arteríoles"]
+  C --> D["🩸 Capil·lars<br>(Intercanvi Cel·lular)"]
+  D --> E["Vènules"]
+  E --> F["Venes"]
+  F --> A
 ```
 
 - **Artèries:** Vasos amb parets gruixudes, elàstiques i musculars que **surtent del cor** i porten sang a alta pressió cap a tots els òrgans.
@@ -632,11 +653,10 @@ Cada ronyó humà conté més d'**un milió de nefrones**, diminuts tubs microsc
 1. **Glomèrul de Malpighi i Càpsula de Bowman:** Un cabdell de capil·lars sanguinis envoltat per una càpsula en forma de copa.
 2. **Túbuls Renals:** Un conducte replegat dividit en el túbul contort proximal, la **nansa de Henle** i el túbul contort distal, que desemboca en un tub col·lector comú.
 
-```
-Fases de formació de l'orina a la nefrona:
-1. FILTRACIÓ (Glomèrul)     ➔ L'aigua i xicotetes molècules passen de la sang a la càpsula.
-2. REABSORCIÓ (Túbuls)      ➔ El 99% de l'aigua i substàncies útils (glucosa) tornen a la sang.
-3. EXCRECIÓ (Tub col·lector)➔ S'obté l'orina concentrada final (aigua, sals, urea).
+```mermaid
+flowchart TD
+  A["1️⃣ FILTRACIÓ (Glomèrul renal)<br>L'aigua i xicotetes molècules de plasma passen a la càpsula"] --> B["2️⃣ REABSORCIÓ (Túbuls)<br>El 99% de l'aigua i substàncies útils (glucosa, sals) tornen a la sang"]
+  B --> C["3️⃣ EXCRECIÓ (Tub col·lector)<br>S'obté l'orina concentrada final (aigua, sals, urea) canalitzada a la bufeta"]
 ```
 
 - **Filtració Glomerular:** La sang arriba a gran pressió per l'artèria renal. A l'interior del glomèrul, gran part del líquid del plasma (aigua, glucosa, sals minerals, urea) es filtra cap a l'interior de la càpsula de Bowman. Les cèl·lules sanguínies i les grans proteïnes no poden passar.

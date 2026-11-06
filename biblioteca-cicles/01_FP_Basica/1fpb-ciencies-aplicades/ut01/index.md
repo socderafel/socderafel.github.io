@@ -142,10 +142,9 @@ El sistema decimal és un **sistema posicional**: el valor real d'una xifra dep�
 
 Vegem per exemple el nombre **$523$**:
 
-```text
-Centenes (C)   Desenes (D)   Unitats (U)
-     5              2             3
-```
+| Centenes (C) | Desenes (D) | Unitats (U) | Descomposició Polinòmica |
+| :---: | :---: | :---: | :---: |
+| **5** ($5 \times 100$) | **2** ($2 \times 10$) | **3** ($3 \times 1$) | $500 + 20 + 3 = 523$ |
 
 - La xifra **$3$** ocupa el lloc de les unitats $\rightarrow 3 \times 1 = 3$
 - La xifra **$2$** ocupa el lloc de les desenes $\rightarrow 2 \times 10 = 20$
@@ -284,10 +283,7 @@ $$\mathbb{N} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, \dots\}$$
 - **Infinitud:** No hi ha un nombre natural que siga més gran que tots els altres. Sempre podem afegir $+1$ i trobar-ne un de major.
 - **Ordre i Recta Numèrica:** Els nombres naturals estan ordenats. Podem representar-los en una recta numèrica:
 
-```text
-  0     1     2     3     4     5     6     7     8     9    ...
-──┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼─────┼────►
-```
+$$\mathbf{0} \quad 1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 \quad 8 \quad 9 \quad 10 \quad \dots \longrightarrow +\infty$$
 
 Sempre és **menor** aquell nombre que està més a l'esquerra:
 - Utilitzem el símbol **$<$** per a expressar "menor que": $4 < 7$
@@ -305,13 +301,12 @@ Per a sumar dos o més nombres:
 #### Exemple amb Portada:
 Volem calcular **$46 + 27$**:
 
-```text
-    ¹
-    4 6   (Sumem unitats: 6 + 7 = 13 → Escrivim 3, en portem 1)
-  + 2 7   (Sumem desenes: 1 + 4 + 2 = 7)
-  ─────
-    7 3
-```
+$$\begin{array}{r@{\quad}l}
+  \overset{1}{4}6 & \text{(Unitats: } 6 + 7 = 13 \rightarrow \text{escrivim } 3 \text{ i en portem } 1) \\
++ 27 & \text{(Desenes: } 4 + 2 + 1 = 7) \\
+\hline
+  \mathbf{73} & \text{(Resultat final)}
+\end{array}$$
 
 ---
 
@@ -326,13 +321,12 @@ Quan una xifra del minuend és menor que la del subtrahend, hem de **demanar pre
 #### Exemple amb Préstec:
 Volem calcular **$32 - 17$**:
 
-```text
-    ²  ¹²
-    3   2   (Com que 2 < 7, demanem 1 desena prestada: 12 - 7 = 5)
-  - 1   7   (Les desenes es queden en 2: 2 - 1 = 1)
-  ───────
-    1   5
-```
+$$\begin{array}{r@{\quad}l}
+  \overset{2}{3}\,\overset{12}{2} & \text{(Unitats: com } 2 < 7\text{, prenem } 1\text{ desena: } 12 - 7 = 5) \\
+- 1\,\;7 & \text{(Desenes: quedaven } 2\text{ desenes: } 2 - 1 = 1) \\
+\hline
+  \mathbf{15} & \text{(Resultat final)}
+\end{array}$$
 
 ---
 
@@ -344,12 +338,12 @@ Multiplicar no és més que una **manera ràpida de fer una suma repetida**.
 
 Els nombres que es multipliquen s'anomenen **factors**, i el resultat és el **producte**.
 
-```text
-     5 8
-   ×   2
-   ─────
-   1 1 6   (2 × 8 = 16 → posem 6 i portem 1;  2 × 5 = 10 + 1 = 11)
-```
+$$\begin{array}{r@{\quad}l}
+  58 & \\
+\times 2 & \\
+\hline
+  \mathbf{116} & (2 \times 8 = 16 \rightarrow \text{posem } 6 \text{ i en portem } 1; \; 2 \times 5 = 10 + 1 = 11)
+\end{array}$$
 
 ---
 
@@ -374,15 +368,18 @@ $$\text{Dividend} = (\text{Divisor} \times \text{Quocient}) + \text{Residu} \qua
 #### Exemple Resolts:
 Volem dividir **$754 : 32$**:
 
-```text
-  7 5 4  │ 32
-- 6 4    ├─────
-  ─────  │ 23   ← Quocient
-  1 1 4
--   9 6
-  ─────
-    1 8         ← Residu
-```
+$$\begin{array}{r|l}
+  754 & 32 \\
+\cline{2-2}
+- 64 & \mathbf{23} \text{ (Quocient)} \\
+\cline{1-1}
+  114 & \\
+- 96 & \\
+\cline{1-1}
+  \mathbf{18} & \text{(Residu } r < d\text{)} \\
+\end{array}$$
+
+**Prova de la divisió:** $D = d \cdot c + r \implies 754 = 32 \cdot 23 + 18 = 736 + 18 = 754$ *(Correcte)*.
 
 **Comprovació amb la Prova:**
 $$32 \times 23 + 18 = 736 + 18 = 754 \quad \text{(Correcte!)}$$
@@ -546,11 +543,13 @@ $$a \cdot (b + c) = (a \cdot b) + (a \cdot c)$$
 
 Quan tenim diverses operacions barrejades en una mateixa expressió (operacions combinades), cal seguir sempre aquest **ordre oficial estricte**:
 
-```text
-PAS 1:  ( )  [ ]  Parèntesis i claudàtors (de dins cap a fora).
-PAS 2:   aⁿ  √    Potències i arrels.
-PAS 3:   ·   :    Multiplicacions i divisions (d'esquerra a dreta).
-PAS 4:   +   -    Sumes i restes (d'esquerra a dreta).
+```mermaid
+flowchart TD
+  P1["1️⃣ ( ) [ ] Parèntesis i Claudàtors (de dins cap a fora)"]
+  P2["2️⃣ aⁿ √ Potències i Arrels"]
+  P3["3️⃣ · : Multiplicacions i Divisions (d'esquerra a dreta)"]
+  P4["4️⃣ + - Sumes i Restes (d'esquerra a dreta)"]
+  P1 --> P2 --> P3 --> P4
 ```
 
 #### Exemples Resolts Pas a Pas:
@@ -713,13 +712,7 @@ Una potència està formada per dos elements:
 - **Base ($a$):** El nombre que es multiplica per si mateix.
 - **Exponent ($n$):** El nombre de vegades que es repeteix la base.
 
-```text
-       Exponent (quantes vegades es multiplica)
-          ▼
-        2³ = 2 · 2 · 2 = 8
-        ▲
-      Base (el nombre que es repeteix)
-```
+$$\underbrace{\mathbf{2}}_{\text{Base: el nombre que es repeteix}}^{\overbrace{\mathbf{3}}^{\text{Exponent: quantes vegades es multiplica}}} = 2 \cdot 2 \cdot 2 = \mathbf{8}$$
 
 #### Exemples Didàctics:
 - $3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 81$

@@ -145,14 +145,17 @@ El moviment de convecció del ferro líquid que gira al nucli extern de la Terra
 
 Per a comprendre com funciona la Terra com un sistema interconnectat, distingim quatre grans subsistemes terrestres:
 
-```
-                  ┌── ATMOSFERA (capa de gasos que envolta la Terra)
-                  │
-PLANETA TERRA ────┼── HIDROSFERA (tota l'aigua en estat sòlid, líquid o gas)
-                  │
-                  ├── GEOSFERA   (la massa rocosa mineral sòlida)
-                  │
-                  └── BIOSFERA   (el conjunt de tots els éssers vius)
+<div class="science-figure" style="text-align: center; margin: 24px 0;">
+  <img src="../img/capes_de_la_terra.jpg" alt="Les 4 Capes del Planeta Terra" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;"><em>Figura 7.1: Els quatre grans subsistemes del planeta Terra (Atmosfera, Hidrosfera, Geosfera i Biosfera)</em></p>
+</div>
+
+```mermaid
+flowchart TD
+  T["🌍 PLANETA TERRA"] --> ATM["🌫️ ATMOSFERA<br>Capa de gasos que envolta la Terra"]
+  T --> HID["💧 HIDROSFERA<br>Tota l'aigua (líquida, gel o vapor)"]
+  T --> GEO["🪨 GEOSFERA<br>La massa mineral i rocosa sòlida"]
+  T --> BIO["🌿 BIOSFERA<br>El conjunt de tots els éssers vius"]
 ```
 
 Tots quatre components interactuen íntimament: per exemple, la geosfera allibera gasos pels volcans a l'atmosfera, l'atmosfera condensa l'aigua de la hidrosfera en forma de pluja, i l'aigua i els nutrients del sòl permeten créixer a les plantes de la biosfera.
@@ -206,13 +209,10 @@ La veritable causa de les quatre estacions és la **inclinació de $23{,}5^\circ
 1. Durant una part de l'any, l'**hemisferi nord està inclinat cap al Sol**: els raigs solars arriben de manera molt perpendicular i concentrada, i els dies són més llargs que les nits $\rightarrow$ és **estiu a l'hemisferi nord** i **hivern a l'hemisferi sud**.
 2. Sis mesos després, la Terra es troba a l'altre costat de l'òrbita i és l'**hemisferi sud el que queda inclinat cap al Sol**: els raigs arriben molt inclinats al nord, dispersant la calor, i les nits són més llargues que els dies $\rightarrow$ és **hivern a l'hemisferi nord** i **estiu a l'hemisferi sud**.
 
-```
-    Solstici d'Estiu (Nord)                                Solstici d'Hivern (Nord)
-         (21 de juny)                                           (21 de desembre)
-    Pol Nord inclinat cap al Sol                           Pol Nord inclinat lluny del Sol
-            \                                                       \
-             O ───────────────>    [ SOL ]    <─────────────── O
-```
+<div class="science-figure" style="text-align: center; margin: 24px 0;">
+  <img src="../img/estacions_solsticis_equinoccis.jpg" alt="Estacions, Solsticis i Equinoccis" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;"><em>Figura 7.2: Translació terrestre, inclinació de l'eix (23,5°) i origen dels solsticis i equinoccis</em></p>
+</div>
 
 #### Solsticis i Equinoccis (Hemisferi Nord)
 - **Solstici d'Estiu (20-21 de juny):** El dia més llarg i la nit més curta de l'any. Comença l'estiu.
