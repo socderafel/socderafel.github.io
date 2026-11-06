@@ -123,6 +123,31 @@ is_landing: true
         </a>
       </div>
 
+            <!-- Card 4: PSP Programació de Serveis i Processos -->
+      <div class="course-card accent-indigo">
+        <div>
+          <div class="course-card-top">
+            <span class="course-stage-badge">2n DAM · Grau Superior</span>
+            <span class="course-status-pill">En curs</span>
+          </div>
+          <h3 class="course-card-title">Programació de Serveis i Processos</h3>
+          <p class="course-card-desc">
+            Sistemes concurrents, multiprocés (ProcessBuilder), multifil (Threads, synchronized, wait/notify, Executors), comunicacions en xarxa amb sòcols UDP/TCP, serveis REST i criptografia segura (AES/RSA/TLS).
+          </p>
+          <div class="course-tags-row">
+            <span class="course-tag">6 Unitats (UT0-UT5)</span>
+            <span class="course-tag">Multiprocés</span>
+            <span class="course-tag">Threads</span>
+            <span class="course-tag">Sockets UDP/TCP</span>
+            <span class="course-tag">Criptografia</span>
+          </div>
+        </div>
+        <a href="/biblioteca-cicles/03_DAW_DAM/2dam-psp-programacio-serveis-processos/" class="course-btn">
+          <span>Accedir a PSP</span>
+          <span class="course-btn-arrow">→</span>
+        </a>
+      </div>
+
       <!-- Card 3: Projecte Intermodular -->
       <div class="course-card accent-amber">
         <div>

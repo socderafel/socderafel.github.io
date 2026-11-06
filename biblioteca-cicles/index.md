@@ -46,6 +46,7 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 | **FP Grau Superior** | ⚡ Desenvolupament Web en Entorn Client | 7 UD | 82 pàgs | [**📘 Entrar al Curs →**](/biblioteca-cicles/03_DAW_DAM/2daw-dwec-entorn-client/index.html) |
 | **FP Grau Superior** | 🐘 Desenvolupament Web en Entorn Servidor (PHP i Laravel) | 11 UD | 22 pàgs | [**📘 Entrar al Curs →**](/biblioteca-cicles/03_DAW_DAM/2daw-dwes-entorn-servidor/index.html) |
 | **FP Grau Superior** | 🤖 Digitalització Aplicada als Sectors Productius | 4 UD | 31 pàgs | [**📘 Entrar al Curs →**](/biblioteca-cicles/03_DAW_DAM/lomloe-digitalitzacio-aplicada/index.html) |
+| **FP Grau Superior** | 🧵 Programació de Serveis i Processos (2n DAM) | 6 UT | 7 pàgs | [**📘 Entrar al Curs →**](/biblioteca-cicles/03_DAW_DAM/2dam-psp-programacio-serveis-processos/index.html) |
 
 ## 📁 FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)
 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="234.11162mm"
+   height="230.74863mm"
+   viewBox="0 0 234.11162 230.74863"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="important.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.37509805"
+     inkscape:cx="705.23828"
+     inkscape:cy="217.83174"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="963"
+     inkscape:window-x="0"
+     inkscape:window-y="44"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-204.7681,72.406959)">
+    <path
+       style="opacity:1;fill:#beedec;fill-opacity:1;stroke:#5f8dd3;stroke-width:9.50426006;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 275.72381,-42.596042 a 99.025526,99.025526 0 0 0 -35.35272,135.507477 99.025526,99.025526 0 0 0 111.73276,45.268485 67.398838,67.398838 0 0 0 41.17334,1.73055 67.398838,67.398838 0 0 0 0.67869,-0.21454 A 67.398838,67.398838 0 0 1 377.44497,127.2699 99.025526,99.025526 0 0 0 411.23129,-7.2433223 99.025526,99.025526 0 0 0 275.72381,-42.596042 Z"
+       id="path2417"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:210.179245px;line-height:0;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#214478;fill-opacity:1;stroke:none;stroke-width:7.8817215;"
+       x="296.36325"
+       y="113.38413"
+       id="text1255-9"><tspan
+         sodipodi:role="line"
+         id="tspan1253-3"
+         x="296.36325"
+         y="113.38413"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Bonum Math';-inkscape-font-specification:'TeX Gyre Bonum Math';fill:#214478;stroke-width:7.8817215;fill-opacity:1;">!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:210.179245px;line-height:0;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#5f8dd3;fill-opacity:1;stroke:none;stroke-width:7.8817215;"
+       x="292.90756"
+       y="110.55855"
+       id="text1255"><tspan
+         sodipodi:role="line"
+         id="tspan1253"
+         x="292.90756"
+         y="110.55855"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'TeX Gyre Bonum Math';-inkscape-font-specification:'TeX Gyre Bonum Math';fill:#5f8dd3;stroke-width:7.8817215;fill-opacity:1;">!</tspan></text>
+  </g>
+</svg>
