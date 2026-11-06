@@ -2538,6 +2538,157 @@
       </div>
       <div id="sidebar-nav-content">Carregant índex del curs...</div>
     </aside>
+    <script>
+      (function() {
+        window.filterSidebar = function(input) {
+          const q = input.value.toLowerCase().trim();
+          const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+          details.forEach(d => {
+            const items = d.querySelectorAll('li');
+            let anyVisible = false;
+            items.forEach(li => {
+              const match = !q || li.innerText.toLowerCase().includes(q);
+              li.style.display = match ? '' : 'none';
+              if (match) anyVisible = true;
+            });
+            if (q) {
+              d.open = anyVisible;
+              d.style.display = anyVisible ? '' : 'none';
+            } else {
+              d.style.display = '';
+            }
+          });
+        };
+
+        window.toggleAllUnits = function(openState) {
+          document.querySelectorAll('aside.sidebar details.nav-unit').forEach(d => {
+            d.open = openState;
+          });
+        };
+
+        window.initCourseSidebar = function() {
+          const sidebar = document.getElementById('course-sidebar');
+          if (!sidebar) return;
+          const container = document.getElementById('sidebar-nav-content');
+          if (!container || container.getAttribute('data-loaded') === 'true') return;
+
+          const root = sidebar.getAttribute('data-course-root') || '.';
+          const prefix = root === '.' ? './' : root + '/';
+          const toHtmlHref = url => (!url ? '' : url.replace(/\.md(#|$)/, '.html$1'));
+
+          let basePath = window.location.pathname;
+          if (!basePath.endsWith('/') && !basePath.endsWith('.html') && !basePath.endsWith('.md')) {
+            basePath += '/';
+          }
+          const fetchUrl = new URL(prefix + 'sidebar.json?v=' + Date.now(), window.location.origin + basePath).href;
+
+          fetch(fetchUrl, { cache: 'no-store' })
+            .then(r => {
+              if (!r.ok) throw new Error('HTTP ' + r.status);
+              return r.json();
+            })
+            .then(raw => {
+              container.setAttribute('data-loaded', 'true');
+              const currentPath = window.location.pathname.replace(/\\/g, '/');
+
+              let homeObj = null;
+              let unitsList = [];
+              let footerList = [];
+
+              if (Array.isArray(raw)) {
+                homeObj = { label: '🏠 Portada del Mòdul', href: 'index.html' };
+                unitsList = raw.map(u => ({
+                  summary: u.summary || u.title || 'Unitat',
+                  items: (u.items || u.children || []).map(it => ({
+                    label: it.label || it.title || '',
+                    href: (it.href || it.url || '').replace(/\.md(#|$)/, '.html$1'),
+                    class: it.class || ''
+                  }))
+                }));
+              } else if (raw && typeof raw === 'object') {
+                if (raw.home) homeObj = raw.home;
+                else homeObj = { label: '🏠 Portada del Mòdul', href: 'index.html' };
+
+                unitsList = (raw.units || []).map(u => ({
+                  summary: u.summary || u.title || 'Unitat',
+                  items: (u.items || u.children || []).map(it => ({
+                    label: it.label || it.title || '',
+                    href: (it.href || it.url || '').replace(/\.md(#|$)/, '.html$1'),
+                    class: it.class || ''
+                  }))
+                }));
+                footerList = raw.footer || [];
+              }
+
+              let html = '';
+              if (homeObj) {
+                const homeClean = (homeObj.href || 'index.html').replace(/^\.\//, '');
+                const homeHref = toHtmlHref(prefix + homeClean);
+                const isHome = currentPath.endsWith('/') || (currentPath.endsWith('/index.html') && root === '.');
+                html += '<ul><li><a href="' + homeHref + '"' + (isHome ? ' class="active"' : '') + '>' + (homeObj.label || '🏠 Portada del Mòdul') + '</a></li></ul>';
+              }
+
+              unitsList.forEach((unit, uIdx) => {
+                let unitActive = false;
+                let itemsHtml = '';
+
+                (unit.items || []).forEach(item => {
+                  const rawHref = item.href || item.url || '';
+                  const cleanHref = toHtmlHref(rawHref.replace(/^\.\//, ''));
+                  const itemHref = toHtmlHref(prefix + cleanHref);
+                  const isItemActive = currentPath.endsWith('/' + cleanHref) ||
+                    (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, ''))) ||
+                    (currentPath.endsWith(cleanHref));
+                  if (isItemActive) unitActive = true;
+                  const cls = [item.class || '', isItemActive ? 'active' : ''].filter(Boolean).join(' ');
+                  itemsHtml += '<li><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a></li>';
+                });
+
+                if (!unitActive) {
+                  const folderMatch = unit.items && unit.items.some(it => {
+                    const m = (it.href || '').match(/^(?:\.\/)?([a-zA-Z0-9_-]+)\//);
+                    return m && currentPath.includes('/' + m[1] + '/');
+                  });
+                  if (folderMatch) unitActive = true;
+                }
+
+                const openAttr = unitActive ? ' open' : (root === '.' && uIdx === 0 ? ' open' : '');
+                html += '<details class="nav-unit"' + openAttr + '><summary><span class="unit-title">' + unit.summary + '</span><span class="unit-chevron">▾</span></summary><ul>' + itemsHtml + '</ul></details>';
+              });
+
+              if (footerList && footerList.length) {
+                html += '<ul>';
+                footerList.forEach(f => {
+                  const cleanFHref = toHtmlHref((f.href || f.url || '').replace(/^\.\//, ''));
+                  const fHref = toHtmlHref(prefix + cleanFHref);
+                  const isFActive = currentPath.endsWith('/' + cleanFHref);
+                  html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + (f.label || f.title || '') + '</a></li>';
+                });
+                html += '</ul>';
+              }
+
+              container.innerHTML = html;
+            })
+            .catch(err => {
+              console.warn("No s'ha pogut carregar sidebar.json:", err);
+              if (container && container.getAttribute('data-loaded') !== 'true') {
+                const homeFallback = toHtmlHref(prefix + 'index.html');
+                container.innerHTML = '<div style="padding:10px 4px;font-size:0.84rem;color:var(--text-muted);">' +
+                  '<p style="margin:0 0 8px 0;">ℹ️ Índex del Mòdul:</p>' +
+                  '<ul><li><a href="' + homeFallback + '">🏠 Anar a la Portada del Mòdul</a></li></ul>' +
+                  '</div>';
+              }
+            });
+        };
+
+        // Crida immediata en carregar el node al DOM
+        window.initCourseSidebar();
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', window.initCourseSidebar);
+        }
+        window.addEventListener('load', window.initCourseSidebar);
+      })();
+    </script>
     <main class="content">
       {% if page.badge %}
       <span class="up-badge">{{ page.badge }}</span>
@@ -2605,141 +2756,7 @@
       });
     }
 
-    // ========================================================
-    // CARREGADOR INDEPENDENT I ROBUST DEL SIDEBAR DEL CURS
-    // ========================================================
-    function initCourseSidebar() {
-      const sidebar = document.getElementById('course-sidebar');
-      if (!sidebar) return;
-      const container = document.getElementById('sidebar-nav-content');
-      if (!container || container.getAttribute('data-loaded') === 'true') return;
-
-      const root = sidebar.getAttribute('data-course-root') || '.';
-      const prefix = root === '.' ? './' : root + '/';
-      const toHtmlHref = url => (!url ? '' : url.replace(/\.md(#|$)/, '.html$1'));
-
-      let basePath = window.location.pathname;
-      if (!basePath.endsWith('/') && !basePath.endsWith('.html') && !basePath.endsWith('.md')) {
-        basePath += '/';
-      }
-      const fetchUrl = new URL(prefix + 'sidebar.json?v=' + Date.now(), window.location.origin + basePath).href;
-
-      fetch(fetchUrl, { cache: 'no-store' })
-        .then(r => {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.json();
-        })
-        .then(raw => {
-          container.setAttribute('data-loaded', 'true');
-          const currentPath = window.location.pathname.replace(/\\/g, '/');
-
-          // Normalitzar dades tant si sidebar.json és un Array com si és un Objecte
-          let homeObj = null;
-          let unitsList = [];
-          let footerList = [];
-
-          if (Array.isArray(raw)) {
-            homeObj = { label: '🏠 Portada del Mòdul', href: 'index.html' };
-            unitsList = raw.map(u => ({
-              summary: u.summary || u.title || 'Unitat',
-              items: (u.items || u.children || []).map(it => ({
-                label: it.label || it.title || '',
-                href: (it.href || it.url || '').replace(/\.md(#|$)/, '.html$1'),
-                class: it.class || ''
-              }))
-            }));
-          } else if (raw && typeof raw === 'object') {
-            if (raw.home) homeObj = raw.home;
-            else homeObj = { label: '🏠 Portada del Mòdul', href: 'index.html' };
-
-            unitsList = (raw.units || []).map(u => ({
-              summary: u.summary || u.title || 'Unitat',
-              items: (u.items || u.children || []).map(it => ({
-                label: it.label || it.title || '',
-                href: (it.href || it.url || '').replace(/\.md(#|$)/, '.html$1'),
-                class: it.class || ''
-              }))
-            }));
-            footerList = raw.footer || [];
-          }
-
-          let html = '';
-          if (homeObj) {
-            const homeClean = (homeObj.href || 'index.html').replace(/^\.\//, '');
-            const homeHref = toHtmlHref(prefix + homeClean);
-            const isHome = currentPath.endsWith('/') || (currentPath.endsWith('/index.html') && root === '.');
-            html += '<ul><li><a href="' + homeHref + '"' + (isHome ? ' class="active"' : '') + '>' + (homeObj.label || '🏠 Portada del Mòdul') + '</a></li></ul>';
-          }
-
-          unitsList.forEach((unit, uIdx) => {
-            let unitActive = false;
-            let itemsHtml = '';
-
-            (unit.items || []).forEach(item => {
-              const rawHref = item.href || item.url || '';
-              const cleanHref = toHtmlHref(rawHref.replace(/^\.\//, ''));
-              const itemHref = toHtmlHref(prefix + cleanHref);
-              const isItemActive = currentPath.endsWith('/' + cleanHref) ||
-                (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, ''))) ||
-                (currentPath.endsWith(cleanHref));
-              if (isItemActive) unitActive = true;
-              const cls = [item.class || '', isItemActive ? 'active' : ''].filter(Boolean).join(' ');
-              itemsHtml += '<li><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a></li>';
-            });
-
-            // Detectar si estem en alguna pàgina d'aquesta unitat pel nom de carpeta (ex. /ut01/, /ud01/, /up01/)
-            if (!unitActive) {
-              const folderMatch = unit.items && unit.items.some(it => {
-                const m = (it.href || '').match(/^(?:\.\/)?([a-zA-Z0-9_-]+)\//);
-                return m && currentPath.includes('/' + m[1] + '/');
-              });
-              if (folderMatch) unitActive = true;
-            }
-
-            // Obertura: oberta si està activa, o si és la primera unitat estant a la portada
-            const openAttr = unitActive ? ' open' : (root === '.' && uIdx === 0 ? ' open' : '');
-            html += '<details class="nav-unit"' + openAttr + '><summary><span class="unit-title">' + unit.summary + '</span><span class="unit-chevron">▾</span></summary><ul>' + itemsHtml + '</ul></details>';
-          });
-
-          if (footerList && footerList.length) {
-            html += '<ul>';
-            footerList.forEach(f => {
-              const cleanFHref = toHtmlHref((f.href || f.url || '').replace(/^\.\//, ''));
-              const fHref = toHtmlHref(prefix + cleanFHref);
-              const isFActive = currentPath.endsWith('/' + cleanFHref);
-              html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + (f.label || f.title || '') + '</a></li>';
-            });
-            html += '</ul>';
-          }
-
-          container.innerHTML = html;
-        })
-        .catch(err => {
-          console.warn("No s'ha pogut carregar sidebar.json:", err);
-          if (container && container.getAttribute('data-loaded') !== 'true') {
-            const homeFallback = toHtmlHref(prefix + 'index.html');
-            container.innerHTML = '<div style="padding:10px 4px;font-size:0.84rem;color:var(--text-muted);">' +
-              '<p style="margin:0 0 8px 0;">ℹ️ Índex del Mòdul:</p>' +
-              '<ul><li><a href="' + homeFallback + '">🏠 Anar a la Portada del Mòdul</a></li></ul>' +
-              '</div>';
-          }
-        });
-    }
-
-    // Funcions de control de desplegament d'unitats del curs
-    window.toggleAllUnits = function(openState) {
-      document.querySelectorAll('aside.sidebar details.nav-unit').forEach(d => {
-        d.open = openState;
-      });
-    };
-
-    // Execució immediata i reactiva sense bloquejos de DOMContentLoaded
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initCourseSidebar);
-    } else {
-      initCourseSidebar();
-    }
-    window.addEventListener('load', initCourseSidebar);
+    // (initCourseSidebar, filterSidebar i toggleAllUnits estan muntats al script dedicat del sidebar)
 
 
 
@@ -3689,7 +3706,7 @@
                   }
 
                   // Línia separadora subtil interna
-                  doc.setDrawColor(q.solved ? 220, 252, 231 : 241, 245, 249);
+                  if (q.solved) { doc.setDrawColor(220, 252, 231); } else { doc.setDrawColor(241, 245, 249); }
                   doc.setLineWidth(0.2);
                   doc.line(18, y + 8, 192, y + 8);
 
