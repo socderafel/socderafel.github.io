@@ -1764,10 +1764,89 @@
       font-weight: 600;
     }
 
-    .btn-mcq-opt.selected-incorrect {
+        .btn-mcq-opt.selected-incorrect {
       background: #ef4444 !important;
       color: #ffffff !important;
       border-color: #ef4444 !important;
+    }
+
+    /* Targetes fallades (sense opció de reintents) */
+    .interactive-quiz.is-failed,
+    .interactive-mcq.is-failed,
+    .interactive-vf.is-failed,
+    .interactive-challenge-card.is-failed {
+      border-left-color: #ef4444 !important;
+      background: rgba(239, 68, 68, 0.05) !important;
+    }
+
+    /* Opció correcta revelada en cas d'error */
+    .btn-mcq-opt.correct-answer,
+    .btn-vf.correct-answer {
+      border: 2px dashed #10b981 !important;
+      background: rgba(16, 185, 129, 0.12) !important;
+      color: #065f46 !important;
+      font-weight: 600;
+      position: relative;
+    }
+    .btn-mcq-opt.correct-answer::after,
+    .btn-vf.correct-answer::after {
+      content: " (Resposta correcta)";
+      font-size: 0.8rem;
+      color: #059669;
+      margin-left: 6px;
+      font-weight: 700;
+    }
+    [data-theme="dark"] .btn-mcq-opt.correct-answer,
+    [data-theme="dark"] .btn-vf.correct-answer {
+      color: #34d399 !important;
+    }
+    [data-theme="dark"] .btn-mcq-opt.correct-answer::after,
+    [data-theme="dark"] .btn-vf.correct-answer::after {
+      color: #6ee7b7;
+    }
+
+    /* Elements bloquejats (no es poden tornar a canviar) */
+    .interactive-quiz.is-solved .quiz-input,
+    .interactive-quiz.is-failed .quiz-input {
+      background: rgba(0, 0, 0, 0.04) !important;
+      cursor: not-allowed !important;
+    }
+    .interactive-quiz.is-solved .btn-quiz-check,
+    .interactive-quiz.is-failed .btn-quiz-check {
+      opacity: 0.6 !important;
+      cursor: not-allowed !important;
+      pointer-events: none;
+    }
+    .interactive-mcq.is-solved .btn-mcq-opt,
+    .interactive-mcq.is-failed .btn-mcq-opt,
+    .interactive-vf.is-solved .btn-vf,
+    .interactive-vf.is-failed .btn-vf {
+      cursor: not-allowed !important;
+    }
+    .interactive-mcq.is-solved .btn-mcq-opt:not(.selected-correct):not(.selected-incorrect):not(.correct-answer),
+    .interactive-mcq.is-failed .btn-mcq-opt:not(.selected-correct):not(.selected-incorrect):not(.correct-answer),
+    .interactive-vf.is-solved .btn-vf:not(.selected-correct):not(.selected-incorrect):not(.correct-answer),
+    .interactive-vf.is-failed .btn-vf:not(.selected-correct):not(.selected-incorrect):not(.correct-answer) {
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .btn-mcq-opt.selected-correct,
+    .btn-mcq-opt.selected-incorrect,
+    .btn-vf.selected-correct,
+    .btn-vf.selected-incorrect {
+      cursor: not-allowed !important;
+      pointer-events: none;
+    }
+    .interactive-challenge-card.is-solved input[type="radio"],
+    .interactive-challenge-card.is-failed input[type="radio"] {
+      cursor: not-allowed !important;
+      pointer-events: none;
+    }
+    .interactive-challenge-card.is-solved .btn-check,
+    .interactive-challenge-card.is-failed .btn-check {
+      opacity: 0.6 !important;
+      cursor: not-allowed !important;
+      pointer-events: none;
     }
 
     /* Activitats Vertader / Fals (V/F) */
@@ -3227,14 +3306,43 @@
           }
         };
 
-        // 1. Inicialitzar Quizzes Numèrics i de Resposta Curta
+        // 1. Inicialitzar Quizzes Numèrics i de Resposta Curta (Sense reintents)
         document.querySelectorAll('.interactive-quiz').forEach((quiz, qIdx) => {
           const input = quiz.querySelector('.quiz-input');
           const checkBtn = quiz.querySelector('.btn-quiz-check');
           const feedback = quiz.querySelector('.quiz-feedback');
           const rawExpected = (quiz.getAttribute('data-answer') || '').trim();
-          const hint = quiz.getAttribute('data-hint') || 'Revisa els càlculs i torna-ho a intentar.';
+          const hint = quiz.getAttribute('data-hint') || '';
           const quizId = quiz.getAttribute('data-quiz-id') || ('quiz_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + qIdx);
+          const primaryExpected = rawExpected.split('|')[0].trim();
+
+          const lockQuiz = (isCorrect, userVal) => {
+            if (input) {
+              input.disabled = true;
+              input.readOnly = true;
+            }
+            if (checkBtn) {
+              checkBtn.disabled = true;
+              checkBtn.textContent = 'Lliurat';
+              checkBtn.style.opacity = '0.5';
+              checkBtn.style.cursor = 'not-allowed';
+            }
+            if (isCorrect) {
+              quiz.classList.add('is-solved');
+              quiz.classList.remove('is-failed');
+              if (feedback) {
+                feedback.className = 'quiz-feedback correct';
+                feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+25 pts).';
+              }
+            } else {
+              quiz.classList.add('is-failed');
+              quiz.classList.remove('is-solved');
+              if (feedback) {
+                feedback.className = 'quiz-feedback incorrect';
+                feedback.innerHTML = '❌ <strong>Incorrecte (0 pts).</strong> La resposta correcta era: <strong>' + primaryExpected + '</strong>.' + (hint ? ' <br><small>💡 ' + hint + '</small>' : '');
+              }
+            }
+          };
 
           // Carregar estat previ de localStorage
           try {
@@ -3242,37 +3350,34 @@
             if (saved) {
               const parsed = JSON.parse(saved);
               if (input && parsed.val) input.value = parsed.val;
-              if (parsed.correct) {
-                quiz.classList.add('is-solved');
-                if (feedback) {
-                  feedback.className = 'quiz-feedback correct';
-                  feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+25 pts).';
-                }
+              if (parsed.locked || parsed.correct !== undefined) {
+                lockQuiz(parsed.correct, parsed.val);
               }
             }
           } catch(e) {}
 
           const checkAnswer = () => {
             if (!input || !feedback) return;
-            const userVal = input.value.trim().toLowerCase().replace(/\s+/g, '').replace(',', '.');
+            if (quiz.classList.contains('is-solved') || quiz.classList.contains('is-failed')) return;
+
+            const userValRaw = input.value.trim();
+            if (!userValRaw) {
+              feedback.className = 'quiz-feedback incorrect';
+              feedback.style.display = 'block';
+              feedback.innerHTML = '⚠️ Per favor, escriu un resultat abans de comprovar.';
+              return;
+            }
+
+            const userVal = userValRaw.toLowerCase().replace(/\s+/g, '').replace(',', '.');
             const validOptions = rawExpected.toLowerCase().split('|').map(s => s.trim().replace(/\s+/g, '').replace(',', '.'));
             const isCorrect = validOptions.some(opt => opt === userVal);
 
-            if (isCorrect) {
-              feedback.className = 'quiz-feedback correct';
-              feedback.innerHTML = '✅ <strong>Correcte!</strong> Has resolt aquest repte amb èxit (+25 pts).';
-              quiz.classList.add('is-solved');
-              try {
-                localStorage.setItem(quizId, JSON.stringify({ val: input.value.trim(), correct: true }));
-              } catch(e) {}
-            } else {
-              feedback.className = 'quiz-feedback incorrect';
-              feedback.innerHTML = '❌ <strong>Encara no és correcte.</strong> 💡 ' + hint;
-              quiz.classList.remove('is-solved');
-              try {
-                localStorage.setItem(quizId, JSON.stringify({ val: input.value.trim(), correct: false }));
-              } catch(e) {}
-            }
+            lockQuiz(isCorrect, userValRaw);
+
+            try {
+              localStorage.setItem(quizId, JSON.stringify({ val: userValRaw, correct: isCorrect, locked: true }));
+            } catch(e) {}
+
             updateAllTrackers();
           };
 
@@ -3284,151 +3389,207 @@
           }
         });
 
-        // 2. Inicialitzar Qüestionaris Tipus Test (MCQ)
+        // 2. Inicialitzar Qüestionaris Tipus Test (MCQ - Sense reintents)
         document.querySelectorAll('.interactive-mcq').forEach((mcq, mIdx) => {
-          const feedback = mcq.querySelector('.quiz-feedback');
+          const feedback = mcq.querySelector('.quiz-feedback, .mcq-feedback');
           const rawExpected = (mcq.getAttribute('data-answer') || '').trim().toUpperCase();
-          const hint = mcq.getAttribute('data-hint') || 'Tria l\'opció més adequada segons la teoria.';
+          const correctAttr = mcq.getAttribute('data-correct');
+          const hint = mcq.getAttribute('data-hint') || '';
           const mcqId = mcq.getAttribute('data-quiz-id') || ('mcq_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + mIdx);
           const optBtns = mcq.querySelectorAll('.btn-mcq-opt');
 
-          // Carregar estat previ
+          // Trobar quin és el botó correcte
+          let correctBtn = null;
+          if (correctAttr !== null && correctAttr !== '') {
+            const cIdx = parseInt(correctAttr, 10);
+            if (!isNaN(cIdx) && optBtns[cIdx]) {
+              correctBtn = optBtns[cIdx];
+            }
+          }
+          if (!correctBtn && rawExpected) {
+            optBtns.forEach((btn, idx) => {
+              const opt = (btn.getAttribute('data-opt') || btn.getAttribute('data-opt-index') || '').trim().toUpperCase();
+              const letter = String.fromCharCode(65 + idx);
+              if (opt === rawExpected || letter === rawExpected || String(idx) === rawExpected) {
+                correctBtn = btn;
+              }
+            });
+          }
+
+          const lockMcq = (isCorrect, selectedBtn) => {
+            optBtns.forEach(btn => {
+              btn.disabled = true;
+              btn.style.cursor = 'default';
+            });
+            if (isCorrect) {
+              if (selectedBtn) selectedBtn.classList.add('selected-correct');
+              mcq.classList.add('is-solved');
+              mcq.classList.remove('is-failed');
+              if (feedback) {
+                feedback.className = 'quiz-feedback correct';
+                feedback.innerHTML = '✅ <strong>Correcte!</strong> Resposta encertada (+25 pts).';
+              }
+            } else {
+              if (selectedBtn) selectedBtn.classList.add('selected-incorrect');
+              if (correctBtn && correctBtn !== selectedBtn) {
+                correctBtn.classList.add('correct-answer');
+              }
+              mcq.classList.add('is-failed');
+              mcq.classList.remove('is-solved');
+              const correctText = correctBtn ? correctBtn.innerText.trim() : (rawExpected || 'Opció correcta');
+              if (feedback) {
+                feedback.className = 'quiz-feedback incorrect';
+                feedback.innerHTML = '❌ <strong>Incorrecte (0 pts).</strong> La resposta correcta era: <strong>' + correctText + '</strong>.' + (hint ? ' <br><small>💡 ' + hint + '</small>' : '');
+              }
+            }
+          };
+
+          // Carregar estat previ de localStorage
           try {
             const saved = localStorage.getItem(mcqId);
             if (saved) {
               const parsed = JSON.parse(saved);
-              optBtns.forEach(btn => {
-                if (btn.getAttribute('data-opt') === parsed.selected) {
-                  if (parsed.correct) {
-                    btn.classList.add('selected-correct');
-                    mcq.classList.add('is-solved');
-                    if (feedback) {
-                      feedback.className = 'quiz-feedback correct';
-                      feedback.innerHTML = '✅ <strong>Correcte!</strong> Resposta encertada (+25 pts).';
-                    }
-                  } else {
-                    btn.classList.add('selected-incorrect');
-                    if (feedback) {
-                      feedback.className = 'quiz-feedback incorrect';
-                      feedback.innerHTML = '❌ <strong>Incorrecte.</strong> 💡 ' + hint;
-                    }
-                  }
+              let selBtn = null;
+              optBtns.forEach((btn, idx) => {
+                const optVal = btn.getAttribute('data-opt') || btn.getAttribute('data-opt-index') || String(idx);
+                if (optVal === parsed.selected || String(idx) === String(parsed.selected)) {
+                  selBtn = btn;
                 }
               });
+              if (parsed.locked || parsed.correct !== undefined) {
+                lockMcq(parsed.correct, selBtn);
+              }
             }
           } catch(e) {}
 
-          optBtns.forEach(btn => {
+          optBtns.forEach((btn, idx) => {
             btn.addEventListener('click', () => {
-              const selectedOpt = (btn.getAttribute('data-opt') || '').trim().toUpperCase();
-              optBtns.forEach(b => {
-                b.classList.remove('selected-correct');
-                b.classList.remove('selected-incorrect');
-              });
+              if (mcq.classList.contains('is-solved') || mcq.classList.contains('is-failed')) return;
 
-              const isCorrect = (selectedOpt === rawExpected);
-              if (isCorrect) {
-                btn.classList.add('selected-correct');
-                mcq.classList.add('is-solved');
-                if (feedback) {
-                  feedback.className = 'quiz-feedback correct';
-                  feedback.innerHTML = '✅ <strong>Correcte!</strong> Resposta encertada (+25 pts).';
-                }
-                try {
-                  localStorage.setItem(mcqId, JSON.stringify({ selected: selectedOpt, correct: true }));
-                } catch(e) {}
-              } else {
-                btn.classList.add('selected-incorrect');
-                mcq.classList.remove('is-solved');
-                if (feedback) {
-                  feedback.className = 'quiz-feedback incorrect';
-                  feedback.innerHTML = '❌ <strong>Incorrecte.</strong> 💡 ' + hint;
-                }
-                try {
-                  localStorage.setItem(mcqId, JSON.stringify({ selected: selectedOpt, correct: false }));
-                } catch(e) {}
-              }
+              const isCorrect = (btn === correctBtn);
+              const optKey = btn.getAttribute('data-opt') || btn.getAttribute('data-opt-index') || String(idx);
+
+              lockMcq(isCorrect, btn);
+
+              try {
+                localStorage.setItem(mcqId, JSON.stringify({ selected: optKey, correct: isCorrect, locked: true }));
+              } catch(e) {}
+
               updateAllTrackers();
             });
           });
         });
 
-        // 3. Inicialitzar Activitats de Vertader / Fals (V/F)
+        // 3. Inicialitzar Activitats de Vertader / Fals (V/F - Sense reintents)
         document.querySelectorAll('.interactive-vf').forEach((vf, vIdx) => {
           const feedback = vf.querySelector('.quiz-feedback');
           const rawExpected = (vf.getAttribute('data-answer') || '').trim().toUpperCase();
-          const hint = vf.getAttribute('data-hint') || 'Analitza detingudament l\'afirmació.';
+          const hint = vf.getAttribute('data-hint') || '';
           const vfId = vf.getAttribute('data-quiz-id') || ('vf_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + vIdx);
           const vfBtns = vf.querySelectorAll('.btn-vf');
+
+          const expectedNorm = (rawExpected === 'V' || rawExpected === 'T' || rawExpected === 'TRUE' || rawExpected === 'VERTADER') ? 'V' : 'F';
+          const expectedLabel = expectedNorm === 'V' ? 'VERTADER' : 'FALS';
+
+          const lockVf = (isCorrect, selectedBtn) => {
+            vfBtns.forEach(btn => {
+              btn.disabled = true;
+              btn.style.cursor = 'default';
+            });
+            if (isCorrect) {
+              if (selectedBtn) selectedBtn.classList.add('selected-correct');
+              vf.classList.add('is-solved');
+              vf.classList.remove('is-failed');
+              if (feedback) {
+                feedback.className = 'quiz-feedback correct';
+                feedback.innerHTML = '✅ <strong>Correcte!</strong> (+25 pts)';
+              }
+            } else {
+              if (selectedBtn) selectedBtn.classList.add('selected-incorrect');
+              vfBtns.forEach(btn => {
+                const opt = (btn.getAttribute('data-opt') || '').trim().toUpperCase();
+                if (opt === expectedNorm) btn.classList.add('correct-answer');
+              });
+              vf.classList.add('is-failed');
+              vf.classList.remove('is-solved');
+              if (feedback) {
+                feedback.className = 'quiz-feedback incorrect';
+                feedback.innerHTML = '❌ <strong>Incorrecte (0 pts).</strong> L\'afirmació és <strong>' + expectedLabel + '</strong>.' + (hint ? ' <br><small>💡 ' + hint + '</small>' : '');
+              }
+            }
+          };
 
           // Carregar estat previ
           try {
             const saved = localStorage.getItem(vfId);
             if (saved) {
               const parsed = JSON.parse(saved);
+              let selBtn = null;
               vfBtns.forEach(btn => {
-                if (btn.getAttribute('data-opt') === parsed.selected) {
-                  if (parsed.correct) {
-                    btn.classList.add('selected-correct');
-                    vf.classList.add('is-solved');
-                    if (feedback) {
-                      feedback.className = 'quiz-feedback correct';
-                      feedback.innerHTML = '✅ <strong>Correcte!</strong> (+25 pts)';
-                    }
-                  } else {
-                    btn.classList.add('selected-incorrect');
-                    if (feedback) {
-                      feedback.className = 'quiz-feedback incorrect';
-                      feedback.innerHTML = '❌ 💡 ' + hint;
-                    }
-                  }
-                }
+                if (btn.getAttribute('data-opt') === parsed.selected) selBtn = btn;
               });
+              if (parsed.locked || parsed.correct !== undefined) {
+                lockVf(parsed.correct, selBtn);
+              }
             }
           } catch(e) {}
 
           vfBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-              const selectedOpt = (btn.getAttribute('data-opt') || '').trim().toUpperCase();
-              vfBtns.forEach(b => {
-                b.classList.remove('selected-correct');
-                b.classList.remove('selected-incorrect');
-              });
+              if (vf.classList.contains('is-solved') || vf.classList.contains('is-failed')) return;
 
-              const isCorrect = (selectedOpt === rawExpected);
-              if (isCorrect) {
-                btn.classList.add('selected-correct');
-                vf.classList.add('is-solved');
-                if (feedback) {
-                  feedback.className = 'quiz-feedback correct';
-                  feedback.innerHTML = '✅ <strong>Correcte!</strong> (+25 pts)';
-                }
-                try {
-                  localStorage.setItem(vfId, JSON.stringify({ selected: selectedOpt, correct: true }));
-                } catch(e) {}
-              } else {
-                btn.classList.add('selected-incorrect');
-                vf.classList.remove('is-solved');
-                if (feedback) {
-                  feedback.className = 'quiz-feedback incorrect';
-                  feedback.innerHTML = '❌ 💡 ' + hint;
-                }
-                try {
-                  localStorage.setItem(vfId, JSON.stringify({ selected: selectedOpt, correct: false }));
-                } catch(e) {}
-              }
+              const selectedOpt = (btn.getAttribute('data-opt') || '').trim().toUpperCase();
+              const isCorrect = (selectedOpt === expectedNorm);
+
+              lockVf(isCorrect, btn);
+
+              try {
+                localStorage.setItem(vfId, JSON.stringify({ selected: selectedOpt, correct: isCorrect, locked: true }));
+              } catch(e) {}
+
               updateAllTrackers();
             });
           });
         });
 
-        // 3.5. Inicialitzar Targetes de Repte Interactiu (.interactive-challenge-card)
+        // 3.5. Inicialitzar Targetes de Repte Interactiu (.interactive-challenge-card - Sense reintents)
         document.querySelectorAll('.interactive-challenge-card').forEach((card, cIdx) => {
           const btn = card.querySelector('.btn-check');
           const feedback = card.querySelector('.feedback-msg');
           const cardId = card.getAttribute('data-challenge-id') || ('card_' + window.location.pathname.replace(/[^a-zA-Z0-9]/g, '_') + '_' + cIdx);
           const correctVal = (btn ? btn.getAttribute('data-correct') : '').trim().toLowerCase();
-          const feedbackText = btn ? (btn.getAttribute('data-feedback') || 'Molt bé! Resposta correcta.') : 'Molt bé!';
+          const feedbackText = btn ? (btn.getAttribute('data-feedback') || '') : '';
+
+          const lockCard = (isCorrect, val) => {
+            card.querySelectorAll('input[type="radio"]').forEach(rad => {
+              rad.disabled = true;
+            });
+            if (btn) {
+              btn.disabled = true;
+              btn.textContent = 'Comprovat';
+              btn.style.opacity = '0.5';
+              btn.style.cursor = 'not-allowed';
+            }
+            if (isCorrect) {
+              card.classList.add('is-solved');
+              card.classList.remove('is-failed');
+              if (feedback) {
+                feedback.style.display = 'block';
+                feedback.style.color = '#10b981';
+                feedback.innerHTML = `✅ <strong>Correcte!</strong> ${feedbackText || 'Has resolt el repte amb èxit (+25 pts).'}`;
+              }
+            } else {
+              card.classList.add('is-failed');
+              card.classList.remove('is-solved');
+              const correctRad = card.querySelector(`input[value="${correctVal}"]`);
+              const correctLabel = correctRad ? (correctRad.closest('label')?.innerText.trim() || correctVal) : correctVal;
+              if (feedback) {
+                feedback.style.display = 'block';
+                feedback.style.color = '#ef4444';
+                feedback.innerHTML = `❌ <strong>Incorrecte (0 pts).</strong> La resposta correcta era: <strong>${correctLabel}</strong>.` + (feedbackText ? `<br><small>💡 ${feedbackText}</small>` : '');
+              }
+            }
+          };
 
           try {
             const saved = localStorage.getItem(cardId);
@@ -3438,47 +3599,35 @@
                 const rad = card.querySelector(`input[value="${parsed.val}"]`);
                 if (rad) rad.checked = true;
               }
-              if (parsed.correct) {
-                card.classList.add('is-solved');
-                if (feedback) {
-                  feedback.style.display = 'block';
-                  feedback.style.color = '#15803d';
-                  feedback.innerHTML = `✅ <strong>Correcte!</strong> ${feedbackText}`;
-                }
+              if (parsed.locked || parsed.correct !== undefined) {
+                lockCard(parsed.correct, parsed.val);
               }
             }
           } catch(e) {}
 
           if (btn) {
             btn.addEventListener('click', () => {
+              if (card.classList.contains('is-solved') || card.classList.contains('is-failed')) return;
+
               const selected = card.querySelector('input[type="radio"]:checked');
               if (!selected) {
                 if (feedback) {
                   feedback.style.display = 'block';
-                  feedback.style.color = '#b91c1c';
+                  feedback.style.color = '#ef4444';
                   feedback.innerHTML = '⚠️ Tria una opció abans de comprovar.';
                 }
                 return;
               }
+
               const val = selected.value.trim().toLowerCase();
               const isCorrect = (val === correctVal);
-              if (isCorrect) {
-                card.classList.add('is-solved');
-                if (feedback) {
-                  feedback.style.display = 'block';
-                  feedback.style.color = '#15803d';
-                  feedback.innerHTML = `✅ <strong>Correcte!</strong> ${feedbackText}`;
-                }
-                try { localStorage.setItem(cardId, JSON.stringify({ val: val, correct: true })); } catch(e) {}
-              } else {
-                card.classList.remove('is-solved');
-                if (feedback) {
-                  feedback.style.display = 'block';
-                  feedback.style.color = '#b91c1c';
-                  feedback.innerHTML = '❌ Incorrecte. Torna a intentar-ho!';
-                }
-                try { localStorage.setItem(cardId, JSON.stringify({ val: val, correct: false })); } catch(e) {}
-              }
+
+              lockCard(isCorrect, val);
+
+              try {
+                localStorage.setItem(cardId, JSON.stringify({ val: val, correct: isCorrect, locked: true }));
+              } catch(e) {}
+
               updateAllTrackers();
             });
           }
@@ -3612,7 +3761,9 @@
             if (el.classList.contains('interactive-open-response')) {
               quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta redactada: ${userVal}\n     Estat: [${isSolved ? 'LLIURAT 📝 (Pendent de revisió docent)' : 'PENDENT (BUIT) ❌'}]`);
             } else {
-              quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta: ${userVal}  -->  [${isSolved ? 'CORRECTE ✅ (+25 pts)' : 'PENDENT ❌'}]`);
+              const isFailed = el.classList.contains('is-failed');
+              const statusStr = isSolved ? 'CORRECTE ✅ (+25 pts)' : (isFailed ? 'INCORRECTE ❌ (0 pts)' : 'PENDENT ⏳ (sense respondre)');
+              quizDetails.push(`  ${idx + 1}. ${qTitle}\n     Resposta: ${userVal}  -->  [${statusStr}]`);
             }
           });
 
@@ -3852,6 +4003,7 @@
                 title: qTitle,
                 answer: userVal,
                 solved: isSolved,
+                failed: el.classList.contains('is-failed'),
                 isOpen: el.classList.contains('interactive-open-response')
               });
             });
@@ -4015,6 +4167,9 @@
                   } else if (q.solved) {
                     doc.setFillColor(248, 253, 250); // verd molt suau
                     doc.setDrawColor(187, 247, 208); // vora verda
+                  } else if (q.failed) {
+                    doc.setFillColor(254, 248, 248); // fons roig suau
+                    doc.setDrawColor(254, 202, 202); // vora roja suau
                   } else {
                     doc.setFillColor(254, 254, 255); // fons net
                     doc.setDrawColor(226, 232, 240); // vora gris clara
@@ -4055,13 +4210,21 @@
                     doc.setFontSize(7.5);
                     doc.setTextColor(21, 128, 61);
                     doc.text("CORRECTE (+25 pts)", 168, y + 5.4, { align: 'center' });
-                  } else {
+                  } else if (q.failed) {
                     doc.setFillColor(254, 226, 226);
                     doc.setDrawColor(252, 165, 165);
-                    doc.roundedRect(162, y + 1.8, 30, 5.2, 1.2, 1.2, 'FD');
+                    doc.roundedRect(142, y + 1.8, 50, 5.2, 1.2, 1.2, 'FD');
                     doc.setFont("helvetica", "bold");
                     doc.setFontSize(7.5);
                     doc.setTextColor(185, 28, 28);
+                    doc.text("INCORRECTE (0 pts)", 167, y + 5.4, { align: 'center' });
+                  } else {
+                    doc.setFillColor(241, 245, 249);
+                    doc.setDrawColor(203, 213, 225);
+                    doc.roundedRect(162, y + 1.8, 30, 5.2, 1.2, 1.2, 'FD');
+                    doc.setFont("helvetica", "bold");
+                    doc.setFontSize(7.5);
+                    doc.setTextColor(100, 116, 139);
                     doc.text("PENDENT", 177, y + 5.4, { align: 'center' });
                   }
 
