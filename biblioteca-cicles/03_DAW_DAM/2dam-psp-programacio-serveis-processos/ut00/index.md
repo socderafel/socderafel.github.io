@@ -16,7 +16,7 @@ title: "UT00: Presentación, Guía Didáctica y Entorno de Desarrollo"
 El módulo de **Programación de Servicios y Procesos (PSP)** se imparte en el ciclo formativo de **Grado Superior de Desarrollo de Aplicaciones Multiplataforma (2n DAM)** con una carga lectiva de **70 horas** (3 horas semanales).
 
 ### 1.1. Información del Profesorado
-- **Docente:** José Ramón Simó Martínez
+- **Docente:** Pepe Cuenca
 - **Centro:** IES Sant Vicent Ferrer (Algemesí)
 - **Departamento:** Informática y Comunicaciones
 - **Materiales oficiales:** Disponible la versión completa en [Guía Didáctica 2025/2026 (PDF)](../img/2526-2DAM-PSP-Guia Didàctica.pdf) y [Criterios de Calificación (PDF)](../img/2526_2dam_psp_criteris_qualificacio.pdf).
