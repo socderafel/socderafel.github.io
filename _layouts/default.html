@@ -3017,14 +3017,32 @@
           if (m) lang = m[1].toUpperCase();
         }
         if (lang === 'MERMAID' || lang === 'FLOWCHART' || pre.classList.contains('mermaid')) return;
+        
+        const isTerminalLang = ['BASH', 'SH', 'CMD', 'POWERSHELL', 'PS1', 'SHELL', 'TERMINAL', 'CONSOLE', 'CLI', 'BATCH'].includes(lang);
+        const isAsciiDiagram = /^\s*(\+[-=]{3,}|\┌|\╔|\|)/m.test(pre.textContent);
+
+        let boxTitle = 'Codi de Programa';
+        if (isTerminalLang) boxTitle = 'Consola / Terminal';
+        else if (isAsciiDiagram) boxTitle = '📐 Esquema Tècnic';
+        else if (lang === 'JAVA') boxTitle = 'Codi Java';
+        else if (lang === 'PYTHON') boxTitle = 'Codi Python';
+        else if (lang === 'SQL') boxTitle = 'Consulta SQL';
+        else if (lang === 'HTML' || lang === 'XML') boxTitle = 'Codi Web';
+        else if (lang === 'CSS') boxTitle = 'Full d\'Estils CSS';
+        else if (lang === 'JAVASCRIPT' || lang === 'JS') boxTitle = 'Script JavaScript';
+        else if (lang === 'PLAINTEXT' || lang === 'TEXT') boxTitle = isAsciiDiagram ? '📐 Esquema Tècnic' : 'Exemple';
+
         const wrapper = document.createElement('div');
-        wrapper.className = 'terminal-box';
+        wrapper.className = isAsciiDiagram ? 'terminal-box schematic-box' : 'terminal-box';
         const bar = document.createElement('div');
         bar.className = 'terminal-bar';
+        const dotsHtml = isAsciiDiagram
+          ? '<div class="terminal-dots"><span class="dot" style="background:#94a3b8;"></span></div>'
+          : '<div class="terminal-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>';
         bar.innerHTML =
-          '<div class="terminal-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>' +
-          '<div class="terminal-title">Codi / Terminal</div>' +
-          '<div class="terminal-actions"><span class="terminal-lang">' + lang + '</span><button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button></div>';
+          dotsHtml +
+          '<div class="terminal-title">' + boxTitle + '</div>' +
+          '<div class="terminal-actions"><span class="terminal-lang">' + (isAsciiDiagram ? 'ESQUEMA' : lang) + '</span><button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button></div>';
         const target = pre.closest('div.highlighter-rouge') || pre;
         target.parentNode.insertBefore(wrapper, target);
         wrapper.appendChild(bar);
