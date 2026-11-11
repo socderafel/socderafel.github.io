@@ -54,7 +54,7 @@ Para el correcto seguimiento de las prácticas del módulo se requiere:
 Responde a este cuestionario diagnóstico inicial para validar tus fundamentos sobre sistemas operativos, gestión de memoria, jerarquía de procesos y lenguaje Java:
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q1" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 1:</strong> Quina estructura de control s'utilitza per repetir instruccions un nombre conegut de vegades?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 1:</strong> ¿Qué estructura de control se utiliza para repetir instrucciones un número conocido de veces?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">for</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">if</button>
@@ -65,29 +65,29 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q2" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 2:</strong> Quina és la diferència entre break i continue dins d'un bucle?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 2:</strong> ¿Cuál es la diferencia entre break y continue dentro de un bucle?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">break ix del bucle, continue salta a la següent iteració</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">break repeteix la mateixa iteració, continue acaba el bucle</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="2">Són equivalents</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="3">Només es poden usar en switch</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">break sale del bucle, continue salta a la siguiente iteración</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">break repite la misma iteración, continue finaliza el bucle</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="2">Son equivalentes</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="3">Solo se pueden usar en switch</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q3" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 3:</strong> Què mostrarà? class A { void m() { System.out.println(&quot;A&quot;); } } class B extends A { void m() { System.out.println(&quot;B&quot;); } } public class P { public static void main(String[] args) { A obj = new B(); obj.m(); } }</div>
+  <div class="mcq-question">❓ <strong>Pregunta 3:</strong> ¿Qué mostrará? class A { void m() { System.out.println(&quot;A&quot;); } } class B extends A { void m() { System.out.println(&quot;B&quot;); } } public class P { public static void main(String[] args) { A obj = new B(); obj.m(); } }</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">B</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">A</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="2">Error</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="3">Res</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="3">Nada</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q4" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 4:</strong> Què imprimirà? int f(int n) { if (n &lt;= 1) return 1; return n * f(n - 1); } public static void main(String[] args) { System.out.println(f(4));}</div>
+  <div class="mcq-question">❓ <strong>Pregunta 4:</strong> ¿Qué imprimirá? int f(int n) { if (n &lt;= 1) return 1; return n * f(n - 1); } public static void main(String[] args) { System.out.println(f(4));}</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">24</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">4</button>
@@ -109,7 +109,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q6" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 6:</strong> Què mostrarà? for (int i = 1; i &lt;= 4; i++) { if (i % 2 == 0) continue; System.out.print(i + &quot; &quot;); }</div>
+  <div class="mcq-question">❓ <strong>Pregunta 6:</strong> ¿Qué mostrará? for (int i = 1; i &lt;= 4; i++) { if (i % 2 == 0) continue; System.out.print(i + &quot; &quot;); }</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">1 3</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">1 2 3 4</button>
@@ -131,18 +131,18 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q8" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 8:</strong> Què passa si un mètode recursiu no té condició de parada?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 8:</strong> ¿Qué ocurre si un método recursivo no tiene condición de parada?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Es repetix infinitament i provoca un StackOverflowError</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Es tradueix automàticament en un bucle</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="2">No es pot compilar</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="3">Retorna null</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Se repite infinitamente y provoca un StackOverflowError</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Se traduce automáticamente en un bucle</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="2">No se puede compilar</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="3">Devuelve null</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q9" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 9:</strong> Quin paquet de Java conté ArrayList i HashMap?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 9:</strong> ¿Qué paquete de Java contiene ArrayList y HashMap?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">java.util</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">java.io</button>
@@ -153,7 +153,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q10" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 10:</strong> Quin resultat mostrarà? for (int i = 1; i <= 3; i++) { System.out.print(i + &quot; &quot;); }</div>
+  <div class="mcq-question">❓ <strong>Pregunta 10:</strong> ¿Qué resultado mostrará? for (int i = 1; i <= 3; i++) { System.out.print(i + &quot; &quot;); }</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">1 2 3</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">0 1 2</button>
@@ -164,7 +164,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q11" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 11:</strong> Què mostrarà? int[] a = {1, 2, 3}; System.out.println(a[2]);</div>
+  <div class="mcq-question">❓ <strong>Pregunta 11:</strong> ¿Qué mostrará? int[] a = {1, 2, 3}; System.out.println(a[2]);</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">3</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">1</button>
@@ -175,7 +175,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q12" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 12:</strong> Quin resultat obtindràs? ArrayList a = new ArrayList (); a.add(5); a.add(10); System.out.println(a.get(0));</div>
+  <div class="mcq-question">❓ <strong>Pregunta 12:</strong> ¿Qué resultado obtendrás? ArrayList a = new ArrayList (); a.add(5); a.add(10); System.out.println(a.get(0));</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">5</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">10</button>
@@ -186,7 +186,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q13" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 13:</strong> Què imprimirà? int[][] mat = { {1, 2}, {3, 4} }; System.out.println(mat[0][1]);</div>
+  <div class="mcq-question">❓ <strong>Pregunta 13:</strong> ¿Qué imprimirá? int[][] mat = { {1, 2}, {3, 4} }; System.out.println(mat[0][1]);</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">2</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">1</button>
@@ -197,7 +197,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q14" data-correct="1">
-  <div class="mcq-question">❓ <strong>Pregunta 14:</strong> Quin tipus de col·lecció de Java emmagatzema parelles clau-valor?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 14:</strong> ¿Qué tipo de colección de Java almacena pares clave-valor?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">HashMap</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">HashSet</button>
@@ -206,7 +206,7 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q15" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 15:</strong> Quin modificador s’utilitza per declarar una constant en Java?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 15:</strong> ¿Qué modificador se utiliza para declarar una constante en Java?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">final</button>
   </div>
@@ -214,50 +214,50 @@ Responde a este cuestionario diagnóstico inicial para validar tus fundamentos s
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q16" data-correct="1">
-  <div class="mcq-question">❓ <strong>Pregunta 16:</strong> Quin mètode d’entrada de la classe Scanner permet llegir una cadena de text formada per diferents paraules (una oració, per exemple)?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 16:</strong> ¿Qué método de entrada de la clase Scanner permite leer una cadena de texto formada por diferentes palabras (una oración, por ejemplo)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">nextline</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">nextline()</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">nextLine()</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q17" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 17:</strong> Quin tipus d'error captura un try-catch?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 17:</strong> ¿Qué tipo de error captura un try-catch?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Error en temps d'execució</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Error de compilació</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="2">Error de sintaxi</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="3">Qualsevol dels anteriors</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Error en tiempo de ejecución</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Error de compilación</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="2">Error de sintaxis</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="3">Cualquiera de los anteriores</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q18" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 18:</strong> Què passarà? try { int x = 10 / 0; } catch (Exception e) { System.out.println(&quot;E&quot;); }</div>
+  <div class="mcq-question">❓ <strong>Pregunta 18:</strong> ¿Qué pasará? try { int x = 10 / 0; } catch (Exception e) { System.out.println(&quot;E&quot;); }</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">E</button>
     <button type="button" class="btn-mcq-opt" data-opt-index="1">0</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="2">Error de compilació</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="3">Res</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="2">Error de compilación</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="3">Nada</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q19" data-correct="0">
-  <div class="mcq-question">❓ <strong>Pregunta 19:</strong> Quin tipus de valor retorna un mètode que no torna res?</div>
+  <div class="mcq-question">❓ <strong>Pregunta 19:</strong> ¿Qué tipo de valor devuelve un método que no retorna nada?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">void</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
 
-<div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q20" data-correct="2">
-  <div class="mcq-question">❓ <strong>Pregunta 20:</strong> Quin tipus de bucle s’executa almenys una vegada, encara que la condició siga falsa?</div>
+<div class="interactive-mcq" data-quiz-id="psp_ut00_pre_q20" data-correct="0">
+  <div class="mcq-question">❓ <strong>Pregunta 20:</strong> ¿Qué tipo de bucle se ejecuta al menos una vez, aunque la condición sea falsa?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt-index="0">do-while</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">dowhile</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="2">do while</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">for</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="2">while</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>

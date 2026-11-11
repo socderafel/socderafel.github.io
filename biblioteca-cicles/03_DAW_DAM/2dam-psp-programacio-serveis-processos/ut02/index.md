@@ -67,8 +67,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q1" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 1:</strong> Verdadero o falso: En Java, la forma recomendada de crear un hilo es extendiendo la clase Thread.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -76,8 +76,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q2" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 2:</strong> En Java, la forma recomendada de crear un hilo es extendiendo la clase Thread.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -85,8 +85,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q3" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 3:</strong> En Java, la forma recomendada de crear un hilo es extendiendo la clase Thread.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -105,8 +105,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q5" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 5:</strong> El método join(long millis) permite establecer un tiempo máximo de espera a que finalice un hilo.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -114,8 +114,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q6" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 6:</strong> En el ejercicio HolaThreadsParam.java, el método main debe esperar a que terminen todos los hilos antes de finalizar el programa.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -200,8 +200,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q14" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 14:</strong> Verdadero o falso: El método yield() pone el hilo actual en estado WAITING.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -209,8 +209,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q15" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 15:</strong> El método yield() pone el hilo actual en estado WAITING.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -218,8 +218,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q16" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 16:</strong> El método yield() pone el hilo actual en estado WAITING.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -227,8 +227,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q17" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 17:</strong> asdfasdfEl método yield() pone el hilo actual en estado WAITING.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -236,8 +236,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q18" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 18:</strong> El método yield() pone el hilo actual en estado WAITING.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -245,8 +245,8 @@ Un hilo en la máquina virtual de Java (JVM) transita entre los siguientes estad
 <div class="interactive-mcq" data-quiz-id="psp_ut02_s1_q19" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 19:</strong> El método yield() pone el hilo actual en estado WAITING.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -427,32 +427,32 @@ pool.shutdown();
 
 ## 5. Tareas Evaluables de la Unidad 2
 
-### 5.1. Tasca 3: Creación de Hilos con Parámetros (`HolaThreadsParam.java`)
+### 5.1. Tarea 3: Creación de Hilos con Parámetros (`HolaThreadsParam.java`)
 <div class="interactive-open-response" data-question-id="psp_ut02_open_tasca3">
-  <div class="open-question">✍️ <strong>Tasca 3 (Creació de fils):</strong> Implementa un programa donde se creen $N$ hilos a los que se les pasa como parámetro su identificador y un retardo aleatorio. Muestra el código de la clase del hilo y la clase lanzadora:</div>
+  <div class="open-question">✍️ <strong>Tarea 3 (Creación de hilos):</strong> Implementa un programa donde se creen $N$ hilos a los que se les pasa como parámetro su identificador y un retardo aleatorio. Muestra el código de la clase del hilo y la clase lanzadora:</div>
   <textarea class="open-response-input" rows="4" placeholder="Código fuente de HolaThreadsParam..."></textarea>
 </div>
 
-### 5.2. Tasca 4: Cálculo Concurrente de un Sumatorio
+### 5.2. Tarea 4: Cálculo Concurrente de un Sumatorio
 <div class="interactive-open-response" data-question-id="psp_ut02_open_tasca4">
-  <div class="open-question">✍️ <strong>Tasca 4 (Sumatorio):</strong> Divide el cálculo de la suma de los números del 1 al 1.000.000 entre 4 hilos concurrentes que acumulan en un objeto compartido. Pega el código y justifica la sincronización empleada:</div>
+  <div class="open-question">✍️ <strong>Tarea 4 (Sumatorio):</strong> Divide el cálculo de la suma de los números del 1 al 1.000.000 entre 4 hilos concurrentes que acumulan en un objeto compartido. Pega el código y justifica la sincronización empleada:</div>
   <textarea class="open-response-input" rows="4" placeholder="Código de SumatorioThreads y Acumulador..."></textarea>
 </div>
 
-### 5.3. Tasca 6: Buffer Productor-Consumidor con `wait()` y `notify()`
+### 5.3. Tarea 6: Buffer Productor-Consumidor con `wait()` y `notify()`
 <div class="interactive-open-response" data-question-id="psp_ut02_open_tasca6">
-  <div class="open-question">✍️ <strong>Tasca 6 (Productor-Consumidor):</strong> Explica cómo gestionas las colas de espera en el buffer compartido y pega la clase del monitor y el método principal:</div>
+  <div class="open-question">✍️ <strong>Tarea 6 (Productor-Consumidor):</strong> Explica cómo gestionas las colas de espera en el buffer compartido y pega la clase del monitor y el método principal:</div>
   <textarea class="open-response-input" rows="4" placeholder="Código del modelo Productor-Consumidor..."></textarea>
 </div>
 
-### 5.4. Tasca 7: Gestión Avanzada de Hilos (The Simpsons)
+### 5.4. Tarea 7: Gestión Avanzada de Hilos (The Simpsons)
 <div class="interactive-open-response" data-question-id="psp_ut02_open_tasca7">
-  <div class="open-question">✍️ <strong>Tasca 7 (The Simpsons):</strong> Describe la resolución del problema de sincronización de la caja de donuts o el sofá de los Simpson y pega el código de tu solución:</div>
+  <div class="open-question">✍️ <strong>Tarea 7 (The Simpsons):</strong> Describe la resolución del problema de sincronización de la caja de donuts o el sofá de los Simpson y pega el código de tu solución:</div>
   <textarea class="open-response-input" rows="4" placeholder="Resolución de la práctica The Simpsons..."></textarea>
 </div>
 
-### 5.5. Tasca 8 y 9: `Callable`, `FutureTask` y `ExecutorService`
+### 5.5. Tareas 8 y 9: `Callable`, `FutureTask` y `ExecutorService`
 <div class="interactive-open-response" data-question-id="psp_ut02_open_tasca8_9">
-  <div class="open-question">✍️ <strong>Tasques 8 i 9 (Executors):</strong> Compara el rendimiento de ejecutar 100 tareas con hilos manuales frente a un <code>ExecutorService</code> con un pool de hilos reutilizables y pega el código de tu benchmark:</div>
+  <div class="open-question">✍️ <strong>Tareas 8 y 9 (Executors):</strong> Compara el rendimiento de ejecutar 100 tareas con hilos manuales frente a un <code>ExecutorService</code> con un pool de hilos reutilizables y pega el código de tu benchmark:</div>
   <textarea class="open-response-input" rows="4" placeholder="Comparativa de ejecución y código con Executors.newFixedThreadPool..."></textarea>
 </div>

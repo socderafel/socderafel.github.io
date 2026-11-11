@@ -90,8 +90,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q5" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 5:</strong> El comando utilizado para crear una tubería con nombre en Linux es mkfifo.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -143,8 +143,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q10" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 10:</strong> Las tuberías con nombre (named pipes) son ficheros especiales que permiten comunicación tipo LIFO entre procesos.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -222,8 +222,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q17" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 17:</strong> El demonio Systemd se encarga también de la secuencia de arranque del sistema y de gestionar los diferentes niveles de ejecución</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -231,8 +231,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q18" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 18:</strong> Los demonios pueden ofrecer servicios o realizar otras tareas, como mantener la hora del sistema</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -240,8 +240,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q19" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 19:</strong> El demonio Systemd utiliza el comando systemctl para consultar el estado de los servicios, pero no puede gestionar éstos</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -249,8 +249,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q20" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 20:</strong> Los demonios pueden tener terminal asociada e interfaz gráfica</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -258,8 +258,8 @@ En sistemas GNU/Linux podemos inspeccionar la tabla de procesos con herramientas
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s1_q21" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 21:</strong> Los demonios son procesos que se ejecutan en segundo plano</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -408,8 +408,8 @@ public class Suma {
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s2_q5" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 5:</strong> c. El método waitFor() devuelve siempre un Booleano.</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -417,8 +417,8 @@ public class Suma {
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s2_q6" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 6:</strong> b. El Método isAlive() retorna true si el proceso creado sigue en ejecución</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -426,8 +426,8 @@ public class Suma {
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s2_q7" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 7:</strong> d. El método destroy envía la señal SIGKILL al proceso</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -435,8 +435,8 @@ public class Suma {
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s2_q8" data-correct="0">
   <div class="mcq-question">❓ <strong>Pregunta 8:</strong> El método exitValue() nos devuelve el código de salida del proceso, una vez finalizdo</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -444,8 +444,8 @@ public class Suma {
 <div class="interactive-mcq" data-quiz-id="psp_ut01_s2_q9" data-correct="1">
   <div class="mcq-question">❓ <strong>Pregunta 9:</strong> e. El método destroyForcibily envía la señal SIGTERM al proceso</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdader</button>
-    <button type="button" class="btn-mcq-opt" data-opt-index="1">Fals</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="0">Verdadero</button>
+    <button type="button" class="btn-mcq-opt" data-opt-index="1">Falso</button>
   </div>
   <div class="mcq-feedback"></div>
 </div>
@@ -483,30 +483,30 @@ Cada proceso dispone por defecto de tres descriptores de archivo estándar hered
 
 ## 4. Tareas Evaluables y Proyectos Prácticos
 
-### 4.1. Tasca 1: Ejecución y Finalización Controlada de un Editor (`U1EditorControlado.java`)
+### 4.1. Tarea 1: Ejecución y Finalización Controlada de un Editor (`U1EditorControlado.java`)
 Crea un programa en Java que permita abrir un editor de texto (por ejemplo `gedit` en Linux o `notepad.exe` en Windows) pasando un archivo como argumento, y gestione su ejecución:
 - Si el usuario cierra el editor normalmente antes de un tiempo límite (10 segundos), el programa muestra el código de salida normal.
 - Si transcurren los 10 segundos y el editor sigue abierto, el programa debe advertir al usuario y forzar la destrucción del proceso hijo mediante `destroyForcibly()`.
 
 <div class="interactive-open-response" data-question-id="psp_ut01_open_tasca1">
-  <div class="open-question">✍️ <strong>Tasca 1 (U1EditorControlado):</strong> Pega aquí la implementación de tu clase <code>U1EditorControlado.java</code> y explica cómo controlas el tiempo máximo mediante <code>waitFor(timeout, unit)</code> y el método <code>destroyForcibly()</code>:</div>
+  <div class="open-question">✍️ <strong>Tarea 1 (U1EditorControlado):</strong> Pega aquí la implementación de tu clase <code>U1EditorControlado.java</code> y explica cómo controlas el tiempo máximo mediante <code>waitFor(timeout, unit)</code> y el método <code>destroyForcibly()</code>:</div>
   <textarea class="open-response-input" rows="4" placeholder="public class U1EditorControlado Ellipsis"></textarea>
 </div>
 
-### 4.2. Tasca 2: Productor - Consumidor de Procesos mediante Tuberías
+### 4.2. Tarea 2: Productor - Consumidor de Procesos mediante Tuberías
 Diseña dos programas independientes:
 1. `Consumidor.java`: Lee líneas desde su entrada estándar (`System.in`) utilizando un `BufferedReader`, las convierte a mayúsculas y las imprime en su salida.
 2. `Productor.java`: Lanza a `Consumidor` mediante `ProcessBuilder`, obtiene su `OutputStream`, le envía una serie de cadenas y posteriormente lee la respuesta devuelta por el consumidor mostrando el resultado en pantalla.
 
 <div class="interactive-open-response" data-question-id="psp_ut01_open_tasca2">
-  <div class="open-question">✍️ <strong>Tasca 2 (Productor-Consumidor E/S):</strong> Pega el código de <code>Productor.java</code> y <code>Consumidor.java</code> detallando cómo cierras el flujo con <code>flush()</code> y <code>close()</code> para evitar bloqueos mutuos (*deadlocks*):</div>
+  <div class="open-question">✍️ <strong>Tarea 2 (Productor-Consumidor E/S):</strong> Pega el código de <code>Productor.java</code> y <code>Consumidor.java</code> detallando cómo cierras el flujo con <code>flush()</code> y <code>close()</code> para evitar bloqueos mutuos (*deadlocks*):</div>
   <textarea class="open-response-input" rows="4" placeholder="Código fuente y justificación del manejo de streams..."></textarea>
 </div>
 
-### 4.3. Projecte 1 (Avaluació Contínua): MyShell
+### 4.3. Proyecto 1 (Evaluación Continua): MyShell
 Desarrollo de un intérprete de comandos interactivo en Java (`MyShell`) con soporte para ejecución de binarios del sistema, comando interno `cd`, `exit`, paso de argumentos, y redirecciones de entrada y salida con los operadores `>`, `>>` y `<`.
 
 <div class="interactive-open-response" data-question-id="psp_ut01_open_myshell">
-  <div class="open-question">✍️ <strong>Projecte 1 (Memòria de MyShell):</strong> Resume las características implementadas en tu proyecto MyShell (gestión de rutas, comandos integrados, redirecciones o tuberías) y pega la clase principal <code>MyShell.java</code>:</div>
+  <div class="open-question">✍️ <strong>Proyecto 1 (Memoria de MyShell):</strong> Resume las características implementadas en tu proyecto MyShell (gestión de rutas, comandos integrados, redirecciones o tuberías) y pega la clase principal <code>MyShell.java</code>:</div>
   <textarea class="open-response-input" rows="5" placeholder="Documentación de la arquitectura de MyShell y código de la shell interactiva..."></textarea>
 </div>

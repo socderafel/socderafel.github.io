@@ -165,15 +165,15 @@ class ManejadorCliente implements Runnable {
 
 ---
 
-## 4. Tarea Práctica Evaluativa: Tasca 10
+## 4. Tarea Práctica Evaluativa: Tarea 10
 
 ### 4.1. Práctica Guiada de Creación de Cliente y Servidor UDP
-D'acord amb la guia docent oficial del curs ([UD3_Tasca10_Practica_UDP_Guiada.pdf](../img/UD3_Tasca10_Practica_UDP_Guiada.pdf)):
+De acuerdo con la guía docente oficial del curso ([UD3_Tasca10_Practica_UDP_Guiada.pdf](../img/UD3_Tasca10_Practica_UDP_Guiada.pdf)):
 - Implementa una arquitectura cliente/servidor UDP donde el cliente envía comandos estructurados (por ejemplo `HORA`, `FECHA`, `INVERTIR <cadena>`) y el servidor procesa y devuelve el resultado.
 - Controla el tiempo de espera máximo del cliente mediante `socket.setSoTimeout(5000)` para detectar caídas del servidor.
 
 <div class="interactive-open-response" data-question-id="psp_ut03_open_tasca10">
-  <div class="open-question">✍️ <strong>Tasca 10 (Client/Servidor UDP):</strong> Pega el código de las clases de tu cliente y servidor UDP y explica cómo gestionas el retardo de red con <code>setSoTimeout</code> y la captura de <code>SocketTimeoutException</code>:</div>
+  <div class="open-question">✍️ <strong>Tarea 10 (Cliente/Servidor UDP):</strong> Pega el código de las clases de tu cliente y servidor UDP y explica cómo gestionas el retardo de red con <code>setSoTimeout</code> y la captura de <code>SocketTimeoutException</code>:</div>
   <textarea class="open-response-input" rows="4" placeholder="Código de la solución y manejo de timeouts en UDP..."></textarea>
 </div>
 
