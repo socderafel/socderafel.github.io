@@ -1,20 +1,20 @@
 ---
 layout: default
-title: "UP01 · Resum en Text — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "UP01 · Resum en Text — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD1"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD1"
 prev_url: "resum_imatge.html"
 prev_label: "⬅️ 🖼️ 1.R2 Resum Visual"
 next_url: "ficha101.html"
-next_label: "🛠️ FITXA 1.1 · Elements d'un sistema d ➡️"
+next_label: "🛠️ FICHA 1.1 · Elements d'un sistema d ➡️"
 ---
 
 # **UP01 · Resum en Text**
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -37,7 +37,7 @@ La **comunicació** és el procés pel que una entitat **transmet informació** 
 
 A més, intervenen tres elements més:
 
-- **Soroll**: qualsevol interferència que espatla el missatge, el canal o el codi (talls de wifi, sonido ambient…).
+- **Soroll**: qualsevol interferència que espatla el mensaje, el canal o el código (talls de wifi, sonido ambient…).
 
 - **Protocol**: les normes que regulan la comunicació (com s'inicia, com es acaba, què fer si falla).
 
@@ -190,7 +190,7 @@ Organitza la comunicació com un **edifici de 7 pisos**. La informació **baixa*
 | 7 | **Aplicació** | Els programes que uses (web, correu, jocs) |
 | 6 | **Presentació** | Tradueix i comprime la informació |
 | 5 | **Sessió** | Manté oberta la conversa |
-| 4 | **Transport** | Trocea el missatge i controla errors (**TCP** i **UDP**) |
+| 4 | **Transport** | Trocea el mensaje i controla errors (**TCP** i **UDP**) |
 | 3 | **Xarxa** | Posa la **adreça IP** i tria la ruta |
 | 2 | **Enllaç de dades** | Posa la **adreça MAC** i detecta errors |
 | 1 | **Física** | Envia els **bits** pel cable |
@@ -245,7 +245,7 @@ Cada equip d'una xarxa té **dos adreces**:
 
 ### **IPv4 (32 bits)**
 
-Es escriu en **4 blocs de 8 bits** (un byte), en **decimal**, separats per **punts**. Cada bloc va de **0 a 255**.
+Es escriu en **4 blocs de 8 bits** (un byte), en **decimal**, separats per **puntos**. Cada bloc va de **0 a 255**.
 
 ```mermaid
 flowchart LR
@@ -276,7 +276,7 @@ En cada xarxa, **dos adreces no s'assignen a equips**: la **adreça de xarxa** (
 
 ### **IPv6 (128 bits)**
 
-Es escriu en **8 grups de 2 bytes**, en **hexadecimal**, separats per **dos punts**.
+Es escriu en **8 grups de 2 bytes**, en **hexadecimal**, separats per **dos puntos**.
 
 ```bash
 2001:0DB8:0000:0000:4AC2:0000:B4EB:0FFA
@@ -299,7 +299,7 @@ Per a adaptar una IPv4 es escriuen els dos primers blocs a zero i els dos últim
 | --- | --- | --- |
 | Bits | 32 | 128 |
 | Grups | 4 blocs | 8 grups |
-| Separador | Punts (**.**) | Dos punts (**:**) |
+| Separador | Punts (**.**) | Dos puntos (**:**) |
 | Format | Decimal | Hexadecimal |
 
 ## **L'important**
@@ -328,12 +328,12 @@ Per a adaptar una IPv4 es escriuen els dos primers blocs a zero i els dos últim
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **UP01 · Resum en Text** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **UP01 · Resum en Text** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
-<div class="interactive-mcq" data-answer="A" data-hint="L'emissor envia el missatge al receptor a través d'un canal utilitzant un codi comú.">
+<div class="interactive-mcq" data-answer="A" data-hint="L'emisor envia el mensaje al receptor a través d'un canal utilitzant un código comú.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quins són els cinc elements fonamentals que intervenen en tot sistema de comunicació?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, missatge, canal i codi.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, mensaje, canal i código.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Teclat, ratolí, impressora, altaveu i taula.</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Paret, sostre, porta, finestra i armari.</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Cobre, plàstic, vidre, paper i fusta.</button>
@@ -353,7 +353,7 @@ Comprova el teu domini sobre **UP01 · Resum en Text** superant aquests 4 reptes
 </div>
 
 <div class="interactive-vf" data-answer="V" data-hint="4 octets × 8 bits = 32 bits en total per a una adreça IPv4.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per punts, com <code>192.168.1.10</code>).</div>
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per puntos, com <code>192.168.1.10</code>).</div>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
     <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
@@ -375,8 +375,8 @@ Comprova el teu domini sobre **UP01 · Resum en Text** superant aquests 4 reptes
 Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**UP01 · Resum en Text**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -387,7 +387,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD01" data-activity="resum_text">📥 Descarregar Comprovant PDF</button>

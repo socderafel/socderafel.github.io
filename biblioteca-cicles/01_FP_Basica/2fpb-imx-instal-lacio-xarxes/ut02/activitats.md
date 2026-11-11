@@ -1,40 +1,40 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD2 — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Cuaderno Completo de Actividades — UD2 — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD2"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD2"
 prev_url: "ficha202.html"
-prev_label: "⬅️ 🛠️ FITXA 2.2 · Mitjans de transmissió "
+prev_label: "⬅️ 🛠️ FICHA 2.2 · Mitjans de transmissió "
 next_url: "../ut03/index.html"
-next_label: "Següent Unitat (UD3) ➡️"
+next_label: "Siguiente Unidad (UD3) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD2: Xarxes de Dades — Tipus (LAN/MAN/WAN), Topologies i Arquitectures
+# Cuaderno Práctico de Actividades — UD2: Xarxes de Dades — Tipus (LAN/MAN/WAN), Topologies i Arquitectures
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
-- **[🛠️ FITXA 2.1 · Tipus de xarxes, abast i arquitectures](ficha201.html)**
-- **[🛠️ FITXA 2.2 · Mitjans de transmissió guiats i no guiats](ficha202.html)**
+- **[🛠️ FICHA 2.1 · Tipus de xarxes, abast i arquitectures](ficha201.html)**
+- **[🛠️ FICHA 2.2 · Mitjans de transmissió guiats i no guiats](ficha202.html)**
 
 ---
 
-## FITXA 2.1 · Tipus de xarxes, abast i arquitectures
+## FICHA 2.1 · Tipus de xarxes, abast i arquitectures
 
 👉 *[Obrir aquesta activitat en pàgina individual](ficha201.html)*
 
-# **FITXA 2.1 · Tipus de xarxes, abast i arquitectures**
+# **FICHA 2.1 · Tipus de xarxes, abast i arquitectures**
 
 📥 
 📄 
@@ -43,7 +43,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > Les xarxes es classifiquen segons el seu **abast geogràfic** (PAN, LAN, MAN, WAN). Les **topologies** defineixen la forma en que es connecten els equips (bus, estrela, anell, malla, arbre, mixta). Les **arquitectures** determinan la relació entre equips: **client-servidor** o **peer-to-peer** (*igual a igual*).
@@ -150,11 +150,11 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 
 ---
 
-## FITXA 2.2 · Mitjans de transmissió guiats i no guiats
+## FICHA 2.2 · Mitjans de transmissió guiats i no guiats
 
 👉 *[Obrir aquesta activitat en pàgina individual](ficha202.html)*
 
-# **FITXA 2.2 · Mitjans de transmissió guiats i no guiats**
+# **FICHA 2.2 · Mitjans de transmissió guiats i no guiats**
 
 📥 
 📄 
@@ -163,7 +163,7 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > Els **mitjans de transmissió guiats** conducen el senyal per un cable (parell trenat, fibra òptica, cable coaxial). Els **mitjans no guiats** la propagan pel espai lliure (microones, infrarojos, radiofreqüència). El cablejat estructurat es rige per la normativa **TIA/EIA-568**.
@@ -280,7 +280,7 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Cuaderno Completo de Actividades — UD2** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="A" data-hint="LAN (Local Area Network) abasta un àmbit local com una vivenda, taller, oficina o institut.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En les xarxes de dades segons la seua extensió geogràfica, què és una xarxa LAN (Local Area Network)?</div>
@@ -324,11 +324,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD2**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD2**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -339,7 +339,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD02" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

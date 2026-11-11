@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD7"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD7"
 prev_url: "ut0701.html"
 prev_label: "⬅️ 7.1 Aplicacions informàtiques per a re"
 next_url: "activitats.html"
@@ -13,8 +13,8 @@ next_label: "📓 Recull Complet d'Activitats (UD7) ➡️"
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -43,7 +43,7 @@ Completa la taula comparativa dels dispositius d'interconnexió d'una xarxa loca
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="A" data-hint="El Switch treballa a la Capa 2 (Enllaç de dades) usant una taula d'adreces MAC i separa els dominis de col·lisió.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina diferència fonamental de funcionament hi ha entre un antic concentrador (<code>Hub</code>) i un commutador (<code>Switch</code>) de Capa 2?</div>
@@ -90,8 +90,8 @@ Comprova el teu domini sobre **Fitxa 7.1 · Interconnexió d'Equips amb Switch, 
 Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Fitxa 7.1 · Interconnexió d'Equips amb Switch, Router i Punt d'Accés**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -102,7 +102,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD07" data-activity="ficha701">📥 Descarregar Comprovant PDF</button>

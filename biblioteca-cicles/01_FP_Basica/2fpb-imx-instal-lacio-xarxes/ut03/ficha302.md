@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD3"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD3"
 prev_url: "ficha301.html"
 prev_label: "⬅️ 🛠️ Fitxa 3.1 · Comparativa de Mitjans "
 next_url: "activitats.html"
@@ -13,8 +13,8 @@ next_label: "📓 Recull Complet d'Activitats (UD3) ➡️"
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -42,7 +42,7 @@ Relaciona cada tecnologia sense fil amb el seu àmbit d'aplicació real en l'ofi
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="B" data-hint="El trenat cancel·la el soroll electromagnètic i evita l'acoblament de senyal entre parells.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Per què es trenen per parells els fils de coure dins d'un cable de parell trenat (UTP / STP)?</div>
@@ -89,8 +89,8 @@ Comprova el teu domini sobre **Fitxa 3.2 · Identificació de Fibra Òptica i Te
 Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -101,7 +101,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD03" data-activity="ficha302">📥 Descarregar Comprovant PDF</button>

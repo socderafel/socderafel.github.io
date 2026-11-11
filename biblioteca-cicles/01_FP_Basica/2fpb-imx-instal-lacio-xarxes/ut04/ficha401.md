@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD4"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD4"
 prev_url: "ut0401.html"
 prev_label: "⬅️ 4.1 Elements d'una xarxa de transmissi"
 next_url: "activitats.html"
@@ -13,8 +13,8 @@ next_label: "📓 Recull Complet d'Activitats (UD4) ➡️"
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -49,7 +49,7 @@ Si una oficina es troba a **78 metres** de recorregut per canaleta des de l'arma
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="A" data-hint="L'estàndard fixa 90 m màxim per al cablejat fix horitzontal i 10 m per als latiguillos de parcheig (100 m totals).">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En un sistema de cablejat estructurat segons la normativa ANSI/TIA/EIA-568, quina és la longitud màxima permesa per al canal horitzontal complet (90 m d'enllaç permanent + 10 m de latiguillos)?</div>
@@ -96,8 +96,8 @@ Comprova el teu domini sobre **Fitxa 4.1 · Subsistemes i Elements del Cablejat 
 Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Fitxa 4.1 · Subsistemes i Elements del Cablejat Estructurat**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -108,7 +108,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD04" data-activity="ficha401">📥 Descarregar Comprovant PDF</button>

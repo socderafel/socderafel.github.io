@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD6 — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Cuaderno Completo de Actividades — UD6 — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD6"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD6"
 prev_url: "ficha601.html"
 prev_label: "⬅️ 🛠️ Fitxa 6.1 · Taller de Grimpat RJ-45"
 next_url: "../ut07/index.html"
-next_label: "Següent Unitat (UD7) ➡️"
+next_label: "Siguiente Unidad (UD7) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD6: Grimpat de Connectors RJ-45 (T568A/T568B), Latiguillos i Comprovació amb Tester
+# Cuaderno Práctico de Actividades — UD6: Grimpat de Connectors RJ-45 (T568A/T568B), Latiguillos i Comprovació amb Tester
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[🛠️ Fitxa 6.1 · Taller de Grimpat RJ-45 (T568A / T568B) i Rosetes IDC](ficha601.html)**
 
@@ -71,7 +71,7 @@ Explica què ha passat en el grimpat si en connectar un cable directe T568B als 
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Cuaderno Completo de Actividades — UD6** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="A" data-hint="En la norma T568B, la seqüència comença amb Blanc-Taronja (1) i Taronja (2).">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En grimpar un connector RJ-45 seguint la normativa europea habitual T568B, quin parell de colors va en els pins 1 i 2?</div>
@@ -115,11 +115,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD6**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD6**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -130,7 +130,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD06" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

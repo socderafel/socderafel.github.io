@@ -1,46 +1,46 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD1 — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Cuaderno Completo de Actividades — UD1 — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD1"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD1"
 prev_url: "rep104.html"
-prev_label: "⬅️ 🔄 FITXA REPÀS 1.4 · L'adreça IP: IPv4 "
+prev_label: "⬅️ 🔄 FICHA REPASO 1.4 · L'adreça IP: IPv4 "
 next_url: "../ut02/index.html"
-next_label: "Següent Unitat (UD2) ➡️"
+next_label: "Siguiente Unidad (UD2) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD1: Fonaments de les Comunicacions, Representació Binària, Models OSI/TCP-IP i IP
+# Cuaderno Práctico de Actividades — UD1: Fonaments de les Comunicacions, Representació Binària, Models OSI/TCP-IP i IP
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
-- **[🛠️ FITXA 1.1 · Elements d'un sistema de comunicació](ficha101.html)**
-- **[🛠️ FITXA 1.2 · Representació de la informació](ficha102.html)**
-- **[🛠️ FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP](ficha103.html)**
-- **[🛠️ FITXA 1.4 · L'adreça IP: IPv4 i IPv6](ficha104.html)**
-- **[🔄 FITXA REPÀS 1.1 · Elements d'un sistema de comunicació](rep101.html)**
-- **[🔄 FITXA REPÀS 1.2 · Representació de la informació](rep102.html)**
-- **[🔄 FITXA REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP](rep103.html)**
-- **[🔄 FITXA REPÀS 1.4 · L'adreça IP: IPv4 i IPv6](rep104.html)**
+- **[🛠️ FICHA 1.1 · Elementos de un sistema de comunicación](ficha101.html)**
+- **[🛠️ FICHA 1.2 · Representación de la información](ficha102.html)**
+- **[🛠️ FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP](ficha103.html)**
+- **[🛠️ FICHA 1.4 · La dirección IP: IPv4 e IPv6](ficha104.html)**
+- **[🔄 FICHA REPASO 1.1 · Elementos de un sistema de comunicación](rep101.html)**
+- **[🔄 FICHA REPASO 1.2 · Representación de la información](rep102.html)**
+- **[🔄 FICHA REPASO 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP](rep103.html)**
+- **[🔄 FICHA REPASO 1.4 · La dirección IP: IPv4 e IPv6](rep104.html)**
 
 ---
 
-## FITXA 1.1 · Elements d'un sistema de comunicació
+## FICHA 1.1 · Elementos de un sistema de comunicación
 
 👉 *[Obrir aquesta activitat en pàgina individual](ficha101.html)*
 
-# **FITXA 1.1 · Elements d'un sistema de comunicació**
+# **FICHA 1.1 · Elementos de un sistema de comunicación**
 
 📥 
 📄 
@@ -49,10 +49,10 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
-> Tot sistema de comunicació necessita **cinc elements**: un **emissor**, un **receptor**, un **missatge**, un **canal** i un **codi**. A més, el **soroll** intenta espatlar la comunicació i el **protocol** posa les normes.
+> Tot sistema de comunicació necessita **cinc elements**: un **emisor**, un **receptor**, un **mensaje**, un **canal** i un **código**. A més, el **soroll** intenta espatlar la comunicació i el **protocol** posa les normes.
 
 ## 1 · El procés de comunicació
 
@@ -74,13 +74,13 @@ flowchart LR
 | --- | --- | --- |
 | **Emissor** | Entitat que transmet la informació |  |
 | **Receptor** | Entitat que rep la informació |  |
-| **Missatge** | Informació que l'emissor transmet al receptor |  |
-| **Canal** | Mitjà pel que es transmet el missatge |  |
+| **Missatge** | Informació que l'emisor transmet al receptor |  |
+| **Canal** | Mitjà pel que es transmet el mensaje |  |
 | **Codi** | Conjunt de signes, regles i normes (llenguatge) |  |
 
 ## 2 · Identifica els elements
 
-Per a cada situació, escriu el **emissor**, **receptor**, **missatge**, **canal** i **codi**:
+Per a cada situació, escriu el **emisor**, **receptor**, **mensaje**, **canal** i **código**:
 
 | Situació | Emissor | Receptor | Missatge | Canal | Codi |
 | --- | --- | --- | --- | --- | --- |
@@ -91,7 +91,7 @@ Per a cada situació, escriu el **emissor**, **receptor**, **missatge**, **canal
 
 ## 3 · El soroll
 
-El **soroll** és qualsevol interferència que contamina tant el missatge com el canal o el codi.
+El **soroll** és qualsevol interferència que contamina tant el mensaje com el canal o el código.
 
 1. Completa: "El soroll és qualsevol ……………… que contamina el ………………, el ……………… o el ………………"
 
@@ -128,7 +128,7 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 | Concepte | L'entenc | Quasi | El necessite repassar |
 | --- | --- | --- | --- |
 | Elements de la comunicació |  |  |  |
-| Identificar emissor, receptor, missatge, canal i codi |  |  |  |
+| Identificar emisor, receptor, mensaje, canal i código |  |  |  |
 | Soroll i interferències |  |  |  |
 | Protocol de comunicació |  |  |  |
 
@@ -144,11 +144,11 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA 1.1 · Elements d'un sistema de comunicació)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA 1.1 · Elementos de un sistema de comunicación)</summary>
 
-# **FITXA 1.1 · Elements d'un sistema de comunicació**
+# **FICHA 1.1 · Elementos de un sistema de comunicación**
 
-Fitxa en blanc: FITXA 1.1
+Fitxa en blanc: FICHA 1.1
 
 📥 
 
@@ -156,10 +156,10 @@ Fitxa en blanc: FITXA 1.1
 
 | Element | Què és? | Explica-ho amb les teues paraules (exemple) |
 | --- | --- | --- |
-| **Emissor** | Entitat que transmet la informació | La persona o equip que **envia** el missatge (qui parla o envia) |
-| **Receptor** | Entitat que rep la informació | La persona o equip que **rep i interpreta** el missatge |
-| **Missatge** | Informació que l'emissor transmet al receptor | **El que es diu**: la notícia, l'ordre, la salutació… |
-| **Canal** | Mitjà pel que es transmet el missatge | El mitjà físic: **aire, cable, wifi, llum**… |
+| **Emissor** | Entitat que transmet la informació | La persona o equip que **envia** el mensaje (qui parla o envia) |
+| **Receptor** | Entitat que rep la informació | La persona o equip que **rep i interpreta** el mensaje |
+| **Missatge** | Informació que l'emisor transmet al receptor | **El que es diu**: la notícia, l'ordre, la salutació… |
+| **Canal** | Mitjà pel que es transmet el mensaje | El mitjà físic: **aire, cable, wifi, llum**… |
 | **Codi** | Conjunt de signes, regles i normes (llenguatge) | El llenguatge: **idioma, senyals, colors, emojis**… |
 
 ## **2 · Identifica els elements**
@@ -175,7 +175,7 @@ Fitxa en blanc: FITXA 1.1
 
 1. 
 
-"El soroll és qualsevol **interferència** que contamina el **missatge**, el **canal** o el **codi**".
+"El soroll és qualsevol **interferència** que contamina el **mensaje**, el **canal** o el **código**".
 
 1. 
 
@@ -210,11 +210,11 @@ Marca **V** o **F**:
 
 ---
 
-## FITXA 1.2 · Representació de la informació
+## FICHA 1.2 · Representación de la información
 
 👉 *[Obrir aquesta activitat en pàgina individual](ficha102.html)*
 
-# **FITXA 1.2 · Representació de la informació**
+# **FICHA 1.2 · Representación de la información**
 
 📥 
 📄 
@@ -223,7 +223,7 @@ Marca **V** o **F**:
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > La informació viatja **codificada**. Els tres sistemes de codificació que manejamos són el **decimal**, el **binari** (zeros i uns, els famosos **bits**) i el **hexadecimal**. Aprendre a traduir entre ells és l'objectiu d'aquesta fitxa.
@@ -350,11 +350,11 @@ Completa les conversions:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA 1.2 · Representació de la informació)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA 1.2 · Representación de la información)</summary>
 
-# **FITXA 1.2 · Representació de la informació**
+# **FICHA 1.2 · Representación de la información**
 
-Fitxa en blanc: FITXA 1.2
+Fitxa en blanc: FICHA 1.2
 
 📥 
 
@@ -428,11 +428,11 @@ Fitxa en blanc: FITXA 1.2
 
 ---
 
-## FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP
+## FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP
 
 👉 *[Obrir aquesta activitat en pàgina individual](ficha103.html)*
 
-# **FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP**
+# **FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP**
 
 📥 
 📄 
@@ -441,14 +441,14 @@ Fitxa en blanc: FITXA 1.2
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > Una **xarxa de comunicacions** és un grup de **dos o més equips** que intercambian informació. Eixa informació viatja trossejada en **paquets de dades** fets de zeros i uns (els **bits**). Perquè tots els equips es entenguen, usem unes normes anomenades **protocols**. I per a organitzar-los, existeixen dos models: **OSI** i **TCP/IP**.
 
 ## 1 · Què és una xarxa de comunicacions?
 
-Una xarxa de comunicacions serveix per a que els equips es **intercanvien informació**. L'equip que envia és el **emissor**, el que rep és el **receptor**, i entre ells hi ha un **canal** (el cable o el wifi). Si alguna cosa espatla les dades, hi ha **soroll**.
+Una xarxa de comunicacions serveix per a que els equips es **intercanvien informació**. L'equip que envia és el **emisor**, el que rep és el **receptor**, i entre ells hi ha un **canal** (el cable o el wifi). Si alguna cosa espatla les dades, hi ha **soroll**.
 
 ```mermaid
 flowchart LR
@@ -483,7 +483,7 @@ Completa la taula amb la funció de cada capa:
 | 7 | Aplicació | Els programes que uses (web, correu, jocs). |
 | 6 | Presentació | Tradueix i comprime la informació. |
 | 5 | Sessió | Manté oberta la conversa. |
-| 4 | Transport | Trocea el missatge i controla els errors (**TCP** i **UDP**). |
+| 4 | Transport | Trocea el mensaje i controla els errors (**TCP** i **UDP**). |
 | 3 | Xarxa | Posa la **adreça IP** i tria la millor ruta. |
 | 2 | Enllaç de dades | Posa la **adreça MAC** de cada equip. |
 | 1 | Física | Envia els **bits** pel cable. |
@@ -496,7 +496,7 @@ Completa la taula amb la funció de cada capa:
 
 ## 3 · L'encapsulament: els sobres
 
-Al **enviar**, cada capa **afegeix una adhesiu** amb informació (com quan metes un missatge en diversos sobres). Al **rebre**, es quitan els sobres un a un. A açò es li anomena **encapsular** (posar sobres) i **desencapsular** (quitar-los).
+Al **enviar**, cada capa **afegeix una adhesiu** amb informació (com quan metes un mensaje en diversos sobres). Al **rebre**, es quitan els sobres un a un. A açò es li anomena **encapsular** (posar sobres) i **desencapsular** (quitar-los).
 
 ```mermaid
 flowchart LR
@@ -551,7 +551,7 @@ Els **protocols** són les normes de cada capa. Quan uses el mòbil o l'ordinado
 
 1. Quantes capes té el model **OSI**? I el model **TCP/IP**? Quin dels dos usa Internet de veritat?
 
-1. Quan un amigo et envia un **WhatsApp** i tu el recibes, el missatge ha bajado les 7 capes en l'emissor i ha subido en el receptor. Què procés és eixe?
+1. Quan un amigo et envia un **WhatsApp** i tu el recibes, el mensaje ha bajado les 7 capes en l'emisor i ha subido en el receptor. Què procés és eixe?
 
 1. Uneix cada protocol amb la seua funció:
 
@@ -572,7 +572,7 @@ Els **protocols** són les normes de cada capa. Quan uses el mòbil o l'ordinado
 
 > - La correcta associació entre **capes, protocols i la seua funció**.
 
-> - La interpretació del **encapsulament** com el viatge del missatge en sobres.
+> - La interpretació del **encapsulament** com el viatge del mensaje en sobres.
 
 > - La neteja i l'ordre al resoldre els exercicis.
 
@@ -581,11 +581,11 @@ Els **protocols** són les normes de cada capa. Quan uses el mòbil o l'ordinado
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP)</summary>
 
-# **FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP**
+# **FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP**
 
-Fitxa en blanc: FITXA 1.3
+Fitxa en blanc: FICHA 1.3
 
 📥 
 
@@ -597,7 +597,7 @@ Fitxa en blanc: FITXA 1.3
 | La informació viatja trossejada en **paquets** de dades. |  |
 | Els paquets estan fets de zeros i uns, anomenats **bits**. |  |
 | Les normes perquè els equips es entenguen es anomenen **protocols**. |  |
-| L'equip que envia és el **emissor** i el que rep és el **receptor**. |  |
+| L'equip que envia és el **emisor** i el que rep és el **receptor**. |  |
 
 ## **2 · El model OSI: les 7 capes**
 
@@ -606,7 +606,7 @@ Fitxa en blanc: FITXA 1.3
 | 7 | **Aplicació** | Els programes que uses (web, correu, jocs). |
 | 6 | **Presentació** | Tradueix i comprime la informació. |
 | 5 | **Sessió** | Manté oberta la conversa. |
-| 4 | **Transport** | Trocea el missatge i controla errors (TCP i UDP). |
+| 4 | **Transport** | Trocea el mensaje i controla errors (TCP i UDP). |
 | 3 | **Xarxa** | Posa l'adreça IP i tria la millor ruta. |
 | 2 | **Enllaç de dades** | Posa l'adreça MAC de cada equip. |
 | 1 | **Física** | Envia els bits pel cable. |
@@ -666,11 +666,11 @@ Mnemotecnia: **«A**les **P**ersonas **S**iempre **T**raen **R**opa **E**n **F**
 
 ---
 
-## FITXA 1.4 · L'adreça IP: IPv4 i IPv6
+## FICHA 1.4 · La dirección IP: IPv4 e IPv6
 
 👉 *[Obrir aquesta activitat en pàgina individual](ficha104.html)*
 
-# **FITXA 1.4 · L'adreça IP: IPv4 i IPv6**
+# **FICHA 1.4 · La dirección IP: IPv4 e IPv6**
 
 📥 
 📄 
@@ -679,7 +679,7 @@ Mnemotecnia: **«A**les **P**ersonas **S**iempre **T**raen **R**opa **E**n **F**
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > Cada equip d'una xarxa té **dos adreces**: la **MAC** (física, no canvia) i la **IP** (lògica, pot canviar). Existeixen dos versions del protocol IP: **IPv4** (32 bits) e **IPv6** (128 bits). En aquesta fitxa aprenderás a distinguirlas i a leerlas.
@@ -712,7 +712,7 @@ Completa la taula escrivint **IP** o **MAC**:
 
 ## 2 · L'adreça IPv4
 
-L'adreça **IPv4** té **32 bits** i es escriu en **4 blocs de 8 bits** (un byte cada un) en format **decimal**, separats per punts. Cada bloc pot valdre de **0 a 255**.
+L'adreça **IPv4** té **32 bits** i es escriu en **4 blocs de 8 bits** (un byte cada un) en format **decimal**, separats per puntos. Cada bloc pot valdre de **0 a 255**.
 
 ```mermaid
 flowchart LR
@@ -771,7 +771,7 @@ Dins d'una xarxa, **dos adreces no es poden assignar a equips**. Uneix cada una 
 
 ## 4 · L'adreça IPv6
 
-L'adreça **IPv6** té **128 bits** i es escriu en **8 grups de 2 bytes**, separats per dos punts (**:**), en format **hexadecimal**.
+L'adreça **IPv6** té **128 bits** i es escriu en **8 grups de 2 bytes**, separats per dos puntos (**:**), en format **hexadecimal**.
 
 ```mermaid
 flowchart LR
@@ -836,11 +836,11 @@ Abrevia aquestes adreces IPv6:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA 1.4 · L'adreça IP: IPv4 i IPv6)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA 1.4 · La dirección IP: IPv4 e IPv6)</summary>
 
-# **FITXA 1.4 · L'adreça IP: IPv4 i IPv6**
+# **FICHA 1.4 · La dirección IP: IPv4 e IPv6**
 
-Fitxa en blanc: FITXA 1.4
+Fitxa en blanc: FICHA 1.4
 
 📥 
 
@@ -860,7 +860,7 @@ Fitxa en blanc: FITXA 1.4
 | --- | --- |
 | Quants bits té una adreça IPv4? | **32** bits |
 | En quants blocs es escriuen? | **4** blocs |
-| Amb què signe es separen els blocs? | Amb **punts (.)** |
+| Amb què signe es separen els blocs? | Amb **puntos (.)** |
 | En què format es escriu cada bloc? | **decimal** |
 | Quant val el bloc més alt? | Fins al **255** |
 
@@ -886,7 +886,7 @@ Fitxa en blanc: FITXA 1.4
 | --- | --- |
 | Quants bits té una adreça IPv6? | **128** bits |
 | En quants grups de 2 bytes es escriu? | **8** grups |
-| Amb què caràcter es separen els grups? | Amb **dos punts (:)** |
+| Amb què caràcter es separen els grups? | Amb **dos puntos (:)** |
 | En què format es escriuen? | **hexadecimal** |
 
 Abreviacions:
@@ -922,11 +922,11 @@ Marca **V** o **F**:
 
 ---
 
-## FITXA REPÀS 1.1 · Elements d'un sistema de comunicació
+## FICHA REPASO 1.1 · Elementos de un sistema de comunicación
 
 👉 *[Obrir aquesta activitat en pàgina individual](rep101.html)*
 
-# **FITXA REPÀS 1.1 · Elements d'un sistema de comunicació**
+# **FICHA REPASO 1.1 · Elementos de un sistema de comunicación**
 
 📥 
 📄 
@@ -935,10 +935,10 @@ Marca **V** o **F**:
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
-> Repàs de la **FITXA 1.1**: tot sistema de comunicació necessita **cinc elements** (**emissor**, **receptor**, **missatge**, **canal** i **codi**); el **soroll** intenta espatlar-la, el **protocol** l'ordena amb normes i el **intèrpret** tradueix quan els codis no coincideixen.
+> Repàs de la **FICHA 1.1**: todo sistema de comunicación necesita **cinco elementos** (**emisor**, **receptor**, **mensaje**, **canal** i **código**); el **ruido** intenta estropearla, el **protocolo** la ordena con normas y el **intérprete** traduce cuando los códigos no coinciden.
 
 ## 1 · L'essencial, en una taula
 
@@ -948,10 +948,10 @@ Completa la columna dreta:
 | --- | --- |
 | **Emissor** | Entitat que ………… la informació |
 | **Receptor** | Entitat que ………… la informació |
-| **Missatge** | ………… que l'emissor transmet al receptor |
-| **Canal** | ………… pel que viatja el missatge |
+| **Missatge** | ………… que l'emisor transmet al receptor |
+| **Canal** | ………… pel que viatja el mensaje |
 | **Codi** | Conjunt de signes, regles i ………… (llenguatge) |
-| **Soroll** | Qualsevol ………… que contamina el missatge, el canal o el codi |
+| **Soroll** | Qualsevol ………… que contamina el mensaje, el canal o el código |
 | **Protocol** | Conjunt de ………… que regeixen la comunicació |
 | **Intèrpret** | Element que ………… entre codis distints (módem, router…) |
 
@@ -965,25 +965,25 @@ flowchart TD
     N["RUIDO<br/>interferencia"] -.->|"contamina"| C
 ```
 
-Completa el recorregut del missatge:
+Completa el recorregut del mensaje:
 
 | Passos del procés | Completa |
 | --- | --- |
-| El ………… codifica i envia el missatge |  |
-| El missatge viatja pel ………… |  |
-| El ………… rep i interpreta el missatge |  |
+| El ………… codifica i envia el mensaje |  |
+| El mensaje viatja pel ………… |  |
+| El ………… rep i interpreta el mensaje |  |
 | Si els codis no coincideixen, actua el ………… |  |
 | Si hi ha interferències, diem que hi ha ………… |  |
 
 ## 3 · Identifica els elements
 
-Per a cada situació, escriu el **emissor**, **receptor**, **missatge**, **canal** i **codi**:
+Per a cada situació, escriu el **emisor**, **receptor**, **mensaje**, **canal** i **código**:
 
 | Situació | Emissor | Receptor | Missatge | Canal | Codi |
 | --- | --- | --- | --- | --- | --- |
 | El teu professor explica en la pissarra i tu preses apuntes |  |  |  |  |  |
 | Veus les notícies en la televisió |  |  |  |  |  |
-| Mandas un missatge de veu per WhatsApp a un amigo |  |  |  |  |  |
+| Mandas un mensaje de veu per WhatsApp a un amigo |  |  |  |  |  |
 | El semáforo es posa en roig i els cotxes es detienen |  |  |  |  |  |
 
 ## 4 · Soroll i protocol
@@ -992,11 +992,11 @@ Per a cada situació, escriu el **emissor**, **receptor**, **missatge**, **canal
 
 | Afirmació | V/F |
 | --- | --- |
-| El soroll pot contaminar el missatge, el canal o el codi |  |
+| El soroll pot contaminar el mensaje, el canal o el código |  |
 | Si el soroll supera un llindar, la informació pot no arribar completa |  |
 | El protocol indica com iniciar i finalitzar la comunicació |  |
 | El protocol fixa el nivell de llenguatge i la tolerància als fallades |  |
-| L'intèrpret fa falta quan emissor i receptor usen el mateix codi |  |
+| L'intèrpret fa falta quan emisor i receptor usen el mateix código |  |
 
 1. Escriu un **exemple de soroll** per a cada situació:
 
@@ -1032,9 +1032,9 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA REPÀS 1.1 · Elements d'un sistema de comunicació)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA REPASO 1.1 · Elementos de un sistema de comunicación)</summary>
 
-# **REPÀS 1.1 · Elements d'un sistema de comunicació**
+# **REPÀS 1.1 · Elementos de un sistema de comunicación**
 
 Fitxa en blanc: Repàs 1.1
 
@@ -1046,10 +1046,10 @@ Fitxa en blanc: Repàs 1.1
 | --- | --- |
 | **Emissor** | Entitat que **transmet** la informació |
 | **Receptor** | Entitat que **rep** la informació |
-| **Missatge** | **La informació** que l'emissor transmet al receptor |
-| **Canal** | **El mitjà físic** pel que viatja el missatge |
+| **Missatge** | **La informació** que l'emisor transmet al receptor |
+| **Canal** | **El mitjà físic** pel que viatja el mensaje |
 | **Codi** | Conjunt de signes, regles i **normes** (llenguatge) |
-| **Soroll** | Qualsevol **interferència** que contamina el missatge, el canal o el codi |
+| **Soroll** | Qualsevol **interferència** que contamina el mensaje, el canal o el código |
 | **Protocol** | Conjunt de **normes** que regeixen la comunicació |
 | **Intèrpret** | Element que **tradueix** entre codis distints (módem, router…) |
 
@@ -1057,9 +1057,9 @@ Fitxa en blanc: Repàs 1.1
 
 | Passos del procés | Completa |
 | --- | --- |
-| El **emissor** codifica i envia el missatge |  |
-| El missatge viatja pel **canal** |  |
-| El **receptor** rep i interpreta el missatge |  |
+| El **emisor** codifica i envia el mensaje |  |
+| El mensaje viatja pel **canal** |  |
+| El **receptor** rep i interpreta el mensaje |  |
 | Si els codis no coincideixen, actua el **intèrpret** |  |
 | Si hi ha interferències, diem que hi ha **soroll** |  |
 
@@ -1069,7 +1069,7 @@ Fitxa en blanc: Repàs 1.1
 | --- | --- | --- | --- | --- | --- |
 | El teu professor explica en la pissarra i tu preses apuntes | El professor | Els alumnes (tu) | L'explicació | L'aire (el sonido) i la pissarra | L'idioma i la grafía |
 | Veus les notícies en la televisió | Els periodistas / la cadena | Tu (espectador) | La informació d'actualitat | El senyal de TV fins al teu tele | L'idioma, imatges i gràfics |
-| Mandas un missatge de veu per WhatsApp a un amigo | Tu | El teu amigo | El que dices en l'àudio | Internet + l'app WhatsApp | L'idioma (parla) |
+| Mandas un mensaje de veu per WhatsApp a un amigo | Tu | El teu amigo | El que dices en l'àudio | Internet + l'app WhatsApp | L'idioma (parla) |
 | El semáforo es posa en roig i els cotxes es detienen | El semáforo | Els conductors | «Detente» | La llum | El convenio de colors (roig = parar) |
 
 ## **4 · Soroll i protocol**
@@ -1078,11 +1078,11 @@ Fitxa en blanc: Repàs 1.1
 
 | Afirmació | V/F |
 | --- | --- |
-| El soroll pot contaminar el missatge, el canal o el codi | **V** |
+| El soroll pot contaminar el mensaje, el canal o el código | **V** |
 | Si el soroll supera un llindar, la informació pot no arribar completa | **V** |
 | El protocol indica com iniciar i finalitzar la comunicació | **V** |
 | El protocol fixa el nivell de llenguatge i la tolerància als fallades | **V** |
-| L'intèrpret fa falta quan emissor i receptor usen el mateix codi | **F** (només fa falta si els codis són distints) |
+| L'intèrpret fa falta quan emisor i receptor usen el mateix código | **F** (només fa falta si els codis són distints) |
 
 1. Exemples de soroll:
 
@@ -1102,11 +1102,11 @@ Fitxa en blanc: Repàs 1.1
 
 ---
 
-## FITXA REPÀS 1.2 · Representació de la informació
+## FICHA REPASO 1.2 · Representación de la información
 
 👉 *[Obrir aquesta activitat en pàgina individual](rep102.html)*
 
-# **FITXA REPÀS 1.2 · Representació de la informació**
+# **FICHA REPASO 1.2 · Representación de la información**
 
 📥 
 📄 
@@ -1115,10 +1115,10 @@ Fitxa en blanc: Repàs 1.1
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
-> Repàs de la **FITXA 1.2**: la informació viatja **codificada** en **decimal**, **binari** (zeros i uns, **bits**) o **hexadecimal**. Saber traduir entre ells i moverte per l'escala de **mesures d'informació** és l'objectiu d'aquesta fitxa.
+> Repàs de la **FICHA 1.2**: la informació viatja **codificada** en **decimal**, **binari** (zeros i uns, **bits**) o **hexadecimal**. Saber traduir entre ells i moverte per l'escala de **mesures d'informació** és l'objectiu d'aquesta fitxa.
 
 ## 1 · Els tres sistemes de codificació
 
@@ -1233,11 +1233,11 @@ Completa les conversions:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA REPÀS 1.2 · Representació de la informació)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA REPASO 1.2 · Representación de la información)</summary>
 
 # Repàs 1.02 Resolta
 
-## REPÀS 1.2 · Representació de la informació
+## REPÀS 1.2 · Representación de la información
 
 Fitxa en blanc: Repàs 1.2
 
@@ -1318,11 +1318,11 @@ Fitxa en blanc: Repàs 1.2
 
 ---
 
-## FITXA REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP
+## FICHA REPASO 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP
 
 👉 *[Obrir aquesta activitat en pàgina individual](rep103.html)*
 
-# **FITXA REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP**
+# **FICHA REPASO 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP**
 
 📥 
 📄 
@@ -1331,10 +1331,10 @@ Fitxa en blanc: Repàs 1.2
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
-> Repàs de la **FITXA 1.3**: una **xarxa** són **dos o més equips** intercambiant informació en **paquets** de **bits**, regits per **protocols**. El model **OSI** l'organitza en **7 capes** i el model **TCP/IP** (el de Internet) en **4**.
+> Repàs de la **FICHA 1.3**: una **xarxa** són **dos o més equips** intercambiant informació en **paquets** de **bits**, regits per **protocols**. El model **OSI** l'organitza en **7 capes** i el model **TCP/IP** (el de Internet) en **4**.
 
 ## 1 · Què és una xarxa de comunicacions?
 
@@ -1371,7 +1371,7 @@ Escriu el **nom** de cada capa a partir del que fa:
 | 7 | Els programes que uses (web, correu, jocs). | ………… |
 | 6 | Tradueix i comprime la informació. | ………… |
 | 5 | Manté oberta la conversa. | ………… |
-| 4 | Trocea el missatge i controla errors (TCP i UDP). | ………… |
+| 4 | Trocea el mensaje i controla errors (TCP i UDP). | ………… |
 | 3 | Posa l'adreça IP i tria la millor ruta. | ………… |
 | 2 | Posa l'adreça MAC de cada equip. | ………… |
 | 1 | Envia els bits pel cable. | ………… |
@@ -1438,7 +1438,7 @@ Escriu el **protocol** que correspon a cada funció:
 
 1. Quantes capes té el model **OSI**? I el model **TCP/IP**? Quin dels dos usa Internet de veritat?
 
-1. Quan un amigo et envia un **WhatsApp** i tu el recibes, el missatge ha bajado les 7 capes en l'emissor i ha subido en el receptor. Què procés és eixe?
+1. Quan un amigo et envia un **WhatsApp** i tu el recibes, el mensaje ha bajado les 7 capes en l'emisor i ha subido en el receptor. Què procés és eixe?
 
 1. Què capa OSI es ocupa de cada cosa?
 
@@ -1459,7 +1459,7 @@ Escriu el **protocol** que correspon a cada funció:
 
 > - La correcta associació entre **capes, protocols i la seua funció**.
 
-> - La interpretació del **encapsulament** com el viatge del missatge en sobres.
+> - La interpretació del **encapsulament** com el viatge del mensaje en sobres.
 
 > - La neteja i l'ordre al resoldre els exercicis.
 
@@ -1468,11 +1468,11 @@ Escriu el **protocol** que correspon a cada funció:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA REPASO 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP)</summary>
 
 # Repàs 1.03 Resolta
 
-## REPÀS 1.3 · Xarxes de comunicacions: models OSI i TCP/IP
+## REPÀS 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP
 
 Fitxa en blanc: Repàs 1.3
 
@@ -1486,7 +1486,7 @@ Fitxa en blanc: Repàs 1.3
 | La informació viatja trossejada en **paquets** de dades. |  |
 | Els paquets estan fets de zeros i uns, anomenats **bits**. |  |
 | Les normes perquè els equips es entenguen es anomenen **protocols**. |  |
-| L'equip que envia és el **emissor** i el que rep és el **receptor**. |  |
+| L'equip que envia és el **emisor** i el que rep és el **receptor**. |  |
 
 ## **2 · El model OSI: les 7 capes**
 
@@ -1495,7 +1495,7 @@ Fitxa en blanc: Repàs 1.3
 | 7 | Els programes que uses (web, correu, jocs). | **Aplicació** |
 | 6 | Tradueix i comprime la informació. | **Presentació** |
 | 5 | Manté oberta la conversa. | **Sessió** |
-| 4 | Trocea el missatge i controla errors (TCP i UDP). | **Transport** |
+| 4 | Trocea el mensaje i controla errors (TCP i UDP). | **Transport** |
 | 3 | Posa l'adreça IP i tria la millor ruta. | **Xarxa** |
 | 2 | Posa l'adreça MAC de cada equip. | **Enllaç de dades** |
 | 1 | Envia els bits pel cable. | **Física** |
@@ -1534,7 +1534,7 @@ Fitxa en blanc: Repàs 1.3
 
 1. **OSI** = **7** capes; **TCP/IP** = **4** capes; Internet usa **TCP/IP**.
 
-1. El procés es anomena **encapsulament** (al baixar les capes en l'emissor) i **desencapsulament** (al pujar en el receptor).
+1. El procés es anomena **encapsulament** (al baixar les capes en l'emisor) i **desencapsulament** (al pujar en el receptor).
 
 1. Capes que es ocupen de cada cosa:
 
@@ -1553,11 +1553,11 @@ Fitxa en blanc: Repàs 1.3
 
 ---
 
-## FITXA REPÀS 1.4 · L'adreça IP: IPv4 i IPv6
+## FICHA REPASO 1.4 · La dirección IP: IPv4 e IPv6
 
 👉 *[Obrir aquesta activitat en pàgina individual](rep104.html)*
 
-# **FITXA REPÀS 1.4 · L'adreça IP: IPv4 i IPv6**
+# **FICHA REPASO 1.4 · La dirección IP: IPv4 e IPv6**
 
 📥 
 📄 
@@ -1566,10 +1566,10 @@ Fitxa en blanc: Repàs 1.3
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
-> Repàs de la **FITXA 1.4**: cada equip té la **MAC** (física, no canvia) i la **IP** (lògica, pot canviar). Existeixen dos versions del protocol IP: **IPv4** (32 bits) e **IPv6** (128 bits), juntament amb la **màscara de xarxa** i l'operació **AND**.
+> Repàs de la **FICHA 1.4**: cada equip té la **MAC** (física, no canvia) i la **IP** (lògica, pot canviar). Existeixen dos versions del protocol IP: **IPv4** (32 bits) e **IPv6** (128 bits), juntament amb la **màscara de xarxa** i l'operació **AND**.
 
 ## 1 · Dos adreces: quin és quin?
 
@@ -1592,7 +1592,7 @@ Completa cada frase amb **IP** o **MAC**:
 
 ## 2 · L'adreça IPv4
 
-L'adreça **IPv4** té **32 bits** i es escriu en **4 blocs de 8 bits** en format **decimal**, separats per **punts**. Cada bloc val de **0 a 255**.
+L'adreça **IPv4** té **32 bits** i es escriu en **4 blocs de 8 bits** en format **decimal**, separats per **puntos**. Cada bloc val de **0 a 255**.
 
 ```mermaid
 flowchart LR
@@ -1659,7 +1659,7 @@ flowchart LR
 
 ## 4 · L'adreça IPv6
 
-L'adreça **IPv6** té **128 bits** i es escriu en **8 grups de 2 bytes**, separats per dos punts (**:**), en format **hexadecimal**.
+L'adreça **IPv6** té **128 bits** i es escriu en **8 grups de 2 bytes**, separats per dos puntos (**:**), en format **hexadecimal**.
 
 ```mermaid
 flowchart LR
@@ -1726,9 +1726,9 @@ Abrevia aquestes adreces IPv6:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA REPÀS 1.4 · L'adreça IP: IPv4 i IPv6)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA REPASO 1.4 · La dirección IP: IPv4 e IPv6)</summary>
 
-# **REPÀS 1.4 · L'adreça IP: IPv4 i IPv6**
+# **REPÀS 1.4 · La dirección IP: IPv4 e IPv6**
 
 Fitxa en blanc: Repàs 1.4
 
@@ -1751,7 +1751,7 @@ Fitxa en blanc: Repàs 1.4
 | --- | --- |
 | Quants bits té una adreça IPv4? | **32** bits |
 | En quants blocs es escriuen? | **4** blocs |
-| Amb què signe es separen els blocs? | Amb **punts (.)** |
+| Amb què signe es separen els blocs? | Amb **puntos (.)** |
 | En què format es escriu cada bloc? | **decimal** |
 | Quant val el bloc més alt? | Fins al **255** |
 
@@ -1785,7 +1785,7 @@ Operació **AND** amb `192.168.5.77` i `255.255.255.0` → adreça de xarxa **19
 | --- | --- |
 | Quants bits té una adreça IPv6? | **128** bits |
 | En quants grups de 2 bytes es escriu? | **8** grups |
-| Amb què caràcter es separen els grups? | Amb **dos punts (:)** |
+| Amb què caràcter es separen els grups? | Amb **dos puntos (:)** |
 | En què format es escriuen? | **hexadecimal** |
 
 Abreviacions (pas a pas):
@@ -1828,12 +1828,12 @@ Marca **V** o **F**:
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Cuaderno Completo de Actividades — UD1** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
-<div class="interactive-mcq" data-answer="A" data-hint="L'emissor envia el missatge al receptor a través d'un canal utilitzant un codi comú.">
+<div class="interactive-mcq" data-answer="A" data-hint="L'emisor envia el mensaje al receptor a través d'un canal utilitzant un código comú.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quins són els cinc elements fonamentals que intervenen en tot sistema de comunicació?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, missatge, canal i codi.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, mensaje, canal i código.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Teclat, ratolí, impressora, altaveu i taula.</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Paret, sostre, porta, finestra i armari.</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Cobre, plàstic, vidre, paper i fusta.</button>
@@ -1853,7 +1853,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 </div>
 
 <div class="interactive-vf" data-answer="V" data-hint="4 octets × 8 bits = 32 bits en total per a una adreça IPv4.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per punts, com <code>192.168.1.10</code>).</div>
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per puntos, com <code>192.168.1.10</code>).</div>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
     <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
@@ -1872,11 +1872,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD1**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD1**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -1887,7 +1887,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD01" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

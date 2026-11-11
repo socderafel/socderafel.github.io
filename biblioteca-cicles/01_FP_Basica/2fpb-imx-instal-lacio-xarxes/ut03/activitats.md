@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD3 — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "Cuaderno Completo de Actividades — UD3 — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD3"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD3"
 prev_url: "ficha302.html"
 prev_label: "⬅️ 🛠️ Fitxa 3.2 · Identificació de Fibra "
 next_url: "../ut04/index.html"
-next_label: "Següent Unitat (UD4) ➡️"
+next_label: "Siguiente Unidad (UD4) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD3: Mitjans de Transmissió — Parell Trenat (UTP/STP), Coaxial, Fibra Òptica i Sense Fil
+# Cuaderno Práctico de Actividades — UD3: Mitjans de Transmissió — Parell Trenat (UTP/STP), Coaxial, Fibra Òptica i Sense Fil
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[🛠️ Fitxa 3.1 · Comparativa de Mitjans de Transmissió Guiats i No Guiats](ficha301.html)**
 - **[🛠️ Fitxa 3.2 · Identificació de Fibra Òptica i Tecnologies Sense Fil](ficha302.html)**
@@ -95,7 +95,7 @@ Relaciona cada tecnologia sense fil amb el seu àmbit d'aplicació real en l'ofi
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **Cuaderno Completo de Actividades — UD3** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="B" data-hint="El trenat cancel·la el soroll electromagnètic i evita l'acoblament de senyal entre parells.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Per què es trenen per parells els fils de coure dins d'un cable de parell trenat (UTP / STP)?</div>
@@ -139,11 +139,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD3**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD3**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -154,7 +154,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD03" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

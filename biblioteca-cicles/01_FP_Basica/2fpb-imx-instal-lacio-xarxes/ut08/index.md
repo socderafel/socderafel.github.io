@@ -33,7 +33,7 @@ Benvingut/da a la **Unitat Didàctica 8** del mòdul d'Instal·lació i Mantenim
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
     <span>🎯 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
-    <span class="tracker-pts">🏆 0 punts</span>
+    <span class="tracker-pts">🏆 0 puntos</span>
   </div>
   <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
 </div>

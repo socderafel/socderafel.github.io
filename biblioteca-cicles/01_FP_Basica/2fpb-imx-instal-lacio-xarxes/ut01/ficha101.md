@@ -1,20 +1,20 @@
 ---
 layout: default
-title: "FITXA 1.1 · Elements d'un sistema de comunicació — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "FICHA 1.1 · Elementos de un sistema de comunicación — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD1"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD1"
 prev_url: "resum_text.html"
 prev_label: "⬅️ 📝 1.R1 Resum en Text"
 next_url: "ficha102.html"
-next_label: "🛠️ FITXA 1.2 · Representació de la inf ➡️"
+next_label: "🛠️ FICHA 1.2 · Representació de la inf ➡️"
 ---
 
-# **FITXA 1.1 · Elements d'un sistema de comunicació**
+# **FICHA 1.1 · Elementos de un sistema de comunicación**
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -28,10 +28,10 @@ next_label: "🛠️ FITXA 1.2 · Representació de la inf ➡️"
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
-> Tot sistema de comunicació necessita **cinc elements**: un **emissor**, un **receptor**, un **missatge**, un **canal** i un **codi**. A més, el **soroll** intenta espatlar la comunicació i el **protocol** posa les normes.
+> Tot sistema de comunicació necessita **cinc elements**: un **emisor**, un **receptor**, un **mensaje**, un **canal** i un **código**. A més, el **soroll** intenta espatlar la comunicació i el **protocol** posa les normes.
 
 ## 1 · El procés de comunicació
 
@@ -53,13 +53,13 @@ flowchart LR
 | --- | --- | --- |
 | **Emissor** | Entitat que transmet la informació |  |
 | **Receptor** | Entitat que rep la informació |  |
-| **Missatge** | Informació que l'emissor transmet al receptor |  |
-| **Canal** | Mitjà pel que es transmet el missatge |  |
+| **Missatge** | Informació que l'emisor transmet al receptor |  |
+| **Canal** | Mitjà pel que es transmet el mensaje |  |
 | **Codi** | Conjunt de signes, regles i normes (llenguatge) |  |
 
 ## 2 · Identifica els elements
 
-Per a cada situació, escriu el **emissor**, **receptor**, **missatge**, **canal** i **codi**:
+Per a cada situació, escriu el **emisor**, **receptor**, **mensaje**, **canal** i **código**:
 
 | Situació | Emissor | Receptor | Missatge | Canal | Codi |
 | --- | --- | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Per a cada situació, escriu el **emissor**, **receptor**, **missatge**, **canal
 
 ## 3 · El soroll
 
-El **soroll** és qualsevol interferència que contamina tant el missatge com el canal o el codi.
+El **soroll** és qualsevol interferència que contamina tant el mensaje com el canal o el código.
 
 1. Completa: "El soroll és qualsevol ……………… que contamina el ………………, el ……………… o el ………………"
 
@@ -107,7 +107,7 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 | Concepte | L'entenc | Quasi | El necessite repassar |
 | --- | --- | --- | --- |
 | Elements de la comunicació |  |  |  |
-| Identificar emissor, receptor, missatge, canal i codi |  |  |  |
+| Identificar emisor, receptor, mensaje, canal i código |  |  |  |
 | Soroll i interferències |  |  |  |
 | Protocol de comunicació |  |  |  |
 
@@ -123,11 +123,11 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA 1.1 · Elements d'un sistema de comunicació)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA 1.1 · Elementos de un sistema de comunicación)</summary>
 
-# **FITXA 1.1 · Elements d'un sistema de comunicació**
+# **FICHA 1.1 · Elementos de un sistema de comunicación**
 
-Fitxa en blanc: FITXA 1.1
+Fitxa en blanc: FICHA 1.1
 
 📥 
 
@@ -135,10 +135,10 @@ Fitxa en blanc: FITXA 1.1
 
 | Element | Què és? | Explica-ho amb les teues paraules (exemple) |
 | --- | --- | --- |
-| **Emissor** | Entitat que transmet la informació | La persona o equip que **envia** el missatge (qui parla o envia) |
-| **Receptor** | Entitat que rep la informació | La persona o equip que **rep i interpreta** el missatge |
-| **Missatge** | Informació que l'emissor transmet al receptor | **El que es diu**: la notícia, l'ordre, la salutació… |
-| **Canal** | Mitjà pel que es transmet el missatge | El mitjà físic: **aire, cable, wifi, llum**… |
+| **Emissor** | Entitat que transmet la informació | La persona o equip que **envia** el mensaje (qui parla o envia) |
+| **Receptor** | Entitat que rep la informació | La persona o equip que **rep i interpreta** el mensaje |
+| **Missatge** | Informació que l'emisor transmet al receptor | **El que es diu**: la notícia, l'ordre, la salutació… |
+| **Canal** | Mitjà pel que es transmet el mensaje | El mitjà físic: **aire, cable, wifi, llum**… |
 | **Codi** | Conjunt de signes, regles i normes (llenguatge) | El llenguatge: **idioma, senyals, colors, emojis**… |
 
 ## **2 · Identifica els elements**
@@ -154,7 +154,7 @@ Fitxa en blanc: FITXA 1.1
 
 1. 
 
-"El soroll és qualsevol **interferència** que contamina el **missatge**, el **canal** o el **codi**".
+"El soroll és qualsevol **interferència** que contamina el **mensaje**, el **canal** o el **código**".
 
 1. 
 
@@ -191,12 +191,12 @@ Marca **V** o **F**:
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **FITXA 1.1 · Elements d'un sistema de comunicació** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **FICHA 1.1 · Elementos de un sistema de comunicación** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
-<div class="interactive-mcq" data-answer="A" data-hint="L'emissor envia el missatge al receptor a través d'un canal utilitzant un codi comú.">
+<div class="interactive-mcq" data-answer="A" data-hint="L'emisor envia el mensaje al receptor a través d'un canal utilitzant un código comú.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quins són els cinc elements fonamentals que intervenen en tot sistema de comunicació?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, missatge, canal i codi.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, mensaje, canal i código.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Teclat, ratolí, impressora, altaveu i taula.</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Paret, sostre, porta, finestra i armari.</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Cobre, plàstic, vidre, paper i fusta.</button>
@@ -216,7 +216,7 @@ Comprova el teu domini sobre **FITXA 1.1 · Elements d'un sistema de comunicaci�
 </div>
 
 <div class="interactive-vf" data-answer="V" data-hint="4 octets × 8 bits = 32 bits en total per a una adreça IPv4.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per punts, com <code>192.168.1.10</code>).</div>
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per puntos, com <code>192.168.1.10</code>).</div>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
     <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
@@ -235,11 +235,11 @@ Comprova el teu domini sobre **FITXA 1.1 · Elements d'un sistema de comunicaci�
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**FITXA 1.1 · Elements d'un sistema de comunicació**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**FICHA 1.1 · Elementos de un sistema de comunicación**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -250,7 +250,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD01" data-activity="ficha101">📥 Descarregar Comprovant PDF</button>

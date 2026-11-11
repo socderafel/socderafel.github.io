@@ -1,20 +1,20 @@
 ---
 layout: default
-title: "FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD1"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD1"
 prev_url: "ficha102.html"
-prev_label: "⬅️ 🛠️ FITXA 1.2 · Representació de la inf"
+prev_label: "⬅️ 🛠️ FICHA 1.2 · Representació de la inf"
 next_url: "ficha104.html"
-next_label: "🛠️ FITXA 1.4 · L'adreça IP: IPv4 i IPv ➡️"
+next_label: "🛠️ FICHA 1.4 · L'adreça IP: IPv4 i IPv ➡️"
 ---
 
-# **FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP**
+# **FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP**
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -28,14 +28,14 @@ next_label: "🛠️ FITXA 1.4 · L'adreça IP: IPv4 i IPv ➡️"
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > Una **xarxa de comunicacions** és un grup de **dos o més equips** que intercambian informació. Eixa informació viatja trossejada en **paquets de dades** fets de zeros i uns (els **bits**). Perquè tots els equips es entenguen, usem unes normes anomenades **protocols**. I per a organitzar-los, existeixen dos models: **OSI** i **TCP/IP**.
 
 ## 1 · Què és una xarxa de comunicacions?
 
-Una xarxa de comunicacions serveix per a que els equips es **intercanvien informació**. L'equip que envia és el **emissor**, el que rep és el **receptor**, i entre ells hi ha un **canal** (el cable o el wifi). Si alguna cosa espatla les dades, hi ha **soroll**.
+Una xarxa de comunicacions serveix per a que els equips es **intercanvien informació**. L'equip que envia és el **emisor**, el que rep és el **receptor**, i entre ells hi ha un **canal** (el cable o el wifi). Si alguna cosa espatla les dades, hi ha **soroll**.
 
 ```mermaid
 flowchart LR
@@ -70,7 +70,7 @@ Completa la taula amb la funció de cada capa:
 | 7 | Aplicació | Els programes que uses (web, correu, jocs). |
 | 6 | Presentació | Tradueix i comprime la informació. |
 | 5 | Sessió | Manté oberta la conversa. |
-| 4 | Transport | Trocea el missatge i controla els errors (**TCP** i **UDP**). |
+| 4 | Transport | Trocea el mensaje i controla els errors (**TCP** i **UDP**). |
 | 3 | Xarxa | Posa la **adreça IP** i tria la millor ruta. |
 | 2 | Enllaç de dades | Posa la **adreça MAC** de cada equip. |
 | 1 | Física | Envia els **bits** pel cable. |
@@ -83,7 +83,7 @@ Completa la taula amb la funció de cada capa:
 
 ## 3 · L'encapsulament: els sobres
 
-Al **enviar**, cada capa **afegeix una adhesiu** amb informació (com quan metes un missatge en diversos sobres). Al **rebre**, es quitan els sobres un a un. A açò es li anomena **encapsular** (posar sobres) i **desencapsular** (quitar-los).
+Al **enviar**, cada capa **afegeix una adhesiu** amb informació (com quan metes un mensaje en diversos sobres). Al **rebre**, es quitan els sobres un a un. A açò es li anomena **encapsular** (posar sobres) i **desencapsular** (quitar-los).
 
 ```mermaid
 flowchart LR
@@ -138,7 +138,7 @@ Els **protocols** són les normes de cada capa. Quan uses el mòbil o l'ordinado
 
 1. Quantes capes té el model **OSI**? I el model **TCP/IP**? Quin dels dos usa Internet de veritat?
 
-1. Quan un amigo et envia un **WhatsApp** i tu el recibes, el missatge ha bajado les 7 capes en l'emissor i ha subido en el receptor. Què procés és eixe?
+1. Quan un amigo et envia un **WhatsApp** i tu el recibes, el mensaje ha bajado les 7 capes en l'emisor i ha subido en el receptor. Què procés és eixe?
 
 1. Uneix cada protocol amb la seua funció:
 
@@ -159,7 +159,7 @@ Els **protocols** són les normes de cada capa. Quan uses el mòbil o l'ordinado
 
 > - La correcta associació entre **capes, protocols i la seua funció**.
 
-> - La interpretació del **encapsulament** com el viatge del missatge en sobres.
+> - La interpretació del **encapsulament** com el viatge del mensaje en sobres.
 
 > - La neteja i l'ordre al resoldre els exercicis.
 
@@ -168,11 +168,11 @@ Els **protocols** són les normes de cada capa. Quan uses el mòbil o l'ordinado
 ---
 
 <details markdown="1">
-<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP)</summary>
+<summary>💡 Mostrar / Amagar el Solucionari Oficial complet (FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP)</summary>
 
-# **FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP**
+# **FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP**
 
-Fitxa en blanc: FITXA 1.3
+Fitxa en blanc: FICHA 1.3
 
 📥 
 
@@ -184,7 +184,7 @@ Fitxa en blanc: FITXA 1.3
 | La informació viatja trossejada en **paquets** de dades. |  |
 | Els paquets estan fets de zeros i uns, anomenats **bits**. |  |
 | Les normes perquè els equips es entenguen es anomenen **protocols**. |  |
-| L'equip que envia és el **emissor** i el que rep és el **receptor**. |  |
+| L'equip que envia és el **emisor** i el que rep és el **receptor**. |  |
 
 ## **2 · El model OSI: les 7 capes**
 
@@ -193,7 +193,7 @@ Fitxa en blanc: FITXA 1.3
 | 7 | **Aplicació** | Els programes que uses (web, correu, jocs). |
 | 6 | **Presentació** | Tradueix i comprime la informació. |
 | 5 | **Sessió** | Manté oberta la conversa. |
-| 4 | **Transport** | Trocea el missatge i controla errors (TCP i UDP). |
+| 4 | **Transport** | Trocea el mensaje i controla errors (TCP i UDP). |
 | 3 | **Xarxa** | Posa l'adreça IP i tria la millor ruta. |
 | 2 | **Enllaç de dades** | Posa l'adreça MAC de cada equip. |
 | 1 | **Física** | Envia els bits pel cable. |
@@ -255,12 +255,12 @@ Mnemotecnia: **«A**les **P**ersonas **S**iempre **T**raen **R**opa **E**n **F**
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
-<div class="interactive-mcq" data-answer="A" data-hint="L'emissor envia el missatge al receptor a través d'un canal utilitzant un codi comú.">
+<div class="interactive-mcq" data-answer="A" data-hint="L'emisor envia el mensaje al receptor a través d'un canal utilitzant un código comú.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quins són els cinc elements fonamentals que intervenen en tot sistema de comunicació?</div>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, missatge, canal i codi.</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Emissor, receptor, mensaje, canal i código.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Teclat, ratolí, impressora, altaveu i taula.</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Paret, sostre, porta, finestra i armari.</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Cobre, plàstic, vidre, paper i fusta.</button>
@@ -280,7 +280,7 @@ Comprova el teu domini sobre **FITXA 1.3 · Xarxes de comunicacions: models OSI 
 </div>
 
 <div class="interactive-vf" data-answer="V" data-hint="4 octets × 8 bits = 32 bits en total per a una adreça IPv4.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per punts, com <code>192.168.1.10</code>).</div>
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> Una adreça IPv4 està formada per 32 bits dividits en 4 octets (4 números decimals entre 0 i 255 separats per puntos, com <code>192.168.1.10</code>).</div>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
     <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
@@ -299,11 +299,11 @@ Comprova el teu domini sobre **FITXA 1.3 · Xarxes de comunicacions: models OSI 
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**FITXA 1.3 · Xarxes de comunicacions: models OSI i TCP/IP**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**FICHA 1.3 · Redes de comunicaciones: modelos OSI y TCP/IP**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -314,7 +314,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD01" data-activity="ficha103">📥 Descarregar Comprovant PDF</button>

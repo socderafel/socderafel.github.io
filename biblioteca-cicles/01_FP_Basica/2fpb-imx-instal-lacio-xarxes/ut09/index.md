@@ -9,7 +9,7 @@ next_label: "9.1 ➡️"
 
 # UD9: Projecte Integrador: Muntatge d'una Xarxa per a Petita Oficina
 
-Benvingut/da a la **Unitat Didàctica 9**, el **Projecte Integrador Final** del mòdul professional d'Instal·lació i Manteniment de Xarxes per a Transmissió de Dades de 2n curs d'FP Bàsica. En aquest projecte assumiràs el repte complet d'un cas real d'empresa: anàlisi de necessitats d'una oficina de 12 empleats, disseny del plànol de distribució amb **Draw.io**, càlcul del pressupost i llista de materials, desplegament de canaletes i cablejat UTP Cat 6 LSZH, connexió de l'armari rack mural de 9U, configuració de la subxarxa `192.168.10.0/24`, verificació amb tester i memòria tècnica final.
+Benvingut/da a la **Unitat Didàctica 9**, el **Projecte Integrador Final** del mòdul professional d'Instalación y Mantenimiento de Redes para Transmisión de Datos de 2n curs d'FP Bàsica. En aquest projecte assumiràs el repte complet d'un cas real d'empresa: anàlisi de necessitats d'una oficina de 12 empleats, disseny del plànol de distribució amb **Draw.io**, càlcul del pressupost i llista de materials, desplegament de canaletes i cablejat UTP Cat 6 LSZH, connexió de l'armari rack mural de 9U, configuració de la subxarxa `192.168.10.0/24`, verificació amb tester i memòria tècnica final.
 
 ---
 
@@ -33,7 +33,7 @@ Benvingut/da a la **Unitat Didàctica 9**, el **Projecte Integrador Final** del 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
     <span>🎯 <strong>Zona d'Entrenament FPB:</strong> <span class="tracker-count">0 reptes resolts</span></span>
-    <span class="tracker-pts">🏆 0 punts</span>
+    <span class="tracker-pts">🏆 0 puntos</span>
   </div>
   <div class="tracker-bar"><div class="tracker-fill" style="width: 0%;"></div></div>
 </div>

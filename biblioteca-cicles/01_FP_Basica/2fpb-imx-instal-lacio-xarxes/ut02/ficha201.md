@@ -1,20 +1,20 @@
 ---
 layout: default
-title: "FITXA 2.1 · Tipus de xarxes, abast i arquitectures — Instal·lació i Manteniment de Xarxes per a Transmissió de Dades (Networking Essentials)"
+title: "FICHA 2.1 · Tipus de xarxes, abast i arquitectures — Instalación y Mantenimiento de Redes para Transmisión de Datos (Networking Essentials)"
 course_root: ".."
-badge: "2n FPB · Instal·lació i Manteniment de Xarxes (IMX / NE) · UD2"
+badge: "2º FPB · Instalación y Mantenimiento de Redes (IMX / NE) · UD2"
 prev_url: "ut0202.html"
 prev_label: "⬅️ 2.2 Mitjans de transmissió"
 next_url: "ficha202.html"
-next_label: "🛠️ FITXA 2.2 · Mitjans de transmissió  ➡️"
+next_label: "🛠️ FICHA 2.2 · Mitjans de transmissió  ➡️"
 ---
 
-# **FITXA 2.1 · Tipus de xarxes, abast i arquitectures**
+# **FICHA 2.1 · Tipus de xarxes, abast i arquitectures**
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
@@ -28,7 +28,7 @@ next_label: "🛠️ FITXA 2.2 · Mitjans de transmissió  ➡️"
 | --- | --- | --- |
 |  |  |  |
 
-> **📌 Què repassem?**
+> **📌 ¿Qué repasamos?**
 > 
 
 > Les xarxes es classifiquen segons el seu **abast geogràfic** (PAN, LAN, MAN, WAN). Les **topologies** defineixen la forma en que es connecten els equips (bus, estrela, anell, malla, arbre, mixta). Les **arquitectures** determinan la relació entre equips: **client-servidor** o **peer-to-peer** (*igual a igual*).
@@ -138,7 +138,7 @@ Marca una casella per fila per a valorar com et sents amb cada idea:
 
 ## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
 
-Comprova el teu domini sobre **FITXA 2.1 · Tipus de xarxes, abast i arquitectures** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprova el teu domini sobre **FICHA 2.1 · Tipus de xarxes, abast i arquitectures** superant aquests 4 reptes gamificats (+25 puntos cadascun):
 
 <div class="interactive-mcq" data-answer="A" data-hint="LAN (Local Area Network) abasta un àmbit local com una vivenda, taller, oficina o institut.">
   <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En les xarxes de dades segons la seua extensió geogràfica, què és una xarxa LAN (Local Area Network)?</div>
@@ -182,11 +182,11 @@ Comprova el teu domini sobre **FITXA 2.1 · Tipus de xarxes, abast i arquitectur
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**FITXA 2.1 · Tipus de xarxes, abast i arquitectures**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**FICHA 2.1 · Tipus de xarxes, abast i arquitectures**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
-- [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He revisat els esquemes, taules o blocs de código i he verificat que sé aplicar-los a l'entorn de treball.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -197,7 +197,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="IMX" data-unit="UD02" data-activity="ficha201">📥 Descarregar Comprovant PDF</button>
