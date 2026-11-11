@@ -19,7 +19,7 @@ El módulo de **Programación de Servicios y Procesos (PSP)** se imparte en el c
 - **Docente:** Pepe Cuenca
 - **Centro:** IES Sant Vicent Ferrer (Algemesí)
 - **Departamento:** Informática y Comunicaciones
-- **Materiales oficiales:** Disponible la versión completa en [Guía Didáctica 2025/2026 (PDF)](../img/2526-2DAM-PSP-Guia Didàctica.pdf) y [Criterios de Calificación (PDF)](../img/2526_2dam_psp_criteris_qualificacio.pdf).
+- **Materiales oficiales:** Disponible la versión completa en [Guía Didáctica (PDF)](../img/2526-2DAM-PSP-Guia Didàctica.pdf) y [Criterios de Calificación (PDF)](../img/2526_2dam_psp_criteris_qualificacio.pdf).
 
 ### 1.2. Material Obligatorio del Alumnado
 Cada estudiante debe disponer en todas las sesiones presenciales de laboratorio de un **disco de estado sólido externo (SSD) con conexión USB 3.2**:

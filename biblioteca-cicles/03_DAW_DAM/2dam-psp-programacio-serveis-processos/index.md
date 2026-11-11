@@ -19,7 +19,7 @@ title: Programació de Serveis i Processos (PSP)
 
 <div class="action-banner">
   <div class="action-banner-content">
-    <span class="action-banner-badge">Curs Actiu 2025/2026</span>
+    <span class="action-banner-badge" style="background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1;">Mòdul de Referència</span>
     <h3 style="margin: 4px 0 8px 0; color: var(--navy-900);">Docent: Pepe Cuenca</h3>
     <p style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">
       Material oficial adaptat al currículum LOMLOE / Decret de títol de FP per a DAM. Totes les pràctiques inclouen codi font en Java, exemples compilables, diagrames de fils i processos, exercicis de lliurament a Aules i qüestionaris d'autoavaluació.
