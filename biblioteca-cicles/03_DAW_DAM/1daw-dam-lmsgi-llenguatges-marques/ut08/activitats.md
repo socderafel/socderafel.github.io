@@ -1,35 +1,35 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD8 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD8 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD8"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD8"
 prev_url: "act801.html"
 prev_label: "⬅️ ⚡ Activitat 801"
 next_url: "../ut09/index.html"
 next_label: "Següent Unitat (UD9) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX)
+# Cuaderno Práctico de Actividades — UD8: Emmagatzematge i Consulta d'Informació — XQuery i SGBD Nadius XML (BaseX)
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 801](act801.html)**
 
 ---
 
-## Activitat 801
+## Actividad 801
 
 👉 *[Obrir aquesta activitat en pàgina individual](act801.html)*
 
@@ -378,12 +378,12 @@ jq '[.ventas[] | select((.unidades * .precio) > 50)]' ventas.json
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD8** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="A" data-hint="L'acrònim FLWOR correspon a For, Let, Where, Order by i Return.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En una expressió FLWOR de XQuery, quina és la funció de les clàusules <code>for</code>, <code>let</code>, <code>where</code>, <code>order by</code> i <code>return</code>?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En una expressió FLWOR de XQuery, quina és la funció de les clàusules <code>for</code>, <code>let</code>, <code>where</code>, <code>order by</code> i <code>return</code>?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) <code>for</code> itera sobre una seqüència de nodes, <code>let</code> assigna variables, <code>where</code> filtra, <code>order by</code> ordena i <code>return</code> construeix l'eixida.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Serveixen únicament per a donar estil CSS als paràgrafs.</button>
@@ -394,7 +394,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="A" data-hint="En XQuery totes les variables comencen amb el símbol '$' (per exemple: for $b in //book).">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin caràcter precedeix sempre el nom de qualsevol variable (<code>$x</code>) dins d'una consulta XQuery?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Quin caràcter precedeix sempre el nom de qualsevol variable (<code>$x</code>) dins d'una consulta XQuery?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) El símbol dòlar ($).</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) El símbol coixinet (#).</button>
@@ -405,7 +405,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant a
 </div>
 
 <div class="interactive-vf" data-answer="V" data-hint="BaseX i eXist-db indexen documents XML nadius i implementen l'estàndard XQuery i XQuery Update.">
-  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> BaseX i eXist-db són exemples de Sistemes Gestors de Bases de Dades Nadius XML que permeten executar consultes i actualitzacions XQuery sobre col·leccions de documents.</div>
+  <div class="vf-statement">✅ <strong>Repte 3 (Vertader o Fals · +25 pts):</strong> BaseX i eXist-db són exemples de Sistemes Gestors de Bases de Datos Nadius XML que permeten executar consultes i actualitzacions XQuery sobre col·leccions de documents.</div>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">Vertader (V)</button>
     <button type="button" class="btn-vf" data-opt="F">Fals (F)</button>
@@ -424,11 +424,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD8**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD8**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -439,7 +439,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD08" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

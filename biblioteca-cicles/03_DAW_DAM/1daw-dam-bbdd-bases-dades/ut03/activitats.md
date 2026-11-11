@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD3 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD3 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT03"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT03"
 prev_url: "act305.html"
 prev_label: "⬅️ ⚡ Activitat 305"
 next_url: "../ut04/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD4) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD3: Disseny Lògic — Model Relacional i Normalització
+# Cuaderno Práctico de Actividades — UD3: Disseny Lògic — Model Relacional i Normalització
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 301](act301.html)**
 - **[⚡ Activitat 302](act302.html)**
@@ -34,33 +34,33 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 301
+## Actividad 301
 
 👉 *[Obrir aquesta activitat en pàgina individual](act301.html)*
 
-# **Activitat 301**
+# **Actividad 301**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `301_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `301_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -87,7 +87,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 > - **VNN**: atributs que no poden ser nuls.
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **ARTICLES I ENCARGOS**
 
@@ -108,7 +108,7 @@ A més, es ha determinat que s'ha d'emmagatzemar la informació de les **fàbriq
 
 **Es demana:** obtindre el model relacional de la base de dades.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **CASES DE COLÒNIES**
 
@@ -131,7 +131,7 @@ f) De les **comarcas** on hi ha cases o bé on residen xiquets, es vol tindre re
 
 **Es demana:** obtindre el model relacional de la base de dades.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **TRANSPORT**
 
@@ -145,7 +145,7 @@ Dels **camiones** que porten els camioneros interessa conèixer la matrícula, m
 
 **Es demana:** obtindre el model relacional de la base de dades.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **PARADORS**
 
@@ -167,33 +167,33 @@ La xarxa de Paradors de Turismo vol mantindre un servei d'atenció i reserves a 
 
 ---
 
-## Activitat 302
+## Actividad 302
 
 👉 *[Obrir aquesta activitat en pàgina individual](act302.html)*
 
-# **Activitat 302**
+# **Actividad 302**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `302_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `302_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -220,7 +220,7 @@ La xarxa de Paradors de Turismo vol mantindre un servei d'atenció i reserves a 
 
 > - Les relacions **1:1** es resolen afegint la **clau forana** (que a més és **clau alternativa**).
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 Suposem el següent model E/R on representamos un sistema d'informació on modelamos les dades d'un **entrenador** i els **jugadors** d'un equip de baloncesto. De moment, només modelamos la relació entre l'entrenador i els jugadors:
 
@@ -228,7 +228,7 @@ Suposem el següent model E/R on representamos un sistema d'informació on model
 
 Obtingues el **esquema relacional** i, a continuació, **dibuixa el model relacional**.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 Sobre l'exercici anterior, anem a afegir l'entitat **EQUIP** amb el nom del mateix, el seu logotipo, adreça i any de creació. Clarament, **cada equip només té un únic entrenador**, i **un entrenador només pot serlo d'un equip**.
 
@@ -238,7 +238,7 @@ Es demana:
 
 1. Modifica el model relacional a partir del nou model E/R.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 Tenim el següent model E/R que representa les diferents **edicions** que d'un llibre publica una **editorial**, i els **autors** que escriuen els llibres:
 
@@ -246,13 +246,13 @@ Tenim el següent model E/R que representa les diferents **edicions** que d'un l
 
 Obtingues el **esquema relacional** i completa el **diccionari de dades**.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 Realitza el **esquema lògic** mitjançant un **model relacional** del següent model E/R:
 
 ![Model E/R exercici 4](../img/assets_images_up03_act302_ej04.png)
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 Tenim el següent model E/R sobre l'organització d'una **empresa** en **departaments** i les característiques dels seus **empleats**:
 
@@ -260,7 +260,7 @@ Tenim el següent model E/R sobre l'organització d'una **empresa** en **departa
 
 Obtingues el **esquema relacional** i indica les **cardinalitats** de les relacions.
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 A partir del següent model E/R que conté restriccions de **cardinalitat mínima** i restriccions de **identificació**, es demana:
 
@@ -272,25 +272,25 @@ A partir del següent model E/R que conté restriccions de **cardinalitat mínim
 
 1. Emplena **tres taules** amb dades ficticios (almenys 3 registres per taula), ja siguen dades relacionats o no, conforme consideres.
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 Crea el **model relacional** a partir del model conceptual sobre un **centre educativo**:
 
 ![Model E/R centre educativo](../img/assets_images_up03_act302_ej07.png)
 
-## **Exercici 8**
+## **Ejercicio 8**
 
 Crea el **model relacional** a partir del model conceptual:
 
 ![Model E/R exercici 8](../img/assets_images_up03_act302_ej08.png)
 
-## **Exercici 9**
+## **Ejercicio 9**
 
 Crea el **model relacional** a partir del model conceptual:
 
 ![Model E/R exercici 9](../img/assets_images_up03_act302_ej09.png)
 
-## **Exercici 10**
+## **Ejercicio 10**
 
 (RABD.6 // CE6a, CE6e // 3p) A partir dels següents **esquemes lògics**, dibuixa el **model E/R**:
 
@@ -332,7 +332,7 @@ C (b0*, a0*, c0)
 · VNN: (c0)
 ```
 
-## **Exercici 11**
+## **Ejercicio 11**
 
 (RABD.6 // CE6a, CE6e // 3p) A partir del següent **model relacional**, dibuixa el **diagrama E/R**:
 
@@ -392,7 +392,7 @@ APARATO (num, codigo*, fechaAdquisic, estado)
 · FK: (codigo) → MODELO
 ```
 
-## **Exercici 12**
+## **Ejercicio 12**
 
 (RABD.6 // CE6a, CE6e // 3p) A partir del següent **model relacional**, dibuixa el **diagrama E/R**:
 
@@ -427,7 +427,7 @@ LIMPIAR (codigo*, numA*, numE*)
 · FK: (codigo) → TRABAJADOR
 ```
 
-## **Exercici 13**
+## **Ejercicio 13**
 
 A partir del següent **model relacional**:
 
@@ -486,33 +486,33 @@ h. Un **COMERCIAL** pot tindre diversos mentors o un mentor pot mentoritzar a di
 
 ---
 
-## Activitat 303
+## Actividad 303
 
 👉 *[Obrir aquesta activitat en pàgina individual](act303.html)*
 
-# **Activitat 303**
+# **Actividad 303**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `303_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `303_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -532,7 +532,7 @@ h. Un **COMERCIAL** pot tindre diversos mentors o un mentor pot mentoritzar a di
 
 ## **Exercici 1: Primera forma normal (1FN)**
 
-### **Activitat 01**
+### **Actividad 01**
 
 La següent taula **no està en 1FN** perquè conté **atributs multivaluats**:
 
@@ -543,7 +543,7 @@ La següent taula **no està en 1FN** perquè conté **atributs multivaluats**:
 
 Transforma la taula a **1FN**, de manera que no haja atributs multivaluats.
 
-### **Activitat 02**
+### **Actividad 02**
 
 La taula conté **atributs multivaluats i valors repetits en una mateixa cel·la**:
 
@@ -554,7 +554,7 @@ La taula conté **atributs multivaluats i valors repetits en una mateixa cel·la
 
 Transforma la taula perquè complisca **1FN**.
 
-### **Activitat 03**
+### **Actividad 03**
 
 La taula conté **atributs multivaluats i valors repetits en una mateixa cel·la**:
 
@@ -567,7 +567,7 @@ Transforma la taula perquè complisca amb **1FN** eliminant els valors multivalu
 
 ## **Exercici 2: Segona forma normal (2FN)**
 
-### **Activitat 01**
+### **Actividad 01**
 
 La següent taula està en **1FN**, però no compleix **2FN** a causa de **dependències parcials**:
 
@@ -579,7 +579,7 @@ La següent taula està en **1FN**, però no compleix **2FN** a causa de **depen
 
 Elimina les dependències parcials. La clau primària és `(ID_Orden, ID_Producto)`.
 
-### **Activitat 02**
+### **Actividad 02**
 
 La següent taula està en **1FN**, però no compleix **2FN** a causa de **dependències parcials**:
 
@@ -591,7 +591,7 @@ La següent taula està en **1FN**, però no compleix **2FN** a causa de **depen
 
 Descompón la taula per a eliminar les dependències parcials.
 
-### **Activitat 03**
+### **Actividad 03**
 
 La següent taula està en **1FN**, però no compleix **2FN** a causa de **dependències parcials**:
 
@@ -605,7 +605,7 @@ Identifica i elimina les dependències parcials.
 
 ## **Exercici 3: Tercera forma normal (3FN)**
 
-### **Activitat 01**
+### **Actividad 01**
 
 La següent taula està en **2FN**, però no compleix **3FN** a causa de **dependències transitives**:
 
@@ -616,7 +616,7 @@ La següent taula està en **2FN**, però no compleix **3FN** a causa de **depen
 
 Descompón la taula per a eliminar les dependències transitives.
 
-### **Activitat 02**
+### **Actividad 02**
 
 La següent taula està en **2FN**, però no compleix **3FN** a causa de **dependències transitives**:
 
@@ -627,7 +627,7 @@ La següent taula està en **2FN**, però no compleix **3FN** a causa de **depen
 
 Elimina les dependències transitives.
 
-### **Activitat 03**
+### **Actividad 03**
 
 La següent taula està en **2FN**, però no compleix **3FN** a causa de **dependències transitives**:
 
@@ -640,7 +640,7 @@ Elimina les dependències transitives.
 
 ## **Exercici 4: Forma normal de Boyce-Codd (FNBC)**
 
-### **Activitat 01**
+### **Actividad 01**
 
 Una taula que no compleix FNBC té dependències funcionals on **un atribut no clau determina part de la clau primària**.
 
@@ -656,7 +656,7 @@ Dependències funcionals:
 
 Descompón la taula perquè complisca **FNBC**.
 
-### **Activitat 02**
+### **Actividad 02**
 
 Una taula que no compleix FNBC té dependències funcionals on **un atribut no clau determina part de la clau primària**.
 
@@ -674,7 +674,7 @@ Elimina les dependències funcionals problemátiques.
 
 ## **Exercici 5: Quarta Forma normal (4FN)**
 
-### **Activitat 01**
+### **Actividad 01**
 
 La taula està en **3FN**. En aquesta taula hi ha una **dependència multivaluada**, on un client pot tindre múltiples **telèfons** i **correus electrònics**.
 
@@ -686,7 +686,7 @@ La taula està en **3FN**. En aquesta taula hi ha una **dependència multivaluad
 
 Elimina la dependència multivaluada.
 
-### **Activitat 02**
+### **Actividad 02**
 
 La taula està en **3FN**. En aquesta taula hi ha una **dependència multivaluada**, on un client pot tindre múltiples **telèfons** i **compres**.
 
@@ -700,7 +700,7 @@ Elimina les dependències multivaluades.
 
 ## **Exercici 6: Cinquena Forma normal (5FN)**
 
-### **Activitat 01**
+### **Actividad 01**
 
 La taula està en **4FN**. La taula representa relacions entre **clients**, **productes** i **vendedors**.
 
@@ -712,7 +712,7 @@ La taula està en **4FN**. La taula representa relacions entre **clients**, **pr
 
 Descompón la taula en relacions independents per a evitar redundancias.
 
-### **Activitat 02**
+### **Actividad 02**
 
 La taula està en **4FN**. La taula representa relacions entre **projectes**, **empleats** i **rols**.
 
@@ -726,33 +726,33 @@ Elimina redundancias distribuyendo les dades en taules més xicotetes.
 
 ---
 
-## Activitat 304: Activitat 01
+## Actividad 304: Activitat 01
 
 👉 *[Obrir aquesta activitat en pàgina individual](act304.html)*
 
-# **Activitat 304**
+# **Actividad 304**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `304_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `304_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -769,7 +769,7 @@ Elimina redundancias distribuyendo les dades en taules més xicotetes.
 
 > 1. **3FN**: sense dependències transitives.
 
-## **Activitat 01**
+## **Actividad 01**
 
 **Sèries**
 
@@ -785,7 +785,7 @@ Tenim la següent taula. Aplica les **tres formes normals** vistes en classe.
 | 0619 | The Umbrella Academy | Drama, Superhéroes | 2019 | Netflix |
 | 0720 | Ted Lasso | Comedia | 2020 | Apple TV |
 
-## **Activitat 02**
+## **Actividad 02**
 
 **Ordenes**
 
@@ -802,33 +802,33 @@ Tenim la següent taula relacionada amb una **compra**. Realitza les tres formes
 
 ---
 
-## Activitat 305
+## Actividad 305
 
 👉 *[Obrir aquesta activitat en pàgina individual](act305.html)*
 
-# **Activitat 305**
+# **Actividad 305**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `305_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `305_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -877,7 +877,7 @@ Tenim la següent taula relacionada amb una **compra**. Realitza les tres formes
 
 > 1. **Documentar les restriccions** que no poden plasmar-se en el disseny lògic.
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **INSTITUT**
 
@@ -891,7 +891,7 @@ a) Obtindre el **model relacional** corresponent al diagrama E/R, indicant per a
 
 b) **Normalitzar** la taula d'alumnes per a eliminar l'atribut multivaluat *telefonos*, documentant el procés de 1FN i 2FN.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **EMPRESA**
 
@@ -913,7 +913,7 @@ b) Documentar les **restriccions** que no poden plasmar-se en el disseny lògic.
 
 - Un projecte no pot estar sense empleats.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **CLÍNICA DENTAL**
 
@@ -927,7 +927,7 @@ a) Obtindre el **model relacional** corresponent al diagrama E/R, indicant per a
 
 b) Documentar les **restriccions** que no poden plasmar-se en el disseny lògic.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **ESPECIALITZACIÓ**
 
@@ -946,12 +946,12 @@ b) Indicar en què casos es guardarían les dades de tècnics i comercials en **
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD3** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="Tota relació N:M genera una nova taula amb les claus primàries d'ambdues entitats com a clau composta i claus foranes.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En la transformació del model E/R al model Relacional, com es transforma una relació binària amb correspondència N:M (molts a molts)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En la transformació del model E/R al model Relacional, com es transforma una relació binària amb correspondència N:M (molts a molts)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Es fusionen les dues entitats en una sola taula sense clau primària.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Es crea una nova taula (relació) la clau primària de la qual és la composició de les claus foranes de les dues entitats.</button>
@@ -962,7 +962,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="La regla d'integritat d'entitat prohibeix valors nuls (NULL) en qualsevol atribut de la clau primària.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quina regla d'integritat del model relacional estableix que cap atribut que forme part de la clau primària d'una relació pot prendre el valor NULL?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Quina regla d'integritat del model relacional estableix que cap atribut que forme part de la clau primària d'una relació pot prendre el valor NULL?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Integritat referencial.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Integritat d'entitat.</button>
@@ -992,11 +992,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD3**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD3**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -1007,7 +1007,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD03" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

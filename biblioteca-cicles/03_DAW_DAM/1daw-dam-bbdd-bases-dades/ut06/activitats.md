@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD6 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD6 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT06"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT06"
 prev_url: "act605.html"
 prev_label: "⬅️ ⚡ Activitat 605: Optimització de consu"
 next_url: "../ut07/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD7) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD6: Consultes sobre Bases de Dades — SQL DQL (SELECT)
+# Cuaderno Práctico de Actividades — UD6: Consultes sobre Bases de Datos — SQL DQL (SELECT)
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 601: 1. Consultes simples](act601.html)**
 - **[⚡ Activitat 602: 1. Consultes simples](act602.html)**
@@ -34,22 +34,22 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 601: 1. Consultes simples
+## Actividad 601: 1. Consultes simples
 
 👉 *[Obrir aquesta activitat en pàgina individual](act601.html)*
 
-# **Activitat 601**
+# **Actividad 601**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `601_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `601_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -68,7 +68,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA3: Consulta la informació emmagatzemada en una base de dades emprant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -268,22 +268,22 @@ Al final es genera un **reporte amb ✅/❌ per exercici** que pots **descarrega
 
 ---
 
-## Activitat 602: 1. Consultes simples
+## Actividad 602: 1. Consultes simples
 
 👉 *[Obrir aquesta activitat en pàgina individual](act602.html)*
 
-# **Activitat 602**
+# **Actividad 602**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `602_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `602_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -302,7 +302,7 @@ Al final es genera un **reporte amb ✅/❌ per exercici** que pots **descarrega
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA3: Consulta la informació emmagatzemada en una base de dades emprant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -352,7 +352,7 @@ Amb la BBDD **nba** facilitada (nba.sql){: target=blank}, resol les consultes de
 
 **Exercici 9.** Número de jugadors argentinos en la NBA. Mostra el total en la columna **`AS Numero`**.
 
-**Exercici 10.** Màxima mitjana de punts de 'LeBron James' en la seua carrera. Mostra la columna **`AS Maxima`**.
+**Exercici 10.** Màxima mitjana de puntos de 'LeBron James' en la seua carrera. Mostra la columna **`AS Maxima`**.
 
 **Exercici 13.** Número de jugadors de cada equip de la conferència 'East'. Mostra **`AS Equipo`** i **`AS Jugadores`** (agrupa per equip).
 
@@ -394,7 +394,7 @@ Amb la BBDD **nba** facilitada (nba.sql){: target=blank}, resol les consultes de
 
 **Exercici 16.** Rebotes per partit dels jugadors dels equips de ciutat 'Els Angeles' (Lakers i Clippers). Mostra **`AS Jugador`**, Temporada i Rebotes_por_partido.
 
-**Exercici 29.** Temporada amb més punts per partit de 'Kobe Bryant'. Mostra la columna Temporada. Sugerencia: ordena per Puntos_por_partido DESC i usa `LIMIT 1`.
+**Exercici 29.** Temporada amb més puntos per partit de 'Kobe Bryant'. Mostra la columna Temporada. Sugerencia: ordena per Puntos_por_partido DESC i usa `LIMIT 1`.
 
 ### **4. Composicions externes**
 
@@ -445,22 +445,22 @@ ENC1:AURtGE87SEFxVXZRBndVV1BLSGRydEkYUltcEQ8NJgU5Di07Ggh6bGtgbXtbXxsUPQE1S0ImBho
 
 ---
 
-## Activitat 603: Consultes a Jardineria 2
+## Actividad 603: Consultes a Jardineria 2
 
 👉 *[Obrir aquesta activitat en pàgina individual](act603.html)*
 
-# **Activitat 603**
+# **Actividad 603**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `603_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `603_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -477,7 +477,7 @@ ENC1:AURtGE87SEFxVXZRBndVV1BLSGRydEkYUltcEQ8NJgU5Di07Ggh6bGtgbXtbXxsUPQE1S0ImBho
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA3: Consulta la informació emmagatzemada en una base de dades emprant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -712,22 +712,22 @@ ENC1:AURtQz4RSEM4EXYCQndeVV5zSmhaMABeFBBbDQUfNkR2QntzFhIZITQ9OFRAUBtBIho2Sgd1Ghk
 
 ---
 
-## Activitat 604: 1. Base de dades: Empresa
+## Actividad 604: 1. Base de dades: Empresa
 
 👉 *[Obrir aquesta activitat en pàgina individual](act604.html)*
 
-# **Activitat 604**
+# **Actividad 604**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `604_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `604_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -742,7 +742,7 @@ ENC1:AURtQz4RSEM4EXYCQndeVV5zSmhaMABeFBBbDQUfNkR2QntzFhIZITQ9OFRAUBtBIho2Sgd1Ghk
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -788,22 +788,22 @@ Sobre la base de dades **jardineria** facilitada (jardineria.sql) es demana:
 
 ---
 
-## Activitat 605: Optimització de consultes
+## Actividad 605: Optimització de consultes
 
 👉 *[Obrir aquesta activitat en pàgina individual](act605.html)*
 
-# **Activitat 605**
+# **Actividad 605**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `605_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `605_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -818,7 +818,7 @@ Sobre la base de dades **jardineria** facilitada (jardineria.sql) es demana:
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA3: Consulta la informació emmagatzemada en una base de dades emprant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -883,12 +883,12 @@ Analitza el pla d'ejecució i compáralo amb la consulta anterior. A continuaci�
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD6** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="WHERE actua sobre files abans d'agrupar; HAVING filtra grups després del GROUP BY.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En una consulta SQL <code>SELECT</code>, quina és la diferència fonamental entre les clàusules <code>WHERE</code> i <code>HAVING</code>?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En una consulta SQL <code>SELECT</code>, quina és la diferència fonamental entre les clàusules <code>WHERE</code> i <code>HAVING</code>?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) No hi ha cap diferència; són sinònims exactes.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) <code>WHERE</code> filtra files individuals abans de l'agrupament (<code>GROUP BY</code>), mentre que <code>HAVING</code> filtra els grups ja creats sovint amb funcions d'agregació.</button>
@@ -899,7 +899,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="LEFT OUTER JOIN preserva totes les files de la taula esquerra, omplint amb NULL quan no hi ha correspondència a la dreta.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin tipus de <code>JOIN</code> retorna totes les files de la taula de l'esquerra encara que no tinguen cap coincidència en la taula de la dreta?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Quin tipus de <code>JOIN</code> retorna totes les files de la taula de l'esquerra encara que no tinguen cap coincidència en la taula de la dreta?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) INNER JOIN</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) LEFT JOIN (o LEFT OUTER JOIN)</button>
@@ -929,11 +929,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD6**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD6**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -944,7 +944,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD06" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

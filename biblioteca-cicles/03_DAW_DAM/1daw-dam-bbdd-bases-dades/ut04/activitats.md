@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD4 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD4 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT04"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT04"
 prev_url: "act406.html"
 prev_label: "⬅️ ⚡ Activitat 406: Disseny físic - Clien"
 next_url: "../ut05/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD5) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD4: Disseny Físic — Llenguatge SQL: DDL i DCL
+# Cuaderno Práctico de Actividades — UD4: Disseny Físic — Llenguatge SQL: DDL i DCL
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 401](act401.html)**
 - **[⚡ Activitat 402: Disseny físic - Jardineria](act402.html)**
@@ -35,22 +35,22 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 401
+## Actividad 401
 
 👉 *[Obrir aquesta activitat en pàgina individual](act401.html)*
 
-# **Activitat 401**
+# **Actividad 401**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script complet de l'activitat i una **captura de pantalla** on es comprove que es ha executat correctament.
 
-> - El nom del fitxer ha de ser `401_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `401_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -65,7 +65,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -183,22 +183,22 @@ El script complet, amb les instruccions `INSERT` de les dades d'exemple, es trob
 
 ---
 
-## Activitat 402: Disseny físic - Jardineria
+## Actividad 402: Disseny físic - Jardineria
 
 👉 *[Obrir aquesta activitat en pàgina individual](act402.html)*
 
-# **Activitat 402**
+# **Actividad 402**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script DDL de l'activitat.
 
-> - El nom del fitxer ha de ser `402_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `402_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -213,7 +213,7 @@ El script complet, amb les instruccions `INSERT` de les dades d'exemple, es trob
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -261,22 +261,22 @@ Crea les instruccions DDL per a crear la base de dades **jardineria** a partir d
 
 ---
 
-## Activitat 403: Disseny físic - Universitat
+## Actividad 403: Disseny físic - Universitat
 
 👉 *[Obrir aquesta activitat en pàgina individual](act403.html)*
 
-# **Activitat 403**
+# **Actividad 403**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script DDL de l'activitat.
 
-> - El nom del fitxer ha de ser `403_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `403_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -293,7 +293,7 @@ Crea les instruccions DDL per a crear la base de dades **jardineria** a partir d
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -348,22 +348,22 @@ Crea les instruccions DDL per a crear la base de dades **universitat** a partir 
 
 ---
 
-## Activitat 404: Llenguatge de Control de Dades (DCL)
+## Actividad 404: Llenguatge de Control de Dades (DCL)
 
 👉 *[Obrir aquesta activitat en pàgina individual](act404.html)*
 
-# **Activitat 404**
+# **Actividad 404**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **document** que continga la resposta a cada un dels exercicis: les instruccions SQL utilitzades i l'eixida obtenida en cada cas (pots copiar les consultes i realitzar capturas de pantalla).
 
-> - El nom del fitxer ha de ser `404_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `404_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -376,7 +376,7 @@ Crea les instruccions DDL per a crear la base de dades **universitat** a partir 
 
 > - La correcta comprovació dels permisos mitjançant `SHOW GRANTS`.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -433,22 +433,22 @@ Realitza els següents exercicis en MySQL:
 
 ---
 
-## Activitat 405: Disseny físic - Películas
+## Actividad 405: Disseny físic - Películas
 
 👉 *[Obrir aquesta activitat en pàgina individual](act405.html)*
 
-# **Activitat 405**
+# **Actividad 405**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script complet de l'activitat (creació de la base de dades i totes les modificacions `ALTER`).
 
-> - El nom del fitxer ha de ser `405_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `405_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -463,7 +463,7 @@ Realitza els següents exercicis en MySQL:
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -515,22 +515,22 @@ Realitza els següents exercicis en MySQL:
 
 ---
 
-## Activitat 406: Disseny físic - Clients
+## Actividad 406: Disseny físic - Clients
 
 👉 *[Obrir aquesta activitat en pàgina individual](act406.html)*
 
-# **Activitat 406**
+# **Actividad 406**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script complet de l'activitat (creació de la base de dades i totes les modificacions `ALTER`).
 
-> - El nom del fitxer ha de ser `406_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `406_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -545,7 +545,7 @@ Realitza els següents exercicis en MySQL:
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Crea bases de dades definint la seua estructura i les característiques dels seus elements segons el model relacional.
 
@@ -596,12 +596,12 @@ Realitza els següents exercicis en MySQL:
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD4** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD4** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="ALTER TABLE modifica l'estructura (DDL), mentre que UPDATE modifica les files de dades (DML).">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina sentència del subllenguatge SQL DDL s'utilitza per a modificar l'estructura d'una taula existent (afegir columnes o restriccions)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> Quina sentència del subllenguatge SQL DDL s'utilitza per a modificar l'estructura d'una taula existent (afegir columnes o restriccions)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) UPDATE TABLE</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) ALTER TABLE</button>
@@ -612,7 +612,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD4** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="CASCADE propaga l'esborrament o l'actualització des de la taula pare cap a les files vinculades de la taula filla.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin efecte té l'opció <code>ON DELETE CASCADE</code> definida sobre una clau forana (<code>FOREIGN KEY</code>) en SQL?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Quin efecte té l'opció <code>ON DELETE CASCADE</code> definida sobre una clau forana (<code>FOREIGN KEY</code>) en SQL?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Impedeix esborrar qualsevol fila de la taula pare llançant un error.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Quan s'esborra una fila de la taula referenciada (pare), s'esborren automàticament les files relacionades de la taula filla.</button>
@@ -642,11 +642,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD4** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD4**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD4**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -657,7 +657,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD04" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

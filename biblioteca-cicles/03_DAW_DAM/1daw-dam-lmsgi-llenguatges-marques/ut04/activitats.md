@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD4 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD4 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD4"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD4"
 prev_url: "act406.html"
 prev_label: "⬅️ ⚡ Activitat 406: 1. Creació d'arrays i"
 next_url: "../ut05/index.html"
 next_label: "Següent Unitat (UD5) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes
+# Cuaderno Práctico de Actividades — UD4: Programació amb JavaScript — Sintaxi, Arrays, Funcions i Objectes
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 400: Instruccions](act400.html)**
 - **[⚡ Activitat 401: Activitat 01 - El meu primer programa](act401.html)**
@@ -35,7 +35,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 400: Instruccions
+## Actividad 400: Instruccions
 
 👉 *[Obrir aquesta activitat en pàgina individual](act400.html)*
 
@@ -112,7 +112,7 @@ Podem veure que el codi s'executa de forma seqüencial.
 
 ---
 
-## Activitat 401: Activitat 01 - El meu primer programa
+## Actividad 401: Activitat 01 - El meu primer programa
 
 👉 *[Obrir aquesta activitat en pàgina individual](act401.html)*
 
@@ -768,7 +768,7 @@ function concatenar() {
 
 ---
 
-## Activitat 402: Activitat 06 - suma total
+## Actividad 402: Activitat 06 - suma total
 
 👉 *[Obrir aquesta activitat en pàgina individual](act402.html)*
 
@@ -911,7 +911,7 @@ function letraDni() {
 
 </details>
 
-## **Activitat 08**
+## **Actividad 08**
 
 > **📌 A realitzar**
 > 
@@ -972,7 +972,7 @@ function mayor() {
 
 </details>
 
-## **Activitat 09**
+## **Actividad 09**
 
 > **📌 A realitzar**
 > 
@@ -1020,7 +1020,7 @@ function random() {
 
 </details>
 
-## **Activitat 10**
+## **Actividad 10**
 
 > **📌 A realitzar**
 > 
@@ -1121,13 +1121,13 @@ td{
 
 ---
 
-## Activitat 403: Activitat 11
+## Actividad 403: Activitat 11
 
 👉 *[Obrir aquesta activitat en pàgina individual](act403.html)*
 
 # Activitats 11-15
 
-## **Activitat 11**
+## **Actividad 11**
 
 > **📌 A realitzar**
 > 
@@ -1204,7 +1204,7 @@ function mostrarQuiniela() {
 
 </details>
 
-## **Activitat 12**
+## **Actividad 12**
 
 > **📌 A realitzar**
 > 
@@ -1277,7 +1277,7 @@ function random() {
 
 </details>
 
-## **Activitat 13**
+## **Actividad 13**
 
 > **📌 A realitzar**
 > 
@@ -1325,7 +1325,7 @@ function mayus() {
 
 </details>
 
-## **Activitat 14**
+## **Actividad 14**
 
 > **📌 A realitzar**
 > 
@@ -1387,7 +1387,7 @@ function modificar() {
 
 </details>
 
-## **Activitat 15**
+## **Actividad 15**
 
 > **📌 A realitzar**
 > 
@@ -1446,13 +1446,13 @@ function cuenta() {
 
 ---
 
-## Activitat 404: Activitat 16
+## Actividad 404: Activitat 16
 
 👉 *[Obrir aquesta activitat en pàgina individual](act404.html)*
 
 # Activitats 16-20
 
-## **Activitat 16**
+## **Actividad 16**
 
 > **📌 A realitzar**
 > 
@@ -1514,7 +1514,7 @@ function parentesi() {
 
 </details>
 
-## **Activitat 17**
+## **Actividad 17**
 
 > **📌 A realitzar**
 > 
@@ -1571,7 +1571,7 @@ function reverse() {
 
 </details>
 
-## **Activitat 18**
+## **Actividad 18**
 
 > **📌 A realitzar**
 > 
@@ -1634,7 +1634,7 @@ function palindromo() {
 
 </details>
 
-## **Activitat 19**
+## **Actividad 19**
 
 > **📌 A realitzar**
 > 
@@ -1701,7 +1701,7 @@ function piramide() {
 
 </details>
 
-## **Activitat 20**
+## **Actividad 20**
 
 > **📌 A realitzar**
 > 
@@ -1770,13 +1770,13 @@ function piramide() {
 
 ---
 
-## Activitat 405: Activitat 21
+## Actividad 405: Activitat 21
 
 👉 *[Obrir aquesta activitat en pàgina individual](act405.html)*
 
 # Activitats 21-25
 
-## **Activitat 21**
+## **Actividad 21**
 
 > **📌 A realitzar**
 > 
@@ -1848,7 +1848,7 @@ function piramide() {
 
 </details>
 
-## **Activitat 22**
+## **Actividad 22**
 
 > **📌 A realitzar**
 > 
@@ -1933,7 +1933,7 @@ function multiplo() {
 
 </details>
 
-## **Activitat 23**
+## **Actividad 23**
 
 > **📌 A realitzar**
 > 
@@ -1998,7 +1998,7 @@ function tabla() {
 
 </details>
 
-## **Activitat 24**
+## **Actividad 24**
 
 > **📌 A realitzar**
 > 
@@ -2057,7 +2057,7 @@ function mail() {
 
 </details>
 
-## **Activitat 25**
+## **Actividad 25**
 
 > **📌 A realitzar**
 > 
@@ -2125,7 +2125,7 @@ function ejerArray() {
 
 ---
 
-## Activitat 406: 1. Creació d'arrays i accés a elements
+## Actividad 406: 1. Creació d'arrays i accés a elements
 
 👉 *[Obrir aquesta activitat en pàgina individual](act406.html)*
 
@@ -2133,7 +2133,7 @@ function ejerArray() {
 
 ## **1. Creació d'arrays i accés a elements**
 
-### **Exercici 1**
+### **Ejercicio 1**
 
 > **📌 Enunciat**
 > 
@@ -2176,7 +2176,7 @@ console.log(frutas[10]);
 
 </details>
 
-### **Exercici 2**
+### **Ejercicio 2**
 
 > **📌 Enunciat**
 > 
@@ -2210,7 +2210,7 @@ console.log(numeros);
 
 </details>
 
-### **Exercici 3**
+### **Ejercicio 3**
 
 > **📌 Enunciat**
 > 
@@ -2251,7 +2251,7 @@ console.log(b.length);
 
 ## **2. Afegir i eliminar elements**
 
-### **Exercici 4**
+### **Ejercicio 4**
 
 > **📌 Enunciat**
 > 
@@ -2296,7 +2296,7 @@ console.log(letras);
 
 </details>
 
-### **Exercici 5**
+### **Ejercicio 5**
 
 > **📌 Enunciat**
 > 
@@ -2336,7 +2336,7 @@ javascript ["dilluns", "dimarts", "dimecres", "dijous"]
 
 ## **3. Conversió i creació d'arrays**
 
-### **Exercici 6**
+### **Ejercicio 6**
 
 > **📌 Enunciat**
 > 
@@ -2371,7 +2371,7 @@ console.log(array2);
 
 </details>
 
-### **Exercici 7**
+### **Ejercicio 7**
 
 > **📌 Enunciat**
 > 
@@ -2406,7 +2406,7 @@ console.log(indices);
 
 </details>
 
-### **Exercici 8**
+### **Ejercicio 8**
 
 > **📌 Enunciat**
 > 
@@ -2441,7 +2441,7 @@ console.log(texto);
 
 ## **4. Cerca i comprovació**
 
-### **Exercici 9**
+### **Ejercicio 9**
 
 > **📌 Enunciat**
 > 
@@ -2483,7 +2483,7 @@ javascript true false 2 -1 4
 
 </details>
 
-### **Exercici 10**
+### **Ejercicio 10**
 
 > **📌 Enunciat**
 > 
@@ -2511,7 +2511,7 @@ console.log(existeElemento(["rojo", "azul", "verde"], "negro"));
 
 </details>
 
-### **Exercici 11**
+### **Ejercicio 11**
 
 > **📌 Enunciat**
 > 
@@ -2544,7 +2544,7 @@ console.log(notas.indexOf(10));
 
 ## **5. Subarrays i fragments**
 
-### **Exercici 12**
+### **Ejercicio 12**
 
 > **📌 Enunciat**
 > 
@@ -2580,7 +2580,7 @@ console.log(letras.slice());
 
 </details>
 
-### **Exercici 13**
+### **Ejercicio 13**
 
 > **📌 Enunciat**
 > 
@@ -2617,7 +2617,7 @@ console.log(animales);
 
 > javascript ["perro", "loro", "conejo", "tortuga"]
 
-### **Exercici 14**
+### **Ejercicio 14**
 
 > **📌 Enunciat**
 > 
@@ -2640,7 +2640,7 @@ console.log(nuevo);
 
 ## **6. Modificar arrays**
 
-### **Exercici 15**
+### **Ejercicio 15**
 
 > **📌 Enunciat**
 > 
@@ -2668,7 +2668,7 @@ console.log(numeros);
 
 </details>
 
-### **Exercici 16**
+### **Ejercicio 16**
 
 > **📌 Enunciat**
 > 
@@ -2699,7 +2699,7 @@ console.log(letras);
 
 > javascript ["a", "b", "c", "a", "b"]
 
-### **Exercici 17**
+### **Ejercicio 17**
 
 > **📌 Enunciat**
 > 
@@ -2732,7 +2732,7 @@ console.log(nuevo);
 
 ## **7. Ordenació i inversió**
 
-### **Exercici 18**
+### **Ejercicio 18**
 
 > **📌 Enunciat**
 > 
@@ -2762,7 +2762,7 @@ console.log(letras);
 
 </details>
 
-### **Exercici 19**
+### **Ejercicio 19**
 
 > **📌 Enunciat**
 > 
@@ -2783,7 +2783,7 @@ console.log(ordenadas);
 
 </details>
 
-### **Exercici 20**
+### **Ejercicio 20**
 
 > **📌 Enunciat**
 > 
@@ -2820,7 +2820,7 @@ console.log(invertido);
 
 ## **8. forEach()**
 
-### **Exercici 21**
+### **Ejercicio 21**
 
 > **📌 Enunciat**
 > 
@@ -2847,7 +2847,7 @@ console.log(nombre);
 
 </details>
 
-### **Exercici 22**
+### **Ejercicio 22**
 
 > **📌 Enunciat**
 > 
@@ -2874,7 +2874,7 @@ console.log("Posición " + indice + ": " + nombre);
 
 </details>
 
-### **Exercici 23**
+### **Ejercicio 23**
 
 > **📌 Enunciat**
 > 
@@ -2911,7 +2911,7 @@ console.log(numero * 2);
 
 ## **9. every() i some()**
 
-### **Exercici 24**
+### **Ejercicio 24**
 
 > **📌 Enunciat**
 > 
@@ -2940,7 +2940,7 @@ console.log(resultado);
 
 </details>
 
-### **Exercici 25**
+### **Ejercicio 25**
 
 > **📌 Enunciat**
 > 
@@ -2969,7 +2969,7 @@ console.log(resultado);
 
 </details>
 
-### **Exercici 26**
+### **Ejercicio 26**
 
 > **📌 Enunciat**
 > 
@@ -2999,7 +2999,7 @@ console.log(todosPositivos([1, -2, 3]));
 
 </details>
 
-### **Exercici 27**
+### **Ejercicio 27**
 
 > **📌 Enunciat**
 > 
@@ -3031,7 +3031,7 @@ console.log(hayPar([1, 4, 5]));
 
 ## **10. map()**
 
-### **Exercici 28**
+### **Ejercicio 28**
 
 > **📌 Enunciat**
 > 
@@ -3066,7 +3066,7 @@ console.log(cuadrados);
 
 </details>
 
-### **Exercici 29**
+### **Ejercicio 29**
 
 > **📌 Enunciat**
 > 
@@ -3095,7 +3095,7 @@ console.log(longitudes);
 
 </details>
 
-### **Exercici 30**
+### **Ejercicio 30**
 
 > **📌 Enunciat**
 > 
@@ -3124,7 +3124,7 @@ console.log(conIva);
 
 </details>
 
-### **Exercici 31**
+### **Ejercicio 31**
 
 > **📌 Enunciat**
 > 
@@ -3169,7 +3169,7 @@ console.log(nombres);
 
 ## **11. filter()**
 
-### **Exercici 32**
+### **Ejercicio 32**
 
 > **📌 Enunciat**
 > 
@@ -3198,7 +3198,7 @@ console.log(pares);
 
 </details>
 
-### **Exercici 33**
+### **Ejercicio 33**
 
 > **📌 Enunciat**
 > 
@@ -3227,7 +3227,7 @@ const filtrados = nombres.filter(function(nombre) {
 console.log(filtrados);
 ```
 
-### **Exercici 34**
+### **Ejercicio 34**
 
 > **📌 Enunciat**
 > 
@@ -3268,7 +3268,7 @@ console.log(aprobados);
 
 ## **12. flat() i flatMap()**
 
-### **Exercici 35**
+### **Ejercicio 35**
 
 > **📌 Enunciat**
 > 
@@ -3297,7 +3297,7 @@ console.log(datos.flat());
 
 </details>
 
-### **Exercici 36**
+### **Ejercicio 36**
 
 > **📌 Enunciat**
 > 
@@ -3327,7 +3327,7 @@ console.log(datos.flat(2));
 
 </details>
 
-### **Exercici 37**
+### **Ejercicio 37**
 
 > **📌 Enunciat**
 > 
@@ -3366,7 +3366,7 @@ console.log(resultado);
 
 </details>
 
-### **Exercici 38**
+### **Ejercicio 38**
 
 > **📌 Enunciat**
 > 
@@ -3403,7 +3403,7 @@ console.log(palabras);
 
 ## **13. find(), findIndex(), findLast() i findLastIndex()**
 
-### **Exercici 39**
+### **Ejercicio 39**
 
 > **📌 Enunciat**
 > 
@@ -3432,7 +3432,7 @@ console.log(encontrado);
 
 </details>
 
-### **Exercici 40**
+### **Ejercicio 40**
 
 > **📌 Enunciat**
 > 
@@ -3455,7 +3455,7 @@ console.log(posicion);
 
 </details>
 
-### **Exercici 41**
+### **Ejercicio 41**
 
 > **📌 Enunciat**
 > 
@@ -3500,7 +3500,7 @@ return numero % 2 !== 0;
 
 </details>
 
-### **Exercici 42**
+### **Ejercicio 42**
 
 > **📌 Enunciat**
 > 
@@ -3551,7 +3551,7 @@ return persona.edad === 25;
 
 ## **14. redueix()**
 
-### **Exercici 43**
+### **Ejercicio 43**
 
 > **📌 Enunciat**
 > 
@@ -3580,7 +3580,7 @@ console.log(suma);
 
 </details>
 
-### **Exercici 44**
+### **Ejercicio 44**
 
 > **📌 Enunciat**
 > 
@@ -3609,7 +3609,7 @@ console.log(producto);
 
 </details>
 
-### **Exercici 45**
+### **Ejercicio 45**
 
 > **📌 Enunciat**
 > 
@@ -3642,7 +3642,7 @@ console.log(texto);
 
 </details>
 
-### **Exercici 46**
+### **Ejercicio 46**
 
 > **📌 Enunciat**
 > 
@@ -3671,7 +3671,7 @@ console.log(mayor);
 
 </details>
 
-### **Exercici 47**
+### **Ejercicio 47**
 
 > **📌 Enunciat**
 > 
@@ -3708,7 +3708,7 @@ console.log(total);
 
 </details>
 
-### **Exercici 48**
+### **Ejercicio 48**
 
 > **📌 Enunciat**
 > 
@@ -3750,7 +3750,7 @@ console.log(conteo);
 
 ## **15. reduceRight()**
 
-### **Exercici 49**
+### **Ejercicio 49**
 
 > **📌 Enunciat**
 > 
@@ -3785,7 +3785,7 @@ console.log(resultado);
 
 </details>
 
-### **Exercici 50**
+### **Ejercicio 50**
 
 > **📌 Enunciat**
 > 
@@ -3815,7 +3815,7 @@ return acumulador;
 
 ## 16. Exercicis mixtos
 
-### **Exercici 51**
+### **Ejercicio 51**
 
 > **📌 Enunciat**
 > 
@@ -3886,7 +3886,7 @@ console.log(media);
 
 </details>
 
-### **Exercici 52**
+### **Ejercicio 52**
 
 > **📌 Enunciat**
 > 
@@ -3955,7 +3955,7 @@ console.log(valorTotal);
 
 </details>
 
-### **Exercici 53**
+### **Ejercicio 53**
 
 > **📌 Enunciat**
 > 
@@ -3998,7 +3998,7 @@ console.log(todasLasPalabras);
 
 </details>
 
-### **Exercici 54**
+### **Ejercicio 54**
 
 > **📌 Enunciat**
 > 
@@ -4043,12 +4043,12 @@ console.log(resultado);
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD4** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD4** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="const defineix una referència constant amb àmbit de bloc; let permet reassignar el valor.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En JavaScript modern (ES6+), quina diferència hi ha entre declarar una variable amb <code>let</code> i declarar-la amb <code>const</code>?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En JavaScript modern (ES6+), quina diferència hi ha entre declarar una variable amb <code>let</code> i declarar-la amb <code>const</code>?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) <code>let</code> té àmbit global obligatori i <code>const</code> no existeix en navegadors.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Ambdues tenen àmbit de bloc (<code>{}</code>), però <code>const</code> impedeix reassignar la referència de la variable després de la seua inicialització.</button>
@@ -4059,7 +4059,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD4** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="filter() retorna un nou array amb els elements que superen el predicat booleà.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Quin mètode funcional dels Arrays en JavaScript crea i retorna un NOU array amb tots els elements que compleixen la condició d'una funció callback?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Quin mètode funcional dels Arrays en JavaScript crea i retorna un NOU array amb tots els elements que compleixen la condició d'una funció callback?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) forEach()</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) filter()</button>
@@ -4089,11 +4089,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD4** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD4**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD4**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -4104,7 +4104,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD04" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

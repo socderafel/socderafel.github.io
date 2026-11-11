@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD7 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD7 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT07"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT07"
 prev_url: "act709.html"
 prev_label: "⬅️ ⚡ Activitat 709: Excepcions - CIRC"
 next_url: "../ut08/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD8) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD7: Programació de Bases de Dades — Procediments, Funcions, Triggers i Cursors
+# Cuaderno Práctico de Actividades — UD7: Programació de Bases de Datos — Procediments, Funcions, Triggers i Cursors
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 701: Procediments - CIRC](act701.html)**
 - **[⚡ Activitat 702: Procediments amb paràmetres - CIRC](act702.html)**
@@ -38,22 +38,22 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 701: Procediments - CIRC
+## Actividad 701: Procediments - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act701.html)*
 
-# **Activitat 701**
+# **Actividad 701**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `701_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `701_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -66,7 +66,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -109,22 +109,22 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 ---
 
-## Activitat 702: Procediments amb paràmetres - CIRC
+## Actividad 702: Procediments amb paràmetres - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act702.html)*
 
-# **Activitat 702**
+# **Actividad 702**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `702_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `702_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -137,7 +137,7 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -210,22 +210,22 @@ Modifica la data d'inici de l'atracció `'El gran felino'` i ponla **un dia desp
 
 ---
 
-## Activitat 703: Sentències Prepared - CIRC
+## Actividad 703: Sentències Prepared - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act703.html)*
 
-# **Activitat 703**
+# **Actividad 703**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `703_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `703_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -240,7 +240,7 @@ Modifica la data d'inici de l'atracció `'El gran felino'` i ponla **un dia desp
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -273,22 +273,22 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 ---
 
-## Activitat 704: Fluxos de Control - CIRC
+## Actividad 704: Fluxos de Control - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act704.html)*
 
-# **Activitat 704**
+# **Actividad 704**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `704_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `704_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -303,7 +303,7 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -360,22 +360,22 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 ---
 
-## Activitat 705: Esdeveniments
+## Actividad 705: Esdeveniments
 
 👉 *[Obrir aquesta activitat en pàgina individual](act705.html)*
 
-# **Activitat 705**
+# **Actividad 705**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `705_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `705_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -390,7 +390,7 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -461,22 +461,22 @@ Treballarem amb la base de dades **`employees`** (dades d'una empresa) que ja de
 
 ---
 
-## Activitat 706: Triggers - CIRC
+## Actividad 706: Triggers - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act706.html)*
 
-# **Activitat 706**
+# **Actividad 706**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `706_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `706_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -491,7 +491,7 @@ Treballarem amb la base de dades **`employees`** (dades d'una empresa) que ja de
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -541,22 +541,22 @@ Si a l'afegir una celebració nova (`ATRACCION_DIA`) la `FECHA_INICIO` en `ATRAC
 
 ---
 
-## Activitat 707: Cursors - CIRC
+## Actividad 707: Cursors - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act707.html)*
 
-# **Activitat 707**
+# **Actividad 707**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `707_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `707_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -571,7 +571,7 @@ Si a l'afegir una celebració nova (`ATRACCION_DIA`) la `FECHA_INICIO` en `ATRAC
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -622,22 +622,22 @@ Ha de mostrar en **una única consulta** la llista de pistes i nou aforament a p
 
 ---
 
-## Activitat 708: Funcions d'usuari - CIRC
+## Actividad 708: Funcions d'usuari - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act708.html)*
 
-# **Activitat 708**
+# **Actividad 708**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `708_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `708_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -652,7 +652,7 @@ Ha de mostrar en **una única consulta** la llista de pistes i nou aforament a p
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -732,22 +732,22 @@ Anomena a la funció per a mostrar el **estat per anys de cada un dels animals**
 
 ---
 
-## Activitat 709: Excepcions - CIRC
+## Actividad 709: Excepcions - CIRC
 
 👉 *[Obrir aquesta activitat en pàgina individual](act709.html)*
 
-# **Activitat 709**
+# **Actividad 709**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `709_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `709_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -762,7 +762,7 @@ Anomena a la funció per a mostrar el **estat per anys de cada un dels animals**
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA5: Desenvolupa procediments emmagatzemats avaluant i utilitzant les sentències del llenguatge incorporat en el sistema gestor de bases de dades.
 
@@ -827,12 +827,12 @@ Amb la BBDD **CIRC** facilitada (CIRC.sql), crea i executa un script `.sql` que 
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD7** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD7** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="A" data-hint="Les funcions retornen un valor escalar i s'usen en expressions; els procediments s'executen amb CALL.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En la programació de bases de dades (MySQL/MariaDB), quina diferència clau hi ha entre un <code>PROCEDURE</code> (procediment) i una <code>FUNCTION</code> (funció)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En la programació de bases de dades (MySQL/MariaDB), quina diferència clau hi ha entre un <code>PROCEDURE</code> (procediment) i una <code>FUNCTION</code> (funció)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Una funció retorna obligatòriament un valor amb <code>RETURN</code> i pot invocar-se dins d'una expressió <code>SELECT</code>, mentre que un procediment s'invoca amb <code>CALL</code> i pot tenir paràmetres <code>IN</code>, <code>OUT</code> i <code>INOUT</code>.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Els procediments no poden contenir bucles ni condicionals <code>IF</code>.</button>
@@ -843,7 +843,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD7** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="OLD conté els valors anteriors a la modificació i NEW els nous valors que s'hi volen desar.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En un disparador (<code>TRIGGER</code>) de tipus <code>BEFORE UPDATE</code>, quins pseudoregistres permeten accedir al valor antic i al nou valor d'una fila?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En un disparador (<code>TRIGGER</code>) de tipus <code>BEFORE UPDATE</code>, quins pseudoregistres permeten accedir al valor antic i al nou valor d'una fila?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) FIRST i LAST</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) OLD i NEW</button>
@@ -873,11 +873,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD7** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD7**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD7**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -888,7 +888,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD07" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

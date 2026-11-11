@@ -1,36 +1,36 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD5 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD5 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD5"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD5"
 prev_url: "act502.html"
 prev_label: "⬅️ ⚡ Activitat 502: Bloc 1. Callback"
 next_url: "../ut06/index.html"
 next_label: "Següent Unitat (UD6) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API
+# Cuaderno Práctico de Actividades — UD5: JavaScript Avançat — Manipulació del DOM, Esdeveniments, Formularis i Fetch API
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 501: 1 Introducció al DOM](act501.html)**
 - **[⚡ Activitat 502: Bloc 1. Callback](act502.html)**
 
 ---
 
-## Activitat 501: 1 Introducció al DOM
+## Actividad 501: 1 Introducció al DOM
 
 👉 *[Obrir aquesta activitat en pàgina individual](act501.html)*
 
@@ -1366,7 +1366,7 @@ boton.addEventListener("click", () => {
 
 ---
 
-## Activitat 502: Bloc 1. Callback
+## Actividad 502: Bloc 1. Callback
 
 👉 *[Obrir aquesta activitat en pàgina individual](act502.html)*
 
@@ -1999,7 +1999,7 @@ Explicació
 
 ## **Bloc 5. Renderitzat dinàmic en el DOM**
 
-### Activitat 15. Pintar una llista en el DOM
+### Actividad 15. Pintar una llista en el DOM
 
 > **📌 Enunciat**
 > 
@@ -2059,7 +2059,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 </details>
 
-### Activitat 16. Crear targetes dinàmiques
+### Actividad 16. Crear targetes dinàmiques
 
 > **📌 Enunciat**
 > 
@@ -2136,7 +2136,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 </details>
 
-### Activitat 17. Limpiar i tornar a renderitzar
+### Actividad 17. Limpiar i tornar a renderitzar
 
 > **📌 Enunciat**
 > 
@@ -2217,7 +2217,7 @@ Explicació
 
 </details>
 
-### Activitat 18. Filtrar i renderitzar
+### Actividad 18. Filtrar i renderitzar
 
 > **📌 Enunciat**
 > 
@@ -2281,7 +2281,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 </details>
 
-### Activitat 19. Mostrar errors en pantalla
+### Actividad 19. Mostrar errors en pantalla
 
 > **📌 Enunciat**
 > 
@@ -2338,7 +2338,7 @@ fetch("https://jsonplaceholder.typicode.com/userrrr")
 
 </details>
 
-### Activitat 20. Taula dinàmica des de API
+### Actividad 20. Taula dinàmica des de API
 
 > **📌 Enunciat**
 > 
@@ -2427,12 +2427,12 @@ fetch("https://jsonplaceholder.typicode.com/users")
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD5** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD5** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="document.querySelector('.classe #id') utilitza la sintaxi de selectors CSS.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin mètode de l'objecte <code>document</code> (DOM) permet seleccionar el primer element HTML que coincidisca amb qualsevol selector CSS vàlid?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> Quin mètode de l'objecte <code>document</code> (DOM) permet seleccionar el primer element HTML que coincidisca amb qualsevol selector CSS vàlid?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) document.getElementsByTagName()</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) document.querySelector()</button>
@@ -2443,7 +2443,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD5** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="response.json() retorna una Promesa que es resol amb l'objecte JavaScript resultant de parsejar el JSON.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En consumir una API REST amb <code>fetch()</code> en JavaScript utilitzant <code>async / await</code>, per a què serveix <code>await resposta.json()</code>?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En consumir una API REST amb <code>fetch()</code> en JavaScript utilitzant <code>async / await</code>, per a què serveix <code>await resposta.json()</code>?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Per a tancar la connexió de xarxa sense llegir les dades.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Per a llegir el cos de la resposta HTTP i convertir-lo (parsejar-lo) de text JSON a un objecte o array natiu de JavaScript.</button>
@@ -2473,11 +2473,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD5** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD5**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD5**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -2488,7 +2488,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD05" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

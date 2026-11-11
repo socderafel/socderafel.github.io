@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD1 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD1 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD1"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD1"
 prev_url: "act109.html"
 prev_label: "⬅️ ⚡ Activitat 109"
 next_url: "../ut02/index.html"
 next_label: "Següent Unitat (UD2) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD1: Introducció als Llenguatges de Marques (XML i JSON)
+# Cuaderno Práctico de Actividades — UD1: Introducció als Lenguajes de Marcas (XML i JSON)
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 101](act101.html)**
 - **[⚡ Activitat 102](act102.html)**
@@ -37,39 +37,39 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 101
+## Actividad 101
 
 👉 *[Obrir aquesta activitat en pàgina individual](act101.html)*
 
-# Activitat 101
+# Actividad 101
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `101_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `101_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. a) S'han identificat les característiques generals dels llenguatges de marques. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Què saps sobre els llenguatges de marques?**
 
@@ -81,7 +81,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 - En què es diferencia d'un llenguatge de programació?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Llenguatge de marques o llenguatge de programació?**
 
@@ -285,39 +285,39 @@ int main() {
 
 ---
 
-## Activitat 102
+## Actividad 102
 
 👉 *[Obrir aquesta activitat en pàgina individual](act102.html)*
 
-# Activitat 102
+# Actividad 102
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `102_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `102_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. b) S'han reconegut els beneficios que proporcionen els llenguatges de marques en el tractament de la informació. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Què avantatges tenen els llenguatges de marques?**
 
@@ -334,7 +334,7 @@ Llegix les següents **afirmacions** e **indica** si són **Verdaderas (V)** o *
 | Són independents del sistema operatiu utilitzat. |  |  |
 | Faciliten la reutilització de la informació. |  |  |
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Què format elegirías?**
 
@@ -358,7 +358,7 @@ Opcions:
 | Llista d'alumnes per a imprimir. |  |  |
 | Arxiu de configuració d'una aplicació. |  |  |
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Cas pràctic**
 
@@ -394,39 +394,39 @@ Què llenguatge de marques utilitzaries per a aquest cas? Justifica la teua elec
 
 ---
 
-## Activitat 103
+## Actividad 103
 
 👉 *[Obrir aquesta activitat en pàgina individual](act103.html)*
 
-# Activitat 103
+# Actividad 103
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `103_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `103_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. c) S'han classificat els llenguatges de marques i identificat els més relevantes. (5%).
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Completa** la següent taula:
 
@@ -443,39 +443,39 @@ Què llenguatge de marques utilitzaries per a aquest cas? Justifica la teua elec
 
 ---
 
-## Activitat 104
+## Actividad 104
 
 👉 *[Obrir aquesta activitat en pàgina individual](act104.html)*
 
-# Activitat 104
+# Actividad 104
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `104_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `104_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. d) Es han diferenciado els seus àmbits d'aplicació. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 A continuació es mostra el contingut d'un arxiu XML. **Transforma** eixa informació al format **CSV**.
 
@@ -512,33 +512,33 @@ A continuació es mostra el contingut d'un arxiu XML. **Transforma** eixa inform
 
 ---
 
-## Activitat 105
+## Actividad 105
 
 👉 *[Obrir aquesta activitat en pàgina individual](act105.html)*
 
-# Activitat 105
+# Actividad 105
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `105_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `105_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
@@ -552,7 +552,7 @@ Comparació ràpida dels àmbits:
 
 Tots dos llenguatges de propòsit general permeten organitzar i transportar dades de manera estructurada en diferents entorns i aplicacions.
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 Passos a seguir:
 
@@ -576,7 +576,7 @@ Es ens solicita els fragments d'informació del document XML en els que es obser
 •   Data, Orto i Ocaso
 •   Temperatura per hores
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 Suposem que una empresa està configurant un arxiu per a gestionar les preferències d'un programari empresarial. El format triat per a les configuracions és XML:
 
@@ -604,7 +604,7 @@ Per a la próxima versió de l'aplicació ens diuen que han afegit cinc propieta
 
 Àmplia el document XML anterior perquè incorpore tota la informació que ara pot manejar l'aplicació.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 A continuació veiem la informació que es està transmitent per a cada veí del sistema informàtic A al B.
 
@@ -633,39 +633,39 @@ Llavors, basándonos en el document JSON anterior, quin seria la informació ess
 
 ---
 
-## Activitat 106
+## Actividad 106
 
 👉 *[Obrir aquesta activitat en pàgina individual](act106.html)*
 
-# Activitat 106
+# Actividad 106
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `106_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `106_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. f) S'han analitzat les característiques pròpies de diferents llenguatges de marques. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 Indica a què llenguatge de marques pertany cada un dels següents fragments (HTML, XML, JSON o YAML) i justifica la teua resposta enumerant, almenys, **dos característiques pròpies** d'eixe llenguatge que es observen en el fragment.
 
@@ -724,7 +724,7 @@ libro:
   disponible: true
 ```
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 A continuació es mostra un document XML en el que es combinen diverses de les característiques pròpies del llenguatge XML.
 
@@ -766,7 +766,7 @@ Respon a les següents preguntes, analitzant les **característiques pròpies** 
 
 1. Què diferència existeix entre l'element `<horas>128</horas>` i l'element `<horas></horas>`?
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 Analitza les següents afirmacions sobre les **característiques pròpies** dels distints llenguatges de marques i indica si són **verdaderas (V)** o **falsas (F)**, justificant brevement la teua resposta:
 
@@ -782,7 +782,7 @@ Analitza les següents afirmacions sobre les **característiques pròpies** dels
 
 1. YAML destaca per ser molt fàcil de llegir per a les persones i s'utilitza habitualment en arxius de configuració, mentre que XML és més verboso però molt adequat per a documents estructurats i empresarials.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 Supón tres escenarios diferents en els que has de **triar el llenguatge de marques més adequat** entre HTML, XML i JSON. Justifica cada elecció a partir de les característiques pròpies de cada llenguatge:
 
@@ -794,39 +794,39 @@ Supón tres escenarios diferents en els que has de **triar el llenguatge de marq
 
 ---
 
-## Activitat 107
+## Actividad 107
 
 👉 *[Obrir aquesta activitat en pàgina individual](act107.html)*
 
-# Activitat 107
+# Actividad 107
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `107_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `107_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. g) S'han identificat l'estructura d'un document i les seues regles sintàctiques. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 A continuació es mostra un document XML complet. Identifica en ell totes les **parts de la seua estructura** que pugues trobar i respon a les preguntes.
 
@@ -860,7 +860,7 @@ A continuació es mostra un document XML complet. Identifica en ell totes les **
 
 1. Com es denomina la relació entre l'element `<peliculas>` i l'element `<pelicula>`? I entre `<pelicula>` i `<titulo>`?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 Els següents documents XML **no compleixen alguna de les regles sintàctiques** del llenguatge. Per a cada un d'ells:
 
@@ -918,7 +918,7 @@ Els següents documents XML **no compleixen alguna de les regles sintàctiques**
 </Ejemplo>
 ```
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 El següent document XML conté **diverses regles sintàctiques** respetades alhora. Léelo amb atenció i respon.
 
@@ -950,33 +950,33 @@ El següent document XML conté **diverses regles sintàctiques** respetades alh
 
 ---
 
-## Activitat 108
+## Actividad 108
 
 👉 *[Obrir aquesta activitat en pàgina individual](act108.html)*
 
-# Activitat 108
+# Actividad 108
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `108_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `108_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
@@ -984,7 +984,7 @@ El següent document XML conté **diverses regles sintàctiques** respetades alh
 
 Els següents documents XML no estan bé formats, revisa la seua estructura, marca on creus que està l'error i vuelvo a escribirlos per a crear un document bé format.
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 > **📌 Xml**
 > 
@@ -1002,7 +1002,7 @@ Els següents documents XML no estan bé formats, revisa la seua estructura, mar
 </deportistas>
 ```
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 > **📌 Xml**
 > 
@@ -1020,7 +1020,7 @@ Els següents documents XML no estan bé formats, revisa la seua estructura, mar
 <autor />barto</autor>
 ```
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 > **📌 Xml**
 > 
@@ -1037,7 +1037,7 @@ para añadir información.</párrafo>
 </texto>
 ```
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 > **📌 Xml**
 > 
@@ -1053,7 +1053,7 @@ para añadir información.</párrafo>
 </geografia mundial>
 ```
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 > **📌 Xml**
 > 
@@ -1067,7 +1067,7 @@ para añadir información.</párrafo>
 </programas>
 ```
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 > **📌 Xml**
 > 
@@ -1082,7 +1082,7 @@ para añadir información.</párrafo>
 </mundiales-de-futbol>
 ```
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 > **📌 Xml**
 > 
@@ -1095,7 +1095,7 @@ para añadir información.</párrafo>
 </mediosDeTransporte>
 ```
 
-## **Exercici 8**
+## **Ejercicio 8**
 
 > **📌 Xml**
 > 
@@ -1121,39 +1121,39 @@ para añadir información.</párrafo>
 
 ---
 
-## Activitat 109
+## Actividad 109
 
 👉 *[Obrir aquesta activitat en pàgina individual](act109.html)*
 
-# Activitat 109
+# Actividad 109
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `109_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `109_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix les característiques de llenguatges de marques analitzant i interpretant fragments de codi.
 
 >   - CA1. i) S'han identificat les avantatges que aportan els espais de noms. (10%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 Suposem dos documents que organitzen la informació sobre els professors i els alumnes del Cicle Formativo.
 
@@ -1185,7 +1185,7 @@ Suposem dos documents que organitzen la informació sobre els professors i els a
 Si uniéramos els dos documents en un únic, sense usar espais de noms, no es distinguirían els professors dels alumnes ja que en els dos casos l'etiqueta  es anomena igual.
 Per a resolver-lo necessitem definir un espai de noms per a cada context.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 El següent document XML presenta conflictos en la nomenclatura dels seus elements. Fent ús dels espais de noms, soluciona aquests conflictos.
 
@@ -1220,12 +1220,12 @@ El següent document XML presenta conflictos en la nomenclatura dels seus elemen
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD1** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="XML és sensible a majúscules/minúscules, exigeix un sol node arrel i tancament estricte de totes les etiquetes.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina és una regla fonamental perquè un document XML siga considerat 'ben format' (well-formed)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> Quina és una regla fonamental perquè un document XML siga considerat 'ben format' (well-formed)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Ha de tenir almenys un full d'estils CSS vinculat.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Ha de tenir un únic element arrel, totes les etiquetes han de tancar-se i estar correctament imbricades, i els atributs han d'anar entre cometes.</button>
@@ -1236,7 +1236,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="Els espais de noms (xmlns:prefix="URI") qualifiquen les etiquetes amb un prefix únic.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Per a què serveixen els espais de noms (<code>Namespaces</code>, atribut <code>xmlns</code>) en un document XML?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Per a què serveixen els espais de noms (<code>Namespaces</code>, atribut <code>xmlns</code>) en un document XML?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Per a comprimir el fitxer XML en format ZIP.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Per a evitar conflictes d'identificadors (col·lisions de noms) quan es combinen vocabularis XML diferents en un mateix document.</button>
@@ -1266,11 +1266,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD1**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD1**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -1281,7 +1281,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD01" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

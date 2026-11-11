@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD3 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD3 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD3"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD3"
 prev_url: "pract_classe.html"
 prev_label: "⬅️ 💻 Pràctica de Classe UD3"
 next_url: "../ut04/index.html"
 next_label: "Següent Unitat (UD4) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design
+# Cuaderno Práctico de Actividades — UD3: Fulls d'Estil en Cascada — CSS3, Flexbox, Grid i Responsive Design
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 301](act301.html)**
 - **[⚡ Activitat 302](act302.html)**
@@ -48,7 +48,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 301
+## Actividad 301
 
 👉 *[Obrir aquesta activitat en pàgina individual](act301.html)*
 
@@ -330,7 +330,7 @@ em {
 
 ---
 
-## Activitat 302
+## Actividad 302
 
 👉 *[Obrir aquesta activitat en pàgina individual](act302.html)*
 
@@ -605,7 +605,7 @@ em {
 
 ---
 
-## Activitat 303
+## Actividad 303
 
 👉 *[Obrir aquesta activitat en pàgina individual](act303.html)*
 
@@ -778,7 +778,7 @@ em.especial {
 
 ---
 
-## Activitat 304
+## Actividad 304
 
 👉 *[Obrir aquesta activitat en pàgina individual](act304.html)*
 
@@ -991,7 +991,7 @@ td + td + td + td {
 
 ---
 
-## Activitat 305
+## Actividad 305
 
 👉 *[Obrir aquesta activitat en pàgina individual](act305.html)*
 
@@ -1082,7 +1082,7 @@ a:active {
 
 ---
 
-## Activitat 306
+## Actividad 306
 
 👉 *[Obrir aquesta activitat en pàgina individual](act306.html)*
 
@@ -1236,7 +1236,7 @@ Es pot modificar el codi HTML proporcionat per a afegir els identificadors i cla
 
 ---
 
-## Activitat 307
+## Actividad 307
 
 👉 *[Obrir aquesta activitat en pàgina individual](act307.html)*
 
@@ -1322,7 +1322,7 @@ li a:focus {
 
 ---
 
-## Activitat 308
+## Actividad 308
 
 👉 *[Obrir aquesta activitat en pàgina individual](act308.html)*
 
@@ -1463,7 +1463,7 @@ h2 {
 
 ---
 
-## Activitat 309
+## Actividad 309
 
 👉 *[Obrir aquesta activitat en pàgina individual](act309.html)*
 
@@ -1573,7 +1573,7 @@ ul {
 
 ---
 
-## Activitat 310
+## Actividad 310
 
 👉 *[Obrir aquesta activitat en pàgina individual](act310.html)*
 
@@ -1791,7 +1791,7 @@ text-align: center;
 
 ---
 
-## Activitat 311
+## Actividad 311
 
 👉 *[Obrir aquesta activitat en pàgina individual](act311.html)*
 
@@ -2052,7 +2052,7 @@ font-size: 18px;
 
 ---
 
-## Activitat 312
+## Actividad 312
 
 👉 *[Obrir aquesta activitat en pàgina individual](act312.html)*
 
@@ -2354,7 +2354,7 @@ width: 30%;
 
 ---
 
-## Activitat 313
+## Actividad 313
 
 👉 *[Obrir aquesta activitat en pàgina individual](act313.html)*
 
@@ -2606,7 +2606,7 @@ color: rgb(107, 114, 128);
 
 ---
 
-## Activitat 314
+## Actividad 314
 
 👉 *[Obrir aquesta activitat en pàgina individual](act314.html)*
 
@@ -2873,7 +2873,7 @@ border-radius: 4px;
 
 ---
 
-## Activitat 315
+## Actividad 315
 
 👉 *[Obrir aquesta activitat en pàgina individual](act315.html)*
 
@@ -3167,7 +3167,7 @@ padding-bottom: 10px;
 
 ---
 
-## Activitat 316
+## Actividad 316
 
 👉 *[Obrir aquesta activitat en pàgina individual](act316.html)*
 
@@ -3571,20 +3571,20 @@ body {
 
 ---
 
-## Activitat 317
+## Actividad 317
 
 👉 *[Obrir aquesta activitat en pàgina individual](act317.html)*
 
 # Pràctica 317
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer ZIP** que continga els fitxers necessaris per a visualitzar la pàgina web (HTML, CSS i imatges).
 
-> - El nom del fitxer ha de ser `317.zip`.
+> - El nombre del fichero debe ser `317.zip`.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Per a la valoració d'aquest exercici, es tindran en compta els següents aspectes:
@@ -3798,20 +3798,20 @@ color: #c55c32;
 
 ---
 
-## Activitat 318
+## Actividad 318
 
 👉 *[Obrir aquesta activitat en pàgina individual](act318.html)*
 
-# Activitat 318
+# Actividad 318
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer ZIP** que continga els fitxers necessaris per a visualitzar la pàgina web (HTML i CSS).
 
-> - El nom del fitxer ha de ser `318.zip`.
+> - El nombre del fichero debe ser `318.zip`.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Per a la valoració d'aquest exercici, es tindran en compta els següents aspectes:
@@ -4253,20 +4253,20 @@ order: 3;
 
 ---
 
-## Activitat 319
+## Actividad 319
 
 👉 *[Obrir aquesta activitat en pàgina individual](act319.html)*
 
-# Activitat 319
+# Actividad 319
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer ZIP** que continga els fitxers necessaris per a visualitzar la pàgina web (HTML, CSS i imatges).
 
-> - El nom del fitxer ha de ser `319.zip`.
+> - El nombre del fichero debe ser `319.zip`.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Per a la valoració d'aquest exercici, es tindran en compta els següents aspectes:
@@ -4549,7 +4549,7 @@ Aplicar distintes propietats de **Flexbox** sobre una mateixa pàgina web per a 
 
 Abans d'aplicar Flexbox, has de crear la versió base de la pàgina web **TecnoActual**, que servirà com punt de partida per a tots els exercicis posteriors.
 
-Aquesta versió inicial ha de ser **funcional, limpia i clara**, ja que sobre ella es realizarán totes les modificacions de Flexbox en els següents punts.
+Aquesta versió inicial ha de ser **funcional, limpia i clara**, ja que sobre ella es realizarán totes les modificacions de Flexbox en els següents puntos.
 
 ### Requisits de la web
 
@@ -5087,12 +5087,12 @@ Reestructura la pàgina perquè:
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD3** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="El 'padding' és el farciment interior (entre contingut i border); el 'margin' és l'espai exterior.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En el model de caixes (Box Model) de CSS, quina propietat controla l'espai interior entre el contingut de l'element i la seua vora (<code>border</code>)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En el model de caixes (Box Model) de CSS, quina propietat controla l'espai interior entre el contingut de l'element i la seua vora (<code>border</code>)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) margin</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) padding</button>
@@ -5103,7 +5103,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="justify-content distribueix els ítems en l'eix principal; align-items ho fa en l'eix transversal (cross axis).">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En CSS Flexbox (<code>display: flex</code>), quina propietat alinea els elements al llarg de l'eix principal (main axis)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En CSS Flexbox (<code>display: flex</code>), quina propietat alinea els elements al llarg de l'eix principal (main axis)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) align-items</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) justify-content</button>
@@ -5133,11 +5133,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD3** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD3**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD3**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -5148,7 +5148,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD03" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

@@ -1,35 +1,35 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD6 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD6 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD6"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD6"
 prev_url: "act601.html"
 prev_label: "⬅️ ⚡ Activitat 601: DTD"
 next_url: "../ut07/index.html"
 next_label: "Següent Unitat (UD7) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)
+# Cuaderno Práctico de Actividades — UD6: Validació de Documents XML i JSON — DTD i XML Schema (XSD)
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 601: DTD](act601.html)**
 
 ---
 
-## Activitat 601: DTD
+## Actividad 601: DTD
 
 👉 *[Obrir aquesta activitat en pàgina individual](act601.html)*
 
@@ -982,12 +982,12 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD6** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="A" data-hint="XML Schema (XSD) usa sintaxi XML i incorpora tipus de dades rics i restriccions (facets).">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En la validació de documents XML, quin avantatge clau ofereix XML Schema (XSD) respecte a les antigues DTD?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En la validació de documents XML, quin avantatge clau ofereix XML Schema (XSD) respecte a les antigues DTD?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) XSD s'escriu en sintaxi XML i permet definir tipus de dades precisos (enters, dates, patrons regex, rangs numèrics).</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Les DTD permeten validar fitxers MP4 i XSD no.</button>
@@ -998,7 +998,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="A" data-hint="En DTD: '?' = 0 o 1 vegada; '+' = 1 o més vegades; '*' = 0 o més vegades.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En una declaració DTD <code>&lt;!ELEMENT llibre (titol, autor+, resum?)&gt;</code>, què signifiquen els símbols <code>+</code> i <code>?</code>?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En una declaració DTD <code>&lt;!ELEMENT llibre (titol, autor+, resum?)&gt;</code>, què signifiquen els símbols <code>+</code> i <code>?</code>?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) <code>+</code> significa un o més autors; <code>?</code> significa zero o un resum (opcional).</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Tots dos signifiquen exactament tres ocurrències.</button>
@@ -1028,11 +1028,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD6** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD6**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD6**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -1043,7 +1043,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD06" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

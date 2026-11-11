@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD8 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD8 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT08"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT08"
 prev_url: "act803.html"
 prev_label: "⬅️ ⚡ Activitat 803"
 next_url: "../index.html"
@@ -10,21 +10,21 @@ next_label: "🏠 Tornar a la Portada del Mòdul"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD8: Bases de Dades No Relacionals (NoSQL) — MongoDB
+# Cuaderno Práctico de Actividades — UD8: Bases de Datos No Relacionals (NoSQL) — MongoDB
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 801](act801.html)**
 - **[⚡ Activitat 802: Activitat 1](act802.html)**
@@ -32,33 +32,33 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 801
+## Actividad 801
 
 👉 *[Obrir aquesta activitat en pàgina individual](act801.html)*
 
-# Activitat 801
+# Actividad 801
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `801_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `801_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA7: Gestiona la informació emmagatzemada en bases de dades no relacionals, avaluant i utilitzant les possibilitats que proporciona el sistema gestor.
 
@@ -66,7 +66,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 >   - CE7. b) Es han avaluat els principals tipus de bases de dades no relacionals (100%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 Per a cada un dels quatre models de dades NoSQL, explica en un paràgraf en què consisteix, tria un dels productes més representatius d'aquest tipus, i a més de l'enllaç, averigua el comanda Docker per a llançar el servei i com inserir un dada.
 
@@ -84,39 +84,39 @@ A continuació, per a cada cas d'ús, identifica què model NoSQL seria més ade
 
 ---
 
-## Activitat 802: Activitat 1
+## Actividad 802: Activitat 1
 
 👉 *[Obrir aquesta activitat en pàgina individual](act802.html)*
 
-# Activitat 802
+# Actividad 802
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `803_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `803_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA7: Gestiona la informació emmagatzemada en bases de dades no relacionals, avaluant i utilitzant les possibilitats que proporciona el sistema gestor.
 
 >   - CE7. c) S'han identificat els elements utilitzats en aquestes bases de dades. (100%)
 
-## **Activitat 1**
+## **Actividad 1**
 
 L'objectiu d'aquesta activitat és documentar l'alta en MongoDB Atlas i la instal·lació de MongoDB Compass. Per a això es realitzarà un document amb Portada, indice i els apartats de la instal·lació.
 
@@ -124,33 +124,33 @@ Per a demostrar que és própio, totes les capturas de pantalla es hauran de fer
 
 ---
 
-## Activitat 803
+## Actividad 803
 
 👉 *[Obrir aquesta activitat en pàgina individual](act803.html)*
 
-# **Activitat 803**
+# **Actividad 803**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `803_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `803_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA7: Gestiona la informació emmagatzemada en bases de dades no relacionals, avaluant i utilitzant les possibilitats que proporciona el sistema gestor.
 
@@ -158,7 +158,7 @@ Per a demostrar que és própio, totes les capturas de pantalla es hauran de fer
 
 >   - CE7. e) S'han utilitzat les eines del sistema gestor per a la gestió de la informació emmagatzemada. (100%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Base de dades i col·leccions.**
 Dissenyar i gestionar una base de dades NoSQL amb MongoDB que represente una plataforma de cursos online. La base de dades es llamará “formacion”.
@@ -172,7 +172,7 @@ La base de dades contará amb el següent llistat de col·leccions.
 | docentes | Dades del profesorado |
 | evaluacions | Resultats dels alumnes en cada curs |
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Crear els documents per a les col·leccions**
 
@@ -234,7 +234,7 @@ La base de dades contará amb el següent llistat de col·leccions.
 
   - Doc5:     alumne: "Claudia", curs: "JavaScript", nota: 9.5
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Modificar la informació de la base de dades**
 
@@ -264,7 +264,7 @@ La base de dades contará amb el següent llistat de col·leccions.
 
 1. Canviar tots els camps modalitat: "online" a "a distància".
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Consultes**
 
@@ -302,7 +302,7 @@ Avançades
 
 1. Calcular el número de cursos per modalitat
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 **Índexs**
 
@@ -325,12 +325,12 @@ Avançades
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD8** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="MongoDB utilitza BSON (Binary JSON), que estén JSON amb tipus com ObjectId, Date o BinData.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En les bases de dades NoSQL documentals com MongoDB, quin format binari s'utilitza internament per a emmagatzemar els documents amb suport de tipus de dades estès?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En les bases de dades NoSQL documentals com MongoDB, quin format binari s'utilitza internament per a emmagatzemar els documents amb suport de tipus de dades estès?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) CSV delimitat per punt i coma.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) BSON (Binary JSON).</button>
@@ -341,7 +341,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="A" data-hint="En MongoDB, les col·leccions agrupen documents JSON/BSON.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> A què equival una 'taula' i una 'fila/tupla' del model relacional dins de la terminologia de MongoDB?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> A què equival una 'taula' i una 'fila/tupla' del model relacional dins de la terminologia de MongoDB?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) A una 'col·lecció' (collection) i un 'document' (document) respectivament.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) A un 'trigger' i una 'vista'.</button>
@@ -371,11 +371,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD8** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD8**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD8**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -386,7 +386,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD08" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

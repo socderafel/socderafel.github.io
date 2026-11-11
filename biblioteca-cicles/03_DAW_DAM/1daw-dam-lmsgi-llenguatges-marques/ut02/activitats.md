@@ -1,29 +1,29 @@
 ---
 layout: default
-title: "Quadern Complet d'Activitats — UD2 — Llenguatges de Marques i Sistemes de Gestió d'Informació"
+title: "Cuaderno Completo de Actividades — UD2 — Lenguajes de Marcas i Sistemes de Gestió d'Informació"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Llenguatges de Marques (LMSGI) · UD2"
+badge: "1º DAW / DAM / ASIX · Lenguajes de Marcas (LMSGI) · UD2"
 prev_url: "simulacre_examen.html"
 prev_label: "⬅️ 🏆 Simulacre d'Examen UD2"
 next_url: "../ut03/index.html"
 next_label: "Següent Unitat (UD3) ➡️"
 ---
 
-# Quadern Pràctic d'Activitats — UD2: Utilització de Llenguatges de Marques en Entorns Web — HTML5
+# Cuaderno Práctico de Actividades — UD2: Utilització de Lenguajes de Marcas en Entorns Web — HTML5
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 201](act201.html)**
 - **[⚡ Activitat 202](act202.html)**
@@ -40,39 +40,39 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 201
+## Actividad 201
 
 👉 *[Obrir aquesta activitat en pàgina individual](act201.html)*
 
-# Activitat 201
+# Actividad 201
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `201_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `201_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. a) S'han identificat i classificat els llenguatges de marques relacionats amb la web i els seus diferents versions i estàndards. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Investigació sobre Markdown**
 
@@ -88,33 +88,33 @@ Realitza un treball d'investigació sobre el llenguatge de marques Markdown. Per
 
 ---
 
-## Activitat 202
+## Actividad 202
 
 👉 *[Obrir aquesta activitat en pàgina individual](act202.html)*
 
-# Activitat 202
+# Actividad 202
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `202_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `202_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
@@ -122,7 +122,7 @@ Realitza un treball d'investigació sobre el llenguatge de marques Markdown. Per
 
 >   - CA2. d)   S'han establit les semejanzas i diferències entre les diferents versions de HTML. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **XHTML vs HTML**
 
@@ -136,7 +136,7 @@ Llegix l'apartat 2.2.4 XHTML i respon:
 
 1. Què diferència hi ha en el comportament dels navegadors entre un document HTML amb errors i un XHTML amb errors?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Escriure en XHTML**
 
@@ -159,39 +159,39 @@ El següent codi HTML no és vàlid com XHTML. Corregeix els errors perquè siga
 
 ---
 
-## Activitat 203
+## Actividad 203
 
 👉 *[Obrir aquesta activitat en pàgina individual](act203.html)*
 
-# Activitat 203
+# Actividad 203
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `203_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `203_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. b) S'ha analitzat l'estructura d'un document HTML i les seccions que el componen. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Parts del document**
 
@@ -207,7 +207,7 @@ Llegix l'apartat 2.2.5 Estructura d'un document HTML i respon:
 
 1. On s'han d'escriure els comentaris i per a què serveixen?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Capçalera completa**
 
@@ -227,7 +227,7 @@ Crea un document HTML que incloga en la capçalera els següents elements:
 
 1. En el cos, un únic paràgraf amb el text "Hola, LLMSGI".
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Etiquetes i atributs**
 
@@ -241,13 +241,13 @@ Llegix l'apartat 2.3.1 Sintaxi: etiquetes i atributs i respon:
 
 1. Què ocorre si el valor d'un atribut no és vàlid?
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Document bàsic**
 
 Crear una pàgina HTML amb la **estructura bàsica** (elements `<html>`, `<head>` indicant el joc de caràcters i el títol, i `<body>` contenent un text pla). Utilitzar un programa d'edició de text pla. Guardar el document en l'ordinador fins a finalitzar la classe.
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 **Tipus d'atributs**
 
@@ -261,7 +261,7 @@ Llegix l'apartat 2.3.2 Tipus d'atributs i crea un document HTML que:
 
 1. Un camp de text amb `autofocus`.
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 **Corregir errors d'estructura HTML**
 
@@ -308,7 +308,7 @@ El document HTML base és el següent:
 </html>
 ```
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 **Corregir errors i millorar**
 
@@ -364,39 +364,39 @@ El document HTML base és el següent:
 
 ---
 
-## Activitat 204
+## Actividad 204
 
 👉 *[Obrir aquesta activitat en pàgina individual](act204.html)*
 
-# Activitat 204
+# Actividad 204
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `204_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `204_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. c) Es ha reconegut la funcionalitat de les principals etiquetes i atributs del llenguatge HTML. (2%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Elements inline i block**
 
@@ -410,7 +410,7 @@ Llegix els apartats 2.4.1 Elements HTML i 2.4.2 Seccions i respon:
 
 1. Què representa l'element `<article>`?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Maquetació amb etiquetes semàntiques**
 
@@ -426,39 +426,39 @@ Crea un document HTML amb la següent estructura semàntica:
 
 ---
 
-## Activitat 205
+## Actividad 205
 
 👉 *[Obrir aquesta activitat en pàgina individual](act205.html)*
 
-# Activitat 205
+# Actividad 205
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `205_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `205_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. c) Es ha reconegut la funcionalitat de les principals etiquetes i atributs del llenguatge HTML. (2%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Encapçalaments i paràgrafs**
 
@@ -472,7 +472,7 @@ Llegix l'apartat 2.4.3 Text i crea un document HTML que mostre:
 
 1. Sota el segon, tres `h3` amb "ASIR", "DAM" i "DAW", cada un amb un paràgraf.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Salts de línia i espais**
 
@@ -484,13 +484,13 @@ Crea un document HTML que:
 
 1. Mostre un bloc de codi amb `<pre>` conservant els salts de línia.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Format de text**
 
 Crea un document HTML que continga un paràgraf que utilitze els elements `b`, `i`, `u`, `sub`, `sup` i `strong`, amb anidament d'almenys negreta i subratllat simultáneos.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Hipervínculos i semàntica**
 
@@ -504,7 +504,7 @@ Crea un document HTML que continga:
 
 1. Text amb `<em>` i `<small>`.
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 Donat el següent document HTML:
 
@@ -526,7 +526,7 @@ El resultat final ha de ser una pàgina web que tinga el mateix aspecte que la s
 
 ![pàgina](../img/assets_images_up02_Act205Ejer05.png)
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 **Pàgina web sobre Tim Berners-Llegix**
 
@@ -592,39 +592,39 @@ Fuente: Wikipedia
 
 ---
 
-## Activitat 206
+## Actividad 206
 
 👉 *[Obrir aquesta activitat en pàgina individual](act206.html)*
 
-# Activitat 206
+# Actividad 206
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `206_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `206_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. c) Es ha reconegut la funcionalitat de les principals etiquetes i atributs del llenguatge HTML. (2%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Llistes**
 
@@ -638,7 +638,7 @@ Llegix els apartats 2.4.2 Llistes i 2.4.3 Taules i crea un document HTML que inc
 
 1. Una llista de definicions amb els termes "LLMMSGI" i "Bases de dades" i les seues definicions.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Currículum de Bruce Wayne**
 
@@ -665,7 +665,7 @@ Experiencia laboral
  1962-1965: Aprendiz de superhéroe
 ```
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Llistes de Internet**
 
@@ -673,7 +673,7 @@ Crea una **pàgina web** que tinga el mateix aspecte que la següent imatge:
 
 ![Llista](../img/assets_images_up02_Act206Ejer03.png)
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Taula de socios**
 
@@ -687,13 +687,13 @@ Crea un document HTML amb una taula que complisca el següent:
 
 1. Peu amb `<tfoot>` mostrant el total.
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 **Taula d'horari**
 
 Crea una taula que represente un horari semanal senzill amb les files "Dilluns", "Dimecres" i "Divendres" i les columnes "1.ª hora", "2.ª hora" i "3.ª hora", emplenant les cel·les amb assignatures ficticias.
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 **Colapsar Columnes i Files**
 
@@ -746,7 +746,7 @@ sup
 
 </details>
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 Crea una pàgina web que tinga el mateix aspecte que la següent imatge:
 
@@ -887,39 +887,39 @@ El document HTML base és el següent:
 
 ---
 
-## Activitat 207
+## Actividad 207
 
 👉 *[Obrir aquesta activitat en pàgina individual](act207.html)*
 
-# Activitat 207
+# Actividad 207
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `207_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `207_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. c) Es ha reconegut la funcionalitat de les principals etiquetes i atributs del llenguatge HTML. (2%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Camps bàsics**
 
@@ -935,7 +935,7 @@ Llegix l'apartat 2.4.4 Formularis i crea un formulari que continga:
 
 1. Un botó d'enviament i un d'anulació.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **GET i POST**
 
@@ -949,19 +949,19 @@ Respon:
 
 1. Escriu un formulari amb `method="POST"` que tinga un camp `name="direccion"` i un botó d'enviament.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Llista desplegable**
 
 Crea un formulari amb una llista desplegable de sistemes operatius (Linux, Windows, Mac US, Android, iOS) on Mac US aparega **seleccionat per defecte**, i asóciale un `<label>`.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Organització amb fieldset**
 
 Crea un formulari amb un `<fieldset>` i un `<legend>` que agrupe un camp d'usuari i un camp de contrasenya, cada un amb el seu `<label>` associat mitjançant l'atribut `for` i el `id` corresponent.
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 **Formulari de registre**
 
@@ -991,7 +991,7 @@ A més, has de tindre en compte els següents **requisits**:
 
 - El destí de l'enviament del formulari ha de ser `registro.php`.
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 **Matrícula ASIR**
 
@@ -1021,7 +1021,7 @@ A més, has de tindre en compte els següents **requisits**:
 
 - El formulari ha d'estar organitzat amb `fieldset` i `legend`.
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 **Formulari HTML5**
 
@@ -1067,39 +1067,39 @@ A més, has de tindre en compte els següents **requisits**:
 
 ---
 
-## Activitat 208
+## Actividad 208
 
 👉 *[Obrir aquesta activitat en pàgina individual](act208.html)*
 
-# Activitat 208
+# Actividad 208
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `208_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `208_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
 >   - CA2. c) Es ha reconegut la funcionalitat de les principals etiquetes i atributs del llenguatge HTML. (2%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Imatges**
 
@@ -1111,7 +1111,7 @@ Llegix l'apartat 2.4.5 Multimèdia i iframe i respon:
 
 1. Què ocorre si no es especifican `height` i `width`?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Multimèdia**
 
@@ -1125,7 +1125,7 @@ Crea un document HTML que incloga:
 
 1. Un `<object>` que incruste un PDF.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **iframe**
 
@@ -1133,33 +1133,33 @@ Crea un document HTML amb un `<iframe name="contenido">` que inicialment cargue 
 
 ---
 
-## Activitat 209
+## Actividad 209
 
 👉 *[Obrir aquesta activitat en pàgina individual](act209.html)*
 
-# Activitat 209
+# Actividad 209
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `209_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `209_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
@@ -1167,7 +1167,7 @@ Crea un document HTML amb un `<iframe name="contenido">` que inicialment cargue 
 
 >   - CA2. h) Es han validat documents HTML. (2,5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Eines**
 
@@ -1181,7 +1181,7 @@ Llegix l'apartat 2.5 Eines per a la creació i edició i respon:
 
 1. Què pestanyes del navegador (devtools) s'utilitzen per a consultar l'estructura del document HTML?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Validació**
 
@@ -1193,7 +1193,7 @@ Llegix l'apartat 2.6 Validació de documents HTML i respon:
 
 1. Què validador podem utilitzar per a comprovar un document HTML?
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Validar un document real**
 
@@ -1207,33 +1207,33 @@ Llegix l'apartat 2.6 Validació de documents HTML i respon:
 
 ---
 
-## Activitat 210
+## Actividad 210
 
 👉 *[Obrir aquesta activitat en pàgina individual](act210.html)*
 
-# Activitat 210
+# Actividad 210
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `210_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `210_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
@@ -1241,7 +1241,7 @@ Llegix l'apartat 2.6 Validació de documents HTML i respon:
 
 >   - CA2. j) S'han reconegut els àmbits d'aplicació de la sindicació de continguts. (25%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Conceptes**
 
@@ -1257,7 +1257,7 @@ Llegix els apartats 2.7.1 Introducció i avantatges i 2.7.2 Estàndards i respon
 
 1. Cita almenys **tres avantatges** de la sindicació de continguts.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Estàndards**
 
@@ -1267,7 +1267,7 @@ Llegix els apartats 2.7.1 Introducció i avantatges i 2.7.2 Estàndards i respon
 
 1. Quin és l'estàndard més popular i quin el més modern?
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Àmbits d'aplicació**
 
@@ -1281,33 +1281,33 @@ Llegix l'apartat 2.7.3 Publicació i àmbits d'aplicació i respon:
 
 ---
 
-## Activitat 211
+## Actividad 211
 
 👉 *[Obrir aquesta activitat en pàgina individual](act211.html)*
 
-# Activitat 211
+# Actividad 211
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `211_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `211_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA2: Utilitza llenguatges de marques per a la transmissió i presentació d'informació a través de la web analitzant l'estructura dels documents i identificant els seus elements.
 
@@ -1315,7 +1315,7 @@ Llegix l'apartat 2.7.3 Publicació i àmbits d'aplicació i respon:
 
 >   - CA2. j) S'han reconegut els àmbits d'aplicació de la sindicació de continguts. (25%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Estructura d'un document RSS**
 
@@ -1329,7 +1329,7 @@ Llegix l'apartat 2.7.4 Estructura d'un document RSS i respon:
 
 1. Què extensió té el fitxer d'un canal de continguts?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Crear un canal RSS**
 
@@ -1341,7 +1341,7 @@ Crea un canal RSS 2.0 complet per a un blog ficticio de tecnologia amb les segü
 
 1. Almenys **dos seccions** (`<item>`), cada una amb el seu títol, descripció, enllaç i autor.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Publicar el canal**
 
@@ -1351,7 +1351,7 @@ Crea un canal RSS 2.0 complet per a un blog ficticio de tecnologia amb les segü
 
 1. Respon: què opcions solen oferir els validadors quan el canal és vàlid?
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Agregadors**
 
@@ -1374,7 +1374,7 @@ Llegix l'apartat 2.7.5 Validació i agregadors i respon:
 ## 1.º Desenvolupament de Aplicacions Web
 
 **Activitat:** Inscripció a les Jornades Tecnològiques DAW 2026
-**Puntuació total:** 10 punts
+**Puntuació total:** 10 puntos
 
 ## Objectiu
 
@@ -1454,7 +1454,7 @@ Pots inventar el contingut, sempre que tinga relació amb les jornades tecnològ
 
 </details>
 
-## 3. Formulari d'inscripció (4 punts)
+## 3. Formulari d'inscripció (4 puntos)
 
 Crea un formulari d'inscripció a les jornades dins de l'element principal.
 
@@ -1540,7 +1540,7 @@ Inclou:
 
 </details>
 
-## 4. Taula d'activitats (2 punts)
+## 4. Taula d'activitats (2 puntos)
 
 Crea una taula amb vora que mostre el programa de les jornades.
 
@@ -1606,7 +1606,7 @@ Inclou:
 
 </details>
 
-## 6. Contingut extern (0,5 punts)
+## 6. Contingut extern (0,5 puntos)
 
 Crea una secció titulada **«Consulta la nostra web»**.
 
@@ -1632,7 +1632,7 @@ L'element haurà de tindre:
 
 </details>
 
-## 7. Recursos recomendats (0,5 punts)
+## 7. Recursos recomendats (0,5 puntos)
 
 Crea un bloc lateral amb el títol **«Recursos per a aprendre HTML»**.
 
@@ -1668,7 +1668,7 @@ Els enllaços hauran de dirigir als seus corresponents pàgines externes.
 
 1. Lliurament l'arxiu HTML i els recursos locals necessaris.
 
-**Puntuació total: 10 punts.**
+**Puntuació total: 10 puntos.**
 
 <details markdown="1">
 
@@ -2128,12 +2128,12 @@ Peu de pàgina
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD2** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="L'element semàntic <nav> representa una secció amb enllaços de navegació principal.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quina etiqueta semàntica d'HTML5 és la més adequada per a encapsular el bloc de navegació principal d'un lloc web?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> Quina etiqueta semàntica d'HTML5 és la més adequada per a encapsular el bloc de navegació principal d'un lloc web?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) &lt;div class='menu'&gt;</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) &lt;nav&gt;</button>
@@ -2144,7 +2144,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="L'atribut 'method' indica el verb HTTP (GET o POST), mentre que 'action' indica l'URL de destinació.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En un formulari HTML5, quin atribut de l'etiqueta <code>&lt;form&gt;</code> defineix com s'envien les dades al servidor (<code>GET</code> o <code>POST</code>)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En un formulari HTML5, quin atribut de l'etiqueta <code>&lt;form&gt;</code> defineix com s'envien les dades al servidor (<code>GET</code> o <code>POST</code>)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) action</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) method</button>
@@ -2174,11 +2174,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD2**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD2**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -2189,7 +2189,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="LMSGI" data-unit="UD02" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

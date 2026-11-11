@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD5 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD5 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT05"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT05"
 prev_url: "act505.html"
 prev_label: "⬅️ ⚡ Activitat 505: Activitat de classe: "
 next_url: "../ut06/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD6) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD5: Manipulació de Dades i Transaccions — SQL DML i TCL
+# Cuaderno Práctico de Actividades — UD5: Manipulació de Dades i Transaccions — SQL DML i TCL
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 501: Gestió de dades - Jardineria](act501.html)**
 - **[⚡ Activitat 502: Hospitals](act502.html)**
@@ -34,22 +34,22 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 501: Gestió de dades - Jardineria
+## Actividad 501: Gestió de dades - Jardineria
 
 👉 *[Obrir aquesta activitat en pàgina individual](act501.html)*
 
-# **Activitat 501**
+# **Actividad 501**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script `actualiza.sql` que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `501_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `501_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -64,7 +64,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA4: Modifica la informació emmagatzemada en la base de dades utilitzant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -144,22 +144,22 @@ TotalLinea = PrecioUnidad * Cantidad * IVA / 100
 
 ---
 
-## Activitat 502: Hospitals
+## Actividad 502: Hospitals
 
 👉 *[Obrir aquesta activitat en pàgina individual](act502.html)*
 
-# **Activitat 502**
+# **Actividad 502**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `502_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `502_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -170,7 +170,7 @@ TotalLinea = PrecioUnidad * Cantidad * IVA / 100
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA4: Modifica la informació emmagatzemada en la base de dades utilitzant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -200,22 +200,22 @@ Executa el DDL que es adjunta a l'activitat (hospitals.sql) i realitza les segü
 
 ---
 
-## Activitat 503: Botiga
+## Actividad 503: Botiga
 
 👉 *[Obrir aquesta activitat en pàgina individual](act503.html)*
 
-# **Activitat 503**
+# **Actividad 503**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb el script que resol tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `503_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `503_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -228,7 +228,7 @@ Executa el DDL que es adjunta a l'activitat (hospitals.sql) i realitza les segü
 
 > - El razonament de les respostes sobre integritat referencial.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA4: Modifica la informació emmagatzemada en la base de dades utilitzant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -284,22 +284,22 @@ Executa el DDL que es adjunta a l'activitat (botiga.sql) i realitza les següent
 
 ---
 
-## Activitat 504: Transaccions
+## Actividad 504: Transaccions
 
 👉 *[Obrir aquesta activitat en pàgina individual](act504.html)*
 
-# **Activitat 504**
+# **Actividad 504**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb les respostes comentades de tots els apartats de l'activitat.
 
-> - El nom del fitxer ha de ser `504_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `504_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -312,7 +312,7 @@ Executa el DDL que es adjunta a l'activitat (botiga.sql) i realitza les següent
 
 > - El razonament de les respostes.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA4: Modifica la informació emmagatzemada en la base de dades utilitzant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -594,22 +594,22 @@ SELECT * FROM producto;
 
 ---
 
-## Activitat 505: Activitat de classe: botiga
+## Actividad 505: Activitat de classe: botiga
 
 👉 *[Obrir aquesta activitat en pàgina individual](act505.html)*
 
-# **Activitat 505**
+# **Actividad 505**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer `.sql`** amb la resolució dels exercicis de l'activitat de classe.
 
-> - El nom del fitxer ha de ser `505_NombreApellidos.sql`.
+> - El nombre del fichero debe ser `505_NombreApellidos.sql`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -624,7 +624,7 @@ SELECT * FROM producto;
 
 > - El resultat obtingut a l'executar el script.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA4: Modifica la informació emmagatzemada en la base de dades utilitzant assistents, eines gràfiques i el llenguatge de manipulació de dades.
 
@@ -706,12 +706,12 @@ SELECT * FROM pedido_lineas ORDER BY id_pedido DESC, num_linea;
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD5** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD5** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="Sense la clàusula WHERE, l'operació DML afecta tots els registres de la taula!">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Què passa si executem una sentència <code>UPDATE</code> o <code>DELETE</code> en SQL sense incloure la clàusula <code>WHERE</code>?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> Què passa si executem una sentència <code>UPDATE</code> o <code>DELETE</code> en SQL sense incloure la clàusula <code>WHERE</code>?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) El servidor SQL mostra un error de sintaxi i no fa res.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) S'actualitzen o s'esborren TOTES les files de la taula afectada.</button>
@@ -722,7 +722,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD5** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="ROLLBACK reverteix les operacions pendents de la transacció actual.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En el control de transaccions (TCL), quina instrucció desfà tots els canvis realitzats des de l'inici de la transacció o fins a un punt de salvat (<code>SAVEPOINT</code>)?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En el control de transaccions (TCL), quina instrucció desfà tots els canvis realitzats des de l'inici de la transacció o fins a un punt de salvat (<code>SAVEPOINT</code>)?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) COMMIT</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) ROLLBACK</button>
@@ -752,11 +752,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD5** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD5**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD5**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -767,7 +767,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD05" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

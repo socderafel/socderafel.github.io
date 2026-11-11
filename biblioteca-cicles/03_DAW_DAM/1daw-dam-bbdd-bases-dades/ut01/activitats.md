@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD1 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD1 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT01"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT01"
 prev_url: "act110.html"
 prev_label: "⬅️ ⚡ Activitat 110"
 next_url: "../ut02/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD2) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD1: Introducció a les Bases de Dades i Emmagatzematge de la Informació
+# Cuaderno Práctico de Actividades — UD1: Introducció a les Bases de Datos i Emmagatzematge de la Informació
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 101](act101.html)**
 - **[⚡ Activitat 102](act102.html)**
@@ -39,39 +39,39 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 101
+## Actividad 101
 
 👉 *[Obrir aquesta activitat en pàgina individual](act101.html)*
 
-# Activitat 101
+# Actividad 101
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `101_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `101_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. a)  S'han analitzat els sistemes lògics d'emmagatzematge i les seues característiques. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Què saps sobre l'emmagatzematge en una BBDD?**
 
@@ -79,7 +79,7 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 1. Què avantatges ofereix l'emmagatzematge en la núvol enfront a l'emmagatzematge local?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 Ens han enviat un parell d'arxius d'una aplicació legacy i aparentement algunes dades estan malament emmagatzemats.
 
@@ -97,39 +97,39 @@ Es demana:
 
 ---
 
-## Activitat 102
+## Actividad 102
 
 👉 *[Obrir aquesta activitat en pàgina individual](act102.html)*
 
-# Activitat 102
+# Actividad 102
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `102_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `102_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. b)  S'han identificat els distints tipus de bases de dades segons el model de dades utilitzat. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. 
 
@@ -145,7 +145,7 @@ Indica concepte i breve descripció del funcionament, 3 característiques princi
 
 En què casos s'ha d'utilitzar cada un dels tres models anteriors?
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Què model utilitzaries?**
 
@@ -160,39 +160,39 @@ d) Una aplicación que almacena millones de publicaciones en formato JSON.
 
 ---
 
-## Activitat 103
+## Actividad 103
 
 👉 *[Obrir aquesta activitat en pàgina individual](act103.html)*
 
-# Activitat 103
+# Actividad 103
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `103_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `103_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. c)  S'han identificat els distints tipus de bases de dades en funció de la ubicació de la informació. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. 
 
@@ -202,7 +202,7 @@ A més de guardar les bases de dades en discs físics també es poden emmagatzem
 
 Cerca almenys dos proveïdors de Cloud per a poder emmagatzemar bases de dades en la núvol. Indica el nom, el tipus de proveïdor, si és de pagament i quant costaría al mes/any o si és gratuït, la capacitat d'emmagatzematge, on estaría alojada la BD, què tipus de programari utilitza i la informació que puga ser útil.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Classifica**
 
@@ -217,7 +217,7 @@ Indica com clasificarías les següents bases de dades.
 | Sistema de gestió d'un banco |  |  |  |  |
 | Arxiu históric municipal |  |  |  |  |
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Tria la classificació correcta**
 
@@ -261,39 +261,39 @@ Una xicoteta botiga utilitza un programa instal·lat en un únic ordinador per a
 
 ---
 
-## Activitat 104
+## Actividad 104
 
 👉 *[Obrir aquesta activitat en pàgina individual](act104.html)*
 
-# Activitat 104
+# Actividad 104
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `104_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `104_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. d)  Es ha avaluat la utilitat d'un sistema gestor de bases de dades. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. 
 
@@ -313,39 +313,39 @@ Què tipus de programes/aplicacions per a bases de dades coneixes? Has treballat
 
 ---
 
-## Activitat 105
+## Actividad 105
 
 👉 *[Obrir aquesta activitat en pàgina individual](act105.html)*
 
-# Activitat 105
+# Actividad 105
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `105_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `105_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. e)  Es ha reconegut la funció de cada un dels elements d'un sistema gestor de bases de dades. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. 
 
@@ -382,39 +382,39 @@ BBDD relacionals vs no relacionals - Realitza un xicotet resum amb característi
 
 ---
 
-## Activitat 106
+## Actividad 106
 
 👉 *[Obrir aquesta activitat en pàgina individual](act106.html)*
 
-# Activitat 106
+# Actividad 106
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `106_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `106_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. f)  S'han classificat els sistemes gestors de bases de dades. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. Completa el cuadro on es analicen diferents tipus de Sistemes gestors de bases de dades (SGBD) com relacionals, NoSQL, orientats a objectes, distribuïts, i basats en la núvol. Per a cada tipus, identifica almenys 2 exemples i compara característiques clau.
 
@@ -429,39 +429,39 @@ BBDD relacionals vs no relacionals - Realitza un xicotet resum amb característi
 
 ---
 
-## Activitat 107
+## Actividad 107
 
 👉 *[Obrir aquesta activitat en pàgina individual](act107.html)*
 
-# Activitat 107
+# Actividad 107
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `107_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `107_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. g)  Es ha reconegut la utilitat de les bases de dades distribuïdes. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Identifica la millor opció**
 
@@ -475,7 +475,7 @@ Llegix les següents situacions i indica si utilitzaries una **base de dades cen
 | Un institut amb un únic servidor. |  |  |  |
 | Una empresa internacional amb oficines en diversos continentes. |  |  |  |
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Avantatges i inconvenients**
 
@@ -490,7 +490,7 @@ Completa la següent taula comparant tots dos tipus de bases de dades.
 | Escalabilitat |  |  |
 | Tolerància a fallades |  |  |
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Relaciona**
 
@@ -507,39 +507,39 @@ Relaciona cada característica amb el tipus de base de dades corresponent (Bases
 
 ---
 
-## Activitat 108
+## Actividad 108
 
 👉 *[Obrir aquesta activitat en pàgina individual](act108.html)*
 
-# Activitat 108
+# Actividad 108
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `108_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `108_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. h)  S'han analitzat les polítiques de fragmentació de la informació. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 Revisa els conceptes clau de **fragmentació de bases de dades**:
 
@@ -670,39 +670,39 @@ Dades de pagament.
 
 ---
 
-## Activitat 109
+## Actividad 109
 
 👉 *[Obrir aquesta activitat en pàgina individual](act109.html)*
 
-# Activitat 109
+# Actividad 109
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `109_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `109_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. i)  S'ha identificat la legislació vigent sobre protecció de dades. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. 
 
@@ -728,39 +728,39 @@ Una empresa sufre un ataque informàtic i les dades personals dels seus clients 
 
 ---
 
-## Activitat 110
+## Actividad 110
 
 👉 *[Obrir aquesta activitat en pàgina individual](act110.html)*
 
-# Activitat 110
+# Actividad 110
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `110_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `110_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA1: Reconeix els elements de les bases de dades analitzant les seues funcions i valorant la utilitat dels sistemes gestors.
 
 >   - CE1. j)  S'han reconegut els conceptes de Big Data i de la intel·ligència de negocis. (5%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 1. 
 
@@ -787,12 +787,12 @@ Google Trend és un motor de cerca de tendencias. Entra en Google Trend i realit
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD1** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="Recorda els problemes dels fitxers tradicionals: redundància, inconsistència i dependència física.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> Quin és el principal avantatge d'un SGBD enfront dels sistemes tradicionals de fitxers?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> Quin és el principal avantatge d'un SGBD enfront dels sistemes tradicionals de fitxers?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Permet prescindir completament de la memòria RAM del servidor.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Elimina la redundància descontrolada, garanteix la integritat i ofereix independència física i lògica de les dades.</button>
@@ -803,7 +803,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="C" data-hint="El nivell extern mostra a cada perfil d'usuari només la part de la base de dades que necessita.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> En l'arquitectura ANSI-SPARC de tres nivells, quin nivell defineix les vistes parcials adaptades a cada grup d'usuaris?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> En l'arquitectura ANSI-SPARC de tres nivells, quin nivell defineix les vistes parcials adaptades a cada grup d'usuaris?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Nivell intern o físic.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Nivell conceptual o lògic global.</button>
@@ -823,7 +823,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 </div>
 
 <div class="interactive-quiz" data-answer="sgbd|dbms" data-hint="Escriu les 4 sigles: SGBD (o DBMS en anglès).">
-  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quines són les sigles en valencià/castellà del programari encarregat de gestionar, administrar i controlar l'accés a una base de dades (Sistema Gestor de Bases de Dades)?</div>
+  <div class="quiz-question">⌨️ <strong>Repte 4 (+25 pts):</strong> Quines són les sigles en valencià/castellà del programari encarregat de gestionar, administrar i controlar l'accés a una base de dades (Sistema Gestor de Bases de Datos)?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu la resposta..." />
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -833,11 +833,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD1** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD1**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD1**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -848,7 +848,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD01" data-activity="activitats">📥 Descarregar Comprovant PDF</button>

@@ -1,8 +1,8 @@
 ---
-title: "Quadern Complet d'Activitats — UD2 — Bases de Dades"
+title: "Cuaderno Completo de Actividades — UD2 — Bases de Datos"
 layout: "default"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Bases de Dades · UT02"
+badge: "1º DAW / DAM / ASIX · Bases de Datos · UT02"
 prev_url: "act206.html"
 prev_label: "⬅️ ⚡ Activitat 206"
 next_url: "../ut03/index.html"
@@ -10,21 +10,21 @@ next_label: "Següent Unitat (UD3) ➡️"
 module: "BBDD"
 ---
 
-# Quadern Pràctic d'Activitats — UD2: Disseny Conceptual — Model Entitat-Relació (E/R i EER)
+# Cuaderno Práctico de Actividades — UD2: Disseny Conceptual — Model Entitat-Relació (E/R i EER)
 
 <div class="interactive-progress-tracker">
   <div class="tracker-header">
-    <span>🏆 <strong>Progrés d'aquesta secció:</strong> <span class="tracker-count">0 de 4 superats (0%)</span></span>
-    <span class="tracker-pts">⭐ <strong>0 punts</strong></span>
+    <span>🏆 <strong>Progreso de esta sección:</strong> <span class="tracker-count">0 de 4 superados (0%)</span></span>
+    <span class="tracker-pts">⭐ <strong>0 puntos</strong></span>
   </div>
   <div class="tracker-bar">
     <div class="tracker-fill" style="width: 0%;"></div>
   </div>
 </div>
 
-En aquesta secció tens accés directe a totes les activitats pràctiques, fitxes de treball i reptes avaluables d'aquesta unitat didàctica. Pots accedir a cada activitat individualment o consultar el recull complet a continuació:
+En esta sección tienes acceso directo a todas las actividades prácticas, fichas de trabajo y retos evaluables de esta unidad didáctica. Puedes acceder a cada actividad individualmente o consultar la recopilación completa a continuación:
 
-## 🗂️ Índex d'Activitats de la Unitat
+## 🗂️ Índice de Actividades de la Unidad
 
 - **[⚡ Activitat 201: Activitat 1](act201.html)**
 - **[⚡ Activitat 202: Entitats](act202.html)**
@@ -35,33 +35,33 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 ---
 
-## Activitat 201: Activitat 1
+## Actividad 201: Activitat 1
 
 👉 *[Obrir aquesta activitat en pàgina individual](act201.html)*
 
-# **Activitat 201**
+# **Actividad 201**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `202_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `202_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -71,11 +71,11 @@ En aquesta secció tens accés directe a totes les activitats pràctiques, fitxe
 
 >   - CE6. e) S'han identificat els camps clau. (1%)
 
-## Activitat 1
+## Actividad 1
 
 Explica amb les teues paraules per què no és recomanable començar creant directament les taules d'una base de dades.
 
-## Activitat 2
+## Actividad 2
 
 Ordena correctament les següents fases del disseny d'una base de dades.
 
@@ -89,7 +89,7 @@ Ordena correctament les següents fases del disseny d'una base de dades.
 
 - Disseny conceptual
 
-## Activitat 3
+## Actividad 3
 
 Indica en què fase es realitzen les següents tasques.
 
@@ -101,45 +101,45 @@ Indica en què fase es realitzen les següents tasques.
 | Aplicar formes normals |  |
 | Crear índexs |  |
 
-## Activitat 4
+## Actividad 4
 
 Una clínica dental desitja informatitzar la gestió de pacients, citas i trataments.
 
 Indica què informació intentarías obtindre durant la fase d'anàlisi de requisits.
 
-## Activitat 5
+## Actividad 5
 
 Realitza un esquema on apareguen totes les fases del disseny d'una base de dades indicant l'objectiu principal de cada una d'elles.
 
 ---
 
-## Activitat 202: Entitats
+## Actividad 202: Entitats
 
 👉 *[Obrir aquesta activitat en pàgina individual](act202.html)*
 
-# **Activitat 202**
+# **Actividad 202**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `202_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `202_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -153,7 +153,7 @@ Realitza un esquema on apareguen totes les fases del disseny d'una base de dades
 
 ## **Entitats**
 
-### **Exercici 1**
+### **Ejercicio 1**
 
 **Crear entitats**
 
@@ -171,7 +171,7 @@ Dissenya les següents entitats indicant:
 
 - Projecte
 
-### **Exercici 2**
+### **Ejercicio 2**
 
 **Entitats forts i febles**
 
@@ -193,7 +193,7 @@ Indica quins de les següents entitats serien **forts** i quins **febles**, just
 
 - Reserva
 
-### **Activitat 3**
+### **Actividad 3**
 
 **Identifica l'entitat feble**
 
@@ -209,7 +209,7 @@ Indica quin és la **entitat fort** i quin és la **entitat feble**.
 
 ## **Atributs**
 
-### **Exercici 4**
+### **Ejercicio 4**
 
 **Identificar tipus d'atributs**
 
@@ -226,7 +226,7 @@ Indica el tipus de cada atribut.
 | Codi Postal |  |
 | Antigüetat (calculada) |  |
 
-### **Exercici 5**
+### **Ejercicio 5**
 
 **Dissenyar atributs**
 
@@ -253,7 +253,7 @@ Ha de tindre els mateixos tipus d'atributs.
 
 ## **Relcions**
 
-### **Exercici 6**
+### **Ejercicio 6**
 
 **Crear relacions**
 
@@ -267,7 +267,7 @@ Dibuixa el model E/R per als següents casos.
 
 Afegeix un verb adequat per a nombrar cada relació.
 
-### **Exercici 7**
+### **Ejercicio 7**
 
 **Completar el model**
 
@@ -287,7 +287,7 @@ Crea les relacions necessàries per a representar que:
 
 ## **Components**
 
-### **Exercici 8**
+### **Ejercicio 8**
 
 **Identificar els components**
 
@@ -303,7 +303,7 @@ Indica quins són les **entitats**, les **relacions** i alguns **atributs** del 
 
 - Atributs de cada entitat:
 
-### **Exercici 9**
+### **Ejercicio 9**
 
 **Distingir entitats i atributs**
 
@@ -324,33 +324,33 @@ Classifica els següents conceptes en **Entitat**, **Relació** o **Atribut**.
 
 ---
 
-## Activitat 203: Grau i Correspondència
+## Actividad 203: Grau i Correspondència
 
 👉 *[Obrir aquesta activitat en pàgina individual](act203.html)*
 
-# **Activitat 203**
+# **Actividad 203**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `203_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `203_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -358,7 +358,7 @@ Classifica els següents conceptes en **Entitat**, **Relació** o **Atribut**.
 
 ## **Grau i Correspondència**
 
-### **Activitat 1**
+### **Actividad 1**
 
 **Identificar el grau d'una relació**
 
@@ -375,7 +375,7 @@ Identifica el **grau** de cada una de les següents relacions indicant si es tra
 | Un departament controla un altre departament. |  |
 | Un conductor conduce un vehicle. |  |
 
-### **Activitat 2**
+### **Actividad 2**
 
 **Tipus de correspondència**
 
@@ -415,7 +415,7 @@ Un actor participa en moltes películas i una película té molts actors.
 
 Un ordinador té un únic número de sèrie i aquest número identifica únicament a eixe ordinador.
 
-### **Activitat 3**
+### **Actividad 3**
 
 **Relacions ternàries**
 
@@ -433,7 +433,7 @@ Indica quins dels següents exemples requereixen realment una **relació ternàr
 
 1. Un proveïdor suministra un producte a un magatzem.
 
-### **Activitat 4**
+### **Actividad 4**
 
 **Què tipus de relació és?**
 
@@ -452,7 +452,7 @@ Per a cada situació indica:
 | Un actor interpreta un personatge en una película. |  |  |
 | Un departament depèn d'un altre departament. |  |  |
 
-### **Activitat 5**
+### **Actividad 5**
 
 **Dissenya una relació**
 
@@ -489,7 +489,7 @@ Per a cada enunciat identifica:
 
 ## **Cardinalitats**
 
-### **Activitat 6**
+### **Actividad 6**
 
 **Cardinalitats mínimes i màximes**
 Completa les **cardinalitats mínimes i màximes** de les següents relacions.
@@ -588,7 +588,7 @@ Cada llibre pertany a una editorial.
 
 Una editorial publica molts llibres.
 
-### **Activitat 7**
+### **Actividad 7**
 
 **Interpreta les cardinalitats**
 
@@ -601,7 +601,7 @@ Explica amb els teus pròpies paraules què signifiquen les següents cardinalit
 | (0,n) |  |
 | (1,n) |  |
 
-### **Activitat 8**
+### **Actividad 8**
 
 **Completa la cardinalitat correcta**
 
@@ -643,7 +643,7 @@ Un aula conté molts ordinadors.
 
 ## **Dependència d'existència i identificació**
 
-### **Activitat 9**
+### **Actividad 9**
 
 **Existeix dependència?**
 
@@ -691,39 +691,39 @@ L'empleat té un codi únic dins de tota l'empresa.
 
 ---
 
-## Activitat 204
+## Actividad 204
 
 👉 *[Obrir aquesta activitat en pàgina individual](act204.html)*
 
-# **Activitat 204**
+# **Actividad 204**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
-> - El lliurament serà un **fitxer pdf** que continga la resposta a les preguntes de l'activitat.
+> - La entrega será un **fichero pdf** que contenga la respuesta a las preguntas de la actividad.
 
-> - El nom del fitxer ha de ser `205_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `205_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
 
-> - La claredat de la resposta.
+> - La claridad de la respuesta.
 
-> - La correcta maquetació del document.
+> - La correcta maquetación del documento.
 
-> - Resposta correcta o aproximació a aquesta.
+> - Respuesta correcta o aproximación a esta.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - RA6: Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
 >   - CE6. d) S'han analitzat les relacions entre les taules del disseny lògic. (1%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Gestió de vehículos d'una empresa**
 
@@ -741,7 +741,7 @@ Un vehicle mai podrà estar assignat a un empleat i llogat al mateix temps. Es d
 
 - Representar el model E/R indicant la restricció corresponent.
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Hospital**
 
@@ -754,7 +754,7 @@ En un hospital existeixen metges i pacients. Entre ells poden existir dos relaci
 Un metge pot atendre a molts pacients i supervisar a altres molts. No obstant això, un mateix metge no pot atendre i supervisar simultàniament al mateix pacient.
 Es demana representar el model E/R complet.
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Universitat**
 
@@ -766,7 +766,7 @@ Els alumnes poden:
 
 La universitat estableix que qualsevol alumne que solicite una beca ha d'estar matriculat. Pot haver alumnes matriculats que no soliciten cap beca. Es demana representar el model E/R.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Botiga online**
 
@@ -778,7 +778,7 @@ Els clients poden:
 
 La botiga únicament accepta devolucions de productes que prèviament hagen sigut comprats per eixe mateix client. Es demana realitzar el model E/R indicant la restricció corresponent.
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 **Biblioteca**
 
@@ -790,7 +790,7 @@ Els usuaris poden:
 
 Un llibre reservat per un usuari ha de ser posteriorment prestado a eixe mateix usuari abans de que puga retirar-lo. Dissenya el model E/R indicant la restricció existent.
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 **Recursos Humans**
 
@@ -802,7 +802,7 @@ Un empleat pot participar en dos relacions:
 
 Si un empleat és responsable d'un projecte, no pot aparèixer també com membre d'eixe mateix projecte. Realitza el model E/R.
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 **Aeropuerto**
 
@@ -814,7 +814,7 @@ Els pilotos poden:
 
 Un piloto només podrà pertànyer a un d'eixos grups. A més, un piloto únicament podrà impartir formació a un altre piloto si tots dos participen prèviament en un vuelo d'entrenament. Representa totes les restriccions necessàries.
 
-## **Exercici 8**
+## **Ejercicio 8**
 
 **Infotech**
 
@@ -834,22 +834,22 @@ Un mateix tècnic no pot reparar i revisar simultàniament el mateix equip. A m�
 
 ---
 
-## Activitat 205: Generalització i Especialització
+## Actividad 205: Generalització i Especialització
 
 👉 *[Obrir aquesta activitat en pàgina individual](act205.html)*
 
-# **Activitat 205**
+# **Actividad 205**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer PDF** que continga la resposta a les preguntes de l'activitat.
 
-> - El nom del fitxer ha de ser `206_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `206_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -862,7 +862,7 @@ Un mateix tècnic no pot reparar i revisar simultàniament el mateix equip. A m�
 
 > - La correcta justificació de les respostes.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - **RA6:** Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -870,7 +870,7 @@ Un mateix tècnic no pot reparar i revisar simultàniament el mateix equip. A m�
 
 ## **Generalització i Especialització**
 
-### **Exercici 1**
+### **Ejercicio 1**
 
 **Generalització o Especialització**
 
@@ -884,7 +884,7 @@ Indica si en cada cas és més adequat utilitzar una **generalització** o una *
 | Una PERSONA pot ser ALUMNE o PROFESSOR. |  |
 | Existeixen GATO, PERRO i AVE amb característiques comuns. |  |
 
-### **Exercici 2**
+### **Ejercicio 2**
 
 **Descubre el supertipus**
 
@@ -898,7 +898,7 @@ Indica quin seria el **supertipus**.
 
 - Compta Corriente, Compta Ahorro i Compta Empresa.
 
-### **Exercici 3**
+### **Ejercicio 3**
 
 **Descubre els subtipus**
 
@@ -914,7 +914,7 @@ Propón **tres subtipus** per a cada un dels següents supertipos.
 
 - Usuari
 
-### **Exercici 4**
+### **Ejercicio 4**
 
 **Herencia d'atributs**
 
@@ -960,7 +960,7 @@ Es demana:
 
 - Explicar què atributs hereda cada subtipus.
 
-### **Exercici 5**
+### **Ejercicio 5**
 
 **Total o Parcial**
 
@@ -972,7 +972,7 @@ Indica el tipus d'especialització.
 | Existeixen empleats que no pertanyen a cap categoria. |  |
 | Tots els animals pertanyen a una espècie. |  |
 
-### **Exercici 6**
+### **Ejercicio 6**
 
 **Disjunta o Solapada**
 
@@ -985,7 +985,7 @@ Indica el tipus d'especialització.
 | Un empleat pot ser cap i responsable de qualitat. |  |
 | Un vehicle només pot ser cotxe o motocicleta. |  |
 
-### **Exercici 7**
+### **Ejercicio 7**
 
 **Classifica la jerarquia**
 
@@ -1019,7 +1019,7 @@ Un professor pot ser:
 
 Pot desempeñar diversos cargos i alguns professors no exercixen cap.
 
-### **Exercici 8**
+### **Ejercicio 8**
 
 **Disseny d'una especialització**
 
@@ -1043,7 +1043,7 @@ Indica a més:
 
 ## **Agregació**
 
-### **Exercici 9**
+### **Ejercicio 9**
 
 **Quan utilitzar agregació?**
 
@@ -1057,7 +1057,7 @@ Indica en què casos utilitzaries una agregació.
 
 - Un jugador pertany a un equip.
 
-### **Exercici 10**
+### **Ejercicio 10**
 
 **Disseny amb agregació**
 
@@ -1081,7 +1081,7 @@ Es demana:
 
 ## **Exercici Complet**
 
-### **Exercici 11**
+### **Ejercicio 11**
 
 **Modelatge complet**
 
@@ -1107,22 +1107,22 @@ Ha de contindre:
 
 ---
 
-## Activitat 206
+## Actividad 206
 
 👉 *[Obrir aquesta activitat en pàgina individual](act206.html)*
 
-# **Activitat 206**
+# **Actividad 206**
 
-> **📌 Lliurament**
+> **📌 Entrega**
 > 
 
 > - El lliurament serà un **fitxer PDF** que continga la resposta a les preguntes de l'activitat.
 
-> - El nom del fitxer ha de ser `207_NombreApellidos.pdf`.
+> - El nombre del fichero debe ser `207_NombreApellidos.pdf`.
 
-> - S'haurà de lliurar en la tasca corresponent d'Aules en temps i forma.
+> - Se deberá entregar en la tarea correspondiente de Aules en tiempo y forma.
 
-> **📌 Es valorarà**
+> **📌 Se valorará:**
 > 
 
 > Es valorarà:
@@ -1135,7 +1135,7 @@ Ha de contindre:
 
 > - La correcta justificació de les respostes.
 
-> Aquesta activitat servirà per a qualificar:
+> Esta actividad servirá para calificar:
 
 > - **RA6:** Dissenya models relacionals normalitzats interpretant diagrames entitat/relació.
 
@@ -1149,7 +1149,7 @@ Ha de contindre:
 
 >   - CE6. e) S'han identificat els camps clau. (3%)
 
-## **Exercici 1**
+## **Ejercicio 1**
 
 **Sistema d'un Centre Cultural**
 
@@ -1175,7 +1175,7 @@ Adicionalment, es vol conèixer la llista d'obras famosas que es van fer dins d'
 
 </details>
 
-## **Exercici 2**
+## **Ejercicio 2**
 
 **Rincón de Lectura**
 
@@ -1205,7 +1205,7 @@ Tinga en compta la següent informació addicional:
 
 </details>
 
-## **Exercici 3**
+## **Ejercicio 3**
 
 **Agencia de viatges**
 
@@ -1215,7 +1215,7 @@ Cada agencia ofereix paquets turístics, els quals tenen un preu i destinos a di
 
 Els paquets són comprats per clients, els quals tenen un nom, domicili i són diferenciats pel seu DNI. Aquests clients tenen diverses formes de pagament, de les quals coneixem el seu tipus i el monto a pagar. Els mitjans de pagament són autoritzats per un només banco, dels quals sabem que poseen un nom -que és únic- i sucursal. A l'autoritzar els pagaments, es estableix una data de validesa.
 
-## **Exercici 4**
+## **Ejercicio 4**
 
 **Sistema de Farmàcia**
 
@@ -1229,7 +1229,7 @@ Cada farmàcia, a la seua vegada, ven diversos medicamentos i un medicament es v
 
 Com últim requeriment, un medicament pot complementar a altres medicamentos, però sabem que cada medicament pot ser complementado per un només medicament.
 
-## **Exercici 5**
+## **Ejercicio 5**
 
 **Biblioteca**
 
@@ -1263,7 +1263,7 @@ Respon les següents preguntes:
 
 </details>
 
-## **Exercici 6**
+## **Ejercicio 6**
 
 **Aficionats de Brasil 2014**
 
@@ -1277,7 +1277,7 @@ Dels equips que participen en els partits coneixem el nom de la selecció, que �
 
 En aquest sistema els estadios són sede de distints partits. Dels mateixos coneixem el seu nom, la ciutat en la que es troben, la seua capacitat màxima i també la capacitat habitada i la quantitat de policías que es fan present en cada partit. També sabem que els distints aficionats poden visitar els estadios (als que arriben en distints mitjans de transport), els quals reben una gran quantitat d'aficionats per partit. D'ells coneixem el número de ticket de cada un, la vestimenta i la ubicació (composta de zona, fila i número d'asiento) que té cada un. Adicionalment, sabem que un partit es juega només en un estadio i que en un estadio poden jugar-se molts partits.
 
-## **Exercici 7**
+## **Ejercicio 7**
 
 **Fàbrica de Pelotas "Golazo"**
 
@@ -1291,7 +1291,7 @@ Dels tècnics coneixem el seu DNI, nom, cognom i data de naixement, a banda d'un
 
 Existeixen situacions normals en les que una màquina ix de servei i ha de ser reparada. L'únic que ens interessa conèixer ací és quin una altra màquina està assignada per a prendre el treball que ella no pot realitzar.
 
-## **Exercici 8**
+## **Ejercicio 8**
 
 **Sistema de Vendes**
 
@@ -1305,7 +1305,7 @@ Sabem que un producte és comercialitzat per diversos proveïdors, però que un 
 
 Per raons de contabilitat, s'ha de registrar la informació de cada venda, les quals tenen un número de factura (que és únic), data, client, descompte i monto final. A la seua vegada, sabem que una venda es compon de diversos productes, i per això ens interessa el preu al moment de la venda del producte, la quantitat vendida i el monto total per ell. Tinga en compta que un producte pot estar en diverses vendes, però que podem tindre un producte que no haja sigut venut. Adicionalment, sabem que cada client pot realitzar diverses vendes, i en una venda solament participa un client.
 
-## **Exercici 9**
+## **Ejercicio 9**
 
 **Cadena de Deportes**
 
@@ -1325,7 +1325,7 @@ Dels clients es coneix el codi de client, el DNI, el nom, la data de naixement i
 
 Cada client solament realitza compra en una sola sucursal, i en una sucursal poden comprar diversos clients. Cada sucursal li ofereix als seus clients un descompte fix per la seua fidelitat en les compres.
 
-## **Exercici 10**
+## **Ejercicio 10**
 
 **Sistema de Blogs**
 
@@ -1337,7 +1337,7 @@ Per a diferenciar les notes en distints grups, el sistema compta amb la possibil
 
 Per a aconseguir interacció amb els oyentes, el sistema permet que els mateixos es registren i comenten les notes. Dels usuaris coneixem el seu username, password, data de registre, avatar i un email el qual només pot registrar-se una vegada. Els comentaris poseen un número d'id i el text que el compon.
 
-## **Exercici 11**
+## **Ejercicio 11**
 
 **Articles i encargos**
 
@@ -1355,7 +1355,7 @@ Nota: Una adreça es entenderá com Carrer, Número, Porta, CP i Localitat. Una 
 
 Es demana fer el diagrama ER per a la base de dades que represente aquesta informació.
 
-## **Exercici 12**
+## **Ejercicio 12**
 
 **Cases de colònies**
 
@@ -1375,7 +1375,7 @@ f) De les comarcas on hi ha cases o bé on residen xiquets, es vol tindre regist
 
 Nota: És possible, per exemple, que una activitat com l'esquí tinga una qualificació de 10 en l'oferta de la casa Grévol, i que la mateixa activitat tinga una qualificació de 8 en la casa Ardilla.
 
-## **Exercici 13**
+## **Ejercicio 13**
 
 **Transport**
 
@@ -1385,7 +1385,7 @@ De les províncies a les que arriben els paquets interessa guardar el codi de pr
 
 Dels camiones que porten els camioneros interessa conèixer la matrícula, model, tipus i potència. Un camionero pot conducir diferents camiones en dates diferents i un camión pot ser conducido per diversos camioneros.
 
-## **Exercici 14**
+## **Ejercicio 14**
 
 **Paradors**
 
@@ -1403,7 +1403,7 @@ Una vegada registrat el client, aquest podrà triar en què Parador o Paradors d
 
 Finalment, es desitja que un client puga consultar en qualsevol moment què reserves ha realitzat en què paradors per a cada data així com l'habitació reservada.
 
-## **Exercici 15**
+## **Ejercicio 15**
 
 **Star Trek 1**
 
@@ -1419,7 +1419,7 @@ El club de fans de la película Star Trek ha decidido crear una web on poder con
 
 **Planetas:** En cada capítulo, es visita 1 o diversos planetas. Cal emmagatzemar el codi del planeta, el seu nom, galaxia a la que pertany, i el problema que es resolvió en eixa visita, així com la nave amb la que es viajó al planeta. Per a la descripció del problema serà suficient amb un camp de text de 255 caràcters. De la nave s'emmagatzemarà el nom, codi i número de tripulantes.
 
-## **Exercici 16**
+## **Ejercicio 16**
 
 **Star Trek 2**
 
@@ -1427,7 +1427,7 @@ El club ha pensat ampliar els requisits de la pàgina web. Es desitja incloure i
 
 En cada capítulo, la nave que viatja a un planeta, pot disposar d'una nave xicoteta anomenada llançadora amb la que bajan a la superfície del planeta. L'existència de la llançadora només té sentit si existeix la nave a la que pertany. S'identificará cada llançadora mitjançant un número enter i el codi de la nave. És necessari conèixer la capacitat en persones de la llançadora.
 
-## **Exercici 17**
+## **Ejercicio 17**
 
 **Mundial de fútbol**
 
@@ -1443,7 +1443,7 @@ Dissenyar una base de dades per a organitzar el campeonato mundial de fútbol. C
 
 **Partits:** Tots generen un acta arbitral on es poden incloure tots els comentaris que l'àrbitre considere oportuno: lesions, expulsions, targetes, etc.
 
-## **Exercici 18**
+## **Ejercicio 18**
 
 **Reyes Magos**
 
@@ -1457,7 +1457,7 @@ La ONG Reyes Magos desitja fer una BD perquè aquesta Navitat tots els xiquets p
 
 - Dels esdeveniments interessa conèixer la Ubicació física, la Data, la Hora i els xiquets assistents.
 
-## **Exercici 19**
+## **Ejercicio 19**
 
 **Empresa S.L.**
 
@@ -1471,7 +1471,7 @@ Cada empleat pot treballar en més d'un projecte, dedicándole un determinat nú
 
 Finalment, volem guardar també els familiares de cada empleat, per a administrar informació relativa a les pólizas de seguros. Dels familiares, volem saber el nom, data de naixement i parentesco amb l'empleat.
 
-## **Exercici 20**
+## **Ejercicio 20**
 
 **Gestió de la Biblioteca de Barrio**
 
@@ -1492,12 +1492,12 @@ La biblioteca vol un sistema que li permeta controlar tots aquests elements de f
 
 ---
 
-## 🎮 Reptes Interactius d'Autoavaluació (+100 XP)
+## 🎮 Retos Interactivos de Autoevaluación (+100 XP)
 
-Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant aquests 4 reptes gamificats (+25 punts cadascun):
+Comprueba tu dominio sobre **Cuaderno Completo de Actividades — UD2** superando estos 4 retos gamificados (+25 puntos cada uno):
 
 <div class="interactive-mcq" data-answer="B" data-hint="La clau primària (Primary Key) identifica unívocament cada instància de l'entitat.">
-  <div class="mcq-question">🎯 <strong>Repte 1 (+25 pts):</strong> En el model Entitat-Relació (E/R), com es denomina l'atribut o conjunt mínim d'atributs que identifica de manera única cada ocurrència d'una entitat?</div>
+  <div class="mcq-question">🎯 <strong>Reto 1 (+25 pts):</strong> En el model Entitat-Relació (E/R), com es denomina l'atribut o conjunt mínim d'atributs que identifica de manera única cada ocurrència d'una entitat?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Atribut derivat multivaluat.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Clau primària o identificador principal (PK).</button>
@@ -1508,7 +1508,7 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant a
 </div>
 
 <div class="interactive-mcq" data-answer="B" data-hint="Les entitats febles depenen en existència o en identificació d'una entitat forta.">
-  <div class="mcq-question">🎯 <strong>Repte 2 (+25 pts):</strong> Què és una entitat feble en un diagrama Entitat-Relació?</div>
+  <div class="mcq-question">🎯 <strong>Reto 2 (+25 pts):</strong> Què és una entitat feble en un diagrama Entitat-Relació?</div>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Una entitat amb pocs atributs descriptius.</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Una entitat l'existència o identificació de la qual depèn d'una altra entitat forta.</button>
@@ -1538,11 +1538,11 @@ Comprova el teu domini sobre **Quadern Complet d'Activitats — UD2** superant a
 
 ### 📋 Llista de Comprovació i Rúbrica d'Assoliment
 
-Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Quadern Complet d'Activitats — UD2**):
+Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'aquesta pàgina (**Cuaderno Completo de Actividades — UD2**):
 
 - [ ] He llegit detingudament la teoria o l'enunciat d'aquesta secció i he anotat els conceptes clau.
 - [ ] He revisat els esquemes, taules o blocs de codi i he verificat que sé aplicar-los a l'entorn de treball.
-- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 punts XP**.
+- [ ] He resolt correctament els **4 reptes interactius** superiors obtenint els **100 puntos XP**.
 - [ ] He descarregat el comprovant oficial en PDF per a adjuntar-lo a la tasca d'**Aules**.
 
 <div class="aules-delivery-card">
@@ -1553,7 +1553,7 @@ Marca cada criteri a mesura que completes l'estudi o la resolució pràctica d'a
     <input type="text" id="aules-student-name" class="aules-student-name" placeholder="Ex: Joan Garcia Pérez" />
   </div>
   <div class="aules-score-badge">
-    <span class="aules-score-count">0/4 reptes completats (0%) · 0 punts · 0/4 criteris d'autoavaluació</span>
+    <span class="aules-score-count">0/4 reptes completats (0%) · 0 puntos · 0/4 criteris d'autoavaluació</span>
   </div>
   <div class="aules-actions">
     <button type="button" class="btn-aules-dl" data-module="BBDD" data-unit="UD02" data-activity="activitats">📥 Descarregar Comprovant PDF</button>
