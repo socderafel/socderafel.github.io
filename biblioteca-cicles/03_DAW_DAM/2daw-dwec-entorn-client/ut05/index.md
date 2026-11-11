@@ -347,7 +347,7 @@ Evaluación:
 
 ---
 
-## 📌 5.8 Evaluació RA5.defgh
+## 📌 5.8 Evaluación RA5.defgh
 
 Desarrollar una aplicación Vue que permita
 
@@ -453,7 +453,7 @@ No hay citas registradas todavía.
 
 ---
 
-## 📌 5.9 Evaluació Alan
+## 📌 5.9 Evaluación Alan
 
 Se desea crear una pequeña aplicación Vue para
 

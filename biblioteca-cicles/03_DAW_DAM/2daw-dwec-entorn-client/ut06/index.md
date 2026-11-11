@@ -431,7 +431,7 @@ No afegir listeners individualment a cada
 
 ---
 
-## 📌 6.9 Evaluació RA6.d
+## 📌 6.9 Evaluación RA6.d
 
 1. Accés i lectura del DOM - RA6.abc
 
@@ -629,7 +629,7 @@ No afegir listeners individualment a cada
 
 ---
 
-## 📌 6.10 Evaluació RA6.e
+## 📌 6.10 Evaluación RA6.e
 
 1. Accés i lectura del DOM - RA6.abc
 
@@ -1011,7 +1011,7 @@ No afegir listeners individualment a cada
 
 ---
 
-## 📌 6.12 Evaluació RA6.f
+## 📌 6.12 Evaluación RA6.f
 
 1 – Store Pattern
 
@@ -1313,7 +1313,7 @@ Converteix el projecte anterior a Pinia
 
 ---
 
-## 📌 6.14 Evaluació RA6.g
+## 📌 6.14 Evaluación RA6.g
 
 Muntar una mini web SPA amb Vue Router. No cal crear components: ja estan preparats.
 
