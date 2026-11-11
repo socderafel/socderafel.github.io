@@ -183,21 +183,32 @@ public class EjemploListas {
 
 Són estructures restringides dissenyades per a modelar fluxos de treball secuencials en la lògica de negoci:
 
-```java
-|             |
-   |   Dato 3    |  <-- Cima (push / pop)
-   |   Dato 2    |
-   |   Dato 1    |
-   +-------------+
-(El último en entrar sale primero: Deshacer / Undo)
+```mermaid
+flowchart TD
+    subgraph Pila ["📚 Pila (LIFO: Last In, First Out)"]
+        direction TB
+        Top["Dada 3 (Cim / Top) ⬅️ push() / pop()"]
+        Mid["Dada 2"]
+        Bot["Dada 1 (Base)"]
+        Top --- Mid
+        Mid --- Bot
+    end
 ```
 
-```java
-Entrada --> [ C | B | A ] --> Salida
-                          
-(El primero en entrar es el primero en ser atendido:
-turnos de clientes, cola de impresión, buffers)
+*(L'últim en entrar és el primer en eixir: Operacions de Desfer / Undo, crides recursives).*
+
+```mermaid
+flowchart LR
+    subgraph Cua ["🚶 Cua (FIFO: First In, First Out)"]
+        direction LR
+        In["📥 Entrada: offer() / add()"] --> C["Dada C"]
+        C --> B["Dada B"]
+        B --> A["Dada A"]
+        A --> Out["📤 Eixida: poll() / remove()"]
+    end
 ```
+
+*(El primer en entrar és el primer en ser atés: Torns d'espera, cues d'impressió, buffers).*
 
 | **PILA (LIFO: *Last In, First Out*)** | **COLA (FIFO: *First In, First Out*)** |
 | --- | --- |
