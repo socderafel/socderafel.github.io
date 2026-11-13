@@ -2747,8 +2747,128 @@
   {% endif %}
 </head>
 <body>
-    <header class="md-header">
+        <header class="md-header">
     <div class="md-header-inner">
+      {% if page.url contains '1fpb-ciencies-aplicades' %}
+      <!-- Capçalera 100% Exclusiva per a l'App de Ciències Aplicades 1 -->
+      <a href="{{ page.course_root }}/index.html" class="md-header-brand" title="Ciències Aplicades I — FP Bàsica">
+        <img src="{{ page.course_root }}/img/icon-192.png" alt="CA1" class="brand-avatar" style="border-radius: 8px;">
+        <div class="brand-title-wrap">
+          <span class="brand-name">Ciències Aplicades I</span>
+          <span class="brand-sub">1r FPB · Grau Bàsic</span>
+        </div>
+        <span class="curs-badge" style="background: linear-gradient(135deg, #059669, #0d9488);">App CA1</span>
+      </a>
+
+      <nav class="md-header-nav">
+        <a href="{{ page.course_root }}/index.html" class="nav-link">🏠 Inici CA1</a>
+        <a href="{{ page.course_root }}/pissarra-interactiva.html" class="nav-link btn-header-pdi" style="color: #fff !important;">🖥️ Pissarra PDI</a>
+
+        <!-- Desplegable exclusiu de les 9 Unitats de CA1 -->
+        <div class="header-nav-item has-dropdown">
+          <a href="javascript:void(0)" class="nav-dropdown-trigger nav-link">
+            <span>📚 Unitats del Curs</span> <span class="nav-arrow">▾</span>
+          </a>
+          <div class="header-dropdown-menu" style="min-width: 320px;">
+            <div class="dropdown-header">Ciències Aplicades I (1r FPB)</div>
+            <a href="{{ page.course_root }}/pissarra-interactiva.html" class="dropdown-item" style="background: rgba(16, 185, 129, 0.1);">
+              <div class="dropdown-item-title">🎯 Pissarra Digital Interactiva (PDI)</div>
+              <div class="dropdown-item-meta">Activitats tàctils d'arrastrar i soltar</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="{{ page.course_root }}/ut01/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD1 · Nombres Naturals</div>
+              <div class="dropdown-item-meta">Decimal, operacions, potències i jerarquia</div>
+            </a>
+            <a href="{{ page.course_root }}/ut02/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD2 · Organització i Nutrició Humana</div>
+              <div class="dropdown-item-meta">Cèl·lula, teixits, aparells digestiu, respiratori, etc.</div>
+            </a>
+            <a href="{{ page.course_root }}/ut03/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD3 · Nombres Enters</div>
+              <div class="dropdown-item-meta">Positius, negatius, recta numèrica i jerarquia</div>
+            </a>
+            <a href="{{ page.course_root }}/ut04/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD4 · Divisibilitat, Primers i Compostos</div>
+              <div class="dropdown-item-meta">Múltiples, divisors, descomposició, MCD i MCM</div>
+            </a>
+            <a href="{{ page.course_root }}/ut05/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD5 · Les Fraccions</div>
+              <div class="dropdown-item-meta">Equivalències, suma, resta, multiplicació i divisió</div>
+            </a>
+            <a href="{{ page.course_root }}/ut06/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD6 · La Terra i l'Univers</div>
+              <div class="dropdown-item-meta">Origen còsmic, astres, Sistema Solar i exploració</div>
+            </a>
+            <a href="{{ page.course_root }}/ut07/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD7 · El Planeta Terra: Geosfera i Moviments</div>
+              <div class="dropdown-item-meta">Rotació, traslació, la Lluna, eclipsis i capes internes</div>
+            </a>
+            <a href="{{ page.course_root }}/ut08/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD8 · L'Atmosfera Terrestre</div>
+              <div class="dropdown-item-meta">Composició de l'aire, capes, clima i contaminació</div>
+            </a>
+            <a href="{{ page.course_root }}/ut09/index.html" class="dropdown-item">
+              <div class="dropdown-item-title">UD9 · La Hidrosfera Terrestre</div>
+              <div class="dropdown-item-meta">Aigües marines, continentals, cicle i gestió</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Desplegable d'Accés Ràpid a les Activitats de cada Subapartat -->
+        <div class="header-nav-item has-dropdown dropdown-align-right act-dropdown-wrap" id="nav-activities-dropdown-wrap">
+          <button class="btn-toggle nav-dropdown-trigger btn-header-act" id="btn-activities-dropdown" title="Accés directe a les activitats d'aquesta unitat">
+            <span class="btn-act-icon">🎯</span> <span class="btn-act-label">Activitats</span> <span class="nav-arrow">▾</span>
+          </button>
+          <div class="header-dropdown-menu act-dropdown-menu" id="activities-dropdown-menu" style="min-width: 300px; right: 0; left: auto;">
+            <div class="dropdown-header">🎯 Activitats de la Unitat</div>
+            <a href="javascript:void(0)" onclick="window.scrollToActivities && window.scrollToActivities(event)" class="dropdown-item act-item-current" id="dropdown-act-current">
+              <div class="dropdown-item-title">⚡ Anar a les Activitats d'aquest tema</div>
+              <div class="dropdown-item-meta">Salta directament a l'autoavaluació d'aquesta pàgina</div>
+            </a>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-header" style="font-size: 0.72rem; padding: 4px 12px; color: var(--text-muted);">TOTS ELS SUBAPARTATS DE LA UNITAT</div>
+            <div id="unit-activities-links-list">
+              <!-- Es genera dinàmicament per JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="header-nav-item" id="pwa-install-wrap" style="display:none;">
+          <button id="btn-pwa-install" class="btn-header-pwa" onclick="triggerPWAInstall()" title="Instal·lar l'App de CA1 al teu dispositiu">
+            <span>📲 Instal·lar App</span>
+          </button>
+        </div>
+
+        <div class="header-nav-item has-dropdown dropdown-align-right">
+          <button class="btn-toggle nav-dropdown-trigger theme-palette-btn" title="Canviar paleta de color del portal">
+            <span class="palette-icon">🎨</span> <span class="palette-label">Tema</span> <span class="nav-arrow">▾</span>
+          </button>
+          <div class="header-dropdown-menu theme-dropdown-menu">
+            <div class="dropdown-header">Paletes de Color</div>
+            <a href="javascript:void(0)" onclick="setThemePalette('auto')" class="dropdown-item theme-opt" data-theme-val="auto">
+              <div class="dropdown-item-title">Automàtic</div>
+              <div class="dropdown-item-meta">Segons preferència del sistema</div>
+            </a>
+            <a href="javascript:void(0)" onclick="setThemePalette('light')" class="dropdown-item theme-opt" data-theme-val="light">
+              <div class="dropdown-item-title">Clar Clàssic</div>
+              <div class="dropdown-item-meta">Fons blanc d'alt contrast</div>
+            </a>
+            <a href="javascript:void(0)" onclick="setThemePalette('dark')" class="dropdown-item theme-opt" data-theme-val="dark">
+              <div class="dropdown-item-title">Fosc Modern</div>
+              <div class="dropdown-item-meta">Dark Slate professional</div>
+            </a>
+            <a href="javascript:void(0)" onclick="setThemePalette('oled')" class="dropdown-item theme-opt" data-theme-val="oled">
+              <div class="dropdown-item-title">Negre Pur</div>
+              <div class="dropdown-item-meta">Alt contrast OLED</div>
+            </a>
+          </div>
+        </div>
+        <button class="btn-toggle" id="btn-toggle-sidebar-ca1" onclick="toggleSidebar()" title="Mostrar o amagar el menú lateral" style="margin-left: 6px;">☰ Menú</button>
+      </nav>
+
+      {% else %}
+
       <a href="{{ '/' | relative_url }}" class="md-header-brand" title="Portal Docent de Pepe Cuenca">
         <img src="{{ '/assets/img/pepe-cuenca.png' | relative_url }}" alt="Pepe Cuenca" class="brand-avatar">
         <div class="brand-title-wrap">
@@ -2944,6 +3064,7 @@
           {% endif %}
         </div>
       </nav>
+      {% endif %}
     </div>
   </header>
 
