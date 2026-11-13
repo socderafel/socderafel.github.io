@@ -24,6 +24,10 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <span class="tool-icon" id="sound-icon">🔊</span>
       <span class="tool-text" id="sound-text">So Activat</span>
     </button>
+    <button class="btn-pdi-tool" id="btn-scale-toggle" onclick="cyclePDIScale()" title="Ajustar mida dels elements a la pantalla">
+      <span class="tool-icon">🔍</span>
+      <span class="tool-text" id="scale-text">Mida: Auto</span>
+    </button>
     <button class="btn-pdi-tool btn-pdi-reset" onclick="resetCurrentPDIActivity()">
       <span class="tool-icon">🔄</span>
       <span class="tool-text">Següent Alumne / Barallar</span>
@@ -1526,10 +1530,31 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   border: 1.5px solid #ef4444;
 }
 
-/* MODE PISSARRA COMPLETA (PDI FULLSCREEN) */
+/* MODE PISSARRA COMPLETA (PDI FULLSCREEN) — AJUST AL 100% DE LA PANTALLA */
+html.pdi-fullscreen-locked,
 body.pdi-fullscreen-mode {
-  font-size: 1.25rem;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
+
+body.pdi-fullscreen-mode {
+  font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+}
+
+/* Ocultar elements innecessaris en pantalla completa per guanyar el 100% d'espai vertical */
+body.pdi-fullscreen-mode h1:first-of-type,
+body.pdi-fullscreen-mode aside.sidebar,
+body.pdi-fullscreen-mode .top-act-jump-wrap,
+body.pdi-fullscreen-mode #floating-activities-pill,
+body.pdi-fullscreen-mode .pdi-intro-header,
+body.pdi-fullscreen-mode .pdi-intro-card p,
+body.pdi-fullscreen-mode .pdi-nav-label {
+  display: none !important;
+}
+
 /* Ocultar / autoamagar menú superior de navegació */
 body.pdi-fullscreen-mode header.md-header {
   position: fixed !important;
@@ -1541,43 +1566,228 @@ body.pdi-fullscreen-mode header.md-header {
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 20px rgba(0,0,0,0.35);
 }
-/* En apropar el ratolí o prémer a la part superior, el menú torna a baixar suaument */
 body.pdi-fullscreen-mode header.md-header:hover,
 body.pdi-fullscreen-mode header.md-header:focus-within {
   transform: translateY(0);
 }
 
-body.pdi-fullscreen-mode aside.sidebar {
-  display: none !important;
-}
-body.pdi-fullscreen-mode .top-act-jump-wrap,
-body.pdi-fullscreen-mode #floating-activities-pill {
-  display: none !important;
-}
+/* Contenidor principal ajustat exactament a la pantalla sense scroll de pàgina */
 body.pdi-fullscreen-mode .layout {
-  padding-top: 10px !important;
-  margin-top: 0 !important;
-}
-body.pdi-fullscreen-mode main.content {
-  max-width: 98vw !important;
-  width: 98vw !important;
-  padding: 10px 24px !important;
-}
-body.pdi-fullscreen-mode .pdi-item {
-  font-size: 1.35rem !important;
-  padding: 16px 24px !important;
-}
-body.pdi-fullscreen-mode .box-header {
-  font-size: 1.35rem !important;
-}
-body.pdi-fullscreen-mode .btn-pdi-check {
-  font-size: 1.35rem !important;
-  padding: 16px 32px !important;
-}
-body.pdi-fullscreen-mode .pdi-drop-box {
-  min-height: 240px !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  padding: 8px 16px !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
 }
 
+body.pdi-fullscreen-mode main.content {
+  height: 100% !important;
+  max-height: 100% !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+/* Barra superior ultra-compacta en mode pissarra */
+body.pdi-fullscreen-mode .pdi-intro-card {
+  padding: 6px 14px !important;
+  margin-bottom: 4px !important;
+  border-radius: 10px !important;
+  border-width: 1px !important;
+}
+body.pdi-fullscreen-mode .pdi-toolbar {
+  margin-top: 0 !important;
+  gap: 8px !important;
+}
+body.pdi-fullscreen-mode .btn-pdi-tool {
+  padding: 6px 12px !important;
+  font-size: 0.85rem !important;
+}
+
+/* Selectors compactes en una línia */
+body.pdi-fullscreen-mode .pdi-unit-nav-wrap {
+  margin: 2px 0 4px 0 !important;
+}
+body.pdi-fullscreen-mode .pdi-unit-pills {
+  gap: 6px !important;
+}
+body.pdi-fullscreen-mode .pdi-pill {
+  padding: 4px 10px !important;
+  font-size: 0.8rem !important;
+}
+
+body.pdi-fullscreen-mode .pdi-subnav-wrap {
+  margin: 2px 0 6px 0 !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+}
+body.pdi-fullscreen-mode .pdi-subpills {
+  gap: 6px !important;
+}
+body.pdi-fullscreen-mode .pdi-subpill {
+  padding: 4px 10px !important;
+  font-size: 0.8rem !important;
+}
+
+/* Contenidor de l'activitat activa: ocupa tot l'espai restant de la pantalla */
+body.pdi-fullscreen-mode .pdi-board-container {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+body.pdi-fullscreen-mode .pdi-activity-card.active {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: 100% !important;
+  padding: 12px 18px !important;
+  margin-bottom: 0 !important;
+  border-radius: 14px !important;
+  justify-content: space-between !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+body.pdi-fullscreen-mode .pdi-act-title {
+  margin-bottom: 4px !important;
+}
+body.pdi-fullscreen-mode .pdi-act-title h3 {
+  font-size: clamp(1rem, 1.3vw, 1.25rem) !important;
+}
+body.pdi-fullscreen-mode .pdi-act-title .act-num {
+  font-size: 0.75rem !important;
+  padding: 2px 8px !important;
+}
+body.pdi-fullscreen-mode .pdi-instruction {
+  font-size: clamp(0.85rem, 1vw, 1rem) !important;
+  margin-bottom: 8px !important;
+}
+
+/* Zona manipulativa adaptable a l'alt de pantalla */
+body.pdi-fullscreen-mode .pdi-categories-wrapper,
+body.pdi-fullscreen-mode .pdi-order-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  gap: 8px !important;
+  margin-bottom: 4px !important;
+  overflow: hidden !important;
+}
+
+/* Bústia d'elements inicials */
+body.pdi-fullscreen-mode .pdi-source-pool {
+  flex: 0 0 auto !important;
+  max-height: 26vh !important;
+  overflow-y: auto !important;
+  padding: 8px 12px !important;
+  margin-bottom: 4px !important;
+  gap: 8px !important;
+  border-radius: 10px !important;
+  min-height: 48px !important;
+}
+
+/* Graella de caixes de destí */
+body.pdi-fullscreen-mode .pdi-drop-boxes-grid {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  gap: 8px !important;
+}
+body.pdi-fullscreen-mode .pdi-drop-box {
+  min-height: 0 !important;
+  flex: 1 1 auto !important;
+  padding: 8px 12px !important;
+  border-radius: 12px !important;
+}
+body.pdi-fullscreen-mode .pdi-drop-box .box-header {
+  font-size: clamp(0.85rem, 1.1vw, 1.05rem) !important;
+  margin-bottom: 6px !important;
+  padding-bottom: 4px !important;
+}
+body.pdi-fullscreen-mode .pdi-drop-box .box-items {
+  overflow-y: auto !important;
+  gap: 4px !important;
+}
+
+/* Columnes d'ordre seqüencial */
+body.pdi-fullscreen-mode .pdi-slots-column {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  gap: 6px !important;
+}
+body.pdi-fullscreen-mode .pdi-slot {
+  min-height: 40px !important;
+  padding: 4px 12px !important;
+  gap: 8px !important;
+  border-radius: 10px !important;
+}
+body.pdi-fullscreen-mode .pdi-slot .slot-badge {
+  font-size: 0.75rem !important;
+  padding: 2px 6px !important;
+}
+body.pdi-fullscreen-mode .pdi-slot .slot-hint {
+  font-size: 0.82rem !important;
+}
+
+/* Elements arrossegables adaptats */
+body.pdi-fullscreen-mode .pdi-item {
+  padding: clamp(6px, 0.8vw, 10px) clamp(10px, 1.2vw, 16px) !important;
+  font-size: clamp(0.88rem, 1.15vw, 1.15rem) !important;
+  border-radius: 8px !important;
+}
+body.pdi-fullscreen-mode .num-item {
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem) !important;
+  padding: 6px 14px !important;
+}
+body.pdi-fullscreen-mode .frac-item {
+  font-size: clamp(1rem, 1.3vw, 1.25rem) !important;
+  padding: 6px 12px !important;
+}
+
+/* Peu de comprovació sempre visible a la part inferior */
+body.pdi-fullscreen-mode .pdi-footer-feedback {
+  flex: 0 0 auto !important;
+  margin-top: 4px !important;
+  padding-top: 6px !important;
+}
+body.pdi-fullscreen-mode .btn-pdi-check {
+  font-size: clamp(0.9rem, 1.15vw, 1.1rem) !important;
+  padding: 8px 20px !important;
+  border-radius: 10px !important;
+}
+body.pdi-fullscreen-mode .pdi-status-msg {
+  font-size: clamp(0.9rem, 1.15vw, 1.1rem) !important;
+  padding: 6px 12px !important;
+}
+
+/* Escales Manuals (Zoom) per a pantalles amb diferents resolucions */
+body[data-pdi-scale="compact"] {
+  font-size: 0.9rem !important;
+}
+body[data-pdi-scale="compact"] .pdi-item {
+  padding: 4px 10px !important;
+  font-size: 0.88rem !important;
+}
+body[data-pdi-scale="large"] {
+  font-size: 1.3rem !important;
+}
+body[data-pdi-scale="large"] .pdi-item {
+  padding: 12px 20px !important;
+  font-size: 1.25rem !important;
+}
 /* Botó flotant d'eixida discreta en pantalla completa */
 .pdi-exit-floating-btn {
   display: none;
@@ -1672,12 +1882,35 @@ function togglePDISound() {
   }
 }
 
+
+let pdiScaleModes = ['auto', 'compact', 'large'];
+let currentScaleIdx = 0;
+
+function cyclePDIScale() {
+  currentScaleIdx = (currentScaleIdx + 1) % pdiScaleModes.length;
+  const mode = pdiScaleModes[currentScaleIdx];
+  const textEl = document.getElementById('scale-text');
+  
+  if (mode === 'auto') {
+    document.body.removeAttribute('data-pdi-scale');
+    if (textEl) textEl.textContent = 'Mida: Auto';
+  } else if (mode === 'compact') {
+    document.body.setAttribute('data-pdi-scale', 'compact');
+    if (textEl) textEl.textContent = 'Mida: Compacta';
+  } else if (mode === 'large') {
+    document.body.setAttribute('data-pdi-scale', 'large');
+    if (textEl) textEl.textContent = 'Mida: Gran';
+  }
+}
+
 function togglePDIFullscreen(explicitState) {
   if (typeof explicitState === 'boolean') {
     if (explicitState) document.body.classList.add('pdi-fullscreen-mode');
     else document.body.classList.remove('pdi-fullscreen-mode');
+  document.documentElement.classList.toggle('pdi-fullscreen-locked', document.body.classList.contains('pdi-fullscreen-mode'));
   } else {
     document.body.classList.toggle('pdi-fullscreen-mode');
+  document.documentElement.classList.toggle('pdi-fullscreen-locked', document.body.classList.contains('pdi-fullscreen-mode'));
   }
 
   const isFull = document.body.classList.contains('pdi-fullscreen-mode');
