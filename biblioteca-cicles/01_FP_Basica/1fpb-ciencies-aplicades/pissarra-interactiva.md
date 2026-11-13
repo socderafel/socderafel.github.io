@@ -6,6 +6,10 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 ---
 
 <div class="pdi-app-wrapper">
+
+<!-- ==========================================
+     VISTA 1: TAULER DE REPTES (DASHBOARD)
+     ========================================== -->
 <div id="pdi-dashboard" class="pdi-dashboard-view">
   <div class="pdi-dash-header">
     <div class="dash-title-wrap">
@@ -17,280 +21,284 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <button class="btn-pdi-tool" onclick="togglePDIFullscreen()">🖥️ Pantalla Completa</button>
     </div>
   </div>
-  <div class="pdi-units-grid">
 
+  <div class="pdi-units-grid">
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #2563eb;">
       <div class="card-head">
         <span class="disc-badge" style="background: #2563eb;">Matemàtiques</span>
-        <span class="count-badge">5 Reptes</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
       </div>
       <div class="card-title"><span class="unit-icon">🔢</span> <h3>UD1 · Els Nombres Naturals</h3></div>
-      <p class="card-desc">Sistema decimal, operacions bàsiques, jerarquia i potències.</p>
+      <p class="card-desc">Sistema decimal, operacions bàsiques, jerarquia, potències i arrels.</p>
       <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Jerarquia</span>
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-1')">
+          <span class="act-idx">🧩 Jerarquia</span>
+          <span class="act-name">R1 · Ordre</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Potències</span>
+          <span class="act-idx">⚡ Potències V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Ordres Unitats</span>
+          <span class="act-idx">🕵️ Troba l'Intrús</span>
+          <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Propietats</span>
+          <span class="act-idx">🔢 Teclat Mental</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Arrels</span>
+          <span class="act-idx">🪞 Propietats 3D</span>
+          <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
         </button>      </div>
     </div>
-    <div class="pdi-unit-dash-card" style="border-top: 5px solid #059669;">
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #16a34a;">
       <div class="card-head">
-        <span class="disc-badge" style="background: #059669;">Biologia</span>
-        <span class="count-badge">5 Reptes</span>
+        <span class="disc-badge" style="background: #16a34a;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
       </div>
-      <div class="card-title"><span class="unit-icon">🫀</span> <h3>UD2 · La Matèria i la Nutrició</h3></div>
-      <p class="card-desc">Cèl·lula, teixits, aparells digestiu, respiratori, circulatori i excretor.</p>
+      <div class="card-title"><span class="unit-icon">➕➖</span> <h3>UD2 · Els Nombres Enters</h3></div>
+      <p class="card-desc">Signes positius i negatius, recta numèrica, regla dels signes i parèntesis.</p>
       <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Classificar Òrgans</span>
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-1')">
+          <span class="act-idx">🧩 Positius vs Negatius</span>
+          <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Viatge Aliments</span>
+          <span class="act-idx">⚡ Regla Signes V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">La Sang i Vasos</span>
+          <span class="act-idx">🕵️ Troba l'Intrús</span>
+          <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Nivells de Vida</span>
+          <span class="act-idx">🔢 El Saldo del Banc</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
         </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Nutrients</span>
-          <span class="act-arrow">➔</span>
-        </button>      </div>
-    </div>
-    <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
-      <div class="card-head">
-        <span class="disc-badge" style="background: #7c3aed;">Matemàtiques</span>
-        <span class="count-badge">5 Reptes</span>
-      </div>
-      <div class="card-title"><span class="unit-icon">➕➖</span> <h3>UD3 · Els Nombres Enters</h3></div>
-      <p class="card-desc">Positius, negatius, recta numèrica, sumes, restes i regla dels signes.</p>
-      <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Positiu o Negatiu</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Recta Numèrica</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Regla Signes</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Suma i Resta</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Valor Absolut</span>
-          <span class="act-arrow">➔</span>
-        </button>      </div>
-    </div>
-    <div class="pdi-unit-dash-card" style="border-top: 5px solid #0284c7;">
-      <div class="card-head">
-        <span class="disc-badge" style="background: #0284c7;">Matemàtiques</span>
-        <span class="count-badge">5 Reptes</span>
-      </div>
-      <div class="card-title"><span class="unit-icon">⭐</span> <h3>UD4 · Divisibilitat, Primers i Compostos</h3></div>
-      <p class="card-desc">Múltiples, divisors, criteris, nombres primers, descomposició, MCD i MCM.</p>
-      <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Primers / Compostos</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Criteris Divisibilitat</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Múltiples vs Divisors</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Factors Primers</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">MCD o MCM?</span>
+          <span class="act-idx">🪞 Recta Numèrica 3D</span>
+          <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
         </button>      </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #d97706;">
       <div class="card-head">
         <span class="disc-badge" style="background: #d97706;">Matemàtiques</span>
-        <span class="count-badge">5 Reptes</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
       </div>
-      <div class="card-title"><span class="unit-icon">🍰</span> <h3>UD5 · Les Fraccions</h3></div>
-      <p class="card-desc">Concepte, tipus de fraccions, equivalències, càlcul de quantitats i operacions.</p>
+      <div class="card-title"><span class="unit-icon">🥧</span> <h3>UD3 · Fraccions i Decimals</h3></div>
+      <p class="card-desc">Fraccions pròpies i impròpies, decimals, percentatges i equivalències.</p>
       <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Tipus Fraccions</span>
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-1')">
+          <span class="act-idx">🧩 Tipus de Fraccions</span>
+          <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Equivalències</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-2')">
+          <span class="act-idx">⚡ Equivalències V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Ordenar Fraccions</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-3')">
+          <span class="act-idx">🕵️ Fraccions Equivalents</span>
+          <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Fracció Quantitat</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-4')">
+          <span class="act-idx">🔢 Suma de Fraccions</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Suma / Resta</span>
-          <span class="act-arrow">➔</span>
-        </button>      </div>
-    </div>
-    <div class="pdi-unit-dash-card" style="border-top: 5px solid #4f46e5;">
-      <div class="card-head">
-        <span class="disc-badge" style="background: #4f46e5;">Biologia i Geologia</span>
-        <span class="count-badge">5 Reptes</span>
-      </div>
-      <div class="card-title"><span class="unit-icon">🪐</span> <h3>UD6 · La Terra i l'Univers</h3></div>
-      <p class="card-desc">Origen còsmic, astres, components del Sistema Solar i exploració espacial.</p>
-      <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Rocosos vs Gasosos</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Distància al Sol</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Escala Còsmica</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Tipus d'Astres</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Roques Espacials</span>
-          <span class="act-arrow">➔</span>
-        </button>      </div>
-    </div>
-    <div class="pdi-unit-dash-card" style="border-top: 5px solid #ea580c;">
-      <div class="card-head">
-        <span class="disc-badge" style="background: #ea580c;">Geologia</span>
-        <span class="count-badge">5 Reptes</span>
-      </div>
-      <div class="card-title"><span class="unit-icon">🌍</span> <h3>UD7 · El Planeta Terra: Geosfera i Moviments</h3></div>
-      <p class="card-desc">Capes internes de la Terra, rotació, traslació, la Lluna i eclipsis.</p>
-      <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Capes Geosfera</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Rotació / Traslació</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Fases de la Lluna</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Tipus de Roques</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Tipus d'Eclipsi</span>
-          <span class="act-arrow">➔</span>
-        </button>      </div>
-    </div>
-    <div class="pdi-unit-dash-card" style="border-top: 5px solid #0891b2;">
-      <div class="card-head">
-        <span class="disc-badge" style="background: #0891b2;">Biologia i Geologia</span>
-        <span class="count-badge">5 Reptes</span>
-      </div>
-      <div class="card-title"><span class="unit-icon">🌤️</span> <h3>UD8 · L'Atmosfera Terrestre</h3></div>
-      <p class="card-desc">Composició de l'aire, capes atmosfèriques, meteorologia i contaminació.</p>
-      <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Capes Atmosfera</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Aparells Meteorològics</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Gasos de l'Aire</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Contaminació Aire</span>
-          <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Tipus de Precipitació</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-5')">
+          <span class="act-idx">🪞 Famílies Decimals</span>
+          <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
         </button>      </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #0284c7;">
       <div class="card-head">
-        <span class="disc-badge" style="background: #0284c7;">Biologia i Geologia</span>
-        <span class="count-badge">5 Reptes</span>
+        <span class="disc-badge" style="background: #0284c7;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
       </div>
-      <div class="card-title"><span class="unit-icon">💧</span> <h3>UD9 · La Hidrosfera Terrestre</h3></div>
-      <p class="card-desc">Distribució de l'aigua dolça i salada, cicle hidrològic i canvis d'estat.</p>
+      <div class="card-title"><span class="unit-icon">⚖️</span> <h3>UD4 · Proporcionalitat i Percentatges</h3></div>
+      <p class="card-desc">Proporcionalitat directa i inversa, regla de tres, percentatges i IVA.</p>
       <div class="card-acts-list">
-            <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-1')">
-          <span class="act-idx">R1</span>
-          <span class="act-name">Cicle Hidrològic</span>
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-1')">
+          <span class="act-idx">🧩 Directa o Inversa</span>
+          <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-2')">
-          <span class="act-idx">R2</span>
-          <span class="act-name">Aigua Dolça vs Salada</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-2')">
+          <span class="act-idx">⚡ Percentatges V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-3')">
-          <span class="act-idx">R3</span>
-          <span class="act-name">Canvis d'Estat</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-3')">
+          <span class="act-idx">🕵️ Rebaixes de Taller</span>
+          <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-4')">
-          <span class="act-idx">R4</span>
-          <span class="act-name">Trams d'un Riu</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-4')">
+          <span class="act-idx">🔢 Factura amb IVA</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-5')">
-          <span class="act-idx">R5</span>
-          <span class="act-name">Cicle Urbà Aigua</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-5')">
+          <span class="act-idx">🪞 Escales i Regles 3D</span>
+          <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
         </button>      </div>
-    </div>  </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #7c3aed;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">📐</span> <h3>UD5 · Àlgebra Bàsica i Equacions</h3></div>
+      <p class="card-desc">Llenguatge algebraic, monomis, simplificació i resolució d'equacions.</p>
+      <div class="card-acts-list">
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-1')">
+          <span class="act-idx">🧩 Aïllar la X</span>
+          <span class="act-name">R1 · Ordre</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-2')">
+          <span class="act-idx">⚡ Monomis V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-3')">
+          <span class="act-idx">🕵️ Monomis Semblants</span>
+          <span class="act-name">R3 · L'Intrús</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-4')">
+          <span class="act-idx">🔢 Endevina la X</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-5')">
+          <span class="act-idx">🪞 Traductor a Àlgebra</span>
+          <span class="act-name">R5 · Targetes 3D</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #0d9488;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #0d9488;">Ciències</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🔬</span> <h3>UD6 · El Mètode Científic i la Mesura</h3></div>
+      <p class="card-desc">Passos del mètode científic, Sistema Internacional, instruments i conversió d'unitats.</p>
+      <div class="card-acts-list">
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-1')">
+          <span class="act-idx">🧩 Mètode Científic</span>
+          <span class="act-name">R1 · Ordre</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-2')">
+          <span class="act-idx">⚡ Unitats SI V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-3')">
+          <span class="act-idx">🕵️ Instruments de Mesura</span>
+          <span class="act-name">R3 · L'Intrús</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-4')">
+          <span class="act-idx">🔢 Canvi d'Unitats</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-5')">
+          <span class="act-idx">🪞 Prefixos SI 3D</span>
+          <span class="act-name">R5 · Targetes 3D</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #ea580c;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #ea580c;">Ciències</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🧪</span> <h3>UD7 · La Matèria i les Seues Propietats</h3></div>
+      <p class="card-desc">Estats de la matèria, canvis d'estat, mescles homogènies/heterogènies i densitat.</p>
+      <div class="card-acts-list">
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-1')">
+          <span class="act-idx">🧩 Tipus de Mescles</span>
+          <span class="act-name">R1 · Classificació</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-2')">
+          <span class="act-idx">⚡ Canvis d'Estat V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-3')">
+          <span class="act-idx">🕵️ Separació de Mescles</span>
+          <span class="act-name">R3 · L'Intrús</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-4')">
+          <span class="act-idx">🔢 Càlcul de Densitat</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-5')">
+          <span class="act-idx">🪞 Estats Matèria 3D</span>
+          <span class="act-name">R5 · Targetes 3D</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #4f46e5;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #4f46e5;">Ciències</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🌍</span> <h3>UD8 · L'Univers i la Terra</h3></div>
+      <p class="card-desc">Sistema Solar, moviments de rotació i translació, estacions i capes de la Terra.</p>
+      <div class="card-acts-list">
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-1')">
+          <span class="act-idx">🧩 Planetes del Sol</span>
+          <span class="act-name">R1 · Ordre</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-2')">
+          <span class="act-idx">⚡ Estacions V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-3')">
+          <span class="act-idx">🕵️ Planetes Rocosos</span>
+          <span class="act-name">R3 · L'Intrús</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-4')">
+          <span class="act-idx">🔢 Cicle Lunar</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-5')">
+          <span class="act-idx">🪞 Capes de la Terra</span>
+          <span class="act-name">R5 · Targetes 3D</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #15803d;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #15803d;">Ciències</span>
+        <span class="count-badge">5 Reptes Multijoc</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🩺</span> <h3>UD9 · La Salut, el Cos Humà i el Medi Ambient</h3></div>
+      <p class="card-desc">Aparells del cos humà, primers auxilis, reciclatge i prevenció de riscos laborals.</p>
+      <div class="card-acts-list">
+        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-1')">
+          <span class="act-idx">🧩 Contenidors Reciclatge</span>
+          <span class="act-name">R1 · Classificació</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-2')">
+          <span class="act-idx">⚡ Primers Auxilis V/F</span>
+          <span class="act-name">R2 · Speed Quiz</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-3')">
+          <span class="act-idx">🕵️ EPI al Taller</span>
+          <span class="act-name">R3 · L'Intrús</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-4')">
+          <span class="act-idx">🔢 Pulsacions per Minut</span>
+          <span class="act-name">R4 · Càlcul Tàctil</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-5')">
+          <span class="act-idx">🪞 Protocol P.A.S. 3D</span>
+          <span class="act-name">R5 · Targetes 3D</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+  </div>
 </div>
 
+<!-- ==========================================
+     VISTA 2: PANTALLA DE JOC ULTRA-NETA (STAGE)
+     ========================================== -->
 <div id="pdi-game-view" class="pdi-game-view" style="display: none;">
   <!-- Barra de joc ultra-neta: només 1 sola barra superior minimalista -->
   <div class="pdi-game-topbar">
@@ -310,2052 +318,2927 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
     </div>
 
     <div class="game-top-tools">
-      <button class="btn-tool-icon" onclick="resetCurrentPDIActivity()" title="Barallar elements per al següent alumne">🔄 Barallar</button>
+      <button class="btn-tool-icon" onclick="resetCurrentPDIActivity()" title="Reiniciar repte per al següent alumne">🔄 Reiniciar</button>
       <button class="btn-tool-icon" id="game-sound-btn" onclick="togglePDISound()" title="Activar/Silenciar so">🔊</button>
       <button class="btn-tool-icon" id="game-fs-btn" onclick="togglePDIFullscreen()" title="Pantalla Completa">🖥️</button>
     </div>
   </div>
 
-  <div class="pdi-game-stage" id="pdi-game-stage">
-  <div class="pdi-activity-card" id="act-ud1-1" data-unit="ud1" data-title="Repte 1: Jerarquia">
-    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 1</span><h3>🔢 Ordena el Viatge de la Jerarquia d'Operacions</h3></div>
-    <p class="pdi-instruction">Arrossega els passos en l'ordre matemàtic correcte per a calcular: <strong>3 + 2 × (5 - 1)²</strong></p>
-    <div class="pdi-order-wrapper">
+  <div class="pdi-game-stage">
+    <!-- act-ud1-1 (order) -->
+    <div class="pdi-activity-card" id="act-ud1-1" data-unit="ud1" data-title="Jerarquia" data-format="order">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #2563eb;">UD1 · R1 · Ordre</span>
+        <h3>🔢 Ordena el Viatge de la Jerarquia d'Operacions</h3>
+      </div>
+      <p class="pdi-instruction">Arrossega els passos en l'ordre matemàtic correcte per a calcular: <strong>3 + 2 × (5 - 1)²</strong></p>
+      <div class="pdi-order-wrapper">
+        <div class="pdi-source-pool">
+          <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> Resoldre el parèntesi: (5 - 1) = 4</div>
+          <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> Elevar la potència: 4² = 16</div>
+          <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> Multiplicar: 2 × 16 = 32</div>
+          <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> Sumar al final: 3 + 32 = 35</div>
+        </div>
+        <div class="pdi-slots-column">
+          <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">1r pas: parèntesi</span></div>
+          <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">2n pas: potència</span></div>
+          <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">3r pas: multiplicació</span></div>
+          <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">4t pas: suma</span></div>
+        </div>
+      </div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud1-1')">Comprovar Resposta 🚀</button>
+        <div class="pdi-status-msg"></div>
+      </div>
+    </div>
+    <!-- act-ud1-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud1-2" data-unit="ud1" data-title="Potències V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #2563eb;">UD1 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Potències i Multiplicacions Ràpides</h3>
+      </div>
+      <p class="pdi-instruction">Llegeix l'afirmació i prem ràpidament si és VERITAT o FALS a la pantalla:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> 2³ significa 2 × 2 × 2 = <strong>8</strong> (no pas 2 × 3). Les potències són multiplicacions repetides!" data-extra="Recorda: la base es multiplica per si mateixa tantes vegades com indica l'exponent.">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">El resultat de calcular <strong>2³</strong> és igual a <strong>6</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud1-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud1-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud1-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud1-3" data-unit="ud1" data-title="Troba l'Intrús" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #2563eb;">UD1 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Quadrats Perfectes</h3>
+      </div>
+      <p class="pdi-instruction">Un d'aquests quatre nombres NO és un quadrat perfecte d'un nombre natural. Toca l'intrús:</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="És un quadrat perfecte: 4² = 16" onclick="selectIntrus('act-ud1-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">16 (perquè 4 × 4 = 16)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="És un quadrat perfecte: 5² = 25" onclick="selectIntrus('act-ud1-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">25 (perquè 5 × 5 = 25)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS CORRECTE! 6² = 36 i 7² = 49. El 42 no és quadrat de cap natural!" onclick="selectIntrus('act-ud1-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">42 (no hi ha cap natural n tal que n² = 42)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="És un quadrat perfecte: 7² = 49" onclick="selectIntrus('act-ud1-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">49 (perquè 7 × 7 = 49)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud1-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud1-4" data-unit="ud1" data-title="Teclat Mental" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #2563eb;">UD1 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat de Càlcul Mental: Arrels i Productes</h3>
+      </div>
+      <p class="pdi-instruction">Resol mentalment l'operació i escriu el resultat utilitzant el teclat numèric en pantalla:</p>
+      <div class="pdi-keypad-container" data-expected="20" data-steps="√64 = 8  →  3 × 4 = 12  →  8 + 12 = <strong>20</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Quant és: <strong>√64 + (3 × 4)</strong> ?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud1-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud1-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud1-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud1-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud1-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud1-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud1-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud1-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud1-5" data-unit="ud1" data-title="Propietats 3D" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #2563eb;">UD1 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Propietats Fonamentals</h3>
+      </div>
+      <p class="pdi-instruction">Toca cada targeta per a girar-la en 3D i descobrir la seua llei matemàtica:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🔄</span>
+                <h4>Propietat Commutativa</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>a + b = b + a</h5>
+                <p>L'ordre dels factors o dels sumands no altera el resultat: 4 + 7 = 7 + 4 = 11.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">📦</span>
+                <h4>Propietat Distributiva</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>a × (b + c) = a×b + a×c</h5>
+                <p>El producte respecte a la suma es reparteix: 3 × (4 + 2) = 12 + 6 = 18.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">⭐</span>
+                <h4>Element Neutre</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>+0 en suma, ×1 en producte</h5>
+                <p>Sumar 0 deixa el nombre igual (8+0=8). Multiplicar per 1 el deixa igual (8×1=8).</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud2-1 (category) -->
+    <div class="pdi-activity-card" id="act-ud2-1" data-unit="ud2" data-title="Positius vs Negatius" data-format="category">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #16a34a;">UD2 · R1 · Classificació</span>
+        <h3>⚖️ Balança de la Vida Real: Positius vs Negatius</h3>
+      </div>
+      <p class="pdi-instruction">Arrossega cada situació real a la seua caixa de signe enter corresponent:</p>
+      <div class="pdi-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="pos">
+          <div class="box-head"><span class="box-icon">📈</span><h4>➕ Nombres Positius (+)</h4></div>
+          <div class="box-content"></div>
+        </div>
+        <div class="pdi-drop-box" data-cat="neg">
+          <div class="box-head"><span class="box-icon">📉</span><h4>➖ Nombres Negatius (-)</h4></div>
+          <div class="box-content"></div>
+        </div>
+      </div>
       <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> Multiplicar: 2 × 16 = 32</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> Resoldre el parèntesi: (5 - 1) = 4</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> Sumar al final: 3 + 32 = 35</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> Elevar la potència: 4² = 16</div>
+        <div class="pdi-item" draggable="true" data-cat="pos"><span class="item-handle">☰</span> Ingressar 250 € a la nòmina</div>
+        <div class="pdi-item" draggable="true" data-cat="pos"><span class="item-handle">☰</span> Pujar al pis 4 de l'edifici</div>
+        <div class="pdi-item" draggable="true" data-cat="neg"><span class="item-handle">☰</span> Tindre un deute de 75 € al taller</div>
+        <div class="pdi-item" draggable="true" data-cat="neg"><span class="item-handle">☰</span> Submergir-se a 12 m sota el nivell del mar</div>
+        <div class="pdi-item" draggable="true" data-cat="neg"><span class="item-handle">☰</span> Temperatura de 5 graus sota zero (-5°C)</div>
+        <div class="pdi-item" draggable="true" data-cat="pos"><span class="item-handle">☰</span> Guanyar 3 punts en un partit</div>
       </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">1r pas: parèntesi</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">2n pas: potència</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">3r pas: multiplicació</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">4t pas: suma</span></div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkCategoryActivity('act-ud2-1')">Comprovar Classificació 🚀</button>
+        <div class="pdi-status-msg"></div>
       </div>
     </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud1-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
+    <!-- act-ud2-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud2-2" data-unit="ud2" data-title="Regla Signes V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #16a34a;">UD2 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Multiplicació de Signes</h3>
+      </div>
+      <p class="pdi-instruction">Respon ràpidament amb els botons tàctils si l'afirmació és vertadera o falsa:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> Menys per menys és MÉS! (-4) × (-5) = <strong>+20</strong>. Només dóna negatiu si multipliques signes diferents (+ × - = -)." data-extra="Recorda la cançó dels signes: Signes iguals donen POSITIU, signes diferents donen NEGATIU!">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">El producte de <strong>(-4) × (-5)</strong> és igual a <strong>-20</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud2-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud2-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
     </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud1-2" data-unit="ud1" data-title="Repte 2: Potències">
-    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 2</span><h3>⚡ Emparella cada Potència amb el seu Resultat</h3></div>
-    <p class="pdi-instruction">Arrossega cada potència a la caixa del seu resultat exacte:</p>
-    <div class="pdi-categories-wrapper">
+    <!-- act-ud2-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud2-3" data-unit="ud2" data-title="Troba l'Intrús" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #16a34a;">UD2 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Operacions amb Enters</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquestes operacions donen exactament el mateix resultat, però una dóna un valor diferent. Quina és la intrusa?</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="-8 + 3 = -5" onclick="selectIntrus('act-ud2-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">-8 + 3 (Dóna -5)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="-1 × +5 = -5" onclick="selectIntrus('act-ud2-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">(-1) × (+5) (Dóna -5)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="-2 - 3 = -5" onclick="selectIntrus('act-ud2-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">-2 - 3 (Dóna -5)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! -10 / -2 dóna +5 (positiu), mentre que les altres tres donen -5 (negatiu)!" onclick="selectIntrus('act-ud2-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">-10 / (-2) (Dóna +5)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud2-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud2-4" data-unit="ud2" data-title="El Saldo del Banc" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #16a34a;">UD2 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: El Saldo del Compte Corrent</h3>
+      </div>
+      <p class="pdi-instruction">Calcula el saldo final i escriu-lo amb el teclat (fes servir el botó '-' si és negatiu):</p>
+      <div class="pdi-keypad-container" data-expected="-10" data-steps="45 - 60 = -15 €  →  -15 + 5 = <strong>-10 €</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Tenies <strong>45 €</strong> al compte. Has pagat un rebut de <strong>60 €</strong> i després has ingressat <strong>5 €</strong>. Quin és el saldo actual en €?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud2-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud2-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud2-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud2-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud2-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud2-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud2-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud2-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud2-5" data-unit="ud2" data-title="Recta Numèrica 3D" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #16a34a;">UD2 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Conceptes d'Enters</h3>
+      </div>
+      <p class="pdi-instruction">Gira les targetes 3D per a repassar els conceptes clau de la recta numèrica:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">📏</span>
+                <h4>Valor Absolut |x|</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>|-7| = 7 i |+7| = 7</h5>
+                <p>La distància a zero sense tindre en compte el signe. Sempre és un valor positiu o zero.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🪞</span>
+                <h4>Nombre Oposat</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Op(+5) = -5</h5>
+                <p>El mateix valor absolut però amb signe canviat. A la recta estan a la mateixa distància del 0.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">⚖️</span>
+                <h4>Comparació d'Enters</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>-8 < -2</h5>
+                <p>Entre dos nombres negatius, és més gran el que està més a prop de zero (més a la dreta a la recta)!</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud3-1 (category) -->
+    <div class="pdi-activity-card" id="act-ud3-1" data-unit="ud3" data-title="Tipus de Fraccions" data-format="category">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #d97706;">UD3 · R1 · Classificació</span>
+        <h3>🥧 Classificació: Fraccions Pròpies vs Impròpies</h3>
+      </div>
+      <p class="pdi-instruction">Classifica cada fracció segons si el numerador és menor o major que el denominador:</p>
+      <div class="pdi-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="prop">
+          <div class="box-head"><span class="box-icon">🥧</span><h4>🟢 Fraccions Pròpies (< 1)</h4></div>
+          <div class="box-content"></div>
+        </div>
+        <div class="pdi-drop-box" data-cat="improp">
+          <div class="box-head"><span class="box-icon">🍰</span><h4>🔴 Fraccions Impròpies (≥ 1)</h4></div>
+          <div class="box-content"></div>
+        </div>
+      </div>
       <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="8">2³</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="25">5²</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="81">3⁴</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="1000">10³</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="49">7²</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="64">4³</div>
+        <div class="pdi-item" draggable="true" data-cat="prop"><span class="item-handle">☰</span> 3/4 (Tres quarts)</div>
+        <div class="pdi-item" draggable="true" data-cat="prop"><span class="item-handle">☰</span> 1/2 (Un mig)</div>
+        <div class="pdi-item" draggable="true" data-cat="improp"><span class="item-handle">☰</span> 5/2 (Cinc mitjos)</div>
+        <div class="pdi-item" draggable="true" data-cat="improp"><span class="item-handle">☰</span> 7/3 (Set terços)</div>
+        <div class="pdi-item" draggable="true" data-cat="prop"><span class="item-handle">☰</span> 2/5 (Dos cinquens)</div>
+        <div class="pdi-item" draggable="true" data-cat="improp"><span class="item-handle">☰</span> 9/4 (Nou quarts)</div>
       </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="8"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 8</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="25"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 25</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="81"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 81</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="1000"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 1.000</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="49"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 49</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="64"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 64</div><div class="box-items"></div></div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkCategoryActivity('act-ud3-1')">Comprovar Classificació 🚀</button>
+        <div class="pdi-status-msg"></div>
       </div>
     </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
+    <!-- act-ud3-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud3-2" data-unit="ud3" data-title="Equivalències V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #d97706;">UD3 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Equivalència Fracció-Decimal</h3>
+      </div>
+      <p class="pdi-instruction">Toca ràpidament VERITAT o FALS a la pissarra digital:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> Dividir per 10 mou la coma un lloc a l'esquerra: 3 / 10 = <strong>0,3</strong>. (0,03 seria 3/100, és a dir, tres centèsimes!)." data-extra="Recorda: 1/2 = 0,5 | 1/4 = 0,25 | 3/4 = 0,75 | 1/10 = 0,1.">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">La fracció <strong>3/10</strong> equival exactament al decimal <strong>0,03</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud3-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud3-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
     </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud1-3" data-unit="ud1" data-title="Repte 3: Ordres Unitats">
-    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 3</span><h3>🧱 Descomposició en Ordres d'Unitats: 45.827</h3></div>
-    <p class="pdi-instruction">Arrossega el valor posicional de cada xifra a la seua posició:</p>
-    <div class="pdi-categories-wrapper">
+    <!-- act-ud3-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud3-3" data-unit="ud3" data-title="Fraccions Equivalents" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #d97706;">UD3 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: La Fracció No Equivalent</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquestes fraccions representen exactament la meitat (1/2 = 0,5), però una NO. Quina és la intrusa?</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="2/4 = 1/2" onclick="selectIntrus('act-ud3-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">2/4 (Simplificat dóna 1/2)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="5/10 = 1/2" onclick="selectIntrus('act-ud3-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">5/10 (Simplificat dóna 1/2)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! 4/7 no equival a 1/2 perquè el doble de 4 és 8, no 7!" onclick="selectIntrus('act-ud3-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">4/7 (Representa 0,571...)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="6/12 = 1/2" onclick="selectIntrus('act-ud3-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">6/12 (Simplificat dóna 1/2)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud3-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud3-4" data-unit="ud3" data-title="Suma de Fraccions" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #d97706;">UD3 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: Fraccions a Decimal</h3>
+      </div>
+      <p class="pdi-instruction">Calcula el resultat en format decimal utilitzant el teclat en pantalla (usa el punt per a la coma decimal):</p>
+      <div class="pdi-keypad-container" data-expected="1.25" data-steps="3/4 = 0,75  i  1/2 = 0,50  →  0,75 + 0,50 = <strong>1.25</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Quant és: <strong>3/4 + 1/2</strong> en forma decimal?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud3-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud3-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud3-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud3-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud3-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud3-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud3-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud3-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud3-5" data-unit="ud3" data-title="Famílies Decimals" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #d97706;">UD3 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Tipus de Nombres Decimals</h3>
+      </div>
+      <p class="pdi-instruction">Gira les targetes per a aprendre a reconèixer cada família de nombres decimals:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🎯</span>
+                <h4>Decimal Exacte</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>3,75  (Xifres finites)</h5>
+                <p>Té un nombre limitat de xifres decimals. Prové de fraccions amb denominadors divisors de 10 (com 2 o 5).</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🔁</span>
+                <h4>Periòdic Pur</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>0,333... = 0,3̂</h5>
+                <p>La part decimal es repeteix indefinidament immediatament després de la coma. Ex: 1/3 = 0,333...</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🔀</span>
+                <h4>Periòdic Mixt</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>1,8333... = 1,83̂</h5>
+                <p>Té una part que no es repeteix (anteperíode) i després una part que sí es repeteix (període).</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud4-1 (category) -->
+    <div class="pdi-activity-card" id="act-ud4-1" data-unit="ud4" data-title="Directa o Inversa" data-format="category">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0284c7;">UD4 · R1 · Classificació</span>
+        <h3>⚖️ Relacions de Proporció: Directa vs Inversa</h3>
+      </div>
+      <p class="pdi-instruction">Classifica cada situació segons el tipus de proporcionalitat que l'explica:</p>
+      <div class="pdi-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="dir">
+          <div class="box-head"><span class="box-icon">↗️</span><h4>📈 Directa (més ➔ més)</h4></div>
+          <div class="box-content"></div>
+        </div>
+        <div class="pdi-drop-box" data-cat="inv">
+          <div class="box-head"><span class="box-icon">↘️</span><h4>📉 Inversa (més ➔ menys)</h4></div>
+          <div class="box-content"></div>
+        </div>
+      </div>
       <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="dm">40.000</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="um">5.000</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="c">800</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="d">20</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="u">7</div>
+        <div class="pdi-item" draggable="true" data-cat="dir"><span class="item-handle">☰</span> Quilos de taronges i el preu que pagues</div>
+        <div class="pdi-item" draggable="true" data-cat="inv"><span class="item-handle">☰</span> Velocitat del vehicle i el temps per a arribar</div>
+        <div class="pdi-item" draggable="true" data-cat="dir"><span class="item-handle">☰</span> Hores treballades i el salari total rebut</div>
+        <div class="pdi-item" draggable="true" data-cat="inv"><span class="item-handle">☰</span> Nombre d'obrers pintant i els dies per acabar</div>
+        <div class="pdi-item" draggable="true" data-cat="dir"><span class="item-handle">☰</span> Lletres de gasolina i els quilòmetres recorreguts</div>
+        <div class="pdi-item" draggable="true" data-cat="inv"><span class="item-handle">☰</span> Aixetes obertes omplint un dipòsit i el temps d'omplert</div>
       </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="dm"><div class="box-header"><span class="box-icon">🟣</span> 4 Desenes de Miler (DM)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="um"><div class="box-header"><span class="box-icon">🔵</span> 5 Unitats de Miler (UM)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="c"><div class="box-header"><span class="box-icon">🟢</span> 8 Centenes (C)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="d"><div class="box-header"><span class="box-icon">🟡</span> 2 Desenes (D)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="u"><div class="box-header"><span class="box-icon">🔴</span> 7 Unitats (U)</div><div class="box-items"></div></div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkCategoryActivity('act-ud4-1')">Comprovar Classificació 🚀</button>
+        <div class="pdi-status-msg"></div>
       </div>
     </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
+    <!-- act-ud4-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud4-2" data-unit="ud4" data-title="Percentatges V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0284c7;">UD4 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Càlcul Ràpid de Percentatges</h3>
+      </div>
+      <p class="pdi-instruction">Comprova l'afirmació i prem el botó corresponent a la pissarra digital:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> Calcular el 10% és dividir entre 10: 250 / 10 = <strong>25 €</strong>. (2,5 € seria l'1%!)." data-extra="Truc ràpid: el 10% es troba eliminant un zero o corrent la coma un lloc a l'esquerra!">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">El <strong>10%</strong> de <strong>250 €</strong> és igual a <strong>2,5 €</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud4-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud4-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
     </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud1-4" data-unit="ud1" data-title="Repte 4: Propietats">
-    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 4</span><h3>📐 Propietats de les Operacions Matemàtiques</h3></div>
-    <p class="pdi-instruction">Classifica cada exemple algebraic segons la propietat que representa:</p>
-    <div class="pdi-categories-wrapper">
+    <!-- act-ud4-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud4-3" data-unit="ud4" data-title="Rebaixes de Taller" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0284c7;">UD4 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Descomptes de Taller</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquests descomptes signifiquen pagar exactament la meitat (50%), però un és diferent. Quin és l'intrús?</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="És el 50%" onclick="selectIntrus('act-ud4-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Pagar 50 de cada 100 € (50%)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Un 2x1 equival a un 50% de descompte mitjà" onclick="selectIntrus('act-ud4-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Promoció 2x1 (t'emportes 2 pagant 1)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! La 2a unitat al 70% dóna un descompte global del 35%, no del 50%!" onclick="selectIntrus('act-ud4-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Segona unitat al 70% de descompte</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Multiplicar per 0,5 equival exactament al 50%" onclick="selectIntrus('act-ud4-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Multiplicar el preu original per 0,5</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud4-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud4-4" data-unit="ud4" data-title="Factura amb IVA" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0284c7;">UD4 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: Factura de Taller amb IVA</h3>
+      </div>
+      <p class="pdi-instruction">Calcula el preu total amb el 21% d'IVA inclòs i tecleja el resultat final:</p>
+      <div class="pdi-keypad-container" data-expected="121" data-steps="IVA: 21% de 100 € = 21 €  →  Preu total: 100 + 21 = <strong>121 €</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Un recanvi per a cotxe costa <strong>100 €</strong> de base imposable. Quant pagarà el client amb el <strong>21% d'IVA</strong> afegit?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud4-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud4-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud4-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud4-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud4-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud4-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud4-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud4-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud4-5" data-unit="ud4" data-title="Escales i Regles 3D" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0284c7;">UD4 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Fórmules de Proporció</h3>
+      </div>
+      <p class="pdi-instruction">Toca les targetes per a dominar les tres eines de proporcionalitat:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">✖️</span>
+                <h4>Regla de Tres Directa</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>x = (b × c) / a</h5>
+                <p>Es multipliquen les dades en diagonal i es divideix pel valor que queda sol. Ex: 2 kg valen 6 € ➔ 5 kg valen (5×6)/2 = 15 €.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🗺️</span>
+                <h4>Escala del Plànol 1:100</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>1 cm al paper = 100 cm reals</h5>
+                <p>Significa que la realitat és 100 vegades més gran. 1 cm al dibuix són 1 metre al taller o a la vivenda.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🏷️</span>
+                <h4>Augment de Percentatge</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Preu × (1 + %/100)</h5>
+                <p>Per a aplicar un 21% d'IVA directament, multipliques el preu base per 1,21 en un sol pas a la calculadora!</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud5-1 (order) -->
+    <div class="pdi-activity-card" id="act-ud5-1" data-unit="ud5" data-title="Aïllar la X" data-format="order">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #7c3aed;">UD5 · R1 · Ordre</span>
+        <h3>📐 El Camí per a Aïllar la X: 2x + 6 = 16</h3>
+      </div>
+      <p class="pdi-instruction">Ordena els passos lògics per a resoldre l'equació de primer grau: <strong>2x + 6 = 16</strong></p>
+      <div class="pdi-order-wrapper">
+        <div class="pdi-source-pool">
+          <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> Passar el +6 a l'altre membre restant: 2x = 16 - 6</div>
+          <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> Calcular la resta numèrica: 2x = 10</div>
+          <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> Passar el 2 multiplicador dividint: x = 10 / 2</div>
+          <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> Obtenir la solució final de la incògnita: x = 5</div>
+        </div>
+        <div class="pdi-slots-column">
+          <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">1r pas: moure el terme independent</span></div>
+          <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">2n pas: operar el membre dret</span></div>
+          <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">3r pas: aïllar el coeficient</span></div>
+          <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">4t pas: resultat de la x</span></div>
+        </div>
+      </div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud5-1')">Comprovar Resposta 🚀</button>
+        <div class="pdi-status-msg"></div>
+      </div>
+    </div>
+    <!-- act-ud5-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud5-2" data-unit="ud5" data-title="Monomis V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #7c3aed;">UD5 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Suma i Producte de Monomis</h3>
+      </div>
+      <p class="pdi-instruction">Toca VERITAT o FALS a la pantalla:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> x + x és una suma i dóna <strong>2x</strong> (dues vegades x). x² s'obté quan es MULTIPLICA: x · x = x²!" data-extra="Compara: 1 poma + 1 poma = 2 pomes (2x). No confongues la suma amb la potència!">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">L'expressió <strong>x + x</strong> és igual a <strong>x²</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud5-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud5-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud5-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud5-3" data-unit="ud5" data-title="Monomis Semblants" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #7c3aed;">UD5 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Monomis Semblants</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquests monomis són semblants (tenen exactament la mateixa part literal), però un no. Toca l'intrús:</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="Té x² de grau 2" onclick="selectIntrus('act-ud5-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">5x² (Part literal: x²)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Té x² de grau 2" onclick="selectIntrus('act-ud5-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">-3x² (Part literal: x²)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! 4x³ té exponent 3 (grau 3), per tant no és semblant als que tenen x²!" onclick="selectIntrus('act-ud5-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">4x³ (Part literal: x³)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Té x² de grau 2" onclick="selectIntrus('act-ud5-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">x² (Part literal: x²)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud5-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud5-4" data-unit="ud5" data-title="Endevina la X" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #7c3aed;">UD5 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: Resol l'Equació</h3>
+      </div>
+      <p class="pdi-instruction">Calcula el valor numèric de la incògnita <strong>x</strong> i tecleja'l:</p>
+      <div class="pdi-keypad-container" data-expected="5" data-steps="3x = 10 + 5 = 15  →  x = 15 / 3 = <strong>5</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Si <strong>3x - 5 = 10</strong>, quant val <strong>x</strong>?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud5-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud5-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud5-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud5-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud5-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud5-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud5-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud5-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud5-5" data-unit="ud5" data-title="Traductor a Àlgebra" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #7c3aed;">UD5 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Llenguatge Natural a Àlgebra</h3>
+      </div>
+      <p class="pdi-instruction">Gira les targetes per a aprendre a traduir frases habituals a fórmules matemàtiques:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">👥</span>
+                <h4>El doble d'un nombre més tres</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>2x + 3</h5>
+                <p>El doble significa multiplicar per 2 (2x) i després li sumem 3 unitats.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">➡️</span>
+                <h4>El nombre consecutiu o següent</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>x + 1</h5>
+                <p>Si un nombre és x, el seu número següent sempre és sumar-li 1 unitat.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🍰</span>
+                <h4>La meitat d'un nombre</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>x / 2  o  ½·x</h5>
+                <p>Partir en dues meitats iguals és dividir la variable per 2.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud6-1 (order) -->
+    <div class="pdi-activity-card" id="act-ud6-1" data-unit="ud6" data-title="Mètode Científic" data-format="order">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0d9488;">UD6 · R1 · Ordre</span>
+        <h3>🔬 Les 5 Fases del Mètode Científic</h3>
+      </div>
+      <p class="pdi-instruction">Ordena cronològicament com investiga un científic o un tècnic davant d'un problema:</p>
+      <div class="pdi-order-wrapper">
+        <div class="pdi-source-pool">
+          <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Observació curiosa d'un fenomen natural o incidència</div>
+          <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Formulació d'una hipòtesi (explicació provisional)</div>
+          <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Experimentació controlada i recollida de dades</div>
+          <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Anàlisi dels resultats i conclusions científiques</div>
+        </div>
+        <div class="pdi-slots-column">
+          <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">1r pas: observar</span></div>
+          <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">2n pas: plantejar hipòtesi</span></div>
+          <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">3r pas: fer experiments</span></div>
+          <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">4t pas: extreure conclusions</span></div>
+        </div>
+      </div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud6-1')">Comprovar Resposta 🚀</button>
+        <div class="pdi-status-msg"></div>
+      </div>
+    </div>
+    <!-- act-ud6-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud6-2" data-unit="ud6" data-title="Unitats SI V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0d9488;">UD6 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Unitats del Sistema Internacional (SI)</h3>
+      </div>
+      <p class="pdi-instruction">Respon ràpidament si la correspondència d'unitat és veritat o falsa:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> La unitat oficial del SI per a la temperatura és el <strong>Kelvin (K)</strong>, encara que en la vida diària fem servir graus Celsius (0 °C = 273,15 K)." data-extra="Altres unitats SI oficials: Massa en kg, Temps en segons (s), Longitud en metres (m).">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">En el Sistema Internacional (SI), la unitat oficial de temperatura és el <strong>Grau Celsius (°C)</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud6-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud6-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud6-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud6-3" data-unit="ud6" data-title="Instruments de Mesura" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0d9488;">UD6 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Instruments de Mesura de Longitud</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquests aparells mesuren longitud o gruix al taller, però un mesura una magnitud diferent. Quin és?</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="Mesura longitud amb precisió de dècimes" onclick="selectIntrus('act-ud6-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Calibre o Peu de Rei (Mesura gruixos i diàmetres)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Mesura longitud d'alta precisió" onclick="selectIntrus('act-ud6-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Micròmetre o Pàlmer (Mesura mil·lèsimes de mm)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS DETECTAT! El termòmetre mesura temperatura, no pas longituds o distàncies!" onclick="selectIntrus('act-ud6-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Termòmetre d'infrarojos (Mesura temperatura)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Mesura longituds en metres i centímetres" onclick="selectIntrus('act-ud6-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Cinta mètrica flexible (Mesura distàncies)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud6-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud6-4" data-unit="ud6" data-title="Canvi d'Unitats" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0d9488;">UD6 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: Conversió d'Unitats de Longitud</h3>
+      </div>
+      <p class="pdi-instruction">Fes la conversió i escriu la xifra exacta en metres utilitzant el teclat numèric:</p>
+      <div class="pdi-keypad-container" data-expected="3500" data-steps="1 km = 1000 m  →  3,5 × 1000 = <strong>3500 metres</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Quants metres (m) són exactament <strong>3,5 quilòmetres (km)</strong>?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud6-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud6-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud6-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud6-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud6-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud6-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud6-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud6-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud6-5" data-unit="ud6" data-title="Prefixos SI 3D" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #0d9488;">UD6 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Prefixos del Sistema Mètric</h3>
+      </div>
+      <p class="pdi-instruction">Toca les targetes per a aprendre el valor multiplicador de cada prefix científic:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🏔️</span>
+                <h4>Prefix KILO- (k)</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>× 1.000 (10³)</h5>
+                <p>Significa mil vegades la unitat base: 1 km = 1.000 m; 1 kg = 1.000 g; 1 kW = 1.000 W.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">📏</span>
+                <h4>Prefix CENTI- (c)</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>÷ 100 (10⁻²)</h5>
+                <p>Significa la centèsima part: 1 m = 100 cm; 1 L = 100 cL.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🔬</span>
+                <h4>Prefix MIL·LI- (m)</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>÷ 1.000 (10⁻³)</h5>
+                <p>Significa la mil·lèsima part de la unitat: 1 m = 1.000 mm; 1 g = 1.000 mg.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud7-1 (category) -->
+    <div class="pdi-activity-card" id="act-ud7-1" data-unit="ud7" data-title="Tipus de Mescles" data-format="category">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #ea580c;">UD7 · R1 · Classificació</span>
+        <h3>🧪 Laboratori de Mescles: Homogènies vs Heterogènies</h3>
+      </div>
+      <p class="pdi-instruction">Classifica cada substància segons si es distingeixen o no els seus components a simple vista:</p>
+      <div class="pdi-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="homo">
+          <div class="box-head"><span class="box-icon">☕</span><h4>✨ Mescles Homogènies (Dissolucions)</h4></div>
+          <div class="box-content"></div>
+        </div>
+        <div class="pdi-drop-box" data-cat="hete">
+          <div class="box-head"><span class="box-icon">🥣</span><h4>🥗 Mescles Heterogènies</h4></div>
+          <div class="box-content"></div>
+        </div>
+      </div>
       <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="com">5 + 8 = 8 + 5</div>
-        <div class="pdi-item" draggable="true" data-cat="com">4 · 7 = 7 · 4</div>
-        <div class="pdi-item" draggable="true" data-cat="ass">(2 + 3) + 6 = 2 + (3 + 6)</div>
-        <div class="pdi-item" draggable="true" data-cat="ass">(5 · 2) · 4 = 5 · (2 · 4)</div>
-        <div class="pdi-item" draggable="true" data-cat="dist">3 · (4 + 5) = 3·4 + 3·5</div>
-        <div class="pdi-item" draggable="true" data-cat="neut">9 + 0 = 9 (Suma)</div>
-        <div class="pdi-item" draggable="true" data-cat="neut">12 · 1 = 12 (Multiplicació)</div>
+        <div class="pdi-item" draggable="true" data-cat="homo"><span class="item-handle">☰</span> Aigua de l'aixeta amb sal completament dissolta</div>
+        <div class="pdi-item" draggable="true" data-cat="hete"><span class="item-handle">☰</span> Aigua amb oli (es formen dues capes separades)</div>
+        <div class="pdi-item" draggable="true" data-cat="homo"><span class="item-handle">☰</span> Aire net que respirem (mescla de gasos)</div>
+        <div class="pdi-item" draggable="true" data-cat="hete"><span class="item-handle">☰</span> Roca de granit (quars, feldespat i mica visibles)</div>
+        <div class="pdi-item" draggable="true" data-cat="homo"><span class="item-handle">☰</span> Aliatge metàl·lic de bronze (coure i estany fosos)</div>
+        <div class="pdi-item" draggable="true" data-cat="hete"><span class="item-handle">☰</span> Aigua amb arena del riu al fons</div>
       </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="com"><div class="box-header"><span class="box-icon">🔄</span> Propietat Commutativa (L'ordre no altera el resultat)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="ass"><div class="box-header"><span class="box-icon">🔗</span> Propietat Associativa (Agrupació lliure de termes)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="dist"><div class="box-header"><span class="box-icon">✨</span> Propietat Distributiva respecte a la suma</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="neut"><div class="box-header"><span class="box-icon">⚪</span> Element Neutre (El zero en suma, l'u en producte)</div><div class="box-items"></div></div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkCategoryActivity('act-ud7-1')">Comprovar Classificació 🚀</button>
+        <div class="pdi-status-msg"></div>
       </div>
     </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
+    <!-- act-ud7-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud7-2" data-unit="ud7" data-title="Canvis d'Estat V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #ea580c;">UD7 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Canvis d'Estat de la Matèria</h3>
+      </div>
+      <p class="pdi-instruction">Toca el botó de VERITAT o FALS a la pissarra digital:</p>
+      <div class="pdi-speedquiz-container" data-correct="true" data-exp="<strong>VERITAT!</strong> La sublimació és el pas directe de sòlid a gas. Un exemple típic és el gel sec (CO₂ sòlid) o les boles de naftalina." data-extra="Els altres canvis són: Fusió (sòlid a líquid), Vaporització (líquid a gas) i Condensació (gas a líquid).">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">El canvi directe d'estat de <strong>sòlid a gas</strong> sense passar per líquid s'anomena <strong>Sublimació</strong>.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud7-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud7-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
     </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud1-5" data-unit="ud1" data-title="Repte 5: Arrels">
-    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 5</span><h3>√ Arrels Quadrades Exactes</h3></div>
-    <p class="pdi-instruction">Arrossega cada arrel quadrada exacta al seu valor resolt:</p>
-    <div class="pdi-categories-wrapper">
+    <!-- act-ud7-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud7-3" data-unit="ud7" data-title="Separació de Mescles" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #ea580c;">UD7 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Mètodes de Separació de Mescles Heterogènies</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquests mètodes separen mescles heterogènies mecànicament, però un és per a dissolucions homogènies líquides. Quin és?</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="Separa sòlids en suspensió d'un líquid" onclick="selectIntrus('act-ud7-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Filtració (paper de filtre per a sòlid-líquid)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Separa líquids immiscibles de diferent densitat" onclick="selectIntrus('act-ud7-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Decantació (embut de decantació per a aigua i oli)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! La destil·lació s'empra per a separar mescles HOMOGÈNIES basant-se en els diferents punts d'ebullició!" onclick="selectIntrus('act-ud7-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Destil·lació (bullir per a separar alcohol i aigua)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Separa partícules denses en mescles heterogènies" onclick="selectIntrus('act-ud7-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Sedimentació per gravetat (deixar caure les partícules)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud7-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud7-4" data-unit="ud7" data-title="Càlcul de Densitat" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #ea580c;">UD7 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: Fórmula de la Densitat (d = m / V)</h3>
+      </div>
+      <p class="pdi-instruction">Aplica la fórmula d = massa / volum i escriu la densitat obtinguda:</p>
+      <div class="pdi-keypad-container" data-expected="8" data-steps="d = m / V  →  d = 160 g / 20 cm³ = <strong>8 g/cm³</strong>">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Una peça d'alumne de taller té una massa de <strong>160 g</strong> i ocupa un volum de <strong>20 cm³</strong>. Quina és la seua densitat en <strong>g/cm³</strong>?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud7-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud7-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud7-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud7-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud7-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud7-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud7-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud7-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud7-5" data-unit="ud7" data-title="Estats Matèria 3D" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #ea580c;">UD7 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Els Tres Estats Fonamentals</h3>
+      </div>
+      <p class="pdi-instruction">Toca les targetes per a visualitzar com es comporten les partícules en cada estat:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🧊</span>
+                <h4>Estat Sòlid</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Forma i Volum Fixos</h5>
+                <p>Les partícules estan fortament unides en posicions fixes, només vibren. No es comprimeix fàcilment.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">💧</span>
+                <h4>Estat Líquid</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Volum Fix, Forma Variable</h5>
+                <p>Les partícules tenen certa llibertat de moviment i llisquen unes sobre altres, adoptant la forma del recipient.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">💨</span>
+                <h4>Estat Gasós</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Forma i Volum Variables</h5>
+                <p>Les partícules estan molt allunyades entre si, es mouen veloçment i ocupen tot l'espai disponible. Es comprimeixen fàcilment.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud8-1 (order) -->
+    <div class="pdi-activity-card" id="act-ud8-1" data-unit="ud8" data-title="Planetes del Sol" data-format="order">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #4f46e5;">UD8 · R1 · Ordre</span>
+        <h3>🪐 Els 8 Planetes en Ordre des del Sol</h3>
+      </div>
+      <p class="pdi-instruction">Ordena els planetes del Sistema Solar començant pel més proper al Sol fins al més llunyà:</p>
+      <div class="pdi-order-wrapper">
+        <div class="pdi-source-pool">
+          <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1r Mercuri (planeta rocallós més pròxim)</div>
+          <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2n Venus (l'infern d'efecte hivernacle)</div>
+          <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3r Terra (el nostre planeta blau amb vida)</div>
+          <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4t Mart (el planeta roig)</div>
+        </div>
+        <div class="pdi-slots-column">
+          <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">1r planeta</span></div>
+          <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">2n planeta</span></div>
+          <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">3r planeta</span></div>
+          <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">4t planeta</span></div>
+        </div>
+      </div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud8-1')">Comprovar Resposta 🚀</button>
+        <div class="pdi-status-msg"></div>
+      </div>
+    </div>
+    <!-- act-ud8-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud8-2" data-unit="ud8" data-title="Estacions V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #4f46e5;">UD8 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Els Moviments de la Terra</h3>
+      </div>
+      <p class="pdi-instruction">Toca VERITAT o FALS a la pantalla interactiva:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> Les estacions no ocorren per la distància al Sol, sinó per la <strong>INCLINACIÓ de l'eix de la Terra (23,5°)</strong>, que fa que els rajos solars arriben més perpendiculars!" data-extra="De fet, en el nostre estiu de l'hemisferi nord la Terra està en el seu punt més llunyà del Sol (Afeli)!">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">A l'estiu fa més calor perquè la Terra està molt més a prop del Sol que a l'hivern.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud8-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud8-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud8-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud8-3" data-unit="ud8" data-title="Planetes Rocosos" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #4f46e5;">UD8 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Planetes Rocosos Interiors</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquests planetes són petits i rocosos (tel·lúrics), però un és un gegant gasós exterior. Quin és l'intrús?</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="Planeta interior de roca" onclick="selectIntrus('act-ud8-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Mercuri (Rocós)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Planeta interior de roca" onclick="selectIntrus('act-ud8-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Mart (Rocós)</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! Júpiter és el gegant gasós més gran del Sistema Solar, no pas un planeta rocallós!" onclick="selectIntrus('act-ud8-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Júpiter (Gegant de gas)</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="Planeta interior de roca" onclick="selectIntrus('act-ud8-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Venus (Rocós)</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud8-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud8-4" data-unit="ud8" data-title="Cicle Lunar" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #4f46e5;">UD8 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: El Cicle de les Fases de la Lluna</h3>
+      </div>
+      <p class="pdi-instruction">Resol la qüestió astronòmica i introdueix el nombre aproximat de dies:</p>
+      <div class="pdi-keypad-container" data-expected="28" data-steps="El cicle lunar dura aproximadament 27,3 a <strong>28 dies</strong> (4 setmanes de 7 dies).">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Quants dies (aproximadament) triga la Lluna en fer una volta sencera i completar les seues 4 fases (mes lunar)?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud8-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud8-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud8-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud8-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud8-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud8-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud8-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud8-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud8-5" data-unit="ud8" data-title="Capes de la Terra" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #4f46e5;">UD8 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: Les Grans Capes de la Terra</h3>
+      </div>
+      <p class="pdi-instruction">Gira les targetes per a explorar l'estructura externa i interna del nostre planeta:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">💨</span>
+                <h4>Atmosfera</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Capa Gasosa</h5>
+                <p>Composta principalment per Nitrogen (78%), Oxigen (21%) i altres gasos. Ens protegeix de la radiació solar i meteors.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🌊</span>
+                <h4>Hidrosfera</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Capa d'Aigua</h5>
+                <p>Tota l'aigua del planeta: oceans, mars, rius, glaceres i aigües subterrànies. Cobreix el 71% de la superfície terrestre.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🌋</span>
+                <h4>Geosfera Interna</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Escorça, Mantell i Nucli</h5>
+                <p>L'escorça sòlida exterior, el mantell viscós on es mouen les plaques tectòniques i el nucli de ferro i níquel a gran temperatura.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
+    </div>
+    <!-- act-ud9-1 (category) -->
+    <div class="pdi-activity-card" id="act-ud9-1" data-unit="ud9" data-title="Contenidors Reciclatge" data-format="category">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #15803d;">UD9 · R1 · Classificació</span>
+        <h3>♻️ Reciclatge al Taller: Tria el Contenidor Adequat</h3>
+      </div>
+      <p class="pdi-instruction">Classifica cada residu en el seu contenidor oficial per a cuidar el medi ambient:</p>
+      <div class="pdi-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="groc">
+          <div class="box-head"><span class="box-icon">🥫</span><h4>🟡 Contenidor Groc (Envasos)</h4></div>
+          <div class="box-content"></div>
+        </div>
+        <div class="pdi-drop-box" data-cat="blau">
+          <div class="box-head"><span class="box-icon">📦</span><h4>🔵 Contenidor Blau (Paper/Cartó)</h4></div>
+          <div class="box-content"></div>
+        </div>
+      </div>
       <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="4">√16</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="6">√36</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="8">√64</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="9">√81</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="10">√100</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="12">√144</div>
+        <div class="pdi-item" draggable="true" data-cat="groc"><span class="item-handle">☰</span> Botes buides de refresc i llandes metàl·liques</div>
+        <div class="pdi-item" draggable="true" data-cat="blau"><span class="item-handle">☰</span> Caixes de cartó d'embalatge de recanvis</div>
+        <div class="pdi-item" draggable="true" data-cat="groc"><span class="item-handle">☰</span> Bosses i plàstic de bombolles</div>
+        <div class="pdi-item" draggable="true" data-cat="blau"><span class="item-handle">☰</span> Fulls de paper d'oficina i catàlegs vells</div>
+        <div class="pdi-item" draggable="true" data-cat="groc"><span class="item-handle">☰</span> Botelles de plàstic d'aigua mineral</div>
+        <div class="pdi-item" draggable="true" data-cat="blau"><span class="item-handle">☰</span> Periòdics i revistes usades</div>
       </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="4"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 4</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="6"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 6</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="8"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 8</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="9"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 9</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="10"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 10</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="12"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 12</div><div class="box-items"></div></div>
+      <div class="pdi-footer-feedback">
+        <button class="btn-pdi-check" onclick="checkCategoryActivity('act-ud9-1')">Comprovar Classificació 🚀</button>
+        <div class="pdi-status-msg"></div>
       </div>
     </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
+    <!-- act-ud9-2 (speedquiz) -->
+    <div class="pdi-activity-card" id="act-ud9-2" data-unit="ud9" data-title="Primers Auxilis V/F" data-format="speedquiz">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #15803d;">UD9 · R2 · Speed Quiz</span>
+        <h3>⚡ Speed Quiz: Primers Auxilis en Cas de Cremada</h3>
+      </div>
+      <p class="pdi-instruction">Toca ràpidament si l'actuació és correcta o errònia:</p>
+      <div class="pdi-speedquiz-container" data-correct="false" data-exp="<strong>FALS!</strong> MAI s'han de posar pastes, pomades ni olis! El primer que cal fer és aplicar <strong>AIGUA FREDA CORRENT durant 10-15 minuts</strong> per a refredar la pell i evitar infeccions." data-extra="Recorda sempre el telèfon d'emergències a la Unió Europea: 112!">
+        <div class="sq-streak-badge">
+          <span>🔥 Ratxa Actual:</span> <strong class="sq-streak-val">0</strong> encerts consecutius
+        </div>
+        <div class="sq-statement-box">
+          <span class="sq-quote-icon">⚡</span>
+          <p class="sq-statement-text">Davant d'una cremada tèrmica recent, el primer que cal fer és posar crema o pasta de dents sobre la ferida.</p>
+        </div>
+        <div class="sq-buttons-row">
+          <button class="btn-sq btn-sq-true" onclick="answerSpeedQuiz('act-ud9-2', true)">
+            <span class="sq-btn-icon">✓</span>
+            <span class="sq-btn-label">VERITAT</span>
+          </button>
+          <button class="btn-sq btn-sq-false" onclick="answerSpeedQuiz('act-ud9-2', false)">
+            <span class="sq-btn-icon">✗</span>
+            <span class="sq-btn-label">FALS</span>
+          </button>
+        </div>
+        <div class="sq-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud9-3 (intrus) -->
+    <div class="pdi-activity-card" id="act-ud9-3" data-unit="ud9" data-title="EPI al Taller" data-format="intrus">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #15803d;">UD9 · R3 · L'Intrús</span>
+        <h3>🕵️ Troba l'Intrús: Equips de Protecció Individual (EPI)</h3>
+      </div>
+      <p class="pdi-instruction">Tres d'aquests elements són equips homologats per a protegir-se al taller, però un NO ho és. Toca l'intrús:</p>
+      <div class="pdi-intrus-container">
+        <div class="intrus-cards-grid">
+          <div class="intrus-card" data-intrus="false" data-hint="EPI essencial per als ulls" onclick="selectIntrus('act-ud9-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Ulleres de seguretat antiesquitxades homologades</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="EPI obligatori contra caiguda d'objectes" onclick="selectIntrus('act-ud9-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Botes de seguretat amb puntera d'acer reforçada</p>
+          </div>
+          <div class="intrus-card" data-intrus="true" data-hint="INTRÚS TROBAT! Els auriculars de música NO són un EPI homologat i a més distreuen i tapen alarmes del taller!" onclick="selectIntrus('act-ud9-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Auriculars de música personals sense fils</p>
+          </div>
+          <div class="intrus-card" data-intrus="false" data-hint="EPI per a protegir les mans" onclick="selectIntrus('act-ud9-3', this)">
+            <span class="intrus-badge">Opció</span>
+            <p class="intrus-card-text">Guants de cuir resistents a l'abrasió mecànica</p>
+          </div>
+        </div>
+        <div class="intrus-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud9-4 (keypad) -->
+    <div class="pdi-activity-card" id="act-ud9-4" data-unit="ud9" data-title="Pulsacions per Minut" data-format="keypad">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #15803d;">UD9 · R4 · Càlcul Tàctil</span>
+        <h3>🔢 Teclat Mental: Freqüència Cardíaca (PPM)</h3>
+      </div>
+      <p class="pdi-instruction">Fes el càlcul de la freqüència cardíaca en repòs i tecleja el resultat final:</p>
+      <div class="pdi-keypad-container" data-expected="72" data-steps="Un minut té 60 segons (15 s × 4)  →  18 × 4 = <strong>72 ppm</strong> (freqüència cardíaca normal en repòs).">
+        <div class="kp-problem-box">
+          <span class="kp-prob-icon">🧮</span>
+          <p class="kp-prob-text">Un company compta <strong>18 pulsacions</strong> durant <strong>15 segons</strong> al canell. Quantes pulsacions per minut (ppm) té?</p>
+        </div>
+        <div class="kp-calc-wrapper">
+          <div class="kp-display-wrap">
+            <span class="kp-display-label">La teua resposta:</span>
+            <div class="kp-display-screen" id="kp-screen-act-ud9-4">--</div>
+          </div>
+          <div class="kp-keys-grid">
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '7')">7</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '8')">8</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '9')">9</button>
+            <button class="kp-key kp-key-del" onclick="pressKeypad('act-ud9-4', 'DEL')">⌫</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '4')">4</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '5')">5</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '6')">6</button>
+            <button class="kp-key kp-key-clear" onclick="pressKeypad('act-ud9-4', 'C')">C</button>
+
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '1')">1</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '2')">2</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '3')">3</button>
+            <button class="kp-key kp-key-minus" onclick="pressKeypad('act-ud9-4', '-')">+/-</button>
+
+            <button class="kp-key kp-key-zero" onclick="pressKeypad('act-ud9-4', '0')">0</button>
+            <button class="kp-key" onclick="pressKeypad('act-ud9-4', '.')">.</button>
+            <button class="kp-key kp-key-check" onclick="checkKeypad('act-ud9-4')">✔ Comprovar</button>
+          </div>
+        </div>
+        <div class="kp-feedback-box" style="display: none;"></div>
+      </div>
+    </div>
+    <!-- act-ud9-5 (flipcard) -->
+    <div class="pdi-activity-card" id="act-ud9-5" data-unit="ud9" data-title="Protocol P.A.S. 3D" data-format="flipcard">
+      <div class="pdi-act-title">
+        <span class="act-num" style="background: #15803d;">UD9 · R5 · Targetes 3D</span>
+        <h3>🪞 Targetes Giratòries 3D: El Protocol d'Emergències P.A.S.</h3>
+      </div>
+      <p class="pdi-instruction">Toca les targetes per a aprendre la seqüència vital d'auxili en cas d'accident:</p>
+      <div class="pdi-flipcards-container">
+        <div class="flipcards-grid">
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">🛡️</span>
+                <h4>P · PROTEGIR</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Assegurar la zona</h5>
+                <p>Abans d'actuar, assegura que ni tu ni la víctima esteu en perill (tallar corrent, senyalitzar perill, apagar motors).</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">📞</span>
+                <h4>A · AVISAR</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Telefonar al 112</h5>
+                <p>Donar dades clares: on ha ocorregut, què ha passat, quantes persones estan ferides i el seu estat de consciència.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+          <div class="flipcard-scene" onclick="flipCard(this)">
+            <div class="flipcard-inner">
+              <div class="flipcard-front">
+                <span class="fc-icon">❤️</span>
+                <h4>S · SOCÓRRER</h4>
+                <span class="fc-hint">🔄 Toca per a girar</span>
+              </div>
+              <div class="flipcard-back">
+                <h5>Atendre la víctima</h5>
+                <p>Acompanyar el ferit, comprovar si respira, no moure'l si hi ha sospita de lesió a la columna i mantindre la calma.</p>
+                <span class="fc-check-badge">✓ Entès!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-instructions-bar">
+          <span>💡 Toca qualsevol targeta per a girar-la i veure la fórmula o definició. Toca-la una altra vegada per a retornar.</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="pdi-activity-card" id="act-ud2-1" data-unit="ud2" data-title="Repte 1: Classificar Òrgans">
-    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 1</span><h3>🫀 Classifica els Òrgans en el seu Aparell corresponent</h3></div>
-    <p class="pdi-instruction">Arrossega cada òrgan a la caixa de l'aparell humà al qual pertany:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="digestiu">Estómac</div>
-        <div class="pdi-item" draggable="true" data-cat="respiratori">Pulmons</div>
-        <div class="pdi-item" draggable="true" data-cat="circulatori">Cor</div>
-        <div class="pdi-item" draggable="true" data-cat="excretor">Ronyons</div>
-        <div class="pdi-item" draggable="true" data-cat="digestiu">Intestí prim</div>
-        <div class="pdi-item" draggable="true" data-cat="respiratori">Tràquea</div>
-        <div class="pdi-item" draggable="true" data-cat="circulatori">Artèries</div>
-        <div class="pdi-item" draggable="true" data-cat="excretor">Bufeta urinària</div>
-        <div class="pdi-item" draggable="true" data-cat="digestiu">Fetge</div>
-        <div class="pdi-item" draggable="true" data-cat="respiratori">Alvèols</div>
-        <div class="pdi-item" draggable="true" data-cat="circulatori">Venes</div>
-        <div class="pdi-item" draggable="true" data-cat="excretor">Urèters</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="digestiu"><div class="box-header"><span class="box-icon">🍏</span> Aparell Digestiu</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="respiratori"><div class="box-header"><span class="box-icon">🫁</span> Aparell Respiratori</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="circulatori"><div class="box-header"><span class="box-icon">🫀</span> Aparell Circulatori</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="excretor"><div class="box-header"><span class="box-icon">💧</span> Aparell Excretor</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud2-2" data-unit="ud2" data-title="Repte 2: Viatge Aliments">
-    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 2</span><h3>🥖 Ordena el Viatge dels Aliments pel Tub Digestiu</h3></div>
-    <p class="pdi-instruction">Arrossega els òrgans en l'ordre consecutiu que segueix el menjar:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Estómac (suc gàstric i quim)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Boca (masticació i saliva)</div>
-        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Intestí gros (absorció d'aigua i femtes)</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Faringe (deglució)</div>
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Intestí prim (absorció de nutrients)</div>
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Esòfag (moviments peristàltics)</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Etapa 1</span><span class="slot-hint">Inici: masticació</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Etapa 2</span><span class="slot-hint">Pas comú: faringe</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Etapa 3</span><span class="slot-hint">Tub de baixada</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Etapa 4</span><span class="slot-hint">Quim gàstric</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Etapa 5</span><span class="slot-hint">Absorció de nutrients</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Etapa 6</span><span class="slot-hint">Extracció d'aigua i residus</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud2-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud2-3" data-unit="ud2" data-title="Repte 3: La Sang i Vasos">
-    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 3</span><h3>🩸 Components de la Sang i Vasos Sanguinis</h3></div>
-    <p class="pdi-instruction">Arrossega cada element a la seua funció vital:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="oxigen">Glòbuls Roigs (Eritròcits)</div>
-        <div class="pdi-item" draggable="true" data-cat="defenses">Glòbuls Blancs (Leucòcits)</div>
-        <div class="pdi-item" draggable="true" data-cat="taps">Plaquetes (Trombòcits)</div>
-        <div class="pdi-item" draggable="true" data-cat="sortida">Artèries</div>
-        <div class="pdi-item" draggable="true" data-cat="retorn">Venes</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="oxigen"><div class="box-header"><span class="box-icon">🔴</span> Transport d'Oxigen (Hemoglobina)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="defenses"><div class="box-header"><span class="box-icon">🛡️</span> Defenses i Immunitat</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="taps"><div class="box-header"><span class="box-icon">🩹</span> Coagulació i Tancament de Ferides</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="sortida"><div class="box-header"><span class="box-icon">💨</span> Condueixen sang des del cor als òrgans</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="retorn"><div class="box-header"><span class="box-icon">🔄</span> Retornen la sang dels òrgans al cor</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud2-4" data-unit="ud2" data-title="Repte 4: Nivells de Vida">
-    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 4</span><h3>🔬 Ordena els Nivells d'Organització Biològica</h3></div>
-    <p class="pdi-instruction">Arrossega els nivells ordenant-los des del més senzill fins al més complex:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Cèl·lula (unitat viva fonamental)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Àtom (partícula química bàsica)</div>
-        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Organisme humà complet</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Teixit (grup de cèl·lules iguals)</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Molècula (aigua, glucosa, proteïna)</div>
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Òrgan (cor, estómac, ronyó)</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Nivell 1</span><span class="slot-hint">Nivell químic subatòmic</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Nivell 2</span><span class="slot-hint">Unió d'àtoms</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Nivell 3</span><span class="slot-hint">1r nivell amb vida pròpia</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Nivell 4</span><span class="slot-hint">Conjunt especialitzat</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Nivell 5</span><span class="slot-hint">Estructura amb funció concreta</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Nivell 6</span><span class="slot-hint">Ésser viu complet</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud2-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud2-5" data-unit="ud2" data-title="Repte 5: Nutrients">
-    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 5</span><h3>🥗 Els Nutrients i la seua Funció a la Dieta</h3></div>
-    <p class="pdi-instruction">Classifica cada aliment o substància en el seu grup de nutrients principal:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="glu">Pasta, arròs i pa</div>
-        <div class="pdi-item" draggable="true" data-cat="lip">Oli d'oliva i mantega</div>
-        <div class="pdi-item" draggable="true" data-cat="pro">Ous, pollastre i llegums</div>
-        <div class="pdi-item" draggable="true" data-cat="vit">Taronja i fruites fresques</div>
-        <div class="pdi-item" draggable="true" data-cat="glu">Sucre i mel (Glucosa)</div>
-        <div class="pdi-item" draggable="true" data-cat="pro">Peix blau i formatge fresc</div>
-        <div class="pdi-item" draggable="true" data-cat="vit">Espinacs i verdures de fulla</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="glu"><div class="box-header"><span class="box-icon">⚡</span> Glúcids (Energia ràpida per a treballar)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="lip"><div class="box-header"><span class="box-icon">🥑</span> Lípids (Reserva d'energia i aïllant tèrmic)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="pro"><div class="box-header"><span class="box-icon">💪</span> Proteïnes (Construcció de múscul i reparació)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="vit"><div class="box-header"><span class="box-icon">🥕</span> Vitamines i Minerals (Regulació i salut)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud3-1" data-unit="ud3" data-title="Repte 1: Positiu o Negatiu">
-    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 1</span><h3>➕➖ Nombres Enters a la Vida Real: Positius o Negatius?</h3></div>
-    <p class="pdi-instruction">Arrossega cada situació quotidiana al contenidor corresponent:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="positiu">Pujar al 3r pis de l'institut (+3)</div>
-        <div class="pdi-item" draggable="true" data-cat="negatiu">Baixar al soterrani -2 del pàrquing (-2)</div>
-        <div class="pdi-item" draggable="true" data-cat="positiu">Ingressar 50 € a la llibreta (+50)</div>
-        <div class="pdi-item" draggable="true" data-cat="negatiu">Deure 20 € a un amic (-20)</div>
-        <div class="pdi-item" draggable="true" data-cat="negatiu">Temperatura de 5 °C sota zero (-5)</div>
-        <div class="pdi-item" draggable="true" data-cat="positiu">Cim d'una muntanya a 850 m (+850)</div>
-        <div class="pdi-item" draggable="true" data-cat="negatiu">Submarí a 60 m sota el mar (-60)</div>
-        <div class="pdi-item" draggable="true" data-cat="positiu">Pujar 15 graus la calefacció (+15)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="positiu"><div class="box-header"><span class="box-icon">🟢</span> Nombres Positius (+)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="negatiu"><div class="box-header"><span class="box-icon">🔴</span> Nombres Negatius (-)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud3-2" data-unit="ud3" data-title="Repte 2: Recta Numèrica">
-    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 2</span><h3>📏 Ordena els Nombres Enters de Menor a Major</h3></div>
-    <p class="pdi-instruction">Arrossega ordenant estrictament de menor a major:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-order="5"><span class="item-handle">☰</span> +3</div>
-        <div class="pdi-item num-item" draggable="true" data-order="1"><span class="item-handle">☰</span> -9</div>
-        <div class="pdi-item num-item" draggable="true" data-order="6"><span class="item-handle">☰</span> +8</div>
-        <div class="pdi-item num-item" draggable="true" data-order="3"><span class="item-handle">☰</span> -2</div>
-        <div class="pdi-item num-item" draggable="true" data-order="2"><span class="item-handle">☰</span> -5</div>
-        <div class="pdi-item num-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 0</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Més petit</span><span class="slot-hint">Cota més negativa</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2n</span><span class="slot-hint">Negatiu intermedi</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3r</span><span class="slot-hint">Negatiu pròxim a zero</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4t</span><span class="slot-hint">Zero</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5è</span><span class="slot-hint">Positiu xicotet</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Més gran</span><span class="slot-hint">Major nombre positiu</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud3-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud3-3" data-unit="ud3" data-title="Repte 3: Regla Signes">
-    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 3</span><h3>✖️➗ La Regla dels Signes en Multiplicació i Divisió</h3></div>
-    <p class="pdi-instruction">Arrossega cada operació al seu resultat exacte:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="p12">(-3) · (-4)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="m12">(+6) · (-2)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="m5">(-15) : (+3)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="p5">(-20) : (-4)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="p12"><div class="box-header"><span class="box-icon">🟢</span> Resultat: +12</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="m12"><div class="box-header"><span class="box-icon">🔴</span> Resultat: -12</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="p5"><div class="box-header"><span class="box-icon">🟢</span> Resultat: +5</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="m5"><div class="box-header"><span class="box-icon">🔴</span> Resultat: -5</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud3-4" data-unit="ud3" data-title="Repte 4: Suma i Resta">
-    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 4</span><h3>🧮 Sumes i Restes de Nombres Enters</h3></div>
-    <p class="pdi-instruction">Resol mentalment i emparella cada càlcul amb el seu valor final:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="p4">(-6) + (+10)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="m4">(+2) - (+6)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="m7">(-3) - (+4)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="p7">(+12) + (-5)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="p4"><div class="box-header"><span class="box-icon">🎯</span> Resultat: +4</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="m4"><div class="box-header"><span class="box-icon">🎯</span> Resultat: -4</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="p7"><div class="box-header"><span class="box-icon">🎯</span> Resultat: +7</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="m7"><div class="box-header"><span class="box-icon">🎯</span> Resultat: -7</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud3-5" data-unit="ud3" data-title="Repte 5: Valor Absolut">
-    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 5</span><h3>📐 Valor Absolut |x| i Nombre Oposat</h3></div>
-    <p class="pdi-instruction">Classifica segons si el resultat és 6 o és 9:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="v6">|-6|</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="v6">|+6|</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="v6">Oposat de (-6)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="v9">|-9|</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="v9">|+9|</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="v9">Oposat de (-9)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="v6"><div class="box-header"><span class="box-icon">🔵</span> Dóna com a valor final 6</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="v9"><div class="box-header"><span class="box-icon">🟣</span> Dóna com a valor final 9</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud4-1" data-unit="ud4" data-title="Repte 1: Primers / Compostos">
-    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 1</span><h3>⭐ Nombres Primers vs Nombres Compostos</h3></div>
-    <p class="pdi-instruction">Arrossega cada nombre a la seua categoria:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="primer">2</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="compost">4</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="primer">5</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="compost">6</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="primer">7</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="compost">9</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="primer">11</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="compost">12</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="primer">13</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="compost">15</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="primer"><div class="box-header"><span class="box-icon">⭐</span> Nombres Primers (Només 2 divisors: l'1 i ell mateix)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="compost"><div class="box-header"><span class="box-icon">📦</span> Nombres Compostos (Tenen més de 2 divisors)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud4-2" data-unit="ud4" data-title="Repte 2: Criteris Divisibilitat">
-    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 2</span><h3>🎯 Criteris de Divisibilitat: Per 2, per 3 o per 5?</h3></div>
-    <p class="pdi-instruction">Arrossega cada nombre a la caixa del criteri que compleix:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="div2">18</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div3">27</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div5">35</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div2">44</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div3">51</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div5">75</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="div2"><div class="box-header"><span class="box-icon">2️⃣</span> Divisible per 2 (Acaba en xifra parell)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="div3"><div class="box-header"><span class="box-icon">3️⃣</span> Divisible per 3 (La suma de xifres és múltiple de 3)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="div5"><div class="box-header"><span class="box-icon">5️⃣</span> Divisible per 5 (Acaba en 0 o en 5)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud4-3" data-unit="ud4" data-title="Repte 3: Múltiples vs Divisors">
-    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 3</span><h3>🔄 Múltiples vs Divisors del Nombre 12</h3></div>
-    <p class="pdi-instruction">Classifica aquests nombres segons la seua relació amb el 12:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="mult">24 (12 · 2)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div">3 (12 : 3 = 4)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="mult">36 (12 · 3)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div">4 (12 : 4 = 3)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="mult">60 (12 · 5)</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="div">6 (12 : 6 = 2)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="mult"><div class="box-header"><span class="box-icon">📈</span> Múltiples de 12 (Resultat de multiplicar 12 per un enter)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="div"><div class="box-header"><span class="box-icon">📉</span> Divisors de 12 (Divideixen exactament a 12 sense residu)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud4-4" data-unit="ud4" data-title="Repte 4: Factors Primers">
-    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 4</span><h3>🧩 Descomposició Factorial en Factors Primers</h3></div>
-    <p class="pdi-instruction">Emparella cada nombre amb el seu producte de factors primers:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-cat="n12">2² · 3</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="n18">2 · 3²</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="n20">2² · 5</div>
-        <div class="pdi-item num-item" draggable="true" data-cat="n50">2 · 5²</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="n12"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 12</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="n18"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 18</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="n20"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 20</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="n50"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 50</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud4-5" data-unit="ud4" data-title="Repte 5: MCD o MCM?">
-    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 5</span><h3>🤔 En quin Problema usem MCD o MCM?</h3></div>
-    <p class="pdi-instruction">Classifica cada situació problemàtica segons quina eina cal aplicar per a resoldre-la:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="mcd">Tallar dues cordes de 18 m i 24 m en trossos iguals el més llargs possible</div>
-        <div class="pdi-item" draggable="true" data-cat="mcm">Dos autobusos ixen a la vegada i passen cada 15 min i cada 20 min. Quan tornaran a coincidir?</div>
-        <div class="pdi-item" draggable="true" data-cat="mcd">Fer paquets iguals de caramels sense que en sobre cap</div>
-        <div class="pdi-item" draggable="true" data-cat="mcm">Dos fars marítims parpellegen cada 6 segons i cada 8 segons. Quan s'encendran alhora?</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="mcd"><div class="box-header"><span class="box-icon">✂️</span> Màxim Comú Divisor (MCD) — Repartir / tallar en màxima mida</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="mcm"><div class="box-header"><span class="box-icon">⏰</span> Mínim Comú Múltiple (MCM) — Coincidència de temps o cicles</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud5-1" data-unit="ud5" data-title="Repte 1: Tipus Fraccions">
-    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 1</span><h3>🍰 Tipus de Fraccions: Pròpies, Impròpies o Iguals a 1</h3></div>
-    <p class="pdi-instruction">Arrossega cada fracció al seu calaix segons el seu valor respecte a la unitat:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item frac-item" draggable="true" data-cat="propia"><sup>1</sup>/<sub>2</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="impropia"><sup>5</sup>/<sub>3</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="unitat"><sup>4</sup>/<sub>4</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="propia"><sup>3</sup>/<sub>5</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="impropia"><sup>7</sup>/<sub>4</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="unitat"><sup>9</sup>/<sub>9</sub></div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="propia"><div class="box-header"><span class="box-icon">🍰</span> Fraccions Pròpies (< 1)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="impropia"><div class="box-header"><span class="box-icon">🍕</span> Fraccions Impròpies (> 1)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="unitat"><div class="box-header"><span class="box-icon">🎯</span> Iguals a la Unitat (= 1)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud5-2" data-unit="ud5" data-title="Repte 2: Equivalències">
-    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 2</span><h3>🪞 Emparella Fraccions Equivalents</h3></div>
-    <p class="pdi-instruction">Arrossega cada fracció simplificada amb la seua ampliació equivalent:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item frac-item" draggable="true" data-cat="f12"><sup>1</sup>/<sub>2</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="f23"><sup>2</sup>/<sub>3</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="f34"><sup>3</sup>/<sub>4</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="f25"><sup>2</sup>/<sub>5</sub></div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="f12"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>3</sup>/<sub>6</sub> (Multiplicat per 3)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f23"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>4</sup>/<sub>6</sub> (Multiplicat per 2)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f34"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>6</sup>/<sub>8</sub> (Multiplicat per 2)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f25"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>4</sup>/<sub>10</sub> (Multiplicat per 2)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud5-3" data-unit="ud5" data-title="Repte 3: Ordenar Fraccions">
-    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 3</span><h3>📏 Ordena Fraccions de Menor a Major (Denominador 8)</h3></div>
-    <p class="pdi-instruction">Com que tenen el mateix denominador, ordena-les segons el seu numerador:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item frac-item" draggable="true" data-order="3"><span class="item-handle">☰</span> <sup>5</sup>/<sub>8</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-order="1"><span class="item-handle">☰</span> <sup>1</sup>/<sub>8</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-order="4"><span class="item-handle">☰</span> <sup>7</sup>/<sub>8</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-order="2"><span class="item-handle">☰</span> <sup>3</sup>/<sub>8</sub></div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Més xicoteta</span><span class="slot-hint">Només 1 part de 8</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2a</span><span class="slot-hint">3 parts de 8</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3a</span><span class="slot-hint">Més de la meitat (5 parts)</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Més gran</span><span class="slot-hint">Quasi la unitat sencera (7 parts)</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud5-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud5-4" data-unit="ud5" data-title="Repte 4: Fracció Quantitat">
-    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 4</span><h3>💰 Càlcul de la Fracció d'una Quantitat</h3></div>
-    <p class="pdi-instruction">Calcula dividint pel denominador i multiplicant pel numerador:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="r30">1/2 de 60 €</div>
-        <div class="pdi-item" draggable="true" data-cat="r75">3/4 de 100 kg</div>
-        <div class="pdi-item" draggable="true" data-cat="r20">2/5 de 50 alumnes</div>
-        <div class="pdi-item" draggable="true" data-cat="r30">1/3 de 90 litres</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="r30"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 30</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="r75"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 75</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="r20"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 20</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud5-5" data-unit="ud5" data-title="Repte 5: Suma / Resta">
-    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 5</span><h3>➕➖ Suma i Resta de Fraccions amb Mateix Denominador</h3></div>
-    <p class="pdi-instruction">Opera els numeradors mantenint intacte el denominador comú:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item frac-item" draggable="true" data-cat="f57"><sup>3</sup>/<sub>7</sub> + <sup>2</sup>/<sub>7</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="f39"><sup>8</sup>/<sub>9</sub> - <sup>5</sup>/<sub>9</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="f45"><sup>1</sup>/<sub>5</sub> + <sup>3</sup>/<sub>5</sub></div>
-        <div class="pdi-item frac-item" draggable="true" data-cat="f310"><sup>7</sup>/<sub>10</sub> - <sup>4</sup>/<sub>10</sub></div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="f57"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>5</sup>/<sub>7</sub></div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f39"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>3</sup>/<sub>9</sub></div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f45"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>4</sup>/<sub>5</sub></div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f310"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>3</sup>/<sub>10</sub></div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud6-1" data-unit="ud6" data-title="Repte 1: Rocosos vs Gasosos">
-    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 1</span><h3>🪐 Planetes Rocosos vs Planetes Gasosos</h3></div>
-    <p class="pdi-instruction">Arrossega els 8 planetes del Sistema Solar al seu grup:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="rocos">Mercuri</div>
-        <div class="pdi-item" draggable="true" data-cat="gasos">Júpiter</div>
-        <div class="pdi-item" draggable="true" data-cat="rocos">Venus</div>
-        <div class="pdi-item" draggable="true" data-cat="gasos">Saturn</div>
-        <div class="pdi-item" draggable="true" data-cat="rocos">Terra</div>
-        <div class="pdi-item" draggable="true" data-cat="gasos">Urà</div>
-        <div class="pdi-item" draggable="true" data-cat="rocos">Mart</div>
-        <div class="pdi-item" draggable="true" data-cat="gasos">Neptú</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="rocos"><div class="box-header"><span class="box-icon">🪨</span> Planetes Rocosos / Interiors</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="gasos"><div class="box-header"><span class="box-icon">🪐</span> Planetes Gasosos / Exteriors</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud6-2" data-unit="ud6" data-title="Repte 2: Distància al Sol">
-    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 2</span><h3>☀️ Ordena els Planetes des del Sol cap a l'Exterior</h3></div>
-    <p class="pdi-instruction">Arrossega en l'ordre consecutiu de proximitat al Sol:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> Júpiter</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> Mercuri</div>
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> Terra</div>
-        <div class="pdi-item" draggable="true" data-order="7"><span class="item-handle">☰</span> Urà</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> Venus</div>
-        <div class="pdi-item" draggable="true" data-order="8"><span class="item-handle">☰</span> Neptú</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> Mart</div>
-        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> Saturn</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">1r</span><span class="slot-hint">Mercuri</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2n</span><span class="slot-hint">Venus</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3r</span><span class="slot-hint">Terra</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4t</span><span class="slot-hint">Mart</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5è</span><span class="slot-hint">Júpiter</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">6è</span><span class="slot-hint">Saturn</span></div>
-        <div class="pdi-slot" data-slot="7"><span class="slot-badge">7è</span><span class="slot-hint">Urà</span></div>
-        <div class="pdi-slot" data-slot="8"><span class="slot-badge">8è</span><span class="slot-hint">Neptú</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud6-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud6-3" data-unit="ud6" data-title="Repte 3: Escala Còsmica">
-    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 3</span><h3>🌌 Ordena l'Univers d'Escala Menor a Còsmica</h3></div>
-    <p class="pdi-instruction">Arrossega les estructures començant per la més xicoteta fins a la més gegantina:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Sistema Solar (el Sol i planetes)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Planeta Terra</div>
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Univers Observable complet</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Estrella Sol</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Galàxia Via Làctia (200.000 milions d'estrelles)</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Escala 1</span><span class="slot-hint">Planeta individual</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Escala 2</span><span class="slot-hint">Estrella central</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Escala 3</span><span class="slot-hint">Família planetària</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Escala 4</span><span class="slot-hint">Espirals d'estrelles</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Escala 5</span><span class="slot-hint">El Tot còsmic</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud6-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud6-4" data-unit="ud6" data-title="Repte 4: Tipus d'Astres">
-    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 4</span><h3>🔭 Classifica els Cossos de l'Univers</h3></div>
-    <p class="pdi-instruction">Arrossega cada cos celeste a la seua definició astronòmica:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="est">El Sol</div>
-        <div class="pdi-item" draggable="true" data-cat="pla">Mart</div>
-        <div class="pdi-item" draggable="true" data-cat="sat">La Lluna</div>
-        <div class="pdi-item" draggable="true" data-cat="est">Sirius</div>
-        <div class="pdi-item" draggable="true" data-cat="com">Cometa Halley</div>
-        <div class="pdi-item" draggable="true" data-cat="sat">Ganimedes (de Júpiter)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="est"><div class="box-header"><span class="box-icon">⭐</span> Estrella (Cos massiu que emet llum pròpia)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="pla"><div class="box-header"><span class="box-icon">🪐</span> Planeta (Òrbita al voltant d'una estrella)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="sat"><div class="box-header"><span class="box-icon">🌙</span> Satèl·lit (Òrbita al voltant d'un planeta)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="com"><div class="box-header"><span class="box-icon">☄️</span> Cometa (Cos de gel i pols amb cua brillant)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud6-5" data-unit="ud6" data-title="Repte 5: Roques Espacials">
-    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 5</span><h3>🪨 Meteoroide, Meteor o Meteorit?</h3></div>
-    <p class="pdi-instruction">Identifica on es troba el fragment rocallós:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="oide">Roca que flota a l'espai abans d'entrar a la Terra</div>
-        <div class="pdi-item" draggable="true" data-cat="or">Estel fugaç que brilla per fricció a l'atmosfera</div>
-        <div class="pdi-item" draggable="true" data-cat="it">Roca que sobreviu i impacta al terra creant un cràter</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="oide"><div class="box-header"><span class="box-icon">🛰️</span> Meteoroide (A l'espai buit)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="or"><div class="box-header"><span class="box-icon">🌠</span> Meteor (Estel fugaç a la mesosfera)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="it"><div class="box-header"><span class="box-icon">💥</span> Meteorit (Ha tocat la superfície terrestre)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud7-1" data-unit="ud7" data-title="Repte 1: Capes Geosfera">
-    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 1</span><h3>🌍 Les 4 Capes Internes de la Geosfera</h3></div>
-    <p class="pdi-instruction">Arrossega cada característica a la capa correcta de la Terra:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="escorca">Capa sòlida prima exterior on vivim</div>
-        <div class="pdi-item" draggable="true" data-cat="mantell">Format per magma i roques calentes en moviment continu</div>
-        <div class="pdi-item" draggable="true" data-cat="nucli-ext">Capa líquida de ferro que genera el camp magnètic</div>
-        <div class="pdi-item" draggable="true" data-cat="nucli-int">Esfera metàl·lica sòlida al centre a altíssima temperatura</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="escorca"><div class="box-header"><span class="box-icon">⛰️</span> Escorça Terrestre</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="mantell"><div class="box-header"><span class="box-icon">🌋</span> Mantell Terrestre</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="nucli-ext"><div class="box-header"><span class="box-icon">🧲</span> Nucli Extern (Líquid)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="nucli-int"><div class="box-header"><span class="box-icon">⚪</span> Nucli Intern (Sòlid)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud7-2" data-unit="ud7" data-title="Repte 2: Rotació / Traslació">
-    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 2</span><h3>🔄 Moviments de la Terra: Rotació vs Traslació</h3></div>
-    <p class="pdi-instruction">Classifica característiques i conseqüències segons el moviment:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="rotacio">Gira sobre el seu propi eix</div>
-        <div class="pdi-item" draggable="true" data-cat="traslacio">Òrbita el·líptica al voltant del Sol</div>
-        <div class="pdi-item" draggable="true" data-cat="rotacio">Dura 24 hores (1 dia solar)</div>
-        <div class="pdi-item" draggable="true" data-cat="traslacio">Dura 365 dies i 6 hores (1 any)</div>
-        <div class="pdi-item" draggable="true" data-cat="rotacio">Origina la successió de Dia i Nit</div>
-        <div class="pdi-item" draggable="true" data-cat="traslacio">Origina les 4 Estacions de l'any</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="rotacio"><div class="box-header"><span class="box-icon">🌍</span> Moviment de Rotació (Eix propi)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="traslacio"><div class="box-header"><span class="box-icon">☀️</span> Moviment de Traslació (Voltant del Sol)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud7-3" data-unit="ud7" data-title="Repte 3: Fases de la Lluna">
-    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 3</span><h3>🌙 Ordena el Cicle de les 4 Fases de la Lluna</h3></div>
-    <p class="pdi-instruction">Ordena el cicle lunar consecutivament començant per la fase fosca:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Lluna Plena (cara il·luminada al 100%)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Lluna Nova (no és visible des de la Terra)</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Quart Minvant (forma de 'C' decreixent)</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Quart Creixent (forma de 'D' creixent)</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Fase 1</span><span class="slot-hint">Lluna fosca d'inici</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Fase 2</span><span class="slot-hint">Forma de lletra D</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Fase 3</span><span class="slot-hint">Disc blanc complet</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Fase 4</span><span class="slot-hint">Forma de lletra C</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud7-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud7-4" data-unit="ud7" data-title="Repte 4: Tipus de Roques">
-    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 4</span><h3>🪨 Els Tres Grans Grups de Roques</h3></div>
-    <p class="pdi-instruction">Classifica cada roca segons el seu origen geològic:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="mag">Granit (refredament lent subterrani)</div>
-        <div class="pdi-item" draggable="true" data-cat="sed">Calcària (acumulació de closques marines)</div>
-        <div class="pdi-item" draggable="true" data-cat="met">Marbre (calcària transformada per calor/pressió)</div>
-        <div class="pdi-item" draggable="true" data-cat="mag">Basalt (lava volcànica refredada)</div>
-        <div class="pdi-item" draggable="true" data-cat="sed">Argila i gres (compactació d'arenes)</div>
-        <div class="pdi-item" draggable="true" data-cat="met">Pissarra (argila transformada en làmines)</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="mag"><div class="box-header"><span class="box-icon">🌋</span> Roques Magmàtiques (Solidificació de magma)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="sed"><div class="box-header"><span class="box-icon">🏖️</span> Roques Sedimentàries (Sediments acumulats en capes)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="met"><div class="box-header"><span class="box-icon">🔥</span> Roques Metamòrfiques (Transformades per pressió)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud7-5" data-unit="ud7" data-title="Repte 5: Tipus d'Eclipsi">
-    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 5</span><h3>🌑 Eclipsi de Sol vs Eclipsi de Lluna</h3></div>
-    <p class="pdi-instruction">Classifica qui s'interposa enmig i quina ombra es genera:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="sol">Alineació: Sol - Lluna - Terra</div>
-        <div class="pdi-item" draggable="true" data-cat="lluna">Alineació: Sol - Terra - Lluna</div>
-        <div class="pdi-item" draggable="true" data-cat="sol">La Lluna tapa la llum del Sol en ple dia</div>
-        <div class="pdi-item" draggable="true" data-cat="lluna">L'ombra de la Terra enfosqueix la Lluna de nit</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="sol"><div class="box-header"><span class="box-icon">☀️</span> Eclipsi de Sol (La Lluna enmig)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="lluna"><div class="box-header"><span class="box-icon">🌕</span> Eclipsi de Lluna (La Terra enmig)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud8-1" data-unit="ud8" data-title="Repte 1: Capes Atmosfera">
-    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 1</span><h3>🌤️ Ordena les Capes de l'Atmosfera de Baix cap a Dalt</h3></div>
-    <p class="pdi-instruction">Arrossega les capes des del terra fins a l'espai exterior:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Mesosfera (on es desintegren meteorits)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Troposfera (on vivim, amb l'aire i núvols)</div>
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Exosfera (límit exterior amb l'espai)</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Estratosfera (conté la capa d'ozó)</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Termosfera (aurores i satèl·lits)</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">1a Capa</span><span class="slot-hint">Contacte amb la superfície</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2a Capa</span><span class="slot-hint">Capa amb l'Ozó protector</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3a Capa</span><span class="slot-hint">Capa freda intermèdia</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4a Capa</span><span class="slot-hint">Aurores polars</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5a Capa</span><span class="slot-hint">Límit exterior amb l'espai</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud8-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud8-2" data-unit="ud8" data-title="Repte 2: Aparells Meteorològics">
-    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 2</span><h3>🌡️ Aparells de la Caseta Meteorològica</h3></div>
-    <p class="pdi-instruction">Arrossega cada instrument a la magnitud meteorològica que mesura:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="temp">Termòmetre</div>
-        <div class="pdi-item" draggable="true" data-cat="pressio">Baròmetre</div>
-        <div class="pdi-item" draggable="true" data-cat="vent">Anemòmetre</div>
-        <div class="pdi-item" draggable="true" data-cat="pluja">Pluviòmetre</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="temp"><div class="box-header"><span class="box-icon">🌡️</span> Temperatura de l'Aire (°C)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="pressio"><div class="box-header"><span class="box-icon">⏱️</span> Pressió Atmosfèrica (hPa / mb)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="vent"><div class="box-header"><span class="box-icon">💨</span> Velocitat del Vent (km/h)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="pluja"><div class="box-header"><span class="box-icon">🌧️</span> Precipitació caiguda (L/m² o mm)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud8-3" data-unit="ud8" data-title="Repte 3: Gasos de l'Aire">
-    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 3</span><h3>💨 La Composició de l'Aire Net</h3></div>
-    <p class="pdi-instruction">Classifica cada gas segons el seu percentatge en l'aire que respirem:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="n2">Nitrogen (N₂)</div>
-        <div class="pdi-item" draggable="true" data-cat="o2">Oxigen (O₂)</div>
-        <div class="pdi-item" draggable="true" data-cat="res">Argó (Gas noble)</div>
-        <div class="pdi-item" draggable="true" data-cat="res">Diòxid de carboni (CO₂)</div>
-        <div class="pdi-item" draggable="true" data-cat="res">Vapor d'aigua</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="n2"><div class="box-header"><span class="box-icon">🟢</span> ~78% (El gas més abundant de l'aire)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="o2"><div class="box-header"><span class="box-icon">🔵</span> ~21% (El gas que necessitem per respirar)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="res"><div class="box-header"><span class="box-icon">🟡</span> ~1% (La resta de gasos minoritaris)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud8-4" data-unit="ud8" data-title="Repte 4: Contaminació Aire">
-    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 4</span><h3>🏭 Contaminants Naturals vs Artificials</h3></div>
-    <p class="pdi-instruction">Classifica l'origen de la contaminació atmosfèrica:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="nat">Cendres d'una erupció volcànica</div>
-        <div class="pdi-item" draggable="true" data-cat="art">Fums de tubs d'escapament de cotxes dièsel</div>
-        <div class="pdi-item" draggable="true" data-cat="nat">Tempesta de pols i arena del Sàhara</div>
-        <div class="pdi-item" draggable="true" data-cat="art">Emissions de centrals tèrmiques de carbó</div>
-        <div class="pdi-item" draggable="true" data-cat="nat">Grans de pol·len a la primavera</div>
-        <div class="pdi-item" draggable="true" data-cat="art">Gasos contaminants CFC dels aires condicionats</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="nat"><div class="box-header"><span class="box-icon">🌋</span> Contaminació d'Origen Natural</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="art"><div class="box-header"><span class="box-icon">🏭</span> Contaminació d'Origen Artificial (Humana)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud8-5" data-unit="ud8" data-title="Repte 5: Tipus de Precipitació">
-    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 5</span><h3>🌧️ Formes de Precipitació i Hidrometeors</h3></div>
-    <p class="pdi-instruction">Emparella cada fenomen amb el seu estat físic:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="liq">Pluja i plugim</div>
-        <div class="pdi-item" draggable="true" data-cat="sol">Neu (cristalls hexagonals de gel)</div>
-        <div class="pdi-item" draggable="true" data-cat="sol">Calamarsa (pedres esfèriques de gel)</div>
-        <div class="pdi-item" draggable="true" data-cat="liq">Rosada sobre l'herba de matí</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="liq"><div class="box-header"><span class="box-icon">💧</span> Precipitació o condensació Líquida</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="sol"><div class="box-header"><span class="box-icon">❄️</span> Precipitació Sòlida (Aigua congelada)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud9-1" data-unit="ud9" data-title="Repte 1: Cicle Hidrològic">
-    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 1</span><h3>💧 Ordena les 4 Etapes del Cicle de l'Aigua</h3></div>
-    <p class="pdi-instruction">Arrossega les etapes en la seua seqüència natural:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Precipitació: L'aigua cau com a pluja o neu</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Evaporació: El Sol calfa l'aigua i puja com a vapor</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Infiltració i Escorrentia: Torna per rius al mar</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Condensació: Es refreda formant els núvols</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Etapa 1</span><span class="slot-hint">El Sol calfa l'aigua</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Etapa 2</span><span class="slot-hint">Formació de núvols</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Etapa 3</span><span class="slot-hint">Caiguda de pluja</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Etapa 4</span><span class="slot-hint">Retorn als mars</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-1')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud9-2" data-unit="ud9" data-title="Repte 2: Aigua Dolça vs Salada">
-    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 2</span><h3>🌊 Aigua Dolça (3%) vs Aigua Salada (97%)</h3></div>
-    <p class="pdi-instruction">Classifica les masses d'aigua segons la seua salinitat i volum global:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="salada">Oceans (Pacífic, Atlàntic, Índic...)</div>
-        <div class="pdi-item" draggable="true" data-cat="dolca">Glaceres i Casquets Polars (70% del dolç)</div>
-        <div class="pdi-item" draggable="true" data-cat="salada">Mars (Mediterrani, Cantàbric, Roig...)</div>
-        <div class="pdi-item" draggable="true" data-cat="dolca">Aqüífers i Aigües Subterrànies</div>
-        <div class="pdi-item" draggable="true" data-cat="dolca">Rius i Torrents de muntanya</div>
-        <div class="pdi-item" draggable="true" data-cat="dolca">Llacs d'aigua dolça</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="dolca"><div class="box-header"><span class="box-icon">💧</span> Aigua Dolça (~3% del Total del Planeta)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="salada"><div class="box-header"><span class="box-icon">🌊</span> Aigua Salada (~97% del Total del Planeta)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud9-2')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud9-3" data-unit="ud9" data-title="Repte 3: Canvis d'Estat">
-    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 3</span><h3>🧊♨️ Els Canvis d'Estat: Guanyen o Perden Calor?</h3></div>
-    <p class="pdi-instruction">Classifica cada canvi d'estat de l'aigua:</p>
-    <div class="pdi-categories-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="calor">Fusió: De Gel sòlid a Aigua líquida</div>
-        <div class="pdi-item" draggable="true" data-cat="fred">Solidificació: D'Aigua líquida a Gel sòlid</div>
-        <div class="pdi-item" draggable="true" data-cat="calor">Vaporització / Ebullició: De Líquid a Vapor</div>
-        <div class="pdi-item" draggable="true" data-cat="fred">Condensació: De Vapor de gas a Gotes líquides</div>
-      </div>
-      <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="calor"><div class="box-header"><span class="box-icon">🔥</span> Guanyen Calor (S'escalfen)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="fred"><div class="box-header"><span class="box-icon">❄️</span> Perden Calor (Es refreden)</div><div class="box-items"></div></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud9-3')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud9-4" data-unit="ud9" data-title="Repte 4: Trams d'un Riu">
-    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 4</span><h3>🏞️ Ordena els Tres Trams d'un Riu des del Naixement</h3></div>
-    <p class="pdi-instruction">Arrossega els trams del riu en el sentit en què baixa l'aigua:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Curs Mitjà (pendent moderat, meandres i transport de materials)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Curs Alt (fort pendent en muntanya, cascades i gran erosió)</div>
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Curs Baix (terreny pla, sedimentació, desembocadura i deltes)</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Tram 1 (Naixement)</span><span class="slot-hint">Aiguabarreigs i gorges de muntanya</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Tram 2 (Intermedi)</span><span class="slot-hint">Valls amples i corbes sinuoses</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Tram 3 (Desembocadura)</span><span class="slot-hint">Arribada a la mar o un altre riu</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-4')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  <div class="pdi-activity-card" id="act-ud9-5" data-unit="ud9" data-title="Repte 5: Cicle Urbà Aigua">
-    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 5</span><h3>🚰 El Cicle Urbà de l'Aigua a la Nostra Ciutat</h3></div>
-    <p class="pdi-instruction">Ordena el camí complet de l'aigua des que l'agafem de la natura fins que la retornem neta:</p>
-    <div class="pdi-order-wrapper">
-      <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Clavegueram (recollida d'aigües residuals brutes)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Captació (embassaments, rius o pous subterranis)</div>
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Depuració a l'EDAR (eliminació de residus i bacteris)</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Potabilització a l'ETAP (tractament i cloració)</div>
-        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Retorn al medi natural (rius o mar) sense contaminar</div>
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Xarxa de distribució i consum a les llars</div>
-      </div>
-      <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">Obtenció de l'aigua bruta</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">Fer-la potable per a beure</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">Aixetes de cases i indústries</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">Aigües brutes que marxen</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Pas 5</span><span class="slot-hint">Neteja a la depuradora</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Pas 6</span><span class="slot-hint">Retorn net a la natura</span></div>
-      </div>
-    </div>
-    <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-5')">Comprovar Resposta 🚀</button>
-      <div class="pdi-status-msg"></div>
-    </div>
-  </div>
-  </div>
-</div>
 </div>
 
-<div class="pdi-exit-floating-btn" onclick="togglePDIFullscreen()" title="Eixir de la pantalla completa (Esc)">
-  <span>🪟 Eixir de Pantalla Completa</span>
-  <span style="font-size:0.75rem; opacity:0.8; background:rgba(255,255,255,0.2); padding:2px 6px; border-radius:4px;">Esc</span>
+<canvas id="pdi-confetti-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999; display: none;"></canvas>
+
 </div>
 
-<!-- ESTILS DE LA PISSARRA DIGITAL -->
+<!-- ==========================================
+     ESTILS CSS COMPLETS I RESPONSIVES
+     ========================================== -->
 <style>
-/* Disseny General de l'App */
+/* Reset i variables generals */
 .pdi-app-wrapper {
-  width: 100%;
+  --pdi-font: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --pdi-bg: var(--bg-color, #f8fafc);
+  --pdi-card-bg: var(--card-bg, #ffffff);
+  --pdi-border: var(--border-color, #e2e8f0);
+  --pdi-text: var(--text-color, #1e293b);
+  --pdi-text-muted: #64748b;
+  --pdi-primary: #2563eb;
+  --pdi-success: #10b981;
+  --pdi-danger: #ef4444;
+  --pdi-warning: #f59e0b;
+  font-family: var(--pdi-font);
+  color: var(--pdi-text);
+  margin: 0 auto;
+  max-width: 1400px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-/* ==========================================================
-   1. TAULER DE REPTES (DASHBOARD INICIAL)
-   ========================================================== */
+/* Pantalla completa pura */
+body.pdi-fullscreen-mode {
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: var(--pdi-bg) !important;
+}
+body.pdi-fullscreen-mode header,
+body.pdi-fullscreen-mode nav,
+body.pdi-fullscreen-mode footer,
+body.pdi-fullscreen-mode .site-header,
+body.pdi-fullscreen-mode .breadcrumbs,
+body.pdi-fullscreen-mode .sidebar {
+  display: none !important;
+}
+body.pdi-fullscreen-mode .pdi-app-wrapper {
+  max-width: 100vw !important;
+  height: 100vh !important;
+  padding: 0 !important;
+}
+body.pdi-fullscreen-mode #pdi-game-view {
+  height: 100vh !important;
+}
+
+/* -------------------------------------------
+   DASHBOARD (VISTA 1)
+   ------------------------------------------- */
+.pdi-dashboard-view {
+  padding: 1rem 0.5rem 3rem 0.5rem;
+}
 .pdi-dash-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(37, 99, 235, 0.12));
-  border: 2px solid rgba(16, 185, 129, 0.35);
-  border-radius: 18px;
-  padding: 22px 26px;
-  margin-bottom: 26px;
+  gap: 1rem;
+  background: var(--pdi-card-bg);
+  padding: 1.25rem 1.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--pdi-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
 }
 .dash-title-wrap h2 {
-  margin: 0 0 6px 0;
+  margin: 0 0 0.35rem 0;
   font-size: 1.6rem;
-  color: var(--text);
+  color: var(--pdi-primary);
+  font-weight: 800;
 }
 .dash-title-wrap p {
   margin: 0;
-  font-size: 1.05rem;
-  color: var(--text-muted);
+  color: var(--pdi-text-muted);
+  font-size: 0.95rem;
 }
 .dash-quick-tools {
   display: flex;
-  gap: 10px;
+  gap: 0.75rem;
 }
 .btn-pdi-tool {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 0.6rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 18px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  background: var(--bg-card, #ffffff);
-  border: 1.5px solid var(--border, #cbd5e1);
-  color: var(--text, #1e293b);
-  cursor: pointer;
-  transition: all 0.2s ease;
+  gap: 0.4rem;
 }
 .btn-pdi-tool:hover {
-  background: rgba(16, 185, 129, 0.1);
-  border-color: #10b981;
-  transform: translateY(-2px);
+  background: #e2e8f0;
+  transform: translateY(-1px);
 }
 
-/* Graella de Targetes d'Unitats */
 .pdi-units-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
 }
 .pdi-unit-dash-card {
-  background: var(--bg-card, #ffffff);
-  border: 2px solid var(--border, #e2e8f0);
-  border-radius: 18px;
-  padding: 20px 22px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  background: var(--pdi-card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--pdi-border);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.04);
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .pdi-unit-dash-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
-.pdi-unit-dash-card .card-head {
+.card-head {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  align-items: center;
+  margin-bottom: 0.75rem;
 }
 .disc-badge {
-  color: #fff;
+  color: #ffffff;
   font-size: 0.75rem;
   font-weight: 800;
-  padding: 3px 10px;
-  border-radius: 50px;
   text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
 }
 .count-badge {
-  background: rgba(100, 116, 139, 0.15);
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: 50px;
+  background: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
 }
 .card-title {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 .card-title .unit-icon {
   font-size: 1.5rem;
 }
 .card-title h3 {
   margin: 0;
-  font-size: 1.22rem;
-  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pdi-text);
 }
 .card-desc {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.45;
-  margin-bottom: 16px;
-  flex: 1;
+  font-size: 0.88rem;
+  color: var(--pdi-text-muted);
+  margin: 0 0 1.25rem 0;
+  line-height: 1.4;
+  flex-grow: 1;
 }
-
-/* Llista de Botons de Llançament de Reptes */
 .card-acts-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .btn-launch-act {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 9px 14px;
-  background: var(--bg-body, #f8fafc);
-  border: 1.5px solid var(--border, #cbd5e1);
-  border-radius: 10px;
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 750;
+  justify-content: space-between;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s;
   text-align: left;
 }
 .btn-launch-act:hover {
-  background: rgba(16, 185, 129, 0.12);
-  border-color: #10b981;
-  color: #059669;
+  background: #eff6ff;
+  border-color: #93c5fd;
   transform: translateX(4px);
 }
 .btn-launch-act .act-idx {
-  background: #334155;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 900;
-  padding: 2px 7px;
-  border-radius: 6px;
-}
-.btn-launch-act:hover .act-idx {
-  background: #059669;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 .btn-launch-act .act-name {
-  flex: 1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #e2e8f0;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
 }
 .btn-launch-act .act-arrow {
-  color: var(--text-muted);
-  transition: transform 0.15s ease;
-}
-.btn-launch-act:hover .act-arrow {
-  color: #059669;
-  transform: translateX(3px);
+  color: var(--pdi-primary);
+  font-weight: bold;
 }
 
-/* ==========================================================
-   2. PANTALLA DE JOC (GAME VIEW NET SENSE RES DALT)
-   ========================================================== */
+/* -------------------------------------------
+   PANTALLA DE JOC (VISTA 2)
+   ------------------------------------------- */
 .pdi-game-view {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  height: 94vh;
+  box-sizing: border-box;
+  background: var(--pdi-bg);
 }
-
-/* Barra Superior de Joc Neta (Una sola línia estilitzada) */
 .pdi-game-topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  background: var(--bg-card, #ffffff);
-  border: 2px solid var(--border, #cbd5e1);
-  border-radius: 14px;
-  padding: 8px 16px;
-  margin-bottom: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  background: #1e293b;
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  flex-shrink: 0;
 }
-
 .btn-back-dash {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+  padding: 0.35rem 0.75rem;
   border-radius: 8px;
-  background: rgba(100, 116, 139, 0.12);
-  border: 1px solid var(--border, #cbd5e1);
-  color: var(--text);
-  font-weight: 800;
-  font-size: 0.9rem;
+  font-weight: 700;
+  font-size: 0.85rem;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background 0.2s;
 }
 .btn-back-dash:hover {
-  background: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
+  background: rgba(255,255,255,0.3);
 }
-
 .game-meta-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.5rem;
 }
 .game-unit-badge {
-  background: #059669;
-  color: #fff;
-  font-weight: 900;
-  font-size: 0.8rem;
-  padding: 3px 10px;
+  background: var(--pdi-primary);
+  color: #ffffff;
+  padding: 0.15rem 0.5rem;
   border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
 }
 .game-act-title {
-  font-weight: 800;
-  font-size: 1.15rem;
-  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 .game-nav-arrows {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .btn-game-nav {
-  background: var(--bg-body, #f8fafc);
-  border: 1.5px solid var(--border, #cbd5e1);
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 750;
-  font-size: 0.85rem;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s;
 }
 .btn-game-nav:hover {
-  background: #0284c7;
-  color: #ffffff;
-  border-color: #0284c7;
+  background: rgba(255,255,255,0.3);
 }
 .game-counter {
+  font-size: 0.85rem;
   font-weight: 800;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  padding: 0 4px;
+  color: #94a3b8;
+  min-width: 45px;
+  text-align: center;
 }
-
 .game-top-tools {
   display: flex;
-  gap: 8px;
+  gap: 0.4rem;
 }
 .btn-tool-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--bg-body, #f8fafc);
-  border: 1.5px solid var(--border, #cbd5e1);
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: 750;
-  font-size: 0.88rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #ffffff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: background 0.2s;
 }
 .btn-tool-icon:hover {
-  border-color: #10b981;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(255,255,255,0.25);
 }
 
-/* ==========================================================
-   3. ESTILS DELS CARDS I CONTINGUT DEL JOC
-   ========================================================== */
+.pdi-game-stage {
+  flex-grow: 1;
+  background: var(--pdi-card-bg);
+  border-radius: 0 0 12px 12px;
+  border: 1px solid var(--pdi-border);
+  border-top: none;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Card general de joc */
 .pdi-activity-card {
   display: none;
-  background: var(--bg-card, #ffffff);
-  border: 2px solid var(--border, #e2e8f0);
-  border-radius: 20px;
-  padding: 24px 28px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  animation: fadeInPDI 0.25s ease;
+  flex-direction: column;
+  height: 100%;
 }
 .pdi-activity-card.active {
   display: flex;
-  flex-direction: column;
 }
-@keyframes fadeInPDI {
+.pdi-act-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+  flex-shrink: 0;
+}
+.pdi-act-title .act-num {
+  color: #ffffff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.pdi-act-title h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--pdi-text);
+}
+.pdi-instruction {
+  font-size: 1.05rem;
+  color: var(--pdi-text-muted);
+  margin: 0 0 0.75rem 0;
+  flex-shrink: 0;
+}
+
+/* -------------------------------------------
+   FORMAT 1: ORDRE & CATEGORIES (DRAG & DROP)
+   ------------------------------------------- */
+.pdi-order-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-grow: 1;
+  min-height: 0;
+}
+.pdi-source-pool {
+  flex: 1;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+}
+.pdi-slots-column {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  overflow-y: auto;
+}
+.pdi-slot {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.5rem 0.75rem;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.pdi-slot.drag-over {
+  border-color: var(--pdi-primary);
+  background: #eff6ff;
+  transform: scale(1.01);
+}
+.slot-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--pdi-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.15rem;
+}
+.slot-hint {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+.pdi-item {
+  background: #ffffff;
+  border: 2px solid #94a3b8;
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: grab;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  touch-action: none;
+}
+.pdi-item:active {
+  cursor: grabbing;
+}
+.pdi-item.dragging {
+  opacity: 0.5;
+}
+.item-handle {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* Categories grid */
+.pdi-boxes-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex: 1.5;
+  min-height: 0;
+}
+.pdi-boxes-grid.grid-2 { grid-template-columns: 1fr 1fr; }
+.pdi-boxes-grid.grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+.pdi-drop-box {
+  background: #f8fafc;
+  border: 2px dashed #94a3b8;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem;
+  transition: all 0.2s;
+}
+.pdi-drop-box.drag-over {
+  border-color: var(--pdi-primary);
+  background: #eff6ff;
+}
+.box-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.box-head h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.box-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  overflow-y: auto;
+  min-height: 60px;
+}
+
+/* Footer & Feedback */
+.pdi-footer-feedback {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--pdi-border);
+  flex-shrink: 0;
+}
+.btn-pdi-check {
+  background: var(--pdi-primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37,99,235,0.3);
+  transition: all 0.2s;
+}
+.btn-pdi-check:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+.pdi-status-msg {
+  font-weight: 700;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+.pdi-status-msg.correct { color: var(--pdi-success); }
+.pdi-status-msg.incorrect { color: var(--pdi-danger); }
+
+/* -------------------------------------------
+   FORMAT 2: SPEED QUIZ (VERITAT / FALS)
+   ------------------------------------------- */
+.pdi-speedquiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+.sq-streak-badge {
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  color: #b45309;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.sq-statement-box {
+  background: #f8fafc;
+  border: 3px solid #cbd5e1;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  position: relative;
+}
+.sq-quote-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.sq-statement-text {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #0f172a;
+  font-weight: 600;
+}
+.sq-buttons-row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+.btn-sq {
+  flex: 1;
+  max-width: 320px;
+  min-height: 85px;
+  border-radius: 18px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #ffffff;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.btn-sq-true {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-bottom: 6px solid #047857;
+}
+.btn-sq-true:hover {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  transform: translateY(-3px);
+}
+.btn-sq-true:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+.btn-sq-false {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border-bottom: 6px solid #b91c1c;
+}
+.btn-sq-false:hover {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  transform: translateY(-3px);
+}
+.btn-sq-false:active {
+  transform: translateY(3px);
+  border-bottom-width: 2px;
+}
+.sq-btn-icon {
+  font-size: 2rem;
+}
+.sq-feedback-box {
+  width: 100%;
+  padding: 1.25rem 1.75rem;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease;
+}
+.sq-feedback-box.correct {
+  background: #ecfdf5;
+  border: 2px solid #a7f3d0;
+  color: #065f46;
+}
+.sq-feedback-box.incorrect {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  color: #991b1b;
+}
+
+/* -------------------------------------------
+   FORMAT 3: TROBA L'INTRÚS
+   ------------------------------------------- */
+.pdi-intrus-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+.intrus-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+.intrus-card {
+  background: #ffffff;
+  border: 3px solid #cbd5e1;
+  border-radius: 18px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 110px;
+}
+.intrus-card:hover {
+  border-color: var(--pdi-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(37,99,235,0.12);
+}
+.intrus-card.selected-correct {
+  border-color: var(--pdi-success) !important;
+  background: #ecfdf5 !important;
+  box-shadow: 0 0 0 4px rgba(16,185,129,0.25) !important;
+  transform: scale(1.02);
+}
+.intrus-card.selected-wrong {
+  border-color: var(--pdi-danger) !important;
+  background: #fef2f2 !important;
+  animation: shake 0.4s ease;
+}
+.intrus-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.intrus-card-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1e293b;
+  line-height: 1.35;
+}
+.intrus-feedback-box {
+  padding: 1.25rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  animation: fadeIn 0.3s ease;
+}
+.intrus-feedback-box.correct {
+  background: #ecfdf5;
+  border: 2px solid #a7f3d0;
+  color: #065f46;
+}
+.intrus-feedback-box.incorrect {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  color: #991b1b;
+}
+
+/* -------------------------------------------
+   FORMAT 4: TECLAT MENTAL TÀCTIL
+   ------------------------------------------- */
+.pdi-keypad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+  max-width: 850px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+.kp-problem-box {
+  background: #f8fafc;
+  border: 2px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.kp-prob-icon {
+  font-size: 2.2rem;
+}
+.kp-prob-text {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 700;
+  color: #0f172a;
+}
+.kp-calc-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.kp-display-wrap {
+  flex: 1;
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.4);
+  min-height: 160px;
+  box-sizing: border-box;
+}
+.kp-display-label {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.kp-display-screen {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56,189,248,0.5);
+  word-break: break-all;
+}
+.kp-keys-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  gap: 0.6rem;
+}
+.kp-key {
+  height: 60px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+}
+.kp-key:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+.kp-key:active {
+  transform: translateY(1px);
+  background: #e2e8f0;
+}
+.kp-key-clear {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+.kp-key-del {
+  background: #fef3c7;
+  color: #d97706;
+  border-color: #fde68a;
+}
+.kp-key-check {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #ffffff;
+  border: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(16,185,129,0.3);
+}
+.kp-key-check:hover {
+  background: linear-gradient(135deg, #34d399, #10b981);
+}
+.kp-feedback-box {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  box-sizing: border-box;
+  animation: fadeIn 0.3s ease;
+}
+.kp-feedback-box.correct {
+  background: #ecfdf5;
+  border: 2px solid #a7f3d0;
+  color: #065f46;
+}
+.kp-feedback-box.incorrect {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  color: #991b1b;
+}
+
+/* -------------------------------------------
+   FORMAT 5: TARGETES GIRATÒRIES 3D
+   ------------------------------------------- */
+.pdi-flipcards-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+.flipcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  perspective: 1200px;
+}
+.flipcard-scene {
+  height: 280px;
+  cursor: pointer;
+}
+.flipcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border-radius: 20px;
+}
+.flipcard-scene.is-flipped .flipcard-inner {
+  transform: rotateY(180deg);
+}
+.flipcard-front, .flipcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e2e8f0;
+}
+.flipcard-front {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  color: #1e293b;
+}
+.flipcard-front .fc-icon {
+  font-size: 3.5rem;
+  margin-bottom: 0.75rem;
+}
+.flipcard-front h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--pdi-primary);
+}
+.flipcard-front .fc-hint {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 700;
+  margin-top: auto;
+  background: #f1f5f9;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+.flipcard-back {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  transform: rotateY(180deg);
+  border-color: #334155;
+}
+.flipcard-back h5 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #38bdf8;
+}
+.flipcard-back p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+.flipcard-back .fc-check-badge {
+  margin-top: auto;
+  background: #10b981;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.fc-instructions-bar {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Animacions clau */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+@keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.pdi-act-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 6px;
-}
-.pdi-act-title .act-num {
-  background: #059669;
-  color: #fff;
-  font-weight: 900;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.82rem;
-}
-.pdi-act-title h3 {
-  margin: 0;
-  font-size: 1.35rem;
-  color: var(--text, #0f172a);
-}
-.pdi-instruction {
-  font-size: 1.05rem;
-  color: var(--text-muted, #475569);
-  margin-bottom: 18px;
-}
-
-/* Àrea d'Arrossegament */
-.pdi-categories-wrapper, .pdi-order-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-.pdi-source-pool {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 14px 16px;
-  background: rgba(100, 116, 139, 0.06);
-  border: 2px dashed rgba(100, 116, 139, 0.3);
-  border-radius: 14px;
-  min-height: 65px;
-  align-items: center;
-}
-
-.pdi-item {
-  background: var(--bg-card, #ffffff);
-  color: var(--text, #0f172a);
-  border: 2px solid var(--border, #cbd5e1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  border-radius: 12px;
-  padding: 10px 18px;
-  font-size: 1.05rem;
-  font-weight: 750;
-  cursor: grab;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: none;
-  transition: all 0.15s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-.pdi-item:hover, .pdi-item:active {
-  border-color: #059669;
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.2);
-}
-.pdi-item.dragging {
-  opacity: 0.4;
-  cursor: grabbing;
-}
-.pdi-item.selected-tap {
-  border-color: #2563eb !important;
-  background: rgba(37, 99, 235, 0.15) !important;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3) !important;
-  animation: pulseTap 1s infinite alternate;
-}
-@keyframes pulseTap {
-  from { transform: scale(1); }
-  to { transform: scale(1.05); }
-}
-
-.num-item {
-  font-size: 1.25rem !important;
-  padding: 8px 18px !important;
-  font-family: 'JetBrains Mono', monospace;
-}
-.frac-item {
-  font-size: 1.2rem !important;
-  padding: 8px 16px !important;
-}
-
-/* Destinacions */
-.pdi-drop-boxes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-}
-.pdi-drop-boxes-grid.grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-.pdi-drop-boxes-grid.grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.pdi-drop-box {
-  background: var(--bg-body, #f8fafc);
-  border: 2.5px dashed var(--border, #cbd5e1);
-  border-radius: 16px;
-  padding: 14px;
-  min-height: 160px;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.2s ease;
-}
-.pdi-drop-box.drag-over, .pdi-drop-box.waiting-tap-target {
-  border-color: #059669;
-  background: rgba(16, 185, 129, 0.08);
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
-  transform: scale(1.01);
-}
-.pdi-drop-box .box-header {
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--text, #0f172a);
-  margin-bottom: 10px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid rgba(100, 116, 139, 0.15);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.pdi-drop-box .box-items {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-}
-
-.pdi-slots-column {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.pdi-slot {
-  background: var(--bg-body, #f8fafc);
-  border: 2.5px dashed var(--border, #cbd5e1);
-  border-radius: 12px;
-  padding: 10px 16px;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: all 0.2s ease;
-}
-.pdi-slot.drag-over, .pdi-slot.waiting-tap-target {
-  border-color: #059669;
-  background: rgba(16, 185, 129, 0.08);
-}
-.pdi-slot .slot-badge {
-  background: #334155;
-  color: #ffffff;
-  font-size: 0.8rem;
-  font-weight: 800;
-  padding: 3px 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-}
-.pdi-slot .slot-hint {
-  color: var(--text-muted, #94a3b8);
-  font-size: 0.92rem;
-  font-style: italic;
-}
-.pdi-slot .pdi-item {
-  margin: 0;
-  width: 100%;
-}
-
-/* Peu de Feedback */
-.pdi-footer-feedback {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1.5px solid var(--border, #e2e8f0);
-}
-.btn-pdi-check {
-  background: linear-gradient(135deg, #059669, #0d9488);
-  color: #ffffff !important;
-  font-weight: 800;
-  font-size: 1.05rem;
-  padding: 10px 22px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);
-  transition: all 0.2s ease;
-}
-.btn-pdi-check:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(5, 150, 105, 0.45);
-}
-.pdi-status-msg {
-  font-size: 1.05rem;
-  font-weight: 800;
-  border-radius: 8px;
-  padding: 6px 14px;
-}
-.pdi-status-msg.correct {
-  background: rgba(16, 185, 129, 0.15);
-  color: #059669;
-  border: 1.5px solid #10b981;
-}
-.pdi-status-msg.incorrect {
-  background: rgba(239, 68, 68, 0.15);
-  color: #dc2626;
-  border: 1.5px solid #ef4444;
-}
-
-/* ==========================================================
-   4. AJUST AL 100% DE LA PANTALLA EN PANTALLA COMPLETA
-   ========================================================== */
-html.pdi-fullscreen-locked,
-body.pdi-fullscreen-mode {
-  height: 100vh !important;
-  max-height: 100vh !important;
-  overflow: hidden !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-body.pdi-fullscreen-mode header.md-header,
-body.pdi-fullscreen-mode aside.sidebar,
-body.pdi-fullscreen-mode .top-act-jump-wrap,
-body.pdi-fullscreen-mode #floating-activities-pill {
-  display: none !important;
-}
-
-body.pdi-fullscreen-mode .layout {
-  height: 100vh !important;
-  max-height: 100vh !important;
-  padding: 8px 16px !important;
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  overflow: hidden !important;
-  box-sizing: border-box !important;
-}
-
-body.pdi-fullscreen-mode main.content {
-  height: 100% !important;
-  max-height: 100% !important;
-  max-width: 100vw !important;
-  width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  overflow: hidden !important;
-}
-
-body.pdi-fullscreen-mode .pdi-game-view {
-  height: 100% !important;
-  max-height: 100% !important;
-  overflow: hidden !important;
-}
-
-body.pdi-fullscreen-mode .pdi-game-topbar {
-  margin-bottom: 8px !important;
-  padding: 6px 14px !important;
-}
-
-body.pdi-fullscreen-mode .pdi-game-stage {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  overflow: hidden !important;
-}
-
-body.pdi-fullscreen-mode .pdi-activity-card.active {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-  height: 100% !important;
-  padding: 12px 18px !important;
-  margin-bottom: 0 !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
-  justify-content: space-between !important;
-}
-
-body.pdi-fullscreen-mode .pdi-categories-wrapper,
-body.pdi-fullscreen-mode .pdi-order-wrapper {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-  margin-bottom: 4px !important;
-  overflow: hidden !important;
-}
-
-body.pdi-fullscreen-mode .pdi-source-pool {
-  flex: 0 0 auto !important;
-  max-height: 25vh !important;
-  overflow-y: auto !important;
-  padding: 8px 12px !important;
-  min-height: 45px !important;
-}
-
-body.pdi-fullscreen-mode .pdi-drop-boxes-grid,
-body.pdi-fullscreen-mode .pdi-slots-column {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-  overflow-y: auto !important;
-  gap: 8px !important;
-}
-
-body.pdi-fullscreen-mode .pdi-drop-box {
-  min-height: 0 !important;
-  flex: 1 1 auto !important;
-  padding: 8px 12px !important;
-}
-
-body.pdi-fullscreen-mode .pdi-footer-feedback {
-  flex: 0 0 auto !important;
-  margin-top: 4px !important;
-  padding-top: 6px !important;
-}
-
-/* Botó d'eixida flotant en pantalla completa */
-.pdi-exit-floating-btn {
-  display: none;
-  position: fixed;
-  top: 14px;
-  right: 18px;
-  z-index: 9999;
-  background: rgba(15, 23, 42, 0.85);
-  color: #ffffff !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 6px 14px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 750;
-  cursor: pointer;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  transition: all 0.2s ease;
-  user-select: none;
-}
-.pdi-exit-floating-btn:hover {
-  background: #dc2626;
-  border-color: #ef4444;
-  transform: scale(1.04);
-}
-body.pdi-fullscreen-mode .pdi-exit-floating-btn {
-  display: inline-flex;
+/* Media queries per a pantalles menudes / tauletes */
+@media (max-width: 768px) {
+  .intrus-cards-grid { grid-template-columns: 1fr; }
+  .sq-buttons-row { flex-direction: column; gap: 1rem; }
+  .btn-sq { max-width: 100%; min-height: 70px; }
+  .kp-calc-wrapper { flex-direction: column; }
+  .kp-display-wrap { width: 100%; min-height: 100px; }
+  .kp-keys-grid { grid-template-columns: repeat(4, 1fr); width: 100%; }
 }
 </style>
 
-<!-- LÒGICA DE LA PISSARRA INTERACTIVA -->
+<!-- ==========================================
+     MOTOR JAVASCRIPT DE JOC I ÀUDIO
+     ========================================== -->
 <script>
-let pdiSoundEnabled = true;
-let selectedTapItem = null;
-let currentGameActId = 'act-ud1-1';
-const allActivities = ["act-ud1-1", "act-ud1-2", "act-ud1-3", "act-ud1-4", "act-ud1-5", "act-ud2-1", "act-ud2-2", "act-ud2-3", "act-ud2-4", "act-ud2-5", "act-ud3-1", "act-ud3-2", "act-ud3-3", "act-ud3-4", "act-ud3-5", "act-ud4-1", "act-ud4-2", "act-ud4-3", "act-ud4-4", "act-ud4-5", "act-ud5-1", "act-ud5-2", "act-ud5-3", "act-ud5-4", "act-ud5-5", "act-ud6-1", "act-ud6-2", "act-ud6-3", "act-ud6-4", "act-ud6-5", "act-ud7-1", "act-ud7-2", "act-ud7-3", "act-ud7-4", "act-ud7-5", "act-ud8-1", "act-ud8-2", "act-ud8-3", "act-ud8-4", "act-ud8-5", "act-ud9-1", "act-ud9-2", "act-ud9-3", "act-ud9-4", "act-ud9-5"];
-const activitiesMeta = {"act-ud1-1": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 1: Jerarquia"}, "act-ud1-2": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 2: Pot\u00e8ncies"}, "act-ud1-3": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 3: Ordres Unitats"}, "act-ud1-4": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 4: Propietats"}, "act-ud1-5": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 5: Arrels"}, "act-ud2-1": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 1: Classificar \u00d2rgans"}, "act-ud2-2": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 2: Viatge Aliments"}, "act-ud2-3": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 3: La Sang i Vasos"}, "act-ud2-4": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 4: Nivells de Vida"}, "act-ud2-5": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 5: Nutrients"}, "act-ud3-1": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 1: Positiu o Negatiu"}, "act-ud3-2": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 2: Recta Num\u00e8rica"}, "act-ud3-3": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 3: Regla Signes"}, "act-ud3-4": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 4: Suma i Resta"}, "act-ud3-5": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 5: Valor Absolut"}, "act-ud4-1": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 1: Primers / Compostos"}, "act-ud4-2": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 2: Criteris Divisibilitat"}, "act-ud4-3": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 3: M\u00faltiples vs Divisors"}, "act-ud4-4": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 4: Factors Primers"}, "act-ud4-5": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 5: MCD o MCM?"}, "act-ud5-1": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 1: Tipus Fraccions"}, "act-ud5-2": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 2: Equival\u00e8ncies"}, "act-ud5-3": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 3: Ordenar Fraccions"}, "act-ud5-4": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 4: Fracci\u00f3 Quantitat"}, "act-ud5-5": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 5: Suma / Resta"}, "act-ud6-1": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 1: Rocosos vs Gasosos"}, "act-ud6-2": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 2: Dist\u00e0ncia al Sol"}, "act-ud6-3": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 3: Escala C\u00f2smica"}, "act-ud6-4": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 4: Tipus d'Astres"}, "act-ud6-5": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 5: Roques Espacials"}, "act-ud7-1": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 1: Capes Geosfera"}, "act-ud7-2": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 2: Rotaci\u00f3 / Traslaci\u00f3"}, "act-ud7-3": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 3: Fases de la Lluna"}, "act-ud7-4": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 4: Tipus de Roques"}, "act-ud7-5": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 5: Tipus d'Eclipsi"}, "act-ud8-1": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 1: Capes Atmosfera"}, "act-ud8-2": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 2: Aparells Meteorol\u00f2gics"}, "act-ud8-3": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 3: Gasos de l'Aire"}, "act-ud8-4": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 4: Contaminaci\u00f3 Aire"}, "act-ud8-5": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 5: Tipus de Precipitaci\u00f3"}, "act-ud9-1": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 1: Cicle Hidrol\u00f2gic"}, "act-ud9-2": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 2: Aigua Dol\u00e7a vs Salada"}, "act-ud9-3": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 3: Canvis d'Estat"}, "act-ud9-4": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 4: Trams d'un Riu"}, "act-ud9-5": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 5: Cicle Urb\u00e0 Aigua"}};
+// Estat Global
+let currentPDIActivityId = 'act-ud1-1';
+let pdiAudioEnabled = true;
+let pdiSpeedStreak = 0;
+let pdiAudioCtx = null;
+let keypadInputs = {};
+
+// Inicialitzador d'Àudio Web
+function getAudioContext() {
+  if (!pdiAudioCtx) {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (AudioContext) pdiAudioCtx = new AudioContext();
+  }
+  if (pdiAudioCtx && pdiAudioCtx.state === 'suspended') {
+    pdiAudioCtx.resume();
+  }
+  return pdiAudioCtx;
+}
 
 function playPDISound(type) {
-  if (!pdiSoundEnabled) return;
+  if (!pdiAudioEnabled) return;
   try {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
-    const ctx = new AudioContext();
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    osc.connect(gain);
-    gain.connect(ctx.destination);
+    const ctx = getAudioContext();
+    if (!ctx) return;
+    const now = ctx.currentTime;
 
-    if (type === 'drop') {
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(440, ctx.currentTime);
-      gain.gain.setValueAtTime(0.12, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.12);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.12);
-    } else if (type === 'correct') {
+    if (type === 'tap') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
       osc.type = 'triangle';
-      osc.frequency.setValueAtTime(523.25, ctx.currentTime);
-      osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.1);
-      osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.2);
-      gain.gain.setValueAtTime(0.25, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.45);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.45);
+      osc.frequency.setValueAtTime(440, now);
+      osc.frequency.exponentialRampToValueAtTime(880, now + 0.05);
+      gain.gain.setValueAtTime(0.2, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.05);
+    } else if (type === 'flip') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(300, now);
+      osc.frequency.exponentialRampToValueAtTime(600, now + 0.12);
+      gain.gain.setValueAtTime(0.15, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.12);
+    } else if (type === 'correct') {
+      // Acord triomfant C-E-G
+      [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + i * 0.08);
+        gain.gain.setValueAtTime(0.25, now + i * 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.35);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + i * 0.08);
+        osc.stop(now + i * 0.08 + 0.35);
+      });
+      triggerConfetti();
     } else if (type === 'error') {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
       osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(220, ctx.currentTime);
-      osc.frequency.setValueAtTime(196, ctx.currentTime + 0.15);
-      gain.gain.setValueAtTime(0.2, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.35);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.35);
+      osc.frequency.setValueAtTime(160, now);
+      osc.frequency.linearRampToValueAtTime(90, now + 0.25);
+      gain.gain.setValueAtTime(0.3, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.25);
     }
-  } catch (e) {
-    console.warn('Audio no permès:', e);
+  } catch(e) {
+    console.warn("Àudio no disponible:", e);
   }
 }
 
+// Alternar So
 function togglePDISound() {
-  pdiSoundEnabled = !pdiSoundEnabled;
-  const sIcons = [document.getElementById('sound-icon'), document.getElementById('game-sound-btn')];
-  const sText = document.getElementById('sound-text');
-  
-  if (pdiSoundEnabled) {
-    sIcons.forEach(el => { if (el) el.textContent = '🔊'; });
-    if (sText) sText.textContent = 'So Activat';
-    playPDISound('drop');
-  } else {
-    sIcons.forEach(el => { if (el) el.textContent = '🔇'; });
-    if (sText) sText.textContent = 'So Silenciat';
-  }
+  pdiAudioEnabled = !pdiAudioEnabled;
+  const icons = ['#sound-icon', '#game-sound-btn'];
+  icons.forEach(sel => {
+    const el = document.querySelector(sel);
+    if (el) el.textContent = pdiAudioEnabled ? '🔊' : '🔇';
+  });
+  const txt = document.getElementById('sound-text');
+  if (txt) txt.textContent = pdiAudioEnabled ? 'So Activat' : 'Silenciat';
+  if (pdiAudioEnabled) playPDISound('tap');
 }
 
-function togglePDIFullscreen(explicitState) {
-  if (typeof explicitState === 'boolean') {
-    if (explicitState) document.body.classList.add('pdi-fullscreen-mode');
-    else document.body.classList.remove('pdi-fullscreen-mode');
+// Pantalla Completa
+function togglePDIFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(() => {});
+    document.body.classList.add('pdi-fullscreen-mode');
   } else {
-    document.body.classList.toggle('pdi-fullscreen-mode');
-  }
-  document.documentElement.classList.toggle('pdi-fullscreen-locked', document.body.classList.contains('pdi-fullscreen-mode'));
-
-  const isFull = document.body.classList.contains('pdi-fullscreen-mode');
-  if (isFull) {
-    if (document.documentElement.requestFullscreen && !document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
-    }
-  } else {
-    if (document.exitFullscreen && document.fullscreenElement) {
-      document.exitFullscreen().catch(() => {});
-    }
+    if (document.exitFullscreen) document.exitFullscreen();
+    document.body.classList.remove('pdi-fullscreen-mode');
   }
 }
-
 document.addEventListener('fullscreenchange', () => {
-  const isDocFull = !!document.fullscreenElement;
-  if (!isDocFull && document.body.classList.contains('pdi-fullscreen-mode')) {
-    togglePDIFullscreen(false);
+  if (!document.fullscreenElement) {
+    document.body.classList.remove('pdi-fullscreen-mode');
   }
 });
 
-// Gestió de Vistes (Dashboard vs Game)
+// Navegació de Vistes
 function showPDIDashboard() {
+  playPDISound('tap');
   document.getElementById('pdi-dashboard').style.display = 'block';
   document.getElementById('pdi-game-view').style.display = 'none';
-  document.querySelectorAll('.pdi-activity-card').forEach(c => c.classList.remove('active'));
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function launchGameActivity(actId) {
-  currentGameActId = actId;
+  playPDISound('tap');
+  currentPDIActivityId = actId;
   document.getElementById('pdi-dashboard').style.display = 'none';
-  document.getElementById('pdi-game-view').style.display = 'flex';
+  const gameView = document.getElementById('pdi-game-view');
+  gameView.style.display = 'flex';
 
+  // Amagar totes i mostrar l'activa
   document.querySelectorAll('.pdi-activity-card').forEach(c => c.classList.remove('active'));
-  const targetCard = document.getElementById(actId);
-  if (targetCard) {
-    targetCard.classList.add('active');
-    resetPDIActivity(actId);
+  const card = document.getElementById(actId);
+  if (card) {
+    card.classList.add('active');
+    updateGameTopBar(card);
   }
-
-  // Actualitzar metadades de la barra superior
-  const meta = activitiesMeta[actId] || {};
-  const unitBadge = document.getElementById('game-unit-badge');
-  const titleEl = document.getElementById('game-act-title');
-  const counterEl = document.getElementById('game-counter');
-
-  if (unitBadge) unitBadge.textContent = meta.unitTitle || 'UD';
-  if (titleEl) titleEl.textContent = meta.title || 'Repte';
-
-  // Comptador relatiu dins de la unitat
-  const currentIdx = allActivities.indexOf(actId);
-  const unitActs = allActivities.filter(id => activitiesMeta[id].unit === meta.unit);
-  const relIdx = unitActs.indexOf(actId) + 1;
-  if (counterEl) counterEl.textContent = `${relIdx} / ${unitActs.length}`;
-
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function navRelativeActivity(direction) {
-  const currentIdx = allActivities.indexOf(currentGameActId);
-  if (currentIdx === -1) return;
-  let nextIdx = currentIdx + direction;
-  if (nextIdx < 0) nextIdx = allActivities.length - 1;
-  if (nextIdx >= allActivities.length) nextIdx = 0;
-  launchGameActivity(allActivities[nextIdx]);
+function updateGameTopBar(card) {
+  const unit = card.getAttribute('data-unit').toUpperCase();
+  const shortTitle = card.getAttribute('data-title');
+  const badge = document.getElementById('game-unit-badge');
+  const title = document.getElementById('game-act-title');
+  const counter = document.getElementById('game-counter');
+
+  if (badge) badge.textContent = unit;
+  if (title) title.textContent = shortTitle;
+
+  // Trobar index relatiu dins de la unitat
+  const cardsInUnit = Array.from(document.querySelectorAll(`.pdi-activity-card[data-unit="${card.getAttribute('data-unit')}"]`));
+  const idx = cardsInUnit.indexOf(card);
+  if (counter) counter.textContent = `${idx + 1} / ${cardsInUnit.length}`;
+}
+
+function navRelativeActivity(delta) {
+  playPDISound('tap');
+  const allCards = Array.from(document.querySelectorAll('.pdi-activity-card'));
+  const currentCard = document.getElementById(currentPDIActivityId);
+  let idx = allCards.indexOf(currentCard);
+  idx += delta;
+  if (idx < 0) idx = allCards.length - 1;
+  if (idx >= allCards.length) idx = 0;
+  launchGameActivity(allCards[idx].id);
 }
 
 function resetCurrentPDIActivity() {
-  if (currentGameActId) resetPDIActivity(currentGameActId);
-}
-
-function resetPDIActivity(actId) {
-  const card = document.getElementById(actId);
+  playPDISound('tap');
+  const card = document.getElementById(currentPDIActivityId);
   if (!card) return;
+  const fmt = card.getAttribute('data-format');
 
+  if (fmt === 'order') {
+    const pool = card.querySelector('.pdi-source-pool');
+    const items = Array.from(card.querySelectorAll('.pdi-item'));
+    items.sort(() => Math.random() - 0.5);
+    items.forEach(it => {
+      it.style.borderColor = '#94a3b8';
+      pool.appendChild(it);
+    });
+    const msg = card.querySelector('.pdi-status-msg');
+    if (msg) msg.textContent = '';
+  } else if (fmt === 'category') {
+    const pool = card.querySelector('.pdi-source-pool');
+    const items = Array.from(card.querySelectorAll('.pdi-item'));
+    items.sort(() => Math.random() - 0.5);
+    items.forEach(it => {
+      it.style.borderColor = '#94a3b8';
+      pool.appendChild(it);
+    });
+    const msg = card.querySelector('.pdi-status-msg');
+    if (msg) msg.textContent = '';
+  } else if (fmt === 'speedquiz') {
+    const fb = card.querySelector('.sq-feedback-box');
+    if (fb) fb.style.display = 'none';
+  } else if (fmt === 'intrus') {
+    card.querySelectorAll('.intrus-card').forEach(c => {
+      c.className = 'intrus-card';
+    });
+    const fb = card.querySelector('.intrus-feedback-box');
+    if (fb) fb.style.display = 'none';
+  } else if (fmt === 'keypad') {
+    keypadInputs[card.id] = '';
+    const scr = document.getElementById(`kp-screen-${card.id}`);
+    if (scr) scr.textContent = '--';
+    const fb = card.querySelector('.kp-feedback-box');
+    if (fb) fb.style.display = 'none';
+  } else if (fmt === 'flipcard') {
+    card.querySelectorAll('.flipcard-scene').forEach(c => c.classList.remove('is-flipped'));
+  }
+}
+
+// -------------------------------------------
+// MOTOR FORMAT 1: DRAG & DROP
+// -------------------------------------------
+function checkOrderActivity(cardId) {
+  const card = document.getElementById(cardId);
+  const slots = card.querySelectorAll('.pdi-slot');
   const pool = card.querySelector('.pdi-source-pool');
-  const items = Array.from(card.querySelectorAll('.pdi-item'));
-
-  items.sort(() => Math.random() - 0.5);
-  items.forEach(item => {
-    item.classList.remove('selected-tap', 'dragging');
-    item.style.borderColor = '';
-    pool.appendChild(item);
-  });
-
-  const slots = card.querySelectorAll('.pdi-slot');
-  slots.forEach(slot => {
-    const hint = slot.querySelector('.slot-hint');
-    if (hint) hint.style.display = 'inline';
-  });
-
+  const remainingInPool = pool.querySelectorAll('.pdi-item').length;
   const msg = card.querySelector('.pdi-status-msg');
-  if (msg) {
-    msg.className = 'pdi-status-msg';
-    msg.textContent = '';
-  }
-  selectedTapItem = null;
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  initPDIDragAndDrop();
-  const targetUnit = localStorage.getItem('pdi-target-unit');
-  if (targetUnit) {
-    localStorage.removeItem('pdi-target-unit');
-    const firstActOfUnit = allActivities.find(id => activitiesMeta[id].unit === targetUnit);
-    if (firstActOfUnit) {
-      launchGameActivity(firstActOfUnit);
-      return;
-    }
-  }
-  // Per defecte mostrar el dashboard
-  showPDIDashboard();
-});
-
-function initPDIDragAndDrop() {
-  const items = document.querySelectorAll('.pdi-item');
-
-  items.forEach(item => {
-    item.addEventListener('dragstart', (e) => {
-      item.classList.add('dragging');
-      e.dataTransfer.setData('text/plain', item.id || '');
-      window.currentDraggedPDI = item;
-    });
-
-    item.addEventListener('dragend', () => {
-      item.classList.remove('dragging');
-      window.currentDraggedPDI = null;
-    });
-
-    item.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (selectedTapItem === item) {
-        item.classList.remove('selected-tap');
-        selectedTapItem = null;
-        document.querySelectorAll('.pdi-drop-box, .pdi-slot').forEach(b => b.classList.remove('waiting-tap-target'));
-      } else {
-        if (selectedTapItem) selectedTapItem.classList.remove('selected-tap');
-        selectedTapItem = item;
-        item.classList.add('selected-tap');
-        playPDISound('drop');
-        document.querySelectorAll('.pdi-drop-box, .pdi-slot').forEach(b => b.classList.add('waiting-tap-target'));
-      }
-    });
-  });
-
-  document.querySelectorAll('.pdi-drop-box, .pdi-slot, .pdi-source-pool').forEach(zone => {
-    zone.addEventListener('dragover', (e) => {
-      e.preventDefault();
-      zone.classList.add('drag-over');
-    });
-
-    zone.addEventListener('dragleave', () => {
-      zone.classList.remove('drag-over');
-    });
-
-    zone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      zone.classList.remove('drag-over');
-      const item = window.currentDraggedPDI;
-      if (item) {
-        placeItemInZone(item, zone);
-      }
-    });
-
-    zone.addEventListener('click', () => {
-      if (selectedTapItem) {
-        placeItemInZone(selectedTapItem, zone);
-        selectedTapItem.classList.remove('selected-tap');
-        selectedTapItem = null;
-        document.querySelectorAll('.pdi-drop-box, .pdi-slot').forEach(b => b.classList.remove('waiting-tap-target'));
-      }
-    });
-  });
-}
-
-function placeItemInZone(item, zone) {
-  if (zone.classList.contains('pdi-slot')) {
-    const hint = zone.querySelector('.slot-hint');
-    if (hint) hint.style.display = 'none';
-    const oldItem = zone.querySelector('.pdi-item');
-    if (oldItem && oldItem !== item) {
-      const card = zone.closest('.pdi-activity-card');
-      const pool = card.querySelector('.pdi-source-pool');
-      pool.appendChild(oldItem);
-    }
-    zone.appendChild(item);
-  } else if (zone.classList.contains('pdi-drop-box')) {
-    const container = zone.querySelector('.box-items') || zone;
-    container.appendChild(item);
-  } else if (zone.classList.contains('pdi-source-pool')) {
-    zone.appendChild(item);
-  }
-  playPDISound('drop');
-}
-
-function checkOrderActivity(actId) {
-  const card = document.getElementById(actId);
-  const slots = card.querySelectorAll('.pdi-slot');
-  let allPlaced = true;
-  let allCorrect = true;
-
-  slots.forEach((slot, idx) => {
-    const item = slot.querySelector('.pdi-item');
-    if (!item) {
-      allPlaced = false;
-    } else {
-      const targetOrder = (idx + 1).toString();
-      if (item.getAttribute('data-order') !== targetOrder) {
-        allCorrect = false;
-      }
-    }
-  });
-
-  const msg = card.querySelector('.pdi-status-msg');
-  if (!allPlaced) {
+  if (remainingInPool > 0) {
     msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = '⚠️ Encara queden caselles buides! Col·loca tots els passos abans de comprovar.';
+    msg.textContent = `⚠️ Encara queden ${remainingInPool} passos per col·locar en el seu ordre!`;
     playPDISound('error');
     return;
   }
 
-  if (allCorrect) {
+  let isAllCorrect = true;
+  slots.forEach(slot => {
+    const expected = slot.getAttribute('data-slot');
+    const item = slot.querySelector('.pdi-item');
+    if (item && item.getAttribute('data-order') === expected) {
+      item.style.borderColor = '#10b981';
+    } else {
+      isAllCorrect = false;
+      if (item) item.style.borderColor = '#ef4444';
+    }
+  });
+
+  if (isAllCorrect) {
     msg.className = 'pdi-status-msg correct';
-    msg.textContent = '🎉 Excel·lent! Has ordenat tots els passos perfectament!';
+    msg.textContent = '🎉 Molt bé! Has ordenat tots els passos correctament!';
     playPDISound('correct');
   } else {
     msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = '❌ Hi ha algun pas desordenat. Revisa la seqüència i torna-ho a provar!';
+    msg.textContent = 'Hi ha algun pas fora d'ordre. Revisa els requadres en roig!';
     playPDISound('error');
   }
 }
 
-function checkCategoriesActivity(actId) {
-  const card = document.getElementById(actId);
+function checkCategoryActivity(cardId) {
+  const card = document.getElementById(cardId);
   const boxes = card.querySelectorAll('.pdi-drop-box');
   const pool = card.querySelector('.pdi-source-pool');
   const remainingInPool = pool.querySelectorAll('.pdi-item').length;
-
   const msg = card.querySelector('.pdi-status-msg');
+
   if (remainingInPool > 0) {
     msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = `⚠️ Encara queden ${remainingInPool} elements per classificar!`;
+    msg.textContent = `⚠️ Queden ${remainingInPool} elements per classificar a les caixes!`;
     playPDISound('error');
     return;
   }
 
   let totalItems = 0;
   let correctItems = 0;
-
   boxes.forEach(box => {
     const boxCat = box.getAttribute('data-cat');
     const items = box.querySelectorAll('.pdi-item');
@@ -2372,12 +3255,295 @@ function checkCategoriesActivity(actId) {
 
   if (correctItems === totalItems) {
     msg.className = 'pdi-status-msg correct';
-    msg.textContent = `🎉 Extraordinari! Has classificat els ${totalItems}/${totalItems} elements correctament!`;
+    msg.textContent = `🎉 Extraordinari! Has encertat tots ${totalItems}/${totalItems} elements!`;
     playPDISound('correct');
   } else {
     msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = `Has encertat ${correctItems} de ${totalItems}. Els requadres en roig estan a la caixa equivocada!`;
+    msg.textContent = `Has encertat ${correctItems} de ${totalItems}. Els elements en roig estan a la caixa equivocada!`;
     playPDISound('error');
   }
 }
+
+// -------------------------------------------
+// MOTOR FORMAT 2: SPEED QUIZ
+// -------------------------------------------
+function answerSpeedQuiz(cardId, userAnswer) {
+  const card = document.getElementById(cardId);
+  const container = card.querySelector('.pdi-speedquiz-container');
+  const isCorrect = (container.getAttribute('data-correct') === 'true');
+  const exp = container.getAttribute('data-exp');
+  const extra = container.getAttribute('data-extra');
+  const fb = container.querySelector('.sq-feedback-box');
+  const streakEl = container.querySelector('.sq-streak-val');
+
+  fb.style.display = 'block';
+
+  if (userAnswer === isCorrect) {
+    pdiSpeedStreak++;
+    playPDISound('correct');
+    fb.className = 'sq-feedback-box correct';
+    fb.innerHTML = `<strong>🎉 ENCERTAT AL PRIMER COP!</strong><br>${exp}<br><small style="color: #047857;">💡 ${extra}</small>`;
+  } else {
+    pdiSpeedStreak = 0;
+    playPDISound('error');
+    fb.className = 'sq-feedback-box incorrect';
+    fb.innerHTML = `<strong>❌ OOOPS! NO ÉS CORRECTE:</strong><br>${exp}<br><small style="color: #b91c1c;">💡 ${extra}</small>`;
+  }
+  if (streakEl) streakEl.textContent = pdiSpeedStreak;
+}
+
+// -------------------------------------------
+// MOTOR FORMAT 3: TROBA L'INTRÚS
+// -------------------------------------------
+function selectIntrus(cardId, cardEl) {
+  const card = document.getElementById(cardId);
+  const isIntrus = (cardEl.getAttribute('data-intrus') === 'true');
+  const hint = cardEl.getAttribute('data-hint');
+  const fb = card.querySelector('.intrus-feedback-box');
+  fb.style.display = 'block';
+
+  if (isIntrus) {
+    cardEl.className = 'intrus-card selected-correct';
+    fb.className = 'intrus-feedback-box correct';
+    fb.innerHTML = `🎉 <strong>MOLT BÉ! HAS CAÇAT L'INTRÚS!</strong><br>${hint}`;
+    playPDISound('correct');
+  } else {
+    cardEl.className = 'intrus-card selected-wrong';
+    fb.className = 'intrus-feedback-box incorrect';
+    fb.innerHTML = `❌ <strong>Aquest element NO és l'intrús:</strong> ${hint}`;
+    playPDISound('error');
+  }
+}
+
+// -------------------------------------------
+// MOTOR FORMAT 4: TECLAT MENTAL TÀCTIL
+// -------------------------------------------
+function pressKeypad(cardId, key) {
+  playPDISound('tap');
+  if (!keypadInputs[cardId]) keypadInputs[cardId] = '';
+  let cur = keypadInputs[cardId];
+
+  if (key === 'C') {
+    cur = '';
+  } else if (key === 'DEL') {
+    cur = cur.slice(0, -1);
+  } else if (key === '-') {
+    if (cur.startsWith('-')) cur = cur.slice(1);
+    else cur = '-' + cur;
+  } else if (key === '.') {
+    if (!cur.includes('.')) cur += (cur === '' ? '0.' : '.');
+  } else {
+    if (cur.length < 10) cur += key;
+  }
+
+  keypadInputs[cardId] = cur;
+  const screen = document.getElementById(`kp-screen-${cardId}`);
+  if (screen) screen.textContent = cur === '' ? '--' : cur;
+}
+
+function checkKeypad(cardId) {
+  const card = document.getElementById(cardId);
+  const container = card.querySelector('.pdi-keypad-container');
+  const expected = container.getAttribute('data-expected').trim();
+  const steps = container.getAttribute('data-steps');
+  const cur = (keypadInputs[cardId] || '').trim();
+  const fb = container.querySelector('.kp-feedback-box');
+  fb.style.display = 'block';
+
+  if (!cur) {
+    fb.className = 'kp-feedback-box incorrect';
+    fb.textContent = '⚠️ Introdueix un valor abans de comprovar!';
+    playPDISound('error');
+    return;
+  }
+
+  // Comparar tolerant espais o comes
+  const cleanCur = cur.replace(',', '.');
+  const cleanExp = expected.replace(',', '.');
+
+  if (parseFloat(cleanCur) === parseFloat(cleanExp) || cleanCur === cleanExp) {
+    fb.className = 'kp-feedback-box correct';
+    fb.innerHTML = `🎉 <strong>EXCEL·LENT! RESULTAT CORRECTE (${cleanExp})</strong><br><small>${steps}</small>`;
+    playPDISound('correct');
+  } else {
+    fb.className = 'kp-feedback-box incorrect';
+    fb.innerHTML = `❌ <strong>INCORRECTE (Has posat ${cleanCur})</strong><br>Revisa el càlcul: ${steps}`;
+    playPDISound('error');
+  }
+}
+
+// -------------------------------------------
+// MOTOR FORMAT 5: TARGETES GIRATÒRIES 3D
+// -------------------------------------------
+function flipCard(cardScene) {
+  playPDISound('flip');
+  cardScene.classList.toggle('is-flipped');
+}
+
+// -------------------------------------------
+// INICIALITZACIÓ DRAG & DROP TÀCTIL I RATOLÍ
+// -------------------------------------------
+function initDragAndDrop() {
+  let draggedItem = null;
+
+  document.querySelectorAll('.pdi-item').forEach(item => {
+    item.addEventListener('dragstart', (e) => {
+      draggedItem = item;
+      item.classList.add('dragging');
+      e.dataTransfer.setData('text/plain', '');
+    });
+
+    item.addEventListener('dragend', () => {
+      item.classList.remove('dragging');
+      draggedItem = null;
+    });
+
+    // Touch Support for Smartboards
+    item.addEventListener('touchstart', (e) => {
+      draggedItem = item;
+      item.classList.add('dragging');
+    }, { passive: true });
+
+    item.addEventListener('touchend', (e) => {
+      if (!draggedItem) return;
+      const touch = e.changedTouches[0];
+      const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+      if (targetEl) {
+        const slot = targetEl.closest('.pdi-slot');
+        const box = targetEl.closest('.pdi-drop-box');
+        const pool = targetEl.closest('.pdi-source-pool');
+
+        if (slot) {
+          const currentInSlot = slot.querySelector('.pdi-item');
+          if (currentInSlot && currentInSlot !== draggedItem) {
+            draggedItem.parentElement.appendChild(currentInSlot);
+          }
+          slot.appendChild(draggedItem);
+          playPDISound('tap');
+        } else if (box) {
+          const content = box.querySelector('.box-content');
+          if (content) {
+            content.appendChild(draggedItem);
+            playPDISound('tap');
+          }
+        } else if (pool) {
+          pool.appendChild(draggedItem);
+          playPDISound('tap');
+        }
+      }
+      item.classList.remove('dragging');
+      draggedItem = null;
+    });
+  });
+
+  document.querySelectorAll('.pdi-slot, .pdi-drop-box, .pdi-source-pool').forEach(zone => {
+    zone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      zone.classList.add('drag-over');
+    });
+
+    zone.addEventListener('dragleave', () => {
+      zone.classList.remove('drag-over');
+    });
+
+    zone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      zone.classList.remove('drag-over');
+      if (!draggedItem) return;
+
+      if (zone.classList.contains('pdi-slot')) {
+        const currentInSlot = zone.querySelector('.pdi-item');
+        if (currentInSlot && currentInSlot !== draggedItem) {
+          draggedItem.parentElement.appendChild(currentInSlot);
+        }
+        zone.appendChild(draggedItem);
+        playPDISound('tap');
+      } else if (zone.classList.contains('pdi-drop-box')) {
+        const content = zone.querySelector('.box-content');
+        if (content) {
+          content.appendChild(draggedItem);
+          playPDISound('tap');
+        }
+      } else if (zone.classList.contains('pdi-source-pool')) {
+        zone.appendChild(draggedItem);
+        playPDISound('tap');
+      }
+    });
+  });
+}
+
+// -------------------------------------------
+// ANIMACIÓ DE CONFETTI LLEUGER
+// -------------------------------------------
+function triggerConfetti() {
+  const canvas = document.getElementById('pdi-confetti-canvas');
+  if (!canvas) return;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.display = 'block';
+
+  const ctx = canvas.getContext('2d');
+  const particles = [];
+  const colors = ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6'];
+
+  for (let i = 0; i < 90; i++) {
+    particles.push({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      vx: (Math.random() - 0.5) * 16,
+      vy: (Math.random() - 0.7) * 16,
+      size: Math.random() * 8 + 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: 1,
+      rotation: Math.random() * 360,
+      rotSpeed: (Math.random() - 0.5) * 10
+    });
+  }
+
+  let startTime = Date.now();
+  function render() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const elapsed = Date.now() - startTime;
+
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.35; // gravetat
+      p.rotation += p.rotSpeed;
+      p.alpha = Math.max(0, 1 - elapsed / 2200);
+
+      ctx.save();
+      ctx.globalAlpha = p.alpha;
+      ctx.translate(p.x, p.y);
+      ctx.rotate((p.rotation * Math.PI) / 180);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+      ctx.restore();
+    });
+
+    if (elapsed < 2200) {
+      requestAnimationFrame(render);
+    } else {
+      canvas.style.display = 'none';
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+  requestAnimationFrame(render);
+}
+
+// Inicialització en carregar la pàgina
+document.addEventListener('DOMContentLoaded', () => {
+  initDragAndDrop();
+
+  // Comprovar si hi ha direct link des d'una unitat
+  const targetUnit = localStorage.getItem('pdi-target-unit');
+  if (targetUnit) {
+    localStorage.removeItem('pdi-target-unit');
+    const firstAct = document.querySelector(`.pdi-activity-card[data-unit="${targetUnit}"]`);
+    if (firstAct) {
+      launchGameActivity(firstAct.id);
+      return;
+    }
+  }
+});
 </script>
