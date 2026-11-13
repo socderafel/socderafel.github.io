@@ -5,62 +5,318 @@ course_root: "."
 badge: "Pissarra Digital (PDI) · 1r FPB"
 ---
 
-# 🎯 Pissarra Digital Interactiva: Arrastrar i Soltar (PDI)
+<div class="pdi-app-wrapper">
+<div id="pdi-dashboard" class="pdi-dashboard-view">
+  <div class="pdi-dash-header">
+    <div class="dash-title-wrap">
+      <h2>🎯 Tauler de Reptes Interactius (PDI)</h2>
+      <p>Tria una unitat didàctica per a jugar a la pissarra digital de classe o amb la tauleta. Sense menús que molesten dalt!</p>
+    </div>
+    <div class="dash-quick-tools">
+      <button class="btn-pdi-tool" onclick="togglePDISound()"><span id="sound-icon">🔊</span> <span id="sound-text">So Activat</span></button>
+      <button class="btn-pdi-tool" onclick="togglePDIFullscreen()">🖥️ Pantalla Completa</button>
+    </div>
+  </div>
+  <div class="pdi-units-grid">
 
-<div class="pdi-intro-card">
-  <div class="pdi-intro-header">
-    <span class="pdi-badge">PDI & Tauletes</span>
-    <span class="pdi-badge-pwa">📱 App Autònoma CA1</span>
-    <span class="pdi-badge-count" style="background:#0284c7;color:#fff;font-weight:800;font-size:0.8rem;padding:4px 12px;border-radius:50px;">45 Reptes Interactius</span>
-  </div>
-  <p>Espai d'activitats tàctils i manipulatives dissenyat exclusivament per a <strong>Ciències Aplicades I (1r FPB)</strong>. Pensat per a <strong>treballar a la pissarra digital de l'aula</strong> amb tot el grup o des de <strong>tauletes i mòbils</strong>. Tria la unitat i el repte, arrossega amb el dit o toca per a seleccionar i col·locar!</p>
-  
-  <div class="pdi-toolbar">
-    <button class="btn-pdi-tool" id="btn-fullscreen-toggle" onclick="togglePDIFullscreen()">
-      <span class="tool-icon">🖥️</span>
-      <span class="tool-text">Mode Pissarra Completa</span>
-    </button>
-    <button class="btn-pdi-tool" id="btn-sound-toggle" onclick="togglePDISound()">
-      <span class="tool-icon" id="sound-icon">🔊</span>
-      <span class="tool-text" id="sound-text">So Activat</span>
-    </button>
-    <button class="btn-pdi-tool" id="btn-scale-toggle" onclick="cyclePDIScale()" title="Ajustar mida dels elements a la pantalla">
-      <span class="tool-icon">🔍</span>
-      <span class="tool-text" id="scale-text">Mida: Auto</span>
-    </button>
-    <button class="btn-pdi-tool btn-pdi-reset" onclick="resetCurrentPDIActivity()">
-      <span class="tool-icon">🔄</span>
-      <span class="tool-text">Següent Alumne / Barallar</span>
-    </button>
-  </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #2563eb;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #2563eb;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🔢</span> <h3>UD1 · Els Nombres Naturals</h3></div>
+      <p class="card-desc">Sistema decimal, operacions bàsiques, jerarquia i potències.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Jerarquia</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Potències</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Ordres Unitats</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Propietats</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Arrels</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #059669;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #059669;">Biologia</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🫀</span> <h3>UD2 · La Matèria i la Nutrició</h3></div>
+      <p class="card-desc">Cèl·lula, teixits, aparells digestiu, respiratori, circulatori i excretor.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Classificar Òrgans</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Viatge Aliments</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">La Sang i Vasos</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Nivells de Vida</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Nutrients</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #7c3aed;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">➕➖</span> <h3>UD3 · Els Nombres Enters</h3></div>
+      <p class="card-desc">Positius, negatius, recta numèrica, sumes, restes i regla dels signes.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Positiu o Negatiu</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Recta Numèrica</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Regla Signes</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Suma i Resta</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Valor Absolut</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #0284c7;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #0284c7;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">⭐</span> <h3>UD4 · Divisibilitat, Primers i Compostos</h3></div>
+      <p class="card-desc">Múltiples, divisors, criteris, nombres primers, descomposició, MCD i MCM.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Primers / Compostos</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Criteris Divisibilitat</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Múltiples vs Divisors</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Factors Primers</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">MCD o MCM?</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #d97706;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #d97706;">Matemàtiques</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🍰</span> <h3>UD5 · Les Fraccions</h3></div>
+      <p class="card-desc">Concepte, tipus de fraccions, equivalències, càlcul de quantitats i operacions.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Tipus Fraccions</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Equivalències</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Ordenar Fraccions</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Fracció Quantitat</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Suma / Resta</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #4f46e5;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #4f46e5;">Biologia i Geologia</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🪐</span> <h3>UD6 · La Terra i l'Univers</h3></div>
+      <p class="card-desc">Origen còsmic, astres, components del Sistema Solar i exploració espacial.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Rocosos vs Gasosos</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Distància al Sol</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Escala Còsmica</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Tipus d'Astres</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Roques Espacials</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #ea580c;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #ea580c;">Geologia</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🌍</span> <h3>UD7 · El Planeta Terra: Geosfera i Moviments</h3></div>
+      <p class="card-desc">Capes internes de la Terra, rotació, traslació, la Lluna i eclipsis.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Capes Geosfera</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Rotació / Traslació</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Fases de la Lluna</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Tipus de Roques</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Tipus d'Eclipsi</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #0891b2;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #0891b2;">Biologia i Geologia</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🌤️</span> <h3>UD8 · L'Atmosfera Terrestre</h3></div>
+      <p class="card-desc">Composició de l'aire, capes atmosfèriques, meteorologia i contaminació.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Capes Atmosfera</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Aparells Meteorològics</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Gasos de l'Aire</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Contaminació Aire</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Tipus de Precipitació</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #0284c7;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #0284c7;">Biologia i Geologia</span>
+        <span class="count-badge">5 Reptes</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">💧</span> <h3>UD9 · La Hidrosfera Terrestre</h3></div>
+      <p class="card-desc">Distribució de l'aigua dolça i salada, cicle hidrològic i canvis d'estat.</p>
+      <div class="card-acts-list">
+            <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-1')">
+          <span class="act-idx">R1</span>
+          <span class="act-name">Cicle Hidrològic</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-2')">
+          <span class="act-idx">R2</span>
+          <span class="act-name">Aigua Dolça vs Salada</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-3')">
+          <span class="act-idx">R3</span>
+          <span class="act-name">Canvis d'Estat</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-4')">
+          <span class="act-idx">R4</span>
+          <span class="act-name">Trams d'un Riu</span>
+          <span class="act-arrow">➔</span>
+        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-5')">
+          <span class="act-idx">R5</span>
+          <span class="act-name">Cicle Urbà Aigua</span>
+          <span class="act-arrow">➔</span>
+        </button>      </div>
+    </div>  </div>
 </div>
 
-<!-- Selector d'Unitats PDI -->
-<div class="pdi-unit-nav-wrap">
-  <span class="pdi-nav-label">1. Tria la Unitat Didàctica:</span>
-  <div class="pdi-unit-pills">
-    <button class="pdi-pill active" onclick="selectPDIUnit('ud1')">UD1 Naturals</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud2')">UD2 Nutrició</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud3')">UD3 Enters</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud4')">UD4 Divisibilitat</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud5')">UD5 Fraccions</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud6')">UD6 Univers</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud7')">UD7 Geosfera</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud8')">UD8 Atmosfera</button>
-    <button class="pdi-pill" onclick="selectPDIUnit('ud9')">UD9 Hidrosfera</button>
-  </div>
-</div>
+<div id="pdi-game-view" class="pdi-game-view" style="display: none;">
+  <!-- Barra de joc ultra-neta: només 1 sola barra superior minimalista -->
+  <div class="pdi-game-topbar">
+    <button class="btn-back-dash" onclick="showPDIDashboard()" title="Tornar al Tauler de Reptes">
+      <span>⬅️ Menú de Reptes</span>
+    </button>
+    
+    <div class="game-meta-info" id="game-meta-info">
+      <span class="game-unit-badge" id="game-unit-badge">UD1</span>
+      <span class="game-act-title" id="game-act-title">Repte 1</span>
+    </div>
 
-<!-- Selector de Sub-Reptes per a la Unitat Seleccionada -->
-<div class="pdi-subnav-wrap">
-  <span class="pdi-nav-label">2. Tria l'Activitat Manipulativa (5 per unitat):</span>
-  <div class="pdi-subpills" id="pdi-subpills-container">
-    <!-- Es genera dinàmicament per JS segons la unitat activa -->
-  </div>
-</div>
+    <div class="game-nav-arrows">
+      <button class="btn-game-nav" id="btn-prev-act" onclick="navRelativeActivity(-1)" title="Repte Anterior">◀ Anterior</button>
+      <span class="game-counter" id="game-counter">1 / 5</span>
+      <button class="btn-game-nav" id="btn-next-act" onclick="navRelativeActivity(1)" title="Repte Següent">Següent ▶</button>
+    </div>
 
-<!-- CONTENIDORS D'ACTIVITATS -->
-<div class="pdi-board-container" id="pdi-board-container">
+    <div class="game-top-tools">
+      <button class="btn-tool-icon" onclick="resetCurrentPDIActivity()" title="Barallar elements per al següent alumne">🔄 Barallar</button>
+      <button class="btn-tool-icon" id="game-sound-btn" onclick="togglePDISound()" title="Activar/Silenciar so">🔊</button>
+      <button class="btn-tool-icon" id="game-fs-btn" onclick="togglePDIFullscreen()" title="Pantalla Completa">🖥️</button>
+    </div>
+  </div>
+
+  <div class="pdi-game-stage" id="pdi-game-stage">
   <div class="pdi-activity-card" id="act-ud1-1" data-unit="ud1" data-title="Repte 1: Jerarquia">
     <div class="pdi-act-title"><span class="act-num">UD1 · Repte 1</span><h3>🔢 Ordena el Viatge de la Jerarquia d'Operacions</h3></div>
     <p class="pdi-instruction">Arrossega els passos en l'ordre matemàtic correcte per a calcular: <strong>3 + 2 × (5 - 1)²</strong></p>
@@ -83,7 +339,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud1-2" data-unit="ud1" data-title="Repte 2: Potències">
     <div class="pdi-act-title"><span class="act-num">UD1 · Repte 2</span><h3>⚡ Emparella cada Potència amb el seu Resultat</h3></div>
     <p class="pdi-instruction">Arrossega cada potència a la caixa del seu resultat exacte:</p>
@@ -110,7 +365,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud1-3" data-unit="ud1" data-title="Repte 3: Ordres Unitats">
     <div class="pdi-act-title"><span class="act-num">UD1 · Repte 3</span><h3>🧱 Descomposició en Ordres d'Unitats: 45.827</h3></div>
     <p class="pdi-instruction">Arrossega el valor posicional de cada xifra a la seua posició:</p>
@@ -135,7 +389,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud1-4" data-unit="ud1" data-title="Repte 4: Propietats">
     <div class="pdi-act-title"><span class="act-num">UD1 · Repte 4</span><h3>📐 Propietats de les Operacions Matemàtiques</h3></div>
     <p class="pdi-instruction">Classifica cada exemple algebraic segons la propietat que representa:</p>
@@ -161,7 +414,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud1-5" data-unit="ud1" data-title="Repte 5: Arrels">
     <div class="pdi-act-title"><span class="act-num">UD1 · Repte 5</span><h3>√ Arrels Quadrades Exactes</h3></div>
     <p class="pdi-instruction">Arrossega cada arrel quadrada exacta al seu valor resolt:</p>
@@ -188,7 +440,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud2-1" data-unit="ud2" data-title="Repte 1: Classificar Òrgans">
     <div class="pdi-act-title"><span class="act-num">UD2 · Repte 1</span><h3>🫀 Classifica els Òrgans en el seu Aparell corresponent</h3></div>
     <p class="pdi-instruction">Arrossega cada òrgan a la caixa de l'aparell humà al qual pertany:</p>
@@ -219,7 +470,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud2-2" data-unit="ud2" data-title="Repte 2: Viatge Aliments">
     <div class="pdi-act-title"><span class="act-num">UD2 · Repte 2</span><h3>🥖 Ordena el Viatge dels Aliments pel Tub Digestiu</h3></div>
     <p class="pdi-instruction">Arrossega els òrgans en l'ordre consecutiu que segueix el menjar:</p>
@@ -246,7 +496,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud2-3" data-unit="ud2" data-title="Repte 3: La Sang i Vasos">
     <div class="pdi-act-title"><span class="act-num">UD2 · Repte 3</span><h3>🩸 Components de la Sang i Vasos Sanguinis</h3></div>
     <p class="pdi-instruction">Arrossega cada element a la seua funció vital:</p>
@@ -271,7 +520,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud2-4" data-unit="ud2" data-title="Repte 4: Nivells de Vida">
     <div class="pdi-act-title"><span class="act-num">UD2 · Repte 4</span><h3>🔬 Ordena els Nivells d'Organització Biològica</h3></div>
     <p class="pdi-instruction">Arrossega els nivells ordenant-los des del més senzill fins al més complex:</p>
@@ -298,7 +546,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud2-5" data-unit="ud2" data-title="Repte 5: Nutrients">
     <div class="pdi-act-title"><span class="act-num">UD2 · Repte 5</span><h3>🥗 Els Nutrients i la seua Funció a la Dieta</h3></div>
     <p class="pdi-instruction">Classifica cada aliment o substància en el seu grup de nutrients principal:</p>
@@ -324,7 +571,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud3-1" data-unit="ud3" data-title="Repte 1: Positiu o Negatiu">
     <div class="pdi-act-title"><span class="act-num">UD3 · Repte 1</span><h3>➕➖ Nombres Enters a la Vida Real: Positius o Negatius?</h3></div>
     <p class="pdi-instruction">Arrossega cada situació quotidiana al contenidor corresponent:</p>
@@ -349,7 +595,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud3-2" data-unit="ud3" data-title="Repte 2: Recta Numèrica">
     <div class="pdi-act-title"><span class="act-num">UD3 · Repte 2</span><h3>📏 Ordena els Nombres Enters de Menor a Major</h3></div>
     <p class="pdi-instruction">Arrossega ordenant estrictament de menor a major:</p>
@@ -376,7 +621,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud3-3" data-unit="ud3" data-title="Repte 3: Regla Signes">
     <div class="pdi-act-title"><span class="act-num">UD3 · Repte 3</span><h3>✖️➗ La Regla dels Signes en Multiplicació i Divisió</h3></div>
     <p class="pdi-instruction">Arrossega cada operació al seu resultat exacte:</p>
@@ -399,7 +643,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud3-4" data-unit="ud3" data-title="Repte 4: Suma i Resta">
     <div class="pdi-act-title"><span class="act-num">UD3 · Repte 4</span><h3>🧮 Sumes i Restes de Nombres Enters</h3></div>
     <p class="pdi-instruction">Resol mentalment i emparella cada càlcul amb el seu valor final:</p>
@@ -422,7 +665,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud3-5" data-unit="ud3" data-title="Repte 5: Valor Absolut">
     <div class="pdi-act-title"><span class="act-num">UD3 · Repte 5</span><h3>📐 Valor Absolut |x| i Nombre Oposat</h3></div>
     <p class="pdi-instruction">Classifica segons si el resultat és 6 o és 9:</p>
@@ -445,7 +687,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud4-1" data-unit="ud4" data-title="Repte 1: Primers / Compostos">
     <div class="pdi-act-title"><span class="act-num">UD4 · Repte 1</span><h3>⭐ Nombres Primers vs Nombres Compostos</h3></div>
     <p class="pdi-instruction">Arrossega cada nombre a la seua categoria:</p>
@@ -472,7 +713,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud4-2" data-unit="ud4" data-title="Repte 2: Criteris Divisibilitat">
     <div class="pdi-act-title"><span class="act-num">UD4 · Repte 2</span><h3>🎯 Criteris de Divisibilitat: Per 2, per 3 o per 5?</h3></div>
     <p class="pdi-instruction">Arrossega cada nombre a la caixa del criteri que compleix:</p>
@@ -496,7 +736,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud4-3" data-unit="ud4" data-title="Repte 3: Múltiples vs Divisors">
     <div class="pdi-act-title"><span class="act-num">UD4 · Repte 3</span><h3>🔄 Múltiples vs Divisors del Nombre 12</h3></div>
     <p class="pdi-instruction">Classifica aquests nombres segons la seua relació amb el 12:</p>
@@ -519,7 +758,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud4-4" data-unit="ud4" data-title="Repte 4: Factors Primers">
     <div class="pdi-act-title"><span class="act-num">UD4 · Repte 4</span><h3>🧩 Descomposició Factorial en Factors Primers</h3></div>
     <p class="pdi-instruction">Emparella cada nombre amb el seu producte de factors primers:</p>
@@ -542,7 +780,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud4-5" data-unit="ud4" data-title="Repte 5: MCD o MCM?">
     <div class="pdi-act-title"><span class="act-num">UD4 · Repte 5</span><h3>🤔 En quin Problema usem MCD o MCM?</h3></div>
     <p class="pdi-instruction">Classifica cada situació problemàtica segons quina eina cal aplicar per a resoldre-la:</p>
@@ -563,7 +800,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud5-1" data-unit="ud5" data-title="Repte 1: Tipus Fraccions">
     <div class="pdi-act-title"><span class="act-num">UD5 · Repte 1</span><h3>🍰 Tipus de Fraccions: Pròpies, Impròpies o Iguals a 1</h3></div>
     <p class="pdi-instruction">Arrossega cada fracció al seu calaix segons el seu valor respecte a la unitat:</p>
@@ -587,7 +823,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud5-2" data-unit="ud5" data-title="Repte 2: Equivalències">
     <div class="pdi-act-title"><span class="act-num">UD5 · Repte 2</span><h3>🪞 Emparella Fraccions Equivalents</h3></div>
     <p class="pdi-instruction">Arrossega cada fracció simplificada amb la seua ampliació equivalent:</p>
@@ -610,7 +845,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud5-3" data-unit="ud5" data-title="Repte 3: Ordenar Fraccions">
     <div class="pdi-act-title"><span class="act-num">UD5 · Repte 3</span><h3>📏 Ordena Fraccions de Menor a Major (Denominador 8)</h3></div>
     <p class="pdi-instruction">Com que tenen el mateix denominador, ordena-les segons el seu numerador:</p>
@@ -633,7 +867,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud5-4" data-unit="ud5" data-title="Repte 4: Fracció Quantitat">
     <div class="pdi-act-title"><span class="act-num">UD5 · Repte 4</span><h3>💰 Càlcul de la Fracció d'una Quantitat</h3></div>
     <p class="pdi-instruction">Calcula dividint pel denominador i multiplicant pel numerador:</p>
@@ -655,7 +888,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud5-5" data-unit="ud5" data-title="Repte 5: Suma / Resta">
     <div class="pdi-act-title"><span class="act-num">UD5 · Repte 5</span><h3>➕➖ Suma i Resta de Fraccions amb Mateix Denominador</h3></div>
     <p class="pdi-instruction">Opera els numeradors mantenint intacte el denominador comú:</p>
@@ -678,7 +910,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud6-1" data-unit="ud6" data-title="Repte 1: Rocosos vs Gasosos">
     <div class="pdi-act-title"><span class="act-num">UD6 · Repte 1</span><h3>🪐 Planetes Rocosos vs Planetes Gasosos</h3></div>
     <p class="pdi-instruction">Arrossega els 8 planetes del Sistema Solar al seu grup:</p>
@@ -703,7 +934,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud6-2" data-unit="ud6" data-title="Repte 2: Distància al Sol">
     <div class="pdi-act-title"><span class="act-num">UD6 · Repte 2</span><h3>☀️ Ordena els Planetes des del Sol cap a l'Exterior</h3></div>
     <p class="pdi-instruction">Arrossega en l'ordre consecutiu de proximitat al Sol:</p>
@@ -734,7 +964,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud6-3" data-unit="ud6" data-title="Repte 3: Escala Còsmica">
     <div class="pdi-act-title"><span class="act-num">UD6 · Repte 3</span><h3>🌌 Ordena l'Univers d'Escala Menor a Còsmica</h3></div>
     <p class="pdi-instruction">Arrossega les estructures començant per la més xicoteta fins a la més gegantina:</p>
@@ -759,7 +988,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud6-4" data-unit="ud6" data-title="Repte 4: Tipus d'Astres">
     <div class="pdi-act-title"><span class="act-num">UD6 · Repte 4</span><h3>🔭 Classifica els Cossos de l'Univers</h3></div>
     <p class="pdi-instruction">Arrossega cada cos celeste a la seua definició astronòmica:</p>
@@ -784,7 +1012,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud6-5" data-unit="ud6" data-title="Repte 5: Roques Espacials">
     <div class="pdi-act-title"><span class="act-num">UD6 · Repte 5</span><h3>🪨 Meteoroide, Meteor o Meteorit?</h3></div>
     <p class="pdi-instruction">Identifica on es troba el fragment rocallós:</p>
@@ -805,7 +1032,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud7-1" data-unit="ud7" data-title="Repte 1: Capes Geosfera">
     <div class="pdi-act-title"><span class="act-num">UD7 · Repte 1</span><h3>🌍 Les 4 Capes Internes de la Geosfera</h3></div>
     <p class="pdi-instruction">Arrossega cada característica a la capa correcta de la Terra:</p>
@@ -828,7 +1054,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud7-2" data-unit="ud7" data-title="Repte 2: Rotació / Traslació">
     <div class="pdi-act-title"><span class="act-num">UD7 · Repte 2</span><h3>🔄 Moviments de la Terra: Rotació vs Traslació</h3></div>
     <p class="pdi-instruction">Classifica característiques i conseqüències segons el moviment:</p>
@@ -851,7 +1076,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud7-3" data-unit="ud7" data-title="Repte 3: Fases de la Lluna">
     <div class="pdi-act-title"><span class="act-num">UD7 · Repte 3</span><h3>🌙 Ordena el Cicle de les 4 Fases de la Lluna</h3></div>
     <p class="pdi-instruction">Ordena el cicle lunar consecutivament començant per la fase fosca:</p>
@@ -874,7 +1098,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud7-4" data-unit="ud7" data-title="Repte 4: Tipus de Roques">
     <div class="pdi-act-title"><span class="act-num">UD7 · Repte 4</span><h3>🪨 Els Tres Grans Grups de Roques</h3></div>
     <p class="pdi-instruction">Classifica cada roca segons el seu origen geològic:</p>
@@ -898,7 +1121,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud7-5" data-unit="ud7" data-title="Repte 5: Tipus d'Eclipsi">
     <div class="pdi-act-title"><span class="act-num">UD7 · Repte 5</span><h3>🌑 Eclipsi de Sol vs Eclipsi de Lluna</h3></div>
     <p class="pdi-instruction">Classifica qui s'interposa enmig i quina ombra es genera:</p>
@@ -919,7 +1141,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud8-1" data-unit="ud8" data-title="Repte 1: Capes Atmosfera">
     <div class="pdi-act-title"><span class="act-num">UD8 · Repte 1</span><h3>🌤️ Ordena les Capes de l'Atmosfera de Baix cap a Dalt</h3></div>
     <p class="pdi-instruction">Arrossega les capes des del terra fins a l'espai exterior:</p>
@@ -944,7 +1165,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud8-2" data-unit="ud8" data-title="Repte 2: Aparells Meteorològics">
     <div class="pdi-act-title"><span class="act-num">UD8 · Repte 2</span><h3>🌡️ Aparells de la Caseta Meteorològica</h3></div>
     <p class="pdi-instruction">Arrossega cada instrument a la magnitud meteorològica que mesura:</p>
@@ -967,7 +1187,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud8-3" data-unit="ud8" data-title="Repte 3: Gasos de l'Aire">
     <div class="pdi-act-title"><span class="act-num">UD8 · Repte 3</span><h3>💨 La Composició de l'Aire Net</h3></div>
     <p class="pdi-instruction">Classifica cada gas segons el seu percentatge en l'aire que respirem:</p>
@@ -990,7 +1209,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud8-4" data-unit="ud8" data-title="Repte 4: Contaminació Aire">
     <div class="pdi-act-title"><span class="act-num">UD8 · Repte 4</span><h3>🏭 Contaminants Naturals vs Artificials</h3></div>
     <p class="pdi-instruction">Classifica l'origen de la contaminació atmosfèrica:</p>
@@ -1013,7 +1231,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud8-5" data-unit="ud8" data-title="Repte 5: Tipus de Precipitació">
     <div class="pdi-act-title"><span class="act-num">UD8 · Repte 5</span><h3>🌧️ Formes de Precipitació i Hidrometeors</h3></div>
     <p class="pdi-instruction">Emparella cada fenomen amb el seu estat físic:</p>
@@ -1034,7 +1251,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud9-1" data-unit="ud9" data-title="Repte 1: Cicle Hidrològic">
     <div class="pdi-act-title"><span class="act-num">UD9 · Repte 1</span><h3>💧 Ordena les 4 Etapes del Cicle de l'Aigua</h3></div>
     <p class="pdi-instruction">Arrossega les etapes en la seua seqüència natural:</p>
@@ -1057,7 +1273,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud9-2" data-unit="ud9" data-title="Repte 2: Aigua Dolça vs Salada">
     <div class="pdi-act-title"><span class="act-num">UD9 · Repte 2</span><h3>🌊 Aigua Dolça (3%) vs Aigua Salada (97%)</h3></div>
     <p class="pdi-instruction">Classifica les masses d'aigua segons la seua salinitat i volum global:</p>
@@ -1080,7 +1295,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud9-3" data-unit="ud9" data-title="Repte 3: Canvis d'Estat">
     <div class="pdi-act-title"><span class="act-num">UD9 · Repte 3</span><h3>🧊♨️ Els Canvis d'Estat: Guanyen o Perden Calor?</h3></div>
     <p class="pdi-instruction">Classifica cada canvi d'estat de l'aigua:</p>
@@ -1101,7 +1315,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud9-4" data-unit="ud9" data-title="Repte 4: Trams d'un Riu">
     <div class="pdi-act-title"><span class="act-num">UD9 · Repte 4</span><h3>🏞️ Ordena els Tres Trams d'un Riu des del Naixement</h3></div>
     <p class="pdi-instruction">Arrossega els trams del riu en el sentit en què baixa l'aigua:</p>
@@ -1122,7 +1335,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
-
   <div class="pdi-activity-card" id="act-ud9-5" data-unit="ud9" data-title="Repte 5: Cicle Urbà Aigua">
     <div class="pdi-act-title"><span class="act-num">UD9 · Repte 5</span><h3>🚰 El Cicle Urbà de l'Aigua a la Nostra Ciutat</h3></div>
     <p class="pdi-instruction">Ordena el camí complet de l'aigua des que l'agafem de la natura fins que la retornem neta:</p>
@@ -1149,50 +1361,50 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-status-msg"></div>
     </div>
   </div>
+  </div>
+</div>
 </div>
 
-<div class="pdi-exit-floating-btn" onclick="togglePDIFullscreen()" title="Eixir de la pantalla completa (o prem Esc)">
+<div class="pdi-exit-floating-btn" onclick="togglePDIFullscreen()" title="Eixir de la pantalla completa (Esc)">
   <span>🪟 Eixir de Pantalla Completa</span>
   <span style="font-size:0.75rem; opacity:0.8; background:rgba(255,255,255,0.2); padding:2px 6px; border-radius:4px;">Esc</span>
 </div>
 
 <!-- ESTILS DE LA PISSARRA DIGITAL -->
 <style>
-.pdi-intro-card {
+/* Disseny General de l'App */
+.pdi-app-wrapper {
+  width: 100%;
+}
+
+/* ==========================================================
+   1. TAULER DE REPTES (DASHBOARD INICIAL)
+   ========================================================== */
+.pdi-dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
   background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(37, 99, 235, 0.12));
   border: 2px solid rgba(16, 185, 129, 0.35);
-  border-radius: 16px;
-  padding: 20px 24px;
-  margin-bottom: 24px;
+  border-radius: 18px;
+  padding: 22px 26px;
+  margin-bottom: 26px;
 }
-.pdi-intro-header {
+.dash-title-wrap h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+.dash-title-wrap p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+.dash-quick-tools {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 12px;
-}
-.pdi-badge {
-  background: #059669;
-  color: #fff;
-  font-weight: 800;
-  font-size: 0.8rem;
-  padding: 4px 12px;
-  border-radius: 50px;
-  text-transform: uppercase;
-}
-.pdi-badge-pwa {
-  background: #2563eb;
-  color: #fff;
-  font-weight: 800;
-  font-size: 0.8rem;
-  padding: 4px 12px;
-  border-radius: 50px;
-}
-.pdi-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 16px;
 }
 .btn-pdi-tool {
   display: inline-flex;
@@ -1207,107 +1419,258 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   color: var(--text, #1e293b);
   cursor: pointer;
   transition: all 0.2s ease;
-  user-select: none;
 }
 .btn-pdi-tool:hover {
   background: rgba(16, 185, 129, 0.1);
   border-color: #10b981;
   transform: translateY(-2px);
 }
-.btn-pdi-reset {
-  background: #f59e0b !important;
-  color: #ffffff !important;
-  border-color: #d97706 !important;
+
+/* Graella de Targetes d'Unitats */
+.pdi-units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
 }
-.btn-pdi-reset:hover {
-  background: #d97706 !important;
+.pdi-unit-dash-card {
+  background: var(--bg-card, #ffffff);
+  border: 2px solid var(--border, #e2e8f0);
+  border-radius: 18px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pdi-unit-dash-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+.pdi-unit-dash-card .card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.disc-badge {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+.count-badge {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.card-title .unit-icon {
+  font-size: 1.5rem;
+}
+.card-title h3 {
+  margin: 0;
+  font-size: 1.22rem;
+  color: var(--text);
+}
+.card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+  flex: 1;
 }
 
-/* Selector d'Unitats PDI */
-.pdi-unit-nav-wrap {
-  margin: 18px 0 14px 0;
-}
-.pdi-subnav-wrap {
-  margin: 12px 0 24px 0;
-  background: rgba(16, 185, 129, 0.05);
-  border: 1.5px solid rgba(16, 185, 129, 0.2);
-  border-radius: 12px;
-  padding: 12px 16px;
-}
-.pdi-nav-label {
-  display: block;
-  font-weight: 800;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  color: var(--text-muted, #64748b);
-  margin-bottom: 8px;
-  letter-spacing: 0.5px;
-}
-.pdi-unit-pills, .pdi-subpills {
+/* Llista de Botons de Llançament de Reptes */
+.card-acts-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 8px;
 }
-.pdi-pill {
-  padding: 8px 14px;
-  border-radius: 8px;
+.btn-launch-act {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  background: var(--bg-body, #f8fafc);
   border: 1.5px solid var(--border, #cbd5e1);
-  background: var(--bg-card, #ffffff);
-  color: var(--text, #1e293b);
-  font-size: 0.88rem;
-  font-weight: 700;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 750;
   cursor: pointer;
   transition: all 0.15s ease;
+  text-align: left;
 }
-.pdi-pill:hover {
+.btn-launch-act:hover {
+  background: rgba(16, 185, 129, 0.12);
   border-color: #10b981;
-  background: rgba(16, 185, 129, 0.08);
+  color: #059669;
+  transform: translateX(4px);
 }
-.pdi-pill.active {
+.btn-launch-act .act-idx {
+  background: #334155;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 900;
+  padding: 2px 7px;
+  border-radius: 6px;
+}
+.btn-launch-act:hover .act-idx {
   background: #059669;
-  color: #ffffff;
-  border-color: #059669;
-  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+.btn-launch-act .act-name {
+  flex: 1;
+}
+.btn-launch-act .act-arrow {
+  color: var(--text-muted);
+  transition: transform 0.15s ease;
+}
+.btn-launch-act:hover .act-arrow {
+  color: #059669;
+  transform: translateX(3px);
 }
 
-.pdi-subpill {
-  padding: 7px 14px;
-  border-radius: 6px;
-  border: 1px solid var(--border, #cbd5e1);
+/* ==========================================================
+   2. PANTALLA DE JOC (GAME VIEW NET SENSE RES DALT)
+   ========================================================== */
+.pdi-game-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra Superior de Joc Neta (Una sola línia estilitzada) */
+.pdi-game-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   background: var(--bg-card, #ffffff);
-  color: var(--text, #1e293b);
-  font-size: 0.86rem;
-  font-weight: 700;
+  border: 2px solid var(--border, #cbd5e1);
+  border-radius: 14px;
+  padding: 8px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.btn-back-dash {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(100, 116, 139, 0.12);
+  border: 1px solid var(--border, #cbd5e1);
+  color: var(--text);
+  font-weight: 800;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.15s ease;
 }
-.pdi-subpill:hover {
-  border-color: #0284c7;
-  background: rgba(2, 132, 199, 0.08);
+.btn-back-dash:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
 }
-.pdi-subpill.active {
+
+.game-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.game-unit-badge {
+  background: #059669;
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.game-act-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.game-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-game-nav {
+  background: var(--bg-body, #f8fafc);
+  border: 1.5px solid var(--border, #cbd5e1);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 750;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn-game-nav:hover {
   background: #0284c7;
   color: #ffffff;
   border-color: #0284c7;
-  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3);
+}
+.game-counter {
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding: 0 4px;
 }
 
-/* Contenidors de Targetes */
+.game-top-tools {
+  display: flex;
+  gap: 8px;
+}
+.btn-tool-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-body, #f8fafc);
+  border: 1.5px solid var(--border, #cbd5e1);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 750;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.btn-tool-icon:hover {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* ==========================================================
+   3. ESTILS DELS CARDS I CONTINGUT DEL JOC
+   ========================================================== */
 .pdi-activity-card {
   display: none;
   background: var(--bg-card, #ffffff);
   border: 2px solid var(--border, #e2e8f0);
   border-radius: 20px;
-  padding: 26px 28px;
+  padding: 24px 28px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  margin-bottom: 30px;
-  animation: fadeInPDI 0.3s ease;
+  animation: fadeInPDI 0.25s ease;
 }
 .pdi-activity-card.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 @keyframes fadeInPDI {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -1315,7 +1678,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .pdi-act-title .act-num {
   background: #059669;
@@ -1323,7 +1686,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   font-weight: 900;
   padding: 4px 10px;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 .pdi-act-title h3 {
   margin: 0;
@@ -1333,23 +1696,25 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 .pdi-instruction {
   font-size: 1.05rem;
   color: var(--text-muted, #475569);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 /* Àrea d'Arrossegament */
 .pdi-categories-wrapper, .pdi-order-wrapper {
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 .pdi-source-pool {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  padding: 16px;
+  padding: 14px 16px;
   background: rgba(100, 116, 139, 0.06);
   border: 2px dashed rgba(100, 116, 139, 0.3);
   border-radius: 14px;
-  min-height: 70px;
-  margin-bottom: 20px;
+  min-height: 65px;
   align-items: center;
 }
 
@@ -1359,7 +1724,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   border: 2px solid var(--border, #cbd5e1);
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   border-radius: 12px;
-  padding: 12px 18px;
+  padding: 10px 18px;
   font-size: 1.05rem;
   font-weight: 750;
   cursor: grab;
@@ -1392,19 +1757,20 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 }
 
 .num-item {
-  font-size: 1.3rem !important;
-  padding: 10px 22px !important;
+  font-size: 1.25rem !important;
+  padding: 8px 18px !important;
   font-family: 'JetBrains Mono', monospace;
 }
 .frac-item {
-  font-size: 1.25rem !important;
-  padding: 10px 20px !important;
+  font-size: 1.2rem !important;
+  padding: 8px 16px !important;
 }
 
+/* Destinacions */
 .pdi-drop-boxes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  gap: 14px;
 }
 .pdi-drop-boxes-grid.grid-2 {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1412,16 +1778,13 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 .pdi-drop-boxes-grid.grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
-.pdi-drop-boxes-grid.grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
 
 .pdi-drop-box {
   background: var(--bg-body, #f8fafc);
   border: 2.5px dashed var(--border, #cbd5e1);
   border-radius: 16px;
-  padding: 16px;
-  min-height: 180px;
+  padding: 14px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   transition: all 0.2s ease;
@@ -1433,11 +1796,11 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   transform: scale(1.01);
 }
 .pdi-drop-box .box-header {
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--text, #0f172a);
-  margin-bottom: 12px;
-  padding-bottom: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
   border-bottom: 2px solid rgba(100, 116, 139, 0.15);
   display: flex;
   align-items: center;
@@ -1446,24 +1809,24 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 .pdi-drop-box .box-items {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   flex: 1;
 }
 
 .pdi-slots-column {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 .pdi-slot {
   background: var(--bg-body, #f8fafc);
   border: 2.5px dashed var(--border, #cbd5e1);
-  border-radius: 14px;
-  padding: 12px 18px;
-  min-height: 58px;
+  border-radius: 12px;
+  padding: 10px 16px;
+  min-height: 48px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   transition: all 0.2s ease;
 }
 .pdi-slot.drag-over, .pdi-slot.waiting-tap-target {
@@ -1473,15 +1836,15 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 .pdi-slot .slot-badge {
   background: #334155;
   color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 6px;
   white-space: nowrap;
 }
 .pdi-slot .slot-hint {
   color: var(--text-muted, #94a3b8);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-style: italic;
 }
 .pdi-slot .pdi-item {
@@ -1489,20 +1852,21 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   width: 100%;
 }
 
+/* Peu de Feedback */
 .pdi-footer-feedback {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 20px;
-  padding-top: 16px;
+  margin-top: 16px;
+  padding-top: 14px;
   border-top: 1.5px solid var(--border, #e2e8f0);
 }
 .btn-pdi-check {
   background: linear-gradient(135deg, #059669, #0d9488);
   color: #ffffff !important;
   font-weight: 800;
-  font-size: 1.1rem;
-  padding: 12px 24px;
+  font-size: 1.05rem;
+  padding: 10px 22px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -1514,10 +1878,10 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   box-shadow: 0 8px 20px rgba(5, 150, 105, 0.45);
 }
 .pdi-status-msg {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: 6px 14px;
 }
 .pdi-status-msg.correct {
   background: rgba(16, 185, 129, 0.15);
@@ -1530,7 +1894,9 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   border: 1.5px solid #ef4444;
 }
 
-/* MODE PISSARRA COMPLETA (PDI FULLSCREEN) — AJUST AL 100% DE LA PANTALLA */
+/* ==========================================================
+   4. AJUST AL 100% DE LA PANTALLA EN PANTALLA COMPLETA
+   ========================================================== */
 html.pdi-fullscreen-locked,
 body.pdi-fullscreen-mode {
   height: 100vh !important;
@@ -1540,38 +1906,13 @@ body.pdi-fullscreen-mode {
   padding: 0 !important;
 }
 
-body.pdi-fullscreen-mode {
-  font-size: clamp(0.95rem, 1.2vw, 1.25rem);
-}
-
-/* Ocultar elements innecessaris en pantalla completa per guanyar el 100% d'espai vertical */
-body.pdi-fullscreen-mode h1:first-of-type,
+body.pdi-fullscreen-mode header.md-header,
 body.pdi-fullscreen-mode aside.sidebar,
 body.pdi-fullscreen-mode .top-act-jump-wrap,
-body.pdi-fullscreen-mode #floating-activities-pill,
-body.pdi-fullscreen-mode .pdi-intro-header,
-body.pdi-fullscreen-mode .pdi-intro-card p,
-body.pdi-fullscreen-mode .pdi-nav-label {
+body.pdi-fullscreen-mode #floating-activities-pill {
   display: none !important;
 }
 
-/* Ocultar / autoamagar menú superior de navegació */
-body.pdi-fullscreen-mode header.md-header {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transform: translateY(-100%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
-}
-body.pdi-fullscreen-mode header.md-header:hover,
-body.pdi-fullscreen-mode header.md-header:focus-within {
-  transform: translateY(0);
-}
-
-/* Contenidor principal ajustat exactament a la pantalla sense scroll de pàgina */
 body.pdi-fullscreen-mode .layout {
   height: 100vh !important;
   max-height: 100vh !important;
@@ -1595,49 +1936,18 @@ body.pdi-fullscreen-mode main.content {
   overflow: hidden !important;
 }
 
-/* Barra superior ultra-compacta en mode pissarra */
-body.pdi-fullscreen-mode .pdi-intro-card {
+body.pdi-fullscreen-mode .pdi-game-view {
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+}
+
+body.pdi-fullscreen-mode .pdi-game-topbar {
+  margin-bottom: 8px !important;
   padding: 6px 14px !important;
-  margin-bottom: 4px !important;
-  border-radius: 10px !important;
-  border-width: 1px !important;
-}
-body.pdi-fullscreen-mode .pdi-toolbar {
-  margin-top: 0 !important;
-  gap: 8px !important;
-}
-body.pdi-fullscreen-mode .btn-pdi-tool {
-  padding: 6px 12px !important;
-  font-size: 0.85rem !important;
 }
 
-/* Selectors compactes en una línia */
-body.pdi-fullscreen-mode .pdi-unit-nav-wrap {
-  margin: 2px 0 4px 0 !important;
-}
-body.pdi-fullscreen-mode .pdi-unit-pills {
-  gap: 6px !important;
-}
-body.pdi-fullscreen-mode .pdi-pill {
-  padding: 4px 10px !important;
-  font-size: 0.8rem !important;
-}
-
-body.pdi-fullscreen-mode .pdi-subnav-wrap {
-  margin: 2px 0 6px 0 !important;
-  padding: 4px 10px !important;
-  border-radius: 8px !important;
-}
-body.pdi-fullscreen-mode .pdi-subpills {
-  gap: 6px !important;
-}
-body.pdi-fullscreen-mode .pdi-subpill {
-  padding: 4px 10px !important;
-  font-size: 0.8rem !important;
-}
-
-/* Contenidor de l'activitat activa: ocupa tot l'espai restant de la pantalla */
-body.pdi-fullscreen-mode .pdi-board-container {
+body.pdi-fullscreen-mode .pdi-game-stage {
   flex: 1 1 auto !important;
   min-height: 0 !important;
   display: flex !important;
@@ -1646,153 +1956,57 @@ body.pdi-fullscreen-mode .pdi-board-container {
 }
 
 body.pdi-fullscreen-mode .pdi-activity-card.active {
-  display: flex !important;
-  flex-direction: column !important;
   flex: 1 1 auto !important;
   min-height: 0 !important;
   height: 100% !important;
   padding: 12px 18px !important;
   margin-bottom: 0 !important;
   border-radius: 14px !important;
-  justify-content: space-between !important;
   overflow: hidden !important;
-  box-sizing: border-box !important;
+  justify-content: space-between !important;
 }
 
-body.pdi-fullscreen-mode .pdi-act-title {
-  margin-bottom: 4px !important;
-}
-body.pdi-fullscreen-mode .pdi-act-title h3 {
-  font-size: clamp(1rem, 1.3vw, 1.25rem) !important;
-}
-body.pdi-fullscreen-mode .pdi-act-title .act-num {
-  font-size: 0.75rem !important;
-  padding: 2px 8px !important;
-}
-body.pdi-fullscreen-mode .pdi-instruction {
-  font-size: clamp(0.85rem, 1vw, 1rem) !important;
-  margin-bottom: 8px !important;
-}
-
-/* Zona manipulativa adaptable a l'alt de pantalla */
 body.pdi-fullscreen-mode .pdi-categories-wrapper,
 body.pdi-fullscreen-mode .pdi-order-wrapper {
-  display: flex !important;
-  flex-direction: column !important;
   flex: 1 1 auto !important;
   min-height: 0 !important;
-  gap: 8px !important;
   margin-bottom: 4px !important;
   overflow: hidden !important;
 }
 
-/* Bústia d'elements inicials */
 body.pdi-fullscreen-mode .pdi-source-pool {
   flex: 0 0 auto !important;
-  max-height: 26vh !important;
+  max-height: 25vh !important;
   overflow-y: auto !important;
   padding: 8px 12px !important;
-  margin-bottom: 4px !important;
-  gap: 8px !important;
-  border-radius: 10px !important;
-  min-height: 48px !important;
+  min-height: 45px !important;
 }
 
-/* Graella de caixes de destí */
-body.pdi-fullscreen-mode .pdi-drop-boxes-grid {
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-  overflow-y: auto !important;
-  gap: 8px !important;
-}
-body.pdi-fullscreen-mode .pdi-drop-box {
-  min-height: 0 !important;
-  flex: 1 1 auto !important;
-  padding: 8px 12px !important;
-  border-radius: 12px !important;
-}
-body.pdi-fullscreen-mode .pdi-drop-box .box-header {
-  font-size: clamp(0.85rem, 1.1vw, 1.05rem) !important;
-  margin-bottom: 6px !important;
-  padding-bottom: 4px !important;
-}
-body.pdi-fullscreen-mode .pdi-drop-box .box-items {
-  overflow-y: auto !important;
-  gap: 4px !important;
-}
-
-/* Columnes d'ordre seqüencial */
+body.pdi-fullscreen-mode .pdi-drop-boxes-grid,
 body.pdi-fullscreen-mode .pdi-slots-column {
   flex: 1 1 auto !important;
   min-height: 0 !important;
   overflow-y: auto !important;
-  gap: 6px !important;
-}
-body.pdi-fullscreen-mode .pdi-slot {
-  min-height: 40px !important;
-  padding: 4px 12px !important;
   gap: 8px !important;
-  border-radius: 10px !important;
-}
-body.pdi-fullscreen-mode .pdi-slot .slot-badge {
-  font-size: 0.75rem !important;
-  padding: 2px 6px !important;
-}
-body.pdi-fullscreen-mode .pdi-slot .slot-hint {
-  font-size: 0.82rem !important;
 }
 
-/* Elements arrossegables adaptats */
-body.pdi-fullscreen-mode .pdi-item {
-  padding: clamp(6px, 0.8vw, 10px) clamp(10px, 1.2vw, 16px) !important;
-  font-size: clamp(0.88rem, 1.15vw, 1.15rem) !important;
-  border-radius: 8px !important;
-}
-body.pdi-fullscreen-mode .num-item {
-  font-size: clamp(1.05rem, 1.4vw, 1.35rem) !important;
-  padding: 6px 14px !important;
-}
-body.pdi-fullscreen-mode .frac-item {
-  font-size: clamp(1rem, 1.3vw, 1.25rem) !important;
-  padding: 6px 12px !important;
+body.pdi-fullscreen-mode .pdi-drop-box {
+  min-height: 0 !important;
+  flex: 1 1 auto !important;
+  padding: 8px 12px !important;
 }
 
-/* Peu de comprovació sempre visible a la part inferior */
 body.pdi-fullscreen-mode .pdi-footer-feedback {
   flex: 0 0 auto !important;
   margin-top: 4px !important;
   padding-top: 6px !important;
 }
-body.pdi-fullscreen-mode .btn-pdi-check {
-  font-size: clamp(0.9rem, 1.15vw, 1.1rem) !important;
-  padding: 8px 20px !important;
-  border-radius: 10px !important;
-}
-body.pdi-fullscreen-mode .pdi-status-msg {
-  font-size: clamp(0.9rem, 1.15vw, 1.1rem) !important;
-  padding: 6px 12px !important;
-}
 
-/* Escales Manuals (Zoom) per a pantalles amb diferents resolucions */
-body[data-pdi-scale="compact"] {
-  font-size: 0.9rem !important;
-}
-body[data-pdi-scale="compact"] .pdi-item {
-  padding: 4px 10px !important;
-  font-size: 0.88rem !important;
-}
-body[data-pdi-scale="large"] {
-  font-size: 1.3rem !important;
-}
-body[data-pdi-scale="large"] .pdi-item {
-  padding: 12px 20px !important;
-  font-size: 1.25rem !important;
-}
-/* Botó flotant d'eixida discreta en pantalla completa */
+/* Botó d'eixida flotant en pantalla completa */
 .pdi-exit-floating-btn {
   display: none;
   position: fixed;
-  top: 16px;
+  top: 14px;
   right: 18px;
   z-index: 9999;
   background: rgba(15, 23, 42, 0.85);
@@ -1800,9 +2014,9 @@ body[data-pdi-scale="large"] .pdi-item {
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 750;
   cursor: pointer;
   align-items: center;
@@ -1821,11 +2035,13 @@ body.pdi-fullscreen-mode .pdi-exit-floating-btn {
 }
 </style>
 
-<!-- LÒGICA DE LA PISSARRA INTERACTIVA I SONS SYNTH -->
+<!-- LÒGICA DE LA PISSARRA INTERACTIVA -->
 <script>
 let pdiSoundEnabled = true;
 let selectedTapItem = null;
-let currentActiveUnit = 'ud1';
+let currentGameActId = 'act-ud1-1';
+const allActivities = ["act-ud1-1", "act-ud1-2", "act-ud1-3", "act-ud1-4", "act-ud1-5", "act-ud2-1", "act-ud2-2", "act-ud2-3", "act-ud2-4", "act-ud2-5", "act-ud3-1", "act-ud3-2", "act-ud3-3", "act-ud3-4", "act-ud3-5", "act-ud4-1", "act-ud4-2", "act-ud4-3", "act-ud4-4", "act-ud4-5", "act-ud5-1", "act-ud5-2", "act-ud5-3", "act-ud5-4", "act-ud5-5", "act-ud6-1", "act-ud6-2", "act-ud6-3", "act-ud6-4", "act-ud6-5", "act-ud7-1", "act-ud7-2", "act-ud7-3", "act-ud7-4", "act-ud7-5", "act-ud8-1", "act-ud8-2", "act-ud8-3", "act-ud8-4", "act-ud8-5", "act-ud9-1", "act-ud9-2", "act-ud9-3", "act-ud9-4", "act-ud9-5"];
+const activitiesMeta = {"act-ud1-1": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 1: Jerarquia"}, "act-ud1-2": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 2: Pot\u00e8ncies"}, "act-ud1-3": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 3: Ordres Unitats"}, "act-ud1-4": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 4: Propietats"}, "act-ud1-5": {"unit": "ud1", "unitTitle": "UD1", "title": "Repte 5: Arrels"}, "act-ud2-1": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 1: Classificar \u00d2rgans"}, "act-ud2-2": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 2: Viatge Aliments"}, "act-ud2-3": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 3: La Sang i Vasos"}, "act-ud2-4": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 4: Nivells de Vida"}, "act-ud2-5": {"unit": "ud2", "unitTitle": "UD2", "title": "Repte 5: Nutrients"}, "act-ud3-1": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 1: Positiu o Negatiu"}, "act-ud3-2": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 2: Recta Num\u00e8rica"}, "act-ud3-3": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 3: Regla Signes"}, "act-ud3-4": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 4: Suma i Resta"}, "act-ud3-5": {"unit": "ud3", "unitTitle": "UD3", "title": "Repte 5: Valor Absolut"}, "act-ud4-1": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 1: Primers / Compostos"}, "act-ud4-2": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 2: Criteris Divisibilitat"}, "act-ud4-3": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 3: M\u00faltiples vs Divisors"}, "act-ud4-4": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 4: Factors Primers"}, "act-ud4-5": {"unit": "ud4", "unitTitle": "UD4", "title": "Repte 5: MCD o MCM?"}, "act-ud5-1": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 1: Tipus Fraccions"}, "act-ud5-2": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 2: Equival\u00e8ncies"}, "act-ud5-3": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 3: Ordenar Fraccions"}, "act-ud5-4": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 4: Fracci\u00f3 Quantitat"}, "act-ud5-5": {"unit": "ud5", "unitTitle": "UD5", "title": "Repte 5: Suma / Resta"}, "act-ud6-1": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 1: Rocosos vs Gasosos"}, "act-ud6-2": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 2: Dist\u00e0ncia al Sol"}, "act-ud6-3": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 3: Escala C\u00f2smica"}, "act-ud6-4": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 4: Tipus d'Astres"}, "act-ud6-5": {"unit": "ud6", "unitTitle": "UD6", "title": "Repte 5: Roques Espacials"}, "act-ud7-1": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 1: Capes Geosfera"}, "act-ud7-2": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 2: Rotaci\u00f3 / Traslaci\u00f3"}, "act-ud7-3": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 3: Fases de la Lluna"}, "act-ud7-4": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 4: Tipus de Roques"}, "act-ud7-5": {"unit": "ud7", "unitTitle": "UD7", "title": "Repte 5: Tipus d'Eclipsi"}, "act-ud8-1": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 1: Capes Atmosfera"}, "act-ud8-2": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 2: Aparells Meteorol\u00f2gics"}, "act-ud8-3": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 3: Gasos de l'Aire"}, "act-ud8-4": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 4: Contaminaci\u00f3 Aire"}, "act-ud8-5": {"unit": "ud8", "unitTitle": "UD8", "title": "Repte 5: Tipus de Precipitaci\u00f3"}, "act-ud9-1": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 1: Cicle Hidrol\u00f2gic"}, "act-ud9-2": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 2: Aigua Dol\u00e7a vs Salada"}, "act-ud9-3": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 3: Canvis d'Estat"}, "act-ud9-4": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 4: Trams d'un Riu"}, "act-ud9-5": {"unit": "ud9", "unitTitle": "UD9", "title": "Repte 5: Cicle Urb\u00e0 Aigua"}};
 
 function playPDISound(type) {
   if (!pdiSoundEnabled) return;
@@ -1864,42 +2080,22 @@ function playPDISound(type) {
       osc.stop(ctx.currentTime + 0.35);
     }
   } catch (e) {
-    console.warn('Audio no permès pel navegador:', e);
+    console.warn('Audio no permès:', e);
   }
 }
 
 function togglePDISound() {
   pdiSoundEnabled = !pdiSoundEnabled;
-  const icon = document.getElementById('sound-icon');
-  const text = document.getElementById('sound-text');
+  const sIcons = [document.getElementById('sound-icon'), document.getElementById('game-sound-btn')];
+  const sText = document.getElementById('sound-text');
+  
   if (pdiSoundEnabled) {
-    icon.textContent = '🔊';
-    text.textContent = 'So Activat';
+    sIcons.forEach(el => { if (el) el.textContent = '🔊'; });
+    if (sText) sText.textContent = 'So Activat';
     playPDISound('drop');
   } else {
-    icon.textContent = '🔇';
-    text.textContent = 'So Silenciat';
-  }
-}
-
-
-let pdiScaleModes = ['auto', 'compact', 'large'];
-let currentScaleIdx = 0;
-
-function cyclePDIScale() {
-  currentScaleIdx = (currentScaleIdx + 1) % pdiScaleModes.length;
-  const mode = pdiScaleModes[currentScaleIdx];
-  const textEl = document.getElementById('scale-text');
-  
-  if (mode === 'auto') {
-    document.body.removeAttribute('data-pdi-scale');
-    if (textEl) textEl.textContent = 'Mida: Auto';
-  } else if (mode === 'compact') {
-    document.body.setAttribute('data-pdi-scale', 'compact');
-    if (textEl) textEl.textContent = 'Mida: Compacta';
-  } else if (mode === 'large') {
-    document.body.setAttribute('data-pdi-scale', 'large');
-    if (textEl) textEl.textContent = 'Mida: Gran';
+    sIcons.forEach(el => { if (el) el.textContent = '🔇'; });
+    if (sText) sText.textContent = 'So Silenciat';
   }
 }
 
@@ -1907,24 +2103,12 @@ function togglePDIFullscreen(explicitState) {
   if (typeof explicitState === 'boolean') {
     if (explicitState) document.body.classList.add('pdi-fullscreen-mode');
     else document.body.classList.remove('pdi-fullscreen-mode');
-  document.documentElement.classList.toggle('pdi-fullscreen-locked', document.body.classList.contains('pdi-fullscreen-mode'));
   } else {
     document.body.classList.toggle('pdi-fullscreen-mode');
-  document.documentElement.classList.toggle('pdi-fullscreen-locked', document.body.classList.contains('pdi-fullscreen-mode'));
   }
+  document.documentElement.classList.toggle('pdi-fullscreen-locked', document.body.classList.contains('pdi-fullscreen-mode'));
 
   const isFull = document.body.classList.contains('pdi-fullscreen-mode');
-  const btn = document.getElementById('btn-fullscreen-toggle');
-  if (btn) {
-    if (isFull) {
-      btn.querySelector('.tool-icon').textContent = '🪟';
-      btn.querySelector('.tool-text').textContent = 'Eixir de Pissarra Completa';
-    } else {
-      btn.querySelector('.tool-icon').textContent = '🖥️';
-      btn.querySelector('.tool-text').textContent = 'Mode Pissarra Completa';
-    }
-  }
-
   if (isFull) {
     if (document.documentElement.requestFullscreen && !document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch(() => {});
@@ -1943,52 +2127,55 @@ document.addEventListener('fullscreenchange', () => {
   }
 });
 
-function selectPDIUnit(unitKey) {
-  currentActiveUnit = unitKey;
-  document.querySelectorAll('.pdi-pill').forEach(b => {
-    if (b.getAttribute('onclick').includes(`'${unitKey}'`)) {
-      b.classList.add('active');
-    } else {
-      b.classList.remove('active');
-    }
-  });
-
-  const cardsOfUnit = Array.from(document.querySelectorAll(`.pdi-activity-card[data-unit="${unitKey}"]`));
-  const subContainer = document.getElementById('pdi-subpills-container');
-  subContainer.innerHTML = '';
-
-  cardsOfUnit.forEach((card, index) => {
-    const btn = document.createElement('button');
-    btn.className = 'pdi-subpill' + (index === 0 ? ' active' : '');
-    btn.textContent = card.dataset.title || `Repte ${index + 1}`;
-    btn.onclick = () => showPDICard(card.id);
-    subContainer.appendChild(btn);
-  });
-
-  if (cardsOfUnit.length > 0) {
-    showPDICard(cardsOfUnit[0].id);
-  }
+// Gestió de Vistes (Dashboard vs Game)
+function showPDIDashboard() {
+  document.getElementById('pdi-dashboard').style.display = 'block';
+  document.getElementById('pdi-game-view').style.display = 'none';
+  document.querySelectorAll('.pdi-activity-card').forEach(c => c.classList.remove('active'));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-function showPDICard(cardId) {
+function launchGameActivity(actId) {
+  currentGameActId = actId;
+  document.getElementById('pdi-dashboard').style.display = 'none';
+  document.getElementById('pdi-game-view').style.display = 'flex';
+
   document.querySelectorAll('.pdi-activity-card').forEach(c => c.classList.remove('active'));
-  const target = document.getElementById(cardId);
-  if (target) {
-    target.classList.add('active');
-    resetPDIActivity(cardId);
+  const targetCard = document.getElementById(actId);
+  if (targetCard) {
+    targetCard.classList.add('active');
+    resetPDIActivity(actId);
   }
-  document.querySelectorAll('.pdi-subpill').forEach(btn => {
-    if (btn.textContent === (target ? target.dataset.title : '')) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
-  });
+
+  // Actualitzar metadades de la barra superior
+  const meta = activitiesMeta[actId] || {};
+  const unitBadge = document.getElementById('game-unit-badge');
+  const titleEl = document.getElementById('game-act-title');
+  const counterEl = document.getElementById('game-counter');
+
+  if (unitBadge) unitBadge.textContent = meta.unitTitle || 'UD';
+  if (titleEl) titleEl.textContent = meta.title || 'Repte';
+
+  // Comptador relatiu dins de la unitat
+  const currentIdx = allActivities.indexOf(actId);
+  const unitActs = allActivities.filter(id => activitiesMeta[id].unit === meta.unit);
+  const relIdx = unitActs.indexOf(actId) + 1;
+  if (counterEl) counterEl.textContent = `${relIdx} / ${unitActs.length}`;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function navRelativeActivity(direction) {
+  const currentIdx = allActivities.indexOf(currentGameActId);
+  if (currentIdx === -1) return;
+  let nextIdx = currentIdx + direction;
+  if (nextIdx < 0) nextIdx = allActivities.length - 1;
+  if (nextIdx >= allActivities.length) nextIdx = 0;
+  launchGameActivity(allActivities[nextIdx]);
 }
 
 function resetCurrentPDIActivity() {
-  const activeCard = document.querySelector('.pdi-activity-card.active');
-  if (activeCard) resetPDIActivity(activeCard.id);
+  if (currentGameActId) resetPDIActivity(currentGameActId);
 }
 
 function resetPDIActivity(actId) {
@@ -2020,10 +2207,18 @@ function resetPDIActivity(actId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const targetUnit = localStorage.getItem('pdi-target-unit') || 'ud1';
-  localStorage.removeItem('pdi-target-unit');
-  selectPDIUnit(targetUnit);
   initPDIDragAndDrop();
+  const targetUnit = localStorage.getItem('pdi-target-unit');
+  if (targetUnit) {
+    localStorage.removeItem('pdi-target-unit');
+    const firstActOfUnit = allActivities.find(id => activitiesMeta[id].unit === targetUnit);
+    if (firstActOfUnit) {
+      launchGameActivity(firstActOfUnit);
+      return;
+    }
+  }
+  // Per defecte mostrar el dashboard
+  showPDIDashboard();
 });
 
 function initPDIDragAndDrop() {
