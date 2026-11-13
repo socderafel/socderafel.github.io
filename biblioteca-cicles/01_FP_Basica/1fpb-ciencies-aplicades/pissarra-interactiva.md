@@ -17,8 +17,8 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <p>Tria una unitat didàctica per a jugar a la pissarra digital de classe o amb la tauleta. Sense menús que molesten dalt!</p>
     </div>
     <div class="dash-quick-tools">
-      <button class="btn-pdi-tool" onclick="togglePDISound()"><span id="sound-icon">🔊</span> <span id="sound-text">So Activat</span></button>
-      <button class="btn-pdi-tool" onclick="togglePDIFullscreen()">🖥️ Pantalla Completa</button>
+      <button class="btn-pdi-tool" id="btn-sound-toggle" onclick="togglePDISound()"><span id="sound-icon">🔊</span> <span id="sound-text">So Activat</span></button>
+      <button class="btn-pdi-tool" id="btn-fs-toggle" onclick="togglePDIFullscreen()">🖥️ Pantalla Completa</button>
     </div>
   </div>
 
@@ -31,23 +31,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">🔢</span> <h3>UD1 · Els Nombres Naturals</h3></div>
       <p class="card-desc">Sistema decimal, operacions bàsiques, jerarquia, potències i arrels.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-1')">
+        <button class="btn-launch-act" data-act-id="act-ud1-1" onclick="launchGameActivity('act-ud1-1')">
           <span class="act-idx">🧩 Jerarquia</span>
           <span class="act-name">R1 · Ordre</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud1-2" onclick="launchGameActivity('act-ud1-2')">
           <span class="act-idx">⚡ Potències V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud1-3" onclick="launchGameActivity('act-ud1-3')">
           <span class="act-idx">🕵️ Troba l'Intrús</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud1-4" onclick="launchGameActivity('act-ud1-4')">
           <span class="act-idx">🔢 Teclat Mental</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud1-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud1-5" onclick="launchGameActivity('act-ud1-5')">
           <span class="act-idx">🪞 Propietats 3D</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -61,23 +61,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">➕➖</span> <h3>UD2 · Els Nombres Enters</h3></div>
       <p class="card-desc">Signes positius i negatius, recta numèrica, regla dels signes i parèntesis.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-1')">
+        <button class="btn-launch-act" data-act-id="act-ud2-1" onclick="launchGameActivity('act-ud2-1')">
           <span class="act-idx">🧩 Positius vs Negatius</span>
           <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud2-2" onclick="launchGameActivity('act-ud2-2')">
           <span class="act-idx">⚡ Regla Signes V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud2-3" onclick="launchGameActivity('act-ud2-3')">
           <span class="act-idx">🕵️ Troba l'Intrús</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud2-4" onclick="launchGameActivity('act-ud2-4')">
           <span class="act-idx">🔢 El Saldo del Banc</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud2-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud2-5" onclick="launchGameActivity('act-ud2-5')">
           <span class="act-idx">🪞 Recta Numèrica 3D</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -91,23 +91,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">🥧</span> <h3>UD3 · Fraccions i Decimals</h3></div>
       <p class="card-desc">Fraccions pròpies i impròpies, decimals, percentatges i equivalències.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-1')">
+        <button class="btn-launch-act" data-act-id="act-ud3-1" onclick="launchGameActivity('act-ud3-1')">
           <span class="act-idx">🧩 Tipus de Fraccions</span>
           <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud3-2" onclick="launchGameActivity('act-ud3-2')">
           <span class="act-idx">⚡ Equivalències V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud3-3" onclick="launchGameActivity('act-ud3-3')">
           <span class="act-idx">🕵️ Fraccions Equivalents</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud3-4" onclick="launchGameActivity('act-ud3-4')">
           <span class="act-idx">🔢 Suma de Fraccions</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud3-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud3-5" onclick="launchGameActivity('act-ud3-5')">
           <span class="act-idx">🪞 Famílies Decimals</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -121,23 +121,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">⚖️</span> <h3>UD4 · Proporcionalitat i Percentatges</h3></div>
       <p class="card-desc">Proporcionalitat directa i inversa, regla de tres, percentatges i IVA.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-1')">
+        <button class="btn-launch-act" data-act-id="act-ud4-1" onclick="launchGameActivity('act-ud4-1')">
           <span class="act-idx">🧩 Directa o Inversa</span>
           <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud4-2" onclick="launchGameActivity('act-ud4-2')">
           <span class="act-idx">⚡ Percentatges V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud4-3" onclick="launchGameActivity('act-ud4-3')">
           <span class="act-idx">🕵️ Rebaixes de Taller</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud4-4" onclick="launchGameActivity('act-ud4-4')">
           <span class="act-idx">🔢 Factura amb IVA</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud4-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud4-5" onclick="launchGameActivity('act-ud4-5')">
           <span class="act-idx">🪞 Escales i Regles 3D</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -151,23 +151,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">📐</span> <h3>UD5 · Àlgebra Bàsica i Equacions</h3></div>
       <p class="card-desc">Llenguatge algebraic, monomis, simplificació i resolució d'equacions.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-1')">
+        <button class="btn-launch-act" data-act-id="act-ud5-1" onclick="launchGameActivity('act-ud5-1')">
           <span class="act-idx">🧩 Aïllar la X</span>
           <span class="act-name">R1 · Ordre</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud5-2" onclick="launchGameActivity('act-ud5-2')">
           <span class="act-idx">⚡ Monomis V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud5-3" onclick="launchGameActivity('act-ud5-3')">
           <span class="act-idx">🕵️ Monomis Semblants</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud5-4" onclick="launchGameActivity('act-ud5-4')">
           <span class="act-idx">🔢 Endevina la X</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud5-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud5-5" onclick="launchGameActivity('act-ud5-5')">
           <span class="act-idx">🪞 Traductor a Àlgebra</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -181,23 +181,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">🔬</span> <h3>UD6 · El Mètode Científic i la Mesura</h3></div>
       <p class="card-desc">Passos del mètode científic, Sistema Internacional, instruments i conversió d'unitats.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-1')">
+        <button class="btn-launch-act" data-act-id="act-ud6-1" onclick="launchGameActivity('act-ud6-1')">
           <span class="act-idx">🧩 Mètode Científic</span>
           <span class="act-name">R1 · Ordre</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud6-2" onclick="launchGameActivity('act-ud6-2')">
           <span class="act-idx">⚡ Unitats SI V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud6-3" onclick="launchGameActivity('act-ud6-3')">
           <span class="act-idx">🕵️ Instruments de Mesura</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud6-4" onclick="launchGameActivity('act-ud6-4')">
           <span class="act-idx">🔢 Canvi d'Unitats</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud6-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud6-5" onclick="launchGameActivity('act-ud6-5')">
           <span class="act-idx">🪞 Prefixos SI 3D</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -211,23 +211,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">🧪</span> <h3>UD7 · La Matèria i les Seues Propietats</h3></div>
       <p class="card-desc">Estats de la matèria, canvis d'estat, mescles homogènies/heterogènies i densitat.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-1')">
+        <button class="btn-launch-act" data-act-id="act-ud7-1" onclick="launchGameActivity('act-ud7-1')">
           <span class="act-idx">🧩 Tipus de Mescles</span>
           <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud7-2" onclick="launchGameActivity('act-ud7-2')">
           <span class="act-idx">⚡ Canvis d'Estat V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud7-3" onclick="launchGameActivity('act-ud7-3')">
           <span class="act-idx">🕵️ Separació de Mescles</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud7-4" onclick="launchGameActivity('act-ud7-4')">
           <span class="act-idx">🔢 Càlcul de Densitat</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud7-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud7-5" onclick="launchGameActivity('act-ud7-5')">
           <span class="act-idx">🪞 Estats Matèria 3D</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -241,23 +241,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">🌍</span> <h3>UD8 · L'Univers i la Terra</h3></div>
       <p class="card-desc">Sistema Solar, moviments de rotació i translació, estacions i capes de la Terra.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-1')">
+        <button class="btn-launch-act" data-act-id="act-ud8-1" onclick="launchGameActivity('act-ud8-1')">
           <span class="act-idx">🧩 Planetes del Sol</span>
           <span class="act-name">R1 · Ordre</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud8-2" onclick="launchGameActivity('act-ud8-2')">
           <span class="act-idx">⚡ Estacions V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud8-3" onclick="launchGameActivity('act-ud8-3')">
           <span class="act-idx">🕵️ Planetes Rocosos</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud8-4" onclick="launchGameActivity('act-ud8-4')">
           <span class="act-idx">🔢 Cicle Lunar</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud8-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud8-5" onclick="launchGameActivity('act-ud8-5')">
           <span class="act-idx">🪞 Capes de la Terra</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -271,23 +271,23 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="card-title"><span class="unit-icon">🩺</span> <h3>UD9 · La Salut, el Cos Humà i el Medi Ambient</h3></div>
       <p class="card-desc">Aparells del cos humà, primers auxilis, reciclatge i prevenció de riscos laborals.</p>
       <div class="card-acts-list">
-        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-1')">
+        <button class="btn-launch-act" data-act-id="act-ud9-1" onclick="launchGameActivity('act-ud9-1')">
           <span class="act-idx">🧩 Contenidors Reciclatge</span>
           <span class="act-name">R1 · Classificació</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-2')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud9-2" onclick="launchGameActivity('act-ud9-2')">
           <span class="act-idx">⚡ Primers Auxilis V/F</span>
           <span class="act-name">R2 · Speed Quiz</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-3')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud9-3" onclick="launchGameActivity('act-ud9-3')">
           <span class="act-idx">🕵️ EPI al Taller</span>
           <span class="act-name">R3 · L'Intrús</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-4')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud9-4" onclick="launchGameActivity('act-ud9-4')">
           <span class="act-idx">🔢 Pulsacions per Minut</span>
           <span class="act-name">R4 · Càlcul Tàctil</span>
           <span class="act-arrow">➔</span>
-        </button>        <button class="btn-launch-act" onclick="launchGameActivity('act-ud9-5')">
+        </button>        <button class="btn-launch-act" data-act-id="act-ud9-5" onclick="launchGameActivity('act-ud9-5')">
           <span class="act-idx">🪞 Protocol P.A.S. 3D</span>
           <span class="act-name">R5 · Targetes 3D</span>
           <span class="act-arrow">➔</span>
@@ -2342,9 +2342,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
   flex-shrink: 0;
 }
 
-/* -------------------------------------------
-   FORMAT 1: ORDRE & CATEGORIES (DRAG & DROP)
-   ------------------------------------------- */
+/* FORMAT 1: DRAG & DROP */
 .pdi-order-wrapper {
   display: flex;
   gap: 1.5rem;
@@ -2501,9 +2499,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
 .pdi-status-msg.correct { color: var(--pdi-success); }
 .pdi-status-msg.incorrect { color: var(--pdi-danger); }
 
-/* -------------------------------------------
-   FORMAT 2: SPEED QUIZ (VERITAT / FALS)
-   ------------------------------------------- */
+/* FORMAT 2: SPEED QUIZ */
 .pdi-speedquiz-container {
   display: flex;
   flex-direction: column;
@@ -2617,9 +2613,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
   color: #991b1b;
 }
 
-/* -------------------------------------------
-   FORMAT 3: TROBA L'INTRÚS
-   ------------------------------------------- */
+/* FORMAT 3: TROBA L'INTRÚS */
 .pdi-intrus-container {
   display: flex;
   flex-direction: column;
@@ -2698,9 +2692,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
   color: #991b1b;
 }
 
-/* -------------------------------------------
-   FORMAT 4: TECLAT MENTAL TÀCTIL
-   ------------------------------------------- */
+/* FORMAT 4: TECLAT MENTAL TÀCTIL */
 .pdi-keypad-container {
   display: flex;
   flex-direction: column;
@@ -2835,9 +2827,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
   color: #991b1b;
 }
 
-/* -------------------------------------------
-   FORMAT 5: TARGETES GIRATÒRIES 3D
-   ------------------------------------------- */
+/* FORMAT 5: TARGETES GIRATÒRIES 3D */
 .pdi-flipcards-container {
   display: flex;
   flex-direction: column;
@@ -2958,7 +2948,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Media queries per a pantalles menudes / tauletes */
+/* Media queries */
 @media (max-width: 768px) {
   .intrus-cards-grid { grid-template-columns: 1fr; }
   .sq-buttons-row { flex-direction: column; gap: 1rem; }
@@ -2970,580 +2960,7 @@ body.pdi-fullscreen-mode #pdi-game-view {
 </style>
 
 <!-- ==========================================
-     MOTOR JAVASCRIPT DE JOC I ÀUDIO
+     INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN
      ========================================== -->
-<script>
-// Estat Global
-let currentPDIActivityId = 'act-ud1-1';
-let pdiAudioEnabled = true;
-let pdiSpeedStreak = 0;
-let pdiAudioCtx = null;
-let keypadInputs = {};
-
-// Inicialitzador d'Àudio Web
-function getAudioContext() {
-  if (!pdiAudioCtx) {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (AudioContext) pdiAudioCtx = new AudioContext();
-  }
-  if (pdiAudioCtx && pdiAudioCtx.state === 'suspended') {
-    pdiAudioCtx.resume();
-  }
-  return pdiAudioCtx;
-}
-
-function playPDISound(type) {
-  if (!pdiAudioEnabled) return;
-  try {
-    const ctx = getAudioContext();
-    if (!ctx) return;
-    const now = ctx.currentTime;
-
-    if (type === 'tap') {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(440, now);
-      osc.frequency.exponentialRampToValueAtTime(880, now + 0.05);
-      gain.gain.setValueAtTime(0.2, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.05);
-    } else if (type === 'flip') {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(300, now);
-      osc.frequency.exponentialRampToValueAtTime(600, now + 0.12);
-      gain.gain.setValueAtTime(0.15, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.12);
-    } else if (type === 'correct') {
-      // Acord triomfant C-E-G
-      [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now + i * 0.08);
-        gain.gain.setValueAtTime(0.25, now + i * 0.08);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.35);
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.start(now + i * 0.08);
-        osc.stop(now + i * 0.08 + 0.35);
-      });
-      triggerConfetti();
-    } else if (type === 'error') {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(160, now);
-      osc.frequency.linearRampToValueAtTime(90, now + 0.25);
-      gain.gain.setValueAtTime(0.3, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.25);
-    }
-  } catch(e) {
-    console.warn("Àudio no disponible:", e);
-  }
-}
-
-// Alternar So
-function togglePDISound() {
-  pdiAudioEnabled = !pdiAudioEnabled;
-  const icons = ['#sound-icon', '#game-sound-btn'];
-  icons.forEach(sel => {
-    const el = document.querySelector(sel);
-    if (el) el.textContent = pdiAudioEnabled ? '🔊' : '🔇';
-  });
-  const txt = document.getElementById('sound-text');
-  if (txt) txt.textContent = pdiAudioEnabled ? 'So Activat' : 'Silenciat';
-  if (pdiAudioEnabled) playPDISound('tap');
-}
-
-// Pantalla Completa
-function togglePDIFullscreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen().catch(() => {});
-    document.body.classList.add('pdi-fullscreen-mode');
-  } else {
-    if (document.exitFullscreen) document.exitFullscreen();
-    document.body.classList.remove('pdi-fullscreen-mode');
-  }
-}
-document.addEventListener('fullscreenchange', () => {
-  if (!document.fullscreenElement) {
-    document.body.classList.remove('pdi-fullscreen-mode');
-  }
-});
-
-// Navegació de Vistes
-function showPDIDashboard() {
-  playPDISound('tap');
-  document.getElementById('pdi-dashboard').style.display = 'block';
-  document.getElementById('pdi-game-view').style.display = 'none';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function launchGameActivity(actId) {
-  playPDISound('tap');
-  currentPDIActivityId = actId;
-  document.getElementById('pdi-dashboard').style.display = 'none';
-  const gameView = document.getElementById('pdi-game-view');
-  gameView.style.display = 'flex';
-
-  // Amagar totes i mostrar l'activa
-  document.querySelectorAll('.pdi-activity-card').forEach(c => c.classList.remove('active'));
-  const card = document.getElementById(actId);
-  if (card) {
-    card.classList.add('active');
-    updateGameTopBar(card);
-  }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function updateGameTopBar(card) {
-  const unit = card.getAttribute('data-unit').toUpperCase();
-  const shortTitle = card.getAttribute('data-title');
-  const badge = document.getElementById('game-unit-badge');
-  const title = document.getElementById('game-act-title');
-  const counter = document.getElementById('game-counter');
-
-  if (badge) badge.textContent = unit;
-  if (title) title.textContent = shortTitle;
-
-  // Trobar index relatiu dins de la unitat
-  const cardsInUnit = Array.from(document.querySelectorAll(`.pdi-activity-card[data-unit="${card.getAttribute('data-unit')}"]`));
-  const idx = cardsInUnit.indexOf(card);
-  if (counter) counter.textContent = `${idx + 1} / ${cardsInUnit.length}`;
-}
-
-function navRelativeActivity(delta) {
-  playPDISound('tap');
-  const allCards = Array.from(document.querySelectorAll('.pdi-activity-card'));
-  const currentCard = document.getElementById(currentPDIActivityId);
-  let idx = allCards.indexOf(currentCard);
-  idx += delta;
-  if (idx < 0) idx = allCards.length - 1;
-  if (idx >= allCards.length) idx = 0;
-  launchGameActivity(allCards[idx].id);
-}
-
-function resetCurrentPDIActivity() {
-  playPDISound('tap');
-  const card = document.getElementById(currentPDIActivityId);
-  if (!card) return;
-  const fmt = card.getAttribute('data-format');
-
-  if (fmt === 'order') {
-    const pool = card.querySelector('.pdi-source-pool');
-    const items = Array.from(card.querySelectorAll('.pdi-item'));
-    items.sort(() => Math.random() - 0.5);
-    items.forEach(it => {
-      it.style.borderColor = '#94a3b8';
-      pool.appendChild(it);
-    });
-    const msg = card.querySelector('.pdi-status-msg');
-    if (msg) msg.textContent = '';
-  } else if (fmt === 'category') {
-    const pool = card.querySelector('.pdi-source-pool');
-    const items = Array.from(card.querySelectorAll('.pdi-item'));
-    items.sort(() => Math.random() - 0.5);
-    items.forEach(it => {
-      it.style.borderColor = '#94a3b8';
-      pool.appendChild(it);
-    });
-    const msg = card.querySelector('.pdi-status-msg');
-    if (msg) msg.textContent = '';
-  } else if (fmt === 'speedquiz') {
-    const fb = card.querySelector('.sq-feedback-box');
-    if (fb) fb.style.display = 'none';
-  } else if (fmt === 'intrus') {
-    card.querySelectorAll('.intrus-card').forEach(c => {
-      c.className = 'intrus-card';
-    });
-    const fb = card.querySelector('.intrus-feedback-box');
-    if (fb) fb.style.display = 'none';
-  } else if (fmt === 'keypad') {
-    keypadInputs[card.id] = '';
-    const scr = document.getElementById(`kp-screen-${card.id}`);
-    if (scr) scr.textContent = '--';
-    const fb = card.querySelector('.kp-feedback-box');
-    if (fb) fb.style.display = 'none';
-  } else if (fmt === 'flipcard') {
-    card.querySelectorAll('.flipcard-scene').forEach(c => c.classList.remove('is-flipped'));
-  }
-}
-
-// -------------------------------------------
-// MOTOR FORMAT 1: DRAG & DROP
-// -------------------------------------------
-function checkOrderActivity(cardId) {
-  const card = document.getElementById(cardId);
-  const slots = card.querySelectorAll('.pdi-slot');
-  const pool = card.querySelector('.pdi-source-pool');
-  const remainingInPool = pool.querySelectorAll('.pdi-item').length;
-  const msg = card.querySelector('.pdi-status-msg');
-
-  if (remainingInPool > 0) {
-    msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = `⚠️ Encara queden ${remainingInPool} passos per col·locar en el seu ordre!`;
-    playPDISound('error');
-    return;
-  }
-
-  let isAllCorrect = true;
-  slots.forEach(slot => {
-    const expected = slot.getAttribute('data-slot');
-    const item = slot.querySelector('.pdi-item');
-    if (item && item.getAttribute('data-order') === expected) {
-      item.style.borderColor = '#10b981';
-    } else {
-      isAllCorrect = false;
-      if (item) item.style.borderColor = '#ef4444';
-    }
-  });
-
-  if (isAllCorrect) {
-    msg.className = 'pdi-status-msg correct';
-    msg.textContent = '🎉 Molt bé! Has ordenat tots els passos correctament!';
-    playPDISound('correct');
-  } else {
-    msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = 'Hi ha algun pas fora d'ordre. Revisa els requadres en roig!';
-    playPDISound('error');
-  }
-}
-
-function checkCategoryActivity(cardId) {
-  const card = document.getElementById(cardId);
-  const boxes = card.querySelectorAll('.pdi-drop-box');
-  const pool = card.querySelector('.pdi-source-pool');
-  const remainingInPool = pool.querySelectorAll('.pdi-item').length;
-  const msg = card.querySelector('.pdi-status-msg');
-
-  if (remainingInPool > 0) {
-    msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = `⚠️ Queden ${remainingInPool} elements per classificar a les caixes!`;
-    playPDISound('error');
-    return;
-  }
-
-  let totalItems = 0;
-  let correctItems = 0;
-  boxes.forEach(box => {
-    const boxCat = box.getAttribute('data-cat');
-    const items = box.querySelectorAll('.pdi-item');
-    items.forEach(item => {
-      totalItems++;
-      if (item.getAttribute('data-cat') === boxCat) {
-        correctItems++;
-        item.style.borderColor = '#10b981';
-      } else {
-        item.style.borderColor = '#ef4444';
-      }
-    });
-  });
-
-  if (correctItems === totalItems) {
-    msg.className = 'pdi-status-msg correct';
-    msg.textContent = `🎉 Extraordinari! Has encertat tots ${totalItems}/${totalItems} elements!`;
-    playPDISound('correct');
-  } else {
-    msg.className = 'pdi-status-msg incorrect';
-    msg.textContent = `Has encertat ${correctItems} de ${totalItems}. Els elements en roig estan a la caixa equivocada!`;
-    playPDISound('error');
-  }
-}
-
-// -------------------------------------------
-// MOTOR FORMAT 2: SPEED QUIZ
-// -------------------------------------------
-function answerSpeedQuiz(cardId, userAnswer) {
-  const card = document.getElementById(cardId);
-  const container = card.querySelector('.pdi-speedquiz-container');
-  const isCorrect = (container.getAttribute('data-correct') === 'true');
-  const exp = container.getAttribute('data-exp');
-  const extra = container.getAttribute('data-extra');
-  const fb = container.querySelector('.sq-feedback-box');
-  const streakEl = container.querySelector('.sq-streak-val');
-
-  fb.style.display = 'block';
-
-  if (userAnswer === isCorrect) {
-    pdiSpeedStreak++;
-    playPDISound('correct');
-    fb.className = 'sq-feedback-box correct';
-    fb.innerHTML = `<strong>🎉 ENCERTAT AL PRIMER COP!</strong><br>${exp}<br><small style="color: #047857;">💡 ${extra}</small>`;
-  } else {
-    pdiSpeedStreak = 0;
-    playPDISound('error');
-    fb.className = 'sq-feedback-box incorrect';
-    fb.innerHTML = `<strong>❌ OOOPS! NO ÉS CORRECTE:</strong><br>${exp}<br><small style="color: #b91c1c;">💡 ${extra}</small>`;
-  }
-  if (streakEl) streakEl.textContent = pdiSpeedStreak;
-}
-
-// -------------------------------------------
-// MOTOR FORMAT 3: TROBA L'INTRÚS
-// -------------------------------------------
-function selectIntrus(cardId, cardEl) {
-  const card = document.getElementById(cardId);
-  const isIntrus = (cardEl.getAttribute('data-intrus') === 'true');
-  const hint = cardEl.getAttribute('data-hint');
-  const fb = card.querySelector('.intrus-feedback-box');
-  fb.style.display = 'block';
-
-  if (isIntrus) {
-    cardEl.className = 'intrus-card selected-correct';
-    fb.className = 'intrus-feedback-box correct';
-    fb.innerHTML = `🎉 <strong>MOLT BÉ! HAS CAÇAT L'INTRÚS!</strong><br>${hint}`;
-    playPDISound('correct');
-  } else {
-    cardEl.className = 'intrus-card selected-wrong';
-    fb.className = 'intrus-feedback-box incorrect';
-    fb.innerHTML = `❌ <strong>Aquest element NO és l'intrús:</strong> ${hint}`;
-    playPDISound('error');
-  }
-}
-
-// -------------------------------------------
-// MOTOR FORMAT 4: TECLAT MENTAL TÀCTIL
-// -------------------------------------------
-function pressKeypad(cardId, key) {
-  playPDISound('tap');
-  if (!keypadInputs[cardId]) keypadInputs[cardId] = '';
-  let cur = keypadInputs[cardId];
-
-  if (key === 'C') {
-    cur = '';
-  } else if (key === 'DEL') {
-    cur = cur.slice(0, -1);
-  } else if (key === '-') {
-    if (cur.startsWith('-')) cur = cur.slice(1);
-    else cur = '-' + cur;
-  } else if (key === '.') {
-    if (!cur.includes('.')) cur += (cur === '' ? '0.' : '.');
-  } else {
-    if (cur.length < 10) cur += key;
-  }
-
-  keypadInputs[cardId] = cur;
-  const screen = document.getElementById(`kp-screen-${cardId}`);
-  if (screen) screen.textContent = cur === '' ? '--' : cur;
-}
-
-function checkKeypad(cardId) {
-  const card = document.getElementById(cardId);
-  const container = card.querySelector('.pdi-keypad-container');
-  const expected = container.getAttribute('data-expected').trim();
-  const steps = container.getAttribute('data-steps');
-  const cur = (keypadInputs[cardId] || '').trim();
-  const fb = container.querySelector('.kp-feedback-box');
-  fb.style.display = 'block';
-
-  if (!cur) {
-    fb.className = 'kp-feedback-box incorrect';
-    fb.textContent = '⚠️ Introdueix un valor abans de comprovar!';
-    playPDISound('error');
-    return;
-  }
-
-  // Comparar tolerant espais o comes
-  const cleanCur = cur.replace(',', '.');
-  const cleanExp = expected.replace(',', '.');
-
-  if (parseFloat(cleanCur) === parseFloat(cleanExp) || cleanCur === cleanExp) {
-    fb.className = 'kp-feedback-box correct';
-    fb.innerHTML = `🎉 <strong>EXCEL·LENT! RESULTAT CORRECTE (${cleanExp})</strong><br><small>${steps}</small>`;
-    playPDISound('correct');
-  } else {
-    fb.className = 'kp-feedback-box incorrect';
-    fb.innerHTML = `❌ <strong>INCORRECTE (Has posat ${cleanCur})</strong><br>Revisa el càlcul: ${steps}`;
-    playPDISound('error');
-  }
-}
-
-// -------------------------------------------
-// MOTOR FORMAT 5: TARGETES GIRATÒRIES 3D
-// -------------------------------------------
-function flipCard(cardScene) {
-  playPDISound('flip');
-  cardScene.classList.toggle('is-flipped');
-}
-
-// -------------------------------------------
-// INICIALITZACIÓ DRAG & DROP TÀCTIL I RATOLÍ
-// -------------------------------------------
-function initDragAndDrop() {
-  let draggedItem = null;
-
-  document.querySelectorAll('.pdi-item').forEach(item => {
-    item.addEventListener('dragstart', (e) => {
-      draggedItem = item;
-      item.classList.add('dragging');
-      e.dataTransfer.setData('text/plain', '');
-    });
-
-    item.addEventListener('dragend', () => {
-      item.classList.remove('dragging');
-      draggedItem = null;
-    });
-
-    // Touch Support for Smartboards
-    item.addEventListener('touchstart', (e) => {
-      draggedItem = item;
-      item.classList.add('dragging');
-    }, { passive: true });
-
-    item.addEventListener('touchend', (e) => {
-      if (!draggedItem) return;
-      const touch = e.changedTouches[0];
-      const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
-      if (targetEl) {
-        const slot = targetEl.closest('.pdi-slot');
-        const box = targetEl.closest('.pdi-drop-box');
-        const pool = targetEl.closest('.pdi-source-pool');
-
-        if (slot) {
-          const currentInSlot = slot.querySelector('.pdi-item');
-          if (currentInSlot && currentInSlot !== draggedItem) {
-            draggedItem.parentElement.appendChild(currentInSlot);
-          }
-          slot.appendChild(draggedItem);
-          playPDISound('tap');
-        } else if (box) {
-          const content = box.querySelector('.box-content');
-          if (content) {
-            content.appendChild(draggedItem);
-            playPDISound('tap');
-          }
-        } else if (pool) {
-          pool.appendChild(draggedItem);
-          playPDISound('tap');
-        }
-      }
-      item.classList.remove('dragging');
-      draggedItem = null;
-    });
-  });
-
-  document.querySelectorAll('.pdi-slot, .pdi-drop-box, .pdi-source-pool').forEach(zone => {
-    zone.addEventListener('dragover', (e) => {
-      e.preventDefault();
-      zone.classList.add('drag-over');
-    });
-
-    zone.addEventListener('dragleave', () => {
-      zone.classList.remove('drag-over');
-    });
-
-    zone.addEventListener('drop', (e) => {
-      e.preventDefault();
-      zone.classList.remove('drag-over');
-      if (!draggedItem) return;
-
-      if (zone.classList.contains('pdi-slot')) {
-        const currentInSlot = zone.querySelector('.pdi-item');
-        if (currentInSlot && currentInSlot !== draggedItem) {
-          draggedItem.parentElement.appendChild(currentInSlot);
-        }
-        zone.appendChild(draggedItem);
-        playPDISound('tap');
-      } else if (zone.classList.contains('pdi-drop-box')) {
-        const content = zone.querySelector('.box-content');
-        if (content) {
-          content.appendChild(draggedItem);
-          playPDISound('tap');
-        }
-      } else if (zone.classList.contains('pdi-source-pool')) {
-        zone.appendChild(draggedItem);
-        playPDISound('tap');
-      }
-    });
-  });
-}
-
-// -------------------------------------------
-// ANIMACIÓ DE CONFETTI LLEUGER
-// -------------------------------------------
-function triggerConfetti() {
-  const canvas = document.getElementById('pdi-confetti-canvas');
-  if (!canvas) return;
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  canvas.style.display = 'block';
-
-  const ctx = canvas.getContext('2d');
-  const particles = [];
-  const colors = ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6'];
-
-  for (let i = 0; i < 90; i++) {
-    particles.push({
-      x: canvas.width / 2,
-      y: canvas.height / 2,
-      vx: (Math.random() - 0.5) * 16,
-      vy: (Math.random() - 0.7) * 16,
-      size: Math.random() * 8 + 4,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      alpha: 1,
-      rotation: Math.random() * 360,
-      rotSpeed: (Math.random() - 0.5) * 10
-    });
-  }
-
-  let startTime = Date.now();
-  function render() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    const elapsed = Date.now() - startTime;
-
-    particles.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += 0.35; // gravetat
-      p.rotation += p.rotSpeed;
-      p.alpha = Math.max(0, 1 - elapsed / 2200);
-
-      ctx.save();
-      ctx.globalAlpha = p.alpha;
-      ctx.translate(p.x, p.y);
-      ctx.rotate((p.rotation * Math.PI) / 180);
-      ctx.fillStyle = p.color;
-      ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
-      ctx.restore();
-    });
-
-    if (elapsed < 2200) {
-      requestAnimationFrame(render);
-    } else {
-      canvas.style.display = 'none';
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
-  }
-  requestAnimationFrame(render);
-}
-
-// Inicialització en carregar la pàgina
-document.addEventListener('DOMContentLoaded', () => {
-  initDragAndDrop();
-
-  // Comprovar si hi ha direct link des d'una unitat
-  const targetUnit = localStorage.getItem('pdi-target-unit');
-  if (targetUnit) {
-    localStorage.removeItem('pdi-target-unit');
-    const firstAct = document.querySelector(`.pdi-activity-card[data-unit="${targetUnit}"]`);
-    if (firstAct) {
-      launchGameActivity(firstAct.id);
-      return;
-    }
-  }
-});
-</script>
+<script src="{{ 'pissarra-interactiva.js' | relative_url }}?v=2"></script>
+<script src="pissarra-interactiva.js?v=2"></script>

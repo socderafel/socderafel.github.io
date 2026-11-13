@@ -1,0 +1,649 @@
+// Motor JavaScript per a la Pissarra Digital Interactiva (CA1)
+(function() {
+  'use strict';
+
+  // Estat Global
+  let currentPDIActivityId = 'act-ud1-1';
+  let pdiAudioEnabled = true;
+  let pdiSpeedStreak = 0;
+  let pdiAudioCtx = null;
+  let keypadInputs = {};
+
+  // Inicialitzador d'Àudio Web segur
+  function getAudioContext() {
+    try {
+      if (!pdiAudioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) pdiAudioCtx = new AudioContext();
+      }
+      if (pdiAudioCtx && pdiAudioCtx.state === 'suspended') {
+        pdiAudioCtx.resume().catch(function() {});
+      }
+      return pdiAudioCtx;
+    } catch(e) {
+      return null;
+    }
+  }
+
+  window.playPDISound = function(type) {
+    if (!pdiAudioEnabled) return;
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+
+      if (type === 'tap') {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(440, now);
+        osc.frequency.exponentialRampToValueAtTime(880, now + 0.05);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.05);
+      } else if (type === 'flip') {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(300, now);
+        osc.frequency.exponentialRampToValueAtTime(600, now + 0.12);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.12);
+      } else if (type === 'correct') {
+        const freqs = [523.25, 659.25, 783.99, 1046.50];
+        freqs.forEach(function(freq, i) {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + i * 0.08);
+          gain.gain.setValueAtTime(0.25, now + i * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.08 + 0.35);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + i * 0.08);
+          osc.stop(now + i * 0.08 + 0.35);
+        });
+        triggerConfetti();
+      } else if (type === 'error') {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(160, now);
+        osc.frequency.linearRampToValueAtTime(90, now + 0.25);
+        gain.gain.setValueAtTime(0.3, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.25);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.25);
+      }
+    } catch(e) {
+      console.warn("Àudio no disponible:", e);
+    }
+  };
+
+  // Alternar So
+  window.togglePDISound = function() {
+    pdiAudioEnabled = !pdiAudioEnabled;
+    const icons = ['#sound-icon', '#game-sound-btn'];
+    icons.forEach(function(sel) {
+      const el = document.querySelector(sel);
+      if (el) el.textContent = pdiAudioEnabled ? '🔊' : '🔇';
+    });
+    const txt = document.getElementById('sound-text');
+    if (txt) txt.textContent = pdiAudioEnabled ? 'So Activat' : 'Silenciat';
+    if (pdiAudioEnabled) window.playPDISound('tap');
+  };
+
+  // Pantalla Completa Pura amb fallback visual
+  window.togglePDIFullscreen = function() {
+    try { window.playPDISound('tap'); } catch(e) {}
+    const isFs = document.body.classList.contains('pdi-fullscreen-mode');
+    if (!isFs) {
+      document.body.classList.add('pdi-fullscreen-mode');
+      const el = document.documentElement;
+      if (el.requestFullscreen) {
+        el.requestFullscreen().catch(function() {});
+      } else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+      } else if (el.msRequestFullscreen) {
+        el.msRequestFullscreen();
+      }
+    } else {
+      document.body.classList.remove('pdi-fullscreen-mode');
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(function() {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      }
+    }
+  };
+
+  document.addEventListener('fullscreenchange', function() {
+    if (!document.fullscreenElement) {
+      document.body.classList.remove('pdi-fullscreen-mode');
+    }
+  });
+
+  // Mostrar Tauler
+  window.showPDIDashboard = function() {
+    try { window.playPDISound('tap'); } catch(e) {}
+    const dash = document.getElementById('pdi-dashboard');
+    const game = document.getElementById('pdi-game-view');
+    if (dash) dash.style.display = 'block';
+    if (game) game.style.display = 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Llançar Activitat
+  window.launchGameActivity = function(actId) {
+    try { window.playPDISound('tap'); } catch(e) {}
+    currentPDIActivityId = actId;
+    const dash = document.getElementById('pdi-dashboard');
+    const game = document.getElementById('pdi-game-view');
+    if (dash) dash.style.display = 'none';
+    if (game) game.style.display = 'flex';
+
+    document.querySelectorAll('.pdi-activity-card').forEach(function(c) {
+      c.classList.remove('active');
+    });
+    const card = document.getElementById(actId);
+    if (card) {
+      card.classList.add('active');
+      updateGameTopBar(card);
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  function updateGameTopBar(card) {
+    const unit = (card.getAttribute('data-unit') || 'UD').toUpperCase();
+    const shortTitle = card.getAttribute('data-title') || 'Repte';
+    const badge = document.getElementById('game-unit-badge');
+    const title = document.getElementById('game-act-title');
+    const counter = document.getElementById('game-counter');
+
+    if (badge) badge.textContent = unit;
+    if (title) title.textContent = shortTitle;
+
+    const cardsInUnit = Array.from(document.querySelectorAll('.pdi-activity-card[data-unit="' + card.getAttribute('data-unit') + '"]'));
+    const idx = cardsInUnit.indexOf(card);
+    if (counter) counter.textContent = (idx + 1) + ' / ' + cardsInUnit.length;
+  }
+
+  // Navegar Relatiu
+  window.navRelativeActivity = function(delta) {
+    try { window.playPDISound('tap'); } catch(e) {}
+    const allCards = Array.from(document.querySelectorAll('.pdi-activity-card'));
+    const currentCard = document.getElementById(currentPDIActivityId);
+    let idx = allCards.indexOf(currentCard);
+    idx += delta;
+    if (idx < 0) idx = allCards.length - 1;
+    if (idx >= allCards.length) idx = 0;
+    if (allCards[idx]) {
+      window.launchGameActivity(allCards[idx].id);
+    }
+  };
+
+  // Reiniciar Repte
+  window.resetCurrentPDIActivity = function() {
+    try { window.playPDISound('tap'); } catch(e) {}
+    const card = document.getElementById(currentPDIActivityId);
+    if (!card) return;
+    const fmt = card.getAttribute('data-format');
+
+    if (fmt === 'order' || fmt === 'category') {
+      const pool = card.querySelector('.pdi-source-pool');
+      const items = Array.from(card.querySelectorAll('.pdi-item'));
+      items.sort(function() { return Math.random() - 0.5; });
+      items.forEach(function(it) {
+        it.style.borderColor = '#94a3b8';
+        if (pool) pool.appendChild(it);
+      });
+      const msg = card.querySelector('.pdi-status-msg');
+      if (msg) msg.textContent = '';
+    } else if (fmt === 'speedquiz') {
+      const fb = card.querySelector('.sq-feedback-box');
+      if (fb) fb.style.display = 'none';
+    } else if (fmt === 'intrus') {
+      card.querySelectorAll('.intrus-card').forEach(function(c) {
+        c.className = 'intrus-card';
+      });
+      const fb = card.querySelector('.intrus-feedback-box');
+      if (fb) fb.style.display = 'none';
+    } else if (fmt === 'keypad') {
+      keypadInputs[card.id] = '';
+      const scr = document.getElementById('kp-screen-' + card.id);
+      if (scr) scr.textContent = '--';
+      const fb = card.querySelector('.kp-feedback-box');
+      if (fb) fb.style.display = 'none';
+    } else if (fmt === 'flipcard') {
+      card.querySelectorAll('.flipcard-scene').forEach(function(c) {
+        c.classList.remove('is-flipped');
+      });
+    }
+  };
+
+  // 1. DRAG & DROP
+  window.checkOrderActivity = function(cardId) {
+    const card = document.getElementById(cardId);
+    const slots = card.querySelectorAll('.pdi-slot');
+    const pool = card.querySelector('.pdi-source-pool');
+    const remainingInPool = pool ? pool.querySelectorAll('.pdi-item').length : 0;
+    const msg = card.querySelector('.pdi-status-msg');
+
+    if (remainingInPool > 0) {
+      if (msg) {
+        msg.className = 'pdi-status-msg incorrect';
+        msg.textContent = '⚠️ Encara queden ' + remainingInPool + ' passos per col·locar en el seu ordre!';
+      }
+      window.playPDISound('error');
+      return;
+    }
+
+    let isAllCorrect = true;
+    slots.forEach(function(slot) {
+      const expected = slot.getAttribute('data-slot');
+      const item = slot.querySelector('.pdi-item');
+      if (item && item.getAttribute('data-order') === expected) {
+        item.style.borderColor = '#10b981';
+      } else {
+        isAllCorrect = false;
+        if (item) item.style.borderColor = '#ef4444';
+      }
+    });
+
+    if (isAllCorrect) {
+      if (msg) {
+        msg.className = 'pdi-status-msg correct';
+        msg.textContent = '🎉 Molt bé! Has ordenat tots els passos correctament!';
+      }
+      window.playPDISound('correct');
+    } else {
+      if (msg) {
+        msg.className = 'pdi-status-msg incorrect';
+        msg.textContent = "Hi ha algun pas fora d'ordre. Revisa els requadres en roig!";
+      }
+      window.playPDISound('error');
+    }
+  };
+
+  window.checkCategoryActivity = function(cardId) {
+    const card = document.getElementById(cardId);
+    const boxes = card.querySelectorAll('.pdi-drop-box');
+    const pool = card.querySelector('.pdi-source-pool');
+    const remainingInPool = pool ? pool.querySelectorAll('.pdi-item').length : 0;
+    const msg = card.querySelector('.pdi-status-msg');
+
+    if (remainingInPool > 0) {
+      if (msg) {
+        msg.className = 'pdi-status-msg incorrect';
+        msg.textContent = '⚠️ Queden ' + remainingInPool + ' elements per classificar a les caixes!';
+      }
+      window.playPDISound('error');
+      return;
+    }
+
+    let totalItems = 0;
+    let correctItems = 0;
+    boxes.forEach(function(box) {
+      const boxCat = box.getAttribute('data-cat');
+      const items = box.querySelectorAll('.pdi-item');
+      items.forEach(function(item) {
+        totalItems++;
+        if (item.getAttribute('data-cat') === boxCat) {
+          correctItems++;
+          item.style.borderColor = '#10b981';
+        } else {
+          item.style.borderColor = '#ef4444';
+        }
+      });
+    });
+
+    if (correctItems === totalItems) {
+      if (msg) {
+        msg.className = 'pdi-status-msg correct';
+        msg.textContent = '🎉 Extraordinari! Has encertat tots ' + totalItems + '/' + totalItems + ' elements!';
+      }
+      window.playPDISound('correct');
+    } else {
+      if (msg) {
+        msg.className = 'pdi-status-msg incorrect';
+        msg.textContent = 'Has encertat ' + correctItems + ' de ' + totalItems + '. Els elements en roig estan a la caixa equivocada!';
+      }
+      window.playPDISound('error');
+    }
+  };
+
+  // 2. SPEED QUIZ
+  window.answerSpeedQuiz = function(cardId, userAnswer) {
+    const card = document.getElementById(cardId);
+    const container = card.querySelector('.pdi-speedquiz-container');
+    const isCorrect = (container.getAttribute('data-correct') === 'true');
+    const exp = container.getAttribute('data-exp') || '';
+    const extra = container.getAttribute('data-extra') || '';
+    const fb = container.querySelector('.sq-feedback-box');
+    const streakEl = container.querySelector('.sq-streak-val');
+
+    if (fb) fb.style.display = 'block';
+
+    if (userAnswer === isCorrect) {
+      pdiSpeedStreak++;
+      window.playPDISound('correct');
+      if (fb) {
+        fb.className = 'sq-feedback-box correct';
+        fb.innerHTML = '<strong>🎉 ENCERTAT AL PRIMER COP!</strong><br>' + exp + '<br><small style="color: #047857;">💡 ' + extra + '</small>';
+      }
+    } else {
+      pdiSpeedStreak = 0;
+      window.playPDISound('error');
+      if (fb) {
+        fb.className = 'sq-feedback-box incorrect';
+        fb.innerHTML = '<strong>❌ OOOPS! NO ÉS CORRECTE:</strong><br>' + exp + '<br><small style="color: #b91c1c;">💡 ' + extra + '</small>';
+      }
+    }
+    if (streakEl) streakEl.textContent = pdiSpeedStreak;
+  };
+
+  // 3. TROBA L'INTRÚS
+  window.selectIntrus = function(cardId, cardEl) {
+    const card = document.getElementById(cardId);
+    const isIntrus = (cardEl.getAttribute('data-intrus') === 'true');
+    const hint = cardEl.getAttribute('data-hint') || '';
+    const fb = card.querySelector('.intrus-feedback-box');
+    if (fb) fb.style.display = 'block';
+
+    if (isIntrus) {
+      cardEl.className = 'intrus-card selected-correct';
+      if (fb) {
+        fb.className = 'intrus-feedback-box correct';
+        fb.innerHTML = '🎉 <strong>MOLT BÉ! HAS CAÇAT L\'INTRÚS!</strong><br>' + hint;
+      }
+      window.playPDISound('correct');
+    } else {
+      cardEl.className = 'intrus-card selected-wrong';
+      if (fb) {
+        fb.className = 'intrus-feedback-box incorrect';
+        fb.innerHTML = '❌ <strong>Aquest element NO és l\'intrús:</strong> ' + hint;
+      }
+      window.playPDISound('error');
+    }
+  };
+
+  // 4. TECLAT MENTAL TÀCTIL
+  window.pressKeypad = function(cardId, key) {
+    try { window.playPDISound('tap'); } catch(e) {}
+    if (!keypadInputs[cardId]) keypadInputs[cardId] = '';
+    let cur = keypadInputs[cardId];
+
+    if (key === 'C') {
+      cur = '';
+    } else if (key === 'DEL') {
+      cur = cur.slice(0, -1);
+    } else if (key === '-') {
+      if (cur.startsWith('-')) cur = cur.slice(1);
+      else cur = '-' + cur;
+    } else if (key === '.') {
+      if (!cur.includes('.')) cur += (cur === '' ? '0.' : '.');
+    } else {
+      if (cur.length < 10) cur += key;
+    }
+
+    keypadInputs[cardId] = cur;
+    const screen = document.getElementById('kp-screen-' + cardId);
+    if (screen) screen.textContent = (cur === '' ? '--' : cur);
+  };
+
+  window.checkKeypad = function(cardId) {
+    const card = document.getElementById(cardId);
+    const container = card.querySelector('.pdi-keypad-container');
+    const expected = (container.getAttribute('data-expected') || '').trim();
+    const steps = container.getAttribute('data-steps') || '';
+    const cur = (keypadInputs[cardId] || '').trim();
+    const fb = container.querySelector('.kp-feedback-box');
+    if (fb) fb.style.display = 'block';
+
+    if (!cur) {
+      if (fb) {
+        fb.className = 'kp-feedback-box incorrect';
+        fb.textContent = '⚠️ Introdueix un valor abans de comprovar!';
+      }
+      window.playPDISound('error');
+      return;
+    }
+
+    const cleanCur = cur.replace(',', '.');
+    const cleanExp = expected.replace(',', '.');
+
+    if (parseFloat(cleanCur) === parseFloat(cleanExp) || cleanCur === cleanExp) {
+      if (fb) {
+        fb.className = 'kp-feedback-box correct';
+        fb.innerHTML = '🎉 <strong>EXCEL·LENT! RESULTAT CORRECTE (' + cleanExp + ')</strong><br><small>' + steps + '</small>';
+      }
+      window.playPDISound('correct');
+    } else {
+      if (fb) {
+        fb.className = 'kp-feedback-box incorrect';
+        fb.innerHTML = '❌ <strong>INCORRECTE (Has posat ' + cleanCur + ')</strong><br>Revisa el càlcul: ' + steps;
+      }
+      window.playPDISound('error');
+    }
+  };
+
+  // 5. TARGETES 3D
+  window.flipCard = function(cardScene) {
+    try { window.playPDISound('flip'); } catch(e) {}
+    cardScene.classList.toggle('is-flipped');
+  };
+
+  // 6. CONFETTI ANIMATION
+  function triggerConfetti() {
+    const canvas = document.getElementById('pdi-confetti-canvas');
+    if (!canvas) return;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.display = 'block';
+
+    const ctx = canvas.getContext('2d');
+    const particles = [];
+    const colors = ['#2563eb', '#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6'];
+
+    for (let i = 0; i < 90; i++) {
+      particles.push({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        vx: (Math.random() - 0.5) * 16,
+        vy: (Math.random() - 0.7) * 16,
+        size: Math.random() * 8 + 4,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: 1,
+        rotation: Math.random() * 360,
+        rotSpeed: (Math.random() - 0.5) * 10
+      });
+    }
+
+    const startTime = Date.now();
+    function render() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const elapsed = Date.now() - startTime;
+
+      particles.forEach(function(p) {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.35;
+        p.rotation += p.rotSpeed;
+        p.alpha = Math.max(0, 1 - elapsed / 2200);
+
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.translate(p.x, p.y);
+        ctx.rotate((p.rotation * Math.PI) / 180);
+        ctx.fillStyle = p.color;
+        ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size);
+        ctx.restore();
+      });
+
+      if (elapsed < 2200) {
+        requestAnimationFrame(render);
+      } else {
+        canvas.style.display = 'none';
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }
+    requestAnimationFrame(render);
+  }
+
+  // 7. DRAG & DROP TÀCTIL I RATOLÍ
+  function initDragAndDrop() {
+    let draggedItem = null;
+
+    document.querySelectorAll('.pdi-item').forEach(function(item) {
+      item.addEventListener('dragstart', function(e) {
+        draggedItem = item;
+        item.classList.add('dragging');
+        if (e.dataTransfer) e.dataTransfer.setData('text/plain', '');
+      });
+
+      item.addEventListener('dragend', function() {
+        item.classList.remove('dragging');
+        draggedItem = null;
+      });
+
+      // Touch Suport
+      item.addEventListener('touchstart', function() {
+        draggedItem = item;
+        item.classList.add('dragging');
+      }, { passive: true });
+
+      item.addEventListener('touchend', function(e) {
+        if (!draggedItem) return;
+        const touch = e.changedTouches[0];
+        const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (targetEl) {
+          const slot = targetEl.closest('.pdi-slot');
+          const box = targetEl.closest('.pdi-drop-box');
+          const pool = targetEl.closest('.pdi-source-pool');
+
+          if (slot) {
+            const currentInSlot = slot.querySelector('.pdi-item');
+            if (currentInSlot && currentInSlot !== draggedItem) {
+              draggedItem.parentElement.appendChild(currentInSlot);
+            }
+            slot.appendChild(draggedItem);
+            window.playPDISound('tap');
+          } else if (box) {
+            const content = box.querySelector('.box-content');
+            if (content) {
+              content.appendChild(draggedItem);
+              window.playPDISound('tap');
+            }
+          } else if (pool) {
+            pool.appendChild(draggedItem);
+            window.playPDISound('tap');
+          }
+        }
+        item.classList.remove('dragging');
+        draggedItem = null;
+      });
+    });
+
+    document.querySelectorAll('.pdi-slot, .pdi-drop-box, .pdi-source-pool').forEach(function(zone) {
+      zone.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        zone.classList.add('drag-over');
+      });
+
+      zone.addEventListener('dragleave', function() {
+        zone.classList.remove('drag-over');
+      });
+
+      zone.addEventListener('drop', function(e) {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        if (!draggedItem) return;
+
+        if (zone.classList.contains('pdi-slot')) {
+          const currentInSlot = zone.querySelector('.pdi-item');
+          if (currentInSlot && currentInSlot !== draggedItem) {
+            draggedItem.parentElement.appendChild(currentInSlot);
+          }
+          zone.appendChild(draggedItem);
+          window.playPDISound('tap');
+        } else if (zone.classList.contains('pdi-drop-box')) {
+          const content = zone.querySelector('.box-content');
+          if (content) {
+            content.appendChild(draggedItem);
+            window.playPDISound('tap');
+          }
+        } else if (zone.classList.contains('pdi-source-pool')) {
+          zone.appendChild(draggedItem);
+          window.playPDISound('tap');
+        }
+      });
+    });
+  }
+
+  // EVENT DELEGATION GLOBAL: captura clics fins i tot si inline onclick fallara!
+  document.addEventListener('click', function(e) {
+    // 1. Botó d'iniciar repte
+    const launchBtn = e.target.closest('.btn-launch-act');
+    if (launchBtn) {
+      const actId = launchBtn.getAttribute('data-act-id') || 
+                    (launchBtn.getAttribute('onclick') && launchBtn.getAttribute('onclick').match(/['"](act-[^'"]+)['"]/)?.[1]);
+      if (actId) {
+        e.preventDefault();
+        e.stopPropagation();
+        window.launchGameActivity(actId);
+        return;
+      }
+    }
+
+    // 2. Botó Pantalla Completa
+    const fsBtn = e.target.closest('#game-fs-btn, .btn-pdi-tool');
+    if (fsBtn && (fsBtn.id === 'game-fs-btn' || fsBtn.textContent.includes('Pantalla Completa'))) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.togglePDIFullscreen();
+      return;
+    }
+
+    // 3. Botó Tornar al Tauler
+    const backBtn = e.target.closest('.btn-back-dash');
+    if (backBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.showPDIDashboard();
+      return;
+    }
+  });
+
+  // DOM READY
+  function onReady() {
+    initDragAndDrop();
+
+    // Comprovar si hi ha direct link des d'una unitat
+    try {
+      const targetUnit = localStorage.getItem('pdi-target-unit');
+      if (targetUnit) {
+        localStorage.removeItem('pdi-target-unit');
+        const firstAct = document.querySelector('.pdi-activity-card[data-unit="' + targetUnit + '"]');
+        if (firstAct) {
+          window.launchGameActivity(firstAct.id);
+          return;
+        }
+      }
+    } catch(e) {}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', onReady);
+  } else {
+    onReady();
+  }
+
+})();

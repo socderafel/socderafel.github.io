@@ -1,10 +1,11 @@
 // Service Worker per a la PWA de Ciències Aplicades I (FP Bàsica)
-const CACHE_NAME = 'ca1-pwa-v1';
+const CACHE_NAME = 'ca1-pwa-v2';
 
 const STATIC_ASSETS = [
   './',
   './index.html',
   './pissarra-interactiva.html',
+  './pissarra-interactiva.js',
   './manifest.json',
   './img/icon-192.png',
   './img/icon-512.png',
