@@ -11,6 +11,8 @@
   const speedQuizState = {};
   const intrusState = {};
   const keypadState = {};
+  const connectState = {};
+  const caseState = {};
 
   // Inicialitzador d'Àudio Web segur
   function getAudioContext() {
@@ -166,6 +168,8 @@
       if (fmt === 'speedquiz') initSpeedQuiz(card);
       else if (fmt === 'intrus') initIntrus(card);
       else if (fmt === 'keypad') initKeypad(card);
+      else if (fmt === 'connect') initConnect(card);
+      else if (fmt === 'case') initCase(card);
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -222,10 +226,10 @@
       initIntrus(card, true);
     } else if (fmt === 'keypad') {
       initKeypad(card, true);
-    } else if (fmt === 'flipcard') {
-      card.querySelectorAll('.flipcard-scene').forEach(function(c) {
-        c.classList.remove('is-flipped');
-      });
+    } else if (fmt === 'connect') {
+      initConnect(card, true);
+    } else if (fmt === 'case') {
+      initCase(card, true);
     }
   };
 
@@ -732,11 +736,335 @@
   };
 
   // ==========================================
-  // MOTOR 5: TARGETES 3D
+  // MOTOR 5: CONNECTA PARELLES DE TALLER (MATCHING)
   // ==========================================
-  window.flipCard = function(cardScene) {
-    try { window.playPDISound('flip'); } catch(e) {}
-    cardScene.classList.toggle('is-flipped');
+  function initConnect(card, reset) {
+    const cid = card.id;
+    const container = card.querySelector('.pdi-connect-container');
+    if (!container) return;
+
+    if (!connectState[cid] || reset) {
+      let pairs = [];
+      try {
+        pairs = JSON.parse(container.getAttribute('data-pairs') || '[]');
+      } catch(e) {
+        pairs = [];
+      }
+      connectState[cid] = {
+        pairs: pairs,
+        selectedLeft: null,
+        selectedRight: null,
+        matchedIds: new Set(),
+        total: pairs.length
+      };
+    }
+
+    renderConnectDOM(card);
+  }
+
+  function renderConnectDOM(card) {
+    const cid = card.id;
+    const st = connectState[cid];
+    if (!st || !st.pairs.length) return;
+
+    const container = card.querySelector('.pdi-connect-container');
+    const leftCol = container.querySelector('.connect-col-left');
+    const rightCol = container.querySelector('.connect-col-right');
+    const winBanner = container.querySelector('.connect-win-banner');
+
+    if (winBanner) winBanner.style.display = 'none';
+
+    const leftItems = st.pairs.map(function(p) {
+      return { id: p.id, text: p.left, badge: p.badge_left || '' };
+    });
+
+    if (!st.shuffledRight || st.shuffledRight.length !== st.pairs.length) {
+      st.shuffledRight = st.pairs.map(function(p) {
+        return { id: p.id, text: p.right, badge: p.badge_right || '' };
+      }).sort(function() { return Math.random() - 0.5; });
+    }
+
+    if (leftCol) {
+      leftCol.innerHTML = '';
+      leftItems.forEach(function(item) {
+        const btn = document.createElement('div');
+        const isM = st.matchedIds.has(String(item.id));
+        btn.className = 'connect-item connect-left' + (isM ? ' matched' : '');
+        btn.setAttribute('data-id', String(item.id));
+        btn.setAttribute('data-side', 'left');
+        btn.onclick = function() { window.selectConnectItem(cid, btn); };
+        btn.innerHTML = '<span class="connect-bullet">●</span><div class="connect-content">' + 
+          (item.badge ? '<span class="item-tag">' + item.badge + '</span> ' : '') + 
+          item.text + '</div>' + (isM ? '<span class="connect-check">✓</span>' : '');
+        leftCol.appendChild(btn);
+      });
+    }
+
+    if (rightCol) {
+      rightCol.innerHTML = '';
+      st.shuffledRight.forEach(function(item) {
+        const btn = document.createElement('div');
+        const isM = st.matchedIds.has(String(item.id));
+        btn.className = 'connect-item connect-right' + (isM ? ' matched' : '');
+        btn.setAttribute('data-id', String(item.id));
+        btn.setAttribute('data-side', 'right');
+        btn.onclick = function() { window.selectConnectItem(cid, btn); };
+        btn.innerHTML = (isM ? '<span class="connect-check">✓</span>' : '') + 
+          '<div class="connect-content">' + 
+          (item.badge ? '<span class="item-tag">' + item.badge + '</span> ' : '') + 
+          item.text + '</div><span class="connect-bullet">●</span>';
+        rightCol.appendChild(btn);
+      });
+    }
+
+    updateConnectScore(card);
+  }
+
+  function updateConnectScore(card) {
+    const cid = card.id;
+    const st = connectState[cid];
+    if (!st) return;
+    const scoreEl = card.querySelector('.connect-matched-count');
+    const totalEl = card.querySelector('.connect-total-count');
+    if (scoreEl) scoreEl.textContent = st.matchedIds.size;
+    if (totalEl) totalEl.textContent = st.total;
+  }
+
+  window.selectConnectItem = function(cardId, el) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    const st = connectState[cardId];
+    if (!st) return;
+
+    if (el.classList.contains('matched')) return;
+
+    const side = el.getAttribute('data-side');
+    const id = el.getAttribute('data-id');
+
+    window.playPDISound('tap');
+
+    if (side === 'left') {
+      if (st.selectedLeft === el) {
+        el.classList.remove('selected');
+        st.selectedLeft = null;
+        return;
+      }
+      card.querySelectorAll('.connect-left').forEach(function(b) { b.classList.remove('selected'); });
+      el.classList.add('selected');
+      st.selectedLeft = el;
+    } else {
+      if (st.selectedRight === el) {
+        el.classList.remove('selected');
+        st.selectedRight = null;
+        return;
+      }
+      card.querySelectorAll('.connect-right').forEach(function(b) { b.classList.remove('selected'); });
+      el.classList.add('selected');
+      st.selectedRight = el;
+    }
+
+    // Check if both sides selected
+    if (st.selectedLeft && st.selectedRight) {
+      const leftId = st.selectedLeft.getAttribute('data-id');
+      const rightId = st.selectedRight.getAttribute('data-id');
+
+      if (leftId === rightId) {
+        // MATCH!
+        const elL = st.selectedLeft;
+        const elR = st.selectedRight;
+        st.matchedIds.add(String(leftId));
+
+        setTimeout(function() {
+          elL.classList.remove('selected');
+          elR.classList.remove('selected');
+          elL.classList.add('matched');
+          elR.classList.add('matched');
+          if (!elL.querySelector('.connect-check')) {
+            elL.insertAdjacentHTML('beforeend', '<span class="connect-check">✓</span>');
+          }
+          if (!elR.querySelector('.connect-check')) {
+            elR.insertAdjacentHTML('afterbegin', '<span class="connect-check">✓</span>');
+          }
+          window.playPDISound('correct');
+          updateConnectScore(card);
+
+          if (st.matchedIds.size === st.total) {
+            triggerConfetti();
+            const banner = card.querySelector('.connect-win-banner');
+            if (banner) {
+              banner.style.display = 'flex';
+              banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          }
+        }, 150);
+
+        st.selectedLeft = null;
+        st.selectedRight = null;
+      } else {
+        // ERROR!
+        const elL = st.selectedLeft;
+        const elR = st.selectedRight;
+        elL.classList.add('shake-error');
+        elR.classList.add('shake-error');
+        window.playPDISound('error');
+
+        setTimeout(function() {
+          elL.classList.remove('selected', 'shake-error');
+          elR.classList.remove('selected', 'shake-error');
+        }, 600);
+
+        st.selectedLeft = null;
+        st.selectedRight = null;
+      }
+    }
+  };
+
+  window.restartConnectActivity = function(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    initConnect(card, true);
+  };
+
+  // ==========================================
+  // MOTOR 6: CAS PRÀCTIC DE TALLER I DIAGNOSI
+  // ==========================================
+  function initCase(card, reset) {
+    const cid = card.id;
+    const container = card.querySelector('.pdi-case-container');
+    if (!container) return;
+
+    if (!caseState[cid] || reset) {
+      let cases = [];
+      try {
+        cases = JSON.parse(container.getAttribute('data-cases') || '[]');
+      } catch(e) {
+        cases = [];
+      }
+      caseState[cid] = {
+        cases: cases,
+        currentCase: 0,
+        answered: false
+      };
+    }
+
+    renderCaseDOM(card);
+  }
+
+  function renderCaseDOM(card) {
+    const cid = card.id;
+    const st = caseState[cid];
+    if (!st || !st.cases.length) return;
+
+    const container = card.querySelector('.pdi-case-container');
+    const cData = st.cases[st.currentCase];
+
+    const curBadge = container.querySelector('.case-cur-num');
+    const totalBadge = container.querySelector('.case-total-num');
+    if (curBadge) curBadge.textContent = st.currentCase + 1;
+    if (totalBadge) totalBadge.textContent = st.cases.length;
+
+    const titleEl = container.querySelector('.case-title-text');
+    if (titleEl) titleEl.textContent = cData.title;
+
+    const contextEl = container.querySelector('.case-context-text');
+    if (contextEl) contextEl.innerHTML = cData.context;
+
+    const qEl = container.querySelector('.case-question-text');
+    if (qEl) qEl.innerHTML = cData.question;
+
+    const grid = container.querySelector('.case-options-grid');
+    if (grid) {
+      grid.innerHTML = '';
+      cData.options.forEach(function(opt, idx) {
+        const btn = document.createElement('button');
+        btn.className = 'btn-case-opt';
+        btn.onclick = function() { window.selectCaseOption(cid, idx, btn); };
+        btn.innerHTML = '<span class="opt-letter">' + String.fromCharCode(65 + idx) + '</span><span class="opt-text">' + opt.text + '</span>';
+        grid.appendChild(btn);
+      });
+    }
+
+    const fbBox = container.querySelector('.case-feedback-box');
+    if (fbBox) fbBox.style.display = 'none';
+
+    const winBox = container.querySelector('.case-summary-box');
+    if (winBox) winBox.style.display = 'none';
+
+    st.answered = false;
+  }
+
+  window.selectCaseOption = function(cardId, optionIdx, btnEl) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    const st = caseState[cardId];
+    if (!st || st.answered) return;
+
+    const container = card.querySelector('.pdi-case-container');
+    const cData = st.cases[st.currentCase];
+    const opt = cData.options[optionIdx];
+
+    const fbBox = container.querySelector('.case-feedback-box');
+    const fbContent = container.querySelector('.case-feedback-content');
+    const nextBtn = container.querySelector('.btn-case-next');
+
+    if (opt.is_correct) {
+      st.answered = true;
+      btnEl.classList.add('correct');
+      container.querySelectorAll('.btn-case-opt').forEach(function(b) {
+        if (b !== btnEl) b.style.opacity = '0.5';
+      });
+
+      if (fbBox) {
+        fbBox.className = 'case-feedback-box correct';
+        fbBox.style.display = 'flex';
+      }
+      if (fbContent) {
+        fbContent.innerHTML = '<strong>✅ DECISIÓ TÈCNICA CORRECTA!</strong><br>' + opt.exp;
+      }
+      window.playPDISound('correct');
+
+      if (st.currentCase < st.cases.length - 1) {
+        if (nextBtn) {
+          nextBtn.style.display = 'inline-flex';
+          nextBtn.textContent = 'Següent Cas Pràctic ➔ (' + (st.currentCase + 2) + '/' + st.cases.length + ')';
+        }
+      } else {
+        if (nextBtn) nextBtn.style.display = 'none';
+        triggerConfetti();
+        const sumBox = container.querySelector('.case-summary-box');
+        if (sumBox) sumBox.style.display = 'flex';
+      }
+    } else {
+      btnEl.classList.add('incorrect');
+      if (fbBox) {
+        fbBox.className = 'case-feedback-box incorrect';
+        fbBox.style.display = 'flex';
+      }
+      if (fbContent) {
+        fbContent.innerHTML = '<strong>❌ PROPOSTA INCORRECTA:</strong><br>' + opt.exp + '<br><em>Torna a revisar la situació de taller i tria una altra opció!</em>';
+      }
+      if (nextBtn) nextBtn.style.display = 'none';
+      window.playPDISound('error');
+    }
+  };
+
+  window.nextCaseScenario = function(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    const st = caseState[cardId];
+    if (!st) return;
+
+    st.currentCase++;
+    if (st.currentCase < st.cases.length) {
+      renderCaseDOM(card);
+      window.playPDISound('tap');
+    }
+  };
+
+  window.restartCaseActivity = function(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    initCase(card, true);
   };
 
   // ==========================================
