@@ -11,6 +11,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   <div class="pdi-intro-header">
     <span class="pdi-badge">PDI & Tauletes</span>
     <span class="pdi-badge-pwa">📱 App Autònoma CA1</span>
+    <span class="pdi-badge-count" style="background:#0284c7;color:#fff;font-weight:800;font-size:0.8rem;padding:4px 12px;border-radius:50px;">45 Reptes Interactius</span>
   </div>
   <p>Espai d'activitats tàctils i manipulatives dissenyat exclusivament per a <strong>Ciències Aplicades I (1r FPB)</strong>. Pensat per a <strong>treballar a la pissarra digital de l'aula</strong> amb tot el grup o des de <strong>tauletes i mòbils</strong>. Tria la unitat i el repte, arrossega amb el dit o toca per a seleccionar i col·locar!</p>
   
@@ -48,7 +49,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 
 <!-- Selector de Sub-Reptes per a la Unitat Seleccionada -->
 <div class="pdi-subnav-wrap">
-  <span class="pdi-nav-label">2. Tria l'Activitat Manipulativa:</span>
+  <span class="pdi-nav-label">2. Tria l'Activitat Manipulativa (5 per unitat):</span>
   <div class="pdi-subpills" id="pdi-subpills-container">
     <!-- Es genera dinàmicament per JS segons la unitat activa -->
   </div>
@@ -56,18 +57,9 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 
 <!-- CONTENIDORS D'ACTIVITATS -->
 <div class="pdi-board-container" id="pdi-board-container">
-
-  <!-- ========================================================
-       UD1: ELS NOMBRES NATURALS (MATEMÀTIQUES)
-       ======================================================== -->
-  <!-- UD1 - Repte 1: Jerarquia -->
-  <div class="pdi-activity-card active" id="act-ud1-1" data-unit="ud1" data-title="Repte 1: Jerarquia d'Operacions">
-    <div class="pdi-act-title">
-      <span class="act-num">UD1 · Repte 1</span>
-      <h3>🔢 Ordena el Viatge de la Jerarquia d'Operacions</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega (o toca per a seleccionar) els passos en l'ordre matemàtic correcte per a resoldre: <strong>3 + 2 × (5 - 1)²</strong></p>
-    
+  <div class="pdi-activity-card" id="act-ud1-1" data-unit="ud1" data-title="Repte 1: Jerarquia">
+    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 1</span><h3>🔢 Ordena el Viatge de la Jerarquia d'Operacions</h3></div>
+    <p class="pdi-instruction">Arrossega els passos en l'ordre matemàtic correcte per a calcular: <strong>3 + 2 × (5 - 1)²</strong></p>
     <div class="pdi-order-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> Multiplicar: 2 × 16 = 32</div>
@@ -88,14 +80,9 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
     </div>
   </div>
 
-  <!-- UD1 - Repte 2: Potències -->
-  <div class="pdi-activity-card" id="act-ud1-2" data-unit="ud1" data-title="Repte 2: Càlcul de Potències">
-    <div class="pdi-act-title">
-      <span class="act-num">UD1 · Repte 2</span>
-      <h3>⚡ Emparella cada Potència amb el seu Resultat</h3>
-    </div>
+  <div class="pdi-activity-card" id="act-ud1-2" data-unit="ud1" data-title="Repte 2: Potències">
+    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 2</span><h3>⚡ Emparella cada Potència amb el seu Resultat</h3></div>
     <p class="pdi-instruction">Arrossega cada potència a la caixa del seu resultat exacte:</p>
-    
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item num-item" draggable="true" data-cat="8">2³</div>
@@ -115,19 +102,14 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-2')">Comprovar Potències 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD1 - Repte 3: Descomposició Polinòmica -->
-  <div class="pdi-activity-card" id="act-ud1-3" data-unit="ud1" data-title="Repte 3: Ordres d'Unitats">
-    <div class="pdi-act-title">
-      <span class="act-num">UD1 · Repte 3</span>
-      <h3>🧱 Descomposició en Ordres d'Unitats: 45.827</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega el valor posicional de cada xifra del nombre <strong>45.827</strong> a la seua posició:</p>
-    
+  <div class="pdi-activity-card" id="act-ud1-3" data-unit="ud1" data-title="Repte 3: Ordres Unitats">
+    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 3</span><h3>🧱 Descomposició en Ordres d'Unitats: 45.827</h3></div>
+    <p class="pdi-instruction">Arrossega el valor posicional de cada xifra a la seua posició:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item num-item" draggable="true" data-cat="dm">40.000</div>
@@ -136,31 +118,76 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item num-item" draggable="true" data-cat="d">20</div>
         <div class="pdi-item num-item" draggable="true" data-cat="u">7</div>
       </div>
-      <div class="pdi-drop-boxes-grid">
-        <div class="pdi-drop-box" data-cat="dm"><div class="box-header"><span class="box-icon">🟣</span> 4 Desenes de Miler</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="um"><div class="box-header"><span class="box-icon">🔵</span> 5 Unitats de Miler</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="c"><div class="box-header"><span class="box-icon">🟢</span> 8 Centenes</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="d"><div class="box-header"><span class="box-icon">🟡</span> 2 Desenes</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="u"><div class="box-header"><span class="box-icon">🔴</span> 7 Unitats</div><div class="box-items"></div></div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="dm"><div class="box-header"><span class="box-icon">🟣</span> 4 Desenes de Miler (DM)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="um"><div class="box-header"><span class="box-icon">🔵</span> 5 Unitats de Miler (UM)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="c"><div class="box-header"><span class="box-icon">🟢</span> 8 Centenes (C)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="d"><div class="box-header"><span class="box-icon">🟡</span> 2 Desenes (D)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="u"><div class="box-header"><span class="box-icon">🔴</span> 7 Unitats (U)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-3')">Comprovar Descomposició 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-3')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD2: ORGANITZACIÓ I NUTRICIÓ (BIOLOGIA)
-       ======================================================== -->
-  <!-- UD2 - Repte 1: Òrgans i Aparells -->
-  <div class="pdi-activity-card" id="act-ud2-1" data-unit="ud2" data-title="Repte 1: Classificar Òrgans">
-    <div class="pdi-act-title">
-      <span class="act-num">UD2 · Repte 1</span>
-      <h3>🫀 Classifica els Òrgans en el seu Aparell corresponent</h3>
+  <div class="pdi-activity-card" id="act-ud1-4" data-unit="ud1" data-title="Repte 4: Propietats">
+    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 4</span><h3>📐 Propietats de les Operacions Matemàtiques</h3></div>
+    <p class="pdi-instruction">Classifica cada exemple algebraic segons la propietat que representa:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="com">5 + 8 = 8 + 5</div>
+        <div class="pdi-item" draggable="true" data-cat="com">4 · 7 = 7 · 4</div>
+        <div class="pdi-item" draggable="true" data-cat="ass">(2 + 3) + 6 = 2 + (3 + 6)</div>
+        <div class="pdi-item" draggable="true" data-cat="ass">(5 · 2) · 4 = 5 · (2 · 4)</div>
+        <div class="pdi-item" draggable="true" data-cat="dist">3 · (4 + 5) = 3·4 + 3·5</div>
+        <div class="pdi-item" draggable="true" data-cat="neut">9 + 0 = 9 (Suma)</div>
+        <div class="pdi-item" draggable="true" data-cat="neut">12 · 1 = 12 (Multiplicació)</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="com"><div class="box-header"><span class="box-icon">🔄</span> Propietat Commutativa (L'ordre no altera el resultat)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="ass"><div class="box-header"><span class="box-icon">🔗</span> Propietat Associativa (Agrupació lliure de termes)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="dist"><div class="box-header"><span class="box-icon">✨</span> Propietat Distributiva respecte a la suma</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="neut"><div class="box-header"><span class="box-icon">⚪</span> Element Neutre (El zero en suma, l'u en producte)</div><div class="box-items"></div></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega cada òrgan a la caixa de l'aparell humà al qual pertany:</p>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 
+  <div class="pdi-activity-card" id="act-ud1-5" data-unit="ud1" data-title="Repte 5: Arrels">
+    <div class="pdi-act-title"><span class="act-num">UD1 · Repte 5</span><h3>√ Arrels Quadrades Exactes</h3></div>
+    <p class="pdi-instruction">Arrossega cada arrel quadrada exacta al seu valor resolt:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item num-item" draggable="true" data-cat="4">√16</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="6">√36</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="8">√64</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="9">√81</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="10">√100</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="12">√144</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-3">
+        <div class="pdi-drop-box" data-cat="4"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 4</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="6"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 6</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="8"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 8</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="9"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 9</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="10"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 10</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="12"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 12</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud1-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud2-1" data-unit="ud2" data-title="Repte 1: Classificar Òrgans">
+    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 1</span><h3>🫀 Classifica els Òrgans en el seu Aparell corresponent</h3></div>
+    <p class="pdi-instruction">Arrossega cada òrgan a la caixa de l'aparell humà al qual pertany:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="digestiu">Estómac</div>
@@ -176,8 +203,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item" draggable="true" data-cat="circulatori">Venes</div>
         <div class="pdi-item" draggable="true" data-cat="excretor">Urèters</div>
       </div>
-
-      <div class="pdi-drop-boxes-grid">
+      <div class="pdi-drop-boxes-grid grid-2">
         <div class="pdi-drop-box" data-cat="digestiu"><div class="box-header"><span class="box-icon">🍏</span> Aparell Digestiu</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="respiratori"><div class="box-header"><span class="box-icon">🫁</span> Aparell Respiratori</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="circulatori"><div class="box-header"><span class="box-icon">🫀</span> Aparell Circulatori</div><div class="box-items"></div></div>
@@ -185,24 +211,19 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-1')">Comprovar Classificació 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD2 - Repte 2: El Viatge dels Aliments -->
-  <div class="pdi-activity-card" id="act-ud2-2" data-unit="ud2" data-title="Repte 2: Viatge dels Aliments">
-    <div class="pdi-act-title">
-      <span class="act-num">UD2 · Repte 2</span>
-      <h3>🥖 Ordena el Viatge dels Aliments pel Tub Digestiu</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega els òrgans en l'ordre consecutiu que segueix el menjar des de l'entrada fins a l'expulsió:</p>
-    
+  <div class="pdi-activity-card" id="act-ud2-2" data-unit="ud2" data-title="Repte 2: Viatge Aliments">
+    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 2</span><h3>🥖 Ordena el Viatge dels Aliments pel Tub Digestiu</h3></div>
+    <p class="pdi-instruction">Arrossega els òrgans en l'ordre consecutiu que segueix el menjar:</p>
     <div class="pdi-order-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Estómac (suc gàstric i quim)</div>
         <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Boca (masticació i saliva)</div>
-        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Intestí gros (absorció d'aigua i excrements)</div>
+        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Intestí gros (absorció d'aigua i femtes)</div>
         <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Faringe (deglució)</div>
         <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Intestí prim (absorció de nutrients)</div>
         <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Esòfag (moviments peristàltics)</div>
@@ -210,26 +231,21 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       <div class="pdi-slots-column">
         <div class="pdi-slot" data-slot="1"><span class="slot-badge">Etapa 1</span><span class="slot-hint">Inici: masticació</span></div>
         <div class="pdi-slot" data-slot="2"><span class="slot-badge">Etapa 2</span><span class="slot-hint">Pas comú: faringe</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Etapa 3</span><span class="slot-hint">Tub muscular de baixada</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Etapa 4</span><span class="slot-hint">Òrgan amb àcid clorhídric</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Etapa 5</span><span class="slot-hint">Absorció a la sang</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Etapa 6</span><span class="slot-hint">Formació de femtes</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Etapa 3</span><span class="slot-hint">Tub de baixada</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Etapa 4</span><span class="slot-hint">Quim gàstric</span></div>
+        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Etapa 5</span><span class="slot-hint">Absorció de nutrients</span></div>
+        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Etapa 6</span><span class="slot-hint">Extracció d'aigua i residus</span></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud2-2')">Comprovar Tub Digestiu 🚀</button>
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud2-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD2 - Repte 3: Components de la Sang -->
-  <div class="pdi-activity-card" id="act-ud2-3" data-unit="ud2" data-title="Repte 3: La Sang i els Vasos">
-    <div class="pdi-act-title">
-      <span class="act-num">UD2 · Repte 3</span>
-      <h3>🩸 Components de la Sang i Vasos Sanguinis</h3>
-    </div>
+  <div class="pdi-activity-card" id="act-ud2-3" data-unit="ud2" data-title="Repte 3: La Sang i Vasos">
+    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 3</span><h3>🩸 Components de la Sang i Vasos Sanguinis</h3></div>
     <p class="pdi-instruction">Arrossega cada element a la seua funció vital:</p>
-    
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="oxigen">Glòbuls Roigs (Eritròcits)</div>
@@ -238,31 +254,76 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item" draggable="true" data-cat="sortida">Artèries</div>
         <div class="pdi-item" draggable="true" data-cat="retorn">Venes</div>
       </div>
-      <div class="pdi-drop-boxes-grid">
+      <div class="pdi-drop-boxes-grid grid-2">
         <div class="pdi-drop-box" data-cat="oxigen"><div class="box-header"><span class="box-icon">🔴</span> Transport d'Oxigen (Hemoglobina)</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="defenses"><div class="box-header"><span class="box-icon">🛡️</span> Defenses i Immunitat</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="taps"><div class="box-header"><span class="box-icon">🩹</span> Coagulació i Tancament de Ferides</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="sortida"><div class="box-header"><span class="box-icon">💨</span> Condueixen sang des del cor als òrgans</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="retorn"><div class="box-header"><span class="box-icon">🔄</span> Retornen la sang dels òrgans cap al cor</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="retorn"><div class="box-header"><span class="box-icon">🔄</span> Retornen la sang dels òrgans al cor</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-3')">Comprovar Sang i Vasos 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-3')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD3: ELS NOMBRES ENTERS (MATEMÀTIQUES)
-       ======================================================== -->
-  <!-- UD3 - Repte 1: Positius vs Negatius -->
-  <div class="pdi-activity-card" id="act-ud3-1" data-unit="ud3" data-title="Repte 1: Positius o Negatius">
-    <div class="pdi-act-title">
-      <span class="act-num">UD3 · Repte 1</span>
-      <h3>➕➖ Nombres Enters a la Vida Real: Positius o Negatius?</h3>
+  <div class="pdi-activity-card" id="act-ud2-4" data-unit="ud2" data-title="Repte 4: Nivells de Vida">
+    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 4</span><h3>🔬 Ordena els Nivells d'Organització Biològica</h3></div>
+    <p class="pdi-instruction">Arrossega els nivells ordenant-los des del més senzill fins al més complex:</p>
+    <div class="pdi-order-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Cèl·lula (unitat viva fonamental)</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Àtom (partícula química bàsica)</div>
+        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Organisme humà complet</div>
+        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Teixit (grup de cèl·lules iguals)</div>
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Molècula (aigua, glucosa, proteïna)</div>
+        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Òrgan (cor, estómac, ronyó)</div>
+      </div>
+      <div class="pdi-slots-column">
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Nivell 1</span><span class="slot-hint">Nivell químic subatòmic</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Nivell 2</span><span class="slot-hint">Unió d'àtoms</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Nivell 3</span><span class="slot-hint">1r nivell amb vida pròpia</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Nivell 4</span><span class="slot-hint">Conjunt especialitzat</span></div>
+        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Nivell 5</span><span class="slot-hint">Estructura amb funció concreta</span></div>
+        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Nivell 6</span><span class="slot-hint">Ésser viu complet</span></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega cada situació quotidiana al contenidor corresponent:</p>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud2-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 
+  <div class="pdi-activity-card" id="act-ud2-5" data-unit="ud2" data-title="Repte 5: Nutrients">
+    <div class="pdi-act-title"><span class="act-num">UD2 · Repte 5</span><h3>🥗 Els Nutrients i la seua Funció a la Dieta</h3></div>
+    <p class="pdi-instruction">Classifica cada aliment o substància en el seu grup de nutrients principal:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="glu">Pasta, arròs i pa</div>
+        <div class="pdi-item" draggable="true" data-cat="lip">Oli d'oliva i mantega</div>
+        <div class="pdi-item" draggable="true" data-cat="pro">Ous, pollastre i llegums</div>
+        <div class="pdi-item" draggable="true" data-cat="vit">Taronja i fruites fresques</div>
+        <div class="pdi-item" draggable="true" data-cat="glu">Sucre i mel (Glucosa)</div>
+        <div class="pdi-item" draggable="true" data-cat="pro">Peix blau i formatge fresc</div>
+        <div class="pdi-item" draggable="true" data-cat="vit">Espinacs i verdures de fulla</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="glu"><div class="box-header"><span class="box-icon">⚡</span> Glúcids (Energia ràpida per a treballar)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="lip"><div class="box-header"><span class="box-icon">🥑</span> Lípids (Reserva d'energia i aïllant tèrmic)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="pro"><div class="box-header"><span class="box-icon">💪</span> Proteïnes (Construcció de múscul i reparació)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="vit"><div class="box-header"><span class="box-icon">🥕</span> Vitamines i Minerals (Regulació i salut)</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud2-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud3-1" data-unit="ud3" data-title="Repte 1: Positiu o Negatiu">
+    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 1</span><h3>➕➖ Nombres Enters a la Vida Real: Positius o Negatius?</h3></div>
+    <p class="pdi-instruction">Arrossega cada situació quotidiana al contenidor corresponent:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="positiu">Pujar al 3r pis de l'institut (+3)</div>
@@ -274,58 +335,47 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item" draggable="true" data-cat="negatiu">Submarí a 60 m sota el mar (-60)</div>
         <div class="pdi-item" draggable="true" data-cat="positiu">Pujar 15 graus la calefacció (+15)</div>
       </div>
-
       <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box box-positiu" data-cat="positiu"><div class="box-header"><span class="box-icon">🟢</span> Nombres Positius (+)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box box-negatiu" data-cat="negatiu"><div class="box-header"><span class="box-icon">🔴</span> Nombres Negatius (-)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="positiu"><div class="box-header"><span class="box-icon">🟢</span> Nombres Positius (+)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="negatiu"><div class="box-header"><span class="box-icon">🔴</span> Nombres Negatius (-)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-1')">Comprovar Situacions 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD3 - Repte 2: Recta Numèrica -->
-  <div class="pdi-activity-card" id="act-ud3-2" data-unit="ud3" data-title="Repte 2: Ordenar la Recta Numèrica">
-    <div class="pdi-act-title">
-      <span class="act-num">UD3 · Repte 2</span>
-      <h3>📏 Ordena els Nombres Enters de Menor a Major</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega els enters ordenant-los estrictament de menor (més negatiu a l'esquerra) a major (positius a la dreta):</p>
-    
+  <div class="pdi-activity-card" id="act-ud3-2" data-unit="ud3" data-title="Repte 2: Recta Numèrica">
+    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 2</span><h3>📏 Ordena els Nombres Enters de Menor a Major</h3></div>
+    <p class="pdi-instruction">Arrossega ordenant estrictament de menor a major:</p>
     <div class="pdi-order-wrapper">
       <div class="pdi-source-pool">
-        <div class="pdi-item num-item" draggable="true" data-order="5">+3</div>
-        <div class="pdi-item num-item" draggable="true" data-order="1">-9</div>
-        <div class="pdi-item num-item" draggable="true" data-order="6">+8</div>
-        <div class="pdi-item num-item" draggable="true" data-order="3">-2</div>
-        <div class="pdi-item num-item" draggable="true" data-order="2">-5</div>
-        <div class="pdi-item num-item" draggable="true" data-order="4">0</div>
+        <div class="pdi-item num-item" draggable="true" data-order="5"><span class="item-handle">☰</span> +3</div>
+        <div class="pdi-item num-item" draggable="true" data-order="1"><span class="item-handle">☰</span> -9</div>
+        <div class="pdi-item num-item" draggable="true" data-order="6"><span class="item-handle">☰</span> +8</div>
+        <div class="pdi-item num-item" draggable="true" data-order="3"><span class="item-handle">☰</span> -2</div>
+        <div class="pdi-item num-item" draggable="true" data-order="2"><span class="item-handle">☰</span> -5</div>
+        <div class="pdi-item num-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 0</div>
       </div>
       <div class="pdi-slots-column">
         <div class="pdi-slot" data-slot="1"><span class="slot-badge">Més petit</span><span class="slot-hint">Cota més negativa</span></div>
         <div class="pdi-slot" data-slot="2"><span class="slot-badge">2n</span><span class="slot-hint">Negatiu intermedi</span></div>
         <div class="pdi-slot" data-slot="3"><span class="slot-badge">3r</span><span class="slot-hint">Negatiu pròxim a zero</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4t</span><span class="slot-hint">Punt d'origen central</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4t</span><span class="slot-hint">Zero</span></div>
         <div class="pdi-slot" data-slot="5"><span class="slot-badge">5è</span><span class="slot-hint">Positiu xicotet</span></div>
         <div class="pdi-slot" data-slot="6"><span class="slot-badge">Més gran</span><span class="slot-hint">Major nombre positiu</span></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud3-2')">Comprovar Recta Numèrica 🚀</button>
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud3-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD3 - Repte 3: Regla dels Signes -->
-  <div class="pdi-activity-card" id="act-ud3-3" data-unit="ud3" data-title="Repte 3: Regla dels Signes">
-    <div class="pdi-act-title">
-      <span class="act-num">UD3 · Repte 3</span>
-      <h3>✖️➗ La Regla dels Signes en Multiplicació i Divisió</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega cada operació al seu resultat exacte tenint en compte que <em>menys per menys és més</em>:</p>
-    
+  <div class="pdi-activity-card" id="act-ud3-3" data-unit="ud3" data-title="Repte 3: Regla Signes">
+    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 3</span><h3>✖️➗ La Regla dels Signes en Multiplicació i Divisió</h3></div>
+    <p class="pdi-instruction">Arrossega cada operació al seu resultat exacte:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item num-item" draggable="true" data-cat="p12">(-3) · (-4)</div>
@@ -341,22 +391,60 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-3')">Comprovar Signes 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-3')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD4: DIVISIBILITAT, PRIMERS I COMPOSTOS (MATEMÀTIQUES)
-       ======================================================== -->
-  <!-- UD4 - Repte 1: Primers vs Compostos -->
-  <div class="pdi-activity-card" id="act-ud4-1" data-unit="ud4" data-title="Repte 1: Primers vs Compostos">
-    <div class="pdi-act-title">
-      <span class="act-num">UD4 · Repte 1</span>
-      <h3>⭐ Nombres Primers vs Nombres Compostos</h3>
+  <div class="pdi-activity-card" id="act-ud3-4" data-unit="ud3" data-title="Repte 4: Suma i Resta">
+    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 4</span><h3>🧮 Sumes i Restes de Nombres Enters</h3></div>
+    <p class="pdi-instruction">Resol mentalment i emparella cada càlcul amb el seu valor final:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item num-item" draggable="true" data-cat="p4">(-6) + (+10)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="m4">(+2) - (+6)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="m7">(-3) - (+4)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="p7">(+12) + (-5)</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="p4"><div class="box-header"><span class="box-icon">🎯</span> Resultat: +4</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="m4"><div class="box-header"><span class="box-icon">🎯</span> Resultat: -4</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="p7"><div class="box-header"><span class="box-icon">🎯</span> Resultat: +7</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="m7"><div class="box-header"><span class="box-icon">🎯</span> Resultat: -7</div><div class="box-items"></div></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega cada nombre a la seua categoria: <strong>Primers</strong> (només 2 divisors) o <strong>Compostos</strong> (> 2 divisors):</p>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 
+  <div class="pdi-activity-card" id="act-ud3-5" data-unit="ud3" data-title="Repte 5: Valor Absolut">
+    <div class="pdi-act-title"><span class="act-num">UD3 · Repte 5</span><h3>📐 Valor Absolut |x| i Nombre Oposat</h3></div>
+    <p class="pdi-instruction">Classifica segons si el resultat és 6 o és 9:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item num-item" draggable="true" data-cat="v6">|-6|</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="v6">|+6|</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="v6">Oposat de (-6)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="v9">|-9|</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="v9">|+9|</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="v9">Oposat de (-9)</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="v6"><div class="box-header"><span class="box-icon">🔵</span> Dóna com a valor final 6</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="v9"><div class="box-header"><span class="box-icon">🟣</span> Dóna com a valor final 9</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud3-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud4-1" data-unit="ud4" data-title="Repte 1: Primers / Compostos">
+    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 1</span><h3>⭐ Nombres Primers vs Nombres Compostos</h3></div>
+    <p class="pdi-instruction">Arrossega cada nombre a la seua categoria:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item num-item" draggable="true" data-cat="primer">2</div>
@@ -370,26 +458,20 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item num-item" draggable="true" data-cat="primer">13</div>
         <div class="pdi-item num-item" draggable="true" data-cat="compost">15</div>
       </div>
-
       <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box box-primer" data-cat="primer"><div class="box-header"><span class="box-icon">⭐</span> Nombres Primers (2 divisors)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box box-compost" data-cat="compost"><div class="box-header"><span class="box-icon">📦</span> Nombres Compostos (&gt; 2 divisors)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="primer"><div class="box-header"><span class="box-icon">⭐</span> Nombres Primers (Només 2 divisors: l'1 i ell mateix)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="compost"><div class="box-header"><span class="box-icon">📦</span> Nombres Compostos (Tenen més de 2 divisors)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-1')">Comprovar Primers i Compostos 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD4 - Repte 2: Criteris de Divisibilitat -->
-  <div class="pdi-activity-card" id="act-ud4-2" data-unit="ud4" data-title="Repte 2: Criteris de Divisibilitat">
-    <div class="pdi-act-title">
-      <span class="act-num">UD4 · Repte 2</span>
-      <h3>🎯 Criteris de Divisibilitat: Per 2, per 3 o per 5?</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega cada nombre a la caixa del criteri que compleix de manera més directa:</p>
-    
+  <div class="pdi-activity-card" id="act-ud4-2" data-unit="ud4" data-title="Repte 2: Criteris Divisibilitat">
+    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 2</span><h3>🎯 Criteris de Divisibilitat: Per 2, per 3 o per 5?</h3></div>
+    <p class="pdi-instruction">Arrossega cada nombre a la caixa del criteri que compleix:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item num-item" draggable="true" data-cat="div2">18</div>
@@ -400,28 +482,87 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item num-item" draggable="true" data-cat="div5">75</div>
       </div>
       <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="div2"><div class="box-header"><span class="box-icon">2️⃣</span> Divisible per 2 (Acaba en parell)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="div3"><div class="box-header"><span class="box-icon">3️⃣</span> Divisible per 3 (Suma de xifres)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="div5"><div class="box-header"><span class="box-icon">5️⃣</span> Divisible per 5 (Acaba en 0 o 5)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="div2"><div class="box-header"><span class="box-icon">2️⃣</span> Divisible per 2 (Acaba en xifra parell)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="div3"><div class="box-header"><span class="box-icon">3️⃣</span> Divisible per 3 (La suma de xifres és múltiple de 3)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="div5"><div class="box-header"><span class="box-icon">5️⃣</span> Divisible per 5 (Acaba en 0 o en 5)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-2')">Comprovar Criteris 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD5: LES FRACCIONS (MATEMÀTIQUES)
-       ======================================================== -->
-  <!-- UD5 - Repte 1: Tipus de Fraccions -->
-  <div class="pdi-activity-card" id="act-ud5-1" data-unit="ud5" data-title="Repte 1: Tipus de Fraccions">
-    <div class="pdi-act-title">
-      <span class="act-num">UD5 · Repte 1</span>
-      <h3>🍰 Tipus de Fraccions: Pròpies, Impròpies o Iguals a 1</h3>
+  <div class="pdi-activity-card" id="act-ud4-3" data-unit="ud4" data-title="Repte 3: Múltiples vs Divisors">
+    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 3</span><h3>🔄 Múltiples vs Divisors del Nombre 12</h3></div>
+    <p class="pdi-instruction">Classifica aquests nombres segons la seua relació amb el 12:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item num-item" draggable="true" data-cat="mult">24 (12 · 2)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="div">3 (12 : 3 = 4)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="mult">36 (12 · 3)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="div">4 (12 : 4 = 3)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="mult">60 (12 · 5)</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="div">6 (12 : 6 = 2)</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="mult"><div class="box-header"><span class="box-icon">📈</span> Múltiples de 12 (Resultat de multiplicar 12 per un enter)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="div"><div class="box-header"><span class="box-icon">📉</span> Divisors de 12 (Divideixen exactament a 12 sense residu)</div><div class="box-items"></div></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega cada fracció al seu calaix segons si és menor que 1, major que 1 o igual a 1:</p>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-3')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 
+  <div class="pdi-activity-card" id="act-ud4-4" data-unit="ud4" data-title="Repte 4: Factors Primers">
+    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 4</span><h3>🧩 Descomposició Factorial en Factors Primers</h3></div>
+    <p class="pdi-instruction">Emparella cada nombre amb el seu producte de factors primers:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item num-item" draggable="true" data-cat="n12">2² · 3</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="n18">2 · 3²</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="n20">2² · 5</div>
+        <div class="pdi-item num-item" draggable="true" data-cat="n50">2 · 5²</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="n12"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 12</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="n18"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 18</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="n20"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 20</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="n50"><div class="box-header"><span class="box-icon">🎯</span> És la descomposició de: 50</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud4-5" data-unit="ud4" data-title="Repte 5: MCD o MCM?">
+    <div class="pdi-act-title"><span class="act-num">UD4 · Repte 5</span><h3>🤔 En quin Problema usem MCD o MCM?</h3></div>
+    <p class="pdi-instruction">Classifica cada situació problemàtica segons quina eina cal aplicar per a resoldre-la:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="mcd">Tallar dues cordes de 18 m i 24 m en trossos iguals el més llargs possible</div>
+        <div class="pdi-item" draggable="true" data-cat="mcm">Dos autobusos ixen a la vegada i passen cada 15 min i cada 20 min. Quan tornaran a coincidir?</div>
+        <div class="pdi-item" draggable="true" data-cat="mcd">Fer paquets iguals de caramels sense que en sobre cap</div>
+        <div class="pdi-item" draggable="true" data-cat="mcm">Dos fars marítims parpellegen cada 6 segons i cada 8 segons. Quan s'encendran alhora?</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="mcd"><div class="box-header"><span class="box-icon">✂️</span> Màxim Comú Divisor (MCD) — Repartir / tallar en màxima mida</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="mcm"><div class="box-header"><span class="box-icon">⏰</span> Mínim Comú Múltiple (MCM) — Coincidència de temps o cicles</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud4-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud5-1" data-unit="ud5" data-title="Repte 1: Tipus Fraccions">
+    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 1</span><h3>🍰 Tipus de Fraccions: Pròpies, Impròpies o Iguals a 1</h3></div>
+    <p class="pdi-instruction">Arrossega cada fracció al seu calaix segons el seu valor respecte a la unitat:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item frac-item" draggable="true" data-cat="propia"><sup>1</sup>/<sub>2</sub></div>
@@ -431,27 +572,21 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item frac-item" draggable="true" data-cat="impropia"><sup>7</sup>/<sub>4</sub></div>
         <div class="pdi-item frac-item" draggable="true" data-cat="unitat"><sup>9</sup>/<sub>9</sub></div>
       </div>
-
       <div class="pdi-drop-boxes-grid grid-3">
-        <div class="pdi-drop-box" data-cat="propia"><div class="box-header"><span class="box-icon">🍰</span> Fraccions Pròpies (&lt; 1)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="impropia"><div class="box-header"><span class="box-icon">🍕</span> Fraccions Impròpies (&gt; 1)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="unitat"><div class="box-header"><span class="box-icon">🎯</span> Igual a la Unitat (= 1)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="propia"><div class="box-header"><span class="box-icon">🍰</span> Fraccions Pròpies (< 1)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="impropia"><div class="box-header"><span class="box-icon">🍕</span> Fraccions Impròpies (> 1)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="unitat"><div class="box-header"><span class="box-icon">🎯</span> Iguals a la Unitat (= 1)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-1')">Comprovar Fraccions 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD5 - Repte 2: Fraccions Equivalents -->
-  <div class="pdi-activity-card" id="act-ud5-2" data-unit="ud5" data-title="Repte 2: Fraccions Equivalents">
-    <div class="pdi-act-title">
-      <span class="act-num">UD5 · Repte 2</span>
-      <h3>🪞 Emparella Fraccions Equivalents</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega cada fracció simplificada amb la seua fracció equivalent ampliada:</p>
-    
+  <div class="pdi-activity-card" id="act-ud5-2" data-unit="ud5" data-title="Repte 2: Equivalències">
+    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 2</span><h3>🪞 Emparella Fraccions Equivalents</h3></div>
+    <p class="pdi-instruction">Arrossega cada fracció simplificada amb la seua ampliació equivalent:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item frac-item" draggable="true" data-cat="f12"><sup>1</sup>/<sub>2</sub></div>
@@ -460,29 +595,89 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item frac-item" draggable="true" data-cat="f25"><sup>2</sup>/<sub>5</sub></div>
       </div>
       <div class="pdi-drop-boxes-grid grid-2">
-        <div class="pdi-drop-box" data-cat="f12"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>3</sup>/<sub>6</sub> (o <sup>5</sup>/<sub>10</sub>)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f23"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>4</sup>/<sub>6</sub> (o <sup>6</sup>/<sub>9</sub>)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f34"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>6</sup>/<sub>8</sub> (o <sup>9</sup>/<sub>12</sub>)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="f25"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>4</sup>/<sub>10</sub> (o <sup>6</sup>/<sub>15</sub>)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f12"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>3</sup>/<sub>6</sub> (Multiplicat per 3)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f23"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>4</sup>/<sub>6</sub> (Multiplicat per 2)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f34"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>6</sup>/<sub>8</sub> (Multiplicat per 2)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f25"><div class="box-header"><span class="box-icon">⚖️</span> Equivalent a <sup>4</sup>/<sub>10</sub> (Multiplicat per 2)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-2')">Comprovar Equivalències 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD6: L'UNIVERS I EL SISTEMA SOLAR (BIOLOGIA I GEOLOGIA)
-       ======================================================== -->
-  <!-- UD6 - Repte 1: Planetes Rocosos vs Gasosos -->
-  <div class="pdi-activity-card" id="act-ud6-1" data-unit="ud6" data-title="Repte 1: Rocosos vs Gasosos">
-    <div class="pdi-act-title">
-      <span class="act-num">UD6 · Repte 1</span>
-      <h3>🪐 Planetes Rocosos vs Planetes Gasosos</h3>
+  <div class="pdi-activity-card" id="act-ud5-3" data-unit="ud5" data-title="Repte 3: Ordenar Fraccions">
+    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 3</span><h3>📏 Ordena Fraccions de Menor a Major (Denominador 8)</h3></div>
+    <p class="pdi-instruction">Com que tenen el mateix denominador, ordena-les segons el seu numerador:</p>
+    <div class="pdi-order-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item frac-item" draggable="true" data-order="3"><span class="item-handle">☰</span> <sup>5</sup>/<sub>8</sub></div>
+        <div class="pdi-item frac-item" draggable="true" data-order="1"><span class="item-handle">☰</span> <sup>1</sup>/<sub>8</sub></div>
+        <div class="pdi-item frac-item" draggable="true" data-order="4"><span class="item-handle">☰</span> <sup>7</sup>/<sub>8</sub></div>
+        <div class="pdi-item frac-item" draggable="true" data-order="2"><span class="item-handle">☰</span> <sup>3</sup>/<sub>8</sub></div>
+      </div>
+      <div class="pdi-slots-column">
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Més xicoteta</span><span class="slot-hint">Només 1 part de 8</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2a</span><span class="slot-hint">3 parts de 8</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3a</span><span class="slot-hint">Més de la meitat (5 parts)</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Més gran</span><span class="slot-hint">Quasi la unitat sencera (7 parts)</span></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega els 8 planetes del Sistema Solar al seu grup:</p>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud5-3')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 
+  <div class="pdi-activity-card" id="act-ud5-4" data-unit="ud5" data-title="Repte 4: Fracció Quantitat">
+    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 4</span><h3>💰 Càlcul de la Fracció d'una Quantitat</h3></div>
+    <p class="pdi-instruction">Calcula dividint pel denominador i multiplicant pel numerador:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="r30">1/2 de 60 €</div>
+        <div class="pdi-item" draggable="true" data-cat="r75">3/4 de 100 kg</div>
+        <div class="pdi-item" draggable="true" data-cat="r20">2/5 de 50 alumnes</div>
+        <div class="pdi-item" draggable="true" data-cat="r30">1/3 de 90 litres</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="r30"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 30</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="r75"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 75</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="r20"><div class="box-header"><span class="box-icon">🎯</span> Resultat: 20</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud5-5" data-unit="ud5" data-title="Repte 5: Suma / Resta">
+    <div class="pdi-act-title"><span class="act-num">UD5 · Repte 5</span><h3>➕➖ Suma i Resta de Fraccions amb Mateix Denominador</h3></div>
+    <p class="pdi-instruction">Opera els numeradors mantenint intacte el denominador comú:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item frac-item" draggable="true" data-cat="f57"><sup>3</sup>/<sub>7</sub> + <sup>2</sup>/<sub>7</sub></div>
+        <div class="pdi-item frac-item" draggable="true" data-cat="f39"><sup>8</sup>/<sub>9</sub> - <sup>5</sup>/<sub>9</sub></div>
+        <div class="pdi-item frac-item" draggable="true" data-cat="f45"><sup>1</sup>/<sub>5</sub> + <sup>3</sup>/<sub>5</sub></div>
+        <div class="pdi-item frac-item" draggable="true" data-cat="f310"><sup>7</sup>/<sub>10</sub> - <sup>4</sup>/<sub>10</sub></div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="f57"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>5</sup>/<sub>7</sub></div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f39"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>3</sup>/<sub>9</sub></div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f45"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>4</sup>/<sub>5</sub></div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="f310"><div class="box-header"><span class="box-icon">🎯</span> Resultat: <sup>3</sup>/<sub>10</sub></div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud5-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud6-1" data-unit="ud6" data-title="Repte 1: Rocosos vs Gasosos">
+    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 1</span><h3>🪐 Planetes Rocosos vs Planetes Gasosos</h3></div>
+    <p class="pdi-instruction">Arrossega els 8 planetes del Sistema Solar al seu grup:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="rocos">Mercuri</div>
@@ -494,26 +689,20 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item" draggable="true" data-cat="rocos">Mart</div>
         <div class="pdi-item" draggable="true" data-cat="gasos">Neptú</div>
       </div>
-
       <div class="pdi-drop-boxes-grid grid-2">
         <div class="pdi-drop-box" data-cat="rocos"><div class="box-header"><span class="box-icon">🪨</span> Planetes Rocosos / Interiors</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="gasos"><div class="box-header"><span class="box-icon">🪐</span> Planetes Gasosos / Exteriors</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-1')">Comprovar Planetes 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD6 - Repte 2: Distància al Sol -->
-  <div class="pdi-activity-card" id="act-ud6-2" data-unit="ud6" data-title="Repte 2: Ordenar des del Sol">
-    <div class="pdi-act-title">
-      <span class="act-num">UD6 · Repte 2</span>
-      <h3>☀️ Ordena els Planetes des del Sol cap a l'Exterior</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega els planetes en l'ordre consecutiu des del més pròxim al Sol fins al més llunyà:</p>
-    
+  <div class="pdi-activity-card" id="act-ud6-2" data-unit="ud6" data-title="Repte 2: Distància al Sol">
+    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 2</span><h3>☀️ Ordena els Planetes des del Sol cap a l'Exterior</h3></div>
+    <p class="pdi-instruction">Arrossega en l'ordre consecutiu de proximitat al Sol:</p>
     <div class="pdi-order-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> Júpiter</div>
@@ -526,33 +715,96 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> Saturn</div>
       </div>
       <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">1r Planeta</span><span class="slot-hint">Més proper al Sol</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2n Planeta</span><span class="slot-hint">El més calent (efecte hivernacle)</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3r Planeta</span><span class="slot-hint">Planeta blau amb vida</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4t Planeta</span><span class="slot-hint">Planeta roig</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5è Planeta</span><span class="slot-hint">Gegant amb Gran Taca Roja</span></div>
-        <div class="pdi-slot" data-slot="6"><span class="slot-badge">6è Planeta</span><span class="slot-hint">Planeta amb anells espectaculars</span></div>
-        <div class="pdi-slot" data-slot="7"><span class="slot-badge">7è Planeta</span><span class="slot-hint">Gegant de gel inclinat</span></div>
-        <div class="pdi-slot" data-slot="8"><span class="slot-badge">8è Planeta</span><span class="slot-hint">El més allunyat del Sol</span></div>
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">1r</span><span class="slot-hint">Mercuri</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2n</span><span class="slot-hint">Venus</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3r</span><span class="slot-hint">Terra</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4t</span><span class="slot-hint">Mart</span></div>
+        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5è</span><span class="slot-hint">Júpiter</span></div>
+        <div class="pdi-slot" data-slot="6"><span class="slot-badge">6è</span><span class="slot-hint">Saturn</span></div>
+        <div class="pdi-slot" data-slot="7"><span class="slot-badge">7è</span><span class="slot-hint">Urà</span></div>
+        <div class="pdi-slot" data-slot="8"><span class="slot-badge">8è</span><span class="slot-hint">Neptú</span></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud6-2')">Comprovar Sistema Solar 🚀</button>
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud6-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD7: EL PLANETA TERRA: GEOSFERA I MOVIMENTS (GEOLOGIA)
-       ======================================================== -->
-  <!-- UD7 - Repte 1: Capes de la Geosfera -->
-  <div class="pdi-activity-card" id="act-ud7-1" data-unit="ud7" data-title="Repte 1: Capes de la Terra">
-    <div class="pdi-act-title">
-      <span class="act-num">UD7 · Repte 1</span>
-      <h3>🌍 Les 4 Capes Internes de la Geosfera</h3>
+  <div class="pdi-activity-card" id="act-ud6-3" data-unit="ud6" data-title="Repte 3: Escala Còsmica">
+    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 3</span><h3>🌌 Ordena l'Univers d'Escala Menor a Còsmica</h3></div>
+    <p class="pdi-instruction">Arrossega les estructures començant per la més xicoteta fins a la més gegantina:</p>
+    <div class="pdi-order-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Sistema Solar (el Sol i planetes)</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Planeta Terra</div>
+        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Univers Observable complet</div>
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Estrella Sol</div>
+        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Galàxia Via Làctia (200.000 milions d'estrelles)</div>
+      </div>
+      <div class="pdi-slots-column">
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Escala 1</span><span class="slot-hint">Planeta individual</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Escala 2</span><span class="slot-hint">Estrella central</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Escala 3</span><span class="slot-hint">Família planetària</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Escala 4</span><span class="slot-hint">Espirals d'estrelles</span></div>
+        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Escala 5</span><span class="slot-hint">El Tot còsmic</span></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega cada descripció a la capa correcta de l'interior de la Terra:</p>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud6-3')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 
+  <div class="pdi-activity-card" id="act-ud6-4" data-unit="ud6" data-title="Repte 4: Tipus d'Astres">
+    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 4</span><h3>🔭 Classifica els Cossos de l'Univers</h3></div>
+    <p class="pdi-instruction">Arrossega cada cos celeste a la seua definició astronòmica:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="est">El Sol</div>
+        <div class="pdi-item" draggable="true" data-cat="pla">Mart</div>
+        <div class="pdi-item" draggable="true" data-cat="sat">La Lluna</div>
+        <div class="pdi-item" draggable="true" data-cat="est">Sirius</div>
+        <div class="pdi-item" draggable="true" data-cat="com">Cometa Halley</div>
+        <div class="pdi-item" draggable="true" data-cat="sat">Ganimedes (de Júpiter)</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="est"><div class="box-header"><span class="box-icon">⭐</span> Estrella (Cos massiu que emet llum pròpia)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="pla"><div class="box-header"><span class="box-icon">🪐</span> Planeta (Òrbita al voltant d'una estrella)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="sat"><div class="box-header"><span class="box-icon">🌙</span> Satèl·lit (Òrbita al voltant d'un planeta)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="com"><div class="box-header"><span class="box-icon">☄️</span> Cometa (Cos de gel i pols amb cua brillant)</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud6-5" data-unit="ud6" data-title="Repte 5: Roques Espacials">
+    <div class="pdi-act-title"><span class="act-num">UD6 · Repte 5</span><h3>🪨 Meteoroide, Meteor o Meteorit?</h3></div>
+    <p class="pdi-instruction">Identifica on es troba el fragment rocallós:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="oide">Roca que flota a l'espai abans d'entrar a la Terra</div>
+        <div class="pdi-item" draggable="true" data-cat="or">Estel fugaç que brilla per fricció a l'atmosfera</div>
+        <div class="pdi-item" draggable="true" data-cat="it">Roca que sobreviu i impacta al terra creant un cràter</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-3">
+        <div class="pdi-drop-box" data-cat="oide"><div class="box-header"><span class="box-icon">🛰️</span> Meteoroide (A l'espai buit)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="or"><div class="box-header"><span class="box-icon">🌠</span> Meteor (Estel fugaç a la mesosfera)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="it"><div class="box-header"><span class="box-icon">💥</span> Meteorit (Ha tocat la superfície terrestre)</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud6-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud7-1" data-unit="ud7" data-title="Repte 1: Capes Geosfera">
+    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 1</span><h3>🌍 Les 4 Capes Internes de la Geosfera</h3></div>
+    <p class="pdi-instruction">Arrossega cada característica a la capa correcta de la Terra:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="escorca">Capa sòlida prima exterior on vivim</div>
@@ -560,7 +812,6 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-item" draggable="true" data-cat="nucli-ext">Capa líquida de ferro que genera el camp magnètic</div>
         <div class="pdi-item" draggable="true" data-cat="nucli-int">Esfera metàl·lica sòlida al centre a altíssima temperatura</div>
       </div>
-
       <div class="pdi-drop-boxes-grid grid-2">
         <div class="pdi-drop-box" data-cat="escorca"><div class="box-header"><span class="box-icon">⛰️</span> Escorça Terrestre</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="mantell"><div class="box-header"><span class="box-icon">🌋</span> Mantell Terrestre</div><div class="box-items"></div></div>
@@ -569,80 +820,130 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-1')">Comprovar Capes de la Terra 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD7 - Repte 2: Rotació vs Traslació -->
-  <div class="pdi-activity-card" id="act-ud7-2" data-unit="ud7" data-title="Repte 2: Rotació vs Traslació">
-    <div class="pdi-act-title">
-      <span class="act-num">UD7 · Repte 2</span>
-      <h3>🔄 Moviments de la Terra: Rotació vs Traslació</h3>
-    </div>
-    <p class="pdi-instruction">Classifica les característiques i conseqüències segons el moviment de la Terra:</p>
-    
+  <div class="pdi-activity-card" id="act-ud7-2" data-unit="ud7" data-title="Repte 2: Rotació / Traslació">
+    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 2</span><h3>🔄 Moviments de la Terra: Rotació vs Traslació</h3></div>
+    <p class="pdi-instruction">Classifica característiques i conseqüències segons el moviment:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="rotacio">Gira sobre el seu propi eix</div>
-        <div class="pdi-item" draggable="true" data-cat="traslacio">Òrbita al voltant del Sol</div>
+        <div class="pdi-item" draggable="true" data-cat="traslacio">Òrbita el·líptica al voltant del Sol</div>
         <div class="pdi-item" draggable="true" data-cat="rotacio">Dura 24 hores (1 dia solar)</div>
         <div class="pdi-item" draggable="true" data-cat="traslacio">Dura 365 dies i 6 hores (1 any)</div>
-        <div class="pdi-item" draggable="true" data-cat="rotacio">Origina el Dia i la Nit</div>
+        <div class="pdi-item" draggable="true" data-cat="rotacio">Origina la successió de Dia i Nit</div>
         <div class="pdi-item" draggable="true" data-cat="traslacio">Origina les 4 Estacions de l'any</div>
       </div>
       <div class="pdi-drop-boxes-grid grid-2">
         <div class="pdi-drop-box" data-cat="rotacio"><div class="box-header"><span class="box-icon">🌍</span> Moviment de Rotació (Eix propi)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="traslacio"><div class="box-header"><span class="box-icon">☀️</span> Moviment de Traslació (Al voltant del Sol)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="traslacio"><div class="box-header"><span class="box-icon">☀️</span> Moviment de Traslació (Voltant del Sol)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-2')">Comprovar Moviments 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD8: L'ATMOSFERA TERRESTRE (BIOLOGIA I GEOLOGIA)
-       ======================================================== -->
-  <!-- UD8 - Repte 1: Ordenar Capes de l'Atmosfera -->
-  <div class="pdi-activity-card" id="act-ud8-1" data-unit="ud8" data-title="Repte 1: Capes Atmosfèriques">
-    <div class="pdi-act-title">
-      <span class="act-num">UD8 · Repte 1</span>
-      <h3>🌤️ Ordena les Capes de l'Atmosfera des de Baix cap a Dalt</h3>
-    </div>
-    <p class="pdi-instruction">Arrossega les capes començant per la més pròxima al terra (superfície) fins a l'espai exterior:</p>
-    
+  <div class="pdi-activity-card" id="act-ud7-3" data-unit="ud7" data-title="Repte 3: Fases de la Lluna">
+    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 3</span><h3>🌙 Ordena el Cicle de les 4 Fases de la Lluna</h3></div>
+    <p class="pdi-instruction">Ordena el cicle lunar consecutivament començant per la fase fosca:</p>
     <div class="pdi-order-wrapper">
       <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> Mesosfera (on es desintegren els meteorits)</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> Troposfera (on vivim, amb l'aire i els núvols)</div>
-        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> Exosfera (límit exterior amb l'espai)</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> Estratosfera (conté la capa d'ozó)</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> Termosfera (on es produeixen les aurores)</div>
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Lluna Plena (cara il·luminada al 100%)</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Lluna Nova (no és visible des de la Terra)</div>
+        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Quart Minvant (forma de 'C' decreixent)</div>
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Quart Creixent (forma de 'D' creixent)</div>
       </div>
       <div class="pdi-slots-column">
-        <div class="pdi-slot" data-slot="1"><span class="slot-badge">1a Capa (Terra)</span><span class="slot-hint">Contacte amb nosaltres</span></div>
-        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2a Capa</span><span class="slot-hint">Capa amb l'Ozó</span></div>
-        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3a Capa</span><span class="slot-hint">Capa intermèdia</span></div>
-        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4a Capa</span><span class="slot-hint">Aurores i satèl·lits</span></div>
-        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5a Capa (Espai)</span><span class="slot-hint">Límit exterior</span></div>
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Fase 1</span><span class="slot-hint">Lluna fosca d'inici</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Fase 2</span><span class="slot-hint">Forma de lletra D</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Fase 3</span><span class="slot-hint">Disc blanc complet</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Fase 4</span><span class="slot-hint">Forma de lletra C</span></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud8-1')">Comprovar Ordre Atmosfèric 🚀</button>
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud7-3')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD8 - Repte 2: Aparells Meteorològics -->
-  <div class="pdi-activity-card" id="act-ud8-2" data-unit="ud8" data-title="Repte 2: Aparells Meteorològics">
-    <div class="pdi-act-title">
-      <span class="act-num">UD8 · Repte 2</span>
-      <h3>🌡️ Aparells de la Caseta Meteorològica</h3>
+  <div class="pdi-activity-card" id="act-ud7-4" data-unit="ud7" data-title="Repte 4: Tipus de Roques">
+    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 4</span><h3>🪨 Els Tres Grans Grups de Roques</h3></div>
+    <p class="pdi-instruction">Classifica cada roca segons el seu origen geològic:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="mag">Granit (refredament lent subterrani)</div>
+        <div class="pdi-item" draggable="true" data-cat="sed">Calcària (acumulació de closques marines)</div>
+        <div class="pdi-item" draggable="true" data-cat="met">Marbre (calcària transformada per calor/pressió)</div>
+        <div class="pdi-item" draggable="true" data-cat="mag">Basalt (lava volcànica refredada)</div>
+        <div class="pdi-item" draggable="true" data-cat="sed">Argila i gres (compactació d'arenes)</div>
+        <div class="pdi-item" draggable="true" data-cat="met">Pissarra (argila transformada en làmines)</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-3">
+        <div class="pdi-drop-box" data-cat="mag"><div class="box-header"><span class="box-icon">🌋</span> Roques Magmàtiques (Solidificació de magma)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="sed"><div class="box-header"><span class="box-icon">🏖️</span> Roques Sedimentàries (Sediments acumulats en capes)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="met"><div class="box-header"><span class="box-icon">🔥</span> Roques Metamòrfiques (Transformades per pressió)</div><div class="box-items"></div></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega cada instrument meteorològic a la magnitud que mesura:</p>
-    
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud7-5" data-unit="ud7" data-title="Repte 5: Tipus d'Eclipsi">
+    <div class="pdi-act-title"><span class="act-num">UD7 · Repte 5</span><h3>🌑 Eclipsi de Sol vs Eclipsi de Lluna</h3></div>
+    <p class="pdi-instruction">Classifica qui s'interposa enmig i quina ombra es genera:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="sol">Alineació: Sol - Lluna - Terra</div>
+        <div class="pdi-item" draggable="true" data-cat="lluna">Alineació: Sol - Terra - Lluna</div>
+        <div class="pdi-item" draggable="true" data-cat="sol">La Lluna tapa la llum del Sol en ple dia</div>
+        <div class="pdi-item" draggable="true" data-cat="lluna">L'ombra de la Terra enfosqueix la Lluna de nit</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="sol"><div class="box-header"><span class="box-icon">☀️</span> Eclipsi de Sol (La Lluna enmig)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="lluna"><div class="box-header"><span class="box-icon">🌕</span> Eclipsi de Lluna (La Terra enmig)</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud7-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud8-1" data-unit="ud8" data-title="Repte 1: Capes Atmosfera">
+    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 1</span><h3>🌤️ Ordena les Capes de l'Atmosfera de Baix cap a Dalt</h3></div>
+    <p class="pdi-instruction">Arrossega les capes des del terra fins a l'espai exterior:</p>
+    <div class="pdi-order-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Mesosfera (on es desintegren meteorits)</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Troposfera (on vivim, amb l'aire i núvols)</div>
+        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Exosfera (límit exterior amb l'espai)</div>
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Estratosfera (conté la capa d'ozó)</div>
+        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Termosfera (aurores i satèl·lits)</div>
+      </div>
+      <div class="pdi-slots-column">
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">1a Capa</span><span class="slot-hint">Contacte amb la superfície</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">2a Capa</span><span class="slot-hint">Capa amb l'Ozó protector</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">3a Capa</span><span class="slot-hint">Capa freda intermèdia</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">4a Capa</span><span class="slot-hint">Aurores polars</span></div>
+        <div class="pdi-slot" data-slot="5"><span class="slot-badge">5a Capa</span><span class="slot-hint">Límit exterior amb l'espai</span></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud8-1')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud8-2" data-unit="ud8" data-title="Repte 2: Aparells Meteorològics">
+    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 2</span><h3>🌡️ Aparells de la Caseta Meteorològica</h3></div>
+    <p class="pdi-instruction">Arrossega cada instrument a la magnitud meteorològica que mesura:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="temp">Termòmetre</div>
@@ -654,32 +955,91 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
         <div class="pdi-drop-box" data-cat="temp"><div class="box-header"><span class="box-icon">🌡️</span> Temperatura de l'Aire (°C)</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="pressio"><div class="box-header"><span class="box-icon">⏱️</span> Pressió Atmosfèrica (hPa / mb)</div><div class="box-items"></div></div>
         <div class="pdi-drop-box" data-cat="vent"><div class="box-header"><span class="box-icon">💨</span> Velocitat del Vent (km/h)</div><div class="box-items"></div></div>
-        <div class="pdi-drop-box" data-cat="pluja"><div class="box-header"><span class="box-icon">🌧️</span> Quantitat de Precipitació (L/m²)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="pluja"><div class="box-header"><span class="box-icon">🌧️</span> Precipitació caiguda (L/m² o mm)</div><div class="box-items"></div></div>
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-2')">Comprovar Instruments 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- ========================================================
-       UD9: LA HIDROSFERA TERRESTRE (BIOLOGIA I GEOLOGIA)
-       ======================================================== -->
-  <!-- UD9 - Repte 1: Etapes del Cicle de l'Aigua -->
-  <div class="pdi-activity-card" id="act-ud9-1" data-unit="ud9" data-title="Repte 1: Cicle de l'Aigua">
-    <div class="pdi-act-title">
-      <span class="act-num">UD9 · Repte 1</span>
-      <h3>💧 Ordena les 4 Etapes del Cicle de l'Aigua</h3>
+  <div class="pdi-activity-card" id="act-ud8-3" data-unit="ud8" data-title="Repte 3: Gasos de l'Aire">
+    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 3</span><h3>💨 La Composició de l'Aire Net</h3></div>
+    <p class="pdi-instruction">Classifica cada gas segons el seu percentatge en l'aire que respirem:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="n2">Nitrogen (N₂)</div>
+        <div class="pdi-item" draggable="true" data-cat="o2">Oxigen (O₂)</div>
+        <div class="pdi-item" draggable="true" data-cat="res">Argó (Gas noble)</div>
+        <div class="pdi-item" draggable="true" data-cat="res">Diòxid de carboni (CO₂)</div>
+        <div class="pdi-item" draggable="true" data-cat="res">Vapor d'aigua</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-3">
+        <div class="pdi-drop-box" data-cat="n2"><div class="box-header"><span class="box-icon">🟢</span> ~78% (El gas més abundant de l'aire)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="o2"><div class="box-header"><span class="box-icon">🔵</span> ~21% (El gas que necessitem per respirar)</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="res"><div class="box-header"><span class="box-icon">🟡</span> ~1% (La resta de gasos minoritaris)</div><div class="box-items"></div></div>
+      </div>
     </div>
-    <p class="pdi-instruction">Arrossega les etapes del cicle hidrològic en la seua seqüència natural:</p>
-    
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-3')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud8-4" data-unit="ud8" data-title="Repte 4: Contaminació Aire">
+    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 4</span><h3>🏭 Contaminants Naturals vs Artificials</h3></div>
+    <p class="pdi-instruction">Classifica l'origen de la contaminació atmosfèrica:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="nat">Cendres d'una erupció volcànica</div>
+        <div class="pdi-item" draggable="true" data-cat="art">Fums de tubs d'escapament de cotxes dièsel</div>
+        <div class="pdi-item" draggable="true" data-cat="nat">Tempesta de pols i arena del Sàhara</div>
+        <div class="pdi-item" draggable="true" data-cat="art">Emissions de centrals tèrmiques de carbó</div>
+        <div class="pdi-item" draggable="true" data-cat="nat">Grans de pol·len a la primavera</div>
+        <div class="pdi-item" draggable="true" data-cat="art">Gasos contaminants CFC dels aires condicionats</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="nat"><div class="box-header"><span class="box-icon">🌋</span> Contaminació d'Origen Natural</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="art"><div class="box-header"><span class="box-icon">🏭</span> Contaminació d'Origen Artificial (Humana)</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud8-5" data-unit="ud8" data-title="Repte 5: Tipus de Precipitació">
+    <div class="pdi-act-title"><span class="act-num">UD8 · Repte 5</span><h3>🌧️ Formes de Precipitació i Hidrometeors</h3></div>
+    <p class="pdi-instruction">Emparella cada fenomen amb el seu estat físic:</p>
+    <div class="pdi-categories-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-cat="liq">Pluja i plugim</div>
+        <div class="pdi-item" draggable="true" data-cat="sol">Neu (cristalls hexagonals de gel)</div>
+        <div class="pdi-item" draggable="true" data-cat="sol">Calamarsa (pedres esfèriques de gel)</div>
+        <div class="pdi-item" draggable="true" data-cat="liq">Rosada sobre l'herba de matí</div>
+      </div>
+      <div class="pdi-drop-boxes-grid grid-2">
+        <div class="pdi-drop-box" data-cat="liq"><div class="box-header"><span class="box-icon">💧</span> Precipitació o condensació Líquida</div><div class="box-items"></div></div>
+        <div class="pdi-drop-box" data-cat="sol"><div class="box-header"><span class="box-icon">❄️</span> Precipitació Sòlida (Aigua congelada)</div><div class="box-items"></div></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud8-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud9-1" data-unit="ud9" data-title="Repte 1: Cicle Hidrològic">
+    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 1</span><h3>💧 Ordena les 4 Etapes del Cicle de l'Aigua</h3></div>
+    <p class="pdi-instruction">Arrossega les etapes en la seua seqüència natural:</p>
     <div class="pdi-order-wrapper">
       <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Precipitació: L'aigua dels núvols cau en pluja, neu o calamarsa</div>
-        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Evaporació: El Sol calfa l'aigua superficial i puja com a vapor</div>
-        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Infiltració i Escorrentia: L'aigua torna per rius i aqüífers cap al mar</div>
-        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Condensació: El vapor es refreda en altura formant els núvols</div>
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Precipitació: L'aigua cau com a pluja o neu</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Evaporació: El Sol calfa l'aigua i puja com a vapor</div>
+        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Infiltració i Escorrentia: Torna per rius al mar</div>
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Condensació: Es refreda formant els núvols</div>
       </div>
       <div class="pdi-slots-column">
         <div class="pdi-slot" data-slot="1"><span class="slot-badge">Etapa 1</span><span class="slot-hint">El Sol calfa l'aigua</span></div>
@@ -689,22 +1049,17 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-1')">Comprovar Cicle Hidrològic 🚀</button>
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-1')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD9 - Repte 2: Aigua Dolça vs Aigua Salada -->
   <div class="pdi-activity-card" id="act-ud9-2" data-unit="ud9" data-title="Repte 2: Aigua Dolça vs Salada">
-    <div class="pdi-act-title">
-      <span class="act-num">UD9 · Repte 2</span>
-      <h3>🌊 Aigua Dolça (3%) vs Aigua Salada (97%)</h3>
-    </div>
-    <p class="pdi-instruction">Classifica les masses d'aigua de la Terra segons la seua salinitat:</p>
-    
+    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 2</span><h3>🌊 Aigua Dolça (3%) vs Aigua Salada (97%)</h3></div>
+    <p class="pdi-instruction">Classifica les masses d'aigua segons la seua salinitat i volum global:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
-        <div class="pdi-item" draggable="true" data-cat="salada">Oceans (Atlàntic, Pacífic, Índic...)</div>
+        <div class="pdi-item" draggable="true" data-cat="salada">Oceans (Pacífic, Atlàntic, Índic...)</div>
         <div class="pdi-item" draggable="true" data-cat="dolca">Glaceres i Casquets Polars (70% del dolç)</div>
         <div class="pdi-item" draggable="true" data-cat="salada">Mars (Mediterrani, Cantàbric, Roig...)</div>
         <div class="pdi-item" draggable="true" data-cat="dolca">Aqüífers i Aigües Subterrànies</div>
@@ -717,19 +1072,14 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud9-2')">Comprovar Salinitat 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud9-2')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
-  <!-- UD9 - Repte 3: Canvis d'Estat de l'Aigua -->
   <div class="pdi-activity-card" id="act-ud9-3" data-unit="ud9" data-title="Repte 3: Canvis d'Estat">
-    <div class="pdi-act-title">
-      <span class="act-num">UD9 · Repte 3</span>
-      <h3>🧊♨️ Els Canvis d'Estat: Guanyen o Perden Calor?</h3>
-    </div>
-    <p class="pdi-instruction">Classifica cada canvi d'estat de la matèria segons si necessita escalfar-se (guanyar calor) o refredar-se (perdre calor):</p>
-    
+    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 3</span><h3>🧊♨️ Els Canvis d'Estat: Guanyen o Perden Calor?</h3></div>
+    <p class="pdi-instruction">Classifica cada canvi d'estat de l'aigua:</p>
     <div class="pdi-categories-wrapper">
       <div class="pdi-source-pool">
         <div class="pdi-item" draggable="true" data-cat="calor">Fusió: De Gel sòlid a Aigua líquida</div>
@@ -743,11 +1093,58 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
       </div>
     </div>
     <div class="pdi-footer-feedback">
-      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud9-3')">Comprovar Canvis d'Estat 🚀</button>
+      <button class="btn-pdi-check" onclick="checkCategoriesActivity('act-ud9-3')">Comprovar Resposta 🚀</button>
       <div class="pdi-status-msg"></div>
     </div>
   </div>
 
+  <div class="pdi-activity-card" id="act-ud9-4" data-unit="ud9" data-title="Repte 4: Trams d'un Riu">
+    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 4</span><h3>🏞️ Ordena els Tres Trams d'un Riu des del Naixement</h3></div>
+    <p class="pdi-instruction">Arrossega els trams del riu en el sentit en què baixa l'aigua:</p>
+    <div class="pdi-order-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Curs Mitjà (pendent moderat, meandres i transport de materials)</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Curs Alt (fort pendent en muntanya, cascades i gran erosió)</div>
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Curs Baix (terreny pla, sedimentació, desembocadura i deltes)</div>
+      </div>
+      <div class="pdi-slots-column">
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Tram 1 (Naixement)</span><span class="slot-hint">Aiguabarreigs i gorges de muntanya</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Tram 2 (Intermedi)</span><span class="slot-hint">Valls amples i corbes sinuoses</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Tram 3 (Desembocadura)</span><span class="slot-hint">Arribada a la mar o un altre riu</span></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-4')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
+
+  <div class="pdi-activity-card" id="act-ud9-5" data-unit="ud9" data-title="Repte 5: Cicle Urbà Aigua">
+    <div class="pdi-act-title"><span class="act-num">UD9 · Repte 5</span><h3>🚰 El Cicle Urbà de l'Aigua a la Nostra Ciutat</h3></div>
+    <p class="pdi-instruction">Ordena el camí complet de l'aigua des que l'agafem de la natura fins que la retornem neta:</p>
+    <div class="pdi-order-wrapper">
+      <div class="pdi-source-pool">
+        <div class="pdi-item" draggable="true" data-order="4"><span class="item-handle">☰</span> 4. Clavegueram (recollida d'aigües residuals brutes)</div>
+        <div class="pdi-item" draggable="true" data-order="1"><span class="item-handle">☰</span> 1. Captació (embassaments, rius o pous subterranis)</div>
+        <div class="pdi-item" draggable="true" data-order="5"><span class="item-handle">☰</span> 5. Depuració a l'EDAR (eliminació de residus i bacteris)</div>
+        <div class="pdi-item" draggable="true" data-order="2"><span class="item-handle">☰</span> 2. Potabilització a l'ETAP (tractament i cloració)</div>
+        <div class="pdi-item" draggable="true" data-order="6"><span class="item-handle">☰</span> 6. Retorn al medi natural (rius o mar) sense contaminar</div>
+        <div class="pdi-item" draggable="true" data-order="3"><span class="item-handle">☰</span> 3. Xarxa de distribució i consum a les llars</div>
+      </div>
+      <div class="pdi-slots-column">
+        <div class="pdi-slot" data-slot="1"><span class="slot-badge">Pas 1</span><span class="slot-hint">Obtenció de l'aigua bruta</span></div>
+        <div class="pdi-slot" data-slot="2"><span class="slot-badge">Pas 2</span><span class="slot-hint">Fer-la potable per a beure</span></div>
+        <div class="pdi-slot" data-slot="3"><span class="slot-badge">Pas 3</span><span class="slot-hint">Aixetes de cases i indústries</span></div>
+        <div class="pdi-slot" data-slot="4"><span class="slot-badge">Pas 4</span><span class="slot-hint">Aigües brutes que marxen</span></div>
+        <div class="pdi-slot" data-slot="5"><span class="slot-badge">Pas 5</span><span class="slot-hint">Neteja a la depuradora</span></div>
+        <div class="pdi-slot" data-slot="6"><span class="slot-badge">Pas 6</span><span class="slot-hint">Retorn net a la natura</span></div>
+      </div>
+    </div>
+    <div class="pdi-footer-feedback">
+      <button class="btn-pdi-check" onclick="checkOrderActivity('act-ud9-5')">Comprovar Resposta 🚀</button>
+      <div class="pdi-status-msg"></div>
+    </div>
+  </div>
 </div>
 
 <!-- ESTILS DE LA PISSARRA DIGITAL -->
@@ -761,6 +1158,7 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 }
 .pdi-intro-header {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 12px;
 }
@@ -1004,6 +1402,9 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 }
 .pdi-drop-boxes-grid.grid-3 {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.pdi-drop-boxes-grid.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .pdi-drop-box {
@@ -1304,7 +1705,9 @@ function resetPDIActivity(actId) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  selectPDIUnit('ud1');
+  const targetUnit = localStorage.getItem('pdi-target-unit') || 'ud1';
+  localStorage.removeItem('pdi-target-unit');
+  selectPDIUnit(targetUnit);
   initPDIDragAndDrop();
 });
 

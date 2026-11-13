@@ -11,6 +11,20 @@ next_label: "UD3 Els Nombres Enters ➡️"
 
 # UD2: Nivells d'Organització de la Matèria i la Funció de Nutrició (Biologia i Geologia)
 
+<div class="pdi-unit-callout" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(2, 132, 199, 0.12)); border: 2px solid #10b981; border-radius: 14px; padding: 18px 22px; margin: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+      <span style="background: #059669; color: #fff; font-weight: 800; font-size: 0.75rem; padding: 2px 10px; border-radius: 50px;">PDI · Pissarra Digital</span>
+      <span style="font-weight: 800; font-size: 1.15rem; color: var(--text);">🎯 5 Reptes Interactius d'Arrastrar i Soltar de UD2</span>
+    </div>
+    <div style="font-size: 0.95rem; color: var(--text-muted);">Practica a la pissarra de classe amb pantalles tàctils o des de tauletes amb sons i autocorrecció immediata.</div>
+  </div>
+  <a href="../pissarra-interactiva.html" onclick="localStorage.setItem('pdi-target-unit', 'ud2')" style="background: linear-gradient(135deg, #059669, #0d9488); color: #fff !important; font-weight: 800; padding: 10px 18px; border-radius: 10px; text-decoration: none !important; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3); display: inline-flex; align-items: center; gap: 6px;">
+    <span>🖥️ Obrir Reptes PDI</span>
+    <span>→</span>
+  </a>
+</div>
+
 Benvingut/da a la **Unitat Didàctica 2** de Ciències Aplicades I (bloc de Biologia). En aquesta unitat explorarem l'organització de la matèria viva des dels àtoms fins a la biosfera, aprofundirem en l'estructura de la cèl·lula i els teixits, i analitzarem com treballen en equip els quatre grans sistemes de la nutrició humana: digestiu, respiratori, circulatori i excretor.
 
 <div style="margin: 2rem 0; overflow-x: auto; text-align: center;">

@@ -11,6 +11,20 @@ next_label: "UD4 Divisibilitat, MCM i MCD ➡️"
 
 # UD3: Els Nombres Enters (Matemàtiques)
 
+<div class="pdi-unit-callout" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(2, 132, 199, 0.12)); border: 2px solid #10b981; border-radius: 14px; padding: 18px 22px; margin: 24px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+  <div>
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+      <span style="background: #059669; color: #fff; font-weight: 800; font-size: 0.75rem; padding: 2px 10px; border-radius: 50px;">PDI · Pissarra Digital</span>
+      <span style="font-weight: 800; font-size: 1.15rem; color: var(--text);">🎯 5 Reptes Interactius d'Arrastrar i Soltar de UD3</span>
+    </div>
+    <div style="font-size: 0.95rem; color: var(--text-muted);">Practica a la pissarra de classe amb pantalles tàctils o des de tauletes amb sons i autocorrecció immediata.</div>
+  </div>
+  <a href="../pissarra-interactiva.html" onclick="localStorage.setItem('pdi-target-unit', 'ud3')" style="background: linear-gradient(135deg, #059669, #0d9488); color: #fff !important; font-weight: 800; padding: 10px 18px; border-radius: 10px; text-decoration: none !important; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3); display: inline-flex; align-items: center; gap: 6px;">
+    <span>🖥️ Obrir Reptes PDI</span>
+    <span>→</span>
+  </a>
+</div>
+
 Benvingut/da a la **Unitat Didàctica 3** del bloc de Matemàtiques de Ciències Aplicades I. En aquesta unitat aprofundirem en el conjunt dels **nombres enters ($\mathbb{Z}$)**, comprendrem la necessitat dels nombres negatius en contextos de la vida diària, dominarem la suma, resta, multiplicació i divisió amb la regla dels signes, aprendrem a treballar amb potències i arrels quadrades, i resoldrem problemes reals d'aplicació.
 
 <div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
