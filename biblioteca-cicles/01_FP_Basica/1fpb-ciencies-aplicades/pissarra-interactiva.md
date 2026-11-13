@@ -1147,6 +1147,11 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
   </div>
 </div>
 
+<div class="pdi-exit-floating-btn" onclick="togglePDIFullscreen()" title="Eixir de la pantalla completa (o prem Esc)">
+  <span>🪟 Eixir de Pantalla Completa</span>
+  <span style="font-size:0.75rem; opacity:0.8; background:rgba(255,255,255,0.2); padding:2px 6px; border-radius:4px;">Esc</span>
+</div>
+
 <!-- ESTILS DE LA PISSARRA DIGITAL -->
 <style>
 .pdi-intro-card {
@@ -1525,8 +1530,33 @@ badge: "Pissarra Digital (PDI) · 1r FPB"
 body.pdi-fullscreen-mode {
   font-size: 1.25rem;
 }
+/* Ocultar / autoamagar menú superior de navegació */
+body.pdi-fullscreen-mode header.md-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+/* En apropar el ratolí o prémer a la part superior, el menú torna a baixar suaument */
+body.pdi-fullscreen-mode header.md-header:hover,
+body.pdi-fullscreen-mode header.md-header:focus-within {
+  transform: translateY(0);
+}
+
 body.pdi-fullscreen-mode aside.sidebar {
   display: none !important;
+}
+body.pdi-fullscreen-mode .top-act-jump-wrap,
+body.pdi-fullscreen-mode #floating-activities-pill {
+  display: none !important;
+}
+body.pdi-fullscreen-mode .layout {
+  padding-top: 10px !important;
+  margin-top: 0 !important;
 }
 body.pdi-fullscreen-mode main.content {
   max-width: 98vw !important;
@@ -1546,6 +1576,38 @@ body.pdi-fullscreen-mode .btn-pdi-check {
 }
 body.pdi-fullscreen-mode .pdi-drop-box {
   min-height: 240px !important;
+}
+
+/* Botó flotant d'eixida discreta en pantalla completa */
+.pdi-exit-floating-btn {
+  display: none;
+  position: fixed;
+  top: 16px;
+  right: 18px;
+  z-index: 9999;
+  background: rgba(15, 23, 42, 0.85);
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: pointer;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.pdi-exit-floating-btn:hover {
+  background: #dc2626;
+  border-color: #ef4444;
+  transform: scale(1.04);
+}
+body.pdi-fullscreen-mode .pdi-exit-floating-btn {
+  display: inline-flex;
 }
 </style>
 
@@ -1610,23 +1672,43 @@ function togglePDISound() {
   }
 }
 
-function togglePDIFullscreen() {
-  document.body.classList.toggle('pdi-fullscreen-mode');
+function togglePDIFullscreen(explicitState) {
+  if (typeof explicitState === 'boolean') {
+    if (explicitState) document.body.classList.add('pdi-fullscreen-mode');
+    else document.body.classList.remove('pdi-fullscreen-mode');
+  } else {
+    document.body.classList.toggle('pdi-fullscreen-mode');
+  }
+
+  const isFull = document.body.classList.contains('pdi-fullscreen-mode');
   const btn = document.getElementById('btn-fullscreen-toggle');
-  if (document.body.classList.contains('pdi-fullscreen-mode')) {
-    btn.querySelector('.tool-icon').textContent = '🪟';
-    btn.querySelector('.tool-text').textContent = 'Eixir de Pissarra Completa';
-    if (document.documentElement.requestFullscreen) {
+  if (btn) {
+    if (isFull) {
+      btn.querySelector('.tool-icon').textContent = '🪟';
+      btn.querySelector('.tool-text').textContent = 'Eixir de Pissarra Completa';
+    } else {
+      btn.querySelector('.tool-icon').textContent = '🖥️';
+      btn.querySelector('.tool-text').textContent = 'Mode Pissarra Completa';
+    }
+  }
+
+  if (isFull) {
+    if (document.documentElement.requestFullscreen && !document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch(() => {});
     }
   } else {
-    btn.querySelector('.tool-icon').textContent = '🖥️';
-    btn.querySelector('.tool-text').textContent = 'Mode Pissarra Completa';
     if (document.exitFullscreen && document.fullscreenElement) {
       document.exitFullscreen().catch(() => {});
     }
   }
 }
+
+document.addEventListener('fullscreenchange', () => {
+  const isDocFull = !!document.fullscreenElement;
+  if (!isDocFull && document.body.classList.contains('pdi-fullscreen-mode')) {
+    togglePDIFullscreen(false);
+  }
+});
 
 function selectPDIUnit(unitKey) {
   currentActiveUnit = unitKey;
