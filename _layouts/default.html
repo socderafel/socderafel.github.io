@@ -274,8 +274,12 @@
       scroll-margin-top: 80px;
     }
 
-    html, body {
-      overflow-x: hidden;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: clip;
       max-width: 100vw;
     }
 
@@ -2550,7 +2554,146 @@
       background: var(--code-bg);
       text-decoration: none;
     }
-  </style>
+  
+    /* ==========================================================
+       BARRA I DESPLEGABLE D'ACTIVITATS + BOTONS DIRECTES
+       ========================================================== */
+    .btn-header-act {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(37, 99, 235, 0.28)) !important;
+      border: 1px solid rgba(16, 185, 129, 0.5) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-header-act:hover {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.38), rgba(37, 99, 235, 0.42)) !important;
+      border-color: #10b981 !important;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
+    }
+    .act-dropdown-menu .dropdown-item.active {
+      background: rgba(16, 185, 129, 0.12);
+      border-left: 3px solid #10b981;
+    }
+    .act-dropdown-menu .dropdown-item:hover {
+      background: var(--bg-body);
+    }
+
+    /* Botó superior de salt directe dins de la lliçó */
+    .top-act-jump-wrap {
+      margin: 14px 0 20px 0;
+    }
+    .btn-jump-activities {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(16, 185, 129, 0.1));
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      color: var(--primary) !important;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-decoration: none !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-jump-activities:hover {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(16, 185, 129, 0.18));
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left-color: #10b981;
+    }
+    .btn-jump-activities .jump-arrow {
+      font-size: 1.05rem;
+      transition: transform 0.2s ease;
+    }
+    .btn-jump-activities:hover .jump-arrow {
+      transform: translateY(3px);
+    }
+
+    /* Botó flotant (FAB) permanent a la pantalla */
+    .floating-activities-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: var(--primary);
+      color: #ffffff !important;
+      padding: 10px 18px;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.12);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      font-weight: 750;
+      font-size: 0.9rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }
+    .floating-activities-pill:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      border-color: #ffffff;
+    }
+    .floating-activities-pill.fab-up {
+      background: #047857 !important;
+    }
+    .floating-activities-pill.fab-up:hover {
+      background: #059669 !important;
+    }
+
+    /* Accés directe a activitats al Menú Lateral */
+    .sidebar-nav-item-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .sidebar-nav-item-wrap > a:first-child {
+      flex: 1;
+      min-width: 0;
+    }
+    .sidebar-act-direct-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669 !important;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      text-decoration: none !important;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    [data-theme="dark"] .sidebar-act-direct-link,
+    [data-theme="oled"] .sidebar-act-direct-link {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399 !important;
+      border-color: rgba(52, 211, 153, 0.4);
+    }
+    .sidebar-act-direct-link:hover {
+      background: #10b981 !important;
+      color: #ffffff !important;
+      border-color: #10b981 !important;
+      transform: scale(1.08);
+    }
+
+</style>
   <!-- jsPDF per a la generació de comprovants oficials en PDF -->
   <script defer src="{{ '/assets/js/jspdf.umd.min.js' | relative_url }}"></script>
 </head>
@@ -2717,6 +2860,23 @@
             </div>
           </div>
           {% if page.course_root %}
+          <!-- Desplegable d'Accés Ràpid a les Activitats de cada Subapartat -->
+          <div class="header-nav-item has-dropdown dropdown-align-right act-dropdown-wrap" id="nav-activities-dropdown-wrap">
+            <button class="btn-toggle nav-dropdown-trigger btn-header-act" id="btn-activities-dropdown" title="Accés directe a les activitats d'aquesta unitat">
+              <span class="btn-act-icon">🎯</span> <span class="btn-act-label">Activitats</span> <span class="nav-arrow">▾</span>
+            </button>
+            <div class="header-dropdown-menu act-dropdown-menu" id="activities-dropdown-menu" style="min-width: 300px; right: 0; left: auto;">
+              <div class="dropdown-header">🎯 Activitats de la Unitat</div>
+              <a href="javascript:void(0)" onclick="window.scrollToActivities && window.scrollToActivities(event)" class="dropdown-item act-item-current" id="dropdown-act-current">
+                <div class="dropdown-item-title">⚡ Anar a les Activitats d'aquest tema</div>
+                <div class="dropdown-item-meta">Salta directament a l'autoavaluació d'aquesta pàgina</div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <div id="unit-activities-links-list">
+                <div style="padding:10px 12px; font-size:0.83rem; color:var(--text-muted);">Carregant activitats dels apartats...</div>
+              </div>
+            </div>
+          </div>
           <button class="btn-toggle" id="btn-toggle-sidebar" onclick="toggleSidebar()" title="Mostrar o amagar el menú lateral">☰ Menú</button>
           {% endif %}
         </div>
@@ -2837,7 +2997,9 @@
                     (currentPath.endsWith(cleanHref));
                   if (isItemActive) unitActive = true;
                   const cls = [item.class || '', isItemActive ? 'active' : ''].filter(Boolean).join(' ');
-                  itemsHtml += '<li><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a></li>';
+                  const isSub = !cleanHref.endsWith('/index.html') && !cleanHref.endsWith('index.html');
+                  const actBtn = isSub ? '<a href="' + itemHref + '#activitats" class="sidebar-act-direct-link" title="Anar directament a les activitats interactives">🎯 Act</a>' : '';
+                  itemsHtml += '<li class="sidebar-nav-item-wrap"><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a>' + actBtn + '</li>';
                 });
 
                 if (!unitActive) {
@@ -2864,6 +3026,38 @@
               }
 
               container.innerHTML = html;
+
+              // Omplir el desplegable d'Activitats de la Capçalera per a la unitat activa
+              try {
+                const actListContainer = document.getElementById('unit-activities-links-list');
+                if (actListContainer) {
+                  const activeUnitObj = unitsList.find((u, idx) => {
+                    return (u.items || []).some(it => {
+                      const h = (it.href || '').replace(/\.md(#|$)/, '.html$1');
+                      return currentPath.endsWith(h) || (currentPath.endsWith('/') && h.endsWith('/index.html'));
+                    });
+                  }) || unitsList[0];
+
+                  if (activeUnitObj && activeUnitObj.items && activeUnitObj.items.length) {
+                    let dHtml = '';
+                    activeUnitObj.items.forEach(it => {
+                      const h = it.href || '';
+                      if (h.endsWith('/index.html') || h === 'index.html') return;
+                      const itHref = toHtmlHref(prefix + h.replace(/^\.\//, ''));
+                      const isCurrentPage = currentPath.endsWith(h) || currentPath.endsWith(itHref);
+                      dHtml += '<a href="' + (isCurrentPage ? 'javascript:void(0)' : itHref + '#activitats') + '"' +
+                               (isCurrentPage ? ' onclick="window.scrollToActivities && window.scrollToActivities(event)"' : '') +
+                               ' class="dropdown-item' + (isCurrentPage ? ' active' : '') + '">' +
+                               '<div class="dropdown-item-title">' + (isCurrentPage ? '📍 ' : '📝 ') + it.label + '</div>' +
+                               '<div class="dropdown-item-meta">' + (isCurrentPage ? 'Saltar a les activitats d\'aquesta pàgina' : 'Accés directe a l\'autoavaluació interactiva') + '</div>' +
+                               '</a>';
+                    });
+                    actListContainer.innerHTML = dHtml || '<div style="padding:8px 12px; font-size:0.82rem; color:var(--text-muted);">No hi ha apartats específics.</div>';
+                  }
+                }
+              } catch(e) {
+                console.warn('Error generant menú activitats capçalera:', e);
+              }
             })
             .catch(err => {
               console.warn("No s'ha pogut carregar sidebar.json:", err);
@@ -2889,6 +3083,13 @@
       {% if page.badge %}
       <span class="up-badge">{{ page.badge }}</span>
       {% endif %}
+      <div class="top-act-jump-wrap" id="top-act-jump-wrap" style="display:none;">
+        <a href="#activitats" class="btn-jump-activities" onclick="window.scrollToActivities && window.scrollToActivities(event)">
+          <span class="jump-icon">🎯</span>
+          <span class="jump-text">Saltar directament a les Activitats d'aquest apartat</span>
+          <span class="jump-arrow">↓</span>
+        </a>
+      </div>
       {{ content }}
       {% if page.prev_url or page.next_url %}
       <div class="page-nav-footer">
@@ -4589,6 +4790,90 @@
 
       if (window.renderMathPortal) window.renderMathPortal();
     });
+  
+    // Funció per a saltar directament a la zona d'activitats
+    window.scrollToActivities = function(e) {
+      if (e) e.preventDefault();
+      const fab = document.getElementById('floating-activities-pill');
+      if (fab && fab.classList.contains('fab-up') && e && e.currentTarget === fab) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+      const target = document.getElementById('activitats') ||
+                     document.querySelector('.interactive-progress-tracker') ||
+                     document.querySelector('.interactive-mcq') ||
+                     document.querySelector('.interactive-vf') ||
+                     document.querySelector('.interactive-quiz') ||
+                     document.querySelector('.interactive-open-response');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const origBox = target.style.boxShadow;
+        target.style.transition = 'box-shadow 0.3s ease';
+        target.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.5)';
+        setTimeout(() => { target.style.boxShadow = origBox; }, 1400);
+      } else {
+        const m = document.querySelector('main.content');
+        if (m) window.scrollTo({ top: m.scrollHeight, behavior: 'smooth' });
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const actTarget = document.querySelector('.interactive-progress-tracker') ||
+                        document.querySelector('.interactive-mcq') ||
+                        document.querySelector('.interactive-vf') ||
+                        document.querySelector('.interactive-quiz') ||
+                        document.querySelector('.interactive-open-response');
+      if (actTarget) {
+        if (!document.getElementById('activitats')) {
+          const prevH = actTarget.previousElementSibling;
+          if (prevH && prevH.tagName && prevH.tagName.match(/^H[23]$/i)) {
+            prevH.id = 'activitats';
+          } else {
+            actTarget.id = 'activitats';
+          }
+        }
+        const topWrap = document.getElementById('top-act-jump-wrap');
+        if (topWrap) topWrap.style.display = 'block';
+
+        const fab = document.getElementById('floating-activities-pill');
+        if (fab) {
+          fab.style.display = 'inline-flex';
+          let isPast = false;
+          window.addEventListener('scroll', () => {
+            const rect = actTarget.getBoundingClientRect();
+            const past = rect.top <= 140;
+            if (past !== isPast) {
+              isPast = past;
+              if (isPast) {
+                fab.classList.add('fab-up');
+                fab.querySelector('.fab-icon').textContent = '📖';
+                fab.querySelector('.fab-text').textContent = 'Teoria';
+                fab.querySelector('.fab-arrow').textContent = '↑';
+                fab.title = 'Tornar a la teoria de dalt';
+              } else {
+                fab.classList.remove('fab-up');
+                fab.querySelector('.fab-icon').textContent = '🎯';
+                fab.querySelector('.fab-text').textContent = 'Activitats';
+                fab.querySelector('.fab-arrow').textContent = '↓';
+                fab.title = 'Saltar a les activitats d\'aquest tema';
+              }
+            }
+          }, { passive: true });
+        }
+
+        if (window.location.hash === '#activitats') {
+          setTimeout(() => {
+            window.scrollToActivities();
+          }, 350);
+        }
+      }
+    });
+
   </script>
+  <div id="floating-activities-pill" class="floating-activities-pill" onclick="window.scrollToActivities && window.scrollToActivities(event)" title="Saltar directament a les activitats" style="display:none;">
+    <span class="fab-icon">🎯</span>
+    <span class="fab-text">Activitats</span>
+    <span class="fab-arrow">↓</span>
+  </div>
 </body>
 </html>
