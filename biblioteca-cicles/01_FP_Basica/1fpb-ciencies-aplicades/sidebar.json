@@ -6,6 +6,16 @@
   },
   "units": [
     {
+      "summary": "🎯 Pissarra Digital Interactiva (PDI)",
+      "items": [
+        {
+          "label": "🖥️ Pissarra Digital: Arrastrar i Soltar",
+          "href": "pissarra-interactiva.html",
+          "class": "unit-full-link"
+        }
+      ]
+    },
+    {
       "summary": "UD1 — Els Nombres Naturals (Matemàtiques)",
       "items": [
         {

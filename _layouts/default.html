@@ -2558,6 +2558,45 @@
     /* ==========================================================
        BARRA I DESPLEGABLE D'ACTIVITATS + BOTONS DIRECTES
        ========================================================== */
+    
+    /* Botons PDI i PWA a la capcalera */
+    .btn-header-pdi {
+      background: linear-gradient(135deg, rgba(5, 150, 105, 0.25), rgba(37, 99, 235, 0.3)) !important;
+      border: 1px solid rgba(16, 185, 129, 0.6) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
+    }
+    .btn-header-pdi:hover {
+      background: linear-gradient(135deg, rgba(5, 150, 105, 0.45), rgba(37, 99, 235, 0.5)) !important;
+      border-color: #10b981 !important;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    }
+    .btn-header-pwa {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(147, 51, 234, 0.3)) !important;
+      border: 1px solid rgba(96, 165, 250, 0.6) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-header-pwa:hover {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.5), rgba(147, 51, 234, 0.5)) !important;
+      border-color: #60a5fa !important;
+      box-shadow: 0 0 12px rgba(96, 165, 250, 0.4);
+    }
+
     .btn-header-act {
       background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(37, 99, 235, 0.28)) !important;
       border: 1px solid rgba(16, 185, 129, 0.5) !important;
@@ -2696,6 +2735,16 @@
 </style>
   <!-- jsPDF per a la generació de comprovants oficials en PDF -->
   <script defer src="{{ '/assets/js/jspdf.umd.min.js' | relative_url }}"></script>
+
+  <!-- PWA per a Ciencies Aplicades I -->
+  {% if page.url contains '1fpb-ciencies-aplicades' %}
+  <link rel="manifest" href="{{ page.course_root }}/manifest.json">
+  <meta name="theme-color" content="#059669">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="CA1 Ciencies">
+  <link rel="apple-touch-icon" href="{{ page.course_root }}/img/icon-192.png">
+  {% endif %}
 </head>
 <body>
     <header class="md-header">
@@ -2861,7 +2910,21 @@
           </div>
           {% if page.course_root %}
           <!-- Desplegable d'Accés Ràpid a les Activitats de cada Subapartat -->
-          <div class="header-nav-item has-dropdown dropdown-align-right act-dropdown-wrap" id="nav-activities-dropdown-wrap">
+          
+            {% if page.url contains '1fpb-ciencies-aplicades' %}
+            <div class="header-nav-item">
+              <a href="{{ page.course_root }}/pissarra-interactiva.html" class="btn-header-pdi" title="Pissarra Digital Interactiva (PDI)">
+                <span>🖥️ PDI Interactiva</span>
+              </a>
+            </div>
+            <div class="header-nav-item" id="pwa-install-wrap" style="display:none;">
+              <button id="btn-pwa-install" class="btn-header-pwa" onclick="triggerPWAInstall()" title="Instal·lar l'App de CA1 al teu dispositiu">
+                <span>📲 Instal·lar App</span>
+              </button>
+            </div>
+            {% endif %}
+
+            <div class="header-nav-item has-dropdown dropdown-align-right act-dropdown-wrap" id="nav-activities-dropdown-wrap">
             <button class="btn-toggle nav-dropdown-trigger btn-header-act" id="btn-activities-dropdown" title="Accés directe a les activitats d'aquesta unitat">
               <span class="btn-act-icon">🎯</span> <span class="btn-act-label">Activitats</span> <span class="nav-arrow">▾</span>
             </button>
@@ -4875,5 +4938,46 @@
     <span class="fab-text">Activitats</span>
     <span class="fab-arrow">↓</span>
   </div>
+<script>
+    // PWA Service Worker Registration & Install Prompt per a CA1
+    if ('serviceWorker' in navigator && window.location.pathname.includes('1fpb-ciencies-aplicades')) {
+      window.addEventListener('load', () => {
+        let root = '';
+        const sidebar = document.getElementById('course-sidebar');
+        if (sidebar && sidebar.dataset.courseRoot) {
+          root = sidebar.dataset.courseRoot;
+        }
+        const swPath = (root ? root.replace(/\/$/, '') + '/' : '') + 'sw.js';
+        navigator.serviceWorker.register(swPath).then(reg => {
+          console.log('PWA Service Worker registrat per a CA1:', reg.scope);
+        }).catch(err => {
+          console.warn('Avís de registre del Service Worker:', err);
+        });
+      });
+    }
+
+    let deferredPWAInstallPrompt = null;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPWAInstallPrompt = e;
+      const installWrap = document.getElementById('pwa-install-wrap');
+      if (installWrap) installWrap.style.display = 'inline-flex';
+    });
+
+    window.triggerPWAInstall = function() {
+      if (deferredPWAInstallPrompt) {
+        deferredPWAInstallPrompt.prompt();
+        deferredPWAInstallPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            const installWrap = document.getElementById('pwa-install-wrap');
+            if (installWrap) installWrap.style.display = 'none';
+          }
+          deferredPWAInstallPrompt = null;
+        });
+      } else {
+        alert("Per a instal·lar la PWA al teu mòbil, tauleta o pissarra:\n\n1. Obre el menú del navegador (els 3 punts de dalt o la icona de compartir).\n2. Tria 'Instal·lar aplicació' o 'Afegir a la pantalla d'inici'.\n\nI ja la tindràs a pantalla completa sense necessitat d'arxiu .apk extern!");
+      }
+    };
+</script>
 </body>
 </html>
