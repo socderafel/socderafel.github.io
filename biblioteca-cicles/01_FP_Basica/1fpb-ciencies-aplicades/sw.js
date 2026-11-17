@@ -1,5 +1,5 @@
 // Service Worker per a la PWA de Ciències Aplicades I (FP Bàsica)
-const CACHE_NAME = 'ca1-pwa-v7';
+const CACHE_NAME = 'ca1-pwa-v8';
 
 const STATIC_ASSETS = [
   './',
