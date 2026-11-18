@@ -26,7 +26,7 @@
       "summary": "MAT 1 — Els Nombres Naturals",
       "items": [
         {
-          "label": "📘 MAT 1 Completa (Índex)",
+          "label": "📘 MAT 1 Completa (Completa + Exercicis)",
           "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
@@ -45,6 +45,10 @@
         {
           "label": "1.4 Potències de Nombres Naturals i Propietats",
           "href": "./ut01/ut0104.html"
+        },
+        {
+          "label": "📝 1.5 Activitats Finals MAT 1 (Aules)",
+          "href": "./ut01/ut0105.html"
         }
       ]
     },
@@ -52,7 +56,7 @@
       "summary": "MAT 2 — Els Nombres Enters",
       "items": [
         {
-          "label": "📘 MAT 2 Completa (Índex)",
+          "label": "📘 MAT 2 Completa (Completa + Exercicis)",
           "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
@@ -71,6 +75,10 @@
         {
           "label": "2.4 Potències i Arrels Quadrades",
           "href": "./ut03/ut0304.html"
+        },
+        {
+          "label": "📝 2.5 Activitats Finals MAT 2 (Aules)",
+          "href": "./ut03/ut0305.html"
         }
       ]
     },
@@ -78,7 +86,7 @@
       "summary": "MAT 3 — Divisibilitat, MCM i MCD",
       "items": [
         {
-          "label": "📘 MAT 3 Completa (Índex)",
+          "label": "📘 MAT 3 Completa (Completa + Exercicis)",
           "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
@@ -97,6 +105,10 @@
         {
           "label": "3.4 Problemes Reals d'MCD i MCM",
           "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "📝 3.5 Activitats Finals MAT 3 (Aules)",
+          "href": "./ut04/ut0405.html"
         }
       ]
     },
@@ -104,7 +116,7 @@
       "summary": "MAT 4 — Les Fraccions i Operacions",
       "items": [
         {
-          "label": "📘 MAT 4 Completa (Índex)",
+          "label": "📘 MAT 4 Completa (Completa + Exercicis)",
           "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
@@ -123,6 +135,10 @@
         {
           "label": "4.4 Operacions Combinades i Jerarquia",
           "href": "./ut05/ut0504.html"
+        },
+        {
+          "label": "📝 4.5 Activitats Finals MAT 4 (Aules)",
+          "href": "./ut05/ut0505.html"
         }
       ]
     },
@@ -137,7 +153,7 @@
       "summary": "UD2 — La Matèria",
       "items": [
         {
-          "label": "📘 UD2 La Matèria (Índex)",
+          "label": "📘 UD2 La Matèria (Completa + Exercicis)",
           "href": "./nat02/index.html",
           "class": "unit-full-link"
         },
@@ -172,6 +188,10 @@
         {
           "label": "2.8 Mètodes de separació de mescles",
           "href": "./nat02/nat0208.html"
+        },
+        {
+          "label": "📝 2.9 Activitats Finals UD2 (Aules)",
+          "href": "./nat02/nat0209.html"
         }
       ]
     },
@@ -179,7 +199,7 @@
       "summary": "UD3 — Energia Interna del Planeta",
       "items": [
         {
-          "label": "📘 UD3 Energia Interna (Índex)",
+          "label": "📘 UD3 Energia Interna (Completa + Exercicis)",
           "href": "./nat03/index.html",
           "class": "unit-full-link"
         },
@@ -198,6 +218,10 @@
         {
           "label": "3.4 Els terratrèmols",
           "href": "./nat03/nat0304.html"
+        },
+        {
+          "label": "📝 3.5 Activitats Finals UD3 (Aules)",
+          "href": "./nat03/nat0305.html"
         }
       ]
     },
@@ -205,7 +229,7 @@
       "summary": "UD4 — L'Energia",
       "items": [
         {
-          "label": "📘 UD4 L'Energia (Índex)",
+          "label": "📘 UD4 L'Energia (Completa + Exercicis)",
           "href": "./nat04/index.html",
           "class": "unit-full-link"
         },
@@ -224,6 +248,10 @@
         {
           "label": "4.4 L'ús de l'energia",
           "href": "./nat04/nat0404.html"
+        },
+        {
+          "label": "📝 4.5 Activitats Finals UD4 (Aules)",
+          "href": "./nat04/nat0405.html"
         }
       ]
     },
@@ -231,7 +259,7 @@
       "summary": "UD5 — La Calor i la Temperatura",
       "items": [
         {
-          "label": "📘 UD5 Calor i Temperatura (Índex)",
+          "label": "📘 UD5 Calor i Temperatura (Completa + Exercicis)",
           "href": "./nat05/index.html",
           "class": "unit-full-link"
         },
@@ -254,6 +282,10 @@
         {
           "label": "5.5 Efectes de la calor sobre els cossos",
           "href": "./nat05/nat0505.html"
+        },
+        {
+          "label": "📝 5.6 Activitats Finals UD5 (Aules)",
+          "href": "./nat05/nat0506.html"
         }
       ]
     },
@@ -261,7 +293,7 @@
       "summary": "UD6 — La Salut",
       "items": [
         {
-          "label": "📘 UD6 La Salut (Índex)",
+          "label": "📘 UD6 La Salut (Completa + Exercicis)",
           "href": "./nat06/index.html",
           "class": "unit-full-link"
         },
@@ -280,6 +312,10 @@
         {
           "label": "6.4 Tractament de les malalties",
           "href": "./nat06/nat0604.html"
+        },
+        {
+          "label": "📝 6.5 Activitats Finals UD6 (Aules)",
+          "href": "./nat06/nat0605.html"
         }
       ]
     },
@@ -287,7 +323,7 @@
       "summary": "UD7 — La Nutrició Humana",
       "items": [
         {
-          "label": "📘 UD7 La Nutrició Humana (Índex)",
+          "label": "📘 UD7 La Nutrició Humana (Completa + Exercicis)",
           "href": "./nat07/index.html",
           "class": "unit-full-link"
         },
@@ -314,6 +350,10 @@
         {
           "label": "7.6 La nutrició: aparell excretor",
           "href": "./nat07/nat0706.html"
+        },
+        {
+          "label": "📝 7.7 Activitats Finals UD7 (Aules)",
+          "href": "./nat07/nat0707.html"
         }
       ]
     },
@@ -321,7 +361,7 @@
       "summary": "UD8 — La Relació Humana",
       "items": [
         {
-          "label": "📘 UD8 La Relació Humana (Índex)",
+          "label": "📘 UD8 La Relació Humana (Completa + Exercicis)",
           "href": "./nat08/index.html",
           "class": "unit-full-link"
         },
@@ -344,6 +384,10 @@
         {
           "label": "8.5 El sistema endocrí",
           "href": "./nat08/nat0805.html"
+        },
+        {
+          "label": "📝 8.6 Activitats Finals UD8 (Aules)",
+          "href": "./nat08/nat0806.html"
         }
       ]
     },
@@ -351,7 +395,7 @@
       "summary": "UD9 — La Reproducció Humana",
       "items": [
         {
-          "label": "📘 UD9 La Reproducció Humana (Índex)",
+          "label": "📘 UD9 La Reproducció Humana (Completa + Exercicis)",
           "href": "./nat09/index.html",
           "class": "unit-full-link"
         },
@@ -382,6 +426,10 @@
         {
           "label": "9.7 Malalties de transmissió sexual",
           "href": "./nat09/nat0907.html"
+        },
+        {
+          "label": "📝 9.8 Activitats Finals UD9 (Aules)",
+          "href": "./nat09/nat0908.html"
         }
       ]
     }
