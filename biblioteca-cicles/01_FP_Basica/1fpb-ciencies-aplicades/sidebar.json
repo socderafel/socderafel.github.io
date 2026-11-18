@@ -6,11 +6,16 @@
   },
   "units": [
     {
-      "summary": "🎯 Pissarra Digital Interactiva (PDI)",
+      "summary": "🎯 Pissarres Digitals Interactives (PDI)",
       "items": [
         {
-          "label": "🖥️ Pissarra Digital: Reptes Interactius",
-          "href": "pissarra-interactiva.html",
+          "label": "📐 PDI · Matemàtiques Aplicades (40 Reptes)",
+          "href": "pissarra-mates.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "🔬 PDI · Ciències Naturals (51 Reptes)",
+          "href": "pissarra-naturals.html",
           "class": "unit-full-link"
         }
       ]
@@ -20,7 +25,13 @@
       "sectionHeader": true,
       "badgeColor": "#2563eb",
       "badgeBg": "rgba(37, 99, 235, 0.12)",
-      "items": []
+      "items": [
+        {
+          "label": "🖥️ Pissarra Digital: Matemàtiques (Reptes PDI)",
+          "href": "pissarra-mates.html",
+          "class": "unit-full-link"
+        }
+      ]
     },
     {
       "summary": "MAT 1 — Els Nombres Naturals",
@@ -147,7 +158,13 @@
       "sectionHeader": true,
       "badgeColor": "#059669",
       "badgeBg": "rgba(5, 150, 105, 0.14)",
-      "items": []
+      "items": [
+        {
+          "label": "🖥️ Pissarra Digital: Ciències Naturals (Reptes PDI)",
+          "href": "pissarra-naturals.html",
+          "class": "unit-full-link"
+        }
+      ]
     },
     {
       "summary": "UD2 — La Matèria",

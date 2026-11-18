@@ -9,18 +9,41 @@ badge: "1r FPB · Grau Bàsic"
 
 Benvingut/da al curs complet de **Ciències Aplicades I**. Els continguts estan organitzats en **dos blocs independents i clarament diferenciats**: el **Bloc I de Matemàtiques Aplicades** i el **Bloc II de Ciències Naturals** (sincronitzat apartat per apartat amb el temari oficial).
 
-<div class="pdi-hero-banner" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(37, 99, 235, 0.18)); border: 2px solid #10b981; border-radius: 18px; padding: 22px 26px; margin: 20px 0 30px 0; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
-  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-    <span style="background: #059669; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 4px 14px; border-radius: 50px; text-transform: uppercase;">⭐ Pissarra Digital & Tauletes</span>
-    <span style="background: #2563eb; color: #fff; font-weight: 800; font-size: 0.85rem; padding: 4px 14px; border-radius: 50px;">📱 PWA Instal·lable</span>
+<div class="pdi-hero-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin: 24px 0 32px 0;">
+  <!-- Targeta PDI Matemàtiques -->
+  <div class="pdi-hero-card" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(30, 58, 138, 0.18)); border: 2px solid #2563eb; border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);">
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <span style="background: #2563eb; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">📐 Bloc I · Matemàtiques</span>
+        <span style="background: #1e3a8a; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px;">40 Reptes</span>
+      </div>
+      <div style="font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">🎯 Pissarra Digital · Matemàtiques</div>
+      <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: var(--text-muted);">Reptes interactius tàctils per a PDI: Nombres Naturals, Nombres Enters, Divisibilitat (MCD/MCM), Fraccions i resolució de pressupostos i mesures de taller.</p>
+    </div>
+    <div>
+      <a href="./pissarra-mates.html" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #2563eb, #1d4ed8); color: #ffffff !important; font-weight: 800; font-size: 1rem; padding: 11px 20px; border-radius: 12px; text-decoration: none !important; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);">
+        <span>🖥️ Obrir PDI Matemàtiques</span>
+        <span>→</span>
+      </a>
+    </div>
   </div>
-  <div style="font-size: 1.35rem; font-weight: 800; color: var(--text);">🎯 Pissarra Digital Interactiva (Reptes Tàctils)</div>
-  <p style="margin: 0; font-size: 1.02rem; line-height: 1.5; color: var(--text-muted);">Activitats interactives per a treballar a la <strong>Pissarra Digital de classe</strong> o amb tauletes i mòbils amb correcció immediata.</p>
-  <div>
-    <a href="./pissarra-interactiva.html" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #059669, #0d9488); color: #ffffff !important; font-weight: 800; font-size: 1.05rem; padding: 11px 22px; border-radius: 12px; text-decoration: none !important; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);">
-      <span>🖥️ Obrir la Pissarra Digital Interactiva (PDI)</span>
-      <span>→</span>
-    </a>
+
+  <!-- Targeta PDI Ciències Naturals -->
+  <div class="pdi-hero-card" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(6, 78, 59, 0.18)); border: 2px solid #059669; border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; box-shadow: 0 8px 24px rgba(5, 150, 105, 0.08);">
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <span style="background: #059669; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">🔬 Bloc II · Ciències Naturals</span>
+        <span style="background: #064e3b; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px;">51 Reptes</span>
+      </div>
+      <div style="font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">🎯 Pissarra Digital · Ciències Naturals</div>
+      <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: var(--text-muted);">Reptes interactius tàctils per a PDI: La Matèria, Energia Interna, L'Energia, Calor i Temperatura, La Salut, Nutrició Humana, Relació i Reproducció Humana.</p>
+    </div>
+    <div>
+      <a href="./pissarra-naturals.html" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #059669, #047857); color: #ffffff !important; font-weight: 800; font-size: 1rem; padding: 11px 20px; border-radius: 12px; text-decoration: none !important; box-shadow: 0 4px 14px rgba(5, 150, 105, 0.35);">
+        <span>🖥️ Obrir PDI Ciències Naturals</span>
+        <span>→</span>
+      </a>
+    </div>
   </div>
 </div>
 
