@@ -3151,6 +3151,9 @@
 
                 unitsList = (raw.units || []).map(u => ({
                   summary: u.summary || u.title || 'Unitat',
+                  sectionHeader: !!u.sectionHeader,
+                  badgeColor: u.badgeColor || '#2563eb',
+                  badgeBg: u.badgeBg || 'rgba(37, 99, 235, 0.12)',
                   items: (u.items || u.children || []).map(it => ({
                     label: it.label || it.title || '',
                     href: (it.href || it.url || '').replace(/\.md(#|$)/, '.html$1'),
@@ -3169,6 +3172,10 @@
               }
 
               unitsList.forEach((unit, uIdx) => {
+                if (unit.sectionHeader) {
+                  html += '<div class="sidebar-block-header" style="margin: 16px 8px 6px 8px; padding: 7px 12px; font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 8px; background: ' + unit.badgeBg + '; color: ' + unit.badgeColor + '; border-left: 4px solid ' + unit.badgeColor + ';">' + unit.summary + '</div>';
+                  return;
+                }
                 let unitActive = false;
                 let itemsHtml = '';
 
@@ -3216,11 +3223,11 @@
                 const actListContainer = document.getElementById('unit-activities-links-list');
                 if (actListContainer) {
                   const activeUnitObj = unitsList.find((u, idx) => {
-                    return (u.items || []).some(it => {
+                    return !u.sectionHeader && (u.items || []).some(it => {
                       const h = (it.href || '').replace(/\.md(#|$)/, '.html$1');
                       return currentPath.endsWith(h) || (currentPath.endsWith('/') && h.endsWith('/index.html'));
                     });
-                  }) || unitsList[0];
+                  }) || unitsList.find(u => !u.sectionHeader && u.items && u.items.length);
 
                   if (activeUnitObj && activeUnitObj.items && activeUnitObj.items.length) {
                     let dHtml = '';

@@ -1,5 +1,5 @@
 // Service Worker per a la PWA de Ciències Aplicades I (FP Bàsica)
-const CACHE_NAME = 'ca1-pwa-v8';
+const CACHE_NAME = 'ca1-pwa-v9';
 
 const STATIC_ASSETS = [
   './',
@@ -12,14 +12,17 @@ const STATIC_ASSETS = [
   './img/icon.svg',
   './sidebar.json',
   './ut01/index.html',
-  './ut02/index.html',
   './ut03/index.html',
   './ut04/index.html',
   './ut05/index.html',
-  './ut06/index.html',
-  './ut07/index.html',
-  './ut08/index.html',
-  './ut09/index.html'
+  './nat02/index.html',
+  './nat03/index.html',
+  './nat04/index.html',
+  './nat05/index.html',
+  './nat06/index.html',
+  './nat07/index.html',
+  './nat08/index.html',
+  './nat09/index.html'
 ];
 
 self.addEventListener('install', event => {

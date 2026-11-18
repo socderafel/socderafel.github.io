@@ -9,17 +9,24 @@
       "summary": "🎯 Pissarra Digital Interactiva (PDI)",
       "items": [
         {
-          "label": "🖥️ Pissarra Digital: Arrastrar i Soltar",
+          "label": "🖥️ Pissarra Digital: Reptes Interactius",
           "href": "pissarra-interactiva.html",
           "class": "unit-full-link"
         }
       ]
     },
     {
-      "summary": "UD1 — Els Nombres Naturals (Matemàtiques)",
+      "summary": "📐 BLOC I: MATEMÀTIQUES APLICADES",
+      "sectionHeader": true,
+      "badgeColor": "#2563eb",
+      "badgeBg": "rgba(37, 99, 235, 0.12)",
+      "items": []
+    },
+    {
+      "summary": "MAT 1 — Els Nombres Naturals",
       "items": [
         {
-          "label": "📘 UD1 Completa (1 pàgina)",
+          "label": "📘 MAT 1 Completa (Índex)",
           "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
@@ -38,266 +45,343 @@
         {
           "label": "1.4 Potències de Nombres Naturals i Propietats",
           "href": "./ut01/ut0104.html"
-        },
-        {
-          "label": "1.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut01/ut0105.html"
         }
       ]
     },
     {
-      "summary": "UD2 — Organització de la Matèria i la Nutrició (Biologia)",
+      "summary": "MAT 2 — Els Nombres Enters",
       "items": [
         {
-          "label": "📘 UD2 Completa (Índex General)",
-          "href": "./ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "2.1 Els Nivells d'Organització de la Matèria",
-          "href": "./ut02/ut0201.html"
-        },
-        {
-          "label": "2.2 La Cèl·lula i la Teoria Cel·lular",
-          "href": "./ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 Els Teixits Fonamentals del Cos Humà",
-          "href": "./ut02/ut0203.html"
-        },
-        {
-          "label": "2.4 L'Aparell Digestiu i la Digestió",
-          "href": "./ut02/ut0204.html"
-        },
-        {
-          "label": "2.5 L'Aparell Respiratori i la Ventilació",
-          "href": "./ut02/ut0205.html"
-        },
-        {
-          "label": "2.6 L'Aparell Circulatori Cardiovascular",
-          "href": "./ut02/ut0206.html"
-        },
-        {
-          "label": "2.7 L'Aparell Excretor i els Ronyons",
-          "href": "./ut02/ut0207.html"
-        },
-        {
-          "label": "2.8 Hàbits Saludables i Malalties",
-          "href": "./ut02/ut0208.html"
-        },
-        {
-          "label": "2.9 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut02/ut0209.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD3 — Els Nombres Enters (Matemàtiques)",
-      "items": [
-        {
-          "label": "📘 UD3 Completa (1 pàgina)",
+          "label": "📘 MAT 2 Completa (Índex)",
           "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 El Conjunt dels Enters i Contextos Reals",
+          "label": "2.1 El Conjunt dels Enters i Contextos Reals",
           "href": "./ut03/ut0301.html"
         },
         {
-          "label": "3.2 Suma i Resta de Nombres Enters",
+          "label": "2.2 Suma i Resta de Nombres Enters",
           "href": "./ut03/ut0302.html"
         },
         {
-          "label": "3.3 Multiplicació, Divisió i Jerarquia",
+          "label": "2.3 Multiplicació, Divisió i Jerarquia",
           "href": "./ut03/ut0303.html"
         },
         {
-          "label": "3.4 Potències i Arrels Quadrades",
+          "label": "2.4 Potències i Arrels Quadrades",
           "href": "./ut03/ut0304.html"
-        },
-        {
-          "label": "3.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut03/ut0305.html"
         }
       ]
     },
     {
-      "summary": "UD4 — Divisibilitat, MCM i MCD (Matemàtiques)",
+      "summary": "MAT 3 — Divisibilitat, MCM i MCD",
       "items": [
         {
-          "label": "📘 UD4 Completa (1 pàgina)",
+          "label": "📘 MAT 3 Completa (Índex)",
           "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 Múltiples, Divisors i Criteris",
+          "label": "3.1 Múltiples, Divisors i Criteris",
           "href": "./ut04/ut0401.html"
         },
         {
-          "label": "4.2 Nombres Primers i Descomposició",
+          "label": "3.2 Nombres Primers i Descomposició",
           "href": "./ut04/ut0402.html"
         },
         {
-          "label": "4.3 Màxim Comú Divisor i Mínim Comú Múltiple",
+          "label": "3.3 Màxim Comú Divisor i Mínim Comú Múltiple",
           "href": "./ut04/ut0403.html"
         },
         {
-          "label": "4.4 Problemes Reals d'MCD i MCM",
+          "label": "3.4 Problemes Reals d'MCD i MCM",
           "href": "./ut04/ut0404.html"
-        },
-        {
-          "label": "4.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut04/ut0405.html"
         }
       ]
     },
     {
-      "summary": "UD5 — Les Fraccions (Matemàtiques)",
+      "summary": "MAT 4 — Les Fraccions i Operacions",
       "items": [
         {
-          "label": "📘 UD5 Completa (1 pàgina)",
+          "label": "📘 MAT 4 Completa (Índex)",
           "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Concepte de Fracció i Equivalències",
+          "label": "4.1 Concepte de Fracció i Equivalències",
           "href": "./ut05/ut0501.html"
         },
         {
-          "label": "5.2 Suma i Resta de Fraccions",
+          "label": "4.2 Suma i Resta de Fraccions",
           "href": "./ut05/ut0502.html"
         },
         {
-          "label": "5.3 Multiplicació i Divisió de Fraccions",
+          "label": "4.3 Multiplicació i Divisió de Fraccions",
           "href": "./ut05/ut0503.html"
         },
         {
-          "label": "5.4 Operacions Combinades i Jerarquia",
+          "label": "4.4 Operacions Combinades i Jerarquia",
           "href": "./ut05/ut0504.html"
-        },
-        {
-          "label": "5.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut05/ut0505.html"
         }
       ]
     },
     {
-      "summary": "UD6 — La Terra i l'Univers (Biologia i Geologia)",
+      "summary": "🔬 BLOC II: CIÈNCIES NATURALS",
+      "sectionHeader": true,
+      "badgeColor": "#059669",
+      "badgeBg": "rgba(5, 150, 105, 0.14)",
+      "items": []
+    },
+    {
+      "summary": "UD2 — La Matèria",
       "items": [
         {
-          "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html",
+          "label": "📘 UD2 La Matèria (Índex)",
+          "href": "./nat02/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 L'Origen de l'Univers i els Components Còsmics",
-          "href": "./ut06/ut0601.html"
+          "label": "2.1 Les propietats de la matèria",
+          "href": "./nat02/nat0201.html"
         },
         {
-          "label": "6.2 Els Astres i les Distàncies a l'Univers",
-          "href": "./ut06/ut0602.html"
+          "label": "2.2 Els estats de la matèria",
+          "href": "./nat02/nat0202.html"
         },
         {
-          "label": "6.3 El Sistema Solar: El Sol i els Planetes",
-          "href": "./ut06/ut0603.html"
+          "label": "2.3 Els canvis d'estat de la matèria",
+          "href": "./nat02/nat0203.html"
         },
         {
-          "label": "6.4 L'Exploració Espacial i Activitats",
-          "href": "./ut06/ut0604.html"
+          "label": "2.4 Classificació (I): Substàncies pures",
+          "href": "./nat02/nat0204.html"
         },
         {
-          "label": "6.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut06/ut0605.html"
+          "label": "2.5 La taula periòdica",
+          "href": "./nat02/nat0205.html"
+        },
+        {
+          "label": "2.6 Classificació dels elements químics",
+          "href": "./nat02/nat0206.html"
+        },
+        {
+          "label": "2.7 Classificació (II): Mescles",
+          "href": "./nat02/nat0207.html"
+        },
+        {
+          "label": "2.8 Mètodes de separació de mescles",
+          "href": "./nat02/nat0208.html"
         }
       ]
     },
     {
-      "summary": "UD7 — El Planeta Terra: Geosfera i Moviments (Biologia)",
+      "summary": "UD3 — Energia Interna del Planeta",
       "items": [
         {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html",
+          "label": "📘 UD3 Energia Interna (Índex)",
+          "href": "./nat03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 La Terra: Planeta Únic per a la Vida",
-          "href": "./ut07/ut0701.html"
+          "label": "3.1 Energia interna del nostre planeta",
+          "href": "./nat03/nat0301.html"
         },
         {
-          "label": "7.2 Els Moviments de la Terra i les Estacions",
-          "href": "./ut07/ut0702.html"
+          "label": "3.2 Formació de muntanyes",
+          "href": "./nat03/nat0302.html"
         },
         {
-          "label": "7.3 La Lluna, Eclipsis i Marees",
-          "href": "./ut07/ut0703.html"
+          "label": "3.3 Els volcans",
+          "href": "./nat03/nat0303.html"
         },
         {
-          "label": "7.4 La Geosfera i Activitats",
-          "href": "./ut07/ut0704.html"
-        },
-        {
-          "label": "7.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut07/ut0705.html"
+          "label": "3.4 Els terratrèmols",
+          "href": "./nat03/nat0304.html"
         }
       ]
     },
     {
-      "summary": "UD8 — L'Atmosfera Terrestre (Biologia i Geologia)",
+      "summary": "UD4 — L'Energia",
       "items": [
         {
-          "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html",
+          "label": "📘 UD4 L'Energia (Índex)",
+          "href": "./nat04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 L'Atmosfera i la Composició de l'Aire",
-          "href": "./ut08/ut0801.html"
+          "label": "4.1 Tipus d'energia",
+          "href": "./nat04/nat0401.html"
         },
         {
-          "label": "8.2 Les Capes de l'Atmosfera",
-          "href": "./ut08/ut0802.html"
+          "label": "4.2 Propietats de l'energia",
+          "href": "./nat04/nat0402.html"
         },
         {
-          "label": "8.3 Fonaments de Meteorologia i Clima",
-          "href": "./ut08/ut0803.html"
+          "label": "4.3 Fonts d'energia",
+          "href": "./nat04/nat0403.html"
         },
         {
-          "label": "8.4 Contaminació Atmosfèrica i Activitats",
-          "href": "./ut08/ut0804.html"
-        },
-        {
-          "label": "8.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut08/ut0805.html"
+          "label": "4.4 L'ús de l'energia",
+          "href": "./nat04/nat0404.html"
         }
       ]
     },
     {
-      "summary": "UD9 — La Hidrosfera Terrestre (Biologia i Geologia)",
+      "summary": "UD5 — La Calor i la Temperatura",
       "items": [
         {
-          "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.html",
+          "label": "📘 UD5 Calor i Temperatura (Índex)",
+          "href": "./nat05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 La Hidrosfera i Distribució de l'Aigua",
-          "href": "./ut09/ut0901.html"
+          "label": "5.1 La temperatura i la calor",
+          "href": "./nat05/nat0501.html"
         },
         {
-          "label": "9.2 Aigües Marines i Continentals",
-          "href": "./ut09/ut0902.html"
+          "label": "5.2 El termòmetre",
+          "href": "./nat05/nat0502.html"
         },
         {
-          "label": "9.3 El Cicle Hidrològic de l'Aigua",
-          "href": "./ut09/ut0903.html"
+          "label": "5.3 Formes de transmissió de la calor",
+          "href": "./nat05/nat0503.html"
         },
         {
-          "label": "9.4 Gestió Sostenible de l'Aigua i Activitats",
-          "href": "./ut09/ut0904.html"
+          "label": "5.4 Materials conductors i aïllants",
+          "href": "./nat05/nat0504.html"
         },
         {
-          "label": "9.5 Quadern de Laboratori i Reptes Pràctics",
-          "href": "./ut09/ut0905.html"
+          "label": "5.5 Efectes de la calor sobre els cossos",
+          "href": "./nat05/nat0505.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD6 — La Salut",
+      "items": [
+        {
+          "label": "📘 UD6 La Salut (Índex)",
+          "href": "./nat06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 La salut i la malaltia",
+          "href": "./nat06/nat0601.html"
+        },
+        {
+          "label": "6.2 Tipus de malalties",
+          "href": "./nat06/nat0602.html"
+        },
+        {
+          "label": "6.3 El sistema immunitari",
+          "href": "./nat06/nat0603.html"
+        },
+        {
+          "label": "6.4 Tractament de les malalties",
+          "href": "./nat06/nat0604.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — La Nutrició Humana",
+      "items": [
+        {
+          "label": "📘 UD7 La Nutrició Humana (Índex)",
+          "href": "./nat07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Alimentació i nutrició",
+          "href": "./nat07/nat0701.html"
+        },
+        {
+          "label": "7.2 La dieta",
+          "href": "./nat07/nat0702.html"
+        },
+        {
+          "label": "7.3 La nutrició humana: aparell digestiu",
+          "href": "./nat07/nat0703.html"
+        },
+        {
+          "label": "7.4 La nutrició humana: aparell respiratori",
+          "href": "./nat07/nat0704.html"
+        },
+        {
+          "label": "7.5 La nutrició: aparell circulatori",
+          "href": "./nat07/nat0705.html"
+        },
+        {
+          "label": "7.6 La nutrició: aparell excretor",
+          "href": "./nat07/nat0706.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — La Relació Humana",
+      "items": [
+        {
+          "label": "📘 UD8 La Relació Humana (Índex)",
+          "href": "./nat08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 La funció de relació",
+          "href": "./nat08/nat0801.html"
+        },
+        {
+          "label": "8.2 Receptors sensorials",
+          "href": "./nat08/nat0802.html"
+        },
+        {
+          "label": "8.3 El sistema nerviós",
+          "href": "./nat08/nat0803.html"
+        },
+        {
+          "label": "8.4 L'aparell locomotor",
+          "href": "./nat08/nat0804.html"
+        },
+        {
+          "label": "8.5 El sistema endocrí",
+          "href": "./nat08/nat0805.html"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — La Reproducció Humana",
+      "items": [
+        {
+          "label": "📘 UD9 La Reproducció Humana (Índex)",
+          "href": "./nat09/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 La reproducció humana",
+          "href": "./nat09/nat0901.html"
+        },
+        {
+          "label": "9.2 Caràcters sexuals",
+          "href": "./nat09/nat0902.html"
+        },
+        {
+          "label": "9.3 Aparell reproductor masculí",
+          "href": "./nat09/nat0903.html"
+        },
+        {
+          "label": "9.4 Aparell reproductor femení",
+          "href": "./nat09/nat0904.html"
+        },
+        {
+          "label": "9.5 Cicle vital de l'ésser humà",
+          "href": "./nat09/nat0905.html"
+        },
+        {
+          "label": "9.6 Planificació familiar",
+          "href": "./nat09/nat0906.html"
+        },
+        {
+          "label": "9.7 Malalties de transmissió sexual",
+          "href": "./nat09/nat0907.html"
         }
       ]
     }

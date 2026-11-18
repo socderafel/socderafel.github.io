@@ -83,12 +83,11 @@ is_landing: true
           </div>
           <h3 class="course-card-title">Ciències Aplicades I</h3>
           <p class="course-card-desc">
-            Bloc curricular integrat de Matemàtiques, Biologia i Geologia. Els nombres naturals, nutrició humana i cèl·lules, enters, la matèria viva i estats, fraccions, l'univers i la Terra, àlgebra bàsica, atmosfera i salut ambiental.
+            Organitzat en dos blocs diferenciats: <strong>Bloc I de Matemàtiques Aplicades</strong> (Naturals, Enters, Divisibilitat i Fraccions) i <strong>Bloc II de Ciències Naturals</strong> sincronitzat amb el temari oficial (La Matèria, Energia Interna del Planeta, L'Energia, Calor i Temperatura, La Salut, La Nutrició Humana, La Relació Humana i La Reproducció Humana).
           </p>
           <div class="course-tags-row">
-            <span class="course-tag">9 Unitats (UD1-UD9)</span>
-            <span class="course-tag">Biologia &amp; Geologia</span>
-            <span class="course-tag">Matemàtiques</span>
+            <span class="course-tag">4 Unitats Matemàtiques</span>
+            <span class="course-tag">8 Unitats Naturals (UD2-UD9)</span>
             <span class="course-tag">Reptes Gamificats</span>
           </div>
         </div>
