@@ -40,7 +40,7 @@ En aquesta pàgina tens tant l'**accés directe a cada sessió diària individua
 
 ## 📌 8.1 La funció de relació {#nat0801}
 
-Cap ésser viu pot sobreviure aïllat del que passa al seu voltant ni desconnectat del seu propi interior. Si un operari al taller no sentira l'olor de fum d'un curtcircuit, si no poguera retirar la mà en tocar una xapa metàl·lica roent, o si el seu cos no sabera regular la temperatura quan fa $40^\circ\text{C}$ a l'estiu, la seua vida correria un perill immediat.
+Cap ésser viu pot sobreviure aïllat del que passa al seu voltant ni desconnectat del seu propi interior. Si un operari al taller no sentira l'olor de fum d'un curtcircuit, si no poguera retirar la mà en tocar una xapa metàl·lica roent, o si el seu cos no sabera regular la temperatura quan fa 40 °C a l'estiu, la seua vida correria un perill immediat.
 
 La **funció de relació** és la funció vital mitjançant la qual l'ésser humà capta informació dels canvis que es produeixen a l'exterior o a l'interior del cos (**estímuls**), integra i analitza aquesta informació en els **sistemes de coordinació**, i elabora **respostes** adequades per adaptar-se i sobreviure.
 
@@ -51,7 +51,7 @@ La **funció de relació** és la funció vital mitjançant la qual l'ésser hum
 La funció de relació té dues grans finalitats biològiques:
 1. **L'adaptació al medi extern:** Ens permet desplaçar-nos, alimentar-nos, comunicar-nos amb altres persones, aprendre un ofici i fugir o protegir-nos dels perills físics (foc, caigudes, trànsit, sorolls intensos).
 2. **L'homeòstasi (equilibri del medi intern):** És el conjunt de mecanismes d'autoregulació que mantenen constants les condicions físiques i químiques internes del nostre organisme, independentment dels canvis bruscos de l'exterior. Exemples clau d'homeòstasi són:
-   - **Temperatura corporal constant:** Es manté sempre entre **$36{,}5^\circ\text{C}$ i $37^\circ\text{C}$**. Si fa molta calor, suem per refredar la pell; si fa molt de fred, tremolem per produir calor muscular.
+   - **Temperatura corporal constant:** Es manté sempre entre **36,5 °C i 37 °C**. Si fa molta calor, suem per refredar la pell; si fa molt de fred, tremolem per produir calor muscular.
    - **Glucèmia (nivell de sucre a la sang):** Es manté al voltant de $70-100\text{ mg/dL}$ en dejú gràcies a hormones com la insulina i el glucagó.
    - **Tensió arterial i equilibri hídric:** Regulació de la quantitat d'aigua i sals minerals a la sang i l'orina.
 
@@ -80,7 +80,7 @@ Glàndules -> Secreció)"]
 Un **estímul** és qualsevol canvi físic, químic o biològic, tant de l'entorn exterior com de l'interior del nostre cos, que és capaç de desencadenar una resposta en l'organisme.
 - **Segons la seua naturalesa:**
   - **Estímuls físics:** La llum, el so (ones sonores), la temperatura (fred o calor), la pressió mecànica o la gravetat.
-  - **Estímuls químics:** Les substàncies volàtils de l'aire (olors), les molècules dissoltes als aliments (sabors) o la concentració d'$\text{O}_2$, $\text{CO}_2$ i glucosa a la sang.
+  - **Estímuls químics:** Les substàncies volàtils de l'aire (olors), les molècules dissoltes als aliments (sabors) o la concentració d'O₂, CO₂ i glucosa a la sang.
   - **Estímuls biològics o biòtics:** La presència d'altres éssers vius (una altra persona que ens parla, un gos que borda, una infecció).
 - **Segons la seua procedència:**
   - **Estímuls externs:** Provenen de fora del cos (el so d'una alarma al taller, la llum d'un semàfor).
@@ -91,7 +91,7 @@ Són cèl·lules nervioses especialitzades o òrgans complexos (els **òrgans de
 
 ### Pas 3: Els Sistemes de Coordinació
 Reben la informació dels receptors, la interpreten i decideixen quina és la resposta més adequada. L'ésser humà disposa de dos sistemes coordinadors que treballen en equip:
-- **El Sistema Nerviós:** Utilitza **impulsos elèctrics** que viatgen a gran velocitat (fins a $100\text{ m/s}$) al llarg dels nervis. Proporciona respostes **molt ràpides, precises i de curta durada** (com moure la mà o parpellejar).
+- **El Sistema Nerviós:** Utilitza **impulsos elèctrics** que viatgen a gran velocitat (fins a 100 m/s) al llarg dels nervis. Proporciona respostes **molt ràpides, precises i de curta durada** (com moure la mà o parpellejar).
 - **El Sistema Endocrí (o Hormonal):** Utilitza missatgers químics anomenats **hormones**, que viatgen dissoltes per la sang. Proporciona respostes **més lentes, però molt duradores i sostingudes en el temps** (com el creixement corporal, la pubertat o el control del metabolisme).
 
 ### Pas 4: Els Òrgans Efectors i l'Execució de la Resposta
@@ -149,7 +149,7 @@ L'impuls nerviós és sempre **unidireccional** (va sempre des de les dendrites 
 
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau
-> - La **funció de relació** ens permet adaptar-nos a l'exterior i mantindre l'**homeòstasi** (equilibri intern de temperatura a $36{,}5-37^\circ\text{C}$, glucosa, etc.).
+> - La **funció de relació** ens permet adaptar-nos a l'exterior i mantindre l'**homeòstasi** (equilibri intern de temperatura a $36{,}5-37 °C$, glucosa, etc.).
 > - El circuit consta sempre de 4 fases: **1) Estímul $\rightarrow$ 2) Receptor sensorial $\rightarrow$ 3) Sistema coordinador (Nerviós o Endocrí) $\rightarrow$ 4) Efector (múscul o glàndula)**.
 > - La **neurona** consta de **dendrites** (reben el senyal), **soma** (cos amb nucli) i **axó** recobert de **mielina** (transmet el senyal).
 > - La **sinapsi** és la comunicació sense contacte físic entre neurones mitjançant missatgers químics anomenats **neurotransmissors**.
@@ -937,7 +937,7 @@ L'esquelet d'un ésser humà adult està constituït per **206 ossos** vius (for
 1. **Suport estructural:** Sosté tots els teixits blans i dóna forma al cos.
 2. **Protecció d'òrgans vitals:** El **crani** protegeix l'encèfal; la **caixa toràcica** (costelles i estèrnum) protegeix el cor i els pulmons; i la **columna vertebral** protegeix la medul·la espinal.
 3. **Palanca per al moviment:** Serveix de punt d'ancoratge als músculs per moure les extremitats.
-4. **Reserva mineral:** Emmagatzema el 99% del **calci ($\text{Ca}$)** i fòsfor de l'organisme.
+4. **Reserva mineral:** Emmagatzema el 99% del **calci (Ca)** i fòsfor de l'organisme.
 5. **Hematopoesi (fabricació de sang):** A l'interior esponjós de molts ossos es troba la **medul·la òssia roja**, on es fabriquen contínuament els glòbuls vermells, els glòbuls blancs i les plaquetes de la sang.
 
 ### B) Tipus d'Ossos segons la seua Forma
@@ -1252,8 +1252,8 @@ Ovaris (Estrògens i Progesterona) | Testicles (Testosterona)"]
 L'**hipotàlem** és la peça que connecta el sistema nerviós amb l'endocrí, i controla la **hipòfisi** (o glàndula pituïtària), una petita glàndula de la mida d'un pésol situada a la base del crani.
 - La **hipòfisi és la "glàndula directora d'orquestra"**: segrega hormones que ordenen a la resta de glàndules del cos (tiroide, suprarenals, ovaris, testicles) quan han de posar-se a treballar.
 - A més, produeix:
-  - **Hormona del creixement ($\text{GH}$ o somatotropina):** Estimula l'allargament dels ossos i músculs durant la infància i l'adolescència (la seua falta causa *nanisme hipofisiari* i el seu excés *gegantisme*).
-  - **Prolactina** (producció de llet materna), **Oxitocina** (contraccions de l'úter en el part) i **Hormona antidiürètica ($\text{ADH}$)** (controla la pèrdua d'aigua a l'orina).
+  - **Hormona del creixement (GH o somatotropina):** Estimula l'allargament dels ossos i músculs durant la infància i l'adolescència (la seua falta causa *nanisme hipofisiari* i el seu excés *gegantisme*).
+  - **Prolactina** (producció de llet materna), **Oxitocina** (contraccions de l'úter en el part) i **Hormona antidiürètica (ADH)** (controla la pèrdua d'aigua a l'orina).
 
 ### 2. El Tiroide i les Paratiroides (a la part anterior del coll)
 El **tiroide** és una glàndula amb forma de papallona situada davant de la tràquea.
@@ -1287,7 +1287,7 @@ Situades com dos barrets damunt de cada ronyó. Fabriquen:
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau
 > - Les **glàndules endocrines** aboquen **hormones** a la **sang**, les quals actuen només sobre les **cèl·lules diana**.
-> - La **hipòfisi** dirigeix la resta de glàndules i produeix l'hormona del creixement ($\text{GH}$); el **tiroide** regula el metabolisme amb la **tiroxina**; i les **suprarenals** alliberen **adrenalina**.
+> - La **hipòfisi** dirigeix la resta de glàndules i produeix l'hormona del creixement (GH); el **tiroide** regula el metabolisme amb la **tiroxina**; i les **suprarenals** alliberen **adrenalina**.
 > - El **pàncrees** regula el sucre en sang amb la **insulina** (baixa la glucosa) i el **glucagó** (puja la glucosa); la falta d'acció de la insulina causa la **diabetis mellitus**.
 
 ---

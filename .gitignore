@@ -10,3 +10,9 @@ Desktop.ini
 # Configuración local de IDEs si no se quiere compartir
 .vscode/
 .idea/
+
+# Scripts temporals de processament
+scratch/
+__pycache__/
+*.pyc
+

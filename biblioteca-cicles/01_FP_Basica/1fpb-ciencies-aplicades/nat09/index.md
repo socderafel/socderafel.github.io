@@ -88,7 +88,7 @@ Les **gònades** són els òrgans principals dels aparells reproductors i tenen 
 - **Ovaris (gònades femenines):** Fabriquen els **òvuls** i les hormones **estrògens i progesterona**.
 
 ### B) Els Gàmetes (Cèl·lules reproductores haploides: $n = 23$ cromosomes)
-Els **gàmetes** són cèl·lules **haploides ($n$)**: tenen només **23 cromosomes** (22 cromosomes autosomes i 1 cromosoma sexual, que en l'òvul és sempre $\text{X}$ i en l'espermatozoide pot ser $\text{X}$ o $\text{Y}$).
+Els **gàmetes** són cèl·lules **haploides (n)**: tenen només **23 cromosomes** (22 cromosomes autosomes i 1 cromosoma sexual, que en l'òvul és sempre X i en l'espermatozoide pot ser X o Y).
 
 | Característica | 🔬 Espermatozoide (Gàmeta Masculí) | 🥚 Òvul (Gàmeta Femení) |
 | :--- | :--- | :--- |
@@ -105,7 +105,7 @@ Els **gàmetes** són cèl·lules **haploides ($n$)**: tenen només **23 cromoso
 
 En l'ésser humà és fonamental no confondre tres conceptes que estan relacionats però no són sinònims:
 
-1. **Sexe biològic:** És el conjunt de característiques genètiques (cromosomes $\text{XX}$ o $\text{XY}$), anatòmiques (òrgans genitals), gonadals i hormonals que distingeixen biològicament els individus.
+1. **Sexe biològic:** És el conjunt de característiques genètiques (cromosomes XX o XY), anatòmiques (òrgans genitals), gonadals i hormonals que distingeixen biològicament els individus.
 2. **Reproducció:** És el procés estrictament biològic de procrear i tindre descendència mitjançant la fecundació, l'embaràs i el part.
 3. **Sexualitat humana:** És un concepte molt més ampli que abarca les dimensions **biològica, afectiva, psicològica, emocional, social i comunicativa** de les persones.
    - En els humans, la sexualitat no té com a única finalitat tindre fills: és una font de **comunicació, afecte, estima, intimitat i plaer compartit** entre les persones.
@@ -321,7 +321,7 @@ Anomenem **caràcters sexuals** el conjunt de trets anatòmics, físics i fisiol
 ## 1. Els Caràcters Sexuals Primaris (Des del Naixement)
 
 Els **caràcters sexuals primaris** són els mateixos **òrgans reproductors (genitals interns i externs)** amb els quals naix un nadó.
-- Estan determinats genèticament des del moment de la fecundació pels cromosomes sexuals ($\text{XX}$ o $\text{XY}$) i es formen durant l'embaràs dins de l'úter matern.
+- Estan determinats genèticament des del moment de la fecundació pels cromosomes sexuals (XX o XY) i es formen durant l'embaràs dins de l'úter matern.
 - **Quins són?**
   - **Caràcters sexuals primaris masculins:** La presència de testicles, escrot, penis, pròstata i vies espermàtiques.
   - **Caràcters sexuals primaris femenins:** La presència d'ovaris, trompes de Fal·lopi, úter, vagina i vulva.
@@ -350,7 +350,7 @@ Segreguen TESTOSTERONA"]
 ```
 
 ### Com s'activa la pubertat?
-1. El rellotge biològic de l'**hipotàlem** i la glàndula **hipòfisi** (a la base del cervell) comença a alliberar a la sang hormones gonadotropines ($\text{FSH}$ i $\text{LH}$).
+1. El rellotge biològic de l'**hipotàlem** i la glàndula **hipòfisi** (a la base del cervell) comença a alliberar a la sang hormones gonadotropines (FSH i LH).
 2. Aquestes hormones viatgen per la sang fins a les gònades (ovaris i testicles), "despertant-les" de la seua inactivitat infantil.
 3. Les gònades responen posant en marxa dos processos simultanis:
    - **Inici de la capacitat reproductora:** Comencen a madurar els òvuls als ovaris i a fabricar-se espermatozoides als testicles.
@@ -614,7 +614,7 @@ Els **testicles** són dos òrgans ovoides situats fora de la cavitat abdominal.
 
 ### B) Els Òrgans Genitals Externs: Escrot i Penis
 1. **L'Escrot (o bossa escrotal):** És una bossa de pell i múscul que envolta i sosté els testicles **fora de l'abdomen**.
-   - **Per què els testicles estan fora del cos?** Perquè l'espermatogènesi (fabricació d'espermatozoides sans i fèrtils) **no pot ocórrer a $37^\circ\text{C}$**: necessita una temperatura d'uns **$35^\circ\text{C}$ (entre $1{,}5^\circ\text{C}$ i $2^\circ\text{C}$ menys que l'interior del cos)**. Quan fa fred l'escrot s'arronsa per acostar-los al cos, i quan fa calor es relaxa per allunyar-los.
+   - **Per què els testicles estan fora del cos?** Perquè l'espermatogènesi (fabricació d'espermatozoides sans i fèrtils) **no pot ocórrer a 37 °C**: necessita una temperatura d'uns **35 °C (entre 1,5 °C i 2 °C menys que l'interior del cos)**. Quan fa fred l'escrot s'arronsa per acostar-los al cos, i quan fa calor es relaxa per allunyar-los.
 2. **El Penis:** És l'òrgan cilíndric copulador encarregat de l'expulsió tant de l'orina com del semen.
    - **Estructura interna:** Està format per tres cilindres de teixit erèctil esponjós: dos **cossos cavernosos** superiors i un **cos esponjós** inferior (per l'interior del qual passa la uretra). Durant l'excitació sexual, aquests cossos s'omplin de sang arterial a pressió, fet que fa que el penis augmente de mida i s'endurisca (**erecció**).
    - **Extrem distal:** El cos esponjós s'eixampla a la punta formant el **gland** (zona molt rica en terminacions nervioses sensitives), el qual està recobert per un plec de pell mòbil i elàstic anomenat **prepuci**.
@@ -645,7 +645,7 @@ Al llarg dels conductes deferents i la uretra, tres tipus de **glàndules annexe
 
 > [!IMPORTANT]
 > ### 💧 Què és el Semen?
-> En cada ejaculació s'expulsen entre $2\text{ mL}$ i $5\text{ mL}$ de **semen**: el **90% del seu volum són els líquids nutritius i protectors** de les vesícules seminals i la pròstata, i el **10% restant són entre 100 i 300 milions d'espermatozoides**.
+> En cada ejaculació s'expulsen entre 2 mL i 5 mL de **semen**: el **90% del seu volum són els líquids nutritius i protectors** de les vesícules seminals i la pròstata, i el **10% restant són entre 100 i 300 milions d'espermatozoides**.
 
 ---
 
@@ -655,14 +655,14 @@ L'**espermatozoide** és una cèl·lula altament especialitzada en el desplaçam
 1. **El Cap:** Conté dos elements vitals:
    - El **nucli cel·lular**, on viatgen compactats els **23 cromosomes** paterns.
    - L'**acrosoma**, un casquet situat a la punta del cap ple d'**enzims digestius** que actuen com un "trepant químic" per perforar les cobertes protectores de l'òvul en la fecundació.
-2. **El Coll o Peça Intermèdia:** Situat entre el cap i la cua, està replet de **mitocondris**, les centrals energètiques que cremen la fructosa del semen per fabricar l'energia ($\text{ATP}$) que mou la cua.
+2. **El Coll o Peça Intermèdia:** Situat entre el cap i la cua, està replet de **mitocondris**, les centrals energètiques que cremen la fructosa del semen per fabricar l'energia (ATP) que mou la cua.
 3. **La Cua o Flagel:** Llarg filament mòbil que bat com un fuet per impulsar l'espermatozoide fins a les trompes de Fal·lopi.
 
 ---
 
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau
-> - Els **testicles** estan fora de l'abdomen dins de l'**escrot** a uns **$35^\circ\text{C}$** per fabricar espermatozoides i **testosterona**.
+> - Els **testicles** estan fora de l'abdomen dins de l'**escrot** a uns **35 °C** per fabricar espermatozoides i **testosterona**.
 > - El recorregut dels espermatozoides és: **Testicle $\rightarrow$ Epidídim (maduració) $\rightarrow$ Conducte deferent $\rightarrow$ Uretra (dins del penis)**.
 > - Les **vesícules seminals** (fructosa energètica), la **pròstata** (líquid alcalí protector) i les **glàndules de Cowper** fabriquen els líquids del **semen**.
 > - L'espermatozoide consta de **cap** (nucli amb 23 cromosomes + **acrosoma**), **coll** (amb **mitocondris**) i **cua o flagel**.
@@ -886,7 +886,7 @@ El conjunt dels genitals externs femenins s'anomena **vulva** i està format per
 ## 2. Morfologia Detallada de l'Òvul (Gàmeta Femení)
 
 L'**òvul** és una cèl·lula esfèrica gegant ($\approx 0{,}12-0{,}15\text{ mm}$ de diàmetre, gairebé visible a simple vista com la punta d'una agulla) i immòbil, dissenyada per protegir l'ADN matern i alimentar l'embrió durant els primers dies abans que es forme la placenta:
-1. **Nucli haploide ($n = 23\text{ cromosomes}$):** Conté la meitat de la informació genètica del futur fill o filla (22 autosomes + 1 cromosoma sexual $\text{X}$).
+1. **Nucli haploide ($n = 23\text{ cromosomes}$):** Conté la meitat de la informació genètica del futur fill o filla (22 autosomes + 1 cromosoma sexual X).
 2. **Citoplasma ric en Vitel:** Conté una gran reserva de substàncies nutritives (proteïnes i lípids anomenats **vitel**) que alimenten el zigot durant el seu viatge des de la trompa de Fal·lopi fins a l'úter.
 3. **Cobertes protectores externes:**
    - **Membrana plasmàtica i Zona pel·lúcida:** Capa gelatinosa de glicoproteïnes que envolta l'òvul i impedeix que hi entre més d'un espermatozoide (**bloqueig de la polispèrmia**).
@@ -896,7 +896,7 @@ L'**òvul** és una cèl·lula esfèrica gegant ($\approx 0{,}12-0{,}15\text{ mm
 
 ## 3. El Cicle Ovàric i Menstrual (28 Dies)
 
-Des de la pubertat (**menarquia**) fins a la **menopausa** (entre els 48 i 52 anys), l'aparell reproductor femení experimenta cada **28 dies** aproximadament (pot variar entre 21 i 35 dies) un cicle coordinat per les hormones de la **hipòfisi** ($\text{FSH}$ i $\text{LH}$) i dels **ovaris** (**estrògens i progesterona**):
+Des de la pubertat (**menarquia**) fins a la **menopausa** (entre els 48 i 52 anys), l'aparell reproductor femení experimenta cada **28 dies** aproximadament (pot variar entre 21 i 35 dies) un cicle coordinat per les hormones de la **hipòfisi** (FSH i LH) i dels **ovaris** (**estrògens i progesterona**):
 
 ```mermaid
 flowchart LR
@@ -918,8 +918,8 @@ ix a la trompa de Fal·lopi"]
 
 | Fase del Cicle | Dies | Què passa a l'Ovari i a l'Endometri de l'Úter? | Hormones Clau |
 | :--- | :---: | :--- | :--- |
-| **1. Menstruació i Fase Fol·licular** | **Dies 1 al 13** | • **Dies 1-5 (Menstruació o regla):** Es desprén l'endometri del cicle anterior amb un poc de sang.<br>• **Dies 6-13:** Un fol·licle madura a l'ovari i l'endometri torna a créixer. | **$\text{FSH}$** (hipòfisi) i **Estrògens** (ovari) |
-| **2. Ovulació (Dies fèrtils)** | **Dia 14** *(aprox.)* | El fol·licle madur esclata i **allibera l'òvul cap a la trompa de Fal·lopi**. L'òvul viu unes 24-48 h (i els espermatozoides fins a 3-5 dies), per això els **dies 11 al 16 són els més fèrtils**. | Pic de **$\text{LH}$** (hipòfisi) |
+| **1. Menstruació i Fase Fol·licular** | **Dies 1 al 13** | • **Dies 1-5 (Menstruació o regla):** Es desprén l'endometri del cicle anterior amb un poc de sang.<br>• **Dies 6-13:** Un fol·licle madura a l'ovari i l'endometri torna a créixer. | **FSH** (hipòfisi) i **Estrògens** (ovari) |
+| **2. Ovulació (Dies fèrtils)** | **Dia 14** *(aprox.)* | El fol·licle madur esclata i **allibera l'òvul cap a la trompa de Fal·lopi**. L'òvul viu unes 24-48 h (i els espermatozoides fins a 3-5 dies), per això els **dies 11 al 16 són els més fèrtils**. | Pic de **LH** (hipòfisi) |
 | **3. Fase Lútia o Secretora** | **Dies 15 al 28** | El fol·licle buit es transforma en el **cos groc (o luti)**, que segrega **progesterona** per fer que l'endometri s'engrossisca i s'òmpliga de vasos sanguinis per si hi ha un embrió. | **Progesterona** (del cos groc de l'ovari) |
 
 - **Què passa al dia 28?**
@@ -928,7 +928,7 @@ ix a la trompa de Fal·lopi"]
 
 > [!TIP]
 > ### 🩺 Salut Ginecològica i Higiene Menstrual
-> - Durant la menstruació es perden només entre $30\text{ mL}$ i $80\text{ mL}$ de sang i teixit endometrial al llarg de 3 a 5 dies. És un procés fisiològic totalment natural que permet fer esport, dutxar-se i portar vida normal.
+> - Durant la menstruació es perden només entre 30 mL i 80 mL de sang i teixit endometrial al llarg de 3 a 5 dies. És un procés fisiològic totalment natural que permet fer esport, dutxar-se i portar vida normal.
 > - Tant si s'utilitzen **compreses**, **tampons**, **calces menstruals** o **copa menstrual**, és fonamental canviar-los o buidar-los cada **4-6 hores** i rentar-se les mans abans i després per evitar infeccions com la síndrome del xoc tòxic o la candidiasi.
 > - A l'hora d'eixugar-se després d'anar al lavabo, cal fer-ho sempre **de davant cap arrere** (de la vulva cap a l'anus, mai a l'inrevés) per evitar que els bacteris intestinals entren a la vagina o a la uretra (cistitis).
 
@@ -1175,13 +1175,13 @@ Mentre baixa per la trompa de Fal·lopi espentat pels cilis cap a l'úter, el zi
 ### B) Els Òrgans de Protecció i Nutrició: Bossa Amniòtica, Placenta i Cordó Umbilical
 Després de la nidació es formen tres estructures vitals al voltant de l'embrió:
 1. **La Bossa Amniòtica (Amni):** Sac membranós ple de **líquid amniòtic** calent dins del qual flota l'embrió i el fetus, protegint-lo contra els colps externs, els canvis de temperatura i la deshidratació.
-2. **La Placenta:** Òrgan esponjós en forma de disc ric en capil·lars sanguinis que es forma a la paret de l'úter. Actua com a **pulmó, intestí i ronyó del fetus**: a través de la placenta passen l'**oxigen ($\text{O}_2$)** i els **nutrients** (glucosa, aminoàcids, vitamines, anticossos) des de la sang de la mare cap a la del fetus, i passen el **$\text{CO}_2$ i la urea** del fetus a la mare perquè ella els elimine (**sense que la sang de la mare i del fetus es barregen mai directament**).
-3. **El Cordó Umbilical:** Tub flexible d'uns $50\text{ cm}$ amb una vena i dues artèries umbilicals que uneix el melic del fetus amb la placenta.
+2. **La Placenta:** Òrgan esponjós en forma de disc ric en capil·lars sanguinis que es forma a la paret de l'úter. Actua com a **pulmó, intestí i ronyó del fetus**: a través de la placenta passen l'**oxigen (O₂)** i els **nutrients** (glucosa, aminoàcids, vitamines, anticossos) des de la sang de la mare cap a la del fetus, i passen el **CO₂ i la urea** del fetus a la mare perquè ella els elimine (**sense que la sang de la mare i del fetus es barregen mai directament**).
+3. **El Cordó Umbilical:** Tub flexible d'uns 50 cm amb una vena i dues artèries umbilicals que uneix el melic del fetus amb la placenta.
 
 ### C) Evolució per Trimestres: Embrió vs. Fetus
-- **1r Trimestre (Mesos 1 a 3):** És l'etapa més crítica i delicada (**organogènesi**). Durant les primeres 8 setmanes s'anomena **embrió**: al primer mes ja li batega el cor! **A partir de la 8a-9a setmana (3r mes)**, com que ja té esbossats tots els òrgans humans i forma reconeixible, passa a anomenar-se **fetus** (mesura uns $9\text{ cm}$). *(Cal evitar totalment l'alcohol, el tabac, radiografies i fàrmacs, que travessen la placenta!)*.
-- **2n Trimestre (Mesos 4 a 6):** El fetus madura ràpidament, es mou, xupa el dit, obri els ulls i la mare ja nota les seues puntades. Es pot vore clarament el sexe en l'ecografia (mesura uns $30\text{ cm}$ i pesa uns $600-800\text{ g}$).
-- **3r Trimestre (Mesos 7 a 9):** Els pulmons i el sistema nerviós acaben de madurar, el fetus guanya molt de pes i greix subcutani, i a l'últim mes gira col·locant-se **cap per avall (encaixament)** preparat per a nàixer (mesura uns $50\text{ cm}$ i pesa uns $3-3{,}5\text{ kg}$).
+- **1r Trimestre (Mesos 1 a 3):** És l'etapa més crítica i delicada (**organogènesi**). Durant les primeres 8 setmanes s'anomena **embrió**: al primer mes ja li batega el cor! **A partir de la 8a-9a setmana (3r mes)**, com que ja té esbossats tots els òrgans humans i forma reconeixible, passa a anomenar-se **fetus** (mesura uns 9 cm). *(Cal evitar totalment l'alcohol, el tabac, radiografies i fàrmacs, que travessen la placenta!)*.
+- **2n Trimestre (Mesos 4 a 6):** El fetus madura ràpidament, es mou, xupa el dit, obri els ulls i la mare ja nota les seues puntades. Es pot vore clarament el sexe en l'ecografia (mesura uns 30 cm i pesa uns $600-800\text{ g}$).
+- **3r Trimestre (Mesos 7 a 9):** Els pulmons i el sistema nerviós acaben de madurar, el fetus guanya molt de pes i greix subcutani, i a l'últim mes gira col·locant-se **cap per avall (encaixament)** preparat per a nàixer (mesura uns 50 cm i pesa uns $3-3{,}5\text{ kg}$).
 
 ---
 
@@ -1191,7 +1191,7 @@ Al voltant de la **setmana 40**, la hipòfisi segrega l'hormona **oxitocina**, q
 
 | Fase del Part | Durada Aprox. | Què ocorre anatòmicament i fisiològicament? |
 | :--- | :---: | :--- |
-| **1. Fase de Dilatació** | **6 a 12 hores** *(la més llarga)* | El miometri de l'úter comença a tindre **contraccions rítmiques** cada vegada més fortes i seguides; es trenca la bossa amniòtica (**"trencar aigües"**) i el **coll de l'úter (cèrvix) es dilata fins a arribar als $10\text{ cm}$** d'obertura. |
+| **1. Fase de Dilatació** | **6 a 12 hores** *(la més llarga)* | El miometri de l'úter comença a tindre **contraccions rítmiques** cada vegada més fortes i seguides; es trenca la bossa amniòtica (**"trencar aigües"**) i el **coll de l'úter (cèrvix) es dilata fins a arribar als 10 cm** d'obertura. |
 | **2. Fase d'Expulsió** | **30 a 60 minuts** | Les contraccions uterines i la força abdominal de la mare espenten el fetus a través de la vagina (**canal del part**). Ix primer el cap i després el cos. Quan el nadó plora per primera vegada ompli els pulmons d'aire i es **talla el cordó umbilical** (que deixarà la cicatriu del melic). |
 | **3. Fase de Deslliurament** | **10 a 30 minuts** | Uns minuts després que nàixca el bebé, l'úter es torna a contraure per **desprendre i expulsar a l'exterior la placenta** i les restes de la bossa amniòtica. |
 
@@ -1210,7 +1210,7 @@ Al voltant de la **setmana 40**, la hipòfisi segrega l'hormona **oxitocina**, q
 > ### 💡 Resum de Conceptes Clau
 > - La **fecundació** a la trompa de Fal·lopi uneix espermatozoide i òvul formant el **zigot (46 cromosomes)**, que baixa dividint-se (mòrula $\rightarrow$ blastocist) i al 6é-7é dia s'implanta a l'endometri (**nidació**).
 > - Durant l'**embaràs (40 setmanes)** el nou ésser (anomenat **embrió** fins a la 8a setmana i **fetus** després) flota a la **bossa amniòtica** i es nodreix i respira per la **placenta** i el **cordó umbilical**.
-> - El **part** consta de 3 fases: **1) Dilatació** (fins a $10\text{ cm}$ i trencament d'aigües), **2) Expulsió** (naixement del nadó) i **3) Deslliurament** (expulsió de la placenta).
+> - El **part** consta de 3 fases: **1) Dilatació** (fins a 10 cm i trencament d'aigües), **2) Expulsió** (naixement del nadó) i **3) Deslliurament** (expulsió de la placenta).
 
 ---
 

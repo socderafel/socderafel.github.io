@@ -55,7 +55,7 @@ Per tant, per a gaudir d'una salut integral han d'estar en equilibri **tres dime
 3. **Benestar Social:** La persona viu integrada positivament en la seua comunitat (família, amistats, institut, entorn laboral), en un ambient de respecte, sense patir assetjament, violència ni exclusió, i amb les necessitats vitals cobertes.
 
 ### Què és aleshores la Malaltia?
-El nostre cos treballa les 24 hores del dia per a mantindre estables les seues condicions internes (temperatura al voltant de $36{,}5^\circ\text{C}$, nivell de glucosa i oxigen en sang, pressió arterial, hidratació): aquest equilibri intern s'anomena **homeòstasi**.
+El nostre cos treballa les 24 hores del dia per a mantindre estables les seues condicions internes (temperatura al voltant de 36,5 °C, nivell de glucosa i oxigen en sang, pressió arterial, hidratació): aquest equilibri intern s'anomena **homeòstasi**.
 * **Definició de Malaltia:** És qualsevol **alteració més o menys greu de l'equilibri (homeòstasi) físic, mental o social** de l'organisme que impedeix el seu funcionament normal de manera temporal o permanent.
 
 ---
@@ -90,7 +90,7 @@ vacunació, medicaments i urgències."]
 
 > [!IMPORTANT]
 > ### 🌟 La Gran Lliçó de l'Informe Lalonde
-> Observa les dades: tot i que als països desenvolupats gastem la majoria dels recursos econòmics en hospitals i medicaments (el sistema sanitari, que influeix un $11\%$), **quasi la meitat de la nostra salut ($43\%$) depén del nostre propi Estil de Vida!** Portar una dieta sana, fer exercici, dormir bé, no fumar ni consumir alcohol i usar els equips de protecció al taller fa molt més per salvar la teua vida que qualsevol medicament.
+> Observa les dades: tot i que als països desenvolupats gastem la majoria dels recursos econòmics en hospitals i medicaments (el sistema sanitari, que influeix un 11%), **quasi la meitat de la nostra salut (43%) depén del nostre propi Estil de Vida!** Portar una dieta sana, fer exercici, dormir bé, no fumar ni consumir alcohol i usar els equips de protecció al taller fa molt més per salvar la teua vida que qualsevol medicament.
 
 ---
 
@@ -101,7 +101,7 @@ Quan una persona emmalalteix i acudeix a la consulta mèdica, el metge o metgess
 * **1. Els Símptomes (Subjectius):** Són les **sensacions o molèsties subjectives** que **només sent i percep el propi pacient** en el seu interior, i que un observador extern no pot veure ni mesurar directament amb cap aparell. El metge només els coneix perquè el pacient li'ls explica durant l'entrevista (*anamnesi*).
   * *Exemples de símptomes:* **Mal de cap (cefalea)**, mal de panxa o de queixal, **mareig**, **cansament o fatiga (astènia)**, **nàusees** (ganes de vomitar), picor, calfreds, ansietat o tristesa.
 * **2. Els Signes Clínics (Objectius i Mesurables):** Són les **dades físiques, químiques o biològiques objectives, visibles i mesurables** que el metge o infermer pot comprovar i quantificar directament mitjançant l'exploració física o proves diagnòstiques, independentment del que diga el pacient.
-  * *Exemples de signes clínics:* **Febre de $38{,}5^\circ\text{C}$** (mesurada amb un termòmetre), **tensió arterial de $150/95\text{ mmHg}$** (mesurada amb un tensiòmetre), **freqüència cardíaca de $115\text{ pulsacions/min}$**, **vòmit** real, **tos**, **inflamació o erupció cutània** (granellada a la pell), o una fractura vista en una **radiografia** i un excés de glucosa en una **analítica de sang**.
+  * *Exemples de signes clínics:* **Febre de 38,5 °C** (mesurada amb un termòmetre), **tensió arterial de $150/95\text{ mmHg}$** (mesurada amb un tensiòmetre), **freqüència cardíaca de 115 pulsacions/min**, **vòmit** real, **tos**, **inflamació o erupció cutània** (granellada a la pell), o una fractura vista en una **radiografia** i un excés de glucosa en una **analítica de sang**.
 
 ### Taula Comparativa: Símptomes vs. Signes Clínics
 
@@ -110,7 +110,7 @@ Quan una persona emmalalteix i acudeix a la consulta mèdica, el metge o metgess
 | **Caràcter de la dada** | **Subjectiu** (depén de la percepció interna del malalt). | **Objectiu** (visible, comprovable i mesurable des de fora). |
 | **Qui el detecta?** | **Només el pacient** (el metge no pot veure'l si el pacient no li'l conta). | **El personal sanitari** (i qualsevol observador o aparell mèdic). |
 | **Es pot mesurar amb instruments?** | **No** (no existeix cap "dolorímetre" ni "marejómetre"). | **Sí** (termòmetre, tensiòmetre, fonendoscopi, analítica, rajos X). |
-| **Exemples clàssics** | Mal de cap, mareig, nàusees, cansament, dolor muscular, picor. | Febre ($39^\circ\text{C}$), hipertensió, erupció a la pell, vòmit, inflamació. |
+| **Exemples clàssics** | Mal de cap, mareig, nàusees, cansament, dolor muscular, picor. | Febre (39 °C), hipertensió, erupció a la pell, vòmit, inflamació. |
 
 ### Altres Termes Clínics que has de conéixer
 * **Diagnòstic:** Identificació exacta de la malaltia que pateix el pacient a partir de l'estudi dels seus símptomes, signes clínics i proves complementàries (analítiques, ecografies, TAC).
@@ -123,7 +123,7 @@ Quan una persona emmalalteix i acudeix a la consulta mèdica, el metge o metgess
 ## 4. Esperança de Vida i Qualitat de Vida
 
 Per a avaluar el nivell de salut d'un país o d'una comunitat s'utilitzen dos grans indicadors demogràfics:
-* **Esperança de vida al nàixer:** És la mitjana d'anys que s'espera que visca una persona nascuda en un país determinat si es mantenen les condicions sanitàries i socials actuals. A Espanya l'esperança de vida és una de les més altes del món (**més de $83\text{ anys}$** de mitjana), gràcies a la dieta mediterrània, l'aigua potable, les vacunes i el sistema públic de salut, mentre que en alguns països en desenvolupament sense accés a aigua neta ni sanitat a penes supera els $55\text{--}60\text{ anys}$.
+* **Esperança de vida al nàixer:** És la mitjana d'anys que s'espera que visca una persona nascuda en un país determinat si es mantenen les condicions sanitàries i socials actuals. A Espanya l'esperança de vida és una de les més altes del món (**més de 83 anys** de mitjana), gràcies a la dieta mediterrània, l'aigua potable, les vacunes i el sistema públic de salut, mentre que en alguns països en desenvolupament sense accés a aigua neta ni sanitat a penes supera els $55\text{--}60\text{ anys}$.
 * **Qualitat de vida (i Esperança de vida en bona salut):** No es tracta només de viure molts anys (*donar més anys a la vida*), sinó de viure'ls amb autonomia física, lucidesa mental i benestar (*donar més vida als anys*), lliures de discapacitat o dependència severa.
 
 ---
@@ -131,8 +131,8 @@ Per a avaluar el nivell de salut d'un país o d'una comunitat s'utilitzen dos gr
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau (Sessió 6.1)
 > - Segons l'**OMS**, la **salut** és l'estat de complet benestar **físic, mental i social**, i no sols l'absència de malaltia (alteració de l'**homeòstasi**).
-> - Els **4 determinants de la salut (Lalonde)** són: **Estil de vida** ($43\%$, el més important i modificable), **Biologia humana** ($27\%$), **Medi ambient** ($19\%$) i **Sistema sanitari** ($11\%$).
-> - Els **símptomes** són sensacions **subjectives** del pacient (mal de cap, mareig, cansament); els **signes clínics** són dades **objectives i mesurables** pel metge (febre de $38{,}5^\circ\text{C}$, tensió arterial, radiografia).
+> - Els **4 determinants de la salut (Lalonde)** són: **Estil de vida** (43%, el més important i modificable), **Biologia humana** (27%), **Medi ambient** (19%) i **Sistema sanitari** (11%).
+> - Els **símptomes** són sensacions **subjectives** del pacient (mal de cap, mareig, cansament); els **signes clínics** són dades **objectives i mesurables** pel metge (febre de 38,5 °C, tensió arterial, radiografia).
 
 ---
 
@@ -163,7 +163,7 @@ Per a avaluar el nivell de salut d'un país o d'una comunitat s'utilitzen dos gr
   <p class="mcq-question"><strong>2. Un alumne acudeix al centre de salut. Quina de les manifestacions següents és un SIGNE CLÍNIC (i NO un símptoma)?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Sentir mal de cap i punxades al front</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) Tindre una temperatura corporal de $38{,}8^\circ\text{C}$ comprovada amb un termòmetre i una erupció rogenca a la pell</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Tindre una temperatura corporal de 38,8 °C comprovada amb un termòmetre i una erupció rogenca a la pell</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Notar sensació de mareig i nàusees en alçar-se del llit</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Sentir molt de cansament i tristesa</button>
   </div>
@@ -171,7 +171,7 @@ Per a avaluar el nivell de salut d'un país o d'una comunitat s'utilitzen dos gr
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u6_1_mcq3" data-answer="A" data-hint="L'homeòstasi és el manteniment de l'equilibri intern constant de l'organisme.">
-  <p class="mcq-question"><strong>3. Com s'anomena en biologia l'estat d'equilibri intern estable de l'organisme (temperatura al voltant de $36{,}5^\circ\text{C}$, glucosa en sang, pressió arterial) l'alteració del qual provoca la malaltia?</strong></p>
+  <p class="mcq-question"><strong>3. Com s'anomena en biologia l'estat d'equilibri intern estable de l'organisme (temperatura al voltant de 36,5 °C, glucosa en sang, pressió arterial) l'alteració del qual provoca la malaltia?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Homeòstasi</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Convalescència</button>
@@ -255,7 +255,7 @@ Per a avaluar el nivell de salut d'un país o d'una comunitat s'utilitzen dos gr
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u6_1_q3" data-answer="signe|signes|signe clinic|signe clínic|signes clinics|signes clínics" data-hint="És el terme oposat a símptoma; exemples: febre de 38,5 °C, vòmit, inflamació.">
-  <div class="quiz-question">✍️ <strong>3.</strong> Com s'anomena qualsevol dada objectiva, visible i mesurable d'una malaltia (com la febre de $38{,}5^\circ\text{C}$ o una erupció a la pell) que el metge pot comprovar?</div>
+  <div class="quiz-question">✍️ <strong>3.</strong> Com s'anomena qualsevol dada objectiva, visible i mesurable d'una malaltia (com la febre de 38,5 °C o una erupció a la pell) que el metge pot comprovar?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu el terme clínic...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -372,7 +372,7 @@ i candidiasi."]
 | Agent Patogen | Característiques Biològiques | Exemples de Malalties que Provoquen |
 | :--- | :--- | :--- |
 | **1. Bacteris** | Organismes **unicel·lulars procariotes** (cèl·lules molt menudes sense nucli definit). Tenen vida autònoma, es reprodueixen sols a gran velocitat i danyen els teixits directament o segregant verins molt potents anomenats **toxines**. *(Nota: La majoria de bacteris del planeta són beneficiosos, i sols una minoria són patògens).* | • **Tètanus** (*Clostridium tetani* en ferides amb ferros oxidats o terra)<br>• **Salmonel·losi** (*Salmonella* en ous o maioneses en mal estat)<br>• **Tuberculosi** i **Pneumònia bacteriana** (pulmons)<br>• **Còlera** (aigua contaminada), meningitis i càries dental. |
-| **2. Virus** | **Formes acel·lulars** (extremadament menuts, visibles sols al microscopi electrònic). **NO són cèl·lules** ni éssers vius complets: són una simple càpsula de proteïnes (**càpsida**) amb material genètic ($\text{ADN}$ o $\text{ARN}$) a dins. Són **paràsits intracel·lulars obligatoris**: s'introdueixen dins de les nostres cèl·lules i les obliguen a fabricar milers de còpies del virus fins a destruir-les. | • **Grip** i **Refredat comú**<br>• **COVID-19** (coronavirus SARS-CoV-2)<br>• **Xarampió**, **Varicel·la**, galteres i rubèola<br>• **Sida** (virus $\text{VIH}$ que destrueix els limfòcits)<br>• **Hepatitis vírica**, herpes, èbola i ràbia. |
+| **2. Virus** | **Formes acel·lulars** (extremadament menuts, visibles sols al microscopi electrònic). **NO són cèl·lules** ni éssers vius complets: són una simple càpsula de proteïnes (**càpsida**) amb material genètic (ADN o ARN) a dins. Són **paràsits intracel·lulars obligatoris**: s'introdueixen dins de les nostres cèl·lules i les obliguen a fabricar milers de còpies del virus fins a destruir-les. | • **Grip** i **Refredat comú**<br>• **COVID-19** (coronavirus SARS-CoV-2)<br>• **Xarampió**, **Varicel·la**, galteres i rubèola<br>• **Sida** (virus VIH que destrueix els limfòcits)<br>• **Hepatitis vírica**, herpes, èbola i ràbia. |
 | **3. Fongs** | Organismes **eucariotes** (unicel·lulars com els llevats o pluricel·lulars filamentosos com les floridures). Proliferen en zones càlides i humides de la pell, les ungles o les mucoses provocant infeccions anomenades **micosis**. | • **Peu d'atleta** (*tinya podal*, molt contagiosa per caminar descalç en dutxes de gimnasos i piscines)<br>• **Candidiasi** (en mucoses pel llevat *Candida albicans*). |
 | **4. Protozous (i paràsits)** | Els **protozous** són organismes **unicel·lulars eucariotes** microscòpics que viuen en aigua o sang. *(També existeixen paràsits pluricel·lulars com cucs intestinals —tènia, oxiürs— o àcars com el de la sarna).* | • **Malària o paludisme** (causada pel protozou *Plasmodium*, que destrueix els glòbuls rojos i mata centenars de milers de persones l'any)<br>• **Toxoplasmosi**, disenteria amebiana i malaltia de la son. |
 
@@ -600,7 +600,7 @@ Són aquelles malalties que **NO estan causades per cap microorganisme patogen**
 
 ## 📌 6.3 El sistema immunitari {#nat0603}
 
-Cada vegada que respirem, toquem el teclat d'un ordinador, mengem o ens fem una rascada al taller, milions de bacteris, virus i espores de fongs intenten envair el nostre organisme, que per a ells és un paradís calent ($36{,}5^\circ\text{C}$) i ple de nutrients. Si estem envoltats de tants patògens, **com és que la major part del temps estem sans?**
+Cada vegada que respirem, toquem el teclat d'un ordinador, mengem o ens fem una rascada al taller, milions de bacteris, virus i espores de fongs intenten envair el nostre organisme, que per a ells és un paradís calent (36,5 °C) i ple de nutrients. Si estem envoltats de tants patògens, **com és que la major part del temps estem sans?**
 
 La resposta és que posseïm un exèrcit defensiu extraordinàriament perfeccionat: el **sistema immunitari**, que protegeix el cos mitjançant **tres línies de defensa successives** (com les muralles, la guàrdia interior i les forces especials d'un castell).
 
@@ -640,7 +640,7 @@ La primera estratègia del cos és **impedir que els microbis entren**. Són bar
 2. **Barreres Químiques:**
    * **El lisozima de les llàgrimes, la saliva i el moc nasal:** És un enzim bactericida natural que trenca i dissol la paret cel·lular dels bacteris que entren als ulls o a la boca.
    * **La suor àcida, el seu sebaci i el cerumen de l'oïda:** Creen un pH àcid i una pel·lícula greixosa a la pell i al conducte auditiu que impedeix el creixement de fongs i bacteris.
-   * **L'àcid clorhídric ($\text{HCl}$) de l'estómac:** El suc gàstric és extremadament àcid ($\text{pH } 1{,}5$) i crema químicament la gran majoria dels microorganismes que engolim amb els aliments.
+   * **L'àcid clorhídric (HCl) de l'estómac:** El suc gàstric és extremadament àcid ($\text{pH } 1{,}5$) i crema químicament la gran majoria dels microorganismes que engolim amb els aliments.
 3. **Barreres Biològiques (La Flora Bacteriana o Microbiota):**
    * Sobre la nostra pell, a la boca i sobretot a l'interior del nostre **intestí gros** viuen bilions de **bacteris beneficiosos simbiòtics** (la **flora bacteriana autòctona**). Aquests "bons veïns" ocupen tot l'espai disponible, consumeixen els nutrients i segreguen substàncies que impedeixen que els bacteris patògens invasors puguen instal·lar-se.
 
@@ -661,7 +661,7 @@ Els soldats protagonistes de la 2a línia són un tipus de glòbuls blancs (leuc
 * **Què és el pus?** El líquid espés i blanquinós o groguenc que ix d'un gra o d'una ferida infectada és el "camp de batalla": està format per milions de **fagòcits morts** després d'haver-se sacrificat engolint bacteris, restes de microbis destruïts i cèl·lules danyades.
 
 ### C) La Febre
-Si la infecció és important, els glòbuls blancs envien un senyal a l'hipotàlem del cervell perquè apuge el "termòstat" corporal per damunt dels $37{,}5^\circ\text{C}\text{--}38^\circ\text{C}$. La **febre moderada és un mecanisme de defensa**: a eixa temperatura els bacteris i virus es reprodueixen molt més malament, mentre que els nostres glòbuls blancs treballen més de pressa!
+Si la infecció és important, els glòbuls blancs envien un senyal a l'hipotàlem del cervell perquè apuge el "termòstat" corporal per damunt dels $37{,}5 °C\text{--}38 °C$. La **febre moderada és un mecanisme de defensa**: a eixa temperatura els bacteris i virus es reprodueixen molt més malament, mentre que els nostres glòbuls blancs treballen més de pressa!
 
 ---
 
@@ -682,14 +682,14 @@ Si els fagòcits de la 2a línia es veuen desbordats per un virus o bacteri molt
 
 | Línia de Defensa | Components Principals | Tipus de Resposta | Velocitat i Memòria |
 | :--- | :--- | :---: | :--- |
-| **1a Línia: Barreres Externes** | Pell, mucoses, cilis, lisozima (llàgrimes/saliva), $\text{HCl}$ gàstric, flora bacteriana. | **Inespecífica** (passiva) | Permanent (impedeix l'entrada). Sense memòria. |
+| **1a Línia: Barreres Externes** | Pell, mucoses, cilis, lisozima (llàgrimes/saliva), HCl gàstric, flora bacteriana. | **Inespecífica** (passiva) | Permanent (impedeix l'entrada). Sense memòria. |
 | **2a Línia: Sistema Innat** | Reacció inflamatòria, febre i **fagòcits** (neutròfils i macròfags). | **Inespecífica** (activa) | Molt ràpida (minuts/hores). Sense memòria. |
 | **3a Línia: Sistema Adaptatiu** | **Limfòcits B** (**anticossos**), **Limfòcits T** i cèl·lules de memòria. | **Específica** (contra un antigen concret) | Tarda diversos dies el primer cop, però **crea memòria duradora**. |
 
 ### Què ocorre quan el sistema immunitari falla o s'equivoca?
 1. **Les Al·lèrgies (Hipersensibilitat):** És una **reacció exagerada i desproporcionada** del sistema immunitari contra substàncies externes totalment inofensives anomenades **al·lèrgens** (grans de pol·len de plantes, àcars de la pols, pèl d'animals, aliments com cacauets o marisc, o verí d'abella). El cos allibera quantitats massives d'histamina causant esternuts, asma, urticària o, en casos extrems, un **xoc anafilàctic** (inflamació de la gola i baixada de tensió que requereix injectar adrenalina d'urgència).
 2. **Les Malalties Autoimmunes:** El sistema immunitari perd la capacitat de distingir allò propi d'allò aliè i **ataca per error cèl·lules i òrgans sans del nostre propi cos** (*exemples:* la diabetis tipus 1, l'esclerosi múltiple, l'artritis reumatoide, el lupus o la celiaquia).
-3. **Les Immunodeficiències:** Quan el sistema immunitari està debilitat o no funciona, deixant el cos indefens davant qualsevol infecció. Pot ser congènita (de naixement) o adquirida, com la **sida (Síndrome d'Immunodeficiència Adquirida)**, provocada pel virus **$\text{VIH}$** que infecta i destrueix precisament els limfòcits T.
+3. **Les Immunodeficiències:** Quan el sistema immunitari està debilitat o no funciona, deixant el cos indefens davant qualsevol infecció. Pot ser congènita (de naixement) o adquirida, com la **sida (Síndrome d'Immunodeficiència Adquirida)**, provocada pel virus **VIH** que infecta i destrueix precisament els limfòcits T.
 
 ---
 
@@ -852,7 +852,7 @@ Si els fagòcits de la 2a línia es veuen desbordats per un virus o bacteri molt
 </div>
 
 <div class="interactive-open-response" data-question-id="ca1_u6_3_open3">
-  <div class="open-question">✍️ <strong>3. La importància de la flora bacteriana (microbiota) i la febre:</strong> Explica per què no tots els bacteris són roïns descrivint com ens protegeix la nostra <strong>flora bacteriana intestinal</strong>, i explica per què tindre una **febre moderada ($38^\circ\text{C}$)** durant una infecció ajuda el nostre cos a curar-se.</div>
+  <div class="open-question">✍️ <strong>3. La importància de la flora bacteriana (microbiota) i la febre:</strong> Explica per què no tots els bacteris són roïns descrivint com ens protegeix la nostra <strong>flora bacteriana intestinal</strong>, i explica per què tindre una **febre moderada (38 °C)** durant una infecció ajuda el nostre cos a curar-se.</div>
   <textarea class="open-response-input" rows="4" placeholder="La flora bacteriana ens defensa competint amb els patògens per... La febre moderada ajuda perquè frena... i accelera..."></textarea>
 </div>
 
@@ -917,7 +917,7 @@ cèl·lules de memòria)"]
 * **La Immunitat de Grup (o de Ramat):** Quan més del $90\text{--}95\%$ d'una població està vacunada, el virus o bacteri no troba hostes on multiplicar-se i la cadena de contagi es talla. Així, vacunant-nos nosaltres, protegim també els nadons, els ancians i els malalts de càncer o immunodeprimits que no poden vacunar-se!
 
 ### B) Què és un Sèrum o Antitoxina? (Immunització Passiva Curativa)
-Imagina que un operari que **no està vacunat** es clava un ferro oxidat profund al taller (risc de tètanus) o que a un excursionista el mossega una serp escurçó. No podem posar-li només una vacuna i esperar $15\text{ dies}$ que el seu cos fabrique anticossos, perquè la toxina el mataria abans!
+Imagina que un operari que **no està vacunat** es clava un ferro oxidat profund al taller (risc de tètanus) o que a un excursionista el mossega una serp escurçó. No podem posar-li només una vacuna i esperar 15 dies que el seu cos fabrique anticossos, perquè la toxina el mataria abans!
 * En aquestes urgències s'administra un **sèrum (o antitoxina / immunoglobulina)**: un preparat que conté **els anticossos ja fabricats** (extrets del plasma de donants humans o d'animals com cavalls immunitzats). El sèrum actua **a l'instant** salvant la vida del pacient, però la seua protecció és **temporal** (els anticossos injectats desapareixen en poques setmanes i **no deixen limfòcits de memòria**).
 
 | Característica | 💉 Vacuna | 🚑 Sèrum (o Antitoxina) |
@@ -943,11 +943,11 @@ L'any **1928**, el metge i microbiòleg escocès **Alexander Fleming** va observ
 > * **Els antibiòtics actuen EXCLUSIVAMENT contra BACTERIS** (com una pneumònia bacteriana, una infecció d'orina, unes angines bacterianes o una ferida infectada).
 > * **Els antibiòtics són TOTALMENT INÚTILS contra els VIRUS** (com la **grip**, el **refredat comú** o la **COVID-19**), perquè els virus no són cèl·lules i no tenen ni paret bacteriana ni metabolisme propi que l'antibiòtic puga atacar! Prendre amoxicil·lina per a una grip o un refredat no et curarà ni un minut abans, i a més destruirà la teua flora bacteriana intestinal beneficiosa.
 > * **El greu perill mundial de les Resistències Bacterianes ("Superbacteris"):**
->   Què passa si prenem antibiòtics sense recepta mèdica o si **abandonem el tractament als 2 o 3 dies perquè ja ens trobem millor**, en lloc de prendre les pastilles durant els $7$ o $10\text{ dies}$ complets que ha pautat el metge?
+>   Què passa si prenem antibiòtics sense recepta mèdica o si **abandonem el tractament als 2 o 3 dies perquè ja ens trobem millor**, en lloc de prendre les pastilles durant els $7$ o 10 dies complets que ha pautat el metge?
 >   En els primers dies moren els bacteris més dèbils, però **els bacteris més forts i resistents sobreviuen**. Si deixes de prendre l'antibiòtic abans d'hora, aquests bacteris supervivents es multipliquen sense competència, muten i passen el gen de resistència a la seua descendència, creant **bacteris multiresistents ("superbacteris")** contra els quals els antibiòtics deixen de funcionar! L'OMS adverteix que les resistències bacterianes són una de les majors amenaces sanitàries del segle XXI.
 
 ### B) Altres Tipus de Medicaments Habituals
-* **Antivirals:** Fàrmacs que dificulten la multiplicació de certs **virus** dins de les cèl·lules (usats contra el $\text{VIH}$ de la sida, l'hepatitis C, l'herpes o casos greus de grip).
+* **Antivirals:** Fàrmacs que dificulten la multiplicació de certs **virus** dins de les cèl·lules (usats contra el VIH de la sida, l'hepatitis C, l'herpes o casos greus de grip).
 * **Antifúngics (o Antimicòtics):** Fàrmacs específics per a eliminar infeccions causades per **fongs** (com les pomades per al peu d'atleta o la candidiasi).
 * **Medicaments Simptomàtics** (no eliminen la causa de la malaltia, però alleugen els símptomes i el malestar mentre el cos es cura):
   * **Analgèsics:** Calmen o eliminen el **dolor** (p. ex. paracetamol, metamizol).
@@ -960,7 +960,7 @@ L'any **1928**, el metge i microbiòleg escocès **Alexander Fleming** va observ
 ## 3. Cirurgia, Trasplantaments i Primers Auxilis al Taller (Conducta PAS)
 
 ### A) La Cirurgia i els Trasplantaments (El paper de l'ONT)
-* **La Cirurgia:** Quan els medicaments no basten (una apendicitis, una fractura complexa, unes cataractes, un tumor o una artèria obstruïda), cal intervindre quirúrgicament. Hui en dia moltes operacions es fan mitjançant **cirurgia mínimament invasiva o laparoscòpica/endoscòpica** (introduint càmeres de fibra òptica i microinstruments per incisions d'$1\text{ cm}$), reduint el dolor i el risc d'infecció.
+* **La Cirurgia:** Quan els medicaments no basten (una apendicitis, una fractura complexa, unes cataractes, un tumor o una artèria obstruïda), cal intervindre quirúrgicament. Hui en dia moltes operacions es fan mitjançant **cirurgia mínimament invasiva o laparoscòpica/endoscòpica** (introduint càmeres de fibra òptica i microinstruments per incisions d'1 cm), reduint el dolor i el risc d'infecció.
 * **Els Trasplantaments d'Òrgans, Teixits i Cèl·lules:** Consisteixen a substituir un òrgan o teixit malalt irreversiblement per un altre de sa procedent d'un **donant** (viu o mort cerebralment): trasplantaments de **ronyó, fetge, cor, pulmó, pàncrees, còrnia, medul·la òssia** i **transfusions de sang**.
   * **Espanya, líder mundial en donació:** A través de l'**Organització Nacional de Trasplantaments (ONT)**, el sistema públic espanyol és referent mundial des de fa més de 30 anys gràcies a un model basat en la donació **voluntària, altruista, solidària, anònima i gratuïta**.
   * **El problema del rebuig immunitari:** Com que les cèl·lules de l'òrgan del donant tenen els seus propis antígens, el sistema immunitari del pacient receptor pot confondre el nou òrgan amb un intrús i atacar-lo (**rebuig**). Per a evitar-ho, abans del trasplantament es comprova l'alta **compatibilitat (histocompatibilitat)** entre donant i receptor, i el pacient ha de prendre fàrmacs **immunosupressors** que moderen l'activitat dels seus limfòcits.
@@ -1173,9 +1173,9 @@ Completa la **bateria global de 21 exercicis** (6 preguntes tipus test, 6 de Ver
 
 | Apartat | Conceptes Essencials | Dades i Exemples Clau per a l'Examen |
 | :--- | :--- | :--- |
-| **6.1 La Salut i la Malaltia** | • **Salut (OMS):** Complet benestar **físic, mental i social**.<br>• **Malaltia:** Alteració de l'equilibri intern (**homeòstasi**).<br>• **4 Determinants (Lalonde):** Estil de vida ($43\%$), Biologia ($27\%$), Medi ambient/treball ($19\%$), Sistema sanitari ($11\%$). | • **Símptoma (Subjectiu):** Només el sent el pacient (mal de cap, mareig, nàusees, cansament).<br>• **Signe clínic (Objectiu):** Mesurable pel metge (febre $38{,}5^\circ\text{C}$, tensió arterial, erupció, radiografia). |
+| **6.1 La Salut i la Malaltia** | • **Salut (OMS):** Complet benestar **físic, mental i social**.<br>• **Malaltia:** Alteració de l'equilibri intern (**homeòstasi**).<br>• **4 Determinants (Lalonde):** Estil de vida (43%), Biologia (27%), Medi ambient/treball (19%), Sistema sanitari (11%). | • **Símptoma (Subjectiu):** Només el sent el pacient (mal de cap, mareig, nàusees, cansament).<br>• **Signe clínic (Objectiu):** Mesurable pel metge (febre 38,5 °C, tensió arterial, erupció, radiografia). |
 | **6.2 Tipus de Malalties** | • Durada: **Agudes** (curtes) vs **Cròniques** (llargues).<br>• Distribució: **Esporàdica, Endèmia, Epidèmia, Pandèmia**.<br>• Origen: **Infeccioses** (patògens) vs **No infeccioses** (infart, càncer, diabetis, Alzheimer, accidents). | • **Bacteris (Procariotes):** Tètanus, salmonel·losi, tuberculosi, còlera.<br>• **Virus (Acel·lulars):** Grip, refredat, COVID-19, xarampió, sida.<br>• **Fongs (Micosi):** Peu d'atleta, candidiasi.<br>• **Protozous (Eucariotes):** Malària (vector: mosquit *Anopheles*). |
-| **6.3 El Sistema Immunitari** | • **1a Línia (Barreres externes):** Pell (queratina), mucoses/cilis, **lisozima** (llàgrimes/saliva), $\text{HCl}$ estómac i flora bacteriana.<br>• **2a Línia (Innata inespecífica):** Inflamació, febre i **fagòcits** (macròfags/neutròfils $\rightarrow$ fagocitosi $\rightarrow$ pus). | • **3a Línia (Adaptativa específica):** Reconeix l'**antigen**.<br>• **Limfòcits B:** Fabriquen **anticossos** en forma de "Y".<br>• **Limfòcits T:** Destrueixen cèl·lules infectades.<br>• **Limfòcits de memòria**, al·lèrgies i malalties autoimmunes. |
+| **6.3 El Sistema Immunitari** | • **1a Línia (Barreres externes):** Pell (queratina), mucoses/cilis, **lisozima** (llàgrimes/saliva), HCl estómac i flora bacteriana.<br>• **2a Línia (Innata inespecífica):** Inflamació, febre i **fagòcits** (macròfags/neutròfils $\rightarrow$ fagocitosi $\rightarrow$ pus). | • **3a Línia (Adaptativa específica):** Reconeix l'**antigen**.<br>• **Limfòcits B:** Fabriquen **anticossos** en forma de "Y".<br>• **Limfòcits T:** Destrueixen cèl·lules infectades.<br>• **Limfòcits de memòria**, al·lèrgies i malalties autoimmunes. |
 | **6.4 Tractament i Prevenció** | • **Vacuna:** Preventiva (antígens inofensius $\rightarrow$ crea memòria).<br>• **Sèrum:** Curatiu d'urgència (anticossos ja fets $\rightarrow$ immediat).<br>• **Antibiòtics (Fleming, 1928):** **EXCLUSIUS contra bacteris** (inútils contra virus!). Perill de **resistències bacterianes**. | • Simptomàtics: **analgèsics** (dolor), **antipirètics** (febre), **antiinflamatoris**.<br>• Trasplantaments (**ONT**): donació altruista i control del rebuig.<br>• Primers auxilis al taller: **Conducta PAS** (1. Protegir, 2. Avisar al **112**, 3. Socórrer). |
 
 ---
@@ -1195,8 +1195,8 @@ Completa la **bateria global de 21 exercicis** (6 preguntes tipus test, 6 de Ver
 <div class="interactive-mcq" data-quiz-id="ca1_u6_5_mcq1" data-answer="B" data-hint="Els símptomes són subjectius (dolor, mareig, nàusees) i els signes clínics són objectius i mesurables (febre de 39 °C, plaques a la gola, radiografia).">
   <p class="mcq-question"><strong>1. (6.1) En una consulta mèdica d'urgències, quina de les opcions següents distingeix correctament entre un SÍMPTOMA i un SIGNE CLÍNIC?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) La febre de $39^\circ\text{C}$ és un símptoma subjectiu, i el mal de cap és un signe clínic mesurable</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) El mal de cap, el mareig i el cansament són símptomes subjectius que només sent el pacient; la febre de $39^\circ\text{C}$ i la tensió de $150/95$ són signes clínics objectius i mesurables</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) La febre de 39 °C és un símptoma subjectiu, i el mal de cap és un signe clínic mesurable</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El mal de cap, el mareig i el cansament són símptomes subjectius que només sent el pacient; la febre de 39 °C i la tensió de $150/95$ són signes clínics objectius i mesurables</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Tant el dolor com la tristesa es poden mesurar amb un termòmetre d'infrarojos</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Els signes clínics només apareixen en les malalties mentals</button>
   </div>
@@ -1263,7 +1263,7 @@ Completa la **bateria global de 21 exercicis** (6 preguntes tipus test, 6 de Ver
 ### 2. Activitats Globals de Vertader (V) o Fals (F) (6 Afirmacions)
 
 <div class="interactive-vf" data-quiz-id="ca1_u6_5_vf1" data-answer="V" data-hint="VERTADER: L'estil de vida (~43%) és el factor que més pes té sobre la salut segons l'Informe Lalonde i el que més podem controlar.">
-  <span class="vf-statement"><strong>a) (6.1) Segons l'Informe Lalonde, l'estil de vida i els hàbits saludables són el determinant que més influeix en la salut d'una persona (prop del $43\%$).</strong></span>
+  <span class="vf-statement"><strong>a) (6.1) Segons l'Informe Lalonde, l'estil de vida i els hàbits saludables són el determinant que més influeix en la salut d'una persona (prop del 43%).</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -1321,7 +1321,7 @@ Completa la **bateria global de 21 exercicis** (6 preguntes tipus test, 6 de Ver
 ### 3. Reptes Globals de Diagnòstic Clínic i Vocabulari Mèdic (5 Exercicis)
 
 <div class="interactive-quiz" data-quiz-id="ca1_u6_5_q1" data-answer="signe|signe clinic|signe clínic|signes|signes clinics|signes clínics" data-hint="Com que $39,2 °C i les plaques de pus són dades objectives mesurables i visibles pel metge, no són símptomes sinó...">
-  <div class="quiz-question">✍️ <strong>1. Diagnòstic Clínic (6.1):</strong> Un metge comprova amb el termòmetre que un pacient té $39{,}2^\circ\text{C}$ de febre i observa amb una llanterna plaques de pus a la gola. Com es classifiquen aquestes dades objectives i mesurables: símptomes o signes clínics?</div>
+  <div class="quiz-question">✍️ <strong>1. Diagnòstic Clínic (6.1):</strong> Un metge comprova amb el termòmetre que un pacient té 39,2 °C de febre i observa amb una llanterna plaques de pus a la gola. Com es classifiquen aquestes dades objectives i mesurables: símptomes o signes clínics?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu: símptoma o signe clínic...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -1370,7 +1370,7 @@ Completa la **bateria global de 21 exercicis** (6 preguntes tipus test, 6 de Ver
 ### 4. Casos Clínics de Síntesi i Desenvolupament Escrit (4 Problemes Globals)
 
 <div class="interactive-open-response" data-question-id="ca1_u6_5_open1">
-  <div class="open-question">✍️ <strong>Cas Clínic 1 (6.1 i 6.2) — De l'entrevista mèdica al diagnòstic epidemiològic:</strong> Un pacient acudeix a urgències a l'hivern dient que sent calfreds, mal de cap intens, dolor muscular i molta fatiga. El metge comprova que té $39{,}0^\circ\text{C}$ de febre i li diagnostica <strong>grip estacional</strong>. Respon: a) Quines dades de l'enunciat són <strong>símptomes</strong> i quines són <strong>signes clínics</strong>? b) Quin tipus de patogen causa la grip, per quina via es contagia i per què es classifica com una malaltia <strong>aguda i epidèmica</strong>?</div>
+  <div class="open-question">✍️ <strong>Cas Clínic 1 (6.1 i 6.2) — De l'entrevista mèdica al diagnòstic epidemiològic:</strong> Un pacient acudeix a urgències a l'hivern dient que sent calfreds, mal de cap intens, dolor muscular i molta fatiga. El metge comprova que té 39,0 °C de febre i li diagnostica <strong>grip estacional</strong>. Respon: a) Quines dades de l'enunciat són <strong>símptomes</strong> i quines són <strong>signes clínics</strong>? b) Quin tipus de patogen causa la grip, per quina via es contagia i per què es classifica com una malaltia <strong>aguda i epidèmica</strong>?</div>
   <textarea class="open-response-input" rows="4" placeholder="a) Símptomes:... Signes clínics:... b) Està causada per un virus que es contagia per... i és aguda i epidèmica perquè..."></textarea>
 </div>
 

@@ -131,11 +131,11 @@ next_label: "NAT UD2 La Matèria ➡️"
 
 Una **fracció** és l'expressió matemàtica d'una quantitat dividida entre una altra quantitat. S'escriu en la forma:
 
-$$\frac{a}{b}$$
+\frac{a}{b}
 
 On:
-- **$a$ és el Numerador:** El nombre situat per damunt de la barra. Indica el nombre de parts iguals que prenem o considerem.
-- **$b$ és el Denominador:** El nombre situat per davall de la barra ($b \neq 0$). Indica en quantes parts iguals hem dividit la unitat sencera.
+- **a és el Numerador:** El nombre situat per damunt de la barra. Indica el nombre de parts iguals que prenem o considerem.
+- **b és el Denominador:** El nombre situat per davall de la barra ($b \neq 0$). Indica en quantes parts iguals hem dividit la unitat sencera.
 
 ---
 
@@ -151,39 +151,39 @@ $$\frac{3}{8} \text{ de la pizza}$$
 #### B) La Fracció com a Quocient o Divisió
 Tota fracció representa el quocient exacte o decimal entre el numerador i el denominador:
 $$\frac{3}{4} = 3 : 4 = 0{,}75$$
-$$\frac{12}{3} = 12 : 3 = 4$$
+$$\frac{12}{3} = 12 : 3 = 4
 
 #### C) La Fracció com a Operador d'una Quantitat
 Calcular la fracció d'un nombre consisteix a **dividir el nombre entre el denominador i multiplicar el resultat pel numerador** (o multiplicar el numerador pel nombre i dividir entre el denominador):
 
-$$\frac{a}{b} \text{ de } N = \frac{a \cdot N}{b} = (N : b) \cdot a$$
+\frac{a}{b} \text{ de } N = \frac{a \cdot N}{b} = (N : b) \cdot a
 
-> **Exemple:** Calcula els $\frac{3}{5}$ de $250\text{ €}$:
-> $$\frac{3}{5} \text{ de } 250 = (250 : 5) \cdot 3 = 50 \cdot 3 = \mathbf{150\text{ €}}$$
+> **Exemple:** Calcula els $\frac{3}{5}$ de 250 €:
+> $$\frac{3}{5} \text{ de } 250 = (250 : 5) \cdot 3 = 50 \cdot 3 = \mathbf{150\text{ €}}
 
 ---
 
 ### 2. Tipus de Fraccions
 
 - **Fracció Pròpia:** El numerador és més petit que el denominador ($a < b$). Representa una quantitat menor que la unitat ($< 1$):  
-  $$\frac{2}{5} = 0{,}4 < 1$$
+$$\frac{2}{5} = 0{,}4 < 1$$
 - **Fracció Impròpia:** El numerador és més gran que el denominador ($a > b$). Representa una quantitat major que la unitat ($> 1$):  
-  $$\frac{7}{4} = 1{,}75 > 1$$
+$$\frac{7}{4} = 1{,}75 > 1$$
 - **Fracció Igual a la Unitat:** Numerador i denominador són iguals ($a = b$):  
-  $$\frac{6}{6} = 1$$
+$$\frac{6}{6} = 1
 
 ---
 
 ### 3. Fraccions Equivalents
 
-Dues fraccions $\frac{a}{b}$ i $\frac{c}{d}$ són **equivalents** ($\frac{a}{b} = \frac{c}{d}$) si representen exactament la mateixa quantitat o el mateix valor decimal.
+Dues fraccions $\frac{a}{b}i\frac{c}{d}$ són **equivalents** ($\frac{a}{b} = \frac{c}{d}$) si representen exactament la mateixa quantitat o el mateix valor decimal.
 
 > [!IMPORTANT]
 > ### Comprovació de la Regla dels Productes Creuats
 > Dues fraccions són equivalents si i només si **el producte dels extrems és igual al producte dels mitjans**:
-> $$\frac{a}{b} = \frac{c}{d} \iff a \cdot d = b \cdot c$$
+> $$\frac{a}{b} = \frac{c}{d} \iff a \cdot d = b \cdot c
 
-**Exemple:** Són equivalents $\frac{2}{3}$ i $\frac{8}{12}$?
+**Exemple:** Són equivalents $\frac{2}{3}i\frac{8}{12}$?
 $$2 \cdot 12 = 24 \qquad \text{i} \qquad 3 \cdot 8 = 24$$
 Com que $24 = 24$, les dues fraccions són **equivalents**: $\frac{2}{3} = \frac{8}{12}$.
 
@@ -194,15 +194,15 @@ Com que $24 = 24$, les dues fraccions són **equivalents**: $\frac{2}{3} = \frac
 Podem obtindre fraccions equivalents de dues maneres:
 
 1. **Per Amplificació:** Multipliquem el numerador i el denominador pel mateix nombre natural diferent de zero:
-   $$\frac{3}{5} = \frac{3 \cdot 4}{5 \cdot 4} = \frac{12}{20}$$
+$$\frac{3}{5} = \frac{3 \cdot 4}{5 \cdot 4} = \frac{12}{20}$$
 2. **Per Simplificació:** Dividim el numerador i el denominador entre un divisor comú a tots dos:
-   $$\frac{24}{36} = \frac{24 : 2}{36 : 2} = \frac{12}{18} = \frac{12 : 6}{18 : 6} = \frac{2}{3}$$
+$$\frac{24}{36} = \frac{24 : 2}{36 : 2} = \frac{12}{18} = \frac{12 : 6}{18 : 6} = \frac{2}{3}
 
 #### La Fracció Irreductible
 Una fracció és **irreductible** quan el numerador i el denominador no tenen cap divisor comú excepte l'1 ($\text{MCD}(a, b) = 1$). No es pot simplificar més.
-Per obtindre directament la fracció irreductible, **dividim numerador i denominador pel seu Màxim Comú Divisor ($\text{MCD}$)**:
+Per obtindre directament la fracció irreductible, **dividim numerador i denominador pel seu Màxim Comú Divisor (MCD)**:
 - Per a $\frac{60}{84}$, calculem $\text{MCD}(60, 84) = 12$:
-  $$\frac{60 : 12}{84 : 12} = \mathbf{\frac{5}{7}} \quad \text{(fracció irreductible)}$$
+$$\frac{60 : 12}{84 : 12} = \mathbf{\frac{5}{7}} \quad \text{(fracció irreductible)}
 
 ---
 
@@ -257,18 +257,18 @@ Per poder sumar o restar fraccions és **imprescindible que totes tinguen el mat
 
 Si les fraccions ja comparteixen el mateix denominador, el càlcul és directe: **se sumen o resten els numeradors i es manté el mateix denominador**.
 
-$$\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c} \qquad \text{i} \qquad \frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}$$
+\frac{a}{c} + \frac{b}{c} = \frac{a + b}{c} \qquad \text{i} \qquad \frac{a}{c} - \frac{b}{c} = \frac{a - b}{c}
 
 #### Exemples:
 - $\frac{3}{8} + \frac{2}{8} = \mathbf{\frac{5}{8}}$
 - $\frac{7}{10} - \frac{3}{10} = \frac{4}{10} = \mathbf{\frac{2}{5}}$ *(sempre simplifiquem al final)*
-- $\frac{9}{12} + \frac{5}{12} - \frac{6}{12} = \frac{9 + 5 - 6}{12} = \frac{8}{12} = \mathbf{\frac{2}{3}}$
+- $\frac{9}{12} + \frac{5}{12} - \frac{6}{12} = \frac{9 + 5 - 6}{12} = \frac{8}{12} = \mathbf{\frac{2}{3}}
 
 ---
 
 ### 2. Suma i Resta amb Diferent Denominador
 
-Si les fraccions tenen denominadors diferents, primer hem de transformar-les en fraccions equivalents amb un **comú denominador** utilitzant el **Mínim Comú Múltiple ($\text{MCM}$)**.
+Si les fraccions tenen denominadors diferents, primer hem de transformar-les en fraccions equivalents amb un **comú denominador** utilitzant el **Mínim Comú Múltiple (MCM)**.
 
 > [!IMPORTANT]
 > ### Procediment Pas a Pas
@@ -284,9 +284,9 @@ Si les fraccions tenen denominadors diferents, primer hem de transformar-les en 
 
 ##### Exemple 1: Suma de dues fraccions
 Calcula:
-$$\frac{3}{4} + \frac{1}{6}$$
+$$\frac{3}{4} + \frac{1}{6}
 
-1. Calculem l'MCM dels denominadors $4$ i $6$:
+1. Calculem l'MCM dels denominadors $4i6$:
    - $4 = 2^2$
    - $6 = 2 \cdot 3$
    - $\text{MCM}(4, 6) = 2^2 \cdot 3 = \mathbf{12}$
@@ -294,23 +294,23 @@ $$\frac{3}{4} + \frac{1}{6}$$
    - Per a $\frac{3}{4}$: $(12 : 4) \cdot 3 = 3 \cdot 3 = 9 \longrightarrow \frac{9}{12}$
    - Per a $\frac{1}{6}$: $(12 : 6) \cdot 1 = 2 \cdot 1 = 2 \longrightarrow \frac{2}{12}$
 3. Sumem els numeradors:
-   $$\frac{9}{12} + \frac{2}{12} = \mathbf{\frac{11}{12}}$$
+$$\frac{9}{12} + \frac{2}{12} = \mathbf{\frac{11}{12}}
 
 ---
 
 ##### Exemple 2: Operació amb tres fraccions i enters
 Calcula:
-$$2 - \frac{3}{5} + \frac{7}{10}$$
+$$2 - \frac{3}{5} + \frac{7}{10}
 
 1. Recordem que tot nombre enter té denominador $1$: $2 = \frac{2}{1}$.
-2. Calculem l'MCM de $1, 5$ i $10$:
-   $$\text{MCM}(1, 5, 10) = \mathbf{10}$$
+2. Calculem l'MCM de $1, 5i10$:
+$$\text{MCM}(1, 5, 10) = \mathbf{10}$$
 3. Calculem els nous numeradors:
    - $(10 : 1) \cdot 2 = 20 \longrightarrow \frac{20}{10}$
    - $(10 : 5) \cdot 3 = 6 \longrightarrow \frac{6}{10}$
    - $(10 : 10) \cdot 7 = 7 \longrightarrow \frac{7}{10}$
 4. Operem i simplifiquem:
-   $$\frac{20 - 6 + 7}{10} = \mathbf{\frac{21}{10}}$$
+$$\frac{20 - 6 + 7}{10} = \mathbf{\frac{21}{10}}
 
 ---
 
@@ -367,7 +367,7 @@ El producte de dues o més fraccions és una altra fracció que té:
 - Com a numerador: el **producte dels numeradors** (en línia horitzontal).
 - Com a denominador: el **producte dels denominadors** (en línia horitzontal).
 
-$$\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$$
+\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}
 
 #### Exemples:
 - $\frac{2}{3} \cdot \frac{5}{7} = \frac{2 \cdot 5}{3 \cdot 7} = \mathbf{\frac{10}{21}}$
@@ -375,13 +375,13 @@ $$\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}$$
 
 #### Producte d'un Nombre Sencer per una Fracció:
 Considerem que el nombre sencer té denominador $1$:
-$$5 \cdot \frac{3}{7} = \frac{5}{1} \cdot \frac{3}{7} = \frac{5 \cdot 3}{1 \cdot 7} = \mathbf{\frac{15}{7}}$$
+$$5 \cdot \frac{3}{7} = \frac{5}{1} \cdot \frac{3}{7} = \frac{5 \cdot 3}{1 \cdot 7} = \mathbf{\frac{15}{7}}
 
 > [!TIP]
 > ### Fracció d'una Fracció
 > Quan calculem una fracció d'una altra fracció, es tracta simplement d'una multiplicació:
 > "La meitat dels tres quarts":
-> $$\frac{1}{2} \text{ de } \frac{3}{4} = \frac{1}{2} \cdot \frac{3}{4} = \mathbf{\frac{3}{8}}$$
+> $$\frac{1}{2} \text{ de } \frac{3}{4} = \frac{1}{2} \cdot \frac{3}{4} = \mathbf{\frac{3}{8}}
 
 ---
 
@@ -389,7 +389,7 @@ $$5 \cdot \frac{3}{7} = \frac{5}{1} \cdot \frac{3}{7} = \frac{5 \cdot 3}{1 \cdot
 
 La **fracció inversa** d'una fracció $\frac{a}{b}$ s'obté intercanviant el numerador i el denominador:
 
-$$\text{Inversa de } \frac{a}{b} = \frac{b}{a}$$
+\text{Inversa de } \frac{a}{b} = \frac{b}{a}
 
 - La inversa de $\frac{3}{5}$ és $\mathbf{\frac{5}{3}}$.
 - La inversa de $\frac{1}{4}$ és $\frac{4}{1} = \mathbf{4}$.
@@ -397,7 +397,7 @@ $$\text{Inversa de } \frac{a}{b} = \frac{b}{a}$$
 
 > [!NOTE]
 > El producte d'una fracció per la seua inversa és sempre igual a la **unitat ($1$)**:
-> $$\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1 \qquad \longrightarrow \qquad \frac{3}{5} \cdot \frac{5}{3} = \frac{15}{15} = 1$$
+> $$\frac{a}{b} \cdot \frac{b}{a} = \frac{a \cdot b}{b \cdot a} = 1 \qquad \longrightarrow \qquad \frac{3}{5} \cdot \frac{5}{3} = \frac{15}{15} = 1
 
 ---
 
@@ -408,17 +408,17 @@ Per dividir dues fraccions tenim dos mètodes totalment equivalents:
 #### Mètode A: Multiplicació en Creu
 Multipliquem el numerador de la primera pel denominador de la segona (nou numerador) i el denominador de la primera pel numerador de la segona (nou denominador):
 
-$$\frac{a}{b} : \frac{c}{d} = \frac{a \cdot d}{b \cdot c}$$
+\frac{a}{b} : \frac{c}{d} = \frac{a \cdot d}{b \cdot c}
 
 #### Mètode B: Multiplicar per la Fracció Inversa *(Recomanat)*
 Dividir entre una fracció equival a **multiplicar per la seua inversa**:
 
-$$\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b \cdot c}$$
+\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b \cdot c}
 
 #### Exemples:
 - $\frac{2}{5} : \frac{3}{4} = \frac{2 \cdot 4}{5 \cdot 3} = \mathbf{\frac{8}{15}}$
 - $\frac{7}{6} : \frac{14}{9} = \frac{7 \cdot 9}{6 \cdot 14} = \frac{63}{84} = \mathbf{\frac{3}{4}}$
-- $\frac{4}{5} : 2 = \frac{4}{5} : \frac{2}{1} = \frac{4 \cdot 1}{5 \cdot 2} = \frac{4}{10} = \mathbf{\frac{2}{5}}$
+- $\frac{4}{5} : 2 = \frac{4}{5} : \frac{2}{1} = \frac{4 \cdot 1}{5 \cdot 2} = \frac{4}{10} = \mathbf{\frac{2}{5}}
 
 ---
 
@@ -497,60 +497,60 @@ flowchart TD
 
 #### Exemple 1: Sense Parèntesis
 Calcula:
-$$\frac{2}{3} + \frac{1}{4} \cdot \frac{8}{3} - \frac{1}{2}$$
+$$\frac{2}{3} + \frac{1}{4} \cdot \frac{8}{3} - \frac{1}{2}
 
 **Pas 1: Resolem primer la multiplicació:**
 $$\frac{1}{4} \cdot \frac{8}{3} = \frac{8}{12} = \frac{2}{3}$$
 L'expressió queda:
-$$\frac{2}{3} + \frac{2}{3} - \frac{1}{2}$$
+$$\frac{2}{3} + \frac{2}{3} - \frac{1}{2}
 
 **Pas 2: Comú denominador per a la suma i la resta:**
-- Denominadors: $3$ i $2 \longrightarrow \text{MCM}(3, 2) = 6$.
+- Denominadors: $3i2 \longrightarrow \text{MCM}(3, 2) = 6$.
 - Transformem a denominador $6$:
-  $$\frac{4}{6} + \frac{4}{6} - \frac{3}{6} = \frac{4 + 4 - 3}{6} = \mathbf{\frac{5}{6}}$$
+$$\frac{4}{6} + \frac{4}{6} - \frac{3}{6} = \frac{4 + 4 - 3}{6} = \mathbf{\frac{5}{6}}
 
 ---
 
 #### Exemple 2: Amb Parèntesis
 Calcula:
-$$\left( \frac{3}{4} - \frac{1}{2} \right) \cdot \left( \frac{2}{3} + \frac{1}{5} \right)$$
+$$\left( \frac{3}{4} - \frac{1}{2} \right) \cdot \left( \frac{2}{3} + \frac{1}{5} \right)
 
 **Pas 1: Resolem el contingut del primer parèntesi:**
-$$\frac{3}{4} - \frac{1}{2} = \frac{3}{4} - \frac{2}{4} = \frac{1}{4}$$
+$$\frac{3}{4} - \frac{1}{2} = \frac{3}{4} - \frac{2}{4} = \frac{1}{4}
 
 **Pas 2: Resolem el contingut del segon parèntesi:**
 - $\text{MCM}(3, 5) = 15$:
-$$\frac{2}{3} + \frac{1}{5} = \frac{10}{15} + \frac{3}{15} = \frac{13}{15}$$
+$$\frac{2}{3} + \frac{1}{5} = \frac{10}{15} + \frac{3}{15} = \frac{13}{15}
 
 **Pas 3: Multipliquem els dos resultats:**
-$$\frac{1}{4} \cdot \frac{13}{15} = \frac{1 \cdot 13}{4 \cdot 15} = \mathbf{\frac{13}{60}}$$
+$$\frac{1}{4} \cdot \frac{13}{15} = \frac{1 \cdot 13}{4 \cdot 15} = \mathbf{\frac{13}{60}}
 
 ---
 
 #### Exemple 3: Amb Claudàtors i Nombres Enters
 Calcula:
-$$2 - \frac{3}{5} \cdot \left[ 1 + \left( \frac{4}{3} - \frac{1}{2} \right) \right]$$
+$$2 - \frac{3}{5} \cdot \left[ 1 + \left( \frac{4}{3} - \frac{1}{2} \right) \right]
 
 **Pas 1: Parèntesi intern:**
-$$\frac{4}{3} - \frac{1}{2} = \frac{8}{6} - \frac{3}{6} = \frac{5}{6}$$
+$$\frac{4}{3} - \frac{1}{2} = \frac{8}{6} - \frac{3}{6} = \frac{5}{6}
 
 **Pas 2: Resolem l'interior del claudàtor:**
 $$1 + \frac{5}{6} = \frac{6}{6} + \frac{5}{6} = \frac{11}{6}$$
 L'expressió queda:
-$$2 - \frac{3}{5} \cdot \frac{11}{6}$$
+$$2 - \frac{3}{5} \cdot \frac{11}{6}
 
 **Pas 3: Fem la multiplicació abans de la resta:**
-$$\frac{3}{5} \cdot \frac{11}{6} = \frac{33}{30} = \frac{11}{10}$$
+$$\frac{3}{5} \cdot \frac{11}{6} = \frac{33}{30} = \frac{11}{10}
 
 **Pas 4: Fem la resta final:**
-$$2 - \frac{11}{10} = \frac{20}{10} - \frac{11}{10} = \mathbf{\frac{9}{10}}$$
+$$2 - \frac{11}{10} = \frac{20}{10} - \frac{11}{10} = \mathbf{\frac{9}{10}}
 
 ---
 
 ### ⚠️ Errors Habituals a Evitar
 
 1. **Sumar abans de multiplicar:** En $\frac{1}{2} + \frac{3}{4} \cdot \frac{2}{5}$, **MAI** sumes $\frac{1}{2} + \frac{3}{4}$ primer; la multiplicació té prioritat absoluta!
-2. **Oblidar buscar comú denominador en sumes:** En $\frac{2}{3} + \frac{1}{4}$, no es pot sumar $2+1$ i $3+4$. Només es pot sumar quan tenen el mateix denominador.
+2. **Oblidar buscar comú denominador en sumes:** En $\frac{2}{3} + \frac{1}{4}$, no es pot sumar $2+1i3+4$. Només es pot sumar quan tenen el mateix denominador.
 3. **No simplificar les fraccions intermèdies o el resultat final.**
 
 ---

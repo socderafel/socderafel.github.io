@@ -57,22 +57,22 @@ Com que totes aquestes partícules estan en moviment, cadascuna d'elles posseeix
 
 ---
 
-## 2. Què és exactament la Temperatura ($T$)?
+## 2. Què és exactament la Temperatura (T)?
 
 Si l'energia tèrmica és la suma de totes les partícules, com mesurem l'estat d'agitació d'un cos sense que importe si és gran o menut? Ací entra el concepte de **temperatura**:
 
-* **Definició física de Temperatura:** La **temperatura ($T$)** és una magnitud física que mesura el **grau d'agitació tèrmica** o l'**energia cinètica mitjana** (la velocitat mitjana de vibració o moviment) de les partícules d'un cos.
-* **És independent de la grandària del cos (magnitud intensiva):** Si tenim una olla amb $5\text{ litres}$ d'aigua bullint a $100^\circ\text{C}$ i traiem amb un cullerot una tassa de $200\text{ mL}$ d'eixa mateixa aigua, la tassa també està exactament a $100^\circ\text{C}$. Per què? Perquè la velocitat mitjana a la qual es mouen les molècules d'aigua a la tassa i a l'olla és idèntica (tot i que l'olla sencera tinga més energia tèrmica total perquè té més massa).
+* **Definició física de Temperatura:** La **temperatura (T)** és una magnitud física que mesura el **grau d'agitació tèrmica** o l'**energia cinètica mitjana** (la velocitat mitjana de vibració o moviment) de les partícules d'un cos.
+* **És independent de la grandària del cos (magnitud intensiva):** Si tenim una olla amb 5 litres d'aigua bullint a 100 °C i traiem amb un cullerot una tassa de 200 mL d'eixa mateixa aigua, la tassa també està exactament a 100 °C. Per què? Perquè la velocitat mitjana a la qual es mouen les molècules d'aigua a la tassa i a l'olla és idèntica (tot i que l'olla sencera tinga més energia tèrmica total perquè té més massa).
   * **Cos fred (baixa temperatura):** Les seues partícules es mouen o vibren **lentament** (poca agitació).
   * **Cos calent (alta temperatura):** Les seues partícules es mouen o vibren **molt de pressa** i amb gran violència (molta agitació).
 
 ---
 
-## 3. Què és la Calor ($Q$) i per què no "tenim calor"?
+## 3. Què és la Calor (Q) i per què no "tenim calor"?
 
 En física, la **calor** no és una cosa que els cossos tinguen guardada a dins com si fóra un líquid, sinó un procés de transferència d'energia:
 
-* **Definició física de Calor:** La **calor ($Q$)** és l'**energia tèrmica en trànsit** que flueix espontàniament des d'un cos que està a **major temperatura** cap a un altre cos que està a **menor temperatura** quan es posen en contacte (o interactuen tèrmicament).
+* **Definició física de Calor:** La **calor (Q)** és l'**energia tèrmica en trànsit** que flueix espontàniament des d'un cos que està a **major temperatura** cap a un altre cos que està a **menor temperatura** quan es posen en contacte (o interactuen tèrmicament).
 
 ```mermaid
 flowchart LR
@@ -96,9 +96,9 @@ T_eq = 50 °C"]
 > [!WARNING]
 > ### ❌ Desmuntant mites del llenguatge quotidià amb la Física
 > 1. **Per què és incorrecte dir *"Tinc calor"* o *"Aquest ferro té molta calor"*?**
->    Els cossos **no tenen calor**: els cossos tenen **energia tèrmica** i estan a una determinada **temperatura**. La calor només existeix mentre l'energia està viatjant d'un cos calent a un de fred. El que sentim a l'estiu és una temperatura ambiental alta que dificulta que el nostre cos (a $36{,}5^\circ\text{C}$) cedisca calor a l'exterior.
+>    Els cossos **no tenen calor**: els cossos tenen **energia tèrmica** i estan a una determinada **temperatura**. La calor només existeix mentre l'energia està viatjant d'un cos calent a un de fred. El que sentim a l'estiu és una temperatura ambiental alta que dificulta que el nostre cos (a 36,5 °C) cedisca calor a l'exterior.
 > 2. **Per què és incorrecte dir *"Aquest abric o aquesta manta dóna calor"*?**
->    Un abric de llana no té cap motor ni resistència elèctrica; si emboliques un bloc de gel amb un abric, el gel no es fondrà, sinó que tardarà més a fondre's! La font de calor és **el teu propi cos** (que crema nutrients a les cèl·lules i es manté a $36{,}5^\circ\text{C}$). L'abric és simplement un **aïllant tèrmic** que reté una capa d'aire immòbil i **impedeix que la calor que produeix el teu cos s'escape** cap a l'aire fred del carrer.
+>    Un abric de llana no té cap motor ni resistència elèctrica; si emboliques un bloc de gel amb un abric, el gel no es fondrà, sinó que tardarà més a fondre's! La font de calor és **el teu propi cos** (que crema nutrients a les cèl·lules i es manté a 36,5 °C). L'abric és simplement un **aïllant tèrmic** que reté una capa d'aire immòbil i **impedeix que la calor que produeix el teu cos s'escape** cap a l'aire fred del carrer.
 > 3. **I el "fred", existeix en física?**
 >    No! El "fred" no és cap forma d'energia que entre per la finestra. Quan obris la nevera o una finestra a l'hivern, no "entra fred", sinó que **ix calor** des de l'habitació o des de la teua pell (que estan a major temperatura) cap a l'aire exterior (que està a menor temperatura). El fred és simplement la **pèrdua de calor** o la baixa agitació de les partícules.
 
@@ -106,61 +106,61 @@ T_eq = 50 °C"]
 
 ## 4. El Concepte d'Equilibri Tèrmic
 
-Què ocorre a escala microscòpica quan tirem un ou dur acabat de bullir ($90^\circ\text{C}$) dins d'un bol amb aigua fresca de l'aixeta ($15^\circ\text{C}$)?
+Què ocorre a escala microscòpica quan tirem un ou dur acabat de bullir (90 °C) dins d'un bol amb aigua fresca de l'aixeta (15 °C)?
 1. Les partícules de l'ou calent vibren a gran velocitat i xoquen contra les molècules d'aigua freda que l'envolten, que es mouen molt més a poc a poc.
 2. En cada xoc, les partícules ràpides de l'ou **cedeixen part de la seua energia cinètica** a les molècules lentes de l'aigua: l'ou es va refredant (la seua temperatura baixa) i l'aigua es va escalfant (la seua temperatura puja).
-3. Aquest trànsit d'energia (la **calor**) continua fins que les partícules dels dos cossos arriben exactament a la **mateixa velocitat mitjana d'agitació**, és a dir, assoleixen una **temperatura final comuna ($T_{\text{final}}$ o $T_{\text{eq}}$)** intermèdia (per exemple, $28^\circ\text{C}$).
+3. Aquest trànsit d'energia (la **calor**) continua fins que les partícules dels dos cossos arriben exactament a la **mateixa velocitat mitjana d'agitació**, és a dir, assoleixen una **temperatura final comuna ($T_{\text{final}}oT_{\text{eq}}$)** intermèdia (per exemple, 28 °C).
 4. En eixe instant s'ha assolit l'**equilibri tèrmic**: com que $T_{\text{ou}} = T_{\text{aigua}}$, **s'atura per complet el flux net de calor** entre ells.
 
 ---
 
 ## 5. Taula Comparativa: Temperatura vs. Calor
 
-| Característica | 🌡️ Temperatura ($T$) | 🔥 Calor ($Q$) |
+| Característica | 🌡️ Temperatura (T) | 🔥 Calor (Q) |
 | :--- | :--- | :--- |
-| **Què és físicament?** | La mesura de l'energia cinètica **mitjana** (velocitat de vibració) de les partícules d'un cos. | L'**energia tèrmica en trànsit** que passa d'un cos a major $T$ cap a un altre a menor $T$. |
+| **Què és físicament?** | La mesura de l'energia cinètica **mitjana** (velocitat de vibració) de les partícules d'un cos. | L'**energia tèrmica en trànsit** que passa d'un cos a major T cap a un altre a menor T. |
 | **És una propietat que té el cos?** | **Sí**, tot cos es troba sempre a una temperatura determinada en cada instant. | **No**, els cossos no tenen calor; la calor només apareix mentre es transfereix energia. |
-| **Depén de la massa o grandària?** | **No** (magnitud intensiva): una gota i una piscina de la mateixa aigua tenen la mateixa $T$. | **Sí** (magnitud extensiva): escalfar $100\text{ L}$ d'aigua requereix molta més calor que escalfar $1\text{ L}$. |
+| **Depén de la massa o grandària?** | **No** (magnitud intensiva): una gota i una piscina de la mateixa aigua tenen la mateixa T. | **Sí** (magnitud extensiva): escalfar 100 L d'aigua requereix molta més calor que escalfar 1 L. |
 | **Aparell de mesura** | El **termòmetre**. | El **calorímetre**. |
-| **Unitat del Sistema Internacional (SI)** | El **Kelvin ($\text{K}$)** (i habitualment el grau Celsius, $^\circ\text{C}$). | El **Joule ($\text{J}$)** (i tradicionalment la caloria, $\text{cal}$). |
+| **Unitat del Sistema Internacional (SI)** | El **Kelvin (K)** (i habitualment el grau Celsius, $^\circ\text{C}$). | El **Joule (J)** (i tradicionalment la caloria, cal). |
 
 ---
 
-## 6. Unitats de Mesura de la Calor: El Joule ($\text{J}$) i la Caloria ($\text{cal}$)
+## 6. Unitats de Mesura de la Calor: El Joule (J) i la Caloria (cal)
 
-Com que la calor és una forma d'**energia** en trànsit, en el **Sistema Internacional d'Unitats (SI)** es mesura amb la mateixa unitat que totes les altres energies i que el treball mecànic: el **Joule ($\text{J}$)**, en honor al físic anglès James Prescott Joule. Per a quantitats grans s'utilitza el **kilojoule ($\text{kJ}$)**, on $1\text{ kJ} = 1\,000\text{ J}$.
+Com que la calor és una forma d'**energia** en trànsit, en el **Sistema Internacional d'Unitats (SI)** es mesura amb la mateixa unitat que totes les altres energies i que el treball mecànic: el **Joule (J)**, en honor al físic anglès James Prescott Joule. Per a quantitats grans s'utilitza el **kilojoule (kJ)**, on $1\text{ kJ} = 1\,000\text{ J}$.
 
-No obstant això, per raons històriques i en àmbits com la nutrició, la medicina i la climatització, es continua utilitzant moltíssim una unitat tradicional específica per a la calor: la **caloria ($\text{cal}$)**.
+No obstant això, per raons històriques i en àmbits com la nutrició, la medicina i la climatització, es continua utilitzant moltíssim una unitat tradicional específica per a la calor: la **caloria (cal)**.
 
-* **Què és una caloria ($1\text{ cal}$)?** És la quantitat de calor que cal subministrar a **$1\text{ gram}$ d'aigua líquida pura** per a fer que la seua temperatura augmente exactament **$1^\circ\text{C}$** (concretament de $14{,}5^\circ\text{C}$ a $15{,}5^\circ\text{C}$ a pressió atmosfèrica normal).
-* El seu múltiple de mil és la **kilocaloria ($\text{kcal}$)**: $1\text{ kcal} = 1\,000\text{ cal}$ (que en les etiquetes dels aliments s'anomena sovint "Caloria gran" amb majúscula).
+* **Què és una caloria (1 cal)?** És la quantitat de calor que cal subministrar a **1 gram d'aigua líquida pura** per a fer que la seua temperatura augmente exactament **1 °C** (concretament de 14,5 °C a 15,5 °C a pressió atmosfèrica normal).
+* El seu múltiple de mil és la **kilocaloria (kcal)**: $1\text{ kcal} = 1\,000\text{ cal}$ (que en les etiquetes dels aliments s'anomena sovint "Caloria gran" amb majúscula).
 
 ### Equivalència Matemàtica (Equivalent Mecànic de la Calor)
 James P. Joule va demostrar experimentalment que la calor i el treball mecànic són equivalents i va establir el factor de conversió exacte entre ambdues unitats:
 
-$$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = \frac{1}{4{,}18}\text{ cal} \approx 0{,}24\text{ cal}$$
+1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = \frac{1}{4{,}18}\text{ cal} \approx 0{,}24\text{ cal}
 
-* **Per a passar de calories ($\text{cal}$) a Joules ($\text{J}$):** **Multipliquem per $4{,}18$**.
-* **Per a passar de Joules ($\text{J}$) a calories ($\text{cal}$):** **Dividim entre $4{,}18$** (o multipliquem per $0{,}24$).
+* **Per a passar de calories (cal) a Joules (J):** **Multipliquem per $4{,}18$**.
+* **Per a passar de Joules (J) a calories (cal):** **Dividim entre $4{,}18$** (o multipliquem per $0{,}24$).
 
 > [!TIP]
 > ### 🧮 Exemples Resolts Pas a Pas de Conversió d'Unitats de Calor
-> **Exemple 1:** Un dissipador de CPU evacua $500\text{ cal}$ de calor en pocs segons. Quants Joules ($\text{J}$) d'energia tèrmica ha dissipat?
+> **Exemple 1:** Un dissipador de CPU evacua 500 cal de calor en pocs segons. Quants Joules (J) d'energia tèrmica ha dissipat?
 > * **Solució:** Multipliquem les calories per $4{,}18$:
 >   $$Q = 500\text{ cal} \cdot 4{,}18\text{ J/cal} = \mathbf{2\,090\text{ J}} \quad (2{,}09\text{ kJ})$$
 >
-> **Exemple 2:** Una resistència elèctrica d'una estufa allibera $8\,360\text{ J}$ de calor. A quantes calories ($\text{cal}$) i kilocalories ($\text{kcal}$) equival?
+> **Exemple 2:** Una resistència elèctrica d'una estufa allibera $8\,360\text{ J}$ de calor. A quantes calories (cal) i kilocalories (kcal) equival?
 > * **Solució:** Dividim els Joules entre $4{,}18$:
->   $$Q = \frac{8\,360\text{ J}}{4{,}18\text{ J/cal}} = \mathbf{2\,000\text{ cal}} = \mathbf{2\text{ kcal}}$$
+>   $$Q = \frac{8\,360\text{ J}}{4{,}18\text{ J/cal}} = \mathbf{2\,000\text{ cal}} = \mathbf{2\text{ kcal}}
 
 ---
 
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau (Sessió 5.1)
 > - L'**energia tèrmica** és la suma de l'energia cinètica de totes les partícules d'un cos (depén de la massa).
-> - La **temperatura ($T$)** mesura la velocitat mitjana d'agitació de les partícules (no depén de la massa).
-> - La **calor ($Q$)** és energia tèrmica en trànsit que viatja sempre del cos de major temperatura al de menor temperatura fins assolir l'**equilibri tèrmic** ($T_{\text{final}}$ comuna).
-> - Unitats de calor: **Joule ($\text{J}$)** en el SI i **caloria ($\text{cal}$)**, amb l'equivalència fonamental **$1\text{ cal} = 4{,}18\text{ J}$**.
+> - La **temperatura (T)** mesura la velocitat mitjana d'agitació de les partícules (no depén de la massa).
+> - La **calor (Q)** és energia tèrmica en trànsit que viatja sempre del cos de major temperatura al de menor temperatura fins assolir l'**equilibri tèrmic** ($T_{\text{final}}$ comuna).
+> - Unitats de calor: **Joule (J)** en el SI i **caloria (cal)**, amb l'equivalència fonamental **$1\text{ cal} = 4{,}18\text{ J}$**.
 
 ---
 
@@ -188,9 +188,9 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_1_mcq2" data-answer="C" data-hint="Com que 1 cal = 4,18 J, per passar 1.000 cal a Joules cal multiplicar 1.000 per 4,18.">
-  <p class="mcq-question"><strong>2. Si una reacció química allibera exactament $1\,000\text{ calories}$ ($1\text{ kcal}$) de calor, a quants Joules ($\text{J}$) del Sistema Internacional equival?</strong></p>
+  <p class="mcq-question"><strong>2. Si una reacció química allibera exactament $1\,000\text{ calories}$ (1 kcal) de calor, a quants Joules (J) del Sistema Internacional equival?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) $240\text{ J}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) 240 J</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) $1\,000\text{ J}$</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) $4\,180\text{ J}$</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) $41{,}8\text{ J}$</button>
@@ -199,9 +199,9 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_1_mcq3" data-answer="A" data-hint="La temperatura és una magnitud intensiva (velocitat mitjana), mentre que l'energia tèrmica total és extensiva (suma de totes les partícules).">
-  <p class="mcq-question"><strong>3. Comparem un got amb $200\text{ mL}$ d'aigua a $60^\circ\text{C}$ i una banyera amb $100\text{ L}$ d'aigua també a $60^\circ\text{C}$. Quina afirmació és física i científicament certa?</strong></p>
+  <p class="mcq-question"><strong>3. Comparem un got amb 200 mL d'aigua a 60 °C i una banyera amb 100 L d'aigua també a 60 °C. Quina afirmació és física i científicament certa?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Tots dos tenen exactament la mateixa temperatura ($60^\circ\text{C}$), però la banyera té molta més energia tèrmica total perquè conté moltes més molècules en moviment</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Tots dos tenen exactament la mateixa temperatura (60 °C), però la banyera té molta més energia tèrmica total perquè conté moltes més molècules en moviment</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) La banyera té molta més temperatura que el got perquè és més gran</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) El got té més energia tèrmica total que la banyera</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Si els posem en contacte, passarà calor del got a la banyera</button>
@@ -210,10 +210,10 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_1_mcq4" data-answer="D" data-hint="La calor sempre viatja del cos de major temperatura (la peça a 90 °C) cap al de menor temperatura (l'aigua a 20 °C) fins a igualar temperatures.">
-  <p class="mcq-question"><strong>4. Al taller submergim una peça d'acer acabada de mecanitzar que està a $90^\circ\text{C}$ dins d'un poal d'aigua a $20^\circ\text{C}$. Què passarà fins a assolir l'equilibri tèrmic?</strong></p>
+  <p class="mcq-question"><strong>4. Al taller submergim una peça d'acer acabada de mecanitzar que està a 90 °C dins d'un poal d'aigua a 20 °C. Què passarà fins a assolir l'equilibri tèrmic?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) L'aigua passarà fred a la peça d'acer fins que totes dues queden a $0^\circ\text{C}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) L'aigua cedirà calor a l'acer fins que l'acer arribe a $110^\circ\text{C}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) L'aigua passarà fred a la peça d'acer fins que totes dues queden a 0 °C</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) L'aigua cedirà calor a l'acer fins que l'acer arribe a 110 °C</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) No hi haurà cap transferència d'energia perquè l'acer és sòlid i l'aigua és líquida</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Fluirà calor des de la peça d'acer cap a l'aigua fins que tots dos cossos tinguen la mateixa temperatura intermèdia d'equilibri</button>
   </div>
@@ -225,7 +225,7 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 ### 2. Activitats de Vertader (V) o Fals (F)
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_1_vf1" data-answer="F" data-hint="FALS: La temperatura no depén de la grandària o massa del cos (és una magnitud intensiva), però l'energia tèrmica total de l'olla sí que és major perquè té més molècules.">
-  <span class="vf-statement"><strong>a) Si traiem un got d'aigua d'una olla on l'aigua bull a $100^\circ\text{C}$, l'aigua del got tindrà menys temperatura perquè té menys massa.</strong></span>
+  <span class="vf-statement"><strong>a) Si traiem un got d'aigua d'una olla on l'aigua bull a 100 °C, l'aigua del got tindrà menys temperatura perquè té menys massa.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -252,7 +252,7 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_1_vf4" data-answer="V" data-hint="VERTADER: Per definició, 1 caloria és la calor necessària per a apujar 1 °C la temperatura d'1 gram d'aigua pura.">
-  <span class="vf-statement"><strong>d) Una caloria ($1\text{ cal}$) es defineix com la quantitat de calor necessària per a elevar en $1^\circ\text{C}$ la temperatura d'$1\text{ gram}$ d'aigua líquida.</strong></span>
+  <span class="vf-statement"><strong>d) Una caloria (1 cal) es defineix com la quantitat de calor necessària per a elevar en 1 °C la temperatura d'1 gram d'aigua líquida.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -283,7 +283,7 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_1_q3" data-answer="836|836 j|836 joules" data-hint="Multiplica 200 cal per 4,18 J/cal (200 * 4,18 = 836).">
-  <div class="quiz-question">✍️ <strong>3. Càlcul:</strong> Si un xip electrònic dissipa $200\text{ cal}$ de calor, quants Joules ($\text{J}$) d'energia tèrmica ha alliberat? (Escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>3. Càlcul:</strong> Si un xip electrònic dissipa 200 cal de calor, quants Joules (J) d'energia tèrmica ha alliberat? (Escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en Joules...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -310,12 +310,12 @@ $$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = 
 </div>
 
 <div class="interactive-open-response" data-question-id="ca1_u5_1_open2">
-  <div class="open-question">✍️ <strong>2. Problemes de conversió entre Joules i calories:</strong> Resol pas a pas: a) Una beguda energètica aporta $150\text{ kcal}$ ($150\,000\text{ cal}$). Quants Joules ($\text{J}$) i kilojoules ($\text{kJ}$) representa aquesta energia? b) Una font d'alimentació de PC dissipa $12\,540\text{ J}$ de calor. A quantes calories ($\text{cal}$) i kilocalories ($\text{kcal}$) equival?</div>
+  <div class="open-question">✍️ <strong>2. Problemes de conversió entre Joules i calories:</strong> Resol pas a pas: a) Una beguda energètica aporta 150 kcal ($150\,000\text{ cal}$). Quants Joules (J) i kilojoules (kJ) representa aquesta energia? b) Una font d'alimentació de PC dissipa $12\,540\text{ J}$ de calor. A quantes calories (cal) i kilocalories (kcal) equival?</div>
   <textarea class="open-response-input" rows="4" placeholder="a) Multiplica les calories per 4,18... b) Divideix els Joules entre 4,18..."></textarea>
 </div>
 
 <div class="interactive-open-response" data-question-id="ca1_u5_1_open3">
-  <div class="open-question">✍️ <strong>3. La Teoria Cineticomolecular i l'equilibri tèrmic:</strong> Explica què ocorre a escala microscòpica amb el moviment i els xocs de les partícules quan barregem en un got llet molt calenta a $80^\circ\text{C}$ amb café fred a $15^\circ\text{C}$ fins que la mescla queda tèbia.</div>
+  <div class="open-question">✍️ <strong>3. La Teoria Cineticomolecular i l'equilibri tèrmic:</strong> Explica què ocorre a escala microscòpica amb el moviment i els xocs de les partícules quan barregem en un got llet molt calenta a 80 °C amb café fred a 15 °C fins que la mescla queda tèbia.</div>
   <textarea class="open-response-input" rows="4" placeholder="Descriu com estan les partícules de la llet a 80 °C, com estan les del café a 15 °C, què passa quan xoquen i quan s'atura el procés..."></textarea>
 </div>
 
@@ -355,15 +355,15 @@ La pell humana conté receptors nerviosos tèrmics (corpuscles de Krause per al 
 
 ### L'Experiment Clàssic dels Tres Recipients
 Imagina que col·loquem tres bols d'aigua sobre el banc del taller:
-1. **Bol Esquerre:** Aigua molt freda amb gel ($5^\circ\text{C}$).
-2. **Bol Dret:** Aigua calenta ($45^\circ\text{C}$).
-3. **Bol Central:** Aigua tèbia a temperatura ambient ($25^\circ\text{C}$).
+1. **Bol Esquerre:** Aigua molt freda amb gel (5 °C).
+2. **Bol Dret:** Aigua calenta (45 °C).
+3. **Bol Central:** Aigua tèbia a temperatura ambient (25 °C).
 
-Si fiques la **mà esquerra en l'aigua freda** i la **mà dreta en l'aigua calenta** durant un minut i, a continuació, fiques **totes dues mans alhora dins del bol central d'aigua tèbia ($25^\circ\text{C}$)**:
-* La teua **mà esquerra** (que venia de $5^\circ\text{C}$) absorbirà calor de l'aigua tèbia i el teu cervell et dirà: *"Aquesta aigua està molt calenta!"*
-* La teua **mà dreta** (que venia de $45^\circ\text{C}$) cedirà calor a la mateixa aigua tèbia i el teu cervell et dirà: *"Aquesta aigua està gelada!"*
+Si fiques la **mà esquerra en l'aigua freda** i la **mà dreta en l'aigua calenta** durant un minut i, a continuació, fiques **totes dues mans alhora dins del bol central d'aigua tèbia (25 °C)**:
+* La teua **mà esquerra** (que venia de 5 °C) absorbirà calor de l'aigua tèbia i el teu cervell et dirà: *"Aquesta aigua està molt calenta!"*
+* La teua **mà dreta** (que venia de 45 °C) cedirà calor a la mateixa aigua tèbia i el teu cervell et dirà: *"Aquesta aigua està gelada!"*
 
-Com que una mateixa aigua a $25^\circ\text{C}$ no pot estar calenta i freda alhora, queda demostrat que la **sensació tèrmica és subjectiva i enganyosa**. Per a obtindre una mesura **objectiva, fiable i reproduïble** necessitem un instrument científic: el **termòmetre**.
+Com que una mateixa aigua a 25 °C no pot estar calenta i freda alhora, queda demostrat que la **sensació tèrmica és subjectiva i enganyosa**. Per a obtindre una mesura **objectiva, fiable i reproduïble** necessitem un instrument científic: el **termòmetre**.
 
 ---
 
@@ -373,12 +373,12 @@ Un **termòmetre** és un instrument dissenyat per a mesurar la temperatura d'un
 
 ### A) Termòmetre de dilatació de líquid (Alcohol acolorit o Galinstan)
 Consisteix en un tub de vidre molt fi anomenat **tub capil·lar** amb un depòsit o bulb a l'extrem inferior ple d'un líquid. Quan el bulb es posa en contacte amb el cos que volem mesurar, arriba a l'**equilibri tèrmic** amb ell; el líquid s'escalfa, **es dilata** (augmenta de volum) i puja pel tub capil·lar fins a marcar la temperatura sobre una escala graduada.
-* **Termòmetres d'alcohol acolorit:** Contenen etanol tenyit de roig o blau; s'usen molt en meteorologia i laboratoris escolars perquè l'alcohol es congela a $-114^\circ\text{C}$.
+* **Termòmetres d'alcohol acolorit:** Contenen etanol tenyit de roig o blau; s'usen molt en meteorologia i laboratoris escolars perquè l'alcohol es congela a $-114 °C$.
 * **Termòmetres clínics de Galinstan:** Utilitzen un aliatge metàl·lic líquid no tòxic format per **gal·li, indi i estany** (*Galinstan*).
 
 > [!CAUTION]
-> ### ☣️ Per què es van prohibir els termòmetres de Mercuri ($\text{Hg}$)?
-> Durant segles els termòmetres clínics es fabricaven amb **mercuri ($\text{Hg}$)**, l'únic metall líquid a temperatura ambient. No obstant això, des de l'any **2009 la Unió Europea va prohibir la venda de termòmetres de mercuri** al públic. Per què? Quan un termòmetre de vidre es trencava a casa, el mercuri es dividia en boletes que s'evaporaven a temperatura ambient. Inhalar vapors de mercuri o abocar-lo al medi ambient provoca una intoxicació greu anomenada **hidrargirisme**, que danya de forma irreversible el **sistema nerviós central (cervell)**, els ronyons i el desenvolupament fetal, a més de bioacumular-se en els peixos que després mengem.
+> ### ☣️ Per què es van prohibir els termòmetres de Mercuri (Hg)?
+> Durant segles els termòmetres clínics es fabricaven amb **mercuri (Hg)**, l'únic metall líquid a temperatura ambient. No obstant això, des de l'any **2009 la Unió Europea va prohibir la venda de termòmetres de mercuri** al públic. Per què? Quan un termòmetre de vidre es trencava a casa, el mercuri es dividia en boletes que s'evaporaven a temperatura ambient. Inhalar vapors de mercuri o abocar-lo al medi ambient provoca una intoxicació greu anomenada **hidrargirisme**, que danya de forma irreversible el **sistema nerviós central (cervell)**, els ronyons i el desenvolupament fetal, a més de bioacumular-se en els peixos que després mengem.
 
 ### B) Termòmetre digital electrònic (Termistor o Termoparell)
 Són els més habituals hui a les farmàcies, llars, automòbils i plaques base d'ordinador. A la punta metàl·lica no porten cap líquid, sinó un xicotet sensor semiconductor anomenat **termistor** (com una resistència NTC).
@@ -389,13 +389,13 @@ Qualsevol cos que estiga a una temperatura superior al zero absolut emet contín
 * **Com funciona?** El termòmetre d'infrarojos (o la **càmera termogràfica**) incorpora una lent òptica que capta la radiació infraroja que emet l'objecte **a distància i sense tocar-lo**, calculant la temperatura en menys d'un segon.
 * **Aplicacions professionals:**
   * **Medicina:** Termòmetres frontals o timpànics (d'oïda), ideals per a mesurar la febre de xiquets o pacients sense risc de contagi.
-  * **Taller d'informàtica, electricitat i indústria:** Permet apuntar amb un punter làser a una placa base, una font d'alimentació, un quadre elèctric o l'interior d'un forn industrial a $1\,500^\circ\text{C}$ per a detectar components sobreescalfats sense perill de cremar-se ni d'electrocutar-se.
+  * **Taller d'informàtica, electricitat i indústria:** Permet apuntar amb un punter làser a una placa base, una font d'alimentació, un quadre elèctric o l'interior d'un forn industrial a $1\,500 °C$ per a detectar components sobreescalfats sense perill de cremar-se ni d'electrocutar-se.
 
 ---
 
 ## 3. Les Tres Escales Termomètriques
 
-Per a graduar un termòmetre cal triar dos punts de referència fixos (com la congelació i l'ebullició de l'aigua a nivell del mar, a $1\text{ atm}$ de pressió) i dividir l'interval en parts iguals. Al món s'utilitzen tres escales principals:
+Per a graduar un termòmetre cal triar dos punts de referència fixos (com la congelació i l'ebullició de l'aigua a nivell del mar, a 1 atm de pressió) i dividir l'interval en parts iguals. Al món s'utilitzen tres escales principals:
 
 ```mermaid
 flowchart LR
@@ -421,46 +421,46 @@ flowchart LR
 
 ### 1. Escala Celsius o Centígrada ($^\circ\text{C}$)
 Proposada en 1742 per l'astrònom suec **Anders Celsius**, és l'escala d'ús quotidià a Espanya i a la major part del món:
-* Assigna el valor **$0^\circ\text{C}$** a la temperatura de **congelació (o fusió) de l'aigua pura**.
-* Assigna el valor **$100^\circ\text{C}$** a la temperatura d'**ebullició de l'aigua pura** (a $1\text{ atm}$).
-* L'interval entre tots dos punts es divideix en **$100$ parts iguals** (per això s'anomena *centígrada*), on cada divisió és $1^\circ\text{C}$. Admet valors negatius per a temperatures sota zero (p. ex. $-18^\circ\text{C}$ en un congelador).
+* Assigna el valor **0 °C** a la temperatura de **congelació (o fusió) de l'aigua pura**.
+* Assigna el valor **100 °C** a la temperatura d'**ebullició de l'aigua pura** (a 1 atm).
+* L'interval entre tots dos punts es divideix en **$100$ parts iguals** (per això s'anomena *centígrada*), on cada divisió és 1 °C. Admet valors negatius per a temperatures sota zero (p. ex. $-18 °C$ en un congelador).
 
-### 2. Escala Kelvin o Absoluta ($\text{K}$) — Unitat del Sistema Internacional
+### 2. Escala Kelvin o Absoluta (K) — Unitat del Sistema Internacional
 Creada pel físic britànic William Thomson (**Lord Kelvin**) en 1848, és la **unitat oficial de temperatura en el Sistema Internacional (SI)** i la que s'utilitza en totes les fórmules científiques:
-* **Què és el Zero Absolut ($0\text{ K}$)?** És la temperatura més baixa que pot existir físicament a l'univers i equival a **$-273{,}15^\circ\text{C}$** (que arrodonim habitualment a **$-273^\circ\text{C}$**). A $0\text{ K}$, les partícules de la matèria perdrien tota la seua energia cinètica i **s'aturaria tota vibració atòmica**. Per tant, **en l'escala Kelvin no existeixen temperatures negatives**.
-* La mida d'$1\text{ K}$ és idèntica a la d'$1^\circ\text{C}$ (hi ha $100$ divisions entre la congelació de l'aigua a **$273\text{ K}$** i l'ebullició a **$373\text{ K}$**). Nota ortogràfica: els kelvins s'escriuen amb la lletra **$\text{K}$ sense el símbol de grau ($^\circ$)**.
+* **Què és el Zero Absolut (0 K)?** És la temperatura més baixa que pot existir físicament a l'univers i equival a **$-273{,}15 °C$** (que arrodonim habitualment a **$-273 °C$**). A 0 K, les partícules de la matèria perdrien tota la seua energia cinètica i **s'aturaria tota vibració atòmica**. Per tant, **en l'escala Kelvin no existeixen temperatures negatives**.
+* La mida d'1 K és idèntica a la d'1 °C (hi ha $100$ divisions entre la congelació de l'aigua a **273 K** i l'ebullició a **373 K**). Nota ortogràfica: els kelvins s'escriuen amb la lletra **K sense el símbol de grau ($^\circ$)**.
 * **Fórmules de conversió entre Celsius i Kelvin:**
-  $$T(\text{K}) = T(^\circ\text{C}) + 273 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = T(\text{K}) - 273$$
+$$T(\text{K}) = T(^\circ\text{C}) + 273 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = T(\text{K}) - 273
 
 ### 3. Escala Fahrenheit ($^\circ\text{F}$)
 Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estats Units** i en alguns països anglosaxons (i apareix sovint en programari, BIOS d'ordinadors i manuals tècnics americans):
-* En aquesta escala, l'aigua es congela a **$32^\circ\text{F}$** i bull a **$212^\circ\text{F}$** (l'interval està dividit en **$180$ parts**, de manera que cada $1^\circ\text{C}$ equival a $1{,}8^\circ\text{F}$).
+* En aquesta escala, l'aigua es congela a **$32^\circ\text{F}$** i bull a **$212^\circ\text{F}$** (l'interval està dividit en **$180$ parts**, de manera que cada 1 °C equival a $1{,}8^\circ\text{F}$).
 * **Fórmules de conversió entre Celsius i Fahrenheit:**
-  $$T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = \frac{T(^\circ\text{F}) - 32}{1{,}8}$$
+$$T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = \frac{T(^\circ\text{F}) - 32}{1{,}8}
 
 ---
 
 ## 4. Taula Comparativa i Exemples Resolts de Conversió
 
-| Fenomen o Punt de Referència | Escala Celsius ($^\circ\text{C}$) | Escala Kelvin ($\text{K}$) | Escala Fahrenheit ($^\circ\text{F}$) |
+| Fenomen o Punt de Referència | Escala Celsius ($^\circ\text{C}$) | Escala Kelvin (K) | Escala Fahrenheit ($^\circ\text{F}$) |
 | :--- | :---: | :---: | :---: |
-| **Zero absolut (aturada atòmica)** | $-273{,}15^\circ\text{C}$ | $0\text{ K}$ | $-459{,}67^\circ\text{F}$ |
-| **Punt de fusió del gel (congelació aigua)** | $0^\circ\text{C}$ | $273\text{ K}$ | $32^\circ\text{F}$ |
-| **Temperatura ambient confortable d'aula** | $20^\circ\text{C}$ | $293\text{ K}$ | $68^\circ\text{F}$ |
-| **Temperatura normal del cos humà sa** | $36{,}5^\circ\text{C} \text{ -- } 37^\circ\text{C}$ | $309{,}5\text{ K} \text{ -- } 310\text{ K}$ | $97{,}7^\circ\text{F} \text{ -- } 98{,}6^\circ\text{F}$ |
-| **Punt d'ebullició de l'aigua ($1\text{ atm}$)** | $100^\circ\text{C}$ | $373\text{ K}$ | $212^\circ\text{F}$ |
+| **Zero absolut (aturada atòmica)** | $-273{,}15 °C$ | 0 K | $-459{,}67^\circ\text{F}$ |
+| **Punt de fusió del gel (congelació aigua)** | 0 °C | 273 K | $32^\circ\text{F}$ |
+| **Temperatura ambient confortable d'aula** | 20 °C | 293 K | $68^\circ\text{F}$ |
+| **Temperatura normal del cos humà sa** | $36{,}5 °C \text{ -- } 37 °C$ | $309{,}5\text{ K} \text{ -- } 310\text{ K}$ | $97{,}7^\circ\text{F} \text{ -- } 98{,}6^\circ\text{F}$ |
+| **Punt d'ebullició de l'aigua (1 atm)** | 100 °C | 373 K | $212^\circ\text{F}$ |
 
 > [!TIP]
 > ### 🧮 Exemples Resolts Pas a Pas (Conversions Termomètriques)
-> **Problema 1:** A la BIOS d'un ordinador portàtil veiem que el processador treballa a $60^\circ\text{C}$. Expressa aquesta temperatura en **Kelvin ($\text{K}$)** i en **graus Fahrenheit ($^\circ\text{F}$)**.
-> * **a) Pas a Kelvin ($\text{K}$):** Sumem $273$ a la temperatura en Celsius:
+> **Problema 1:** A la BIOS d'un ordinador portàtil veiem que el processador treballa a 60 °C. Expressa aquesta temperatura en **Kelvin (K)** i en **graus Fahrenheit ($^\circ\text{F}$)**.
+> * **a) Pas a Kelvin (K):** Sumem $273$ a la temperatura en Celsius:
 >   $$T(\text{K}) = 60 + 273 = \mathbf{333\text{ K}}$$
 > * **b) Pas a Fahrenheit ($^\circ\text{F}$):** Multipliquem per $1{,}8$ i al resultat li sumem $32$:
 >   $$T(^\circ\text{F}) = 1{,}8 \cdot 60 + 32 = 108 + 32 = \mathbf{140^\circ\text{F}}$$
 >
 > **Problema 2:** Un manual tècnic nord-americà indica que una bateria de liti no ha de superar els $113^\circ\text{F}$. A quants **graus Celsius ($^\circ\text{C}$)** equival aquest límit?
 > * **Solució:** Primer restem $32$ i després dividim el resultat entre $1{,}8$:
->   $$T(^\circ\text{C}) = \frac{113 - 32}{1{,}8} = \frac{81}{1{,}8} = \mathbf{45^\circ\text{C}}$$
+>   $$T(^\circ\text{C}) = \frac{113 - 32}{1{,}8} = \frac{81}{1{,}8} = \mathbf{45 °C}
 
 ---
 
@@ -468,7 +468,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 > ### 💡 Resum de Conceptes Clau (Sessió 5.2)
 > - El **tacte és subjectiu** i ens enganya; per a mesurar la temperatura amb precisió usem el **termòmetre**.
 > - Tipus de termòmetres: de **dilatació líquida** (alcohol o galinstan, que substitueixen el **mercuri** tòxic), **digitals** (termistor) i **piròmetres d'infrarojos** (sense contacte).
-> - Les tres escales són **Celsius ($^\circ\text{C}$)**, **Kelvin ($\text{K}$, unitat SI)** amb $T(\text{K}) = T(^\circ\text{C}) + 273$, i **Fahrenheit ($^\circ\text{F}$)** amb $T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32$.
+> - Les tres escales són **Celsius ($^\circ\text{C}$)**, **Kelvin (K, unitat SI)** amb $T(\text{K}) = T(^\circ\text{C}) + 273$, i **Fahrenheit ($^\circ\text{F}$)** amb $T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32$.
 
 ---
 
@@ -485,12 +485,12 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 ### 1. Qüestionari d'Autoavaluació Tipus Test (MCQ)
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_2_mcq1" data-answer="C" data-hint="Aplica la fórmula T(K) = T(°C) + 273. Suma 25 + 273.">
-  <p class="mcq-question"><strong>1. Si el termòmetre del taller d'informàtica marca una temperatura ambient de $25^\circ\text{C}$, quin és el seu valor en l'escala Kelvin ($\text{K}$) del Sistema Internacional?</strong></p>
+  <p class="mcq-question"><strong>1. Si el termòmetre del taller d'informàtica marca una temperatura ambient de 25 °C, quin és el seu valor en l'escala Kelvin (K) del Sistema Internacional?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) $125\text{ K}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) 125 K</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) $-248\text{ K}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) $298\text{ K}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) $77\text{ K}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) 298 K</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) 77 K</button>
   </div>
   <div class="quiz-feedback"></div>
 </div>
@@ -507,7 +507,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_2_mcq3" data-answer="B" data-hint="Aplica la fórmula T(°F) = 1,8 · T(°C) + 32 -> 1,8 · 100 + 32 = 180 + 32 = 212 °F.">
-  <p class="mcq-question"><strong>3. Quina temperatura marca un termòmetre graduat en l'escala anglosaxona Fahrenheit ($^\circ\text{F}$) quan es submergeix en aigua bullint a $100^\circ\text{C}$ (a nivell del mar)?</strong></p>
+  <p class="mcq-question"><strong>3. Quina temperatura marca un termòmetre graduat en l'escala anglosaxona Fahrenheit ($^\circ\text{F}$) quan es submergeix en aigua bullint a 100 °C (a nivell del mar)?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) $100^\circ\text{F}$</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) $212^\circ\text{F}$</button>
@@ -533,7 +533,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 ### 2. Activitats de Vertader (V) o Fals (F)
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_2_vf1" data-answer="V" data-hint="VERTADER: A 0 K (-273,15 °C) les partícules de la matèria s'aturarien per complet, per la qual cosa és impossible baixar d'eixa temperatura.">
-  <span class="vf-statement"><strong>a) El zero absolut ($0\text{ K}$, que equival a $-273{,}15^\circ\text{C}$) és el límit inferior de temperatura de l'univers on s'atura tota vibració atòmica.</strong></span>
+  <span class="vf-statement"><strong>a) El zero absolut (0 K, que equival a $-273{,}15 °C$) és el límit inferior de temperatura de l'univers on s'atura tota vibració atòmica.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -560,7 +560,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_2_vf4" data-answer="F" data-hint="FALS: En l'escala absoluta Kelvin MAI poden existir valors negatius, perquè el seu origen 0 K és la temperatura més baixa possible a l'univers.">
-  <span class="vf-statement"><strong>d) En l'escala Kelvin ($\text{K}$) és molt habitual mesurar temperatures negatives com $-50\text{ K}$ durant l'hivern polar.</strong></span>
+  <span class="vf-statement"><strong>d) En l'escala Kelvin (K) és molt habitual mesurar temperatures negatives com $-50\text{ K}$ durant l'hivern polar.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -591,7 +591,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_2_q3" data-answer="353|353 k|353 kelvin" data-hint="Suma 80 + 273 = 353 K.">
-  <div class="quiz-question">✍️ <strong>3. Càlcul:</strong> La targeta gràfica d'un PC arriba a $80^\circ\text{C}$ jugant. Quina és la seua temperatura en Kelvin ($\text{K}$)? (Escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>3. Càlcul:</strong> La targeta gràfica d'un PC arriba a 80 °C jugant. Quina és la seua temperatura en Kelvin (K)? (Escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en K...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -600,7 +600,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_2_q4" data-answer="68|68 f|68 °f" data-hint="Multiplica 1,8 · 20 = 36, i suma 36 + 32 = 68 °F.">
-  <div class="quiz-question">✍️ <strong>4. Càlcul:</strong> L'aula taller està a $20^\circ\text{C}$. A quants graus Fahrenheit ($^\circ\text{F}$) equival aquesta temperatura? (Escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>4. Càlcul:</strong> L'aula taller està a 20 °C. A quants graus Fahrenheit ($^\circ\text{F}$) equival aquesta temperatura? (Escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en °F...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -613,7 +613,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 ### 4. Exercicis de Raonament i Desenvolupament Escrit (Tasca d'Aula)
 
 <div class="interactive-open-response" data-question-id="ca1_u5_2_open1">
-  <div class="open-question">✍️ <strong>1. Càlcul i raonament termomètric clínic:</strong> Un turista nord-americà arriba a urgències i diu que el seu fill té una temperatura corporal de $104^\circ\text{F}$. Calcula pas a pas a quants graus Celsius ($^\circ\text{C}$) i a quants Kelvin ($\text{K}$) equival aquesta temperatura, i indica raonadament si el xiquet té febre alta o no.</div>
+  <div class="open-question">✍️ <strong>1. Càlcul i raonament termomètric clínic:</strong> Un turista nord-americà arriba a urgències i diu que el seu fill té una temperatura corporal de $104^\circ\text{F}$. Calcula pas a pas a quants graus Celsius ($^\circ\text{C}$) i a quants Kelvin (K) equival aquesta temperatura, i indica raonadament si el xiquet té febre alta o no.</div>
   <textarea class="open-response-input" rows="4" placeholder="Aplica primer T(°C) = (T(°F) - 32) / 1,8 i després passa el resultat a Kelvin sumant 273..."></textarea>
 </div>
 
@@ -623,7 +623,7 @@ Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estat
 </div>
 
 <div class="interactive-open-response" data-question-id="ca1_u5_2_open3">
-  <div class="open-question">✍️ <strong>3. Conversions al laboratori i al taller:</strong> Completa els càlculs següents indicant la fórmula utilitzada: a) Passa $300\text{ K}$ a $^\circ\text{C}$ i a $^\circ\text{F}$; b) Un congelador industrial està a $-18^\circ\text{C}$, expressa la seua temperatura en Kelvin ($\text{K}$).</div>
+  <div class="open-question">✍️ <strong>3. Conversions al laboratori i al taller:</strong> Completa els càlculs següents indicant la fórmula utilitzada: a) Passa 300 K a $^\circ\text{C}$ i a $^\circ\text{F}$; b) Un congelador industrial està a $-18 °C$, expressa la seua temperatura en Kelvin (K).</div>
   <textarea class="open-response-input" rows="4" placeholder="a) T(°C) = 300 - 273 = ... i després T(°F) = ... b) T(K) = -18 + 273 = ..."></textarea>
 </div>
 
@@ -724,13 +724,13 @@ Els líquids (com l'aigua) i els gasos (com l'aire) condueixen molt malament la 
 
 ## 3. La Radiació Tèrmica (Ones Electromagnètiques pel Buit)
 
-Entre el Sol i la Terra hi ha uns $150\text{ milions de quilòmetres}$ d'espai exterior on regna el **buit absolut**: no hi ha cap sòlid perquè la calor viatge per conducció, ni hi ha aire ni aigua perquè viatge per convecció. Com ens arriba aleshores la calor del Sol que manté viva la Terra, o com notem la calor d'una foguera a la cara des de tres metres de distància encara que l'aire calent de la flama se'n vaja cap amunt?
+Entre el Sol i la Terra hi ha uns 150 milions de quilòmetres d'espai exterior on regna el **buit absolut**: no hi ha cap sòlid perquè la calor viatge per conducció, ni hi ha aire ni aigua perquè viatge per convecció. Com ens arriba aleshores la calor del Sol que manté viva la Terra, o com notem la calor d'una foguera a la cara des de tres metres de distància encara que l'aire calent de la flama se'n vaja cap amunt?
 
 * **Què és la radiació tèrmica?** És la transmissió de calor mitjançant l'emissió d'**ones electromagnètiques** —principalment **radiació infraroja (IR)**, tot i que si el cos està molt calent, com el Sol o una barra de ferro roent, també emet llum visible—.
 * **Característiques úniques de la radiació:**
   * **No necessita cap medi material per a propagar-se:** És l'únic mecanisme de transmissió de la calor capaç de viatjar a través del **buit** (i també a través de medis transparents com l'aire o el vidre).
   * **Viatja a la velocitat de la llum:** Es propaga en línia recta a $300\,000\text{ km/s}$ en el buit.
-  * **Tots els cossos emeten radiació:** Qualsevol cos amb una temperatura superior al zero absolut ($0\text{ K}$) emet radiació infraroja contínuament (el nostre propi cos a $36{,}5^\circ\text{C}$ n'emet, i per això ens poden veure en la foscor total amb ulleres de visió tèrmica o càmeres termogràfiques!). Com més alta és la temperatura del cos, molta més energia radia.
+  * **Tots els cossos emeten radiació:** Qualsevol cos amb una temperatura superior al zero absolut (0 K) emet radiació infraroja contínuament (el nostre propi cos a 36,5 °C n'emet, i per això ens poden veure en la foscor total amb ulleres de visió tèrmica o càmeres termogràfiques!). Com més alta és la temperatura del cos, molta més energia radia.
 
 ### El paper del color de les superfícies davant la radiació
 Quan la radiació tèrmica xoca contra un objecte, pot ser **absorbida** (escalfant l'objecte) o **reflectida** (rebotant com en un espill):
@@ -838,7 +838,7 @@ Quan la radiació tèrmica xoca contra un objecte, pot ser **absorbida** (escalf
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_3_vf3" data-answer="V" data-hint="VERTADER: Qualsevol cos amb temperatura superior a 0 K (inclòs el cos humà a 36,5 °C) emet radiació infraroja que les càmeres termogràfiques poden detectar.">
-  <span class="vf-statement"><strong>c) Tots els cossos que estan a una temperatura superior al zero absolut ($0\text{ K}$) emeten radiació infraroja, fet que permet veure persones en la foscor amb càmeres termogràfiques.</strong></span>
+  <span class="vf-statement"><strong>c) Tots els cossos que estan a una temperatura superior al zero absolut (0 K) emeten radiació infraroja, fet que permet veure persones en la foscor amb càmeres termogràfiques.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -951,17 +951,17 @@ La propietat física que mesura la facilitat o rapidesa amb què un material dei
 * **Definició:** Els **conductors tèrmics** són aquells materials que tenen una **alta conductivitat tèrmica** i deixen passar la calor a través seu amb molta rapidesa i facilitat.
 * **Quins són els millors conductors?** Amb molta diferència, **tots els metalls i els seus aliatges**. Per què els metalls condueixen tan bé la calor (i també l'electricitat)? Perquè en l'enllaç metàl·lic els àtoms alliberen electrons que es mouen lliurement per tot el metall (**electrons lliures**), transportant l'energia cinètica d'un extrem a l'altre a gran velocitat.
 * **Rànquing dels metalls conductors més utilitzats:**
-  1. **Argent o plata ($\text{Ag}$):** El metall amb major conductivitat tèrmica, però massa car per a fer peces grans (s'usa en pastes tèrmiques d'alta gamma per a PC).
-  2. **Coure ($\text{Cu}$):** Excel·lent conductor tèrmic; s'utilitza en la base dels dissipadors de CPU, tubs de calor (*heat-pipes*), canonades de calefacció i bases de cassoles.
-  3. **Or ($\text{Au}$):** Molt bon conductor i inoxidable (contactes de microprocessadors).
-  4. **Alumini ($\text{Al}$):** Molt bon conductor, lleuger, fàcil de mecanitzar i més econòmic que el coure; és el rei de les aletes de dissipadors informàtics, radiadors i xassís de portàtils.
-  5. **Ferro ($\text{Fe}$) i Acer:** Bons conductors i molt resistents mecànicament (paelles, planxes, radiadors d'aigua i motors).
+  1. **Argent o plata (Ag):** El metall amb major conductivitat tèrmica, però massa car per a fer peces grans (s'usa en pastes tèrmiques d'alta gamma per a PC).
+  2. **Coure (Cu):** Excel·lent conductor tèrmic; s'utilitza en la base dels dissipadors de CPU, tubs de calor (*heat-pipes*), canonades de calefacció i bases de cassoles.
+  3. **Or (Au):** Molt bon conductor i inoxidable (contactes de microprocessadors).
+  4. **Alumini (Al):** Molt bon conductor, lleuger, fàcil de mecanitzar i més econòmic que el coure; és el rei de les aletes de dissipadors informàtics, radiadors i xassís de portàtils.
+  5. **Ferro (Fe) i Acer:** Bons conductors i molt resistents mecànicament (paelles, planxes, radiadors d'aigua i motors).
 
 > [!IMPORTANT]
 > ### 🥶 El Gran Enigma del Tacte: Per què el metall sembla més fred que la fusta?
 > Fes la prova ara mateix a l'aula: toca amb una mà la pota metàl·lica de la teua cadira (o la carcassa d'alumini d'un ordinador) i amb l'altra mà toca el tauler de fusta del pupitre. **El metall se sent molt més fred que la fusta!**
-> Tanmateix, si hi poses un termòmetre d'infrarojos, descobriràs una sorpresa: **tant el metall com la fusta estan exactament a la mateixa temperatura** (la temperatura ambient de l'aula, per exemple $20^\circ\text{C}$, perquè porten hores en equilibri tèrmic amb l'aire!).
-> * **Per què ens enganya la mà?** La teua pell està a uns $34\text{--}36^\circ\text{C}$. Quan toques el metall (que és un **excel·lent conductor tèrmic**), aquest **et roba calor dels dits a gran velocitat** i l'escampa per tota la barra metàl·lica; en perdre calor tan de pressa, els receptors de la pell envien al cervell un senyal intens de "fred". En canvi, quan toques la fusta (que és un **aïllant tèrmic**), la calor de la teua mà a penes pot entrar en la fusta; com que gairebé no perds calor, la sents tèbia!
+> Tanmateix, si hi poses un termòmetre d'infrarojos, descobriràs una sorpresa: **tant el metall com la fusta estan exactament a la mateixa temperatura** (la temperatura ambient de l'aula, per exemple 20 °C, perquè porten hores en equilibri tèrmic amb l'aire!).
+> * **Per què ens enganya la mà?** La teua pell està a uns $34\text{--}36 °C$. Quan toques el metall (que és un **excel·lent conductor tèrmic**), aquest **et roba calor dels dits a gran velocitat** i l'escampa per tota la barra metàl·lica; en perdre calor tan de pressa, els receptors de la pell envien al cervell un senyal intens de "fred". En canvi, quan toques la fusta (que és un **aïllant tèrmic**), la calor de la teua mà a penes pot entrar en la fusta; com que gairebé no perds calor, la sents tèbia!
 
 ---
 
@@ -975,7 +975,7 @@ La propietat física que mesura la facilitat o rapidesa amb què un material dei
   * **L'aïllant rei: L'aire immòbil (estancat) i el buit:** Els gasos com l'**aire**, quan estan tancats en cavitats xicotetes on **no poden moure's ni formar corrents de convecció**, tenen una conductivitat tèrmica extremadament baixa (quasi 10.000 vegades menor que la del coure!). I el **buit** és l'aïllant perfecte contra la conducció i la convecció perquè no té partícules.
 
 ### Per què el porexpan, el suro, la llana de roca i els anoracs de plomes aïllen tan bé?
-Si mires amb lupa un tros de **porexpan** (poliestirè expandit), de suro, de llana de roca o el farcit d'un **anorac d'hivern**, veuràs que són **materials porosos o fibrosos** que contenen en el seu interior fins a un $95\%$ d'**aire atrapat en milions de microcel·les o bombolles minúscules**. Com que l'aire està tancat i **immòbil**, no pot fer convecció i actua com una barrera formidable contra el pas de la calor!
+Si mires amb lupa un tros de **porexpan** (poliestirè expandit), de suro, de llana de roca o el farcit d'un **anorac d'hivern**, veuràs que són **materials porosos o fibrosos** que contenen en el seu interior fins a un 95% d'**aire atrapat en milions de microcel·les o bombolles minúscules**. Com que l'aire està tancat i **immòbil**, no pot fer convecció i actua com una barrera formidable contra el pas de la calor!
 
 ---
 
@@ -1015,9 +1015,9 @@ En el muntatge i manteniment d'ordinadors s'utilitza una enginyeria tèrmica de 
 
 | Material | Classificació Tèrmica | Conductivitat ($\text{W/(m}\cdot\text{K)}$) | Aplicació Tècnica o Quotidiana |
 | :--- | :---: | :---: | :--- |
-| **Argent ($\text{Ag}$) i Coure ($\text{Cu}$)** | **Conductor excel·lent** | $400 \text{ -- } 429$ | *Heat-pipes*, bases de dissipadors de CPU, cables i cassoles. |
-| **Alumini ($\text{Al}$)** | **Conductor molt bo** | $237$ | Aletes de dissipadors informàtics, xassís, radiadors i llaunes. |
-| **Ferro ($\text{Fe}$) i Acer** | **Conductor bo** | $50 \text{ -- } 80$ | Paelles, motors, planxes i estructures metàl·liques. |
+| **Argent (Ag) i Coure (Cu)** | **Conductor excel·lent** | $400 \text{ -- } 429$ | *Heat-pipes*, bases de dissipadors de CPU, cables i cassoles. |
+| **Alumini (Al)** | **Conductor molt bo** | $237$ | Aletes de dissipadors informàtics, xassís, radiadors i llaunes. |
+| **Ferro (Fe) i Acer** | **Conductor bo** | $50 \text{ -- } 80$ | Paelles, motors, planxes i estructures metàl·liques. |
 | **Vidre i Maó ceràmic** | **Aïllant moderat** | $0{,}8$ | Tancaments d'edificis, vasos i recipients de laboratori. |
 | **Fusta i Suro natural** | **Bon aïllant** | $0{,}04 \text{ -- } 0{,}15$ | Mànecs d'eines, estalvis de taula, revestiments tèrmics. |
 | **Llana de roca i Porexpan** | **Aïllant excel·lent** | $0{,}03 \text{ -- } 0{,}04$ | Aïllament de façanes, neveres portàtils i embalatges tèrmics. |
@@ -1045,10 +1045,10 @@ En el muntatge i manteniment d'ordinadors s'utilitza una enginyeria tèrmica de 
 ### 1. Qüestionari d'Autoavaluació Tipus Test (MCQ)
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_4_mcq1" data-answer="A" data-hint="Tots dos objectes estan a la mateixa temperatura de l'aula, però el metall condueix molt ràpid la calor de la teua mà.">
-  <p class="mcq-question"><strong>1. En una aula que es troba a $20^\circ\text{C}$, per què en tocar la pota de ferro del pupitre la sentim molt més freda que el tauler de fusta?</strong></p>
+  <p class="mcq-question"><strong>1. En una aula que es troba a 20 °C, per què en tocar la pota de ferro del pupitre la sentim molt més freda que el tauler de fusta?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Tots dos estan exactament a $20^\circ\text{C}$, però el ferro és un bon conductor tèrmic i roba calor de la nostra mà molt més de pressa que la fusta</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) Perquè el ferro sempre té una temperatura real $10^\circ\text{C}$ més baixa que l'aire que l'envolta</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Tots dos estan exactament a 20 °C, però el ferro és un bon conductor tèrmic i roba calor de la nostra mà molt més de pressa que la fusta</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) Perquè el ferro sempre té una temperatura real 10 °C més baixa que l'aire que l'envolta</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Perquè la fusta fabrica calor pròpia contínuament</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Perquè el ferro és un aïllant tèrmic i la fusta és un metall conductor</button>
   </div>
@@ -1070,7 +1070,7 @@ En el muntatge i manteniment d'ordinadors s'utilitza una enginyeria tèrmica de 
   <p class="mcq-question"><strong>3. Quins dos metalls s'utilitzen universalment per a fabricar els tubs de calor (*heat-pipes*) i les aletes dels dissipadors informàtics per la seua altíssima conductivitat tèrmica?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) El plom i el mercuri</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) El coure ($\text{Cu}$) i l'alumini ($\text{Al}$)</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) El coure (Cu) i l'alumini (Al)</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) El suro i la baquelita</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) El vidre i el poliestirè expandit</button>
   </div>
@@ -1249,13 +1249,13 @@ CONSTANT."]
 
 Si un cos absorbeix calor sense canviar d'estat, les seues partícules es mouen més de pressa i la seua **temperatura augmenta**; si cedeix calor a l'entorn, la seua **temperatura disminueix**.
 
-Però, **tots els materials s'escalfen igual de ràpid quan reben la mateixa quantitat de calor?** Pensa en un dia d'agost a les dues del migdia en una platja mediterrània. El Sol porta tot el matí enviant exactament la mateixa radiació sobre l'arena i sobre l'aigua del mar. Tanmateix, **l'arena crema tant que no pots caminar descalç (pot superar els $50^\circ\text{C}$), mentre que l'aigua del mar està fresqueta ($24^\circ\text{C}$)!** I a la mitjanit passa el contrari: l'arena s'ha quedat freda de seguida i l'aigua del mar continua tèbia. Per què ocorre això?
+Però, **tots els materials s'escalfen igual de ràpid quan reben la mateixa quantitat de calor?** Pensa en un dia d'agost a les dues del migdia en una platja mediterrània. El Sol porta tot el matí enviant exactament la mateixa radiació sobre l'arena i sobre l'aigua del mar. Tanmateix, **l'arena crema tant que no pots caminar descalç (pot superar els 50 °C), mentre que l'aigua del mar està fresqueta (24 °C)!** I a la mitjanit passa el contrari: l'arena s'ha quedat freda de seguida i l'aigua del mar continua tèbia. Per què ocorre això?
 
-* **La Calor Específica ($c_e$):** És la quantitat de calor que necessita absorbir **$1\text{ kg}$** (o $1\text{ g}$) d'una substància perquè la seua temperatura puge exactament **$1^\circ\text{C}$** (o $1\text{ K}$).
-  * **L'aigua líquida té una calor específica extraordinàriament alta** ($4\,180\text{ J/(kg}\cdot\text{K)}$ o $1\text{ cal/(g}\cdot^\circ\text{C)}$): necessita absorbir **moltíssima calor** per a pujar només $1^\circ\text{C}$, i quan es refreda, allibera moltíssima calor a poc a poc.
-  * **L'arena, les roques i sobretot els metalls (com el ferro o el coure) tenen una calor específica molt baixa** (de $5$ a $10$ vegades menor que l'aigua): amb molt poqueta calor la seua temperatura es dispara de seguida, i també es refreden immediatament.
+* **La Calor Específica ($c_e$):** És la quantitat de calor que necessita absorbir **1 kg** (o 1 g) d'una substància perquè la seua temperatura puge exactament **1 °C** (o 1 K).
+  * **L'aigua líquida té una calor específica extraordinàriament alta** ($4\,180\text{ J/(kg}\cdot\text{K)}o1\text{ cal/(g}\cdot^\circ\text{C)}$): necessita absorbir **moltíssima calor** per a pujar només 1 °C, i quan es refreda, allibera moltíssima calor a poc a poc.
+  * **L'arena, les roques i sobretot els metalls (com el ferro o el coure) tenen una calor específica molt baixa** (de $5a10$ vegades menor que l'aigua): amb molt poqueta calor la seua temperatura es dispara de seguida, i també es refreden immediatament.
 * **Importància pràctica de l'alta calor específica de l'aigua:**
-  * **Regulador climàtic:** El mar suavitza el clima de les zones costaneres (hiverns menys freds i estius menys extrems que a l'interior) i l'aigua del nostre cos ($70\%$) evita que la nostra temperatura corporal canvie bruscament.
+  * **Regulador climàtic:** El mar suavitza el clima de les zones costaneres (hiverns menys freds i estius menys extrems que a l'interior) i l'aigua del nostre cos (70%) evita que la nostra temperatura corporal canvie bruscament.
   * **Líquid refrigerant ideal:** Per això utilitzem aigua (amb additius anticongelants) en els radiadors dels cotxes, en la calefacció domèstica i en els sistemes de **refrigeració líquida (*watercooling*)** d'ordinadors d'alt rendiment.
 
 ---
@@ -1268,10 +1268,10 @@ Quan subministrem o retirem prou calor a una substància, podem fer que canvie d
 
 > [!IMPORTANT]
 > ### 🧊 Regla Fonamental de la Física: Durant un canvi d'estat, la temperatura NO canvia!
-> Si poses un got amb glaçons de gel a $-10^\circ\text{C}$ a escalfar i mesures la temperatura amb un termòmetre cada minut:
-> 1. Primer la temperatura del gel puja des de $-10^\circ\text{C}$ fins a arribar a **$0^\circ\text{C}$** (punt de fusió).
-> 2. En el moment en què comença a fondre's el primer glaçó, **el termòmetre es queda clavat a $0^\circ\text{C}$ durant tota l'estona que dura la fusió**, encara que el foc estiga encés al màxim! Fins que no s'ha fos l'últim trosset de gel, la temperatura de l'aigua no puja ni una dècima de grau.
-> 3. Després, l'aigua líquida puja de $0^\circ\text{C}$ fins a **$100^\circ\text{C}$** (punt d'ebullició), i **mentre bull es torna a quedar clavada a $100^\circ\text{C}$**.
+> Si poses un got amb glaçons de gel a $-10 °C$ a escalfar i mesures la temperatura amb un termòmetre cada minut:
+> 1. Primer la temperatura del gel puja des de $-10 °C$ fins a arribar a **0 °C** (punt de fusió).
+> 2. En el moment en què comença a fondre's el primer glaçó, **el termòmetre es queda clavat a 0 °C durant tota l'estona que dura la fusió**, encara que el foc estiga encés al màxim! Fins que no s'ha fos l'últim trosset de gel, la temperatura de l'aigua no puja ni una dècima de grau.
+> 3. Després, l'aigua líquida puja de 0 °C fins a **100 °C** (punt d'ebullició), i **mentre bull es torna a quedar clavada a 100 °C**.
 > * **Per què es manté constant la temperatura durant el canvi d'estat?** Perquè tota la calor que rep la substància (anomenada **calor latent**) s'inverteix íntegrament a **trencar les forces d'unió entre les partícules** per a canviar d'estat, en lloc d'augmentar la seua velocitat de vibració!
 
 ---
@@ -1281,7 +1281,7 @@ Quan subministrem o retirem prou calor a una substància, podem fer que canvie d
 Què passa amb la mida d'un cos quan l'escalfem o el refredem?
 * **La Dilatació tèrmica:** És l'**augment de longitud, superfície o volum** que experimenta un cos quan **augmenta la seua temperatura**.
   * *Explicació microscòpica:* En escalfar el cos, les seues partícules no es fan més grans ni n'apareixen de noves (la **massa es conserva constant**), però com que **vibren amb molta més força i amplitud**, xoquen i necessiten més espai al seu voltant, **separant-se més unes de les altres**. Com a conseqüència, el cos sencer s'expandeix.
-* **La Contracció tèrmica:** És el fenomen invers: quan un cos **es refreda**, les seues partícules vibren més a poc a poc, s'acosten entre elles i el volum del cos **disminueix** (s'encongeix). *(Nota: L'única excepció famosa és la dilatació anòmala de l'aigua quan es congela a $0^\circ\text{C}$: en formar l'estructura cristal·lina hexagonal del gel, s'expandeix un $9\%$, i per això una botella plena d'aigua rebenta si la deixes al congelador!).*
+* **La Contracció tèrmica:** És el fenomen invers: quan un cos **es refreda**, les seues partícules vibren més a poc a poc, s'acosten entre elles i el volum del cos **disminueix** (s'encongeix). *(Nota: L'única excepció famosa és la dilatació anòmala de l'aigua quan es congela a 0 °C: en formar l'estructura cristal·lina hexagonal del gel, s'expandeix un 9%, i per això una botella plena d'aigua rebenta si la deixes al congelador!).*
 
 ### Comparació de la dilatació en Sòlids, Líquids i Gasos
 1. **En els sòlids:** Com que les forces d'atracció entre partícules són molt intenses, es dilaten **poc** (pocs mil·límetres per cada metre de barra), però amb una força imparable capaç de rebentar parets o doblar ponts. Pot ser dilatació **lineal** (en cables, bigues i rails), **superficial** (en xapes i rajoles) o **cúbica** (en peces tridimensionals).
@@ -1295,7 +1295,7 @@ Què passa amb la mida d'un cos quan l'escalfem o el refredem?
 ### A) Les Juntes de Dilatació en Ponts, Edificis, Voreres i Vies de Tren
 Si t'has fixat mai en creuar un pont o viaducte d'autopista, hauràs vist unes **estructures metàl·liques amb dents en forma de pinta** que separen un tram del pont del següent. També hauràs vist espais entre les rajoles de les voreres, ranures reblertes de massilla elàstica a les façanes dels edificis i xicotetes separacions entre els trams dels **rails d'acer del tren** (que produeixen el clàssic so *"trac-trac"* en passar les rodes).
 * **Què són i per a què serveixen les juntes de dilatació?** Són espais o folgances calculades pels enginyers perquè els materials de construcció (acer, ferro, formigó, ceràmica) **tinguen espai lliure on estirar-se quan es dilaten a l'estiu** amb la calor del Sol i encongir-se a l'hivern.
-* **Què passaria si NO es deixaren juntes de dilatació?** Un rail d'acer de $100\text{ m}$ o un pont de formigó que passa de $0^\circ\text{C}$ a l'hivern a $45^\circ\text{C}$ al sol d'agost s'allarga diversos centímetres. Si els extrems estigueren soldats sense cap espai, l'empenta descomunal de la dilatació faria que **els rails del tren es torceren i s'ondularen com una serp (*pandeig*), provocant el descarrilament del tren**, que les rajoles del sòl saltaren pels aires o que els pilars del pont s'esquerdaren!
+* **Què passaria si NO es deixaren juntes de dilatació?** Un rail d'acer de 100 m o un pont de formigó que passa de 0 °C a l'hivern a 45 °C al sol d'agost s'allarga diversos centímetres. Si els extrems estigueren soldats sense cap espai, l'empenta descomunal de la dilatació faria que **els rails del tren es torceren i s'ondularen com una serp (*pandeig*), provocant el descarrilament del tren**, que les rajoles del sòl saltaren pels aires o que els pilars del pont s'esquerdaren!
 * **I en les línies elèctriques d'alta tensió?** Els instal·ladors mai deixen els cables metàl·lics totalment tibants a l'estiu: a l'estiu els cables estan dilatats i pengen amb més panxa (sageta), perquè si els instal·laren tibants al juliol, quan arribara el fred de gener es **contraurien** tant que es trencarien o tombarien les torres elèctriques!
 
 ### B) Com obrir un pot de vidre amb la tapa metàl·lica encallada (i muntatge d'eixos al taller)
@@ -1315,7 +1315,7 @@ Una **làmina bimetàl·lica** està formada per dues tires de **dos metalls dif
 > ### 💡 Resum de Conceptes Clau (Sessió 5.5)
 > - Els 3 efectes de la calor són: **variació de temperatura**, **canvis d'estat** i **dilatació/contracció**.
 > - L'**aigua** té una **calor específica** molt elevada ($4\,180\text{ J/(kg}\cdot\text{K)}$): tarda molt a escalfar-se i a refredar-se en comparació amb l'arena o els metalls.
-> - **Mentre dura un canvi d'estat** d'una substància pura (p. ex. fusió del gel a $0^\circ\text{C}$), **la temperatura es manté constant**.
+> - **Mentre dura un canvi d'estat** d'una substància pura (p. ex. fusió del gel a 0 °C), **la temperatura es manté constant**.
 > - En escalfar un cos, les partícules es separen i el volum augmenta (**dilatació**); per això calen **juntes de dilatació** en ponts i rails, i s'usen **làmines bimetàl·liques** en termòstats i interruptors magnetotèrmics.
 
 ---
@@ -1333,12 +1333,12 @@ Una **làmina bimetàl·lica** està formada per dues tires de **dos metalls dif
 ### 1. Qüestionari d'Autoavaluació Tipus Test (MCQ)
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_5_mcq1" data-answer="B" data-hint="Recorda que durant qualsevol canvi d'estat tota la calor s'inverteix a trencar els enllaços entre partícules.">
-  <p class="mcq-question"><strong>1. Què ocorre amb la temperatura d'un bloc de gel pur que es troba a $0^\circ\text{C}$ mentre s'està fonent dins d'un got al qual continuem donant calor?</strong></p>
+  <p class="mcq-question"><strong>1. Què ocorre amb la temperatura d'un bloc de gel pur que es troba a 0 °C mentre s'està fonent dins d'un got al qual continuem donant calor?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) La temperatura puja ràpidament fins a $50^\circ\text{C}$ mentre encara queden glaçons</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) La temperatura es manté totalment constant a $0^\circ\text{C}$ fins que s'acaba de fondre tot el gel, perquè la calor s'inverteix a trencar les unions entre molècules</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) La temperatura baixa fins a $-20^\circ\text{C}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) El gel passa directament a $100^\circ\text{C}$ sense passar per l'estat líquid</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) La temperatura puja ràpidament fins a 50 °C mentre encara queden glaçons</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) La temperatura es manté totalment constant a 0 °C fins que s'acaba de fondre tot el gel, perquè la calor s'inverteix a trencar les unions entre molècules</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) La temperatura baixa fins a $-20 °C$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) El gel passa directament a 100 °C sense passar per l'estat líquid</button>
   </div>
   <div class="quiz-feedback"></div>
 </div>
@@ -1355,7 +1355,7 @@ Una **làmina bimetàl·lica** està formada per dues tires de **dos metalls dif
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_5_mcq3" data-answer="C" data-hint="Els gasos tenen les partícules lliures sense forces d'atracció i són els que més augmenten de volum en escalfar-se.">
-  <p class="mcq-question"><strong>3. Si escalfem en $50^\circ\text{C}$ tres mostres del mateix volum inicial: una barra d'acer (sòlid), aigua (líquid) i aire (gas), quin dels tres estats de la matèria experimentarà una major dilatació?</strong></p>
+  <p class="mcq-question"><strong>3. Si escalfem en 50 °C tres mostres del mateix volum inicial: una barra d'acer (sòlid), aigua (líquid) i aire (gas), quin dels tres estats de la matèria experimentarà una major dilatació?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) El sòlid (l'acer)</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) El líquid (l'aigua)</button>
@@ -1399,7 +1399,7 @@ Una **làmina bimetàl·lica** està formada per dues tires de **dos metalls dif
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_5_vf3" data-answer="V" data-hint="VERTADER: Mentre l'aigua pura bull a 1 atm de pressió, la seua temperatura es manté clavada a 100 °C perquè tota la calor s'usa per a passar de líquid a vapor.">
-  <span class="vf-statement"><strong>c) Mentre l'aigua d'una cassola està bullint (ebullició a $1\text{ atm}$), la seua temperatura es manté constant a $100^\circ\text{C}$ encara que apugem la potència del foc.</strong></span>
+  <span class="vf-statement"><strong>c) Mentre l'aigua d'una cassola està bullint (ebullició a 1 atm), la seua temperatura es manté constant a 100 °C encara que apugem la potència del foc.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -1439,7 +1439,7 @@ Una **làmina bimetàl·lica** està formada per dues tires de **dos metalls dif
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_5_q3" data-answer="calor especifica|calor específica" data-hint="En l'aigua val 4.180 J/(kg·K), molt més alta que en l'arena o els metalls.">
-  <div class="quiz-question">✍️ <strong>3.</strong> Com s'anomena la magnitud física que indica la quantitat de calor que cal donar a $1\text{ kg}$ d'una substància per a apujar la seua temperatura $1^\circ\text{C}$?</div>
+  <div class="quiz-question">✍️ <strong>3.</strong> Com s'anomena la magnitud física que indica la quantitat de calor que cal donar a 1 kg d'una substància per a apujar la seua temperatura 1 °C?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu les dues paraules...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -1509,11 +1509,11 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 
 | Apartat | Conceptes Fonamentals | Fórmules, Unitats i Exemples Clau |
 | :--- | :--- | :--- |
-| **5.1 Temperatura i Calor** | • **Temperatura ($T$):** Velocitat mitjana d'agitació de les partícules (no depén de la massa).<br>• **Calor ($Q$):** Energia tèrmica en trànsit de $T_{\text{alta}}$ a $T_{\text{baixa}}$ fins a l'**equilibri tèrmic**. | • Unitat SI de calor: **Joule ($\text{J}$)**.<br>• Equivalència: **$1\text{ cal} = 4{,}18\text{ J}$** ($1\text{ kcal} = 4\,180\text{ J}$).<br>• De $\text{cal}$ a $\text{J}$: $\times 4{,}18$ · De $\text{J}$ a $\text{cal}$: $\div 4{,}18$. |
-| **5.2 El Termòmetre** | • El tacte és subjectiu; el termòmetre és objectiu.<br>• Tipus: dilatació líquida (**galinstan** o alcohol; el **mercuri** fou prohibit per toxicitat), digital (**termistor**) i **infrarojos** (sense contacte). | • **Kelvin (SI):** $T(\text{K}) = T(^\circ\text{C}) + 273$ (Zero absolut: $0\text{ K} = -273{,}15^\circ\text{C}$).<br>• **Fahrenheit:** $T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32$ i $T(^\circ\text{C}) = \dfrac{T(^\circ\text{F}) - 32}{1{,}8}$. |
+| **5.1 Temperatura i Calor** | • **Temperatura (T):** Velocitat mitjana d'agitació de les partícules (no depén de la massa).<br>• **Calor (Q):** Energia tèrmica en trànsit de $T_{\text{alta}}aT_{\text{baixa}}$ fins a l'**equilibri tèrmic**. | • Unitat SI de calor: **Joule (J)**.<br>• Equivalència: **$1\text{ cal} = 4{,}18\text{ J}$** ($1\text{ kcal} = 4\,180\text{ J}$).<br>• De cal a J: $\times 4{,}18$ · De J a cal: $\div 4{,}18$. |
+| **5.2 El Termòmetre** | • El tacte és subjectiu; el termòmetre és objectiu.<br>• Tipus: dilatació líquida (**galinstan** o alcohol; el **mercuri** fou prohibit per toxicitat), digital (**termistor**) i **infrarojos** (sense contacte). | • **Kelvin (SI):** $T(\text{K}) = T(^\circ\text{C}) + 273$ (Zero absolut: $0\text{ K} = -273{,}15 °C$).<br>• **Fahrenheit:** $T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32iT(^\circ\text{C}) = \dfrac{T(^\circ\text{F}) - 32}{1{,}8}$. |
 | **5.3 Transmissió de la Calor** | • **Conducció:** En **sòlids**, per xocs entre partícules sense transport de matèria.<br>• **Convecció:** En **fluids (líquids/gasos)**, per **corrents de convecció** (el calent menys dens puja; el fred baixa).<br>• **Radiació:** Ones **infraroges** que viatgen fins i tot pel **buit**. | • Radiador de calefacció $\rightarrow$ baix (l'aire calent puja).<br>• Aire condicionat $\rightarrow$ dalt (l'aire fred baixa).<br>• Color negre absorbeix radiació; blanc/espill la reflecteix. |
 | **5.4 Conductors i Aïllants** | • **Conductors:** Tots els **metalls** ($\text{Ag}, \text{Cu}, \text{Al}, \text{Fe}$); semblen més freds al tacte perquè ens roben calor ràpid.<br>• **Aïllants:** Fusta, suro, plàstic, porexpan, llana de roca i **aire immòbil**. | • Dissipador de CPU: **pasta tèrmica** (elimina l'aire) + *heat-pipes* de coure + aletes d'alumini.<br>• Finestra doble vidre i **termo de buit**. |
-| **5.5 Efectes de la Calor** | • **1. Canvi de $T$:** Regulat per la **calor específica** (molt alta en l'aigua: $4\,180\text{ J/(kg}\cdot\text{K)}$).<br>• **2. Canvis d'estat:** Mentre duren, la **$T$ és constant**.<br>• **3. Dilatació/Contracció:** Augment/disminució de volum. | • **Juntes de dilatació** en ponts i vies de tren.<br>• Tapa metàl·lica encallada sota aigua calenta.<br>• **Làmines bimetàl·liques** en termòstats i magnetotèrmics (PIA). |
+| **5.5 Efectes de la Calor** | • **1. Canvi de T:** Regulat per la **calor específica** (molt alta en l'aigua: $4\,180\text{ J/(kg}\cdot\text{K)}$).<br>• **2. Canvis d'estat:** Mentre duren, la **T és constant**.<br>• **3. Dilatació/Contracció:** Augment/disminució de volum. | • **Juntes de dilatació** en ponts i vies de tren.<br>• Tapa metàl·lica encallada sota aigua calenta.<br>• **Làmines bimetàl·liques** en termòstats i magnetotèrmics (PIA). |
 
 ---
 
@@ -1530,23 +1530,23 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 ### 1. Qüestionari Global Tipus Test (6 Preguntes MCQ)
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_6_mcq1" data-answer="C" data-hint="La calor sempre viatja del cos de major temperatura (el te a 75 °C) cap al de menor temperatura (la cullera a 20 °C) fins a assolir l'equilibri tèrmic.">
-  <p class="mcq-question"><strong>1. (5.1) Introduïm una cullera d'acer que està a $20^\circ\text{C}$ dins d'una tassa de te que es troba a $75^\circ\text{C}$. Què passa des del punt de vista físic?</strong></p>
+  <p class="mcq-question"><strong>1. (5.1) Introduïm una cullera d'acer que està a 20 °C dins d'una tassa de te que es troba a 75 °C. Què passa des del punt de vista físic?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) La cullera transfereix fred al te fins que tots dos es congelen</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Passa temperatura de la cullera cap al te</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) Flueix calor (energia tèrmica en trànsit) des del te cap a la cullera fins que tots dos arriben a la mateixa temperatura d'equilibri tèrmic</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) El te puja fins a $95^\circ\text{C}$ en sumar-se les dues temperatures</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) El te puja fins a 95 °C en sumar-se les dues temperatures</button>
   </div>
   <div class="quiz-feedback"></div>
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_u5_6_mcq2" data-answer="B" data-hint="En Kelvin: 50 + 273 = 323 K. En Fahrenheit: 1,8 · 50 + 32 = 90 + 32 = 122 °F.">
-  <p class="mcq-question"><strong>2. (5.2) El sensor de la placa base d'un servidor marca una temperatura de $50^\circ\text{C}$. Quins són els valors equivalents d'aquesta temperatura en l'escala Kelvin ($\text{K}$) i en l'escala Fahrenheit ($^\circ\text{F}$)?</strong></p>
+  <p class="mcq-question"><strong>2. (5.2) El sensor de la placa base d'un servidor marca una temperatura de 50 °C. Quins són els valors equivalents d'aquesta temperatura en l'escala Kelvin (K) i en l'escala Fahrenheit ($^\circ\text{F}$)?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) $223\text{ K}$ i $82^\circ\text{F}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) $323\text{ K}$ i $122^\circ\text{F}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) $373\text{ K}$ i $212^\circ\text{F}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) $50\text{ K}$ i $50^\circ\text{F}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) 223 K i $82^\circ\text{F}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) 323 K i $122^\circ\text{F}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) 373 K i $212^\circ\text{F}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) 50 K i $50^\circ\text{F}$</button>
   </div>
   <div class="quiz-feedback"></div>
 </div>
@@ -1576,7 +1576,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 <div class="interactive-mcq" data-quiz-id="ca1_u5_6_mcq5" data-answer="C" data-hint="L'aigua té una calor específica molt alta (4.180 J/kg·K), per la qual cosa absorbeix molta calor sense apujar a penes la seua temperatura.">
   <p class="mcq-question"><strong>5. (5.5) Quina propietat física de l'aigua fa que siga un excel·lent líquid refrigerant per als motors d'automòbils i per a la refrigeració líquida d'ordinadors?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) Que es congela a $100^\circ\text{C}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) Que es congela a 100 °C</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Que és un metall sòlid a temperatura ambient</button>
     <button type="button" class="btn-mcq-opt" data-opt="C">C) La seua elevada calor específica ($4\,180\text{ J/(kg}\cdot\text{K)}$), que li permet absorbir grans quantitats de calor augmentant molt poc la seua temperatura</button>
     <button type="button" class="btn-mcq-opt" data-opt="D">D) Que no es dilata ni canvia mai d'estat</button>
@@ -1600,7 +1600,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 ### 2. Activitats Globals de Vertader (V) o Fals (F) (6 Afirmacions)
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_6_vf1" data-answer="F" data-hint="FALS: La calor flueix sempre espontàniament del cos de MAJOR temperatura al de MENOR temperatura, independentment de quin tinga més massa.">
-  <span class="vf-statement"><strong>a) (5.1) Si posem en contacte un clau de ferro roent a $200^\circ\text{C}$ amb un poal gran d'aigua a $25^\circ\text{C}$, fluirà calor des de l'aigua cap al clau perquè hi ha més aigua.</strong></span>
+  <span class="vf-statement"><strong>a) (5.1) Si posem en contacte un clau de ferro roent a 200 °C amb un poal gran d'aigua a 25 °C, fluirà calor des de l'aigua cap al clau perquè hi ha més aigua.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -1609,7 +1609,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_6_vf2" data-answer="V" data-hint="VERTADER: Un increment d'1 °C és exactament igual a un increment d'1 K, ja que totes dues escales divideixen en 100 parts l'interval entre la fusió i l'ebullició de l'aigua.">
-  <span class="vf-statement"><strong>b) (5.2) Un augment de temperatura de $10^\circ\text{C}$ equival exactament a un augment de temperatura de $10\text{ K}$ perquè la mida d'un grau Celsius és idèntica a la d'un Kelvin.</strong></span>
+  <span class="vf-statement"><strong>b) (5.2) Un augment de temperatura de 10 °C equival exactament a un augment de temperatura de 10 K perquè la mida d'un grau Celsius és idèntica a la d'un Kelvin.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -1636,7 +1636,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_u5_6_vf5" data-answer="V" data-hint="VERTADER: Durant qualsevol canvi d'estat (fusió, ebullició...) d'una substància pura, la temperatura es manté constant fins que es completa el canvi.">
-  <span class="vf-statement"><strong>e) (5.5) Durant tot el temps que dura un canvi d'estat d'una substància pura (com la fusió del gel a $0^\circ\text{C}$ o l'ebullició de l'aigua a $100^\circ\text{C}$), la temperatura es manté constant.</strong></span>
+  <span class="vf-statement"><strong>e) (5.5) Durant tot el temps que dura un canvi d'estat d'una substància pura (com la fusió del gel a 0 °C o l'ebullició de l'aigua a 100 °C), la temperatura es manté constant.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -1658,7 +1658,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 ### 3. Reptes Globals de Càlcul i Vocabulari Tècnic (5 Exercicis)
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_6_q1" data-answer="2090|2.090|2090 j" data-hint="Multiplica 500 cal per 4,18 J/cal (500 * 4,18 = 2090 J).">
-  <div class="quiz-question">✍️ <strong>1. Càlcul d'Energia (cal → J):</strong> Quants Joules ($\text{J}$) d'energia calorífica són necessaris per a aportar $500\text{ calories}$ a un cos? (Recorda: $1\text{ cal} = 4{,}18\text{ J}$; escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>1. Càlcul d'Energia (cal → J):</strong> Quants Joules (J) d'energia calorífica són necessaris per a aportar 500 calories a un cos? (Recorda: $1\text{ cal} = 4{,}18\text{ J}$; escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en Joules...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -1667,7 +1667,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_6_q2" data-answer="1000|1.000|1000 cal" data-hint="Divideix 4180 J entre 4,18 J/cal (4180 / 4,18 = 1000 cal).">
-  <div class="quiz-question">✍️ <strong>2. Càlcul d'Energia (J → cal):</strong> Un dissipador evacua $4\,180\text{ J}$ de calor del processador. A quantes calories ($\text{cal}$) equival aquesta energia? (Escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>2. Càlcul d'Energia (J → cal):</strong> Un dissipador evacua $4\,180\text{ J}$ de calor del processador. A quantes calories (cal) equival aquesta energia? (Escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en calories...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -1676,7 +1676,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_6_q3" data-answer="310|310 k" data-hint="Aplica T(K) = T(°C) + 273 -> 37 + 273 = 310 K.">
-  <div class="quiz-question">✍️ <strong>3. Conversió Celsius → Kelvin:</strong> La temperatura normal del cos humà és de $37^\circ\text{C}$. Expressa aquest valor en Kelvin ($\text{K}$). (Escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>3. Conversió Celsius → Kelvin:</strong> La temperatura normal del cos humà és de 37 °C. Expressa aquest valor en Kelvin (K). (Escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en Kelvin...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -1685,7 +1685,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_u5_6_q4" data-answer="95|95 f|95 °f" data-hint="Aplica T(°F) = 1,8 · 35 + 32 = 63 + 32 = 95 °F.">
-  <div class="quiz-question">✍️ <strong>4. Conversió Celsius → Fahrenheit:</strong> En un dia calorós d'estiu a València el termòmetre marca $35^\circ\text{C}$. A quants graus Fahrenheit ($^\circ\text{F}$) equival? (Escriu només el número)</div>
+  <div class="quiz-question">✍️ <strong>4. Conversió Celsius → Fahrenheit:</strong> En un dia calorós d'estiu a València el termòmetre marca 35 °C. A quants graus Fahrenheit ($^\circ\text{F}$) equival? (Escriu només el número)</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Resultat en °F...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -1707,7 +1707,7 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 ### 4. Casos Pràctics de Síntesi i Desenvolupament Escrit (4 Problemes Globals)
 
 <div class="interactive-open-response" data-question-id="ca1_u5_6_open1">
-  <div class="open-question">✍️ <strong>Cas Pràctic 1 (5.1 i 5.2) — Auditoria tèrmica i conversions al taller:</strong> Durant una prova d'estrès d'un servidor informàtic, la CPU arriba a una temperatura de $176^\circ\text{F}$ i dissipa $20\,900\text{ J}$ d'energia tèrmica cada minut. Calcula pas a pas: a) Quina és la temperatura de la CPU en graus Celsius ($^\circ\text{C}$) i en Kelvin ($\text{K}$); b) Quantes calories ($\text{cal}$) i kilocalories ($\text{kcal}$) dissipa cada minut; i c) Quin tipus de termòmetre usaries per a mesurar la temperatura de la placa base sense tocar-la.</div>
+  <div class="open-question">✍️ <strong>Cas Pràctic 1 (5.1 i 5.2) — Auditoria tèrmica i conversions al taller:</strong> Durant una prova d'estrès d'un servidor informàtic, la CPU arriba a una temperatura de $176^\circ\text{F}$ i dissipa $20\,900\text{ J}$ d'energia tèrmica cada minut. Calcula pas a pas: a) Quina és la temperatura de la CPU en graus Celsius ($^\circ\text{C}$) i en Kelvin (K); b) Quantes calories (cal) i kilocalories (kcal) dissipa cada minut; i c) Quin tipus de termòmetre usaries per a mesurar la temperatura de la placa base sense tocar-la.</div>
   <textarea class="open-response-input" rows="4" placeholder="a) T(°C) = (176 - 32) / 1,8 = ... i T(K) = ... b) Q(cal) = 20.900 / 4,18 = ... c) Usaria un termòmetre..."></textarea>
 </div>
 
@@ -1717,12 +1717,12 @@ Has arribat a la sessió de síntesi i avaluació global de la **Unitat Didàcti
 </div>
 
 <div class="interactive-open-response" data-question-id="ca1_u5_6_open3">
-  <div class="open-question">✍️ <strong>Cas Pràctic 3 (5.4) — Aïllament tèrmic i la paradoxa del tacte:</strong> Respon raonadament: a) Per què si deixem al pati de l'institut a l'hivern ($8^\circ\text{C}$) un banc de ferro i un banc de fusta, en seure sentim el banc de ferro molt més gelat tot i estar tots dos a $8^\circ\text{C}$? b) Per què materials com el porexpan, la llana de roca, les finestres de doble vidre i els anoracs de plomes són tan bons aïllants tèrmics?</div>
+  <div class="open-question">✍️ <strong>Cas Pràctic 3 (5.4) — Aïllament tèrmic i la paradoxa del tacte:</strong> Respon raonadament: a) Per què si deixem al pati de l'institut a l'hivern (8 °C) un banc de ferro i un banc de fusta, en seure sentim el banc de ferro molt més gelat tot i estar tots dos a 8 °C? b) Per què materials com el porexpan, la llana de roca, les finestres de doble vidre i els anoracs de plomes són tan bons aïllants tèrmics?</div>
   <textarea class="open-response-input" rows="4" placeholder="a) Tots dos bancs estan en equilibri tèrmic a 8 °C, però el ferro és conductor i... b) El secret d'aquests aïllants és que retenen..."></textarea>
 </div>
 
 <div class="interactive-open-response" data-question-id="ca1_u5_6_open4">
-  <div class="open-question">✍️ <strong>Cas Pràctic 4 (5.5) — Efectes de la calor en l'enginyeria i la natura:</strong> Explica física i detalladament: a) Per què l'aigua d'una cassola no supera els $100^\circ\text{C}$ mentre està bullint; b) Què passaria a l'estiu amb un pont o una via de tren si no tinguera <strong>juntes de dilatació</strong>; i c) Com funciona la <strong>làmina bimetàl·lica</strong> d'un termòstat o d'un interruptor magnetotèrmic.</div>
+  <div class="open-question">✍️ <strong>Cas Pràctic 4 (5.5) — Efectes de la calor en l'enginyeria i la natura:</strong> Explica física i detalladament: a) Per què l'aigua d'una cassola no supera els 100 °C mentre està bullint; b) Què passaria a l'estiu amb un pont o una via de tren si no tinguera <strong>juntes de dilatació</strong>; i c) Com funciona la <strong>làmina bimetàl·lica</strong> d'un termòstat o d'un interruptor magnetotèrmic.</div>
   <textarea class="open-response-input" rows="4" placeholder="a) Durant un canvi d'estat... b) Sense juntes de dilatació... c) La làmina bimetàl·lica està formada per dos metalls que..."></textarea>
 </div>
 

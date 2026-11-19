@@ -45,27 +45,27 @@ Quan caminem pel carrer o treballem al taller, el sòl que trepitgem ens sembla 
 
 ## 1. D'on prové la calor interna de la Terra?
 
-El nucli de la Terra assoleix temperatures pròximes als **$5.500^\circ\text{C} - 6.000^\circ\text{C}$**, una temperatura semblant a la de la superfície del Sol. Aquesta energia tèrmica té dos orígens fonamentals:
+El nucli de la Terra assoleix temperatures pròximes als **5.500 °C - 6.000 °C**, una temperatura semblant a la de la superfície del Sol. Aquesta energia tèrmica té dos orígens fonamentals:
 
-1. **Calor remanent de la formació del planeta (calor primordial):** Fa uns $4.500\text{ milions d'anys}$, la Terra es va formar per l'**acreció** (xoc i fusió violenta) de milions de meteorits, asteroides i pols còsmica. L'energia cinètica d'aquests impactes gegantins es va transformar en calor, fonent el planeta jove. A més, quan el ferro pesant es va enfonsar cap al centre per formar el nucli, el fregament gravitatori va alliberar encara més calor. Com que les roques de l'escorça actuen com un bon aïllant tèrmic, l'interior encara conserva gran part d'aquella calor original.
-2. **Desintegració d'elements radioactius:** Al mantell i a l'escorça terrestre hi ha isòtops inestables d'elements pesants com l'**urani ($\text{U}$)**, el **tori ($\text{Th}$)** i el **potassi radioactiu ($\text{K}$)**. Quan aquests àtoms es desintegren espontàniament, alliberen partícules i radiació que es transformen contínuament en calor, mantenint encès el motor terrestre.
+1. **Calor remanent de la formació del planeta (calor primordial):** Fa uns 4.500 milions d'anys, la Terra es va formar per l'**acreció** (xoc i fusió violenta) de milions de meteorits, asteroides i pols còsmica. L'energia cinètica d'aquests impactes gegantins es va transformar en calor, fonent el planeta jove. A més, quan el ferro pesant es va enfonsar cap al centre per formar el nucli, el fregament gravitatori va alliberar encara més calor. Com que les roques de l'escorça actuen com un bon aïllant tèrmic, l'interior encara conserva gran part d'aquella calor original.
+2. **Desintegració d'elements radioactius:** Al mantell i a l'escorça terrestre hi ha isòtops inestables d'elements pesants com l'**urani (U)**, el **tori (Th)** i el **potassi radioactiu (K)**. Quan aquests àtoms es desintegren espontàniament, alliberen partícules i radiació que es transformen contínuament en calor, mantenint encès el motor terrestre.
 
 ### El Gradient Geotèrmic
-Si baixem per una mina subterrània molt profunda (com les mines d'or de Sud-àfrica, que arriben a gairebé $4\text{ km}$ de profunditat) o perforem un pou geològic, comprovem que la temperatura puja de manera constant a mesura que aprofundim. S'anomena **gradient geotèrmic** la variació de temperatura amb la profunditat a l'escorça terrestre:
+Si baixem per una mina subterrània molt profunda (com les mines d'or de Sud-àfrica, que arriben a gairebé 4 km de profunditat) o perforem un pou geològic, comprovem que la temperatura puja de manera constant a mesura que aprofundim. S'anomena **gradient geotèrmic** la variació de temperatura amb la profunditat a l'escorça terrestre:
 
-$$\text{Gradient geotèrmic mitjà} \approx +3^\circ\text{C per cada } 100\text{ m de profunditat } (+30^\circ\text{C per cada } 1\text{ km})$$
+\text{Gradient geotèrmic mitjà} \approx +3^\circ\text{C per cada } 100\text{ m de profunditat } (+30^\circ\text{C per cada } 1\text{ km})
 
 ### Exemple Pràctic de Càlcul del Gradient Geotèrmic
-Imagina que a la superfície d'una explotació minera la temperatura és de $20^\circ\text{C}$ i volem saber a quina temperatura estaran les roques a $2.000\text{ m}$ ($2\text{ km}$) de profunditat:
-1. Calculem quants trams de $100\text{ m}$ hi ha en $2.000\text{ m}$:
-   $$\frac{2.000\text{ m}}{100\text{ m}} = 20\text{ trams}$$
-2. Multipliquem per $+3^\circ\text{C}$ cada tram:
-   $$\Delta T = 20 \times 3^\circ\text{C} = +60^\circ\text{C}\text{ d'augment}$$
+Imagina que a la superfície d'una explotació minera la temperatura és de 20 °C i volem saber a quina temperatura estaran les roques a 2.000 m (2 km) de profunditat:
+1. Calculem quants trams de 100 m hi ha en 2.000 m:
+$$\frac{2.000\text{ m}}{100\text{ m}} = 20\text{ trams}$$
+2. Multipliquem per $+3 °C$ cada tram:
+$$\Delta T = 20 \times 3 °C = +60 °C\text{ d'augment}$$
 3. Sumem la temperatura superficial:
-   $$T_{\text{final}} = 20^\circ\text{C} + 60^\circ\text{C} = \mathbf{80^\circ\text{C}}$$
+$$T_{\text{final}} = 20 °C + 60 °C = \mathbf{80 °C}$$
 *(Per això a les mines profundes cal bombar aire refrigerat contínuament perquè els miners puguen treballar!)*
 
-> **Nota:** Aquest ritme d'augment de $+30^\circ\text{C/km}$ es manté només en els primers quilòmetres de l'escorça; a major profunditat (al mantell i al nucli), l'augment és molt més suau, ja que si continuara pujant a $30^\circ\text{C/km}$ fins al centre de la Terra ($6.371\text{ km}$), el nucli superaria els $190.000^\circ\text{C}$, cosa que no passa.
+> **Nota:** Aquest ritme d'augment de $+30^\circ\text{C/km}$ es manté només en els primers quilòmetres de l'escorça; a major profunditat (al mantell i al nucli), l'augment és molt més suau, ja que si continuara pujant a $30^\circ\text{C/km}$ fins al centre de la Terra (6.371 km), el nucli superaria els 190.000 °C, cosa que no passa.
 
 ---
 
@@ -86,29 +86,29 @@ Esfera SÒLIDA de ferro i níquel a ~6.000 °C per l'enorme pressió"]
   end
 ```
 
-### 1. L'Escorça (de $0\text{ km}$ a $70\text{ km}$)
+### 1. L'Escorça (de 0 km a 70 km)
 És la capa més superficial, fina i freda del planeta (comparada amb la resta del planeta, és tan fina com la pell d'una poma). Es divideix en dos tipus ben diferenciats:
-- **Escorça continental:** Forma els continents i les grans serralades. Té un gruix d'entre **$30\text{ km}$ i $70\text{ km}$**. Està composta principalment per roques lleugeres com el **granit** (riques en silici i alumini) i és molt antiga (algunes roques tenen fins a $4.000\text{ milions d'anys}$).
-- **Escorça oceànica:** Forma el fons dels oceans. És molt més prima, d'entre **$5\text{ km}$ i $10\text{ km}$** de gruix, però més densa i pesant, formada per roques volcàniques fosques com el **basalt** i el gabre. És molt més jove (menys de $200\text{ milions d'anys}$) perquè es renova contínuament a les dorsals oceàniques.
+- **Escorça continental:** Forma els continents i les grans serralades. Té un gruix d'entre **30 km i 70 km**. Està composta principalment per roques lleugeres com el **granit** (riques en silici i alumini) i és molt antiga (algunes roques tenen fins a 4.000 milions d'anys).
+- **Escorça oceànica:** Forma el fons dels oceans. És molt més prima, d'entre **5 km i 10 km** de gruix, però més densa i pesant, formada per roques volcàniques fosques com el **basalt** i el gabre. És molt més jove (menys de 200 milions d'anys) perquè es renova contínuament a les dorsals oceàniques.
 
-### 2. El Mantell (de $70\text{ km}$ a $2.900\text{ km}$)
-Separada de l'escorça per la *discontinuïtat de Mohorovičić*, representa prop del **$84\%$ del volum total** de la Terra. Està format per roques silicatades molt riques en ferro i magnesi, especialment la **peridotita**, amb temperatures d'entre $1.000^\circ\text{C}$ i $3.700^\circ\text{C}$:
+### 2. El Mantell (de 70 km a 2.900 km)
+Separada de l'escorça per la *discontinuïtat de Mohorovičić*, representa prop del **84% del volum total** de la Terra. Està format per roques silicatades molt riques en ferro i magnesi, especialment la **peridotita**, amb temperatures d'entre 1.000 °C i 3.700 °C:
 - **Mantell superior:** La seua part més alta s'uneix a l'escorça per formar la **litosfera** (rígida i fragmentada en plaques). Just a sota es troba l'**astenosfera**, on les roques estan a temperatures tan altes que tenen un comportament plàstic i deformable.
 - **Mantell inferior:** Sotmès a pressions altíssimes, és més dens però continua experimentant moviments lents de convecció.
 
-### 3. El Nucli (de $2.900\text{ km}$ a $6.371\text{ km}$)
-Separada del mantell per la *discontinuïtat de Gutenberg*, és l'esfera central i més densa del planeta, composta per un aliatge metàl·lic de **ferro ($\text{Fe}$, $\sim 85\%$) i níquel ($\text{Ni}$, $\sim 10\%$)**. Es divideix en:
-- **Nucli extern (líquid):** De $2.900\text{ km}$ a $5.150\text{ km}$. El ferro i el níquel estan **fosos** en estat líquid i s'agiten contínuament. Aquest moviment de metall líquid conductor actua com una dinamo gegant (**efecte geodinamo**) que genera el **camp magnètic terrestre (magnetosfera)**, indispensable per a orientar les brúixoles i desviar el vent solar letal.
-- **Nucli intern (sòlid):** De $5.150\text{ km}$ fins al centre ($6.371\text{ km}$). Malgrat estar a gairebé **$6.000^\circ\text{C}$**, la pressió dels milers de quilòmetres de roca que té a sobre és tan immensa (més de $3{,}5\text{ milions d'atmosferes}$) que obliga els àtoms de ferro a mantenir-se empaquetats en **estat sòlid**.
+### 3. El Nucli (de 2.900 km a 6.371 km)
+Separada del mantell per la *discontinuïtat de Gutenberg*, és l'esfera central i més densa del planeta, composta per un aliatge metàl·lic de **ferro (Fe, $\sim 85\%$) i níquel (Ni, $\sim 10\%$)**. Es divideix en:
+- **Nucli extern (líquid):** De 2.900 km a 5.150 km. El ferro i el níquel estan **fosos** en estat líquid i s'agiten contínuament. Aquest moviment de metall líquid conductor actua com una dinamo gegant (**efecte geodinamo**) que genera el **camp magnètic terrestre (magnetosfera)**, indispensable per a orientar les brúixoles i desviar el vent solar letal.
+- **Nucli intern (sòlid):** De 5.150 km fins al centre (6.371 km). Malgrat estar a gairebé **6.000 °C**, la pressió dels milers de quilòmetres de roca que té a sobre és tan immensa (més de $3{,}5\text{ milions d'atmosferes}$) que obliga els àtoms de ferro a mantenir-se empaquetats en **estat sòlid**.
 
 ### Taula Comparativa de les Capes de la Terra
 
 | Capa Terrestre | Profunditat Aproximada | Estat Físic i Materials Principals | Temperatura Mitjana | Funció Geològica Clau |
 | :--- | :---: | :--- | :---: | :--- |
-| **Escorça (Continental / Oceànica)** | $0 - 70\text{ km}$ | Sòlid rígid (Granit als continents, Basalt als oceans) | $0^\circ\text{C}$ a $800^\circ\text{C}$ | Suport de la biosfera i dels continents |
-| **Mantell (Superior i Inferior)** | $70 - 2.900\text{ km}$ | Sòlid plàstic deformable (Peridotita rica en $\text{Fe}$ i $\text{Mg}$) | $1.000^\circ\text{C}$ a $3.700^\circ\text{C}$ | Genera els **corrents de convecció** que mouen les plaques |
-| **Nucli Extern** | $2.900 - 5.150\text{ km}$ | **Líquid** metàl·lic en agitació (Ferro i Níquel fosos) | $3.700^\circ\text{C}$ a $5.000^\circ\text{C}$ | Crea el **camp magnètic terrestre** protector |
-| **Nucli Intern** | $5.150 - 6.371\text{ km}$ | **Sòlid** metàl·lic ultra-comprimit (Ferro i Níquel) | $\sim 5.500^\circ\text{C} - 6.000^\circ\text{C}$ | Reserva tèrmica central del planeta |
+| **Escorça (Continental / Oceànica)** | $0 - 70\text{ km}$ | Sòlid rígid (Granit als continents, Basalt als oceans) | 0 °C a 800 °C | Suport de la biosfera i dels continents |
+| **Mantell (Superior i Inferior)** | $70 - 2.900\text{ km}$ | Sòlid plàstic deformable (Peridotita rica en Fe i Mg) | 1.000 °C a 3.700 °C | Genera els **corrents de convecció** que mouen les plaques |
+| **Nucli Extern** | $2.900 - 5.150\text{ km}$ | **Líquid** metàl·lic en agitació (Ferro i Níquel fosos) | 3.700 °C a 5.000 °C | Crea el **camp magnètic terrestre** protector |
+| **Nucli Intern** | $5.150 - 6.371\text{ km}$ | **Sòlid** metàl·lic ultra-comprimit (Ferro i Níquel) | $\sim 5.500 °C - 6.000 °C$ | Reserva tèrmica central del planeta |
 
 ---
 
@@ -124,7 +124,7 @@ Com es transmet aquesta calor des del nucli fins a la superfície? De la mateixa
 ### Manifestacions Externes de la Calor Interna
 Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta energia interna en la superfície:
 - **Aigües termals i balnearis:** Aigua subterrània que s'escalfa en passar prop de roques calentes i brolla a la superfície rica en minerals (com als banys termals de Montanejos a Castelló o Cofrents a València).
-- **Gèisers:** Fonts termals volcàniques (com a Islàndia o al Parc Nacional de Yellowstone) que expulsen intermitentment columnes d'aigua bullent i vapor a gran altura quan l'aigua subterrània arriba als $100^\circ\text{C}$ sota pressió.
+- **Gèisers:** Fonts termals volcàniques (com a Islàndia o al Parc Nacional de Yellowstone) que expulsen intermitentment columnes d'aigua bullent i vapor a gran altura quan l'aigua subterrània arriba als 100 °C sota pressió.
 - **Fumaroles i solfatares:** Escapaments de vapor d'aigua i gasos sulfurosos per esquerdes volcàniques.
 - **Volcans i terratrèmols:** Les manifestacions més violentes de l'alliberament d'energia tèrmica i mecànica de l'interior terrestre.
 
@@ -132,14 +132,14 @@ Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta 
 
 > [!TIP]
 > ### 🔍 Aplicació Tecnològica: Climatització Geotèrmica i Energies Netes
-> Gràcies al gradient geotèrmic i a la calor interna, en zones volcàniques com Islàndia o les Illes Canàries es perfora el sòl per aprofitar el vapor d'aigua subterrani i moure turbines elèctriques (**centrals geotèrmiques**). A més, en l'edificació moderna s'instal·len **bombes de calor geotèrmiques** que aprofiten que a pocs metres sota terra la temperatura és estable tot l'any per calefactar i refrigerar tallers i habitatges amb un estalvi elèctric de fins al $70\%$.
+> Gràcies al gradient geotèrmic i a la calor interna, en zones volcàniques com Islàndia o les Illes Canàries es perfora el sòl per aprofitar el vapor d'aigua subterrani i moure turbines elèctriques (**centrals geotèrmiques**). A més, en l'edificació moderna s'instal·len **bombes de calor geotèrmiques** que aprofiten que a pocs metres sota terra la temperatura és estable tot l'any per calefactar i refrigerar tallers i habitatges amb un estalvi elèctric de fins al 70%.
 
 ---
 
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau
 > - La calor interna terrestre prové del **calor remanent de la formació del planeta** i de la **desintegració d'elements radioactius** ($\text{U}, \text{Th}, \text{K}$).
-> - El **gradient geotèrmic** indica que la temperatura a l'escorça puja uns **$+3^\circ\text{C}$ cada $100\text{ m}$** de profunditat.
+> - El **gradient geotèrmic** indica que la temperatura a l'escorça puja uns **$+3 °C$ cada 100 m** de profunditat.
 > - La Terra es divideix en **escorça** (continental de granit i oceànica de basalt), **mantell** (on actuen els corrents de convecció) i **nucli** (de ferro i níquel: extern líquid que crea el camp magnètic i intern sòlid per l'alta pressió).
 
 ---
@@ -168,12 +168,12 @@ Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta 
 </div>
 
 <div class="interactive-mcq" data-quiz-id="ca1_nat3_1_mcq2" data-answer="C" data-hint="El gradient geotèrmic és de +3 °C cada 100 m (+30 °C per cada 1.000 m = 1 km).">
-  <p class="mcq-question"><strong>2. Si a la superfície d'una mina la temperatura és de $15^\circ\text{C}$ i el gradient geotèrmic és de $+3^\circ\text{C}$ cada $100\text{ m}$, quina temperatura hi haurà a $500\text{ m}$ de profunditat?</strong></p>
+  <p class="mcq-question"><strong>2. Si a la superfície d'una mina la temperatura és de 15 °C i el gradient geotèrmic és de $+3 °C$ cada 100 m, quina temperatura hi haurà a 500 m de profunditat?</strong></p>
   <div class="mcq-options">
-    <button type="button" class="btn-mcq-opt" data-opt="A">A) $18^\circ\text{C}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="B">B) $500^\circ\text{C}$</button>
-    <button type="button" class="btn-mcq-opt" data-opt="C">C) $30^\circ\text{C}$ (perquè puja $5 \times 3^\circ\text{C} = 15^\circ\text{C}$ més sobre els $15^\circ\text{C}$ inicials)</button>
-    <button type="button" class="btn-mcq-opt" data-opt="D">D) $0^\circ\text{C}$</button>
+    <button type="button" class="btn-mcq-opt" data-opt="A">A) 18 °C</button>
+    <button type="button" class="btn-mcq-opt" data-opt="B">B) 500 °C</button>
+    <button type="button" class="btn-mcq-opt" data-opt="C">C) 30 °C (perquè puja $5 \times 3 °C = 15 °C$ més sobre els 15 °C inicials)</button>
+    <button type="button" class="btn-mcq-opt" data-opt="D">D) 0 °C</button>
   </div>
   <div class="quiz-feedback"></div>
 </div>
@@ -205,7 +205,7 @@ Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta 
 ### 2. Activitats de Vertader (V) o Fals (F)
 
 <div class="interactive-vf" data-quiz-id="ca1_nat3_1_vf1" data-answer="F" data-hint="FALS: L'escorça continental (30-70 km) és molt més gruixuda que l'escorça oceànica (5-10 km).">
-  <span class="vf-statement"><strong>a) L'escorça oceànica és molt més gruixuda (fins a $70\text{ km}$) que l'escorça continental dels continents.</strong></span>
+  <span class="vf-statement"><strong>a) L'escorça oceànica és molt més gruixuda (fins a 70 km) que l'escorça continental dels continents.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -245,7 +245,7 @@ Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta 
 ### 3. Exercicis de Resposta Breu i Vocabulari Tècnic
 
 <div class="interactive-quiz" data-quiz-id="ca1_nat3_1_q1" data-answer="mantell|el mantell" data-hint="És la capa situada entre l'escorça i el nucli, fins als 2.900 km de profunditat.">
-  <div class="quiz-question">✍️ Com s'anomena la capa intermèdia de la Terra (entre els $70\text{ km}$ i els $2.900\text{ km}$ de profunditat) que representa el $84\%$ del volum del planeta i on tenen lloc els corrents de convecció?</div>
+  <div class="quiz-question">✍️ Com s'anomena la capa intermèdia de la Terra (entre els 70 km i els 2.900 km de profunditat) que representa el 84% del volum del planeta i on tenen lloc els corrents de convecció?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu el nom de la capa...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -285,7 +285,7 @@ Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta 
 ### 4. Exercicis de Raonament i Desenvolupament Escrit (Tasca d'Aula)
 
 <div class="interactive-open-response" data-question-id="ca1_nat3_1_open1">
-  <div class="open-question">✍️ <strong>El misteri del nucli intern:</strong> Explica amb les teues paraules per què el nucli intern de la Terra es troba en estat SÒLID tot i estar a gairebé $6.000^\circ\text{C}$ (més calent que el nucli extern que sí que està líquid), i quins dos metalls el componen principalment.</div>
+  <div class="open-question">✍️ <strong>El misteri del nucli intern:</strong> Explica amb les teues paraules per què el nucli intern de la Terra es troba en estat SÒLID tot i estar a gairebé 6.000 °C (més calent que el nucli extern que sí que està líquid), i quins dos metalls el componen principalment.</div>
   <textarea class="open-response-input" rows="4" placeholder="Escriu ací la teua explicació sobre els metalls del nucli i el paper de la pressió..."></textarea>
 </div>
 
@@ -325,17 +325,17 @@ Encara que no puguem viatjar al mantell, observem les proves directes d'aquesta 
 
 ## 📌 3.2 Formació de muntanyes {#nat0302}
 
-Com és possible que al cim de l'Everest (a $8.848\text{ m}$ d'altitud) o als cims dels Pirineus i del Maestrat es troben fòssils d'animals marins que vivien al fons del mar fa milions d'anys? La resposta es troba en la **Tectònica de Plaques**: la superfície terrestre està dividida en grans blocs que xoquen lentament entre si amb una força titànica, plegant, trencant i alçant el fons dels antics oceans fins a convertir-los en grans serralades.
+Com és possible que al cim de l'Everest (a 8.848 m d'altitud) o als cims dels Pirineus i del Maestrat es troben fòssils d'animals marins que vivien al fons del mar fa milions d'anys? La resposta es troba en la **Tectònica de Plaques**: la superfície terrestre està dividida en grans blocs que xoquen lentament entre si amb una força titànica, plegant, trencant i alçant el fons dels antics oceans fins a convertir-los en grans serralades.
 
 ---
 
 ## 1. La Teoria de la Tectònica de Plaques
 
-Al començament del segle XX (1912), el científic alemany **Alfred Wegener** va proposar la *Teoria de la Deriva Continental*, observant que les costes d'Amèrica del Sud i d'Àfrica encaixaven com les peces d'un trencaclosques i compartien els mateixos fòssils. Fa uns $250\text{ milions d'anys}$, tots els continents estaven units en un únic supercontinent anomenat **Pangea**.
+Al començament del segle XX (1912), el científic alemany **Alfred Wegener** va proposar la *Teoria de la Deriva Continental*, observant que les costes d'Amèrica del Sud i d'Àfrica encaixaven com les peces d'un trencaclosques i compartien els mateixos fòssils. Fa uns 250 milions d'anys, tots els continents estaven units en un únic supercontinent anomenat **Pangea**.
 
 En la dècada de 1960, aquesta idea es va completar amb la moderna **Teoria de la Tectònica de Plaques**. S'anomena **litosfera** la capa superficial rígida de la Terra, formada per l'escorça sencera més la part més externa del mantell superior. Aquesta litosfera no és una closca contínua d'una sola peça, sinó que està fragmentada en **plaques tectòniques o litosfèriques** que suren i llisquen sobre el mantell plàstic (astenosfera).
 
-Impulsades pels **corrents de convecció del mantell**, les plaques es desplacen unes respecte a les altres a velocitats d'entre **$2\text{ cm}$ i $10\text{ cm}$ per any** (aproximadament la velocitat a la qual ens creixen les ungles). Les principals plaques del planeta són:
+Impulsades pels **corrents de convecció del mantell**, les plaques es desplacen unes respecte a les altres a velocitats d'entre **2 cm i 10 cm per any** (aproximadament la velocitat a la qual ens creixen les ungles). Les principals plaques del planeta són:
 - **Placa Euroasiàtica** (on es troba la Península Ibèrica) i **Placa Africana** (el seu xoc amb la nostra placa alça les serralades Bètiques i provoca sismes al sud i est peninsular).
 - **Placa Nord-americana**, **Placa Sud-americana**, **Placa de Nazca**, **Placa Pacífica** (la més gran del planeta, envoltada pel *Cinturó de Foc del Pacífic*), **Placa Indoaustraliana** i **Placa Antàrtica**.
 
@@ -368,8 +368,8 @@ Quan les forces tectòniques comprimeixen, estiren o retorcen les roques de l'es
 
 1. **Deformació elàstica (reversible):** La roca es deforma momentàniament quan passa una ona sísmica, però recupera la seua forma original quan cessa la força (com una goma elàstica o una molla).
 2. **Deformació plàstica (permanent sense trencament) $\rightarrow$ ELS PLECS:** Si les roques són plàstiques o dúctils (com les argiles o roques sedimentàries sotmeses a alta pressió i temperatura durant milions d'anys), davant d'esforços de **compressió** s'ondulen i es dobleguen sense arribar a trencar-se, formant **plecs**. En un plec distingim la *xarnel·la* (zona de màxima curvatura) i els *flancs* (costats). Hi ha dos tipus bàsics de plecs:
-   - **Anticlinal:** Plec convex amb forma de **lletra $\text{A}$** o volta cap amunt; al seu nucli o centre es troben els estrats de roca més antics.
-   - **Sinclinal:** Plec còncau amb forma de **lletra $\text{V}$** o cubeta cap avall; al seu nucli es troben els estrats de roca més moderns o joves.
+   - **Anticlinal:** Plec convex amb forma de **lletra A** o volta cap amunt; al seu nucli o centre es troben els estrats de roca més antics.
+   - **Sinclinal:** Plec còncau amb forma de **lletra V** o cubeta cap avall; al seu nucli es troben els estrats de roca més moderns o joves.
 3. **Deformació fràgil (permanent amb ruptura) $\rightarrow$ LES FALLES:** Si les roques són molt rígides (com el granit o les calcàries fredes superficials) i l'esforç supera el seu límit de resistència, la roca es fractura bruscament. Si hi ha desplaçament d'un bloc respecte a l'altre al llarg del pla de fractura, s'anomena **falla** (si s'esquerda sense desplaçament dels blocs, s'anomena *diàclasi*). Tipus de falles:
    - **Falla normal (o directa):** Produïda per forces de **distensió** (estirament $\leftarrow \rightarrow$). El bloc superior (sostre) llisca cap avall pel pla de falla i el terreny s'eixampla.
    - **Falla inversa:** Produïda per forces de **compressió** (aixafament $\rightarrow \leftarrow$). El bloc superior és empès cap amunt sobre l'inferior (mur) i el terreny s'escurça.
@@ -382,7 +382,7 @@ Quan les forces tectòniques comprimeixen, estiren o retorcen les roques de l'es
 | **Tipus de deformació** | **Plàstica** (la roca es doblega i s'ondula sense trencar-se) | **Fràgil** (la roca es trenca amb desplaçament entre blocs) |
 | **Tipus de roca i condicions** | Roques dúctils/sedimentàries, alta pressió i temperatura, esforços lents | Roques rígides i fredes prop de la superfície, esforços bruscos |
 | **Esforç tectònic causant** | Esforços de **compressió** ($\rightarrow \leftarrow$) | Compressió (falla inversa), distensió (falla normal) o cisalla (desgarri) |
-| **Classificació principal** | **Anticlinal** (forma de $\text{A}$) i **Sinclinal** (forma de $\text{V}$) | **Falla normal**, **falla inversa** i **falla de desgarri** |
+| **Classificació principal** | **Anticlinal** (forma de A) i **Sinclinal** (forma de V) | **Falla normal**, **falla inversa** i **falla de desgarri** |
 | **Risc sísmic associat** | Baix (deformació contínua i progressiva) | Molt alt (el moviment brusc dels blocs d'una falla origina els terratrèmols) |
 
 ---
@@ -397,14 +397,14 @@ S'anomena **orogènesi** el conjunt de processos geològics pels quals es forma 
 
 > [!TIP]
 > ### 🔍 Observació Geològica a la Comunitat Valenciana
-> A les nostres muntanyes (com el Puig Campana, el Benicadell, la Serra de Mariola o el Penyagolosa) podem observar a simple vista estrats de roca calcària totalment inclinats i plegats en forma d'**anticlinals i sinclinals**, plens de fòssils de petxines marines. Això demostra que fa més de $60\text{ milions d'anys}$ gran part del territori valencià estava sota el mar de Tetis i va ser alçat per l'empenta de la placa Africana contra l'Euroasiàtica!
+> A les nostres muntanyes (com el Puig Campana, el Benicadell, la Serra de Mariola o el Penyagolosa) podem observar a simple vista estrats de roca calcària totalment inclinats i plegats en forma d'**anticlinals i sinclinals**, plens de fòssils de petxines marines. Això demostra que fa més de 60 milions d'anys gran part del territori valencià estava sota el mar de Tetis i va ser alçat per l'empenta de la placa Africana contra l'Euroasiàtica!
 
 ---
 
 > [!NOTE]
 > ### 💡 Resum de Conceptes Clau
 > - La **litosfera** està dividida en **plaques tectòniques** que interaccionen en tres tipus de vores: **divergents** (es creen dorsals), **convergents** (xoquen i formen muntanyes o fosses per subducció) i **transformants** (fregament lateral).
-> - Els **plecs** són deformacions plàstiques per compressió sense ruptura (**anticlinal** en $\text{A}$ i **sinclinal** en $\text{V}$).
+> - Els **plecs** són deformacions plàstiques per compressió sense ruptura (**anticlinal** en A i **sinclinal** en V).
 > - Les **falles** són fractures fràgils amb desplaçament de blocs (**normal** per distensió, **inversa** per compressió i **de desgarri** per cisalla).
 
 ---
@@ -422,7 +422,7 @@ S'anomena **orogènesi** el conjunt de processos geològics pels quals es forma 
 ### 1. Qüestionari d'Autoavaluació Tipus Test (MCQ)
 
 <div class="interactive-mcq" data-quiz-id="ca1_nat3_2_mcq1" data-answer="A" data-hint="Un anticlinal té forma d'A o volta convexa cap amunt; el sinclinal té forma de V o cubeta.">
-  <p class="mcq-question"><strong>1. Quan les roques sedimentàries pateixen una deformació plàstica per compressió sense trencar-se i formen una ondulació amb forma d'arc o lletra $\text{A}$ (convexa cap amunt), com s'anomena aquesta estructura?</strong></p>
+  <p class="mcq-question"><strong>1. Quan les roques sedimentàries pateixen una deformació plàstica per compressió sense trencar-se i formen una ondulació amb forma d'arc o lletra A (convexa cap amunt), com s'anomena aquesta estructura?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Plec anticlinal</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Plec sinclinal</button>
@@ -519,7 +519,7 @@ S'anomena **orogènesi** el conjunt de processos geològics pels quals es forma 
 </div>
 
 <div class="interactive-quiz" data-quiz-id="ca1_nat3_2_q2" data-answer="sinclinal|plec sinclinal" data-hint="És el plec contrari a l'anticlinal, amb forma de V o cubeta còncava.">
-  <div class="quiz-question">✍️ Com s'anomena el plec geològic que té forma de cubeta o lletra $\text{V}$ (còncau cap amunt) i que conté els estrats més moderns al seu nucli?</div>
+  <div class="quiz-question">✍️ Com s'anomena el plec geològic que té forma de cubeta o lletra V (còncau cap amunt) i que conté els estrats més moderns al seu nucli?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu el tipus de plec...">
     <button type="button" class="btn-quiz-check">Comprovar</button>
@@ -550,7 +550,7 @@ S'anomena **orogènesi** el conjunt de processos geològics pels quals es forma 
 ### 4. Exercicis de Raonament i Desenvolupament Escrit (Tasca d'Aula)
 
 <div class="interactive-open-response" data-question-id="ca1_nat3_2_open1">
-  <div class="open-question">✍️ <strong>Fòssils marins al cim de les muntanyes:</strong> Durant una excursió a una serralada a més de $2.000\text{ m}$ d'altitud, un company troba fòssils de petxines marines incrustats a la roca i diu que algú els ha d'haver pujat allà dalt. Explica-li científicament com van arribar aquests fòssils marins al cim de la muntanya utilitzant la teoria de la Tectònica de Plaques i els conceptes de vora convergent, plecs i orogènesi.</div>
+  <div class="open-question">✍️ <strong>Fòssils marins al cim de les muntanyes:</strong> Durant una excursió a una serralada a més de 2.000 m d'altitud, un company troba fòssils de petxines marines incrustats a la roca i diu que algú els ha d'haver pujat allà dalt. Explica-li científicament com van arribar aquests fòssils marins al cim de la muntanya utilitzant la teoria de la Tectònica de Plaques i els conceptes de vora convergent, plecs i orogènesi.</div>
   <textarea class="open-response-input" rows="4" placeholder="Explica com l'antic fons marí es va comprimir i elevar pel xoc de dues plaques tectòniques..."></textarea>
 </div>
 
@@ -590,7 +590,7 @@ S'anomena **orogènesi** el conjunt de processos geològics pels quals es forma 
 
 ## 📌 3.3 Els volcans {#nat0303}
 
-Un **volcà** és una estructura geològica (una obertura o esquerda de l'escorça terrestre) per la qual surten a l'exterior materials rocosos fosos a altíssima temperatura ($700^\circ\text{C}$ a $1.200^\circ\text{C}$) i gasos procedents de l'interior del planeta. L'any 2021 vam viure a Espanya un exemple històric en directe amb l'erupció del volcà **Tajogaite (Cumbre Vieja)** a l'illa de **La Palma** (Illes Canàries), que va durar 85 dies i va transformar el paisatge de l'illa.
+Un **volcà** és una estructura geològica (una obertura o esquerda de l'escorça terrestre) per la qual surten a l'exterior materials rocosos fosos a altíssima temperatura (700 °C a 1.200 °C) i gasos procedents de l'interior del planeta. L'any 2021 vam viure a Espanya un exemple històric en directe amb l'erupció del volcà **Tajogaite (Cumbre Vieja)** a l'illa de **La Palma** (Illes Canàries), que va durar 85 dies i va transformar el paisatge de l'illa.
 
 ---
 
@@ -620,7 +620,7 @@ Ramificació lateral de la xemeneia que obri una boca eruptiva al vessant"]
 Muntanya formada per l'acumulació de capes de lava i cendres d'erupcions successives"]
 ```
 
-1. **Cambra magmàtica:** Bossa o reservori profund situat entre $5\text{ km}$ i $30\text{ km}$ sota la superfície on s'acumula el magma procedent del mantell abans de l'erupció.
+1. **Cambra magmàtica:** Bossa o reservori profund situat entre 5 km i 30 km sota la superfície on s'acumula el magma procedent del mantell abans de l'erupció.
 2. **Xemeneia principal:** Conducte o fractura vertical que comunica la cambra magmàtica amb l'exterior.
 3. **Cràter:** Boca o obertura amb forma d'embut situada al cim de la xemeneia per on s'expulsen els gasos, els piroclasts i la lava. Si després d'una gran erupció la cambra magmàtica es buida i el sostre del volcà s'esfondra, es forma una depressió gegant anomenada **caldera volcànica** (com la Caldera de Las Cañadas al Teide).
 4. **Con volcànic:** Elevació o muntanya amb forma de con truncat construïda al voltant del cràter per l'apilament successiu de colades de lava solidificada i capes de piroclasts.
@@ -634,9 +634,9 @@ Durant una erupció, un volcà expulsa materials en els **tres estats físics de
 
 ### 1. Gasos Volcànics (Estat Gasós)
 Són el veritable motor de l'erupció, ja que en expandir-se empenyen el magma cap amunt (igual que el gas d'una botella de refresc agitada). Els principals gasos són:
-- **Vapor d'aigua ($\text{H}_2\text{O}$):** És el més abundant (fins al $70\% - 80\%$ del total) i forma grans columnes blanques de vapor.
-- **Diòxid de carboni ($\text{CO}_2$):** Gas d'efecte hivernacle més dens que l'aire; si s'acumula en fondalades o soterranis pot provocar asfíxia per desplaçament de l'oxigen.
-- **Diòxid de sofre ($\text{SO}_2$), sulfur d'hidrogen ($\text{H}_2\text{S}$) i monòxid de carboni ($\text{CO}$):** Gasos tòxics i irritants amb olor de sofre o d'ous podrits que poden generar pluja àcida.
+- **Vapor d'aigua (H₂O):** És el més abundant (fins al $70\% - 80\%$ del total) i forma grans columnes blanques de vapor.
+- **Diòxid de carboni (CO₂):** Gas d'efecte hivernacle més dens que l'aire; si s'acumula en fondalades o soterranis pot provocar asfíxia per desplaçament de l'oxigen.
+- **Diòxid de sofre ($\text{SO}_2$), sulfur d'hidrogen ($\text{H}_2\text{S}$) i monòxid de carboni (CO):** Gasos tòxics i irritants amb olor de sofre o d'ous podrits que poden generar pluja àcida.
 
 ### 2. Piroclasts (Estat Sòlid)
 El terme **piroclast** significa literalment *"fragment de foc"*. Són fragments de roca sòlida o de lava que es refreda en l'aire en ser llançada violentament cap al cel. Es classifiquen estrictament segons la seua **mida (diàmetre)**:
@@ -644,13 +644,13 @@ El terme **piroclast** significa literalment *"fragment de foc"*. Són fragments
 | Tipus de Piroclast | Diàmetre del Fragment | Característiques i Efectes |
 | :--- | :---: | :--- |
 | **Cendres volcàniques** | **$< 2\text{ mm}$** | Pols fina de vidre i roca volcànica. El vent pot transportar-la a centenars de quilòmetres, paralitza el trànsit aeri (avions) i pot enfonsar teulades pel seu pes. |
-| **Lapil·li (o *picón*)** | **Entre $2\text{ mm}$ i $64\text{ mm}$** | Petites pedres poroses i lleugeres de la mida d'un cigró o una nou. A les Canàries s'anomena *picón* o *rofe* i s'utilitza en agricultura per retenir la humitat del sòl. |
+| **Lapil·li (o *picón*)** | **Entre 2 mm i 64 mm** | Petites pedres poroses i lleugeres de la mida d'un cigró o una nou. A les Canàries s'anomena *picón* o *rofe* i s'utilitza en agricultura per retenir la humitat del sòl. |
 | **Bombes volcàniques** | **$> 64\text{ mm}$** | Grans blocs de lava incandescents (des d'un puny fins a la mida d'un cotxe) que prenen forma arredonida o de fus en girar per l'aire abans d'impactar prop del cràter. |
 
 ### 3. Colades de Lava (Estat Líquid)
 Són els rius de roca fosa que brollen pel cràter i baixen pels vessants del volcà. Segons la seua composició química (contingut en sílice, $\text{SiO}_2$) i temperatura, distingim:
-- **Laves fluides (basàltiques):** Molt calentes ($>1.000^\circ\text{C}$) i pobres en sílice. Els gasos s'escapen fàcilment sense grans explosions i la lava corre ràpidament formant llargs rius incandescents (laves *pahoehoe* o cordades i laves *aa* o malpaís).
-- **Laves viscoses (àcides o silícies):** Més fredes ($700^\circ\text{C} - 900^\circ\text{C}$) i molt riques en sílice. Són pastoses i espesses, taponen la xemeneia impedint l'eixida dels gasos i acaben provocant explosions devastadores.
+- **Laves fluides (basàltiques):** Molt calentes ($>1.000 °C$) i pobres en sílice. Els gasos s'escapen fàcilment sense grans explosions i la lava corre ràpidament formant llargs rius incandescents (laves *pahoehoe* o cordades i laves *aa* o malpaís).
+- **Laves viscoses (àcides o silícies):** Més fredes (700 °C - 900 °C) i molt riques en sílice. Són pastoses i espesses, taponen la xemeneia impedint l'eixida dels gasos i acaben provocant explosions devastadores.
 
 ---
 
@@ -666,7 +666,7 @@ Segons la viscositat del magma i la pressió dels gasos, les erupcions es classi
 
 > [!TIP]
 > ### 🔍 Risc Volcànic vs. Beneficis dels Volcans: El Cas de les Illes Canàries i Olot
-> Totes les **Illes Canàries** tenen un origen $100\%$ volcànic (amb el **Teide** a Tenerife, el pic més alt d'Espanya amb $3.715\text{ m}$), i a la Península també hi ha zones volcàniques antigues com la Garrotxa (Olot), Cabo de Gata o el Camp de Calatrava. Com prediuen els vulcanòlegs una erupció per evacuar la població a temps? Instal·lant xarxes de **sismògrafs** (que detecten l'*eixam sísmic* quan el magma trenca roques en pujar), **inclinòmetres i GPS** (que detecten com el terreny s'unfla uns centímetres) i **analitzadors de gasos**. A canvi del risc, els volcans aporten **sòls agrícoles extremadament fèrtils** rics en minerals, recursos d'**energia geotèrmica**, materials de construcció (basalt, puzolana) i un gran atractiu turístic i paisatgístic.
+> Totes les **Illes Canàries** tenen un origen 100% volcànic (amb el **Teide** a Tenerife, el pic més alt d'Espanya amb 3.715 m), i a la Península també hi ha zones volcàniques antigues com la Garrotxa (Olot), Cabo de Gata o el Camp de Calatrava. Com prediuen els vulcanòlegs una erupció per evacuar la població a temps? Instal·lant xarxes de **sismògrafs** (que detecten l'*eixam sísmic* quan el magma trenca roques en pujar), **inclinòmetres i GPS** (que detecten com el terreny s'unfla uns centímetres) i **analitzadors de gasos**. A canvi del risc, els volcans aporten **sòls agrícoles extremadament fèrtils** rics en minerals, recursos d'**energia geotèrmica**, materials de construcció (basalt, puzolana) i un gran atractiu turístic i paisatgístic.
 
 ---
 
@@ -691,7 +691,7 @@ Segons la viscositat del magma i la pressió dels gasos, les erupcions es classi
 ### 1. Qüestionari d'Autoavaluació Tipus Test (MCQ)
 
 <div class="interactive-mcq" data-quiz-id="ca1_nat3_3_mcq1" data-answer="B" data-hint="Els piroclasts d'entre 2 mm i 64 mm s'anomenen lapil·li (o picón a les Canàries).">
-  <p class="mcq-question"><strong>1. Com es classifiquen els fragments sòlids (piroclasts) llançats per un volcà que tenen una mida intermèdia d'entre $2\text{ mm}$ i $64\text{ mm}$ de diàmetre?</strong></p>
+  <p class="mcq-question"><strong>1. Com es classifiquen els fragments sòlids (piroclasts) llançats per un volcà que tenen una mida intermèdia d'entre 2 mm i 64 mm de diàmetre?</strong></p>
   <div class="mcq-options">
     <button type="button" class="btn-mcq-opt" data-opt="A">A) Cendres volcàniques fines</button>
     <button type="button" class="btn-mcq-opt" data-opt="B">B) Lapil·li (conegut com a picón a les Illes Canàries)</button>
@@ -748,7 +748,7 @@ Segons la viscositat del magma i la pressió dels gasos, les erupcions es classi
 </div>
 
 <div class="interactive-vf" data-quiz-id="ca1_nat3_3_vf2" data-answer="V" data-hint="VERTADER: El vapor d'aigua i el diòxid de carboni juntament amb el diòxid de sofre són els gasos volcànics més abundants.">
-  <span class="vf-statement"><strong>b) El gas més abundant que expulsa un volcà durant una erupció és el vapor d'aigua ($\text{H}_2\text{O}$), acompanyat de diòxid de carboni ($\text{CO}_2$) i compostos de sofre ($\text{SO}_2$).</strong></span>
+  <span class="vf-statement"><strong>b) El gas més abundant que expulsa un volcà durant una erupció és el vapor d'aigua (H₂O), acompanyat de diòxid de carboni (CO₂) i compostos de sofre ($\text{SO}_2$).</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>
@@ -880,7 +880,7 @@ Punt de la SUPERFÍCIE terrestre situat just en la vertical de l'hipocentre (on 
   B -->|"Si l'epicentre és al fons del mar"| D["🌊 TSUNAMI (Sèrie d'onades gegants)"]
 ```
 
-- **Hipocentre (o focus sísmic):** És el punt profund de l'**interior de la Terra** on es produeix la ruptura de la falla i s'allibera l'energia. Segons la seua profunditat, els sismes poden ser superficials ($<70\text{ km}$, els més destructius perquè estan molt prop de les ciutats, com va passar a Llorca a només $2\text{ km}$ de profunditat), intermedis ($70 - 300\text{ km}$) o profunds ($>300\text{ km}$).
+- **Hipocentre (o focus sísmic):** És el punt profund de l'**interior de la Terra** on es produeix la ruptura de la falla i s'allibera l'energia. Segons la seua profunditat, els sismes poden ser superficials ($<70\text{ km}$, els més destructius perquè estan molt prop de les ciutats, com va passar a Llorca a només 2 km de profunditat), intermedis ($70 - 300\text{ km}$) o profunds ($>300\text{ km}$).
 - **Epicentre:** És el punt de la **superfície terrestre** (o del fons marí) situat **exactament en la vertical de l'hipocentre**. És el lloc de la superfície més pròxim al focus i, per tant, on el terratrèmol es nota abans i sol causar els majors danys. En els mapes sísmics es dibuixen línies anomenades *isòsistes* que uneixen els punts que han patit la mateixa intensitat al voltant de l'epicentre.
 
 ### Les Ones Sísmiques
@@ -905,15 +905,15 @@ L'aparell d'alta precisió que detecta i registra els moviments del sòl s'anome
 | :--- | :--- | :--- |
 | **Què mesura exactament?** | La **quantitat total d'energia alliberada** pel terratrèmol a l'hipocentre. | Els **danys materials i efectes destructius** produïts a la superfície sobre edificis i persones. |
 | **Com s'obté?** | És una mesura **objectiva i instrumental** calculada a partir dels **sismògrafs**. | És una avaluació **observacional** dels danys reals després del sisme. |
-| **Com s'expressa?** | Amb **nombres decimals** (ex: magnitud $5{,}2$ o $7{,}8$). No té límit superior teòric, tot i que a la pràctica no supera $\sim 9{,}5$. | Amb **nombres romans de l'$\text{I}$ al $\text{XII}$** (des d'$\text{I}$ = no percebut fins a $\text{XII}$ = destrucció total). |
+| **Com s'expressa?** | Amb **nombres decimals** (ex: magnitud $5{,}2o7{,}8$). No té límit superior teòric, tot i que a la pràctica no supera $\sim 9{,}5$. | Amb **nombres romans de l'I al XII** (des d'I = no percebut fins a XII = destrucció total). |
 | **Varia segons la ciutat o el tipus d'edifici?** | **NO.** Un terratrèmol té una **única magnitud** (allibera una quantitat fixa d'energia). | **SÍ.** La intensitat és màxima prop de l'epicentre o en edificis mal construïts, i disminueix en allunyar-nos-en. |
 
-> **Nota sobre l'Escala de Richter:** És una escala **logarítmica**: cada grau que puja equival a multiplicar per **$\sim 32$ vegades l'energia alliberada**. Així, un sisme de magnitud $7$ allibera $32\text{ vegades}$ més energia que un de magnitud $6$, i unes $1.000\text{ vegades}$ més energia que un de magnitud $5$!
+> **Nota sobre l'Escala de Richter:** És una escala **logarítmica**: cada grau que puja equival a multiplicar per **$\sim 32$ vegades l'energia alliberada**. Així, un sisme de magnitud $7$ allibera 32 vegades més energia que un de magnitud $6$, i unes 1.000 vegades més energia que un de magnitud $5$!
 
-### Exemples de Nivells en l'Escala d'Intensitat EMS / Mercalli ($\text{I}$ a $\text{XII}$)
+### Exemples de Nivells en l'Escala d'Intensitat EMS / Mercalli (I a XII)
 - **Grau $\text{I} - \text{II}$ (Molt feble):** Només el detecten els sismògrafs o persones en repòs als pisos més alts.
 - **Grau $\text{IV} - \text{V}$ (Moderat):** Es nota dins de les cases, oscil·len els llums penjants i vibren les finestres, sense danys estructurals.
-- **Grau $\text{VII} - \text{VIII}$ (Molt fort / Destructiu):** Esquerdes importants en murs, caiguda de xemeneies i cornises (com al sisme de Llorca de 2011, que va tindre magnitud $5{,}1$ però intensitat $\text{VII}$ per ser molt superficial).
+- **Grau $\text{VII} - \text{VIII}$ (Molt fort / Destructiu):** Esquerdes importants en murs, caiguda de xemeneies i cornises (com al sisme de Llorca de 2011, que va tindre magnitud $5{,}1$ però intensitat VII per ser molt superficial).
 - **Grau $\text{X} - \text{XII}$ (Catastròfic):** Col·lapse d'edificis, ponts destruïts i esquerdes visibles al terreny.
 
 ---
@@ -922,7 +922,7 @@ L'aparell d'alta precisió que detecta i registra els moviments del sòl s'anome
 
 Quan l'epicentre d'un terratrèmol de gran magnitud ($>7{,}0$) es produeix al **fons del mar** i un bloc d'una falla submarina s'alça o s'enfonsa bruscament diversos metres, empeny tota la columna d'aigua que té a sobre. Això genera un **tsunami** (o sisme submarí / maremot):
 - En alta mar, les onades del tsunami tenen poca altura ($<1\text{ m}$) i passen gairebé desapercebudes per als vaixells, però viatgen a velocitats d'avió comercial (**$600\text{ a } 800\text{ km/h}$**).
-- Quan l'ona arriba a la costa i el fons marí es fa poc profund, l'ona es frena bruscament, s'escurça i tota la seua energia es transforma en una **muralla d'aigua de $10\text{ m}$ a $30\text{ m}$ d'altura** que penetra terra endins arrasant poblacions costaneres.
+- Quan l'ona arriba a la costa i el fons marí es fa poc profund, l'ona es frena bruscament, s'escurça i tota la seua energia es transforma en una **muralla d'aigua de 10 m a 30 m d'altura** que penetra terra endins arrasant poblacions costaneres.
 - **Senyal d'alerta vital a la platja:** Moltes vegades, minuts abans que arribe la gran ona d'un tsunami, **el mar es retira de cop desenes o centenars de metres** deixant el fons marí al descobert. Si sents un terratrèmol a la costa o veus retirar-se el mar anormalment, cal córrer immediatament cap a zones altes!
 
 ---
@@ -1005,7 +1005,7 @@ Quan l'epicentre d'un terratrèmol de gran magnitud ($>7{,}0$) es produeix al **
 ### 2. Activitats de Vertader (V) o Fals (F)
 
 <div class="interactive-vf" data-quiz-id="ca1_nat3_4_vf1" data-answer="F" data-hint="FALS: L'escala de Richter mesura la Magnitud (energia alliberada); l'escala que mesura els danys d'I a XII és l'escala d'Intensitat (Mercalli o EMS).">
-  <span class="vf-statement"><strong>a) L'escala de Richter mesura la intensitat dels danys visuals en els edificis utilitzant nombres romans de l'$\text{I}$ al $\text{XII}$.</strong></span>
+  <span class="vf-statement"><strong>a) L'escala de Richter mesura la intensitat dels danys visuals en els edificis utilitzant nombres romans de l'I al XII.</strong></span>
   <div class="vf-buttons">
     <button type="button" class="btn-vf" data-opt="V">V</button>
     <button type="button" class="btn-vf" data-opt="F">F</button>

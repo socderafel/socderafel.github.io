@@ -3118,4 +3118,6 @@ body.pdi-fullscreen-mode #pdi-game-view {
 <!-- INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN -->
 
 <script src="{{ 'pissarra-naturals.js' | relative_url }}?v=1"></script>
-<script src="pissarra-naturals.js?v=1"></script>
+
+<!-- INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN -->
+<script src="./pissarra-naturals.js?v=3"></script>

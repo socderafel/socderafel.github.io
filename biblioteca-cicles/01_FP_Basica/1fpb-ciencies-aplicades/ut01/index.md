@@ -126,7 +126,7 @@ Benvingut/da a la **Unitat Didàctica 1** del bloc de Matemàtiques de Ciències
 
 El sistema de numeració que utilitzem cada dia és el **sistema decimal**. Probablement, els éssers humans vam començar a comptar utilitzant els dits de les mans, i per aquesta mateixa raó vam idear un sistema basat en **10 símbols bàsics** (anomenats dígits o xifres):
 
-$$\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$$
+\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}
 
 ---
 
@@ -136,8 +136,8 @@ En el sistema decimal, agrupem les quantitats de **10 en 10**: cada deu unitats 
 
 | Ordre d'Unitat | Abreviatura | Equivalència en Unitats |
 | :--- | :---: | :---: |
-| **Unitat** | **U** | $1 \text{ U}$ |
-| **Desena** | **D** | $1 \text{ D} = 10 \text{ U}$ |
+| **Unitat** | **U** | 1 U |
+| **Desena** | **D** | 1  D = 10  U |
 | **Centena** | **C** | $1 \text{ C} = 10 \text{ D} = 100 \text{ U}$ |
 | **Unitat de Millar** | **UM** | $1 \text{ UM} = 10 \text{ C} = 1.000 \text{ U}$ |
 | **Desena de Millar** | **DM** | $1 \text{ DM} = 10 \text{ UM} = 10.000 \text{ U}$ |
@@ -161,10 +161,10 @@ Vegem per exemple el nombre **$523$**:
 
 - La xifra **$3$** ocupa el lloc de les unitats $\rightarrow 3 \times 1 = 3$
 - La xifra **$2$** ocupa el lloc de les desenes $\rightarrow 2 \times 10 = 20$
-- La xifra **$5$** ocupa el lloc de les centenes $\rightarrow 5 \times 100 = 500$
+- La xifra **$5$** ocupa el lloc de les centenes $\rightarrow 5 \times 100 = 500
 
 Per tant:
-$$523 = 500 + 20 + 3 = 5\text{C} + 2\text{D} + 3\text{U}$$
+$$523 = 500 + 20 + 3 = 5\text{C} + 2\text{D} + 3\text{U}
 
 ---
 
@@ -180,17 +180,17 @@ Les potències de $10$ ens permeten expressar de manera abreujada els diferents 
 
 La **descomposició polinòmica** d'un nombre consisteix a expressar-lo com una suma de productes de cada xifra per la potència de $10$ corresponent a la seua posició:
 
-$$523 = (5 \times 10^2) + (2 \times 10^1) + (3 \times 10^0)$$
+523 = (5 \times 10^2) + (2 \times 10^1) + (3 \times 10^0)
 
 Com que $10^0 = 1$, podem simplificar l'últim terme directament com a $3$:
-$$523 = (5 \times 10^2) + (2 \times 10^1) + 3$$
+$$523 = (5 \times 10^2) + (2 \times 10^1) + 3
 
 #### Exemple Resolts Pas a Pas:
 Descompon el nombre **$4.708$**:
 - Té $4$ milers, $7$ centenes, $0$ desenes i $8$ unitats.
 - Descomposició aditiva: $4.000 + 700 + 8$
 - Descomposició polinòmica:
-  $$4.708 = (4 \times 10^3) + (7 \times 10^2) + 8$$
+$$4.708 = (4 \times 10^3) + (7 \times 10^2) + 8
 
 ---
 
@@ -291,16 +291,16 @@ Escriu el nombre complet que correspon a cadascuna de les expressions polinòmiq
 
 Els **nombres naturals** van sorgir de la necessitat humana de comptar i ordenar objectes (animals, fruites, eines). Es representen amb la lletra $\mathbb{N}$:
 
-$$\mathbb{N} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, \dots\}$$
+\mathbb{N} = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, \dots\}
 
 - **Infinitud:** No hi ha un nombre natural que siga més gran que tots els altres. Sempre podem afegir $+1$ i trobar-ne un de major.
 - **Ordre i Recta Numèrica:** Els nombres naturals estan ordenats. Podem representar-los en una recta numèrica:
 
-$$\mathbf{0} \quad 1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 \quad 8 \quad 9 \quad 10 \quad \dots \longrightarrow +\infty$$
+\mathbf{0} \quad 1 \quad 2 \quad 3 \quad 4 \quad 5 \quad 6 \quad 7 \quad 8 \quad 9 \quad 10 \quad \dots \longrightarrow +\infty
 
 Sempre és **menor** aquell nombre que està més a l'esquerra:
 - Utilitzem el símbol **$<$** per a expressar "menor que": $4 < 7$
-- Utilitzem el símbol **$>$** per a expressar "major que": $9 > 3$
+- Utilitzem el símbol **$>$** per a expressar "major que": $9 > 3
 
 ---
 
@@ -314,12 +314,12 @@ Per a sumar dos o més nombres:
 #### Exemple amb Portada:
 Volem calcular **$46 + 27$**:
 
-$$\begin{array}{r@{\quad}l}
+\begin{array}{r@{\quad}l}
   \overset{1}{4}6 & \text{(Unitats: } 6 + 7 = 13 \rightarrow \text{escrivim } 3 \text{ i en portem } 1) \\
 + 27 & \text{(Desenes: } 4 + 2 + 1 = 7) \\
 \hline
   \mathbf{73} & \text{(Resultat final)}
-\end{array}$$
+\end{array}
 
 ---
 
@@ -327,19 +327,19 @@ $$\begin{array}{r@{\quad}l}
 
 Col·loquem el **minuend** (la quantitat inicial) a dalt i el **subtrahend** (la quantitat que llevem) a baix, alineant per unitats:
 
-$$\text{Minuend} - \text{Subtrahend} = \text{Diferència}$$
+\text{Minuend} - \text{Subtrahend} = \text{Diferència}
 
 Quan una xifra del minuend és menor que la del subtrahend, hem de **demanar prestat** a la columna immediatament superior (una desena es converteix en $10$ unitats).
 
 #### Exemple amb Préstec:
 Volem calcular **$32 - 17$**:
 
-$$\begin{array}{r@{\quad}l}
+\begin{array}{r@{\quad}l}
   \overset{2}{3}\,\overset{12}{2} & \text{(Unitats: com } 2 < 7\text{, prenem } 1\text{ desena: } 12 - 7 = 5) \\
 - 1\,\;7 & \text{(Desenes: quedaven } 2\text{ desenes: } 2 - 1 = 1) \\
 \hline
   \mathbf{15} & \text{(Resultat final)}
-\end{array}$$
+\end{array}
 
 ---
 
@@ -347,16 +347,16 @@ $$\begin{array}{r@{\quad}l}
 
 Multiplicar no és més que una **manera ràpida de fer una suma repetida**.
 - Si Andrés compra $6$ sobres de cromos i cadascun porta $5$ cromos, en lloc de fer $5 + 5 + 5 + 5 + 5 + 5$, fem:
-  $$6 \times 5 = 30 \text{ cromos}$$
+$$6 \times 5 = 30 \text{ cromos}
 
 Els nombres que es multipliquen s'anomenen **factors**, i el resultat és el **producte**.
 
-$$\begin{array}{r@{\quad}l}
+\begin{array}{r@{\quad}l}
   58 & \\
 \times 2 & \\
 \hline
   \mathbf{116} & (2 \times 8 = 16 \rightarrow \text{posem } 6 \text{ i en portem } 1; \; 2 \times 5 = 10 + 1 = 11)
-\end{array}$$
+\end{array}
 
 ---
 
@@ -364,15 +364,15 @@ $$\begin{array}{r@{\quad}l}
 
 La divisió consisteix a **repartir una quantitat en parts iguals**. Els seus components són:
 
-- **Dividend ($D$):** La quantitat total que volem repartir.
-- **Divisor ($d$):** En quantes parts iguals repartim.
-- **Quocient ($c$):** El resultat del repartiment (el que li toca a cadascú).
-- **Residu ($r$):** El que sobra (sempre ha de ser menor que el divisor, $r < d$).
+- **Dividend (D):** La quantitat total que volem repartir.
+- **Divisor (d):** En quantes parts iguals repartim.
+- **Quocient (c):** El resultat del repartiment (el que li toca a cadascú).
+- **Residu (r):** El que sobra (sempre ha de ser menor que el divisor, $r < d$).
 
 #### La Prova de la Divisió
 Per comprovar si una divisió està ben resolta, s'ha de complir sempre la igualtat fonamental:
 
-$$\text{Dividend} = (\text{Divisor} \times \text{Quocient}) + \text{Residu} \quad \longrightarrow \quad D = d \times c + r$$
+\text{Dividend} = (\text{Divisor} \times \text{Quocient}) + \text{Residu} \quad \longrightarrow \quad D = d \times c + r
 
 > [!TIP]
 > - Si el residu és **$0$**, la divisió és **exacta**: $D = d \times c$.
@@ -381,7 +381,7 @@ $$\text{Dividend} = (\text{Divisor} \times \text{Quocient}) + \text{Residu} \qua
 #### Exemple Resolts:
 Volem dividir **$754 : 32$**:
 
-$$\begin{array}{r|l}
+\begin{array}{r|l}
   754 & 32 \\
 \cline{2-2}
 - 64 & \mathbf{23} \text{ (Quocient)} \\
@@ -390,12 +390,12 @@ $$\begin{array}{r|l}
 - 96 & \\
 \cline{1-1}
   \mathbf{18} & \text{(Residu } r < d\text{)} \\
-\end{array}$$
+\end{array}
 
 **Prova de la divisió:** $D = d \cdot c + r \implies 754 = 32 \cdot 23 + 18 = 736 + 18 = 754$ *(Correcte)*.
 
 **Comprovació amb la Prova:**
-$$32 \times 23 + 18 = 736 + 18 = 754 \quad \text{(Correcte!)}$$
+$$32 \times 23 + 18 = 736 + 18 = 754 \quad \text{(Correcte!)}
 
 ---
 
@@ -523,14 +523,14 @@ La multiplicació compleix tres propietats matemàtiques clau:
 #### 1) Propietat Commutativa
 > *"L'ordre dels factors no altera el producte."*
 
-$$a \cdot b = b \cdot a$$
+a \cdot b = b \cdot a
 
-- **Exemple:** $10 \cdot 3 = 30$ i $3 \cdot 10 = 30$. El resultat és exactament el mateix.
+- **Exemple:** $10 \cdot 3 = 30i3 \cdot 10 = 30$. El resultat és exactament el mateix.
 
 #### 2) Propietat Associativa
 > *"La forma d'agrupar els factors no varia el resultat."*
 
-$$(a \cdot b) \cdot c = a \cdot (b \cdot c)$$
+(a \cdot b) \cdot c = a \cdot (b \cdot c)
 
 - **Exemple:** $(3 \cdot 2) \cdot 5 = 6 \cdot 5 = 30$
 - Agrupant d'una altra manera: $3 \cdot (2 \cdot 5) = 3 \cdot 10 = 30$.
@@ -538,11 +538,11 @@ $$(a \cdot b) \cdot c = a \cdot (b \cdot c)$$
 #### 3) Propietat Distributiva (respecte a la suma i la resta)
 > *"La multiplicació d'un nombre per una suma és igual a la suma dels productes d'aquest nombre per cadascun dels sumands."*
 
-$$a \cdot (b + c) = (a \cdot b) + (a \cdot c)$$
+a \cdot (b + c) = (a \cdot b) + (a \cdot c)
 
 - **Exemple:** $2 \cdot (3 + 5)$
   - *Mètode A (resolent el parèntesi primer):* $2 \cdot 8 = 16$
-  - *Mètode B (aplicant propietat distributiva):* $(2 \cdot 3) + (2 \cdot 5) = 6 + 10 = 16$
+  - *Mètode B (aplicant propietat distributiva):* $(2 \cdot 3) + (2 \cdot 5) = 6 + 10 = 16
 
 > [!WARNING]
 > **I la Divisió?**
@@ -568,7 +568,7 @@ flowchart TD
 #### Exemples Resolts Pas a Pas:
 
 ##### Exemple A: Sense Parèntesis
-Calcular: $6 : 2 + 5 - 12 : 4$
+Calcular: $6 : 2 + 5 - 12 : 4
 
 1. Primer fem les divisions (d'esquerra a dreta):
    - $6 : 2 = 3$
@@ -580,7 +580,7 @@ Calcular: $6 : 2 + 5 - 12 : 4$
    - **Resultat final: $5$**
 
 ##### Exemple B: Amb Parèntesis
-Calcular: $40 : 8 - (30 : 6 + 2)$
+Calcular: $40 : 8 - (30 : 6 + 2)
 
 1. Resolem primer l'interior del parèntesi:
    - Dins del parèntesi hi ha divisió i suma $\rightarrow$ primer la divisió: $30 : 6 = 5$
@@ -590,7 +590,7 @@ Calcular: $40 : 8 - (30 : 6 + 2)$
 4. Fem la resta: $5 - 7$ *(en nombres naturals no podem restar si el minuend és menor, per la qual cosa en $\mathbb{N}$ caldrà que el resultat siga positiu; en aquest cas $40:8$ dóna 5)*.
 
 ##### Exemple C: Amb Claudàtors i Parèntesis
-Calcular: $10 \cdot [(6 - 5) + (9 - 4)]$
+Calcular: $10 \cdot [(6 - 5) + (9 - 4)]
 
 1. Resolem primer els parèntesis interiors:
    - $(6 - 5) = 1$
@@ -718,20 +718,20 @@ Calcular: $10 \cdot [(6 - 5) + (9 - 4)]$
 
 Una **potència** és una forma abreujada d'expressar una multiplicació de factors iguals (una multiplicació repetida):
 
-$$a^n = \underbrace{a \cdot a \cdot a \dots a}_{n \text{ vegades}}$$
+a^n = \underbrace{a \cdot a \cdot a \dots a}_{n \text{ vegades}}
 
 Una potència està formada per dos elements:
 
-- **Base ($a$):** El nombre que es multiplica per si mateix.
-- **Exponent ($n$):** El nombre de vegades que es repeteix la base.
+- **Base (a):** El nombre que es multiplica per si mateix.
+- **Exponent (n):** El nombre de vegades que es repeteix la base.
 
-$$\underbrace{\mathbf{2}}_{\text{Base: el nombre que es repeteix}}^{\overbrace{\mathbf{3}}^{\text{Exponent: quantes vegades es multiplica}}} = 2 \cdot 2 \cdot 2 = \mathbf{8}$$
+\underbrace{\mathbf{2}}_{\text{Base: el nombre que es repeteix}}^{\overbrace{\mathbf{3}}^{\text{Exponent: quantes vegades es multiplica}}} = 2 \cdot 2 \cdot 2 = \mathbf{8}
 
 #### Exemples Didàctics:
 - $3^4 = 3 \cdot 3 \cdot 3 \cdot 3 = 81$
 - $5^2 = 5 \cdot 5 = 25$ *(es llig "cinc al quadrat")*
 - $2^3 = 2 \cdot 2 \cdot 2 = 8$ *(es llig "dos al cub")*
-- $10^3 = 10 \cdot 10 \cdot 10 = 1.000$
+- $10^3 = 10 \cdot 10 \cdot 10 = 1.000
 
 > [!IMPORTANT]
 > **Alerta amb un error molt típic:**

@@ -2831,4 +2831,6 @@ body.pdi-fullscreen-mode #pdi-game-view {
 <!-- INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN -->
 
 <script src="{{ 'pissarra-mates.js' | relative_url }}?v=1"></script>
-<script src="pissarra-mates.js?v=1"></script>
+
+<!-- INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN -->
+<script src="./pissarra-mates.js?v=3"></script>

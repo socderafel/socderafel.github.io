@@ -4722,4 +4722,6 @@ body.pdi-fullscreen-mode #pdi-game-view {
 
 <!-- INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN -->
 <script src="{{ 'pissarra-interactiva.js' | relative_url }}?v=5"></script>
-<script src="pissarra-interactiva.js?v=5"></script>
+
+<!-- INCLUSIÓ DEL MOTOR JAVASCRIPT EXTERN -->
+<script src="./pissarra-interactiva.js?v=6"></script>

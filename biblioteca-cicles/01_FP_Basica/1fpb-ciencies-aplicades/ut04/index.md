@@ -137,12 +137,12 @@ La **divisibilitat** és la branca de l'aritmètica que estudia les condicions p
 
 Diem que dos nombres naturals estan emparentats per la **relació de divisibilitat** quan la divisió del primer entre el segon és **exacta** (el residu és $0$):
 
-$$\text{Si } a : b = c \quad (\text{residu } 0) \iff a = b \cdot c$$
+\text{Si } a : b = c \quad (\text{residu } 0) \iff a = b \cdot c
 
 En aquest cas, podem expressar aquesta mateixa relació de tres formes equivalents:
-1. **$a$ és múltiple de $b$:** Perquè s'obté multiplicant $b$ per un altre nombre natural $c$.
-2. **$b$ és divisor de $a$:** Perquè divideix exactament a $a$.
-3. **$a$ és divisible per $b$:** Perquè la divisió $a : b$ és exacta.
+1. **a és múltiple de b:** Perquè s'obté multiplicant b per un altre nombre natural c.
+2. **b és divisor de a:** Perquè divideix exactament a a.
+3. **a és divisible per b:** Perquè la divisió $a : b$ és exacta.
 
 > **Exemple clar:** $24 : 6 = 4$ (residu $0$).
 > - $24$ és múltiple de $6$.
@@ -155,7 +155,7 @@ En aquest cas, podem expressar aquesta mateixa relació de tres formes equivalen
 
 Els **múltiples** d'un nombre s'obtenen multiplicant aquest nombre per qualsevol nombre natural ($0, 1, 2, 3, 4, \dots$):
 
-$$\dot{a} \text{ o } \text{Múlt}(a) = \{a \cdot 0, a \cdot 1, a \cdot 2, a \cdot 3, \dots\}$$
+\dot{a} \text{ o } \text{Múlt}(a) = \{a \cdot 0, a \cdot 1, a \cdot 2, a \cdot 3, \dots\}
 
 - **Propietats dels múltiples:**
   - Tot nombre té **infinits múltiples**.
@@ -163,13 +163,13 @@ $$\dot{a} \text{ o } \text{Múlt}(a) = \{a \cdot 0, a \cdot 1, a \cdot 2, a \cdo
   - Tot nombre és múltiple de si mateix: $a \cdot 1 = a$.
 
 > **Exemple:** Múltiples de $7$:  
-> $\text{Múlt}(7) = \{0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, \dots\}$
+> $\text{Múlt}(7) = \{0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, \dots\}
 
 ---
 
 ### 3. Com Trobar Tots els Divisors d'un Nombre
 
-Un nombre $b$ és **divisor** de $a$ si la divisió $a : b$ no té residu.
+Un nombre b és **divisor** de a si la divisió $a : b$ no té residu.
 
 - **Propietats dels divisors:**
   - El conjunt de divisors d'un nombre és **finit** (té un nombre limitat d'elements).
@@ -180,14 +180,14 @@ Un nombre $b$ és **divisor** de $a$ si la divisió $a : b$ no té residu.
 Dividim el nombre successivament entre $1, 2, 3, 4, \dots$ fins que el quocient siga menor o igual que el divisor:
 
 > **Exemple:** Calculem tots els divisors de $36$:
-> - $36 : 1 = 36 \longrightarrow$ divisors: **$1$ i $36$**
-> - $36 : 2 = 18 \longrightarrow$ divisors: **$2$ i $18$**
-> - $36 : 3 = 12 \longrightarrow$ divisors: **$3$ i $12$**
-> - $36 : 4 = 9 \longrightarrow$ divisors: **$4$ i $9$**
+> - $36 : 1 = 36 \longrightarrow$ divisors: **$1i36$**
+> - $36 : 2 = 18 \longrightarrow$ divisors: **$2i18$**
+> - $36 : 3 = 12 \longrightarrow$ divisors: **$3i12$**
+> - $36 : 4 = 9 \longrightarrow$ divisors: **$4i9$**
 > - $36 : 5$ no és exacta (residu $1$).
 > - $36 : 6 = 6 \longrightarrow$ divisor: **$6$**
 > 
-> $\text{Div}(36) = \{1, 2, 3, 4, 6, 9, 12, 18, 36\}$
+> $\text{Div}(36) = \{1, 2, 3, 4, 6, 9, 12, 18, 36\}
 
 ---
 
@@ -258,11 +258,11 @@ Els nombres primers són els "blocs de construcció" o els àtoms de l'aritmèti
 Segons la quantitat de divisors que té un nombre natural major que 1, podem classificar-lo en:
 
 - **Nombre Primer:** És aquell que **només té dos divisors positius**: l'**1** i **ell mateix**.
-  $$\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, \dots\}$$
+$$\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, \dots\}$$
   - El **$2$ és l'únic nombre primer parell** (tots els altres parells es poden dividir entre 2).
   - El nombre **$1$ no és ni primer ni compost**, ja que només té un únic divisor (ell mateix).
 - **Nombre Compost:** És aquell que té **més de dos divisors** (es pot expressar com a producte d'altres nombres menors que ell).
-  $$\{4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, \dots\}$$
+$$\{4, 6, 8, 9, 10, 12, 14, 15, 16, 18, 20, 21, \dots\}
 
 ---
 
@@ -302,10 +302,10 @@ $$\begin{array}{r|l}
 15 & 3 \\
 5 & 5 \\
 1 & 
-\end{array}$$
+\end{array}
 
 El nombre $60$ factoritzat s'escriu:
-$$60 = 2 \cdot 2 \cdot 3 \cdot 5 = \mathbf{2^2 \cdot 3 \cdot 5}$$
+$$60 = 2 \cdot 2 \cdot 3 \cdot 5 = \mathbf{2^2 \cdot 3 \cdot 5}
 
 ---
 
@@ -317,9 +317,9 @@ $$\begin{array}{r|l}
 15 & 3 \\
 5 & 5 \\
 1 & 
-\end{array}$$
+\end{array}
 
-$$180 = \mathbf{2^2 \cdot 3^2 \cdot 5}$$
+180 = \mathbf{2^2 \cdot 3^2 \cdot 5}
 
 ---
 
@@ -332,9 +332,9 @@ $$\begin{array}{r|l}
 21 & 3 \\
 7 & 7 \\
 1 & 
-\end{array}$$
+\end{array}
 
-$$504 = \mathbf{2^3 \cdot 3^2 \cdot 7}$$
+504 = \mathbf{2^3 \cdot 3^2 \cdot 7}
 
 ---
 
@@ -401,12 +401,12 @@ El càlcul del Màxim Comú Divisor i del Mínim Comú Múltiple és una eina cl
 El **Màxim Comú Divisor** de dos o més nombres és el **més gran dels divisors que tenen en comú**.
 
 #### A) Mètode per Llistat de Divisors
-Vegem els divisors de $12$ i $18$:
+Vegem els divisors de $12i18$:
 - $\text{Div}(12) = \{1, 2, 3, 4, \mathbf{6}, 12\}$
 - $\text{Div}(18) = \{1, 2, 3, \mathbf{6}, 9, 18\}$
 - Divisors comuns: $\{1, 2, 3, \mathbf{6}\}$
 - El més gran de tots és el **$6$**:
-  $$\text{MCD}(12, 18) = \mathbf{6}$$
+$$\text{MCD}(12, 18) = \mathbf{6}
 
 #### B) Mètode Òptim per Descomposició en Factors Primers
 
@@ -421,8 +421,8 @@ Vegem els divisors de $12$ i $18$:
    - $72 = 2^3 \cdot 3^2$
    - $108 = 2^2 \cdot 3^3$
 2. Factors comuns: El $2$ i el $3$.
-3. Menors exponents: $2^2$ i $3^2$.
-$$\text{MCD}(72, 108) = 2^2 \cdot 3^2 = 4 \cdot 9 = \mathbf{36}$$
+3. Menors exponents: $2^2i3^2$.
+$$\text{MCD}(72, 108) = 2^2 \cdot 3^2 = 4 \cdot 9 = \mathbf{36}
 
 > [!NOTE]
 > ### Nombres Primers Entre Si
@@ -436,12 +436,12 @@ $$\text{MCD}(72, 108) = 2^2 \cdot 3^2 = 4 \cdot 9 = \mathbf{36}$$
 El **Mínim Comú Múltiple** de dos o més nombres és el **més petit dels seus múltiples comuns positius** (sense comptar el zero).
 
 #### A) Mètode per Llistat de Múltiples
-Vegem els múltiples positius de $4$ i $6$:
+Vegem els múltiples positius de $4i6$:
 - $\text{Múlt}(4) = \{4, 8, \mathbf{12}, 16, 20, \mathbf{24}, 28, 32, \mathbf{36}, \dots\}$
 - $\text{Múlt}(6) = \{6, \mathbf{12}, 18, \mathbf{24}, 30, \mathbf{36}, \dots\}$
 - Múltiples comuns: $\{12, 24, 36, \dots\}$
 - El més petit és el **$12$**:
-  $$\text{MCM}(4, 6) = \mathbf{12}$$
+$$\text{MCM}(4, 6) = \mathbf{12}
 
 #### B) Mètode Òptim per Descomposició en Factors Primers
 
@@ -455,9 +455,9 @@ Vegem els múltiples positius de $4$ i $6$:
 1. Descomposem:
    - $72 = 2^3 \cdot 3^2$
    - $108 = 2^2 \cdot 3^3$
-2. Factors comuns i no comuns: $2$ i $3$.
-3. Majors exponents: $2^3$ i $3^3$.
-$$\text{MCM}(72, 108) = 2^3 \cdot 3^3 = 8 \cdot 27 = \mathbf{216}$$
+2. Factors comuns i no comuns: $2i3$.
+3. Majors exponents: $2^3i3^3$.
+$$\text{MCM}(72, 108) = 2^3 \cdot 3^3 = 8 \cdot 27 = \mathbf{216}
 
 ---
 
@@ -469,12 +469,12 @@ $$\text{MCM}(72, 108) = 2^3 \cdot 3^3 = 8 \cdot 27 = \mathbf{216}$$
 | **MCM** (Mínim Comú Múltiple) | El múltiple més menut possible | **COMUNS i NO COMUNS** | Al **MAJOR** exponent |
 
 #### Propietat Fonamental per a Dos Nombres
-Per a qualsevol parella de nombres naturals $a$ i $b$, el producte del seu MCD pel seu MCM és exactament igual al producte dels dos nombres:
+Per a qualsevol parella de nombres naturals a i b, el producte del seu MCD pel seu MCM és exactament igual al producte dels dos nombres:
 
-$$\text{MCD}(a, b) \cdot \text{MCM}(a, b) = a \cdot b$$
+\text{MCD}(a, b) \cdot \text{MCM}(a, b) = a \cdot b
 
-Comprovació amb $72$ i $108$:
-$$36 \cdot 216 = 7.776 \qquad \text{i} \qquad 72 \cdot 108 = 7.776 \quad \checkmark$$
+Comprovació amb $72i108$:
+$$36 \cdot 216 = 7.776 \qquad \text{i} \qquad 72 \cdot 108 = 7.776 \quad \checkmark
 
 ---
 
@@ -548,7 +548,7 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
 ### 📌 Problemes Models Resolts Pas a Pas
 
 #### Problema 1 (Model MCD): Tallar Cordes a la Màxima Longitud
-> **Enunciat:** Maria té dues cordes que mesuren $12\text{ metres}$ i $18\text{ metres}$ respectivament. Vol tallar-les en trossos de la mateixa mida, de manera que els trossos siguen el més llargs possible i no sobre cap tros de corda.
+> **Enunciat:** Maria té dues cordes que mesuren 12 metres i 18 metres respectivament. Vol tallar-les en trossos de la mateixa mida, de manera que els trossos siguen el més llargs possible i no sobre cap tros de corda.
 > - a) Quant mesurarà cada tros de corda?
 > - b) Quants trossos obtindrà en total?
 
@@ -557,7 +557,7 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
    - $12 = 2^2 \cdot 3$
    - $18 = 2 \cdot 3^2$
    - $\text{MCD}(12, 18) = 2 \cdot 3 = \mathbf{6\text{ metres}}$
-   *Resposta a:* Cada tros de corda mesurarà **$6\text{ metres}$**.
+   *Resposta a:* Cada tros de corda mesurarà **6 metres**.
 2. Nombre de trossos obtinguts:
    - De la corda de 12 m: $12 : 6 = 2\text{ trossos}$.
    - De la corda de 18 m: $18 : 6 = 3\text{ trossos}$.
@@ -566,7 +566,7 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
 ---
 
 #### Problema 2 (Model MCM): Coincidència Temporal
-> **Enunciat:** Uxía i Raúl s'apunten a classes de ball en una acadèmia. Uxía assisteix a classe cada $4\text{ dies}$ i Raúl hi va cada $6\text{ dies}$. Si hui han coincidit a la pista de ball:
+> **Enunciat:** Uxía i Raúl s'apunten a classes de ball en una acadèmia. Uxía assisteix a classe cada 4 dies i Raúl hi va cada 6 dies. Si hui han coincidit a la pista de ball:
 > - D'ací a quants dies tornaran a coincidir per primera vegada?
 > - Quantes classes haurà fet cadascun fins a eixe moment?
 
@@ -575,7 +575,7 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
    - $4 = 2^2$
    - $6 = 2 \cdot 3$
    - $\text{MCM}(4, 6) = 2^2 \cdot 3 = 4 \cdot 3 = \mathbf{12\text{ dies}}$
-   *Resposta 1:* Tornaran a coincidir exactament d'ací a **$12\text{ dies}$**.
+   *Resposta 1:* Tornaran a coincidir exactament d'ací a **12 dies**.
 2. Classes d'Uxía i Raúl:
    - Uxía haurà fet: $12 : 4 = \mathbf{3\text{ classes}}$.
    - Raúl haurà fet: $12 : 6 = \mathbf{2\text{ classes}}$.
@@ -583,16 +583,16 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
 ---
 
 #### Problema 3 (Model MCD): Envasar Líquids en Garrafes
-> **Enunciat:** Una cooperativa agrària té dos dipòsits d'oli: un amb $240\text{ litres}$ d'oli verge extra i un altre amb $360\text{ litres}$ d'oli d'oliva suau. Volen envasar tot l'oli en garrafes de la mateixa capacitat màxima possible, sense barrejar olis i sense que en sobre ni una gota.
+> **Enunciat:** Una cooperativa agrària té dos dipòsits d'oli: un amb 240 litres d'oli verge extra i un altre amb 360 litres d'oli d'oliva suau. Volen envasar tot l'oli en garrafes de la mateixa capacitat màxima possible, sense barrejar olis i sense que en sobre ni una gota.
 > - Quina deu ser la capacitat màxima de cada garrafa?
 > - Quantes garrafes faran falta en total?
 
 **Resolució:**
-1. Calculem l'**MCD** de $240$ i $360$:
+1. Calculem l'**MCD** de $240i360$:
    - $240 = 2^4 \cdot 3 \cdot 5$
    - $360 = 2^3 \cdot 3^2 \cdot 5$
    - $\text{MCD}(240, 360) = 2^3 \cdot 3 \cdot 5 = 8 \cdot 3 \cdot 5 = \mathbf{120\text{ litres}}$
-   *Resposta:* Cada garrafa tindrà una capacitat de **$120\text{ litres}$**.
+   *Resposta:* Cada garrafa tindrà una capacitat de **120 litres**.
 2. Garrafes necessàries:
    - De verge extra: $240 : 120 = 2\text{ garrafes}$.
    - De suau: $360 : 120 = 3\text{ garrafes}$.
@@ -601,15 +601,15 @@ Saber si un problema de la vida real es resol mitjançant el **Màxim Comú Divi
 ---
 
 #### Problema 4 (Model MCM): Parpelleig de Llums
-> **Enunciat:** En un rètol lluminós hi ha tres circuits de neó: el primer s'encén cada $8\text{ segons}$, el segon cada $12\text{ segons}$ i el tercer cada $18\text{ segons}$. A les $20:00\text{ h}$ s'han encés tots tres simultàniament. Cada quants segons s'encendran alhora?
+> **Enunciat:** En un rètol lluminós hi ha tres circuits de neó: el primer s'encén cada 8 segons, el segon cada 12 segons i el tercer cada 18 segons. A les $20:00\text{ h}$ s'han encés tots tres simultàniament. Cada quants segons s'encendran alhora?
 
 **Resolució:**
-1. Calculem l'**MCM** de $8, 12$ i $18$:
+1. Calculem l'**MCM** de $8, 12i18$:
    - $8 = 2^3$
    - $12 = 2^2 \cdot 3$
    - $18 = 2 \cdot 3^2$
    - $\text{MCM}(8, 12, 18) = 2^3 \cdot 3^2 = 8 \cdot 9 = \mathbf{72\text{ segons}}$
-   *Resposta:* S'encendran tots tres alhora cada **$72\text{ segons}$** ($1\text{ minut}$ i $12\text{ segons}$).
+   *Resposta:* S'encendran tots tres alhora cada **72 segons** (1 minut i 12 segons).
 
 ---
 

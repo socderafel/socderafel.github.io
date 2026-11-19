@@ -124,7 +124,7 @@ Benvingut/da a la **Unitat Didàctica 3** del bloc de Matemàtiques de Ciències
 
 ## 📌 3.1 El Conjunt dels Nombres Enters i Contextos Reals {#sec3-1}
 
-En la vida quotidiana, els nombres naturals ($\mathbb{N} = \{0, 1, 2, 3, \dots\}$) resulten insuficients per expressar determinades situacions reals. Per exemple, com podem expressar que el termòmetre marca cinc graus sota zero, o que tenim un deute de $20\text{ €}$ al banc? Per a resoldre aquestes necessitats van nàixer els **nombres negatius**.
+En la vida quotidiana, els nombres naturals ($\mathbb{N} = \{0, 1, 2, 3, \dots\}$) resulten insuficients per expressar determinades situacions reals. Per exemple, com podem expressar que el termòmetre marca cinc graus sota zero, o que tenim un deute de 20 € al banc? Per a resoldre aquestes necessitats van nàixer els **nombres negatius**.
 
 ---
 
@@ -135,10 +135,10 @@ Els nombres negatius s'escriuen precedits pel signe menys ($-$) i representen va
 | Context Real | Situació Positiva ($+$) | Punt Zero ($0$) | Situació Negativa ($-$) |
 | :--- | :--- | :--- | :--- |
 | **Temperatura** | Fa calor: $+18\text{ }^\circ\text{C}$ (sobre zero) | Punt de congelació: $0\text{ }^\circ\text{C}$ | Fa gelor: $-5\text{ }^\circ\text{C}$ (5 graus sota zero) |
-| **Economia i diners** | Tinc diners / Ingressos: $+50\text{ €}$ | Sense diners: $0\text{ €}$ | Tinc deutes / Pèrdues: $-20\text{ €}$ |
-| **Altitud i relleu** | Cim d'una muntanya: $+1.500\text{ m}$ | Nivell del mar: $0\text{ m}$ | Submarí o fossa marina: $-120\text{ m}$ |
+| **Economia i diners** | Tinc diners / Ingressos: $+50\text{ €}$ | Sense diners: 0 € | Tinc deutes / Pèrdues: $-20\text{ €}$ |
+| **Altitud i relleu** | Cim d'una muntanya: $+1.500\text{ m}$ | Nivell del mar: 0 m | Submarí o fossa marina: $-120\text{ m}$ |
 | **Plantes d'un edifici** | Pisos alts: Planta $+3$ | Planta baixa: Planta $0$ | Soterranis i pàrquing: Soterrani $-2$ |
-| **Història i cronologia** | Segle XXI dC (després de Crist) | Naixement de Crist: Any $0$ | any $212\text{ aC}$ (abans de Crist: $-212$) |
+| **Història i cronologia** | Segle XXI dC (després de Crist) | Naixement de Crist: Any $0$ | any 212 aC (abans de Crist: $-212$) |
 
 > [!TIP]
 > Quan un nombre és positiu, podem escriure'l amb el signe més davant o sense cap signe:  
@@ -151,9 +151,9 @@ Els nombres negatius s'escriuen precedits pel signe menys ($-$) i representen va
 El conjunt dels **nombres enters** es representa amb la lletra **$\mathbb{Z}$** (de l'alemany *Zahlen*, nombres) i està format per:
 - Els **nombres enters positius** ($\mathbb{Z}^+$): $+1, +2, +3, +4, \dots$ (que coincideixen amb els naturals $\mathbb{N}$).
 - El **zero** ($0$): ni positiu ni negatiu, és el punt neutre.
-- Els **nombres enters negatius** ($\mathbb{Z}^-$): $-1, -2, -3, -4, \dots$
+- Els **nombres enters negatius** ($\mathbb{Z}^-$): $-1, -2, -3, -4, \dots
 
-$$\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, +1, +2, +3, +4, \dots\}$$
+\mathbb{Z} = \{\dots, -4, -3, -2, -1, 0, +1, +2, +3, +4, \dots\}
 
 ```mermaid
 flowchart TD
@@ -173,7 +173,7 @@ Els nombres enters es representen ordenadament sobre una recta horitzontal:
 2. A la **dreta del zero** col·loquem els nombres positius en ordre creixent ($+1, +2, +3, \dots$).
 3. A l'**esquerra del zero** col·loquem els nombres negatius en sentit decreixent ($-1, -2, -3, \dots$).
 
-$$\longleftarrow \text{Menors } (\mathbb{Z}^-) \quad -4 \quad -3 \quad -2 \quad -1 \quad \mathbf{0} \quad +1 \quad +2 \quad +3 \quad +4 \quad +5 \quad (\mathbb{Z}^+) \text{ Majors} \longrightarrow$$
+\longleftarrow \text{Menors } (\mathbb{Z}^-) \quad -4 \quad -3 \quad -2 \quad -1 \quad \mathbf{0} \quad +1 \quad +2 \quad +3 \quad +4 \quad +5 \quad (\mathbb{Z}^+) \text{ Majors} \longrightarrow
 
 #### Criteri d'Ordenació
 Un nombre enter és **més gran que un altre** si està situat més a la **dreta** en la recta numèrica:
@@ -181,7 +181,7 @@ Un nombre enter és **més gran que un altre** si està situat més a la **dreta
 - Qualsevol nombre negatiu és més petit que el zero: $-3 < 0$.
 - Qualsevol nombre positiu és més gran que qualsevol negatiu: $+2 > -50$.
 - Entre dos nombres negatius, és **més gran el que està més a prop del zero**:  
-  $$-2 > -7 \quad (\text{perquè } -2 \text{ està més a la dreta que } -7)$$
+$$-2 > -7 \quad (\text{perquè } -2 \text{ està més a la dreta que } -7)
 
 ---
 
@@ -194,7 +194,7 @@ Com que és una distància, el valor absolut **sempre és un nombre positiu o ze
 - $|+5| = 5$ (està a 5 passos del zero cap a la dreta).
 - $|-5| = 5$ (està a 5 passos del zero cap a l'esquerra).
 - $|0| = 0$
-- $|-14| = 14$
+- $|-14| = 14
 
 #### B) El Nombre Oposat ($\text{Op}(a)$)
 L'**oposat** d'un nombre enter és un altre nombre enter que té el **mateix valor absolut però signe contrari**. Estan a la mateixa distància del zero però en costats oposats de la recta numèrica:
@@ -296,19 +296,19 @@ Quan sumem dos nombres enters, ens podem trobar amb dos casos:
 
 #### Cas 1: Nombres amb el Mateix Signe
 Si els dos nombres tenen el mateix signe, **sumem els seus valors absoluts** i posem al resultat el **signe comú**:
-- **Dos positius:** Tinc $5\text{ €}$ i en guanye $3\text{ €}$, en tinc $8\text{ €}$.
-  $$(+5) + (+3) = +8$$
-- **Dos negatius:** Dec $4\text{ €}$ i en gaste altres $6\text{ €}$, dec en total $10\text{ €}$.
-  $$(-4) + (-6) = -10$$
+- **Dos positius:** Tinc 5 € i en guanye 3 €, en tinc 8 €.
+$$(+5) + (+3) = +8$$
+- **Dos negatius:** Dec 4 € i en gaste altres 6 €, dec en total 10 €.
+$$(-4) + (-6) = -10
 
 #### Cas 2: Nombres amb Signes Diferents
 Si els dos nombres tenen signes diferents, **restem els seus valors absoluts** (el més gran menys el més petit) i posem el **signe del nombre que té major valor absolut**:
-- Tinc $10\text{ €}$ i en dec $4\text{ €}$, em queden $6\text{ €}$:
-  $$(+10) + (-4) = +6$$
-- Tinc $3\text{ €}$ i en dec $8\text{ €}$, continue devent $5\text{ €}$:
-  $$(+3) + (-8) = -5$$
-- Dec $12\text{ €}$ i en pague $12\text{ €}$, em quede a zero:
-  $$(-12) + (+12) = 0 \quad \text{(La suma de dos nombres oposats sempre és 0)}$$
+- Tinc 10 € i en dec 4 €, em queden 6 €:
+$$(+10) + (-4) = +6$$
+- Tinc 3 € i en dec 8 €, continue devent 5 €:
+$$(+3) + (-8) = -5$$
+- Dec 12 € i en pague 12 €, em quede a zero:
+$$(-12) + (+12) = 0 \quad \text{(La suma de dos nombres oposats sempre és 0)}
 
 ---
 
@@ -317,13 +317,13 @@ Si els dos nombres tenen signes diferents, **restem els seus valors absoluts** (
 > [!IMPORTANT]
 > ### Regla de la Resta
 > **Restar un nombre enter equival a sumar el seu oposat:**
-> $$a - b = a + \text{Op}(b)$$
+> $$a - b = a + \text{Op}(b)
 
 Vegem alguns exemples:
 - $(+7) - (+2) = (+7) + (-2) = +5$
 - $(+4) - (+9) = (+4) + (-9) = -5$
 - $(-6) - (+3) = (-6) + (-3) = -9$
-- $(+5) - (-8) = (+5) + (+8) = +13$
+- $(+5) - (-8) = (+5) + (+8) = +13
 
 ---
 
@@ -342,7 +342,7 @@ Quan un signe està just davant d'un parèntesi, podem eliminar el parèntesi se
 $$+(-7) = -7$$
 $$-(-15) = +15$$
 $$-(+9) = -9$$
-$$+(+4) = +4$$
+$$+(+4) = +4
 
 ---
 
@@ -355,17 +355,17 @@ Quan tenim una cadena llarga de sumes i restes d'enters, el mètode més net i s
 
 #### Exemple resolt pas a pas:
 Calcula el valor de la següent expressió:
-$$(-8) - (-12) + (+5) - (+9) + (-3) - (-7)$$
+$$(-8) - (-12) + (+5) - (+9) + (-3) - (-7)
 
 **Pas 1: Llevem parèntesis:**
-$$-8 + 12 + 5 - 9 - 3 + 7$$
+$$-8 + 12 + 5 - 9 - 3 + 7
 
 **Pas 2: Agrupem positius i negatius:**
 - Positius: $+12 + 5 + 7 = +24$
-- Negatius: $-8 - 9 - 3 = -20$
+- Negatius: $-8 - 9 - 3 = -20
 
 **Pas 3: Calculem el resultat final:**
-$$+24 - 20 = \mathbf{+4}$$
+$$+24 - 20 = \mathbf{+4}
 
 ---
 
@@ -483,7 +483,7 @@ La regla dels signes és idèntica tant per a la **multiplicació** com per a la
 - $(+20) : (+5) = +4$
 - $(-36) : (-6) = +6$
 - $(+42) : (-7) = -6$
-- $(-40) : (+8) = -5$
+- $(-40) : (+8) = -5
 
 > [!TIP]
 > ### Producte de Múltiples Factors
@@ -491,7 +491,7 @@ La regla dels signes és idèntica tant per a la **multiplicació** com per a la
 > - Si el nombre de factors negatius és **PARELL**, el resultat és **POSITIU ($+$)**:  
 >   $$(-2) \cdot (-3) \cdot (-4) \cdot (-5) = +120 \quad \text{(4 negatius, parell)}$$
 > - Si el nombre de factors negatius és **IMPARELL**, el resultat és **NEGATIU ($-$)**:  
->   $$(-2) \cdot (-3) \cdot (-4) = -24 \quad \text{(3 negatius, imparell)}$$
+>   $$(-2) \cdot (-3) \cdot (-4) = -24 \quad \text{(3 negatius, imparell)}
 
 ---
 
@@ -499,14 +499,14 @@ La regla dels signes és idèntica tant per a la **multiplicació** com per a la
 
 La multiplicació compleix la **propietat distributiva** respecte a la suma i la resta:
 
-$$a \cdot (b + c) = a \cdot b + a \cdot c$$
+a \cdot (b + c) = a \cdot b + a \cdot c
 
 #### Exemple de propietat distributiva:
-$$(-3) \cdot (4 - 7) = (-3) \cdot 4 - (-3) \cdot 7 = -12 - (-21) = -12 + 21 = +9$$
+$$(-3) \cdot (4 - 7) = (-3) \cdot 4 - (-3) \cdot 7 = -12 - (-21) = -12 + 21 = +9
 
 #### Extreure Factor Comú:
 És el procés invers a la propietat distributiva:
-$$(-5) \cdot 6 + (-5) \cdot 4 = (-5) \cdot (6 + 4) = (-5) \cdot 10 = -50$$
+$$(-5) \cdot 6 + (-5) \cdot 4 = (-5) \cdot (6 + 4) = (-5) \cdot 10 = -50
 
 ---
 
@@ -529,40 +529,40 @@ flowchart TD
 
 #### Exemple 1: Operacions bàsiques combinades
 Calcula:
-$$4 - 2 \cdot 5 + 8 : (-2)$$
+$$4 - 2 \cdot 5 + 8 : (-2)
 
 **Pas 1: Fem multiplicacions i divisions primer:**
 - $2 \cdot 5 = 10$
-- $8 : (-2) = -4$
+- $8 : (-2) = -4
 
 L'expressió queda:
-$$4 - 10 + (-4) = 4 - 10 - 4$$
+$$4 - 10 + (-4) = 4 - 10 - 4
 
 **Pas 2: Fem sumes i restes:**
-$$4 - 14 = \mathbf{-10}$$
+$$4 - 14 = \mathbf{-10}
 
 ---
 
 #### Exemple 2: Amb parèntesis i claudàtors
 Calcula:
-$$-36 : [-8 : (-5 + 3) + 12 : (-2 + 2 \cdot 4)]$$
+$$-36 : [-8 : (-5 + 3) + 12 : (-2 + 2 \cdot 4)]
 
 **Pas 1: Resolem els parèntesis més interns:**
 - $(-5 + 3) = -2$
-- $(-2 + 2 \cdot 4) = (-2 + 8) = +6$
+- $(-2 + 2 \cdot 4) = (-2 + 8) = +6
 
 Substituïm:
-$$-36 : [-8 : (-2) + 12 : 6]$$
+$$-36 : [-8 : (-2) + 12 : 6]
 
 **Pas 2: Resolem les divisions dins del claudàtor:**
 - $-8 : (-2) = +4$
-- $12 : 6 = +2$
+- $12 : 6 = +2
 
 Substituïm:
-$$-36 : [4 + 2] = -36 : [6]$$
+$$-36 : [4 + 2] = -36 : [6]
 
 **Pas 3: Divisió final:**
-$$-36 : 6 = \mathbf{-6}$$
+$$-36 : 6 = \mathbf{-6}
 
 ---
 
@@ -633,9 +633,9 @@ $$-36 : 6 = \mathbf{-6}$$
 
 Una **potència** és una forma abreujada d'escriure una multiplicació de factors iguals:
 
-$$a^n = \underbrace{a \cdot a \cdot a \cdot \dots \cdot a}_{n \text{ vegades}}$$
+a^n = \underbrace{a \cdot a \cdot a \cdot \dots \cdot a}_{n \text{ vegades}}
 
-On **$a$** és la **base** (el nombre que es repeteix) i **$n$** és l'**exponent** (el nombre de vegades que es multiplica).
+On **a** és la **base** (el nombre que es repeteix) i **n** és l'**exponent** (el nombre de vegades que es multiplica).
 
 ---
 
@@ -664,33 +664,33 @@ Les propietats de les potències permeten simplificar càlculs complexos de form
 
 #### 1. Exponent Zero i Exponent U
 - Qualsevol nombre enter (diferent de zero) elevat a zero és igual a $1$:
-  $$a^0 = 1 \quad \longrightarrow \quad (-5)^0 = 1, \quad 8^0 = 1$$
+$$a^0 = 1 \quad \longrightarrow \quad (-5)^0 = 1, \quad 8^0 = 1$$
 - Qualsevol nombre elevat a $1$ és igual a ell mateix:
-  $$a^1 = a \quad \longrightarrow \quad (-7)^1 = -7$$
+$$a^1 = a \quad \longrightarrow \quad (-7)^1 = -7
 
 #### 2. Producte de Potències de la Mateixa Base
 Es manté la mateixa base i **se sumen els exponents**:
 $$a^m \cdot a^n = a^{m+n}$$
-$$(-4)^3 \cdot (-4)^5 = (-4)^{3+5} = (-4)^8$$
+$$(-4)^3 \cdot (-4)^5 = (-4)^{3+5} = (-4)^8
 
 #### 3. Quocient de Potències de la Mateixa Base
 Es manté la base i **es resten els exponents**:
 $$a^m : a^n = \frac{a^m}{a^n} = a^{m-n}$$
-$$(-2)^7 : (-2)^4 = (-2)^{7-4} = (-2)^3 = -8$$
+$$(-2)^7 : (-2)^4 = (-2)^{7-4} = (-2)^3 = -8
 
 #### 4. Potència d'una Potència
 Es manté la base i **es multipliquen els exponents**:
 $$(a^m)^n = a^{m \cdot n}$$
-$$[(-3)^2]^4 = (-3)^{2 \cdot 4} = (-3)^8$$
+$$[(-3)^2]^4 = (-3)^{2 \cdot 4} = (-3)^8
 
 #### 5. Potència d'un Producte i d'un Quocient
 L'exponent es distribueix a cadascun dels factors:
 $$(a \cdot b)^n = a^n \cdot b^n \quad \longrightarrow \quad [(-2) \cdot 5]^3 = (-2)^3 \cdot 5^3$$
-$$(a : b)^n = a^n : b^n \quad \longrightarrow \quad [(-12) : 4]^2 = (-12)^2 : 4^2$$
+$$(a : b)^n = a^n : b^n \quad \longrightarrow \quad [(-12) : 4]^2 = (-12)^2 : 4^2
 
 #### 6. Potències d'Exponent Negatiu
 Una potència amb exponent negatiu equival a la inversa de la potència amb exponent positiu:
-$$a^{-n} = \frac{1}{a^n} \quad \longrightarrow \quad 2^{-3} = \frac{1}{2^3} = \frac{1}{8}$$
+$$a^{-n} = \frac{1}{a^n} \quad \longrightarrow \quad 2^{-3} = \frac{1}{2^3} = \frac{1}{8}
 
 ---
 
@@ -698,7 +698,7 @@ $$a^{-n} = \frac{1}{a^n} \quad \longrightarrow \quad 2^{-3} = \frac{1}{2^3} = \f
 
 L'**arrel quadrada** és l'operació inversa d'elevar al quadrat:
 
-$$\sqrt{a} = b \iff b^2 = a$$
+\sqrt{a} = b \iff b^2 = a
 
 #### A) Arrels Quadrades Exactes
 Un nombre enter té arrel quadrada exacta si és el quadrat d'un altre nombre enter (quadrat perfecte):
@@ -707,13 +707,13 @@ Un nombre enter té arrel quadrada exacta si és el quadrat d'un altre nombre en
 
 #### B) Arrel Quadrada de Nombres Negatius
 Què val $\sqrt{-16}$?
-- Cap nombre enter elevat al quadrat pot donar un resultat negatiu: $(+4)^2 = +16$ i $(-4)^2 = +16$.
+- Cap nombre enter elevat al quadrat pot donar un resultat negatiu: $(+4)^2 = +16i(-4)^2 = +16$.
 - Per tant: **No existeix l'arrel quadrada d'un nombre negatiu dins dels nombres enters $\mathbb{Z}$**.
 
 #### C) Arrel Quadrada Entera i Residu
 Quan un nombre no és un quadrat perfecte, podem calcular la seua **arrel quadrada entera** (el major enter el quadrat del qual és menor que el nombre donat) i el seu **residu**:
 
-$$a = (\text{arrel})^2 + \text{residu}$$
+a = (\text{arrel})^2 + \text{residu}
 
 Per exemple, per a calcular $\sqrt{45}$:
 - $6^2 = 36 < 45$
