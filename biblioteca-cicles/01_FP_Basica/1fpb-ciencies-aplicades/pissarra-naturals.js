@@ -1,16 +1,11 @@
 /**
  * PISSARRA DIGITAL INTERACTIVA (PDI) — CIÈNCIES NATURALS
- * Motor de joc interactiu per a PDI i dispositius tàctils.
- * Cobreix 51 reptes: Speed Quiz (4 opcions), Troba l'Intrús, Càlcul Tàctil (Keypad),
- * Connecta Parelles, Classificació (Categories), Seqüències (Ordre) i Casos Pràctics de Taller.
+ * Motor de joc interactiu per a PDI i pantalles tàctils de classe.
  */
 
 (function() {
   'use strict';
 
-  // ==========================================
-  // ESTAT GLOBAL
-  // ==========================================
   let currentActivityId = 'act-nat02-1';
   let soundEnabled = true;
   let audioCtx = null;
@@ -25,8 +20,15 @@
     case: {}
   };
 
-  // Llista ordenada de totes les activitats
   const allActivityIds = [];
+
+  function ensureActivityIds() {
+    if (allActivityIds.length === 0) {
+      document.querySelectorAll('.pdi-activity-card').forEach(function(card) {
+        allActivityIds.push(card.id);
+      });
+    }
+  }
 
   // ==========================================
   // SÍNTESI D'ÀUDIO WEB (PDI SOUND EFFECTS)
@@ -62,9 +64,9 @@
         osc.stop(now + 0.05);
       } else if (type === 'correct') {
         osc.type = 'triangle';
-        osc.frequency.setValueAtTime(523.25, now); // C5
-        osc.frequency.setValueAtTime(659.25, now + 0.09); // E5
-        osc.frequency.setValueAtTime(783.99, now + 0.18); // G5
+        osc.frequency.setValueAtTime(523.25, now);
+        osc.frequency.setValueAtTime(659.25, now + 0.09);
+        osc.frequency.setValueAtTime(783.99, now + 0.18);
         gain.gain.setValueAtTime(0.15, now);
         gain.gain.linearRampToValueAtTime(0.18, now + 0.18);
         gain.gain.linearRampToValueAtTime(0.01, now + 0.35);
@@ -93,9 +95,7 @@
           o.stop(now + i * 0.08 + 0.25);
         });
       }
-    } catch(e) {
-      // Ignorar errors d'àudio en navegadors restrictius
-    }
+    } catch(e) {}
   };
 
   // ==========================================
@@ -152,9 +152,6 @@
     requestAnimationFrame(animate);
   }
 
-  // ==========================================
-  // HELPER: CARD RETRIEVAL
-  // ==========================================
   function resolveCard(target) {
     if (!target) return null;
     if (typeof target === 'string') {
@@ -167,7 +164,31 @@
   }
 
   // ==========================================
-  // 1. SPEED QUIZ (MULTIPLE CHOICE 4 OPTS)
+  // TOPBAR HUD UPDATE
+  // ==========================================
+  function updateGameTopBar(card) {
+    ensureActivityIds();
+    const unit = (card.getAttribute('data-unit') || 'UD').toUpperCase();
+    const shortTitle = card.getAttribute('data-title') || 'Repte';
+    const badge = document.getElementById('game-unit-badge');
+    const title = document.getElementById('game-act-title');
+    const counter = document.getElementById('game-counter');
+    const prevBtn = document.getElementById('btn-prev-act');
+    const nextBtn = document.getElementById('btn-next-act');
+
+    if (badge) badge.textContent = unit;
+    if (title) title.textContent = shortTitle;
+
+    const idx = allActivityIds.indexOf(card.id);
+    if (counter && idx !== -1) {
+      counter.textContent = (idx + 1) + ' / ' + allActivityIds.length;
+    }
+    if (prevBtn) prevBtn.disabled = (idx <= 0);
+    if (nextBtn) nextBtn.disabled = (idx === -1 || idx >= allActivityIds.length - 1);
+  }
+
+  // ==========================================
+  // 1. SPEED QUIZ
   // ==========================================
   function initSpeedQuiz(card, reset) {
     const cid = card.id;
@@ -180,7 +201,6 @@
         const raw = container.getAttribute('data-questions') || '[]';
         questions = JSON.parse(raw);
       } catch(e) {
-        console.error('Error parsing data-questions for', cid, e);
         questions = [];
       }
       activityStates.speedquiz[cid] = {
@@ -203,7 +223,6 @@
     const container = card.querySelector('.pdi-speedquiz-container');
     const qData = st.questions[st.currentIndex];
 
-    // HUD
     const curRoundEl = container.querySelector('.sq-cur-round');
     if (curRoundEl) curRoundEl.textContent = (st.currentIndex + 1);
     const scoreValEl = container.querySelector('.sq-score-val');
@@ -211,18 +230,15 @@
     const streakValEl = container.querySelector('.sq-streak-val');
     if (streakValEl) streakValEl.textContent = '🔥 ' + st.streak;
 
-    // Timer Bar
     const timerBar = container.querySelector('.sq-timer-bar');
     if (timerBar) {
       const pct = ((st.currentIndex) / st.questions.length) * 100;
       timerBar.style.width = pct + '%';
     }
 
-    // Question Text
     const qText = container.querySelector('.sq-question-text');
     if (qText) qText.innerHTML = qData.q;
 
-    // Options Grid
     const optsGrid = container.querySelector('.sq-options-grid');
     if (optsGrid) {
       optsGrid.innerHTML = '';
@@ -237,7 +253,6 @@
       });
     }
 
-    // Amagar panell explicació i resum
     const fbRow = container.querySelector('.sq-feedback-row');
     if (fbRow) fbRow.style.display = 'none';
     const sumBox = container.querySelector('.sq-summary-box');
@@ -280,13 +295,11 @@
       window.playPDISound('error');
     }
 
-    // Actualitzar HUD
     const scoreValEl = container.querySelector('.sq-score-val');
     if (scoreValEl) scoreValEl.textContent = st.score;
     const streakValEl = container.querySelector('.sq-streak-val');
     if (streakValEl) streakValEl.textContent = '🔥 ' + st.streak;
 
-    // Mostrar explicació
     const fbRow = container.querySelector('.sq-feedback-row');
     const expText = container.querySelector('.sq-explanation-text');
     if (expText) {
@@ -307,7 +320,6 @@
       renderSpeedQuiz(card);
       window.playPDISound('tap');
     } else {
-      // Final de la partida
       const container = card.querySelector('.pdi-speedquiz-container');
       const mainArea = container.querySelector('.sq-main-play-area');
       const fbRow = container.querySelector('.sq-feedback-row');
@@ -340,7 +352,7 @@
   };
 
   // ==========================================
-  // 2. TROBA L'INTRÚS (INTRUS)
+  // 2. TROBA L'INTRÚS
   // ==========================================
   function initIntrus(card, reset) {
     const cid = card.id;
@@ -352,7 +364,6 @@
       try {
         rounds = JSON.parse(container.getAttribute('data-rounds') || '[]');
       } catch(e) {
-        console.error('Error parsing data-rounds for', cid, e);
         rounds = [];
       }
       activityStates.intrus[cid] = {
@@ -470,7 +481,6 @@
       try {
         problems = JSON.parse(container.getAttribute('data-problems') || '[]');
       } catch(e) {
-        console.error('Error parsing data-problems for', cid, e);
         problems = [];
       }
       activityStates.keypad[cid] = {
@@ -583,7 +593,7 @@
   };
 
   // ==========================================
-  // 4. CONNECTA PARELLES (CONNECT)
+  // 4. CONNECTA PARELLES
   // ==========================================
   function initConnect(card, reset) {
     const cid = card.id;
@@ -595,7 +605,6 @@
       try {
         pairs = JSON.parse(container.getAttribute('data-pairs') || '[]');
       } catch(e) {
-        console.error('Error parsing data-pairs for', cid, e);
         pairs = [];
       }
       activityStates.connect[cid] = {
@@ -627,11 +636,9 @@
       colLeft.innerHTML = '';
       colRight.innerHTML = '';
 
-      // Shuffled arrays
       const leftItems = st.pairs.map((p, idx) => ({ id: idx, text: p.left }));
       const rightItems = st.pairs.map((p, idx) => ({ id: idx, text: p.right }));
       
-      // Shuffle right items deterministically or pseudo-random
       rightItems.sort(() => Math.random() - 0.5);
 
       leftItems.forEach(item => {
@@ -678,7 +685,6 @@
 
     if (st.selectedLeft && st.selectedRight) {
       if (st.selectedLeft.id === st.selectedRight.id) {
-        // Matched!
         window.playPDISound('correct');
         st.selectedLeft.el.classList.remove('selected');
         st.selectedRight.el.classList.remove('selected');
@@ -702,7 +708,6 @@
           }
         }
       } else {
-        // Error
         window.playPDISound('error');
         const lEl = st.selectedLeft.el;
         const rEl = st.selectedRight.el;
@@ -730,7 +735,6 @@
   // 5. CLASSIFICACIÓ EN BUCKETS (CATEGORIES)
   // ==========================================
   function initCategoryActivity(card) {
-    const cid = card.id;
     const cards = card.querySelectorAll('.pdi-cat-card');
     const buckets = card.querySelectorAll('.pdi-cat-bucket');
     const pool = card.querySelector('.pdi-cat-source-pool');
@@ -748,7 +752,6 @@
         draggedItem = null;
       });
 
-      // Suport clic/tap per a PDI
       item.addEventListener('click', function() {
         window.playPDISound('tap');
         card.querySelectorAll('.pdi-cat-card').forEach(c => c.classList.remove('cat-selected'));
@@ -774,7 +777,6 @@
         }
       });
 
-      // Clic a cubell per moure targeta seleccionada
       bucket.addEventListener('click', function(e) {
         const selected = card.querySelector('.pdi-cat-card.cat-selected');
         if (selected && e.target !== selected) {
@@ -880,7 +882,6 @@
         draggedItem = null;
       });
 
-      // Suport clic/tap
       item.addEventListener('click', function() {
         window.playPDISound('tap');
         card.querySelectorAll('.pdi-item').forEach(it => it.classList.remove('order-selected'));
@@ -1002,7 +1003,6 @@
         const raw = container.getAttribute('data-scenarios') || container.getAttribute('data-cases') || '[]';
         scenarios = JSON.parse(raw);
       } catch(e) {
-        console.error('Error parsing data-scenarios for', cid, e);
         scenarios = [];
       }
       activityStates.case[cid] = {
@@ -1131,34 +1131,25 @@
   // NAVEGACIÓ I CONTROL GENERAL DE LA PDI
   // ==========================================
   window.launchGameActivity = function(actId) {
+    ensureActivityIds();
     currentActivityId = actId;
-    window.playPDISound('tap');
+    try { window.playPDISound('tap'); } catch(e) {}
 
     const dash = document.getElementById('pdi-dashboard');
-    const stage = document.getElementById('pdi-game-stage');
+    const gameView = document.getElementById('pdi-game-view');
     if (dash) dash.style.display = 'none';
-    if (stage) stage.style.display = 'block';
+    if (gameView) gameView.style.display = 'flex';
 
     const cards = document.querySelectorAll('.pdi-activity-card');
     cards.forEach(c => {
       c.classList.remove('active');
-      c.style.display = 'none';
     });
 
     const activeCard = document.getElementById(actId);
     if (activeCard) {
       activeCard.classList.add('active');
-      activeCard.style.display = 'block';
+      updateGameTopBar(activeCard);
 
-      // Actualitzar selector HUD
-      const ind = document.getElementById('pdi-act-indicator');
-      if (ind) {
-        const uNum = activeCard.getAttribute('data-unit') || '';
-        const aTitle = activeCard.getAttribute('data-title') || '';
-        ind.textContent = uNum.toUpperCase() + ' · ' + aTitle;
-      }
-
-      // Inicialitzar motor segons format
       const fmt = activeCard.getAttribute('data-format');
       if (fmt === 'speedquiz') initSpeedQuiz(activeCard);
       else if (fmt === 'intrus') initIntrus(activeCard);
@@ -1173,15 +1164,16 @@
   };
 
   window.showPDIDashboard = function() {
-    window.playPDISound('tap');
+    try { window.playPDISound('tap'); } catch(e) {}
     const dash = document.getElementById('pdi-dashboard');
-    const stage = document.getElementById('pdi-game-stage');
-    if (stage) stage.style.display = 'none';
+    const gameView = document.getElementById('pdi-game-view');
+    if (gameView) gameView.style.display = 'none';
     if (dash) dash.style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   window.navRelativeActivity = function(direction) {
+    ensureActivityIds();
     const idx = allActivityIds.indexOf(currentActivityId);
     if (idx === -1) return;
     const nextIdx = idx + direction;
@@ -1194,7 +1186,7 @@
     if (!currentActivityId) return;
     const card = document.getElementById(currentActivityId);
     if (!card) return;
-    window.playPDISound('tap');
+    try { window.playPDISound('tap'); } catch(e) {}
 
     const fmt = card.getAttribute('data-format');
     if (fmt === 'speedquiz') initSpeedQuiz(card, true);
@@ -1233,33 +1225,32 @@
 
   window.togglePDISound = function() {
     soundEnabled = !soundEnabled;
-    const soundBtn = document.getElementById('pdi-sound-btn');
-    if (soundBtn) {
-      soundBtn.textContent = soundEnabled ? '🔊 So' : '🔇 Mut';
-    }
+    const soundBtns = [document.getElementById('sound-text'), document.getElementById('game-sound-btn')];
+    if (soundBtns[0]) soundBtns[0].textContent = soundEnabled ? 'So Activat' : 'Mut';
+    if (soundBtns[1]) soundBtns[1].textContent = soundEnabled ? '🔊' : '🔇';
   };
 
-  // ==========================================
-  // INICIALITZACIÓ EN DOM READY
-  // ==========================================
   function onReady() {
-    // Indexar totes les activitats presents al document
-    const cards = document.querySelectorAll('.pdi-activity-card');
-    cards.forEach(card => {
-      allActivityIds.push(card.id);
-    });
+    ensureActivityIds();
 
-    // Delegació de tancament / eines globals
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
-        const stage = document.getElementById('pdi-game-stage');
-        if (stage && stage.style.display !== 'none') {
+        const gameView = document.getElementById('pdi-game-view');
+        if (gameView && gameView.style.display !== 'none') {
           window.showPDIDashboard();
         }
       }
     });
 
-    console.log('PDI Ciències Naturals carregada amb èxit! Total activitats:', allActivityIds.length);
+    // Hash direct navigation (e.g. #act-nat02-1)
+    if (window.location.hash && window.location.hash.startsWith('#act-')) {
+      const targetId = window.location.hash.substring(1);
+      if (document.getElementById(targetId)) {
+        window.launchGameActivity(targetId);
+      }
+    }
+
+    console.log('PDI Ciències Naturals inicialitzada correctament. Total activitats:', allActivityIds.length);
   }
 
   if (document.readyState === 'loading') {
