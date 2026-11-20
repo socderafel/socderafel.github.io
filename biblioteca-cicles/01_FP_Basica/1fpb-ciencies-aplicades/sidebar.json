@@ -17,6 +17,11 @@
           "label": "🔬 PDI · Ciències Naturals (51 Reptes)",
           "href": "pissarra-naturals.html",
           "class": "unit-full-link"
+        },
+        {
+          "label": "🧩 PDI · Laboratori Visual i Trencaclosques (14 Reptes)",
+          "href": "laboratori-visual.html",
+          "class": "unit-full-link"
         }
       ]
     },
@@ -162,6 +167,11 @@
         {
           "label": "🖥️ Pissarra Digital: Ciències Naturals (Reptes PDI)",
           "href": "pissarra-naturals.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "🧩 Laboratori Visual: Trencaclosques Anatòmics i Físics",
+          "href": "laboratori-visual.html",
           "class": "unit-full-link"
         }
       ]
