@@ -45,6 +45,24 @@ Benvingut/da al curs complet de **Ciències Aplicades I**. Els continguts estan 
       </a>
     </div>
   </div>
+
+  <!-- Targeta PDI Laboratori Visual i Trencaclosques -->
+  <div class="pdi-hero-card" style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.12), rgba(2, 132, 199, 0.20)); border: 2px solid #0284c7; border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; box-shadow: 0 8px 24px rgba(14, 165, 233, 0.08);">
+    <div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+        <span style="background: #0284c7; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">🧩 PDI · Trencaclosques</span>
+        <span style="background: #0369a1; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px;">14 Reptes</span>
+      </div>
+      <div style="font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">🧩 Laboratori Visual i Trencaclosques</div>
+      <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: var(--text-muted);">Reptes visuals d'acoblament per a PDI: Torso anatòmic, Esquelet, Ull humà, Aparell reproductor, Destil·lació, Àtom de Bohr, Circuit tèrmic, Volcà, Capes terrestres, Engranatges i Fraccions.</p>
+    </div>
+    <div>
+      <a href="./laboratori-visual.html" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0284c7, #0369a1); color: #ffffff !important; font-weight: 800; font-size: 1rem; padding: 11px 20px; border-radius: 12px; text-decoration: none !important; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);">
+        <span>🖥️ Obrir Laboratori Visual</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
 </div>
 
 ---
