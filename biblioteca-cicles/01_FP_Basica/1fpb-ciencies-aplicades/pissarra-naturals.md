@@ -14,9 +14,10 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
   <div class="pdi-dash-header" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.22)); border-color: #10b981;">
     <div class="dash-title-wrap">
       <h2>🔬 Tauler de Reptes Interactius · Ciències Naturals (PDI)</h2>
-      <p>Ciències Aplicades I (1r FPB) · 50 Reptes Pràctics de Física, Química, Geologia i Biologia adaptats a la pissarra digital de classe o tauletes.</p>
+      <p>Ciències Aplicades I (1r FPB) · 61 Reptes Pràctics i Trencaclosques Tècnics de Física, Química, Geologia i Biologia adaptats a la pissarra digital de classe o tauletes.</p>
     </div>
     <div class="dash-quick-tools">
+      <a class="btn-pdi-tool" href="./laboratori-visual.html" style="text-decoration:none !important; color:inherit; display:inline-flex; align-items:center; gap:6px; background:#0284c7; color:#fff !important; font-weight:800; border-color:#0284c7;">🧩 Laboratori Visual (Trencaclosques)</a>
       <button class="btn-pdi-tool" id="btn-sound-toggle" onclick="togglePDISound()"><span id="sound-icon">🔊</span> <span id="sound-text">So Activat</span></button>
       <button class="btn-pdi-tool" id="btn-fs-toggle" onclick="togglePDIFullscreen()">🖥️ Pantalla Completa</button>
     </div>
@@ -66,6 +67,16 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R7 · Cas Pràctic Matèria</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(14, 165, 233, 0.18)); border: 2px solid #0284c7; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=destil">
+          <span class="act-idx">🧩 Muntatge de Vidre</span>
+          <span class="act-name">R8 · Trencaclosques Destil·lació</span>
+          <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(14, 165, 233, 0.18)); border: 2px solid #0284c7; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=atom">
+          <span class="act-idx">⚛️ Capes Electròniques</span>
+          <span class="act-name">R9 · Trencaclosques Àtom de Bohr</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #b45309;">
@@ -106,6 +117,16 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R6 · Cas Prevenció Sísmica</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(16, 185, 129, 0.18)); border: 2px solid #059669; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=volca">
+          <span class="act-idx">🌋 Dinàmica Interna</span>
+          <span class="act-name">R7 · Trencaclosques Volcà Actiu</span>
+          <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(16, 185, 129, 0.18)); border: 2px solid #059669; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=terra">
+          <span class="act-idx">🌍 Escorça a Nucli</span>
+          <span class="act-name">R8 · Trencaclosques Geosfera</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #2563eb;">
@@ -146,6 +167,11 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R6 · Cas Estalvi Energètic</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.12), rgba(16, 185, 129, 0.18)); border: 2px solid #059669; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=central">
+          <span class="act-idx">⚡ Cadena Energètica</span>
+          <span class="act-name">R7 · Trencaclosques Central Hidràulica</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #dc2626;">
@@ -186,6 +212,11 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R6 · Cas Prevenció Calor</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(14, 165, 233, 0.18)); border: 2px solid #0284c7; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=calor">
+          <span class="act-idx">🚗 Circuit Tèrmic</span>
+          <span class="act-name">R7 · Trencaclosques Refrigeració Motor</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
@@ -276,6 +307,11 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R8 · Cas Reanimació Bàsica</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.12), rgba(244, 63, 94, 0.18)); border: 2px solid #e11d48; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=torso">
+          <span class="act-idx">🫀 Òrgans del Tronc</span>
+          <span class="act-name">R9 · Trencaclosques Torso Anatòmic</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #ea580c;">
@@ -316,6 +352,16 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R6 · Cas Prevenció Lesions</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.12), rgba(244, 63, 94, 0.18)); border: 2px solid #e11d48; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=esquelet">
+          <span class="act-idx">💀 Estructura Òssia</span>
+          <span class="act-name">R7 · Trencaclosques Esquelet Humà</span>
+          <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.12), rgba(244, 63, 94, 0.18)); border: 2px solid #e11d48; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=ull">
+          <span class="act-idx">👁️ Òrgan de la Visió</span>
+          <span class="act-name">R8 · Trencaclosques Ull Humà</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
     <div class="pdi-unit-dash-card" style="border-top: 5px solid #db2777;">
@@ -356,6 +402,11 @@ badge: "Pissarra Digital (PDI) · Ciències Naturals · 1r FPB"
           <span class="act-name">R6 · Cas Consulta Jove</span>
           <span class="act-arrow">➔</span>
         </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.12), rgba(244, 63, 94, 0.18)); border: 2px solid #e11d48; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=reproductor">
+          <span class="act-idx">🧬 Masculí i Femení</span>
+          <span class="act-name">R7 · Trencaclosques Aparell Reproductor</span>
+          <span class="act-arrow">➔</span>
+        </a>
       </div>
     </div>
   </div>

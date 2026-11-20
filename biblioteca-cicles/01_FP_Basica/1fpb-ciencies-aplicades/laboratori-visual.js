@@ -1442,7 +1442,7 @@
   let timerSeconds = 0;
   let soundEnabled = true;
   let selectedPieceId = null; // Suport tàctil selecció-toque
-  let hintsEnabled = false; // Mode Repte per defecte (sense pistes a la PDI)
+   // Mode Repte per defecte (sense pistes a la PDI)
 
   // --- AUDIO SYNTHESIZER (WEB AUDIO API) ---
   let audioCtx = null;
@@ -1538,30 +1538,7 @@
   };
 
   
-  window.togglePDIHints = function() {
-    hintsEnabled = !hintsEnabled;
-    window.playPDISound('tap');
-    const btn = document.getElementById('btn-hints-toggle');
-    const txt = document.getElementById('hints-text');
-    const icon = document.getElementById('hints-icon');
-
-    if (hintsEnabled) {
-      if (btn) btn.classList.add('hints-active');
-      if (txt) txt.textContent = 'Mode Ajuda (Pistes ON)';
-      if (icon) icon.textContent = '💡';
-      document.querySelectorAll('.target-hint-label').forEach(el => el.style.display = 'block');
-      if (selectedPieceId) {
-        document.querySelectorAll(`.drop-target-group[data-target-id="${selectedPieceId}"]`).forEach(el => el.classList.add('highlight-zone'));
-      }
-    } else {
-      if (btn) btn.classList.remove('hints-active');
-      if (txt) txt.textContent = 'Mode Repte (Sense pistes)';
-      if (icon) icon.textContent = '🎯';
-      document.querySelectorAll('.target-hint-label').forEach(el => el.style.display = 'none');
-      document.querySelectorAll('.drop-target-group').forEach(el => el.classList.remove('highlight-zone'));
-    }
-  };
-
+  
   window.togglePDIFullscreen = function() {
     window.playPDISound('tap');
     if (!document.fullscreenElement) {
@@ -1702,12 +1679,9 @@
     currentChallenge.pieces.forEach(p => {
       targetsSvg += `
         <g class="drop-target-group" data-target-id="${p.id}" onclick="handleTargetClick('${p.id}')">
-          <!-- Àrea magnètica de detecció neutra sense delatar la solució -->
-          <circle cx="${p.targetX}" cy="${p.targetY}" r="${p.tolerance}" fill="rgba(148, 163, 184, 0.05)" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" class="target-halo"/>
-          <!-- Punt guia central discret -->
-          <circle cx="${p.targetX}" cy="${p.targetY}" r="4" fill="#94a3b8" opacity="0.4"/>
-          <!-- Rètol identificatiu (OCULT en mode repte per defecte) -->
-          <text class="target-hint-label" x="${p.targetX}" y="${p.targetY - 14}" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#0284c7" style="${hintsEnabled ? 'display:block;' : 'display:none;'}">${p.name}</text>
+          <!-- Zona d'acoblament a cegues: sense text ni nom que done la pista -->
+          <circle cx="${p.targetX}" cy="${p.targetY}" r="${p.tolerance}" fill="rgba(148, 163, 184, 0.04)" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6 4" class="target-halo"/>
+          <circle cx="${p.targetX}" cy="${p.targetY}" r="4" fill="#94a3b8" opacity="0.35"/>
         </g>
         <g id="placed-slot-${p.id}"></g>
       `;
@@ -1765,12 +1739,7 @@
     if (targetCard) targetCard.classList.add('selected');
 
     // Només il·lumina la zona destí si el professor/a activa expressament el Mode Ajuda
-    document.querySelectorAll('.drop-target-group').forEach(el => {
-      el.classList.remove('highlight-zone');
-      if (hintsEnabled && el.getAttribute('data-target-id') === pieceId) {
-        el.classList.add('highlight-zone');
-      }
-    });
+    document.querySelectorAll('.drop-target-group').forEach(el => el.classList.remove('highlight-zone'));
   }
 
   window.handleTargetClick = function(targetId) {

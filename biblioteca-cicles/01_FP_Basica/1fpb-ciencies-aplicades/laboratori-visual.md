@@ -58,7 +58,6 @@ badge: "Pissarra Digital (PDI) · Trencaclosques Anatòmics i Laboratori · 1r F
     </div>
 
     <div class="game-top-tools">
-      <button class="btn-tool-icon" id="btn-hints-toggle" onclick="togglePDIHints()" title="Activar/Desactivar pistes per a la PDI"><span id="hints-icon">🎯</span> <span id="hints-text">Mode Repte (Sense pistes)</span></button>
       <button class="btn-tool-icon" onclick="resetCurrentChallenge()" title="Reiniciar repte per al següent alumne">🔄 Reiniciar</button>
       <button class="btn-tool-icon" id="game-sound-btn" onclick="togglePDISound()" title="Activar/Silenciar so">🔊</button>
       <button class="btn-tool-icon" id="game-fs-btn" onclick="togglePDIFullscreen()" title="Pantalla Completa">🖥️</button>
@@ -317,29 +316,6 @@ badge: "Pissarra Digital (PDI) · Trencaclosques Anatòmics i Laboratori · 1r F
   border-bottom: 1px solid var(--pdi-border);
   flex-wrap: wrap;
   gap: 0.75rem;
-}
-
-#btn-hints-toggle {
-  background: #f1f5f9;
-  color: #334155;
-  border: 1px solid #cbd5e1;
-  font-weight: 700;
-  cursor: pointer;
-  padding: 0.45rem 0.85rem;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.85rem;
-  transition: all 0.2s ease;
-}
-#btn-hints-toggle:hover {
-  background: #e2e8f0;
-}
-#btn-hints-toggle.hints-active {
-  background: #fef3c7 !important;
-  color: #92400e !important;
-  border-color: #f59e0b !important;
 }
 
 .btn-back-dash {

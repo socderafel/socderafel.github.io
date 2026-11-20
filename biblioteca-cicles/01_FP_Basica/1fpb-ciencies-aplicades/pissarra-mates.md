@@ -14,9 +14,10 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
   <div class="pdi-dash-header">
     <div class="dash-title-wrap">
       <h2>🎯 Tauler de Reptes Interactius · Matemàtiques Aplicades (PDI)</h2>
-      <p>Ciències Aplicades I (1r FPB) · 40 Reptes Pràctics de Càlcul, Jerarquia, Fraccions i Taller per a pissarra digital de classe o tauleta.</p>
+      <p>Ciències Aplicades I (1r FPB) · 44 Reptes Pràctics i Trencaclosques Tècnics de Càlcul, Jerarquia, Fraccions i Taller per a pissarra digital de classe o tauleta.</p>
     </div>
     <div class="dash-quick-tools">
+      <a class="btn-pdi-tool" href="./laboratori-visual.html" style="text-decoration:none !important; color:inherit; display:inline-flex; align-items:center; gap:6px; background:#7c3aed; color:#fff !important; font-weight:800; border-color:#7c3aed;">🧩 Laboratori Visual (Trencaclosques)</a>
       <button class="btn-pdi-tool" id="btn-sound-toggle" onclick="togglePDISound()"><span id="sound-icon">🔊</span> <span id="sound-text">So Activat</span></button>
       <button class="btn-pdi-tool" id="btn-fs-toggle" onclick="togglePDIFullscreen()">🖥️ Pantalla Completa</button>
     </div>
@@ -71,7 +72,12 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">🛠️ Magatzem i Factura</span>
           <span class="act-name">R10 · Cas de Taller</span>
           <span class="act-arrow">➔</span>
-        </button>      </div>
+        </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=posicional">
+          <span class="act-idx">📦 Magatzem de Caragols</span>
+          <span class="act-name">R11 · Trencaclosques Posicional (UM, C, D, U)</span>
+          <span class="act-arrow">➔</span>
+        </a>      </div>
     </div>
 <div class="pdi-unit-dash-card" style="border-top: 5px solid #d97706;">
       <div class="card-head">
@@ -121,7 +127,12 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">🛠️ Climatització i Finances</span>
           <span class="act-name">R10 · Gestió Tècnica</span>
           <span class="act-arrow">➔</span>
-        </button>      </div>
+        </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=enters">
+          <span class="act-idx">🏢 Recta Numèrica</span>
+          <span class="act-name">R11 · Trencaclosques Ascensor Industrial (-3 a +3)</span>
+          <span class="act-arrow">➔</span>
+        </a>      </div>
     </div>
 <div class="pdi-unit-dash-card" style="border-top: 5px solid #0284c7;">
       <div class="card-head">
@@ -171,7 +182,12 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">🛠️ Tall de Cables i Cicles</span>
           <span class="act-name">R10 · Cas de Taller</span>
           <span class="act-arrow">➔</span>
-        </button>      </div>
+        </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=engranatges">
+          <span class="act-idx">⚙️ Rodes Dentades</span>
+          <span class="act-name">R11 · Trencaclosques Tren d'Engranatges</span>
+          <span class="act-arrow">➔</span>
+        </a>      </div>
     </div>
 <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
       <div class="card-head">
@@ -221,7 +237,12 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">🛠️ Dosificació i Producció</span>
           <span class="act-name">R10 · Cas de Taller</span>
           <span class="act-arrow">➔</span>
-        </button>      </div>
+        </button>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=fraccions">
+          <span class="act-idx">🍕 Peces Mecàniques</span>
+          <span class="act-name">R11 · Trencaclosques Disc de Fraccions</span>
+          <span class="act-arrow">➔</span>
+        </a>      </div>
     </div>
   </div>
 </div>
