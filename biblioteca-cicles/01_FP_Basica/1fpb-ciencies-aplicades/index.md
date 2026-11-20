@@ -51,7 +51,7 @@ Benvingut/da al curs complet de **Ciències Aplicades I**. Els continguts estan 
     <div>
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
         <span style="background: #0284c7; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px; text-transform: uppercase;">🧩 PDI · Trencaclosques</span>
-        <span style="background: #0369a1; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px;">14 Reptes</span>
+        <span style="background: #0369a1; color: #fff; font-weight: 800; font-size: 0.8rem; padding: 4px 12px; border-radius: 50px;">32 Reptes</span>
       </div>
       <div style="font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 6px;">🧩 Laboratori Visual i Trencaclosques</div>
       <p style="margin: 0; font-size: 0.98rem; line-height: 1.5; color: var(--text-muted);">Reptes visuals d'acoblament per a PDI: Torso anatòmic, Esquelet, Ull humà, Aparell reproductor, Destil·lació, Àtom de Bohr, Circuit tèrmic, Volcà, Capes terrestres, Engranatges i Fraccions.</p>

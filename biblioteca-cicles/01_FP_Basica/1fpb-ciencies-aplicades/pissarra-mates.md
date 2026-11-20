@@ -77,6 +77,11 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">📦 Magatzem de Caragols</span>
           <span class="act-name">R11 · Trencaclosques Posicional (UM, C, D, U)</span>
           <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=balanca">
+          <span class="act-idx">⚖️ Pesada de Precisió</span>
+          <span class="act-name">R12 · Trencaclosques Balança de Masses</span>
+          <span class="act-arrow">➔</span>
         </a>      </div>
     </div>
 <div class="pdi-unit-dash-card" style="border-top: 5px solid #d97706;">
@@ -131,6 +136,11 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
         <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=enters">
           <span class="act-idx">🏢 Recta Numèrica</span>
           <span class="act-name">R11 · Trencaclosques Ascensor Industrial (-3 a +3)</span>
+          <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=termometre-enters">
+          <span class="act-idx">🌡️ Escala de Temperatura</span>
+          <span class="act-name">R12 · Trencaclosques Termòmetre d'Enters</span>
           <span class="act-arrow">➔</span>
         </a>      </div>
     </div>
@@ -187,6 +197,11 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">⚙️ Rodes Dentades</span>
           <span class="act-name">R11 · Trencaclosques Tren d'Engranatges</span>
           <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=caixa-broques">
+          <span class="act-idx">🛠️ Broques Ø 2 a 10 mm</span>
+          <span class="act-name">R12 · Trencaclosques Múltiples de Taller</span>
+          <span class="act-arrow">➔</span>
         </a>      </div>
     </div>
 <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
@@ -242,7 +257,27 @@ badge: "Pissarra Digital (PDI) · Matemàtiques · 1r FPB"
           <span class="act-idx">🍕 Peces Mecàniques</span>
           <span class="act-name">R11 · Trencaclosques Disc de Fraccions</span>
           <span class="act-arrow">➔</span>
+        </a>
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=calibre">
+          <span class="act-idx">📏 Dècimes de mm</span>
+          <span class="act-name">R12 · Trencaclosques Peu de Rei / Calibre</span>
+          <span class="act-arrow">➔</span>
         </a>      </div>
+    </div>
+    <div class="pdi-unit-dash-card" style="border-top: 5px solid #7c3aed;">
+      <div class="card-head">
+        <span class="disc-badge" style="background: #7c3aed;">Matemàtiques</span>
+        <span class="count-badge">Repte Pràctic</span>
+      </div>
+      <div class="card-title"><span class="unit-icon">🏗️</span> <h3>MAT 5 · Proporcionalitat i Màquines</h3></div>
+      <p class="card-desc">Proporcionalitat directa i inversa, percentatges aplicats a càrregues i la llei de la palanca de primer gènere.</p>
+      <div class="card-acts-list">
+        <a class="btn-launch-act" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.18)); border: 2px solid #7c3aed; text-decoration: none !important; color: inherit;" href="./laboratori-visual.html?challenge=politges">
+          <span class="act-idx">🏗️ Força i Fulcre</span>
+          <span class="act-name">R1 · Trencaclosques Llei de la Palanca</span>
+          <span class="act-arrow">➔</span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

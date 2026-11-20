@@ -1433,6 +1433,1612 @@
         }
       ]
     }
+,
+
+    // UD6: LA CÈL·LULA HUMANA (EUCARIOTA ANIMAL)
+    {
+      id: 'celula',
+      title: 'La Cèl·lula Humana (Eucariota Animal)',
+      category: 'anatomia',
+      unit: 'UD6',
+      badge: 'UD6 · Base Cel·lular de la Salut',
+      icon: '🔬',
+      desc: 'Munta els orgànuls fonamentals: nucli amb ADN, mitocondris, aparell de Golgi, reticle endoplasmàtic, ribosomes i membrana.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Silueta citoplasmàtica de la cèl·lula eucariota -->
+      <ellipse cx="400" cy="300" rx="310" ry="220" fill="rgba(240, 253, 250, 0.7)" stroke="#0d9488" stroke-width="4" stroke-dasharray="8 6"/>
+      <text x="400" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">CÈL·LULA EUCARIOTA ANIMAL (ORGANITZACIÓ CEL·LULAR)</text>`,
+      pieces: [
+        {
+          id: 'cel-nucli',
+          name: 'Nucli Cel·lular (amb ADN)',
+          icon: '🟣',
+          targetX: 350,
+          targetY: 280,
+          tolerance: 50,
+          desc: 'Centre de control cel·lular envoltat per doble membrana; conté el material genètic (ADN/cromatina) que codifica les proteïnes.',
+          svg: `<g>
+          <circle cx="350" cy="280" r="55" fill="#c084fc" stroke="#7e22ce" stroke-width="3"/>
+          <circle cx="350" cy="280" r="22" fill="#7e22ce"/>
+          <text x="350" y="318" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">Nucli + ADN</text>
+        </g>`
+        },
+        {
+          id: 'cel-mitocondri',
+          name: 'Mitocondri (Central Energètica)',
+          icon: '⚡',
+          targetX: 540,
+          targetY: 220,
+          tolerance: 45,
+          desc: 'Orgànul que realitza la respiració cel·lular oxidativa, produint la molècula d\'energia bàsica: ATP.',
+          svg: `<g>
+          <ellipse cx="540" cy="220" rx="42" ry="24" fill="#fb923c" stroke="#c2410c" stroke-width="2.5" transform="rotate(-20 540 220)"/>
+          <path d="M 515 220 Q 530 210 540 220 Q 550 230 565 220" stroke="#7c2d12" stroke-width="2.5" fill="none"/>
+          <text x="540" y="240" text-anchor="middle" font-size="9" font-weight="bold" fill="#7c2d12">Mitocondri</text>
+        </g>`
+        },
+        {
+          id: 'cel-golgi',
+          name: 'Aparell de Golgi',
+          icon: '🥞',
+          targetX: 480,
+          targetY: 370,
+          tolerance: 45,
+          desc: 'Conjunt de sacs aplanats que rep proteïnes del reticle, les modifica, les empaqueta en vesícules i les envia a destí.',
+          svg: `<g>
+          <path d="M 450 355 Q 480 345 510 355" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M 450 370 Q 480 360 510 370" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M 455 385 Q 480 375 505 385" stroke="#10b981" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <text x="480" y="405" text-anchor="middle" font-size="9" font-weight="bold" fill="#065f46">Ap. Golgi</text>
+        </g>`
+        },
+        {
+          id: 'cel-reticle',
+          name: 'Reticle Endoplasmàtic',
+          icon: '🕸️',
+          targetX: 250,
+          targetY: 340,
+          tolerance: 45,
+          desc: 'Xarxa de membranes connectades al nucli; sintetitza lípids (RE llis) i proteïnes mitjançant ribosomes adherits (RE rugós).',
+          svg: `<g>
+          <path d="M 220 320 Q 250 310 280 330 Q 250 360 220 350" stroke="#38bdf8" stroke-width="5" fill="none"/>
+          <path d="M 230 360 Q 260 350 280 370" stroke="#38bdf8" stroke-width="5" fill="none"/>
+          <text x="250" y="380" text-anchor="middle" font-size="9" font-weight="bold" fill="#0369a1">Reticle Endopl.</text>
+        </g>`
+        },
+        {
+          id: 'cel-membrana',
+          name: 'Membrana Plasmàtica (Bicapa)',
+          icon: '🛡️',
+          targetX: 210,
+          targetY: 180,
+          tolerance: 45,
+          desc: 'Bicapa lipídica amb proteïnes que delimita la cèl·lula i controla de forma semipermeable l\'entrada de nutrients i eixida de deixalles.',
+          svg: `<g>
+          <path d="M 180 160 Q 220 180 250 200" stroke="#0d9488" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <text x="210" y="165" text-anchor="middle" font-size="10" font-weight="bold" fill="#0f766e">Membrana</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD6: DEFENSES DEL COS: SISTEMA IMMUNITARI
+    {
+      id: 'immunitat',
+      title: 'Defenses del Cos: Sistema Immunitari',
+      category: 'anatomia',
+      unit: 'UD6',
+      badge: 'UD6 · Immunitat i Vacunes',
+      icon: '🛡️',
+      desc: 'Munta la línia de defensa contra infeccions: pell, macròfag fagocitador, limfòcit T, limfòcit B i anticossos.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <path d="M 150 100 L 150 500" stroke="#cbd5e1" stroke-width="8" stroke-dasharray="12 8"/>
+      <text x="110" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#94a3b8" transform="rotate(-90 110 300)">EXTERIOR (PATÒGENS)</text>
+      <text x="450" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">RESPOSTA IMMUNITÀRIA INNATA I ADAPTATIVA</text>`,
+      pieces: [
+        {
+          id: 'imm-pell',
+          name: 'Barrera Cutània (Pell i Mucoses)',
+          icon: '🧱',
+          targetX: 150,
+          targetY: 250,
+          tolerance: 45,
+          desc: 'Primera línia de defensa física i química innata que impedeix l\'entrada de bacteris i virus a l\'organisme.',
+          svg: `<g>
+          <rect x="135" y="180" width="30" height="140" rx="6" fill="#fbcfe8" stroke="#db2777" stroke-width="3"/>
+          <text x="150" y="255" text-anchor="middle" font-size="11" font-weight="bold" fill="#831843" transform="rotate(-90 150 255)">Pell / Barrera</text>
+        </g>`
+        },
+        {
+          id: 'imm-macrofag',
+          name: 'Macròfag (Fagocitosi Innata)',
+          icon: '👾',
+          targetX: 300,
+          targetY: 250,
+          tolerance: 45,
+          desc: 'Glòbul blanc gegant que engoleix i digereix bacteris invasors i deixalles cel·lulars de forma inespecífica.',
+          svg: `<g>
+          <path d="M 270 230 Q 300 210 330 230 Q 340 260 320 280 Q 280 290 270 260 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+          <circle cx="295" cy="245" r="5" fill="#9a3412"/>
+          <circle cx="315" cy="255" r="4" fill="#9a3412"/>
+          <text x="300" y="270" text-anchor="middle" font-size="10" font-weight="bold" fill="#7c2d12">Macròfag</text>
+        </g>`
+        },
+        {
+          id: 'imm-limf-t',
+          name: 'Limfòcit T (Immunitat Cel·lular)',
+          icon: '🥷',
+          targetX: 450,
+          targetY: 200,
+          tolerance: 45,
+          desc: 'Madura al tim; reconeix i destrueix directament cèl·lules pròpies infectades per virus o cèl·lules tumorals.',
+          svg: `<g>
+          <circle cx="450" cy="200" r="32" fill="#bae6fd" stroke="#0284c7" stroke-width="3"/>
+          <circle cx="450" cy="200" r="14" fill="#0284c7"/>
+          <text x="450" y="222" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">Limfòcit T</text>
+        </g>`
+        },
+        {
+          id: 'imm-limf-b',
+          name: 'Limfòcit B (Fàbrica d'Anticossos)',
+          icon: '🏭',
+          targetX: 450,
+          targetY: 350,
+          tolerance: 45,
+          desc: 'Produeix milers d\'anticossos específics i genera cèl·lules de memòria que ens protegeixen en futures infeccions o vacunes.',
+          svg: `<g>
+          <circle cx="450" cy="350" r="32" fill="#ddd6fe" stroke="#7c3aed" stroke-width="3"/>
+          <circle cx="450" cy="350" r="14" fill="#7c3aed"/>
+          <text x="450" y="372" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">Limfòcit B</text>
+        </g>`
+        },
+        {
+          id: 'imm-anticossos',
+          name: 'Anticossos (Immunoglobulines Y)',
+          icon: '🎯',
+          targetX: 620,
+          targetY: 280,
+          tolerance: 45,
+          desc: 'Proteïnes en forma de \'Y\' que s\'uneixen específicament a l\'antigen del microbi per neutralitzar-lo o marcar-lo per a la seua destrucció.',
+          svg: `<g>
+          <path d="M 600 250 L 620 275 L 620 310 M 640 250 L 620 275" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+          <path d="M 640 290 L 655 310 L 655 335 M 670 290 L 655 310" stroke="#ef4444" stroke-width="4" stroke-linecap="round"/>
+          <text x="620" y="335" text-anchor="middle" font-size="10" font-weight="bold" fill="#991b1b">Anticossos (Y)</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD7: LES 4 CAVITATS DEL COR I GRANS VASOS
+    {
+      id: 'cor-cavitats',
+      title: 'Les 4 Cavitats del Cor i Grans Vasos',
+      category: 'anatomia',
+      unit: 'UD7',
+      badge: 'UD7 · Aparell Circulatori',
+      icon: '🫀',
+      desc: 'Munta l\'interior de la bomba cardíaca: aurícules dreta/esquerra, ventricles dret/esquerre, artèria aorta i vena cava.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Silueta de la silueta cardíaca buida -->
+      <path d="M 400 130 C 270 130 250 260 270 340 C 310 440 400 500 400 500 C 400 500 490 440 530 340 C 550 260 530 130 400 130 Z" fill="#fff1f2" stroke="#e11d48" stroke-width="4" stroke-dasharray="8 6"/>
+      <line x1="400" y1="180" x2="400" y2="480" stroke="#f43f5e" stroke-width="3" stroke-dasharray="4 4"/>
+      <line x1="280" y1="290" x2="520" y2="290" stroke="#f43f5e" stroke-width="2" stroke-dasharray="4 4"/>
+      <text x="400" y="555" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">ANATOMIA INTERNA DEL COR (CIRCULACIÓ DOBLE I COMPLETA)</text>`,
+      pieces: [
+        {
+          id: 'cor-auricula-d',
+          name: 'Aurícula Dreta (Sang Desoxigenada)',
+          icon: '🔵',
+          targetX: 335,
+          targetY: 220,
+          tolerance: 45,
+          desc: 'Rep la sang pobra en oxigen provinent de tot el cos a través de les venes caves.',
+          svg: `<g>
+          <rect x="290" y="175" width="90" height="80" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="3"/>
+          <text x="335" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">Aurícula Dreta</text>
+          <text x="335" y="235" text-anchor="middle" font-size="9" fill="#1e40af">(Sang amb CO₂)</text>
+        </g>`
+        },
+        {
+          id: 'cor-ventricle-d',
+          name: 'Ventricle Dret (Cap als Pulmons)',
+          icon: '🔵',
+          targetX: 335,
+          targetY: 370,
+          tolerance: 45,
+          desc: 'Impulsa la sang pobra en oxigen cap als pulmons a través de l\'artèria pulmonar per oxigenar-la.',
+          svg: `<g>
+          <rect x="290" y="320" width="90" height="95" rx="12" fill="#93c5fd" stroke="#1d4ed8" stroke-width="3"/>
+          <text x="335" y="365" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">Ventricle Dret</text>
+        </g>`
+        },
+        {
+          id: 'cor-auricula-e',
+          name: 'Aurícula Esquerra (Sang Oxigenada)',
+          icon: '🔴',
+          targetX: 465,
+          targetY: 220,
+          tolerance: 45,
+          desc: 'Rep la sang neta i carregada d\'oxigen provinent dels pulmons per les 4 venes pulmonars.',
+          svg: `<g>
+          <rect x="420" y="175" width="90" height="80" rx="12" fill="#fecdd3" stroke="#e11d48" stroke-width="3"/>
+          <text x="465" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#9f1239">Aurícula Esq.</text>
+          <text x="465" y="235" text-anchor="middle" font-size="9" fill="#9f1239">(Rica en O₂)</text>
+        </g>`
+        },
+        {
+          id: 'cor-ventricle-e',
+          name: 'Ventricle Esquerre (Cap al Cos)',
+          icon: '🔴',
+          targetX: 465,
+          targetY: 370,
+          tolerance: 45,
+          desc: 'Té la paret muscular més gruixuda (miocardi potent) per impulsar la sang amb força cap a tot l\'organisme per l\'aorta.',
+          svg: `<g>
+          <rect x="420" y="320" width="90" height="95" rx="12" fill="#fda4af" stroke="#be123c" stroke-width="3"/>
+          <text x="465" y="365" text-anchor="middle" font-size="11" font-weight="bold" fill="#881337">Ventricle Esq.</text>
+        </g>`
+        },
+        {
+          id: 'cor-aorta',
+          name: 'Artèria Aorta (Bastó Aòrtic)',
+          icon: '🦯',
+          targetX: 420,
+          targetY: 95,
+          tolerance: 45,
+          desc: 'L\'artèria més gran del cos que es corba sobre el cor i distribueix la sang oxigenada a tots els teixits.',
+          svg: `<g>
+          <path d="M 430 140 Q 430 70 380 70 Q 350 70 350 95" stroke="#e11d48" stroke-width="14" fill="none" stroke-linecap="round"/>
+          <line x1="390" y1="70" x2="390" y2="45" stroke="#e11d48" stroke-width="6"/>
+          <line x1="410" y1="75" x2="415" y2="50" stroke="#e11d48" stroke-width="6"/>
+          <text x="430" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#881337">Aorta</text>
+        </g>`
+        },
+        {
+          id: 'cor-cava',
+          name: 'Vena Cava Superior i Inferior',
+          icon: '💈',
+          targetX: 250,
+          targetY: 150,
+          tolerance: 45,
+          desc: 'Gran conducte venós que retorna tota la sang del cap, coll i braços cap a l\'aurícula dreta.',
+          svg: `<g>
+          <line x1="250" y1="90" x2="250" y2="210" stroke="#2563eb" stroke-width="14" stroke-linecap="round"/>
+          <text x="250" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff" transform="rotate(-90 250 155)">Vena Cava</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD7: ALVÈOL PULMONAR I INTERCANVI DE GASOS
+    {
+      id: 'alveol',
+      title: 'Alvèol Pulmonar i Intercanvi de Gasos',
+      category: 'anatomia',
+      unit: 'UD7',
+      badge: 'UD7 · Aparell Respiratori',
+      icon: '🫁',
+      desc: 'Acobla la microestructura respiratòria: bronquíol terminal, sac alveolar, capil·lar sanguini i molècules d\'O2 / CO2.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <circle cx="350" cy="300" r="160" fill="rgba(254, 205, 211, 0.3)" stroke="#fda4af" stroke-width="4" stroke-dasharray="8 6"/>
+      <path d="M 520 120 C 580 300 580 350 520 500" stroke="#cbd5e1" stroke-width="26" fill="none"/>
+      <text x="400" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">HEMATOSI: INTERCANVI DE GASOS PER DIFUSIÓ A L'ALVÈOL</text>`,
+      pieces: [
+        {
+          id: 'alv-bronquiol',
+          name: 'Bronquíol Terminal (Entrada d'Aire)',
+          icon: '🌿',
+          targetX: 210,
+          targetY: 180,
+          tolerance: 45,
+          desc: 'Última ramificació de l\'arbre bronquial que condueix l\'aire inspirat fins als sacs alveolars.',
+          svg: `<g>
+          <path d="M 140 120 Q 180 160 250 200" stroke="#0ea5e9" stroke-width="16" fill="none" stroke-linecap="round"/>
+          <text x="200" y="155" text-anchor="middle" font-size="10" font-weight="bold" fill="#0369a1">Bronquíol</text>
+        </g>`
+        },
+        {
+          id: 'alv-sac',
+          name: 'Sac Alveolar (Mur Epitelial Fin)',
+          icon: '🍇',
+          targetX: 350,
+          targetY: 300,
+          tolerance: 50,
+          desc: 'Fina paret d\'una sola capa de cèl·lules (epiteli monoestratificat) que permet el pas ràpid de gasos per difusió.',
+          svg: `<g>
+          <circle cx="350" cy="300" r="85" fill="#fecdd3" stroke="#f43f5e" stroke-width="3"/>
+          <circle cx="320" cy="270" r="28" fill="#fda4af"/>
+          <circle cx="380" cy="280" r="30" fill="#fda4af"/>
+          <circle cx="350" cy="335" r="32" fill="#fda4af"/>
+          <text x="350" y="305" text-anchor="middle" font-size="12" font-weight="bold" fill="#881337">Alvèol</text>
+        </g>`
+        },
+        {
+          id: 'alv-capillar',
+          name: 'Capil·lar Sanguini (Glòbuls Rojos)',
+          icon: '🩸',
+          targetX: 540,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Vas microscòpic que envolta l\'alvèol; els eritròcits s\'alineen d\'un en un per captar oxigen.',
+          svg: `<g>
+          <path d="M 520 160 Q 565 300 520 450" stroke="#e11d48" stroke-width="18" fill="none" stroke-linecap="round"/>
+          <circle cx="538" cy="240" r="8" fill="#881337"/>
+          <circle cx="545" cy="300" r="8" fill="#881337"/>
+          <circle cx="538" cy="360" r="8" fill="#881337"/>
+          <text x="545" y="305" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff" transform="rotate(90 545 305)">Capil·lar Sanguini</text>
+        </g>`
+        },
+        {
+          id: 'alv-oxigen',
+          name: 'Oxigen O₂ (Cap a la Sang)',
+          icon: '🔵',
+          targetX: 440,
+          targetY: 240,
+          tolerance: 40,
+          desc: 'Gas inhalat que passa de l\'aire alveolar cap a l\'hemoglobina dels glòbuls rojos per difusió simple.',
+          svg: `<g>
+          <line x1="395" y1="240" x2="480" y2="240" stroke="#0284c7" stroke-width="4" stroke-dasharray="4 2"/>
+          <polygon points="485,240 475,235 475,245" fill="#0284c7"/>
+          <text x="440" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="#0284c7">O₂ ➔</text>
+        </g>`
+        },
+        {
+          id: 'alv-co2',
+          name: 'Diòxid de Carboni CO₂ (Cap a l'Alvèol)',
+          icon: '💨',
+          targetX: 440,
+          targetY: 360,
+          tolerance: 40,
+          desc: 'Gas de rebuig cel·lular que ix de la sang venosa per ser exhalat cap a l\'exterior.',
+          svg: `<g>
+          <line x1="480" y1="360" x2="395" y2="360" stroke="#ea580c" stroke-width="4" stroke-dasharray="4 2"/>
+          <polygon points="390,360 400,355 400,365" fill="#ea580c"/>
+          <text x="440" y="380" text-anchor="middle" font-size="11" font-weight="bold" fill="#c2410c">⬅ CO₂</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD8: LA NEURONA I LA TRANSMISSIÓ SINÀPTICA
+    {
+      id: 'neurona',
+      title: 'La Neurona i la Transmissió Sinàptica',
+      category: 'anatomia',
+      unit: 'UD8',
+      badge: 'UD8 · Sistema Nerviós',
+      icon: '⚡',
+      desc: 'Identifica l\'anatomia de la cèl·lula nerviosa: soma amb nucli, dendrites receptores, axó, beines de mielina i botons sinàptics.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <line x1="280" y1="300" x2="620" y2="300" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+      <text x="400" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">IMPULS ELÈCTRIC: TRANSMISSIÓ DEL POTENCIAL D'ACCIÓ</text>`,
+      pieces: [
+        {
+          id: 'neu-soma',
+          name: 'Soma (Cos Cel·lular amb Nucli)',
+          icon: '⭐',
+          targetX: 230,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Centre metabòlic de la neurona que conté el nucli cel·lular i integra els senyals rebuts.',
+          svg: `<g>
+          <polygon points="230,250 260,285 245,335 195,325 185,275" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+          <circle cx="225" cy="295" r="14" fill="#a16207"/>
+          <text x="225" y="345" text-anchor="middle" font-size="10" font-weight="bold" fill="#713f12">Soma</text>
+        </g>`
+        },
+        {
+          id: 'neu-dendrites',
+          name: 'Dendrites (Branques Receptores)',
+          icon: '🌿',
+          targetX: 150,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Ramificacions que reben els estímuls o neurotransmissors d\'altres neurones i els condueixen cap al cos cel·lular.',
+          svg: `<g>
+          <path d="M 190 270 L 130 230 M 185 300 L 115 300 M 190 330 L 130 370" stroke="#ca8a04" stroke-width="4" stroke-linecap="round"/>
+          <text x="145" y="335" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">Dendrites</text>
+        </g>`
+        },
+        {
+          id: 'neu-axo',
+          name: 'Axó (Cable de Transmissió)',
+          icon: '➖',
+          targetX: 430,
+          targetY: 300,
+          tolerance: 50,
+          desc: 'Prolongació llarga que condueix el potencial d\'acció de forma unidireccional cap a la següent cèl·lula.',
+          svg: `<g>
+          <line x1="260" y1="300" x2="600" y2="300" stroke="#f59e0b" stroke-width="8" stroke-linecap="round"/>
+          <text x="430" y="275" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">Axó</text>
+        </g>`
+        },
+        {
+          id: 'neu-mielina',
+          name: 'Beines de Mielina (Aïllant)',
+          icon: '🌭',
+          targetX: 430,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Beines lipídiques formades per cèl·lules de Schwann que permeten la conducció saltatòria ultraràpida (fins a 120 m/s).',
+          svg: `<g>
+          <rect x="300" y="285" width="55" height="30" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="2.5"/>
+          <rect x="380" y="285" width="55" height="30" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="2.5"/>
+          <rect x="460" y="285" width="55" height="30" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="2.5"/>
+          <text x="410" y="335" text-anchor="middle" font-size="9" font-weight="bold" fill="#c2410c">Mielina</text>
+        </g>`
+        },
+        {
+          id: 'neu-sinapsi',
+          name: 'Botons Terminals (Sinapsi)',
+          icon: '🔌',
+          targetX: 640,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Extrems ramificats que alliberen neurotransmissors químics (com dopamina o acetilcolina) a l\'espai sinàptic.',
+          svg: `<g>
+          <path d="M 600 300 L 650 260 M 600 300 L 660 300 M 600 300 L 650 340" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="650" cy="260" r="7" fill="#ef4444"/>
+          <circle cx="660" cy="300" r="7" fill="#ef4444"/>
+          <circle cx="650" cy="340" r="7" fill="#ef4444"/>
+          <text x="650" y="365" text-anchor="middle" font-size="10" font-weight="bold" fill="#b91c1c">Sinapsi</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD8: L'ORELLA HUMANA I L'AUDICIÓ
+    {
+      id: 'orella',
+      title: 'L\'Orella Humana i l\'Audició',
+      category: 'anatomia',
+      unit: 'UD8',
+      badge: 'UD8 · Òrgans dels Sentits',
+      icon: '👂',
+      desc: 'Munta l\'òrgan de l\'oïda i l\'equilibri: pavelló auditiu, conducte, timpà, cadena d\'ossets, còclea i nervi auditiu.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <line x1="330" y1="120" x2="330" y2="480" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 4"/>
+      <line x1="530" y1="120" x2="530" y2="480" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="230" y="90" text-anchor="middle" font-size="13" font-weight="800" fill="#64748b">ORELLA EXTERNA</text>
+      <text x="430" y="90" text-anchor="middle" font-size="13" font-weight="800" fill="#64748b">ORELLA MITJANA</text>
+      <text x="630" y="90" text-anchor="middle" font-size="13" font-weight="800" fill="#64748b">ORELLA INTERNA</text>
+      <text x="400" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">TRANSMISSIÓ MECÀNICA I TRANSDUCCIÓ DE L'ONA SONORA</text>`,
+      pieces: [
+        {
+          id: 'ore-pave',
+          name: 'Pavelló Auricular (Orella)',
+          icon: '👂',
+          targetX: 170,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Cartílag extern que capta les ones sonores de l\'aire i les canalitza cap a l\'interior.',
+          svg: `<g>
+          <path d="M 140 220 Q 200 210 200 270 Q 200 320 180 350 Q 150 390 140 370" stroke="#f472b6" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <text x="170" y="300" text-anchor="middle" font-size="11" font-weight="bold" fill="#be185d">Pavelló</text>
+        </g>`
+        },
+        {
+          id: 'ore-conducte',
+          name: 'Conducte Auditiu Extern',
+          icon: '🕳️',
+          targetX: 270,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Tub de 2,5 cm amb glàndules de cerumen que guia les ones sonores fins a fer vibrar el timpà.',
+          svg: `<g>
+          <rect x="220" y="285" width="100" height="30" rx="6" fill="#fbcfe8" stroke="#db2777" stroke-width="2"/>
+          <text x="270" y="305" text-anchor="middle" font-size="10" font-weight="bold" fill="#9d174d">Conducte</text>
+        </g>`
+        },
+        {
+          id: 'ore-timpa',
+          name: 'Timpà (Membrana Vibrant)',
+          icon: '🥁',
+          targetX: 340,
+          targetY: 300,
+          tolerance: 40,
+          desc: 'Fina membrana elàstica que vibra en rebre l\'impacte de les ones de pressió sonora.',
+          svg: `<g>
+          <line x1="340" y1="260" x2="340" y2="340" stroke="#e11d48" stroke-width="6" stroke-linecap="round"/>
+          <text x="340" y="245" text-anchor="middle" font-size="10" font-weight="bold" fill="#9f1239">Timpà</text>
+        </g>`
+        },
+        {
+          id: 'ore-ossets',
+          name: 'Cadena d'Ossets (Martell, Enclusa, Estrep)',
+          icon: '🔨',
+          targetX: 430,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Els tres ossos més xicotets del cos humà: amplifiquen 20 vegades la vibració mecànica del timpà.',
+          svg: `<g>
+          <rect x="380" y="285" width="25" height="15" fill="#64748b"/>
+          <rect x="415" y="285" width="25" height="15" fill="#475569"/>
+          <path d="M 450 280 L 470 292 L 450 305 Z" fill="#334155"/>
+          <text x="430" y="325" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e293b">Ossets</text>
+        </g>`
+        },
+        {
+          id: 'ore-coclea',
+          name: 'Còclea / Cargol (Cèl·lules Ciliades)',
+          icon: '🐌',
+          targetX: 550,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Estructura en espiral plena de líquid que transforma les vibracions físiques en impulsos elèctrics neuronals.',
+          svg: `<g>
+          <path d="M 525 315 A 25 25 0 0 1 565 290 A 18 18 0 0 1 545 275 A 12 12 0 0 1 535 285" stroke="#8b5cf6" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <text x="550" y="340" text-anchor="middle" font-size="10" font-weight="bold" fill="#6d28d9">Còclea</text>
+        </g>`
+        },
+        {
+          id: 'ore-nervi',
+          name: 'Nervi Auditiu',
+          icon: '⚡',
+          targetX: 660,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Condueix els impulsos elèctrics directament cap a l\'escorça auditiva del cervell (lòbul temporal).',
+          svg: `<g>
+          <path d="M 590 300 L 710 300" stroke="#f59e0b" stroke-width="14" stroke-linecap="round"/>
+          <text x="655" y="285" text-anchor="middle" font-size="10" font-weight="bold" fill="#b45309">Nervi Auditiu</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD9: FECUNDACIÓ I GESTACIÓ FETAL
+    {
+      id: 'fecundacio',
+      title: 'Fecundació i Gestació Fetal',
+      category: 'anatomia',
+      unit: 'UD9',
+      badge: 'UD9 · Desenvolupament Embrionari',
+      icon: '🤰',
+      desc: 'Ordena les fites del desenvolupament biològic: òvul madur, espermatozoides, zigot, embrió i placenta amb cordó umbilical.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Silueta de la cavitat uterina gestant -->
+      <ellipse cx="400" cy="300" rx="300" ry="210" fill="rgba(253, 242, 248, 0.7)" stroke="#f472b6" stroke-width="4" stroke-dasharray="8 6"/>
+      <text x="400" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">DEL GÀMETA A LA FORMACIÓ DEL NOU ÉSSER HUMÀ</text>`,
+      pieces: [
+        {
+          id: 'fec-ovul',
+          name: 'Òvul Madur (Gàmeta Femení)',
+          icon: '🟡',
+          targetX: 230,
+          targetY: 230,
+          tolerance: 45,
+          desc: 'Cèl·lula esfèrica gran de 0,1 mm immòbil protegida per la corona radiada i la zona pel·lúcida.',
+          svg: `<g>
+          <circle cx="230" cy="230" r="38" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+          <circle cx="230" cy="230" r="14" fill="#facc15"/>
+          <text x="230" y="235" text-anchor="middle" font-size="10" font-weight="bold" fill="#713f12">Òvul</text>
+        </g>`
+        },
+        {
+          id: 'fec-espermatozoide',
+          name: 'Espermatozoides (Gàmetes M.)',
+          icon: 'たま',
+          targetX: 150,
+          targetY: 230,
+          tolerance: 40,
+          desc: 'Cèl·lules flagel·lades microscòpiques que neden cap a l\'òvul; només un aconsegueix fecundar-lo.',
+          svg: `<g>
+          <circle cx="170" cy="230" r="8" fill="#38bdf8"/>
+          <path d="M 162 230 Q 140 220 120 230" stroke="#0284c7" stroke-width="3" fill="none"/>
+          <text x="150" y="255" text-anchor="middle" font-size="9" font-weight="bold" fill="#0369a1">Espermatozoide</text>
+        </g>`
+        },
+        {
+          id: 'fec-zigot',
+          name: 'Zigot (Primera Cèl·lula Diploid)',
+          icon: '✨',
+          targetX: 350,
+          targetY: 230,
+          tolerance: 45,
+          desc: 'Cèl·lula resultant de la fusió dels 23 cromosomes de l\'òvul i els 23 de l\'espermatozoide (46 cromosomes en total).',
+          svg: `<g>
+          <circle cx="350" cy="230" r="32" fill="#fed7aa" stroke="#ea580c" stroke-width="3"/>
+          <circle cx="340" cy="230" r="8" fill="#ea580c"/>
+          <circle cx="360" cy="230" r="8" fill="#ea580c"/>
+          <text x="350" y="248" text-anchor="middle" font-size="9" font-weight="bold" fill="#7c2d12">Zigot (46 cr)</text>
+        </g>`
+        },
+        {
+          id: 'fec-placenta',
+          name: 'Placenta Materna',
+          icon: '🥩',
+          targetX: 530,
+          targetY: 210,
+          tolerance: 50,
+          desc: 'Òrgan temporal adherit a l\'úter que transfereix oxigen i nutrients de la mare al fetus i recull residus.',
+          svg: `<g>
+          <path d="M 470 170 Q 550 160 590 220 Q 560 250 480 230 Z" fill="#f43f5e" stroke="#9f1239" stroke-width="3"/>
+          <text x="530" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Placenta</text>
+        </g>`
+        },
+        {
+          id: 'fec-cordo',
+          name: 'Cordó Umbilical',
+          icon: '➰',
+          targetX: 450,
+          targetY: 340,
+          tolerance: 45,
+          desc: 'Conté 2 artèries i 1 vena que connecten la circulació del fetus directament amb la placenta materna.',
+          svg: `<g>
+          <path d="M 520 230 Q 480 320 400 360" stroke="#0284c7" stroke-width="12" fill="none" stroke-linecap="round"/>
+          <path d="M 520 230 Q 480 320 400 360" stroke="#38bdf8" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <text x="450" y="325" text-anchor="middle" font-size="10" font-weight="bold" fill="#0369a1">Cordó Umbilical</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD2: MUNTATGE DE FILTRACIÓ PER GRAVETAT
+    {
+      id: 'filtracio',
+      title: 'Muntatge de Filtració per Gravetat',
+      category: 'quimica',
+      unit: 'UD2',
+      badge: 'UD2 · Tècniques de Separació',
+      icon: '🧪',
+      desc: 'Acobla el muntatge per separar sòlids insolubles de líquids: suport, cèrcol, embut de vidre, filtre prisat i vas col·lector.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <rect x="150" y="520" width="500" height="20" fill="#475569" rx="3"/>
+      <text x="400" y="565" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">FILTRACIÓ DE MESCLES HETEROGÈNIES SÒLID-LÍQUID</text>`,
+      pieces: [
+        {
+          id: 'fil-suport',
+          name: 'Suport Universal amb Cèrcol',
+          icon: '🏗️',
+          targetX: 250,
+          targetY: 330,
+          tolerance: 50,
+          desc: 'Base metàl·lica amb tija vertical i cèrcol per subjectar l\'embut a l\'alçada exacta sobre el vas de precipitats.',
+          svg: `<g>
+          <rect x="190" y="505" width="120" height="15" fill="#1e293b"/>
+          <rect x="245" y="150" width="10" height="360" fill="#64748b"/>
+          <line x1="255" y1="290" x2="360" y2="290" stroke="#0f172a" stroke-width="5"/>
+          <ellipse cx="380" cy="290" rx="28" ry="10" fill="none" stroke="#0f172a" stroke-width="4"/>
+          <text x="250" y="220" text-anchor="middle" font-size="10" font-weight="bold" fill="#0f172a">Suport</text>
+        </g>`
+        },
+        {
+          id: 'fil-embut',
+          name: 'Embut Cònic de Vidre',
+          icon: '🍦',
+          targetX: 380,
+          targetY: 290,
+          tolerance: 45,
+          desc: 'Peça de vidre amb con de 60° i tija llarga que condueix el líquid filtrat net cap al vas.',
+          svg: `<g>
+          <polygon points="340,240 420,240 385,300 375,300" fill="rgba(186, 230, 253, 0.45)" stroke="#0284c7" stroke-width="3"/>
+          <rect x="376" y="300" width="8" height="70" fill="rgba(186, 230, 253, 0.45)" stroke="#0284c7" stroke-width="2"/>
+          <text x="380" y="265" text-anchor="middle" font-size="10" font-weight="bold" fill="#0369a1">Embut</text>
+        </g>`
+        },
+        {
+          id: 'fil-paper',
+          name: 'Paper de Filtre Prisat',
+          icon: '📄',
+          targetX: 380,
+          targetY: 230,
+          tolerance: 40,
+          desc: 'Paper porós plegat que reté les partícules sòlides insolubles deixant passar exclusivament el líquid.',
+          svg: `<g>
+          <polygon points="345,215 415,215 380,270" fill="#f8fafc" stroke="#475569" stroke-width="2.5"/>
+          <line x1="360" y1="215" x2="380" y2="270" stroke="#94a3b8" stroke-width="1.5"/>
+          <line x1="400" y1="215" x2="380" y2="270" stroke="#94a3b8" stroke-width="1.5"/>
+          <text x="380" y="210" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">Filtre Prisat</text>
+        </g>`
+        },
+        {
+          id: 'fil-vas',
+          name: 'Vas de Precipitats (Recol·lector)',
+          icon: '🥃',
+          targetX: 380,
+          targetY: 440,
+          tolerance: 45,
+          desc: 'Recipient graduat que rep el filtrat net transparent lliure de sòlids en suspensió.',
+          svg: `<g>
+          <rect x="340" y="380" width="80" height="120" rx="6" fill="rgba(224, 242, 254, 0.45)" stroke="#0284c7" stroke-width="3"/>
+          <rect x="345" y="440" width="70" height="55" fill="rgba(56, 189, 248, 0.3)"/>
+          <text x="380" y="465" text-anchor="middle" font-size="10" font-weight="bold" fill="#0369a1">Vas Filtrador</text>
+        </g>`
+        },
+        {
+          id: 'fil-vareta',
+          name: 'Vareta Agitadora de Vidre',
+          icon: '🥢',
+          targetX: 450,
+          targetY: 230,
+          tolerance: 40,
+          desc: 'Guia el doll de mescla sense esquitxar directament sobre el paper de filtre.',
+          svg: `<g>
+          <line x1="490" y1="170" x2="400" y2="280" stroke="#0ea5e9" stroke-width="6" stroke-linecap="round"/>
+          <text x="470" y="195" font-size="10" font-weight="bold" fill="#0369a1">Vareta</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD2: METALLS DEL TALLER A LA TAULA PERIÒDICA
+    {
+      id: 'metalls-taula',
+      title: 'Metalls del Taller a la Taula Periòdica',
+      category: 'quimica',
+      unit: 'UD2',
+      badge: 'UD2 · Elements i Propietats',
+      icon: '🔩',
+      desc: 'Ubica els 5 elements clau de mecanitzat i manteniment: Ferro (Fe), Coure (Cu), Alumini (Al), Carboni (C) i Oxigen (O).',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Silueta simplificada de la Taula Periòdica -->
+      <rect x="100" y="100" width="600" height="380" fill="none" stroke="#cbd5e1" stroke-width="3" rx="12" stroke-dasharray="8 6"/>
+      <line x1="100" y1="200" x2="700" y2="200" stroke="#e2e8f0" stroke-width="2"/>
+      <line x1="450" y1="100" x2="450" y2="480" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="275" y="150" text-anchor="middle" font-size="14" font-weight="800" fill="#94a3b8">ZONA METÀL·LICA (BLOC D I TRANSICIÓ)</text>
+      <text x="575" y="150" text-anchor="middle" font-size="14" font-weight="800" fill="#94a3b8">ZONA NO-METALLS (BLOC P)</text>
+      <text x="400" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">CLASSIFICACIÓ PER PROPIETATS MECÀNIQUES I CONDUCTIVITAT</text>`,
+      pieces: [
+        {
+          id: 'tab-fe',
+          name: 'Ferro Fe (Z=26, Grup 8)',
+          icon: '⚙️',
+          targetX: 250,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'El metall més utilitzat en la indústria: base dels acers i foses, magnètic i molt resistent.',
+          svg: `<g>
+          <rect x="210" y="260" width="80" height="80" rx="10" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+          <text x="250" y="295" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">Fe</text>
+          <text x="250" y="325" text-anchor="middle" font-size="11" font-weight="bold" fill="#94a3b8">Ferro (26)</text>
+        </g>`
+        },
+        {
+          id: 'tab-cu',
+          name: 'Coure Cu (Z=29, Grup 11)',
+          icon: '🥉',
+          targetX: 350,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'Excel·lent conductor elèctric i tèrmic, dúctil i mal·leable. Utilitzat en tot el cablejat del taller.',
+          svg: `<g>
+          <rect x="310" y="260" width="80" height="80" rx="10" fill="#b45309" stroke="#78350f" stroke-width="3"/>
+          <text x="350" y="295" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">Cu</text>
+          <text x="350" y="325" text-anchor="middle" font-size="11" font-weight="bold" fill="#fde68a">Coure (29)</text>
+        </g>`
+        },
+        {
+          id: 'tab-al',
+          name: 'Alumini Al (Z=13, Grup 13)',
+          icon: '🥈',
+          targetX: 480,
+          targetY: 250,
+          tolerance: 45,
+          desc: 'Metall molt lleuger (baixa densitat d = 2,7 g/cm³) i resistent a la corrosió gràcies a la seua capa d\'òxid.',
+          svg: `<g>
+          <rect x="440" y="210" width="80" height="80" rx="10" fill="#64748b" stroke="#334155" stroke-width="3"/>
+          <text x="480" y="245" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">Al</text>
+          <text x="480" y="275" text-anchor="middle" font-size="11" font-weight="bold" fill="#e2e8f0">Alumini (13)</text>
+        </g>`
+        },
+        {
+          id: 'tab-c',
+          name: 'Carboni C (Z=6, Grup 14)',
+          icon: '💎',
+          targetX: 580,
+          targetY: 210,
+          tolerance: 45,
+          desc: 'No-metall fonamental: s\'afegeix al ferro en petites proporcions (0,2% - 2%) per formar acers de gran duresa.',
+          svg: `<g>
+          <rect x="540" y="170" width="80" height="80" rx="10" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+          <text x="580" y="205" text-anchor="middle" font-size="22" font-weight="900" fill="#38bdf8">C</text>
+          <text x="580" y="235" text-anchor="middle" font-size="11" font-weight="bold" fill="#94a3b8">Carboni (6)</text>
+        </g>`
+        },
+        {
+          id: 'tab-o',
+          name: 'Oxigen O (Z=8, Grup 16)',
+          icon: '💨',
+          targetX: 660,
+          targetY: 210,
+          tolerance: 45,
+          desc: 'Gas comburent indispensable per a les combustions als motors tèrmics i la soldadura oxiacetilènica.',
+          svg: `<g>
+          <rect x="620" y="170" width="80" height="80" rx="10" fill="#0284c7" stroke="#0369a1" stroke-width="3"/>
+          <text x="660" y="205" text-anchor="middle" font-size="22" font-weight="900" fill="#ffffff">O</text>
+          <text x="660" y="235" text-anchor="middle" font-size="11" font-weight="bold" fill="#bae6fd">Oxigen (8)</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD3: BLOC DIAGRAMA D'UNA FALLA TECTÒNICA
+    {
+      id: 'falles',
+      title: 'Bloc Diagrama d\'una Falla Tectònica',
+      category: 'geologia',
+      unit: 'UD3',
+      badge: 'UD3 · Riscos Sísmics',
+      icon: '🪨',
+      desc: 'Munta l\'origen d\'un terratrémol: pla de fractura, bloc caigut, bloc aixecat, hipocentre i epicentre en superfície.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <polygon points="120,480 350,150 680,150 450,480" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="6 4"/>
+      <text x="400" y="560" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">FRACTURA TECTÒNICA I PROPAGACIÓ D'ONES SÍSMIQUES</text>`,
+      pieces: [
+        {
+          id: 'fal-pla',
+          name: 'Pla de Falla (Superfície de Ruptura)',
+          icon: '📐',
+          targetX: 400,
+          targetY: 300,
+          tolerance: 50,
+          desc: 'Superfície inclinada sobre la qual es produeix el desplaçament brusc dels blocs rocosos.',
+          svg: `<g>
+          <line x1="330" y1="180" x2="470" y2="420" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+          <text x="400" y="290" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c" transform="rotate(45 400 290)">Pla de Falla</text>
+        </g>`
+        },
+        {
+          id: 'fal-bloc-baix',
+          name: 'Bloc Caigut (Graben)',
+          icon: '⬇️',
+          targetX: 260,
+          targetY: 320,
+          tolerance: 50,
+          desc: 'Bloc de terreny que descendeix pel pla de falla a causa d\'esforços de distensió tectònica.',
+          svg: `<g>
+          <polygon points="160,370 290,190 340,370" fill="#b45309" stroke="#78350f" stroke-width="3"/>
+          <text x="260" y="330" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Bloc Caigut</text>
+        </g>`
+        },
+        {
+          id: 'fal-bloc-alt',
+          name: 'Bloc Aixecat (Horst)',
+          icon: '⬆️',
+          targetX: 540,
+          targetY: 250,
+          tolerance: 50,
+          desc: 'Bloc que roman en una cota superior formant relleus i escarpaments a la superfície.',
+          svg: `<g>
+          <polygon points="460,370 510,190 640,190 590,370" fill="#15803d" stroke="#166534" stroke-width="3"/>
+          <text x="550" y="270" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Bloc Aixecat</text>
+        </g>`
+        },
+        {
+          id: 'fal-hipo',
+          name: 'Hipocentre (Focus Sísmic Profund)',
+          icon: '💥',
+          targetX: 420,
+          targetY: 380,
+          tolerance: 45,
+          desc: 'Punt exacte sota terra on s\'inicia la ruptura i s\'allibera bruscament l\'energia acumulada en forma d\'ones sísmiques.',
+          svg: `<g>
+          <circle cx="420" cy="380" r="22" fill="#ef4444" stroke="#991b1b" stroke-width="2"/>
+          <circle cx="420" cy="380" r="10" fill="#fef08a"/>
+          <text x="420" y="420" text-anchor="middle" font-size="10" font-weight="bold" fill="#991b1b">Hipocentre</text>
+        </g>`
+        },
+        {
+          id: 'fal-epi',
+          name: 'Epicentre (Punt en Superfície)',
+          icon: '📍',
+          targetX: 420,
+          targetY: 150,
+          tolerance: 45,
+          desc: 'Punt de la superfície terrestre situat en la vertical de l\'hipocentre, on el terratrémol se sent amb màxima intensitat.',
+          svg: `<g>
+          <path d="M 420 120 C 405 120 395 135 420 165 C 445 135 435 120 420 120 Z" fill="#dc2626"/>
+          <circle cx="420" cy="135" r="5" fill="#ffffff"/>
+          <text x="420" y="110" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">Epicentre</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD4: AEROGENERADOR D'ENERGIA EÒLICA
+    {
+      id: 'eolica',
+      title: 'Aerogenerador d\'Energia Eòlica',
+      category: 'geologia',
+      unit: 'UD4',
+      badge: 'UD4 · Energies Renovables',
+      icon: '🌬️',
+      desc: 'Acobla els components de la turbina eòlica: fonamentació de formigó, torre d\'acer, gòndola, rotor amb pales i transformador.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <line x1="100" y1="520" x2="700" y2="520" stroke="#16a34a" stroke-width="8"/>
+      <text x="400" y="565" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">CONVERSIÓ: ENERGIA CINÈTICA DEL VENT A ENERGIA ELÈCTRICA</text>`,
+      pieces: [
+        {
+          id: 'eol-fonament',
+          name: 'Fonamentació de Formigó Armat',
+          icon: '🧱',
+          targetX: 400,
+          targetY: 505,
+          tolerance: 45,
+          desc: 'Base soterrada de centenars de tones que suporta les colossals forces de torsió del vent sobre la torre.',
+          svg: `<g>
+          <polygon points="320,520 480,520 450,475 350,475" fill="#64748b" stroke="#334155" stroke-width="3"/>
+          <text x="400" y="505" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">Fonaments</text>
+        </g>`
+        },
+        {
+          id: 'eol-torre',
+          name: 'Torre Tubular d'Acer',
+          icon: '🗼',
+          targetX: 400,
+          targetY: 340,
+          tolerance: 50,
+          desc: 'Estructura d\'acer de 80 a 120 metres que eleva el rotor a l\'altura on el vent bufa més fort i amb menys turbulències.',
+          svg: `<g>
+          <polygon points="370,475 430,475 415,190 385,190" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+          <text x="400" y="340" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e293b" transform="rotate(-90 400 340)">Torre d'Acer</text>
+        </g>`
+        },
+        {
+          id: 'eol-gondola',
+          name: 'Gòndola (Multiplicador + Generador)',
+          icon: '📦',
+          targetX: 435,
+          targetY: 180,
+          tolerance: 45,
+          desc: 'Allotja l\'eix de gir, el multiplicador d\'engranatges (puja de 15 rpm a 1.500 rpm) i l\'alternador que genera electricitat.',
+          svg: `<g>
+          <rect x="385" y="155" width="100" height="45" rx="8" fill="#38bdf8" stroke="#0284c7" stroke-width="3"/>
+          <circle cx="395" cy="177" r="12" fill="#0284c7"/>
+          <text x="445" y="182" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">Gòndola</text>
+        </g>`
+        },
+        {
+          id: 'eol-pales',
+          name: 'Rotor amb 3 Pales Aerodinàmiques',
+          icon: '🪭',
+          targetX: 350,
+          targetY: 175,
+          tolerance: 45,
+          desc: 'Pales de fibra de vidre amb perfil alar aerodinàmic que giren per sustentació en rebre el flux de vent.',
+          svg: `<g>
+          <line x1="350" y1="175" x2="350" y2="70" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+          <line x1="350" y1="175" x2="260" y2="230" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+          <line x1="350" y1="175" x2="430" y2="230" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="350" cy="175" r="14" fill="#0284c7"/>
+          <text x="350" y="179" text-anchor="middle" font-size="8" font-weight="bold" fill="#ffffff">Rotor</text>
+        </g>`
+        },
+        {
+          id: 'eol-trans',
+          name: 'Transformador de Base',
+          icon: '⚡',
+          targetX: 470,
+          targetY: 485,
+          tolerance: 40,
+          desc: 'Eleva la tensió generada de 690 V a mitja tensió (20.000 V o 30.000 V) per enviar l\'energia a la xarxa elèctrica.',
+          svg: `<g>
+          <rect x="445" y="460" width="50" height="50" rx="6" fill="#f59e0b" stroke="#b45309" stroke-width="2.5"/>
+          <text x="470" y="490" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">Transfo</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD4: CIRCUIT SOLAR FOTOVOLTAIC AÏLLAT
+    {
+      id: 'solar',
+      title: 'Circuit Solar Fotovoltaic Aïllat',
+      category: 'geologia',
+      unit: 'UD4',
+      badge: 'UD4 · Energia Solar',
+      icon: '☀️',
+      desc: 'Connecta el flux solar autònom: panell fotovoltaic, regulador de càrrega, bateria acumuladora i inversor 12V a 230V.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Línia de cablejat elèctric del circuit -->
+      <path d="M 240 230 L 380 230 L 380 370 L 260 370 M 420 230 L 560 230 L 560 350" stroke="#cbd5e1" stroke-width="6" fill="none"/>
+      <text x="400" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">EFECTE FOTOVOLTAIC I EMMAGATZEMATGE D'ENERGIA</text>`,
+      pieces: [
+        {
+          id: 'sol-panell',
+          name: 'Panell Solar Fotovoltaic (Silici)',
+          icon: '🟦',
+          targetX: 180,
+          targetY: 230,
+          tolerance: 50,
+          desc: 'Cèl·lules de silici que absorbeixen fotons de llum solar i alliberen electrons generant corrent continu (DC).',
+          svg: `<g>
+          <rect x="120" y="160" width="120" height="140" rx="6" fill="#1e3a8a" stroke="#172554" stroke-width="3"/>
+          <line x1="160" y1="160" x2="160" y2="300" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="200" y1="160" x2="200" y2="300" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="120" y1="210" x2="240" y2="210" stroke="#38bdf8" stroke-width="2"/>
+          <line x1="120" y1="250" x2="240" y2="250" stroke="#38bdf8" stroke-width="2"/>
+          <text x="180" y="325" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e3a8a">Panell Solar</text>
+        </g>`
+        },
+        {
+          id: 'sol-regulador',
+          name: 'Regulador de Càrrega (PWM/MPPT)',
+          icon: '🎛️',
+          targetX: 380,
+          targetY: 230,
+          tolerance: 45,
+          desc: 'Controla el voltatge d\'entrada per evitar la sobrecàrrega o descàrrega profunda de la bateria.',
+          svg: `<g>
+          <rect x="340" y="190" width="80" height="80" rx="8" fill="#10b981" stroke="#047857" stroke-width="3"/>
+          <circle cx="365" cy="220" r="5" fill="#ffffff"/>
+          <circle cx="395" cy="220" r="5" fill="#ffffff"/>
+          <text x="380" y="250" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">Regulador</text>
+        </g>`
+        },
+        {
+          id: 'sol-bateria',
+          name: 'Bateria Acumuladora (12V Gel/Liti)',
+          icon: '🔋',
+          targetX: 380,
+          targetY: 390,
+          tolerance: 45,
+          desc: 'Emmagatzema energia química per a disposar d\'electricitat a la nit o en dies ennuvolats.',
+          svg: `<g>
+          <rect x="330" y="350" width="100" height="80" rx="8" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+          <rect x="350" y="340" width="16" height="10" fill="#dc2626"/>
+          <rect x="394" y="340" width="16" height="10" fill="#0284c7"/>
+          <text x="380" y="395" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Bateria 12V</text>
+        </g>`
+        },
+        {
+          id: 'sol-inversor',
+          name: 'Inversor DC / AC (12V a 230V)',
+          icon: '🔄',
+          targetX: 560,
+          targetY: 230,
+          tolerance: 45,
+          desc: 'Transforma el corrent continu de 12V de la bateria en corrent altern sinusoïdal de 230V per als endolls de taller.',
+          svg: `<g>
+          <rect x="515" y="185" width="90" height="90" rx="10" fill="#f59e0b" stroke="#b45309" stroke-width="3"/>
+          <text x="560" y="225" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Inversor</text>
+          <text x="560" y="245" text-anchor="middle" font-size="9" fill="#ffffff">12V ➔ 230V</text>
+        </g>`
+        },
+        {
+          id: 'sol-consum',
+          name: 'Consumidor Elèctric (Bombeta / Eina)',
+          icon: '💡',
+          targetX: 680,
+          targetY: 230,
+          tolerance: 45,
+          desc: 'Receptor final de 230V que utilitza l\'energia verda neta generada pel sol.',
+          svg: `<g>
+          <circle cx="680" cy="220" r="28" fill="#fef08a" stroke="#ca8a04" stroke-width="3"/>
+          <rect x="670" y="248" width="20" height="16" fill="#64748b"/>
+          <text x="680" y="225" text-anchor="middle" font-size="10" font-weight="bold" fill="#854d0e">230V AC</text>
+        </g>`
+        }
+      ]
+    },
+
+    // UD5: CILINDRE I PISTÓ DEL MOTOR DE 4 TEMPS
+    {
+      id: 'motor-4t',
+      title: 'Cilindre i Pistó del Motor de 4 Temps',
+      category: 'quimica',
+      unit: 'UD5',
+      badge: 'UD5 · Màquines Tèrmiques',
+      icon: '🏎️',
+      desc: 'Munta el conjunt mòbil del motor tèrmic: cilindre, pistó amb segments, biela, cigonyal, vàlvules i bugia.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Silueta de la camisa del cilindre -->
+      <rect x="320" y="110" width="160" height="340" fill="none" stroke="#94a3b8" stroke-width="4" stroke-dasharray="8 6"/>
+      <circle cx="400" cy="480" r="50" fill="none" stroke="#cbd5e1" stroke-width="3" stroke-dasharray="6 4"/>
+      <text x="400" y="565" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">CICLE DE 4 TEMPS: ADMISSIÓ, COMPRESSIÓ, EXPLOSIÓ I ESCAPAMENT</text>`,
+      pieces: [
+        {
+          id: 'mot-culata',
+          name: 'Bugia d'Encès (Espurna)',
+          icon: '⚡',
+          targetX: 400,
+          targetY: 95,
+          tolerance: 40,
+          desc: 'Genera una espurna d\'alta tensió (20.000 V) que inflama la barreja comprimida de gasolina i aire.',
+          svg: `<g>
+          <rect x="390" y="60" width="20" height="50" fill="#ffffff" stroke="#0f172a" stroke-width="2.5"/>
+          <circle cx="400" cy="115" r="4" fill="#38bdf8"/>
+          <text x="400" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#0284c7">Bugia</text>
+        </g>`
+        },
+        {
+          id: 'mot-valvules',
+          name: 'Vàlvules (Admissió i Escapament)',
+          icon: '🍄',
+          targetX: 350,
+          targetY: 115,
+          tolerance: 45,
+          desc: 'S\'obrin i tanquen sincronitzades per l\'arbre de lleves per permetre l\'entrada de mescla fresca i l\'eixida de fums.',
+          svg: `<g>
+          <polygon points="340,130 360,130 353,90 347,90" fill="#64748b" stroke="#334155" stroke-width="2"/>
+          <polygon points="440,130 460,130 453,90 447,90" fill="#64748b" stroke="#334155" stroke-width="2"/>
+          <text x="350" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">Vàlvules</text>
+        </g>`
+        },
+        {
+          id: 'mot-pisto',
+          name: 'Pistó d'Alumini (amb Segments)',
+          icon: '🥫',
+          targetX: 400,
+          targetY: 210,
+          tolerance: 45,
+          desc: 'Reb l\'empenta de l\'explosió del gas i es desplaça amunt i avall entre el PMS (punt mort superior) i el PMI.',
+          svg: `<g>
+          <rect x="330" y="165" width="140" height="85" rx="6" fill="#e2e8f0" stroke="#334155" stroke-width="3"/>
+          <line x1="330" y1="180" x2="470" y2="180" stroke="#0f172a" stroke-width="2"/>
+          <line x1="330" y1="195" x2="470" y2="195" stroke="#0f172a" stroke-width="2"/>
+          <circle cx="400" cy="225" r="12" fill="#64748b"/>
+          <text x="400" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#0f172a">Pistó</text>
+        </g>`
+        },
+        {
+          id: 'mot-biela',
+          name: 'Biela d'Acer Forjat',
+          icon: '🦴',
+          targetX: 400,
+          targetY: 340,
+          tolerance: 50,
+          desc: 'Braç articulat que transmet el moviment lineal alternatiu del pistó cap al moviment circular del cigonyal.',
+          svg: `<g>
+          <line x1="400" y1="230" x2="400" y2="440" stroke="#475569" stroke-width="14" stroke-linecap="round"/>
+          <circle cx="400" cy="230" r="10" fill="#94a3b8"/>
+          <circle cx="400" cy="440" r="16" fill="#94a3b8"/>
+          <text x="400" y="340" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Biela</text>
+        </g>`
+        },
+        {
+          id: 'mot-cigonyal',
+          name: 'Cigonyal (Eix Motor Rotatiu)',
+          icon: '🔄',
+          targetX: 400,
+          targetY: 460,
+          tolerance: 45,
+          desc: 'Eix amb colzes que transforma l\'esforç de les bieles en rotació pura cap al volant d\'inèrcia i la caixa de canvis.',
+          svg: `<g>
+          <circle cx="400" cy="460" r="45" fill="#334155" stroke="#0f172a" stroke-width="4"/>
+          <circle cx="400" cy="440" r="12" fill="#ef4444"/>
+          <circle cx="400" cy="460" r="12" fill="#f8fafc"/>
+          <text x="400" y="495" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">Cigonyal</text>
+        </g>`
+        }
+      ]
+    },
+
+    // MAT 1: BALANÇA DE PRECISIÓ: PESAR PECES DE TALLER
+    {
+      id: 'balanca',
+      title: 'Balança de Precisió: Pesar Peces de Taller',
+      category: 'mates',
+      unit: 'MAT 1',
+      badge: 'MAT 1 · Mesura i Càlcul',
+      icon: '⚖️',
+      desc: 'Equilibra el plat col·locant les peses homologades (1 kg, 500 g, 200 g, 100 g i 50 g) segons la seua tara.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Estructura de la balança de dos plats -->
+      <line x1="200" y1="200" x2="600" y2="200" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+      <polygon points="400,180 370,480 430,480" fill="#475569" stroke="#1e293b" stroke-width="3"/>
+      <!-- Plat esquerre (peça de motor coneguda de 1.850 g) -->
+      <line x1="230" y1="205" x2="230" y2="330" stroke="#64748b" stroke-width="4"/>
+      <ellipse cx="230" cy="330" rx="80" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+      <rect x="180" y="270" width="100" height="50" rx="6" fill="#3b82f6"/>
+      <text x="230" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">Peça: 1.850 g</text>
+      <!-- Plat dret (on van les peses) -->
+      <line x1="570" y1="205" x2="570" y2="330" stroke="#64748b" stroke-width="4"/>
+      <ellipse cx="570" cy="330" rx="80" ry="20" fill="#cbd5e1" stroke="#475569" stroke-width="3"/>
+      <text x="400" y="555" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">SISTEMA MÈTRIC DECIMAL: 1 kg = 1.000 g</text>`,
+      pieces: [
+        {
+          id: 'pes-1000',
+          name: 'Pesa de 1 kg (1.000 g)',
+          icon: '🏋️',
+          targetX: 540,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'La massa estàndard del SI. Representa 1.000 grams exactes.',
+          svg: `<g>
+          <rect x="515" y="260" width="50" height="60" rx="6" fill="#334155" stroke="#0f172a" stroke-width="2.5"/>
+          <circle cx="540" cy="255" r="8" fill="#334155"/>
+          <text x="540" y="295" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">1 kg</text>
+        </g>`
+        },
+        {
+          id: 'pes-500',
+          name: 'Pesa de 500 g (Mig Quilo)',
+          icon: '⚖️',
+          targetX: 600,
+          targetY: 305,
+          tolerance: 45,
+          desc: 'La meitat d\'un quilo (0,5 kg = 500 g).',
+          svg: `<g>
+          <rect x="580" y="275" width="40" height="50" rx="5" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+          <circle cx="600" cy="270" r="6" fill="#475569"/>
+          <text x="600" y="305" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">500 g</text>
+        </g>`
+        },
+        {
+          id: 'pes-200',
+          name: 'Pesa de 200 g',
+          icon: '⚖️',
+          targetX: 530,
+          targetY: 240,
+          tolerance: 40,
+          desc: 'Pesa de calibratge de dos-cents grams (0,2 kg).',
+          svg: `<g>
+          <rect x="515" y="215" width="30" height="40" rx="4" fill="#64748b" stroke="#0f172a" stroke-width="2"/>
+          <text x="530" y="240" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">200g</text>
+        </g>`
+        },
+        {
+          id: 'pes-100',
+          name: 'Pesa de 100 g',
+          icon: '⚖️',
+          targetX: 575,
+          targetY: 245,
+          tolerance: 40,
+          desc: 'Un decagram (0,1 kg = 100 g).',
+          svg: `<g>
+          <rect x="562" y="225" width="26" height="35" rx="4" fill="#94a3b8" stroke="#0f172a" stroke-width="1.5"/>
+          <text x="575" y="248" text-anchor="middle" font-size="8" font-weight="bold" fill="#0f172a">100g</text>
+        </g>`
+        },
+        {
+          id: 'pes-50',
+          name: 'Pesa de 50 g',
+          icon: '⚖️',
+          targetX: 615,
+          targetY: 250,
+          tolerance: 40,
+          desc: 'Completa els 1.850 g exactes (1.000 + 500 + 200 + 100 + 50 = 1.850 g) deixant la balança en perfecte equilibri horitzontal.',
+          svg: `<g>
+          <rect x="605" y="235" width="20" height="28" rx="3" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
+          <text x="615" y="253" text-anchor="middle" font-size="8" font-weight="bold" fill="#0f172a">50g</text>
+        </g>`
+        }
+      ]
+    },
+
+    // MAT 2: ESCALA TÈRMICA D'ENTERS A LA CÀMERA FRIGORÍFICA
+    {
+      id: 'termometre-enters',
+      title: 'Escala Tèrmica d\'Enters a la Càmera Frigorífica',
+      category: 'mates',
+      unit: 'MAT 2',
+      badge: 'MAT 2 · Nombres Positius i Negatius',
+      icon: '🌡️',
+      desc: 'Ordena a la columna graduada les fites tèrmiques: +100°C, +20°C, 0°C, -18°C i -40°C.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Columna graduada del termòmetre -->
+      <rect x="375" y="60" width="50" height="460" rx="25" fill="#e2e8f0" stroke="#475569" stroke-width="4"/>
+      <circle cx="400" cy="510" r="40" fill="#ef4444" stroke="#475569" stroke-width="4"/>
+      <line x1="330" y1="300" x2="470" y2="300" stroke="#0284c7" stroke-width="3"/>
+      <text x="400" y="580" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">RECTA VERTICAL DELS ENTERS EN GRAUS CELSIUS (°C)</text>`,
+      pieces: [
+        {
+          id: 'ter-100',
+          name: 'Punt +100°C: Ebullició de l'Aigua',
+          icon: '♨️',
+          targetX: 400,
+          targetY: 100,
+          tolerance: 45,
+          desc: 'Temperatura màxima a pressió atmosfèrica estàndard: l\'aigua bull i passa a vapor d\'aigua (+100).',
+          svg: `<g>
+          <rect x="270" y="80" width="260" height="40" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+          <text x="400" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#991b1b">+100°C (Ebullició Aigua)</text>
+        </g>`
+        },
+        {
+          id: 'ter-20',
+          name: 'Punt +20°C: Temperatura de Taller',
+          icon: '🌤️',
+          targetX: 400,
+          targetY: 200,
+          tolerance: 45,
+          desc: 'Valor positiu moderat: ambient confortable de treball (+20).',
+          svg: `<g>
+          <rect x="270" y="180" width="260" height="40" rx="6" fill="#ffedd5" stroke="#ea580c" stroke-width="2.5"/>
+          <text x="400" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="#9a3412">+20°C (Ambient Confortable)</text>
+        </g>`
+        },
+        {
+          id: 'ter-0',
+          name: 'Punt 0°C: Fusió / Congelació',
+          icon: '🧊',
+          targetX: 400,
+          targetY: 300,
+          tolerance: 45,
+          desc: 'El zero de referència: transició entre nombres positius i nombres negatius.',
+          svg: `<g>
+          <rect x="270" y="280" width="260" height="40" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+          <text x="400" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#0369a1">0°C (Punt de Fusió / Gel)</text>
+        </g>`
+        },
+        {
+          id: 'ter-neg18',
+          name: 'Punt -18°C: Congelador Industrial',
+          icon: '❄️',
+          targetX: 400,
+          targetY: 390,
+          tolerance: 45,
+          desc: 'Nombre negatiu: temperatura reglamentària per a la conservació d\'aliments ultracongelats (-18).',
+          svg: `<g>
+          <rect x="270" y="370" width="260" height="40" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+          <text x="400" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">-18°C (Congelador Industrial)</text>
+        </g>`
+        },
+        {
+          id: 'ter-neg40',
+          name: 'Punt -40°C: Límit Anticongelant',
+          icon: '🥶',
+          targetX: 400,
+          targetY: 470,
+          tolerance: 45,
+          desc: 'El valor més baix de l\'escala (-40 < -18): límit de protecció dels líquids refrigerants d\'automoció d\'alta qualitat.',
+          svg: `<g>
+          <rect x="270" y="450" width="260" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+          <text x="400" y="475" text-anchor="middle" font-size="13" font-weight="bold" fill="#5b21b6">-40°C (Límit Anticongelant G12)</text>
+        </g>`
+        }
+      ]
+    },
+
+    // MAT 3: CAIXA DE BROQUES: MÚLTIPLES I DIVISIBILITAT
+    {
+      id: 'caixa-broques',
+      title: 'Caixa de Broques: Múltiples i Divisibilitat',
+      category: 'mates',
+      unit: 'MAT 3',
+      badge: 'MAT 3 · Divisibilitat de Taller',
+      icon: '🛠️',
+      desc: 'Ordena les broques d\'acer ràpid (HSS) a l\'estoig segons el seu diàmetre de més prim a més gros: Ø 2, 4, 6, 8 i 10 mm.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <!-- Estoig de broques de xapa vermella de taller -->
+      <rect x="120" y="100" width="560" height="400" rx="14" fill="#991b1b" stroke="#7f1d1d" stroke-width="6"/>
+      <rect x="140" y="120" width="520" height="360" rx="8" fill="#1e293b"/>
+      <line x1="140" y1="360" x2="660" y2="360" stroke="#475569" stroke-width="4"/>
+      <text x="400" y="555" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">PROGRESSIÓ ARITMÈTICA: MÚLTIPLES DE 2 mm (DIVISIBILITAT PER 2)</text>`,
+      pieces: [
+        {
+          id: 'broc-2',
+          name: 'Broca Ø 2 mm (La més fina)',
+          icon: '📍',
+          targetX: 200,
+          targetY: 280,
+          tolerance: 45,
+          desc: 'La broca més petita de la sèrie, diàmetre par mínim (2 = 2 · 1).',
+          svg: `<g>
+          <rect x="197" y="160" width="6" height="200" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+          <text x="200" y="380" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Ø 2</text>
+        </g>`
+        },
+        {
+          id: 'broc-4',
+          name: 'Broca Ø 4 mm',
+          icon: '📍',
+          targetX: 300,
+          targetY: 280,
+          tolerance: 45,
+          desc: 'Doble de diàmetre que la primera (4 = 2 · 2).',
+          svg: `<g>
+          <rect x="294" y="160" width="12" height="200" fill="#cbd5e1" stroke="#0f172a" stroke-width="1.5"/>
+          <text x="300" y="380" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Ø 4</text>
+        </g>`
+        },
+        {
+          id: 'broc-6',
+          name: 'Broca Ø 6 mm',
+          icon: '📍',
+          targetX: 400,
+          targetY: 280,
+          tolerance: 45,
+          desc: 'Múltiple comú de 2 i de 3 (6 = 2 · 3). Molt habitual per a tacs de paret.',
+          svg: `<g>
+          <rect x="391" y="160" width="18" height="200" fill="#94a3b8" stroke="#0f172a" stroke-width="2"/>
+          <text x="400" y="380" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Ø 6</text>
+        </g>`
+        },
+        {
+          id: 'broc-8',
+          name: 'Broca Ø 8 mm',
+          icon: '📍',
+          targetX: 500,
+          targetY: 280,
+          tolerance: 45,
+          desc: 'Potència de 2 (8 = 2³). Perforació de forats de mida mitjana.',
+          svg: `<g>
+          <rect x="488" y="160" width="24" height="200" fill="#64748b" stroke="#0f172a" stroke-width="2"/>
+          <text x="500" y="380" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Ø 8</text>
+        </g>`
+        },
+        {
+          id: 'broc-10',
+          name: 'Broca Ø 10 mm (La més grossa)',
+          icon: '📍',
+          targetX: 600,
+          targetY: 280,
+          tolerance: 45,
+          desc: 'Múltiple de 2 i de 5 (10 = 2 · 5). Broca gran per a caragols d\'ancoratge pesant.',
+          svg: `<g>
+          <rect x="585" y="160" width="30" height="200" fill="#475569" stroke="#0f172a" stroke-width="2"/>
+          <text x="600" y="380" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Ø 10</text>
+        </g>`
+        }
+      ]
+    },
+
+    // MAT 4: PEU DE REI / CALIBRE DE TALLER
+    {
+      id: 'calibre',
+      title: 'Peu de Rei / Calibre de Taller',
+      category: 'mates',
+      unit: 'MAT 4',
+      badge: 'MAT 4 · Nombres Decimals',
+      icon: '📏',
+      desc: 'Munta l\'instrument de mesura d\'alta precisió (0,05 mm): regle graduat, nonius, mordasses exteriors, orelles interiors i sonda.',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <rect x="100" y="270" width="600" height="50" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="8 6"/>
+      <text x="400" y="550" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">MESURA DECIMAL DE PRECISIÓ: DÈCIMES I CENTÈSIMES DE MIL·LÍMETRE</text>`,
+      pieces: [
+        {
+          id: 'cal-regle',
+          name: 'Regle Principal Fix (Escala en mm)',
+          icon: '📏',
+          targetX: 420,
+          targetY: 295,
+          tolerance: 50,
+          desc: 'Cos massís d\'acer inoxidable amb l\'escala mil·limètrica principal de 0 a 150 mm.',
+          svg: `<g>
+          <rect x="180" y="275" width="480" height="40" fill="#e2e8f0" stroke="#334155" stroke-width="3"/>
+          <line x1="220" y1="275" x2="220" y2="295" stroke="#0f172a" stroke-width="2"/>
+          <line x1="260" y1="275" x2="260" y2="295" stroke="#0f172a" stroke-width="2"/>
+          <line x1="300" y1="275" x2="300" y2="295" stroke="#0f172a" stroke-width="2"/>
+          <line x1="340" y1="275" x2="340" y2="295" stroke="#0f172a" stroke-width="2"/>
+          <line x1="380" y1="275" x2="380" y2="295" stroke="#0f172a" stroke-width="2"/>
+          <line x1="420" y1="275" x2="420" y2="295" stroke="#0f172a" stroke-width="2"/>
+          <text x="420" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#0f172a">Regle Principal (mm)</text>
+        </g>`
+        },
+        {
+          id: 'cal-mordasses',
+          name: 'Mordassa Fixa per a Exteriors',
+          icon: '📐',
+          targetX: 150,
+          targetY: 340,
+          tolerance: 45,
+          desc: 'Braç inferior fix perpendicular al regle per mesurar diàmetres exteriors i gruixos de xapa.',
+          svg: `<g>
+          <polygon points="120,275 180,275 180,390 120,440" fill="#cbd5e1" stroke="#334155" stroke-width="3"/>
+          <text x="150" y="375" text-anchor="middle" font-size="10" font-weight="bold" fill="#0f172a">Mordassa Fixa</text>
+        </g>`
+        },
+        {
+          id: 'cal-orelles',
+          name: 'Orella Superior per a Interiors',
+          icon: '🐰',
+          targetX: 150,
+          targetY: 230,
+          tolerance: 45,
+          desc: 'Puntes afilades superiors que entren dins de tubs o cilindres per mesurar diàmetres interns.',
+          svg: `<g>
+          <polygon points="120,275 180,275 160,180 130,180" fill="#cbd5e1" stroke="#334155" stroke-width="3"/>
+          <text x="150" y="240" text-anchor="middle" font-size="9" font-weight="bold" fill="#0f172a">Orelles Interiors</text>
+        </g>`
+        },
+        {
+          id: 'cal-nonius',
+          name: 'Nonius / Cursó Mòbil Lliscant',
+          icon: '🔍',
+          targetX: 300,
+          targetY: 320,
+          tolerance: 45,
+          desc: 'Peça lliscant amb 10 o 20 divisions que permet llegir fraccions decimals exactes de mil·límetre (0,1 mm o 0,05 mm).',
+          svg: `<g>
+          <rect x="250" y="270" width="100" height="90" rx="4" fill="#94a3b8" stroke="#0f172a" stroke-width="3"/>
+          <polygon points="250,360 250,440 290,360" fill="#94a3b8" stroke="#0f172a" stroke-width="2"/>
+          <text x="300" y="335" text-anchor="middle" font-size="10" font-weight="bold" fill="#ffffff">Nonius Decimal</text>
+        </g>`
+        },
+        {
+          id: 'cal-sonda',
+          name: 'Sonda de Profunditat',
+          icon: '🗡️',
+          targetX: 680,
+          targetY: 295,
+          tolerance: 45,
+          desc: 'Tija prima que surt per la part posterior per mesurar la profunditat de forats cecs o ranures estretes.',
+          svg: `<g>
+          <line x1="640" y1="295" x2="750" y2="295" stroke="#64748b" stroke-width="6" stroke-linecap="round"/>
+          <text x="700" y="285" text-anchor="middle" font-size="9" font-weight="bold" fill="#334155">Sonda Fons</text>
+        </g>`
+        }
+      ]
+    },
+
+    // MAT 5: PALANCA DE PRIMER GÈNERE: LLEI DE LA PALANCA
+    {
+      id: 'politges',
+      title: 'Palanca de Primer Gènere: Llei de la Palanca',
+      category: 'mates',
+      unit: 'MAT 5',
+      badge: 'MAT 5 · Proporcionalitat i Forces',
+      icon: '🏗️',
+      desc: 'Munta la màquina simple de taller: barra graduada, fulcre de suport, càrrega resistent (R) i dinamòmetre de força (F).',
+      bgSvg: `<rect width="800" height="600" fill="#f8fafc" rx="16"/>
+      <line x1="100" y1="480" x2="700" y2="480" stroke="#cbd5e1" stroke-width="8" stroke-linecap="round"/>
+      <text x="400" y="555" text-anchor="middle" font-size="14" font-weight="700" fill="#64748b">PROPORCIONALITAT INVERSA: FORÇA · BRAÇ_F = RESISTÈNCIA · BRAÇ_R</text>`,
+      pieces: [
+        {
+          id: 'pal-barra',
+          name: 'Barra Rígida Graduada (Balancí)',
+          icon: '🪵',
+          targetX: 400,
+          targetY: 280,
+          tolerance: 50,
+          desc: 'Barra indeformable sobre la qual s\'equilibren els moments de les dues forces oposades.',
+          svg: `<g>
+          <rect x="150" y="270" width="500" height="20" rx="6" fill="#334155" stroke="#0f172a" stroke-width="3"/>
+          <line x1="250" y1="270" x2="250" y2="290" stroke="#f8fafc" stroke-width="2"/>
+          <line x1="350" y1="270" x2="350" y2="290" stroke="#f8fafc" stroke-width="2"/>
+          <line x1="450" y1="270" x2="450" y2="290" stroke="#f8fafc" stroke-width="2"/>
+          <line x1="550" y1="270" x2="550" y2="290" stroke="#f8fafc" stroke-width="2"/>
+          <text x="400" y="260" text-anchor="middle" font-size="11" font-weight="bold" fill="#0f172a">Barra de Palanca</text>
+        </g>`
+        },
+        {
+          id: 'pal-fulcre',
+          name: 'Punt de Suport (Fulcre Central)',
+          icon: '📐',
+          targetX: 350,
+          targetY: 370,
+          tolerance: 45,
+          desc: 'Vèrtex rígid triangular sobre el qual pivota tota la palanca.',
+          svg: `<g>
+          <polygon points="350,290 310,450 390,450" fill="#ea580c" stroke="#9a3412" stroke-width="3"/>
+          <text x="350" y="470" text-anchor="middle" font-size="11" font-weight="bold" fill="#7c2d12">Fulcre (Suport)</text>
+        </g>`
+        },
+        {
+          id: 'pal-resistencia',
+          name: 'Càrrega Resistent (R = 100 kg)',
+          icon: '📦',
+          targetX: 200,
+          targetY: 210,
+          tolerance: 45,
+          desc: 'Pes pesant situat molt a prop del fulcre (braç d = 1 m). Resistència R = 1.000 N.',
+          svg: `<g>
+          <rect x="160" y="170" width="80" height="80" rx="8" fill="#ef4444" stroke="#991b1b" stroke-width="3"/>
+          <text x="200" y="205" text-anchor="middle" font-size="11" font-weight="bold" fill="#ffffff">Càrrega (R)</text>
+          <text x="200" y="225" text-anchor="middle" font-size="12" font-weight="900" fill="#ffffff">100 kg</text>
+        </g>`
+        },
+        {
+          id: 'pal-brac',
+          name: 'Braç de Potència (d = 3 m)',
+          icon: '📏',
+          targetX: 500,
+          targetY: 320,
+          tolerance: 45,
+          desc: 'Distància triple des del fulcre fins a la força aplicada. Com més llarg és el braç, menys esforç cal fer!',
+          svg: `<g>
+          <line x1="350" y1="320" x2="650" y2="320" stroke="#0284c7" stroke-width="4" stroke-dasharray="6 3"/>
+          <text x="500" y="340" text-anchor="middle" font-size="11" font-weight="bold" fill="#0369a1">Braç Triple (d₂ = 3 · d₁)</text>
+        </g>`
+        },
+        {
+          id: 'pal-forca',
+          name: 'Força Aplicada (F = 33,3 kg)',
+          icon: '⬇️',
+          targetX: 630,
+          targetY: 210,
+          tolerance: 45,
+          desc: 'Gràcies a la proporcionalitat inversa, amb només un terç de la força s\'aixeca tota la càrrega: \'Doneu-me un punt de suport i mouré el món\' (Arquimedes).',
+          svg: `<g>
+          <path d="M 630 160 L 630 240 M 615 225 L 630 245 L 645 225" stroke="#16a34a" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <text x="630" y="150" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">Força F = 33,3 kg</text>
+        </g>`
+        }
+      ]
+    }
   ];
 
   // --- ESTAT GLOBAL DE L'APLICACIÓ ---

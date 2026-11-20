@@ -24,7 +24,7 @@ badge: "Pissarra Digital (PDI) · Trencaclosques Anatòmics i Laboratori · 1r F
 
   <!-- FILTRES PER TEMÀTICA -->
   <div class="pdi-filter-bar">
-    <button class="filter-chip active" onclick="filterChallenges('all', this)">🌟 Tots els Reptes (<span id="count-all">14</span>)</button>
+    <button class="filter-chip active" onclick="filterChallenges('all', this)">🌟 Tots els Reptes (<span id="count-all">32</span>)</button>
     <button class="filter-chip" onclick="filterChallenges('anatomia', this)">🫀 Anatomia i Cos Humà</button>
     <button class="filter-chip" onclick="filterChallenges('quimica', this)">🧪 Física, Química i Laboratori</button>
     <button class="filter-chip" onclick="filterChallenges('geologia', this)">🌍 Terra i Energia</button>
