@@ -53,7 +53,7 @@ El nucli de la Terra assoleix temperatures pròximes als **5.500 °C - 6.000 °C
 ### El Gradient Geotèrmic
 Si baixem per una mina subterrània molt profunda (com les mines d'or de Sud-àfrica, que arriben a gairebé 4 km de profunditat) o perforem un pou geològic, comprovem que la temperatura puja de manera constant a mesura que aprofundim. S'anomena **gradient geotèrmic** la variació de temperatura amb la profunditat a l'escorça terrestre:
 
-\text{Gradient geotèrmic mitjà} \approx +3^\circ\text{C per cada } 100\text{ m de profunditat } (+30^\circ\text{C per cada } 1\text{ km})
+$$\text{Gradient geotèrmic mitjà} \approx +3^\circ\text{C per cada } 100\text{ m de profunditat } (+30^\circ\text{C per cada } 1\text{ km})$$
 
 ### Exemple Pràctic de Càlcul del Gradient Geotèrmic
 Imagina que a la superfície d'una explotació minera la temperatura és de 20 °C i volem saber a quina temperatura estaran les roques a 2.000 m (2 km) de profunditat:

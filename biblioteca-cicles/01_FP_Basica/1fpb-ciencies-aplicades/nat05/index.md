@@ -138,7 +138,7 @@ No obstant això, per raons històriques i en àmbits com la nutrició, la medic
 ### Equivalència Matemàtica (Equivalent Mecànic de la Calor)
 James P. Joule va demostrar experimentalment que la calor i el treball mecànic són equivalents i va establir el factor de conversió exacte entre ambdues unitats:
 
-1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = \frac{1}{4{,}18}\text{ cal} \approx 0{,}24\text{ cal}
+$$1\text{ cal} = 4{,}18\text{ J} \qquad \Longleftrightarrow \qquad 1\text{ J} = \frac{1}{4{,}18}\text{ cal} \approx 0{,}24\text{ cal}$$
 
 * **Per a passar de calories (cal) a Joules (J):** **Multipliquem per $4{,}18$**.
 * **Per a passar de Joules (J) a calories (cal):** **Dividim entre $4{,}18$** (o multipliquem per $0{,}24$).
@@ -151,7 +151,7 @@ James P. Joule va demostrar experimentalment que la calor i el treball mecànic 
 >
 > **Exemple 2:** Una resistència elèctrica d'una estufa allibera $8\,360\text{ J}$ de calor. A quantes calories (cal) i kilocalories (kcal) equival?
 > * **Solució:** Dividim els Joules entre $4{,}18$:
->   $$Q = \frac{8\,360\text{ J}}{4{,}18\text{ J/cal}} = \mathbf{2\,000\text{ cal}} = \mathbf{2\text{ kcal}}
+>   $$Q = \frac{8\,360\text{ J}}{4{,}18\text{ J/cal}} = \mathbf{2\,000\text{ cal}} = \mathbf{2\text{ kcal}}$$
 
 ---
 
@@ -430,13 +430,13 @@ Creada pel físic britànic William Thomson (**Lord Kelvin**) en 1848, és la **
 * **Què és el Zero Absolut (0 K)?** És la temperatura més baixa que pot existir físicament a l'univers i equival a **$-273{,}15 °C$** (que arrodonim habitualment a **$-273 °C$**). A 0 K, les partícules de la matèria perdrien tota la seua energia cinètica i **s'aturaria tota vibració atòmica**. Per tant, **en l'escala Kelvin no existeixen temperatures negatives**.
 * La mida d'1 K és idèntica a la d'1 °C (hi ha $100$ divisions entre la congelació de l'aigua a **273 K** i l'ebullició a **373 K**). Nota ortogràfica: els kelvins s'escriuen amb la lletra **K sense el símbol de grau ($^\circ$)**.
 * **Fórmules de conversió entre Celsius i Kelvin:**
-$$T(\text{K}) = T(^\circ\text{C}) + 273 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = T(\text{K}) - 273
+$$T(\text{K}) = T(^\circ\text{C}) + 273 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = T(\text{K}) - 273$$
 
 ### 3. Escala Fahrenheit ($^\circ\text{F}$)
 Creada en 1724 per Daniel Gabriel Fahrenheit, s'utilitza oficialment als **Estats Units** i en alguns països anglosaxons (i apareix sovint en programari, BIOS d'ordinadors i manuals tècnics americans):
 * En aquesta escala, l'aigua es congela a **$32^\circ\text{F}$** i bull a **$212^\circ\text{F}$** (l'interval està dividit en **$180$ parts**, de manera que cada 1 °C equival a $1{,}8^\circ\text{F}$).
 * **Fórmules de conversió entre Celsius i Fahrenheit:**
-$$T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = \frac{T(^\circ\text{F}) - 32}{1{,}8}
+$$T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32 \qquad \Longleftrightarrow \qquad T(^\circ\text{C}) = \frac{T(^\circ\text{F}) - 32}{1{,}8}$$
 
 ---
 
@@ -460,7 +460,7 @@ $$T(^\circ\text{F}) = 1{,}8 \cdot T(^\circ\text{C}) + 32 \qquad \Longleftrightar
 >
 > **Problema 2:** Un manual tècnic nord-americà indica que una bateria de liti no ha de superar els $113^\circ\text{F}$. A quants **graus Celsius ($^\circ\text{C}$)** equival aquest límit?
 > * **Solució:** Primer restem $32$ i després dividim el resultat entre $1{,}8$:
->   $$T(^\circ\text{C}) = \frac{113 - 32}{1{,}8} = \frac{81}{1{,}8} = \mathbf{45 °C}
+>   $$T(^\circ\text{C}) = \frac{113 - 32}{1{,}8} = \frac{81}{1{,}8} = \mathbf{45 °C}$$
 
 ---
 

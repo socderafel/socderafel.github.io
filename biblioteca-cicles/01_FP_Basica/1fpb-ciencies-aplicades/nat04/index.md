@@ -98,7 +98,7 @@ $$1\text{ cal} = 4{,}18\text{ J} \quad \Longleftrightarrow \quad 1\text{ kcal} =
 
 3. **El Quilowatt-hora (kWh) — Factura Elèctrica i Consum Domèstic/Industrial:** És l'energia que consumeix una màquina d'1 quilowatt (1.000 W) de potència funcionant durant 1 hora seguida (3.600 segons):
 
-$$1\text{ kWh} = 1.000\text{ W} \times 3.600\text{ s} = 3.600.000\text{ J} = 3{,}6\text{ MJ}
+$$1\text{ kWh} = 1.000\text{ W} \times 3.600\text{ s} = 3.600.000\text{ J} = 3{,}6\text{ MJ}$$
 
 
 
@@ -232,7 +232,7 @@ $$E_p = m \cdot g \cdot h$$
 
 > - Si la caixa cau i abans de tocar a terra porta una velocitat de **$v = 6\text{ m/s}$**, quina és la seua **energia cinètica ($E_c$)** en eixe instant?
 
->   $$E_c = \frac{1}{2} \cdot m \cdot v^2 = 0{,}5 \cdot 4\text{ kg} \cdot (6\text{ m/s})^2 = 2 \cdot 36 = \mathbf{72\text{ J}}
+>   $$E_c = \frac{1}{2} \cdot m \cdot v^2 = 0{,}5 \cdot 4\text{ kg} \cdot (6\text{ m/s})^2 = 2 \cdot 36 = \mathbf{72\text{ J}}$$
 
 
 
@@ -656,7 +656,7 @@ L'energia no roman sempre de la mateixa forma, sinó que **es transforma contín
 
 
 
-\text{Energia Total Inicial (Consumida)} = \text{Energia Útil Obtinguda} + \text{Energia Dissipada (Calor)}
+$$\text{Energia Total Inicial (Consumida)} = \text{Energia Útil Obtinguda} + \text{Energia Dissipada (Calor)}$$
 
 
 
@@ -704,7 +704,7 @@ Com que tota màquina perd una part de l'energia en forma de calor degradada, de
 
 
 
-\eta\,(\%) = \frac{E_{\text{útil}}}{E_{\text{consumida}}} \times 100
+$$\eta\,(\%) = \frac{E_{\text{útil}}}{E_{\text{consumida}}} \times 100$$
 
 
 
@@ -759,7 +759,7 @@ Com que sempre hi ha pèrdues per calor, el rendiment d'una màquina real **és 
 
 > 2. **Quanta energia es degrada en forma de calor cada segon?**
 
->    $$E_{\text{dissipada}} = 500\text{ J} - 425\text{ J} = \mathbf{75\text{ J}}\text{ (que el ventilador ha d'expulsar a l'exterior)}
+>    $$E_{\text{dissipada}} = 500\text{ J} - 425\text{ J} = \mathbf{75\text{ J}}\text{ (que el ventilador ha d'expulsar a l'exterior)}$$
 
 
 

@@ -1338,11 +1338,7 @@ Totes les restes d'aliments que no s'han pogut digerir (com la **fibra vegetal**
 
 > - Alimentar-se és voluntari; nutrir-se és el procés cel·lular involuntari.
 
-> - La digestió transforma el menjar successivament: **Bol alimentari** (boca) $
-
-ightarrow$ **Quim** àcid (estómac) $
-
-ightarrow$ **Quil** absorvible (intestí prim).
+> - La digestió transforma el menjar successivament: **Bol alimentari** (boca) $\rightarrow$ **Quim** àcid (estómac) $\rightarrow$ **Quil** absorvible (intestí prim).
 
 > - El fetge fabrica bilis per a emulsionar greixos; el pàncrees aporta bicarbonat i enzims digestius complets.
 
@@ -1740,7 +1736,7 @@ Les cèl·lules del nostre organisme necessiten un flux continu d'**oxigen gasó
 
 - **Respiració cel·lular:** El procés químic intern que té lloc dins dels mitocondris de cada cèl·lula, on s'utilitza l'oxigen per obtindre energia:
 
-$$\text{Glucosa } (\text{C}_6\text{H}_{12}\text{O}_6) + 6\,\text{O}_2 \longrightarrow 6\,\text{CO}_2 + 6\,\text{H}_2\text{O} + \text{Energia } (\text{ATP})
+$$\text{Glucosa } (\text{C}_6\text{H}_{12}\text{O}_6) + 6\,\text{O}_2 \longrightarrow 6\,\text{CO}_2 + 6\,\text{H}_2\text{O} + \text{Energia } (\text{ATP})$$
 
 
 
@@ -2473,17 +2469,9 @@ flowchart TD
 
 2. **Doble:** Té dos circuits complets consecutius:
 
-   - **Circuit Menor o Pulmonar:** Ventricle dret $
+   - **Circuit Menor o Pulmonar:** Ventricle dret $\rightarrow$ Pulmons $\rightarrow$ Aurícula esquerra. La seua funció és exclusivament **oxigenar la sang**.
 
-ightarrow$ Pulmons $
-
-ightarrow$ Aurícula esquerra. La seua funció és exclusivament **oxigenar la sang**.
-
-   - **Circuit Major o General:** Ventricle esquerre $
-
-ightarrow$ Tot l'organisme (cervell, músculs, fetge, ronyons) $
-
-ightarrow$ Aurícula dreta. Reparteix oxigen i nutrients a totes les cèl·lules.
+   - **Circuit Major o General:** Ventricle esquerre $\rightarrow$ Tot l'organisme (cervell, músculs, fetge, ronyons) $\rightarrow$ Aurícula dreta. Reparteix oxigen i nutrients a totes les cèl·lules.
 
 3. **Completa:** Gràcies al septe interventricular del cor, la sang rica en oxigen de la banda esquerra **mai es barreja** amb la sang bruta de la banda dreta.
 
@@ -3095,13 +3083,7 @@ Els ronyons no estan sols en la tasca de depuració; col·laboren amb altres tre
 
 > - La nefrona és la unitat filtradora del ronyó: filtra 180 litres al dia i en reabsorbeix el 99% d'aigua útil.
 
-> - El camí de l'orina és: Ronyons $
-
-ightarrow$ Urèters $
-
-ightarrow$ Bufeta (emmagatzematge) $
-
-ightarrow$ Uretra (expulsió).
+> - El camí de l'orina és: Ronyons $\rightarrow$ Urèters $\rightarrow$ Bufeta (emmagatzematge) $\rightarrow$ Uretra (expulsió).
 
 > - La suor, els pulmons (CO₂) i el fetge també col·laboren decisivament en l'eliminació de toxines.
 

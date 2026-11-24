@@ -1320,7 +1320,7 @@ Completa la **bateria global de 21 exercicis** (6 preguntes tipus test, 6 de Ver
 
 ### 3. Reptes Globals de Diagnòstic Clínic i Vocabulari Mèdic (5 Exercicis)
 
-<div class="interactive-quiz" data-quiz-id="ca1_u6_5_q1" data-answer="signe|signe clinic|signe clínic|signes|signes clinics|signes clínics" data-hint="Com que $39,2 °C i les plaques de pus són dades objectives mesurables i visibles pel metge, no són símptomes sinó...">
+<div class="interactive-quiz" data-quiz-id="ca1_u6_5_q1" data-answer="signe|signe clinic|signe clínic|signes|signes clinics|signes clínics" data-hint="Com que 39,2 °C i les plaques de pus són dades objectives mesurables i visibles pel metge, no són símptomes sinó...">
   <div class="quiz-question">✍️ <strong>1. Diagnòstic Clínic (6.1):</strong> Un metge comprova amb el termòmetre que un pacient té 39,2 °C de febre i observa amb una llanterna plaques de pus a la gola. Com es classifiquen aquestes dades objectives i mesurables: símptomes o signes clínics?</div>
   <div class="quiz-controls">
     <input type="text" class="quiz-input" placeholder="Escriu: símptoma o signe clínic...">

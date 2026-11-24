@@ -146,9 +146,7 @@ Són comunes a tots els cossos i el seu valor depèn de la quantitat de matèria
 
 Tenen un valor propi i constant per a cada substància pura, independentment de si en tenim un gra menut o una tona sencera. **Permeten identificar i distingir una substància d'una altra**:
 
-- **Densitat (d o $
-
-ho$):** Relació entre la massa i el volum d'un cos.
+- **Densitat (d o $\rho$):** Relació entre la massa i el volum d'un cos.
 
 - **Punt de fusió i punt d'ebullició:** Temperatures exactes a les quals una substància es fon o bull (l'aigua pura es fon a 0 °C i bull a 100 °C; el ferro es fon a 1.538 °C).
 
@@ -172,7 +170,7 @@ La **densitat (d)** és la propietat específica més important. Mesura quanta m
 
 
 
-d = \frac{\text{Massa } (m)}{\text{Volum } (V)}
+$$d = \frac{\text{Massa } (m)}{\text{Volum } (V)}$$
 
 
 
@@ -3096,7 +3094,7 @@ La **concentració** indica la quantitat de solut que hi ha dissolta en una quan
 
 
 
-\text{Concentració en g/L} = \frac{\text{Massa de solut (en grams)}}{\text{Volum de dissolució (en litres)}}
+$$\text{Concentració en g/L} = \frac{\text{Massa de solut (en grams)}}{\text{Volum de dissolució (en litres)}}$$
 
 
 
